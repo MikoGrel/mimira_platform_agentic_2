@@ -1,5 +1,7 @@
 <img
 src="./.repo/banner.png"
+width="100%"
+height="auto"
  />
 
 ## Introduction
