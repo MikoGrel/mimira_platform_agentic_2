@@ -1,0 +1,2 @@
+# Mark lingo files as auto-generated
+src/lingo/** linguist-generated=true

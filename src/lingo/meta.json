@@ -1,0 +1,145 @@
+{
+  "version": 0.1,
+  "files": {
+    "app/page.tsx": {
+      "scopes": {
+        "1/declaration/body/0/argument/3": {
+          "type": "element",
+          "hash": "b613081c002dd976e605837f299c4a36",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Mimira - Agentic platform for public tenders"
+        },
+        "1/declaration/body/0/argument/3/1": {
+          "type": "element",
+          "hash": "ff9449bff5d1d321c65ceaa4bc551f7c",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Mimira - Agentic platform for public tenders"
+        },
+        "1/declaration/body/0/argument/3/3": {
+          "type": "element",
+          "hash": "1d9871d895f03b60e4519d246dcd7b04",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "This is long text demonstrating AI Translations"
+        },
+        "1/declaration/body/0/argument/5": {
+          "type": "element",
+          "hash": "1d9871d895f03b60e4519d246dcd7b04",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "This is long text demonstrating AI Translations"
+        },
+        "2/declaration/body/0/argument/1/1": {
+          "type": "element",
+          "hash": "3a867cb6c5a2f8d15636ef1c8c5036df",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "This is some card"
+        },
+        "2/declaration/body/0/argument/1/3/1": {
+          "type": "element",
+          "hash": "02f1bed0c36df72f0611985a4d119d54",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "This is amazing text lol"
+        },
+        "2/declaration/body/0/argument/1/3/3": {
+          "type": "element",
+          "hash": "486410414b276d0648587f48dd959b1f",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "If i were to say how is it going i would say it is going great"
+        },
+        "2/declaration/body/0/argument/1/5/1": {
+          "type": "element",
+          "hash": "82a46f197779af4dde92e7e5f9336ccf",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Test"
+        },
+        "3/declaration/body/0/argument/1/1": {
+          "type": "element",
+          "hash": "3a867cb6c5a2f8d15636ef1c8c5036df",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "This is some card"
+        },
+        "3/declaration/body/0/argument/1/3/1": {
+          "type": "element",
+          "hash": "02f1bed0c36df72f0611985a4d119d54",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "This is amazing text lol"
+        },
+        "3/declaration/body/0/argument/1/3/3": {
+          "type": "element",
+          "hash": "486410414b276d0648587f48dd959b1f",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "If i were to say how is it going i would say it is going great"
+        },
+        "3/declaration/body/0/argument/1/5/1": {
+          "type": "element",
+          "hash": "82a46f197779af4dde92e7e5f9336ccf",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Test"
+        },
+        "3/declaration/body/0/argument/3/1": {
+          "type": "element",
+          "hash": "3a867cb6c5a2f8d15636ef1c8c5036df",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "This is some card"
+        },
+        "3/declaration/body/0/argument/3/3/1": {
+          "type": "element",
+          "hash": "02f1bed0c36df72f0611985a4d119d54",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "This is amazing text lol"
+        },
+        "3/declaration/body/0/argument/3/3/3": {
+          "type": "element",
+          "hash": "486410414b276d0648587f48dd959b1f",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "If i were to say how is it going i would say it is going great"
+        },
+        "3/declaration/body/0/argument/3/3/5": {
+          "type": "element",
+          "hash": "b75ac3a7a5c427f6e1a943a14ea33fb7",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "I do love me some good pizza"
+        },
+        "3/declaration/body/0/argument/3/5/1": {
+          "type": "element",
+          "hash": "82a46f197779af4dde92e7e5f9336ccf",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Test"
+        }
+      }
+    }
+  }
+}
