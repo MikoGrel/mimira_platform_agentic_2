@@ -1,6 +1,310 @@
 {
   "version": 0.1,
   "files": {
+    "app/(platform)/login/page.tsx": {
+      "scopes": {
+        "1/declaration/body/0/argument/1": {
+          "type": "element",
+          "hash": "f08eeb8e3d27821c749230891b2aee12",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Email:"
+        },
+        "1/declaration/body/0/argument/11": {
+          "type": "element",
+          "hash": "a6a0b995463f62ce6a12e37f1d05a9bd",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Sign up"
+        },
+        "1/declaration/body/0/argument/5": {
+          "type": "element",
+          "hash": "2cf6537fb69cdd2eb030e55bf4223b93",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Password:"
+        },
+        "1/declaration/body/0/argument/9": {
+          "type": "element",
+          "hash": "9fb886eff8d1d67d8bb79f5c3f78edde",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Log in"
+        },
+        "2/declaration/body/0/argument/1/1/1": {
+          "type": "element",
+          "hash": "f08eeb8e3d27821c749230891b2aee12",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Email:"
+        },
+        "2/declaration/body/0/argument/1/1/11": {
+          "type": "element",
+          "hash": "a6a0b995463f62ce6a12e37f1d05a9bd",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Sign up"
+        },
+        "2/declaration/body/0/argument/1/1/5": {
+          "type": "element",
+          "hash": "2cf6537fb69cdd2eb030e55bf4223b93",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Password:"
+        },
+        "2/declaration/body/0/argument/1/1/9": {
+          "type": "element",
+          "hash": "9fb886eff8d1d67d8bb79f5c3f78edde",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Log in"
+        },
+        "3/declaration/body/0/argument/1/1/1": {
+          "type": "element",
+          "hash": "f08eeb8e3d27821c749230891b2aee12",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Email:"
+        },
+        "3/declaration/body/0/argument/1/1/1/1": {
+          "type": "element",
+          "hash": "f08eeb8e3d27821c749230891b2aee12",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Email:"
+        },
+        "3/declaration/body/0/argument/1/1/1/5": {
+          "type": "element",
+          "hash": "2cf6537fb69cdd2eb030e55bf4223b93",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Password:"
+        },
+        "3/declaration/body/0/argument/1/1/3/1": {
+          "type": "element",
+          "hash": "f6781a7c70e11d9f017565ac36dcfd5a",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Log in"
+        },
+        "3/declaration/body/0/argument/1/1/3/3": {
+          "type": "element",
+          "hash": "a6a0b995463f62ce6a12e37f1d05a9bd",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Sign up"
+        },
+        "3/declaration/body/0/argument/1/1/5": {
+          "type": "element",
+          "hash": "2cf6537fb69cdd2eb030e55bf4223b93",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Password:"
+        },
+        "3/declaration/body/0/argument/1/3/1": {
+          "type": "element",
+          "hash": "9fb886eff8d1d67d8bb79f5c3f78edde",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Log in"
+        },
+        "3/declaration/body/0/argument/1/3/3": {
+          "type": "element",
+          "hash": "a6a0b995463f62ce6a12e37f1d05a9bd",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Sign up"
+        },
+        "4/declaration/body/0/argument/1/1/1": {
+          "type": "element",
+          "hash": "f4f219abeb5a465ecb1c7efaf50246de",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Login"
+        },
+        "4/declaration/body/0/argument/1/1/1/1-label": {
+          "type": "attribute",
+          "hash": "e7f34943a0c2fb849db1839ff6ef5cb5",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Email"
+        },
+        "4/declaration/body/0/argument/1/1/1/3-label": {
+          "type": "attribute",
+          "hash": "223a61cf906ab9c40d22612c588dff48",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Password"
+        },
+        "4/declaration/body/0/argument/1/1/3/1": {
+          "type": "element",
+          "hash": "f6781a7c70e11d9f017565ac36dcfd5a",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Log in"
+        },
+        "4/declaration/body/0/argument/1/1/3/3": {
+          "type": "element",
+          "hash": "b43ea26a8a18e15841aba848f7be2d5f",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Sign up"
+        },
+        "4/declaration/body/0/argument/1/3/1/1-label": {
+          "type": "attribute",
+          "hash": "e7f34943a0c2fb849db1839ff6ef5cb5",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Email"
+        },
+        "4/declaration/body/0/argument/1/3/1/3-label": {
+          "type": "attribute",
+          "hash": "223a61cf906ab9c40d22612c588dff48",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Password"
+        },
+        "4/declaration/body/0/argument/1/3/3/1": {
+          "type": "element",
+          "hash": "f6781a7c70e11d9f017565ac36dcfd5a",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Log in"
+        },
+        "4/declaration/body/0/argument/1/3/3/3": {
+          "type": "element",
+          "hash": "b43ea26a8a18e15841aba848f7be2d5f",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Sign up"
+        },
+        "5/declaration/body/0/argument/1/1/1": {
+          "type": "element",
+          "hash": "f4f219abeb5a465ecb1c7efaf50246de",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Login"
+        },
+        "5/declaration/body/0/argument/1/1/1/1": {
+          "type": "element",
+          "hash": "f4f219abeb5a465ecb1c7efaf50246de",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Login"
+        },
+        "5/declaration/body/0/argument/1/1/3/1-label": {
+          "type": "attribute",
+          "hash": "e7f34943a0c2fb849db1839ff6ef5cb5",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Email"
+        },
+        "5/declaration/body/0/argument/1/1/3/3-label": {
+          "type": "attribute",
+          "hash": "223a61cf906ab9c40d22612c588dff48",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Password"
+        },
+        "5/declaration/body/0/argument/1/1/7/1": {
+          "type": "element",
+          "hash": "f6781a7c70e11d9f017565ac36dcfd5a",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Log in"
+        },
+        "5/declaration/body/0/argument/1/1/7/3": {
+          "type": "element",
+          "hash": "b43ea26a8a18e15841aba848f7be2d5f",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Sign up"
+        },
+        "5/declaration/body/0/argument/1/3/1/1-label": {
+          "type": "attribute",
+          "hash": "e7f34943a0c2fb849db1839ff6ef5cb5",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Email"
+        },
+        "5/declaration/body/0/argument/1/3/1/3-label": {
+          "type": "attribute",
+          "hash": "223a61cf906ab9c40d22612c588dff48",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Password"
+        },
+        "5/declaration/body/0/argument/1/3/5/1": {
+          "type": "element",
+          "hash": "f6781a7c70e11d9f017565ac36dcfd5a",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Log in"
+        },
+        "5/declaration/body/0/argument/1/3/5/3": {
+          "type": "element",
+          "hash": "b43ea26a8a18e15841aba848f7be2d5f",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Sign up"
+        }
+      }
+    },
+    "app/error.tsx": {
+      "scopes": {
+        "0/declaration/body/0/argument": {
+          "type": "element",
+          "hash": "a3cd2f01c073f1f5ff436d4b132d39cf",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Something went wrong"
+        },
+        "0/declaration/body/1/argument": {
+          "type": "element",
+          "hash": "a3cd2f01c073f1f5ff436d4b132d39cf",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Something went wrong"
+        }
+      }
+    },
     "app/page.tsx": {
       "scopes": {
         "1/declaration/body/0/argument/3": {
