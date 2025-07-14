@@ -7,7 +7,7 @@ const nextConfig: NextConfig = {
 
 export default lingoCompiler.next({
   sourceLocale: "en",
-  targetLocales: ["pl", "es"],
+  targetLocales: ["pl"],
   models: "lingo.dev",
   rsc: true,
   sourceRoot: "src",
