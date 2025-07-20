@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono, Space_Grotesk } from "next/font/google";
 import "$/styles/globals.css";
 import ThemeProvider from "$/features/shared/providers/ThemeProvider";
+import QueryProvider from "$/features/shared/providers/QueryProvider";
 import { LingoProvider, loadDictionary } from "lingo.dev/react/rsc";
 import { NuqsAdapter } from "nuqs/adapters/next/app";
 import { Toaster } from "sonner";
@@ -40,9 +41,11 @@ export default function RootLayout({
         <body
           className={`${geistSans.variable} ${geistMono.variable} ${spaceGrotesk.variable} antialiased light font-body bg-background text-font-base`}
         >
-          <ThemeProvider>
-            <NuqsAdapter>{children}</NuqsAdapter>
-          </ThemeProvider>
+          <QueryProvider>
+            <ThemeProvider>
+              <NuqsAdapter>{children}</NuqsAdapter>
+            </ThemeProvider>
+          </QueryProvider>
           <Toaster />
         </body>
       </html>

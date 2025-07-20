@@ -5,28 +5,20 @@ import {
 } from "$/features/shared/ui/sidebar";
 import { Input } from "$/features/shared/ui/input";
 import { Search } from "lucide-react";
-import { createClient } from "$/lib/supabase/server";
 import { LocaleSwitcher } from "lingo.dev/react-client";
 import { DashboardSidebar } from "$/features/navigation/components";
-
-export const dynamic = "force-dynamic";
+import UserName from "$/features/auth/components/user-name";
 
 export default async function DashboardLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
-  const client = await createClient();
-
-  const {
-    data: { user },
-  } = await client.auth.getUser();
-
   return (
     <SidebarProvider>
       <DashboardSidebar />
 
-      <SidebarInset>
+      <SidebarInset className="flex flex-col h-screen">
         <header className="flex h-16 shrink-0 items-center justify-between gap-4 bg-sidebar px-4 sticky top-0 z-10">
           <div className="flex items-center gap-2">
             <SidebarTrigger className="-ml-1" />
@@ -44,11 +36,11 @@ export default async function DashboardLayout({
             <LocaleSwitcher locales={["pl", "en"]} />
 
             <div className="flex items-center gap-2">
-              {user && <span>{user.email}</span>}
+              <UserName />
             </div>
           </div>
         </header>
-        <div className="flex flex-1 flex-col gap-4 rounded-tl-2xl border-l border-t border-sidebar-border">
+        <div className="flex-1 rounded-tl-2xl border-l border-t border-sidebar-border overflow-hidden">
           {children}
         </div>
       </SidebarInset>

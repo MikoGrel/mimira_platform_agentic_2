@@ -63,9 +63,9 @@ export default function MiniTenderCalendar({
         }}
         className="w-full h-full p-0"
         components={{
-          Nav: () => <div className="hidden" />,
-          MonthCaption: () => <div className="hidden" />,
-          Weekdays: () => <div className="hidden" />,
+          Nav: () => <span className="hidden" />,
+          MonthCaption: () => <td className="hidden" />,
+          Weekdays: () => <td className="hidden" />,
         }}
         showOutsideDays={false}
       />

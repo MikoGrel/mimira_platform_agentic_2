@@ -27,5 +27,5 @@ export default function useCurrentUser() {
     getUser();
   }, [supabase.auth]);
 
-  return [user, { loading }];
+  return { user, loading };
 }

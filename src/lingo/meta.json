@@ -34,6 +34,46 @@
           "overrides": {},
           "content": "Search"
         },
+        "3/declaration/body/1/argument/1/1/1/3-placeholder": {
+          "type": "attribute",
+          "hash": "49dd6c21604b5e8d4153ff1aff2177e1",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Search"
+        },
+        "3/declaration/body/1/argument/1/3/1/expression/0/body/3/3": {
+          "type": "element",
+          "hash": "21ca490ec79ca57af655c1df4287bbd0",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": " · "
+        },
+        "3/declaration/body/1/argument/1/3/3/expression/0/body/3/3": {
+          "type": "element",
+          "hash": "21ca490ec79ca57af655c1df4287bbd0",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": " · "
+        },
+        "3/declaration/body/1/argument/1/3/expression/right/1/expression/0/body/3/3": {
+          "type": "element",
+          "hash": "21ca490ec79ca57af655c1df4287bbd0",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": " · "
+        },
+        "3/declaration/body/1/argument/1/5/expression/right/1/expression/0/body/3/3": {
+          "type": "element",
+          "hash": "21ca490ec79ca57af655c1df4287bbd0",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": " · "
+        },
         "3/declaration/body/2/argument/1/1/1/3-placeholder": {
           "type": "attribute",
           "hash": "49dd6c21604b5e8d4153ff1aff2177e1",
@@ -57,6 +97,340 @@
           "skip": false,
           "overrides": {},
           "content": " · "
+        },
+        "5/declaration/body/2/argument/1/1/1/3-placeholder": {
+          "type": "attribute",
+          "hash": "49dd6c21604b5e8d4153ff1aff2177e1",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Search"
+        },
+        "5/declaration/body/2/argument/1/5/expression/right/1/expression/0/body/3/3": {
+          "type": "element",
+          "hash": "21ca490ec79ca57af655c1df4287bbd0",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": " · "
+        },
+        "5/declaration/body/3/argument/1/1/1/3-placeholder": {
+          "type": "attribute",
+          "hash": "49dd6c21604b5e8d4153ff1aff2177e1",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Search"
+        },
+        "5/declaration/body/3/argument/1/5/expression/right/1/expression/0/body/3/3": {
+          "type": "element",
+          "hash": "21ca490ec79ca57af655c1df4287bbd0",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": " · "
+        },
+        "5/declaration/body/3/argument/3/1/expression/right/1/5/1": {
+          "type": "element",
+          "hash": "564f71b8fe2a63142499b340b1872989",
+          "context": "",
+          "skip": false,
+          "overrides": {
+            "pl": "Aplikuj"
+          },
+          "content": "Apply"
+        },
+        "5/declaration/body/3/argument/3/1/expression/right/1/5/3": {
+          "type": "element",
+          "hash": "2c1f1ee6b00186ee3a5adc2d86d00511",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Reject"
+        },
+        "5/declaration/body/3/argument/3/1/expression/right/3/1": {
+          "type": "element",
+          "hash": "77fc03abc14d71c8c36f000fb65f93f8",
+          "context": "",
+          "skip": false,
+          "overrides": {
+            "pl": "Aplikuj"
+          },
+          "content": "Apply"
+        },
+        "5/declaration/body/3/argument/3/1/expression/right/3/1/1/1": {
+          "type": "element",
+          "hash": "f9f61dcbd6cdc18ea6dfc65ce1fcd67d",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Organization:"
+        },
+        "5/declaration/body/3/argument/3/1/expression/right/3/3": {
+          "type": "element",
+          "hash": "417c19f66db70a0548bdeb398cdc46e0",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Reject"
+        },
+        "5/declaration/body/3/argument/3/1/expression/right/3/3/1/1": {
+          "type": "element",
+          "hash": "584945f3b01472e6e0d7231113a30c01",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Amount:"
+        },
+        "5/declaration/body/3/argument/3/1/expression/right/3/3/3/1": {
+          "type": "element",
+          "hash": "584945f3b01472e6e0d7231113a30c01",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Amount:"
+        },
+        "5/declaration/body/3/argument/3/1/expression/right/5/1": {
+          "type": "element",
+          "hash": "77fc03abc14d71c8c36f000fb65f93f8",
+          "context": "",
+          "skip": false,
+          "overrides": {
+            "pl": "Aplikuj"
+          },
+          "content": "Apply"
+        },
+        "5/declaration/body/3/argument/3/1/expression/right/5/3": {
+          "type": "element",
+          "hash": "447bdd205a7407328c84f618e3bf1d40",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Reject"
+        },
+        "5/declaration/body/3/argument/3/3/3/expression/right/1": {
+          "type": "element",
+          "hash": "f06b8496687a92110b089c0ecce5f1dd",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Content for: {selectedTender.orderobject}"
+        },
+        "5/declaration/body/3/argument/3/3/3/expression/right/5": {
+          "type": "element",
+          "hash": "83030bc4a1f29c441f2a5167e80103fd",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Scrollable content area"
+        },
+        "5/declaration/body/3/argument/3/3/3/expression/right/7": {
+          "type": "element",
+          "hash": "98d5334ee93bad0d1caec02a5292c47c",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "More content to demonstrate scrolling"
+        },
+        "6/declaration/body/3/argument/1/1/1/3-placeholder": {
+          "type": "attribute",
+          "hash": "49dd6c21604b5e8d4153ff1aff2177e1",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Search"
+        },
+        "6/declaration/body/3/argument/1/5/expression/right/1/expression/0/body/3/3": {
+          "type": "element",
+          "hash": "21ca490ec79ca57af655c1df4287bbd0",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": " · "
+        },
+        "6/declaration/body/3/argument/3/1/expression/right/1/5/1": {
+          "type": "element",
+          "hash": "564f71b8fe2a63142499b340b1872989",
+          "context": "",
+          "skip": false,
+          "overrides": {
+            "pl": "Aplikuj"
+          },
+          "content": "Apply"
+        },
+        "6/declaration/body/3/argument/3/1/expression/right/1/5/3": {
+          "type": "element",
+          "hash": "2c1f1ee6b00186ee3a5adc2d86d00511",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Reject"
+        },
+        "6/declaration/body/4/argument/1/1/1/3-placeholder": {
+          "type": "attribute",
+          "hash": "49dd6c21604b5e8d4153ff1aff2177e1",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Search"
+        },
+        "6/declaration/body/4/argument/1/5/expression/right/1/expression/0/body/3/3": {
+          "type": "element",
+          "hash": "21ca490ec79ca57af655c1df4287bbd0",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": " · "
+        },
+        "6/declaration/body/4/argument/3/1/expression/right/1/5/1": {
+          "type": "element",
+          "hash": "564f71b8fe2a63142499b340b1872989",
+          "context": "",
+          "skip": false,
+          "overrides": {
+            "pl": "Aplikuj"
+          },
+          "content": "Apply"
+        },
+        "6/declaration/body/4/argument/3/1/expression/right/1/5/3": {
+          "type": "element",
+          "hash": "2c1f1ee6b00186ee3a5adc2d86d00511",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Reject"
+        },
+        "7/declaration/body/4/argument/1/1/1/3-placeholder": {
+          "type": "attribute",
+          "hash": "49dd6c21604b5e8d4153ff1aff2177e1",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Search"
+        },
+        "7/declaration/body/4/argument/1/3/1/3/expression/right/1/expression/0/body/3/3": {
+          "type": "element",
+          "hash": "21ca490ec79ca57af655c1df4287bbd0",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": " · "
+        },
+        "7/declaration/body/4/argument/1/3/3/expression/right/1/expression/0/body/3/3": {
+          "type": "element",
+          "hash": "21ca490ec79ca57af655c1df4287bbd0",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": " · "
+        },
+        "7/declaration/body/4/argument/1/3/5": {
+          "type": "element",
+          "hash": "2acd4f46dfaaf41f416a1095bf106268",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Ask Mimir <element:Chip>Coming soon</element:Chip>"
+        },
+        "7/declaration/body/4/argument/1/3/5/1": {
+          "type": "element",
+          "hash": "64356ce3276f953b3ade3c8dd126e6a6",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Ask Mimir Coming soon"
+        },
+        "7/declaration/body/4/argument/1/5": {
+          "type": "element",
+          "hash": "a0b02fb98f892cf4287b3d493dfd9981",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Ask Mimir <element:Chip>Coming soon</element:Chip>"
+        },
+        "7/declaration/body/4/argument/1/5/expression/right/1/expression/0/body/3/3": {
+          "type": "element",
+          "hash": "21ca490ec79ca57af655c1df4287bbd0",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": " · "
+        },
+        "7/declaration/body/4/argument/3/1/expression/right/1/5/1": {
+          "type": "element",
+          "hash": "564f71b8fe2a63142499b340b1872989",
+          "context": "",
+          "skip": false,
+          "overrides": {
+            "pl": "Aplikuj"
+          },
+          "content": "Apply"
+        },
+        "7/declaration/body/4/argument/3/1/expression/right/1/5/3": {
+          "type": "element",
+          "hash": "2c1f1ee6b00186ee3a5adc2d86d00511",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Reject"
+        },
+        "8/declaration/body/4/argument/1/1/1/3-placeholder": {
+          "type": "attribute",
+          "hash": "49dd6c21604b5e8d4153ff1aff2177e1",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Search"
+        },
+        "8/declaration/body/4/argument/1/3/3/expression/right/1/expression/0/body/3/3": {
+          "type": "element",
+          "hash": "21ca490ec79ca57af655c1df4287bbd0",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": " · "
+        },
+        "8/declaration/body/4/argument/1/5": {
+          "type": "element",
+          "hash": "a451f2bb9d06010b7bdda1298296fae5",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "<element:Symbol></element:Symbol> Ask Mimir <element:Chip>Coming soon</element:Chip>"
+        },
+        "8/declaration/body/4/argument/1/5/1/3": {
+          "type": "element",
+          "hash": "c516ed1af9463ccd6bdcb19a1f13e4ac",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Ask Mimir"
+        },
+        "8/declaration/body/4/argument/1/5/1/5": {
+          "type": "element",
+          "hash": "05a8fc9f6d826fd88a809d98684edcad",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Coming soon"
+        },
+        "8/declaration/body/4/argument/3/1/expression/right/1/5/1": {
+          "type": "element",
+          "hash": "564f71b8fe2a63142499b340b1872989",
+          "context": "",
+          "skip": false,
+          "overrides": {
+            "pl": "Aplikuj"
+          },
+          "content": "Apply"
+        },
+        "8/declaration/body/4/argument/3/1/expression/right/1/5/3": {
+          "type": "element",
+          "hash": "2c1f1ee6b00186ee3a5adc2d86d00511",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Reject"
         }
       }
     },
@@ -214,6 +588,14 @@
           "overrides": {},
           "content": "Search..."
         },
+        "5/declaration/body/0/argument/3/1/3/3-placeholder": {
+          "type": "attribute",
+          "hash": "fe877a75eac472fc5b188c135c78a558",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Search..."
+        },
         "6/declaration/body/0/argument/1/3/1/1": {
           "type": "element",
           "hash": "9e8d5035217a4088af5d7de48c14283b",
@@ -238,6 +620,14 @@
           "overrides": {},
           "content": "Sign Out"
         },
+        "6/declaration/body/0/argument/3/1/3/3-placeholder": {
+          "type": "attribute",
+          "hash": "fe877a75eac472fc5b188c135c78a558",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Search..."
+        },
         "6/declaration/body/0/argument/3/1/5": {
           "type": "element",
           "hash": "c9380ea68c8c76ea451bd9613329a07c",
@@ -245,6 +635,14 @@
           "skip": false,
           "overrides": {},
           "content": "Dashboard"
+        },
+        "6/declaration/body/2/argument/3/1/3/3-placeholder": {
+          "type": "attribute",
+          "hash": "fe877a75eac472fc5b188c135c78a558",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Search..."
         },
         "7/declaration/body/2/argument/3/1/3/1/3-placeholder": {
           "type": "attribute",

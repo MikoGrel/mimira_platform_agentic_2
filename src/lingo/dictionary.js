@@ -31,6 +31,43 @@ export default {
           },
           hash: "49dd6c21604b5e8d4153ff1aff2177e1",
         },
+        "3/declaration/body/1/argument/1/1/1/3-placeholder": {
+          content: {
+            en: "Search",
+            pl: "Szukaj",
+          },
+          hash: "49dd6c21604b5e8d4153ff1aff2177e1",
+        },
+        "3/declaration/body/1/argument/1/3/1/expression/0/body/3/3": {
+          content: {
+            en: " · ",
+            pl: " · ",
+          },
+          hash: "21ca490ec79ca57af655c1df4287bbd0",
+        },
+        "3/declaration/body/1/argument/1/3/3/expression/0/body/3/3": {
+          content: {
+            en: " · ",
+            pl: " · ",
+          },
+          hash: "21ca490ec79ca57af655c1df4287bbd0",
+        },
+        "3/declaration/body/1/argument/1/3/expression/right/1/expression/0/body/3/3":
+          {
+            content: {
+              en: " · ",
+              pl: " · ",
+            },
+            hash: "21ca490ec79ca57af655c1df4287bbd0",
+          },
+        "3/declaration/body/1/argument/1/5/expression/right/1/expression/0/body/3/3":
+          {
+            content: {
+              en: " · ",
+              pl: " · ",
+            },
+            hash: "21ca490ec79ca57af655c1df4287bbd0",
+          },
         "3/declaration/body/2/argument/1/1/1/3-placeholder": {
           content: {
             en: "Search",
@@ -51,6 +88,287 @@ export default {
             pl: " · ",
           },
           hash: "21ca490ec79ca57af655c1df4287bbd0",
+        },
+        "5/declaration/body/2/argument/1/1/1/3-placeholder": {
+          content: {
+            en: "Search",
+            pl: "Szukaj",
+          },
+          hash: "49dd6c21604b5e8d4153ff1aff2177e1",
+        },
+        "5/declaration/body/2/argument/1/5/expression/right/1/expression/0/body/3/3":
+          {
+            content: {
+              en: " · ",
+              pl: " · ",
+            },
+            hash: "21ca490ec79ca57af655c1df4287bbd0",
+          },
+        "5/declaration/body/3/argument/1/1/1/3-placeholder": {
+          content: {
+            en: "Search",
+            pl: "Szukaj",
+          },
+          hash: "49dd6c21604b5e8d4153ff1aff2177e1",
+        },
+        "5/declaration/body/3/argument/1/5/expression/right/1/expression/0/body/3/3":
+          {
+            content: {
+              en: " · ",
+              pl: " · ",
+            },
+            hash: "21ca490ec79ca57af655c1df4287bbd0",
+          },
+        "5/declaration/body/3/argument/3/1/expression/right/1/5/1": {
+          content: {
+            en: "Apply",
+          },
+          hash: "564f71b8fe2a63142499b340b1872989",
+        },
+        "5/declaration/body/3/argument/3/1/expression/right/1/5/3": {
+          content: {
+            en: "Reject",
+            pl: "Odrzuć",
+          },
+          hash: "2c1f1ee6b00186ee3a5adc2d86d00511",
+        },
+        "5/declaration/body/3/argument/3/1/expression/right/3/1": {
+          content: {
+            en: "Apply",
+          },
+          hash: "77fc03abc14d71c8c36f000fb65f93f8",
+        },
+        "5/declaration/body/3/argument/3/1/expression/right/3/1/1/1": {
+          content: {
+            en: "Organization:",
+            pl: "Organizacja:",
+          },
+          hash: "f9f61dcbd6cdc18ea6dfc65ce1fcd67d",
+        },
+        "5/declaration/body/3/argument/3/1/expression/right/3/3": {
+          content: {
+            en: "Reject",
+            pl: "Odrzuć",
+          },
+          hash: "417c19f66db70a0548bdeb398cdc46e0",
+        },
+        "5/declaration/body/3/argument/3/1/expression/right/3/3/1/1": {
+          content: {
+            en: "Amount:",
+            pl: "Kwota:",
+          },
+          hash: "584945f3b01472e6e0d7231113a30c01",
+        },
+        "5/declaration/body/3/argument/3/1/expression/right/3/3/3/1": {
+          content: {
+            en: "Amount:",
+            pl: "Kwota:",
+          },
+          hash: "584945f3b01472e6e0d7231113a30c01",
+        },
+        "5/declaration/body/3/argument/3/1/expression/right/5/1": {
+          content: {
+            en: "Apply",
+          },
+          hash: "77fc03abc14d71c8c36f000fb65f93f8",
+        },
+        "5/declaration/body/3/argument/3/1/expression/right/5/3": {
+          content: {
+            en: "Reject",
+            pl: "Odrzuć",
+          },
+          hash: "447bdd205a7407328c84f618e3bf1d40",
+        },
+        "5/declaration/body/3/argument/3/3/3/expression/right/1": {
+          content: {
+            en: "Content for: {selectedTender.orderobject}",
+            pl: "Treść dla: {selectedTender.orderobject}",
+          },
+          hash: "f06b8496687a92110b089c0ecce5f1dd",
+        },
+        "5/declaration/body/3/argument/3/3/3/expression/right/5": {
+          content: {
+            en: "Scrollable content area",
+            pl: "Przewijalny obszar treści",
+          },
+          hash: "83030bc4a1f29c441f2a5167e80103fd",
+        },
+        "5/declaration/body/3/argument/3/3/3/expression/right/7": {
+          content: {
+            en: "More content to demonstrate scrolling",
+            pl: "Więcej treści, aby zademonstrować przewijanie",
+          },
+          hash: "98d5334ee93bad0d1caec02a5292c47c",
+        },
+        "6/declaration/body/3/argument/1/1/1/3-placeholder": {
+          content: {
+            en: "Search",
+            pl: "Szukaj",
+          },
+          hash: "49dd6c21604b5e8d4153ff1aff2177e1",
+        },
+        "6/declaration/body/3/argument/1/5/expression/right/1/expression/0/body/3/3":
+          {
+            content: {
+              en: " · ",
+              pl: " · ",
+            },
+            hash: "21ca490ec79ca57af655c1df4287bbd0",
+          },
+        "6/declaration/body/3/argument/3/1/expression/right/1/5/1": {
+          content: {
+            en: "Apply",
+          },
+          hash: "564f71b8fe2a63142499b340b1872989",
+        },
+        "6/declaration/body/3/argument/3/1/expression/right/1/5/3": {
+          content: {
+            en: "Reject",
+            pl: "Odrzuć",
+          },
+          hash: "2c1f1ee6b00186ee3a5adc2d86d00511",
+        },
+        "6/declaration/body/4/argument/1/1/1/3-placeholder": {
+          content: {
+            en: "Search",
+            pl: "Szukaj",
+          },
+          hash: "49dd6c21604b5e8d4153ff1aff2177e1",
+        },
+        "6/declaration/body/4/argument/1/5/expression/right/1/expression/0/body/3/3":
+          {
+            content: {
+              en: " · ",
+              pl: " · ",
+            },
+            hash: "21ca490ec79ca57af655c1df4287bbd0",
+          },
+        "6/declaration/body/4/argument/3/1/expression/right/1/5/1": {
+          content: {
+            en: "Apply",
+          },
+          hash: "564f71b8fe2a63142499b340b1872989",
+        },
+        "6/declaration/body/4/argument/3/1/expression/right/1/5/3": {
+          content: {
+            en: "Reject",
+            pl: "Odrzuć",
+          },
+          hash: "2c1f1ee6b00186ee3a5adc2d86d00511",
+        },
+        "7/declaration/body/4/argument/1/1/1/3-placeholder": {
+          content: {
+            en: "Search",
+            pl: "Szukaj",
+          },
+          hash: "49dd6c21604b5e8d4153ff1aff2177e1",
+        },
+        "7/declaration/body/4/argument/1/3/1/3/expression/right/1/expression/0/body/3/3":
+          {
+            content: {
+              en: " · ",
+              pl: " · ",
+            },
+            hash: "21ca490ec79ca57af655c1df4287bbd0",
+          },
+        "7/declaration/body/4/argument/1/3/3/expression/right/1/expression/0/body/3/3":
+          {
+            content: {
+              en: " · ",
+              pl: " · ",
+            },
+            hash: "21ca490ec79ca57af655c1df4287bbd0",
+          },
+        "7/declaration/body/4/argument/1/3/5": {
+          content: {
+            en: "Ask Mimir <element:Chip>Coming soon</element:Chip>",
+            pl: "Zapytaj Mimira <element:Chip>Już wkrótce</element:Chip>",
+          },
+          hash: "2acd4f46dfaaf41f416a1095bf106268",
+        },
+        "7/declaration/body/4/argument/1/3/5/1": {
+          content: {
+            en: "Ask Mimir Coming soon",
+            pl: "Zapytaj Mimira Już wkrótce",
+          },
+          hash: "64356ce3276f953b3ade3c8dd126e6a6",
+        },
+        "7/declaration/body/4/argument/1/5": {
+          content: {
+            en: "Ask Mimir <element:Chip>Coming soon</element:Chip>",
+            pl: "Zapytaj Mimira <element:Chip>Już wkrótce</element:Chip>",
+          },
+          hash: "a0b02fb98f892cf4287b3d493dfd9981",
+        },
+        "7/declaration/body/4/argument/1/5/expression/right/1/expression/0/body/3/3":
+          {
+            content: {
+              en: " · ",
+              pl: " · ",
+            },
+            hash: "21ca490ec79ca57af655c1df4287bbd0",
+          },
+        "7/declaration/body/4/argument/3/1/expression/right/1/5/1": {
+          content: {
+            en: "Apply",
+          },
+          hash: "564f71b8fe2a63142499b340b1872989",
+        },
+        "7/declaration/body/4/argument/3/1/expression/right/1/5/3": {
+          content: {
+            en: "Reject",
+            pl: "Odrzuć",
+          },
+          hash: "2c1f1ee6b00186ee3a5adc2d86d00511",
+        },
+        "8/declaration/body/4/argument/1/1/1/3-placeholder": {
+          content: {
+            en: "Search",
+            pl: "Szukaj",
+          },
+          hash: "49dd6c21604b5e8d4153ff1aff2177e1",
+        },
+        "8/declaration/body/4/argument/1/3/3/expression/right/1/expression/0/body/3/3":
+          {
+            content: {
+              en: " · ",
+              pl: " · ",
+            },
+            hash: "21ca490ec79ca57af655c1df4287bbd0",
+          },
+        "8/declaration/body/4/argument/1/5": {
+          content: {
+            en: "<element:Symbol></element:Symbol> Ask Mimir <element:Chip>Coming soon</element:Chip>",
+            pl: "<element:Symbol></element:Symbol> Zapytaj Mimira <element:Chip>Już wkrótce</element:Chip>",
+          },
+          hash: "a451f2bb9d06010b7bdda1298296fae5",
+        },
+        "8/declaration/body/4/argument/1/5/1/3": {
+          content: {
+            en: "Ask Mimir",
+            pl: "Zapytaj Mimira",
+          },
+          hash: "c516ed1af9463ccd6bdcb19a1f13e4ac",
+        },
+        "8/declaration/body/4/argument/1/5/1/5": {
+          content: {
+            en: "Coming soon",
+            pl: "Już wkrótce",
+          },
+          hash: "05a8fc9f6d826fd88a809d98684edcad",
+        },
+        "8/declaration/body/4/argument/3/1/expression/right/1/5/1": {
+          content: {
+            en: "Apply",
+          },
+          hash: "564f71b8fe2a63142499b340b1872989",
+        },
+        "8/declaration/body/4/argument/3/1/expression/right/1/5/3": {
+          content: {
+            en: "Reject",
+            pl: "Odrzuć",
+          },
+          hash: "2c1f1ee6b00186ee3a5adc2d86d00511",
         },
       },
     },
@@ -189,6 +507,13 @@ export default {
           },
           hash: "fe877a75eac472fc5b188c135c78a558",
         },
+        "5/declaration/body/0/argument/3/1/3/3-placeholder": {
+          content: {
+            en: "Search...",
+            pl: "Szukaj...",
+          },
+          hash: "fe877a75eac472fc5b188c135c78a558",
+        },
         "6/declaration/body/0/argument/1/3/1/1": {
           content: {
             en: "Main Navigation",
@@ -210,12 +535,26 @@ export default {
           },
           hash: "06efb815f8e1f5d09e63d262ba48b4e7",
         },
+        "6/declaration/body/0/argument/3/1/3/3-placeholder": {
+          content: {
+            en: "Search...",
+            pl: "Szukaj...",
+          },
+          hash: "fe877a75eac472fc5b188c135c78a558",
+        },
         "6/declaration/body/0/argument/3/1/5": {
           content: {
             en: "Dashboard",
             pl: "Pulpit",
           },
           hash: "c9380ea68c8c76ea451bd9613329a07c",
+        },
+        "6/declaration/body/2/argument/3/1/3/3-placeholder": {
+          content: {
+            en: "Search...",
+            pl: "Szukaj...",
+          },
+          hash: "fe877a75eac472fc5b188c135c78a558",
         },
         "7/declaration/body/2/argument/3/1/3/1/3-placeholder": {
           content: {
