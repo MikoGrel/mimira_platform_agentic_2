@@ -190,6 +190,158 @@
           "overrides": {},
           "content": "You don't have an account?<element:Link>Contact us</element:Link>"
         },
+        "12/declaration/body/10/0/init/body/1/1": {
+          "type": "element",
+          "hash": "3d7c5b589fe3e18a1d2d7e83de7a9cf1",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Welcome Back"
+        },
+        "12/declaration/body/10/0/init/body/1/3": {
+          "type": "element",
+          "hash": "efe8c63f2219da23270fff479619bb1d",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Fill in your email and password to continue"
+        },
+        "12/declaration/body/10/0/init/body/3/3-label": {
+          "type": "attribute",
+          "hash": "e7f34943a0c2fb849db1839ff6ef5cb5",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Email"
+        },
+        "12/declaration/body/10/0/init/body/3/5-label": {
+          "type": "attribute",
+          "hash": "223a61cf906ab9c40d22612c588dff48",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Password"
+        },
+        "12/declaration/body/10/0/init/body/3/7/1": {
+          "type": "element",
+          "hash": "afc02ff1df56ecf8493e9e201592d764",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Remember me"
+        },
+        "12/declaration/body/10/0/init/body/3/7/3": {
+          "type": "element",
+          "hash": "4a0a69c05d0946a79ac6cc32bbb3c615",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Forgot password?"
+        },
+        "12/declaration/body/10/0/init/body/3/9": {
+          "type": "element",
+          "hash": "d9b0fe0a007e54d41375447cdf3c5267",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Log in"
+        },
+        "12/declaration/body/11/0/init/body/1/1": {
+          "type": "element",
+          "hash": "52ec990b25991808a4f49db84986eefc",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Reset Password"
+        },
+        "12/declaration/body/11/0/init/body/1/3": {
+          "type": "element",
+          "hash": "6e820fc1a74664b8acdb6f563412e0b0",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Enter your email address and we'll send you a link to reset your password"
+        },
+        "12/declaration/body/11/0/init/body/3/3-label": {
+          "type": "attribute",
+          "hash": "e7f34943a0c2fb849db1839ff6ef5cb5",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Email"
+        },
+        "12/declaration/body/11/0/init/body/3/3-placeholder": {
+          "type": "attribute",
+          "hash": "9bc008365ebe3e404e241c8ca876f56e",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Enter your email address"
+        },
+        "12/declaration/body/11/0/init/body/3/5": {
+          "type": "element",
+          "hash": "0de8cdabf0744e2a7d87ddf2f4cb4466",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Send Reset Link"
+        },
+        "12/declaration/body/11/0/init/body/3/7": {
+          "type": "element",
+          "hash": "af1fe3e18ab8816b295086f5caa19bbb",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Back to Login"
+        },
+        "12/declaration/body/12/0/init/body/1/3": {
+          "type": "element",
+          "hash": "128454044f09acb189bc9429173c3fe0",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Check Your Email"
+        },
+        "12/declaration/body/12/0/init/body/1/5": {
+          "type": "element",
+          "hash": "af47852d9b2545938f28788b1837b136",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "We've sent a password reset link to <element:span>{resetEmail}</element:span>"
+        },
+        "12/declaration/body/12/0/init/body/1/7": {
+          "type": "element",
+          "hash": "22cf97fb73c270e87c6bc4ae49fb39d5",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Didn't receive the email? Check your spam folder or try again."
+        },
+        "12/declaration/body/12/0/init/body/3/1": {
+          "type": "element",
+          "hash": "af1fe3e18ab8816b295086f5caa19bbb",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Back to Login"
+        },
+        "12/declaration/body/14/argument/1/1/1-alt": {
+          "type": "attribute",
+          "hash": "84694dceff6180310fed53ccaa20c4c5",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Happy Office Workers"
+        },
+        "12/declaration/body/14/argument/3/5": {
+          "type": "element",
+          "hash": "560ab78ac75a5b5df43ae45aa64f171e",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "You don't have an account?<element:Link>Contact us</element:Link>"
+        },
         "12/declaration/body/3/argument/1/1/1-alt": {
           "type": "attribute",
           "hash": "84694dceff6180310fed53ccaa20c4c5",
@@ -638,6 +790,22 @@
           "overrides": {},
           "content": "You don't have an account?<element:Link>Contact us</element:Link>"
         },
+        "7/declaration/body/9/argument/1/1/1-alt": {
+          "type": "attribute",
+          "hash": "84694dceff6180310fed53ccaa20c4c5",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Happy Office Workers"
+        },
+        "7/declaration/body/9/argument/3/5": {
+          "type": "element",
+          "hash": "560ab78ac75a5b5df43ae45aa64f171e",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "You don't have an account?<element:Link>Contact us</element:Link>"
+        },
         "8/declaration/body/0/argument/1/1/1-alt": {
           "type": "attribute",
           "hash": "84694dceff6180310fed53ccaa20c4c5",
@@ -910,6 +1078,22 @@
           "overrides": {},
           "content": "Sign up"
         },
+        "8/declaration/body/9/argument/1/1/1-alt": {
+          "type": "attribute",
+          "hash": "84694dceff6180310fed53ccaa20c4c5",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Happy Office Workers"
+        },
+        "8/declaration/body/9/argument/3/5": {
+          "type": "element",
+          "hash": "560ab78ac75a5b5df43ae45aa64f171e",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "You don't have an account?<element:Link>Contact us</element:Link>"
+        },
         "9/declaration/body/0/argument/1/1/1-alt": {
           "type": "attribute",
           "hash": "84694dceff6180310fed53ccaa20c4c5",
@@ -997,6 +1181,22 @@
           "skip": false,
           "overrides": {},
           "content": "You don't have an account?<element:Link>Contact us</element:Link>"
+        },
+        "9/declaration/body/9/argument/1/1/1-alt": {
+          "type": "attribute",
+          "hash": "84694dceff6180310fed53ccaa20c4c5",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Happy Office Workers"
+        },
+        "9/declaration/body/9/argument/3/5": {
+          "type": "element",
+          "hash": "560ab78ac75a5b5df43ae45aa64f171e",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "You don't have an account?<element:Link>Contact us</element:Link>"
         }
       }
     },
@@ -1061,6 +1261,442 @@
           "skip": false,
           "overrides": {},
           "content": "This is long text demonstrating AI Translations"
+        }
+      }
+    },
+    "features/auth/components/EmailSentMessage.tsx": {
+      "scopes": {
+        "3/declaration/body/0/argument/1/3": {
+          "type": "element",
+          "hash": "128454044f09acb189bc9429173c3fe0",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Check Your Email"
+        },
+        "3/declaration/body/0/argument/1/5": {
+          "type": "element",
+          "hash": "af47852d9b2545938f28788b1837b136",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "We've sent a password reset link to <element:span>{resetEmail}</element:span>"
+        },
+        "3/declaration/body/0/argument/1/7": {
+          "type": "element",
+          "hash": "22cf97fb73c270e87c6bc4ae49fb39d5",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Didn't receive the email? Check your spam folder or try again."
+        },
+        "3/declaration/body/0/argument/3/1": {
+          "type": "element",
+          "hash": "af1fe3e18ab8816b295086f5caa19bbb",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Back to Login"
+        }
+      }
+    },
+    "features/auth/components/ForgotPasswordForm.tsx": {
+      "scopes": {
+        "7/declaration/body/1/argument/1/1": {
+          "type": "element",
+          "hash": "52ec990b25991808a4f49db84986eefc",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Reset Password"
+        },
+        "7/declaration/body/1/argument/1/3": {
+          "type": "element",
+          "hash": "6e820fc1a74664b8acdb6f563412e0b0",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Enter your email address and we'll send you a link to reset your password"
+        },
+        "7/declaration/body/1/argument/3/3-label": {
+          "type": "attribute",
+          "hash": "e7f34943a0c2fb849db1839ff6ef5cb5",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Email"
+        },
+        "7/declaration/body/1/argument/3/3-placeholder": {
+          "type": "attribute",
+          "hash": "9bc008365ebe3e404e241c8ca876f56e",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Enter your email address"
+        },
+        "7/declaration/body/1/argument/3/5": {
+          "type": "element",
+          "hash": "0de8cdabf0744e2a7d87ddf2f4cb4466",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Send Reset Link"
+        },
+        "7/declaration/body/1/argument/3/7": {
+          "type": "element",
+          "hash": "af1fe3e18ab8816b295086f5caa19bbb",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Back to Login"
+        }
+      }
+    },
+    "features/auth/components/LoginForm.tsx": {
+      "scopes": {
+        "7/declaration/body/1/argument/1/1": {
+          "type": "element",
+          "hash": "3d7c5b589fe3e18a1d2d7e83de7a9cf1",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Welcome Back"
+        },
+        "7/declaration/body/1/argument/1/3": {
+          "type": "element",
+          "hash": "efe8c63f2219da23270fff479619bb1d",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Fill in your email and password to continue"
+        },
+        "7/declaration/body/1/argument/3/3-label": {
+          "type": "attribute",
+          "hash": "e7f34943a0c2fb849db1839ff6ef5cb5",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Email"
+        },
+        "7/declaration/body/1/argument/3/5-label": {
+          "type": "attribute",
+          "hash": "223a61cf906ab9c40d22612c588dff48",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Password"
+        },
+        "7/declaration/body/1/argument/3/7/1": {
+          "type": "element",
+          "hash": "afc02ff1df56ecf8493e9e201592d764",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Remember me"
+        },
+        "7/declaration/body/1/argument/3/7/3": {
+          "type": "element",
+          "hash": "4a0a69c05d0946a79ac6cc32bbb3c615",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Forgot password?"
+        },
+        "7/declaration/body/1/argument/3/9": {
+          "type": "element",
+          "hash": "d9b0fe0a007e54d41375447cdf3c5267",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Log in"
+        }
+      }
+    },
+    "features/auth/components/email-sent-message.tsx": {
+      "scopes": {
+        "3/declaration/body/0/argument/1/3": {
+          "type": "element",
+          "hash": "128454044f09acb189bc9429173c3fe0",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Check Your Email"
+        },
+        "3/declaration/body/0/argument/1/5": {
+          "type": "element",
+          "hash": "af47852d9b2545938f28788b1837b136",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "We've sent a password reset link to <element:span>{resetEmail}</element:span>"
+        },
+        "3/declaration/body/0/argument/1/7": {
+          "type": "element",
+          "hash": "22cf97fb73c270e87c6bc4ae49fb39d5",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Didn't receive the email? Check your spam folder or try again."
+        },
+        "3/declaration/body/0/argument/3/1": {
+          "type": "element",
+          "hash": "af1fe3e18ab8816b295086f5caa19bbb",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Back to Login"
+        },
+        "4/declaration/body/0/argument/1/3": {
+          "type": "element",
+          "hash": "128454044f09acb189bc9429173c3fe0",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Check Your Email"
+        },
+        "4/declaration/body/0/argument/1/5": {
+          "type": "element",
+          "hash": "af47852d9b2545938f28788b1837b136",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "We've sent a password reset link to <element:span>{resetEmail}</element:span>"
+        },
+        "4/declaration/body/0/argument/1/7": {
+          "type": "element",
+          "hash": "22cf97fb73c270e87c6bc4ae49fb39d5",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Didn't receive the email? Check your spam folder or try again."
+        },
+        "4/declaration/body/0/argument/3/1": {
+          "type": "element",
+          "hash": "af1fe3e18ab8816b295086f5caa19bbb",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Back to Login"
+        }
+      }
+    },
+    "features/auth/components/forgot-password-form.tsx": {
+      "scopes": {
+        "6/declaration/body/1/argument/1/1": {
+          "type": "element",
+          "hash": "52ec990b25991808a4f49db84986eefc",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Reset Password"
+        },
+        "6/declaration/body/1/argument/1/3": {
+          "type": "element",
+          "hash": "6e820fc1a74664b8acdb6f563412e0b0",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Enter your email address and we'll send you a link to reset your password"
+        },
+        "6/declaration/body/1/argument/3/3-label": {
+          "type": "attribute",
+          "hash": "e7f34943a0c2fb849db1839ff6ef5cb5",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Email"
+        },
+        "6/declaration/body/1/argument/3/3-placeholder": {
+          "type": "attribute",
+          "hash": "9bc008365ebe3e404e241c8ca876f56e",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Enter your email address"
+        },
+        "6/declaration/body/1/argument/3/5": {
+          "type": "element",
+          "hash": "0de8cdabf0744e2a7d87ddf2f4cb4466",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Send Reset Link"
+        },
+        "6/declaration/body/1/argument/3/7": {
+          "type": "element",
+          "hash": "af1fe3e18ab8816b295086f5caa19bbb",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Back to Login"
+        },
+        "7/declaration/body/1/argument/1/1": {
+          "type": "element",
+          "hash": "52ec990b25991808a4f49db84986eefc",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Reset Password"
+        },
+        "7/declaration/body/1/argument/1/3": {
+          "type": "element",
+          "hash": "6e820fc1a74664b8acdb6f563412e0b0",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Enter your email address and we'll send you a link to reset your password"
+        },
+        "7/declaration/body/1/argument/3/3-label": {
+          "type": "attribute",
+          "hash": "e7f34943a0c2fb849db1839ff6ef5cb5",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Email"
+        },
+        "7/declaration/body/1/argument/3/3-placeholder": {
+          "type": "attribute",
+          "hash": "9bc008365ebe3e404e241c8ca876f56e",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Enter your email address"
+        },
+        "7/declaration/body/1/argument/3/5": {
+          "type": "element",
+          "hash": "0de8cdabf0744e2a7d87ddf2f4cb4466",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Send Reset Link"
+        },
+        "7/declaration/body/1/argument/3/7": {
+          "type": "element",
+          "hash": "af1fe3e18ab8816b295086f5caa19bbb",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Back to Login"
+        }
+      }
+    },
+    "features/auth/components/login-form.tsx": {
+      "scopes": {
+        "7/declaration/body/1/argument/1/1": {
+          "type": "element",
+          "hash": "3d7c5b589fe3e18a1d2d7e83de7a9cf1",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Welcome Back"
+        },
+        "7/declaration/body/1/argument/1/3": {
+          "type": "element",
+          "hash": "efe8c63f2219da23270fff479619bb1d",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Fill in your email and password to continue"
+        },
+        "7/declaration/body/1/argument/3/3-label": {
+          "type": "attribute",
+          "hash": "e7f34943a0c2fb849db1839ff6ef5cb5",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Email"
+        },
+        "7/declaration/body/1/argument/3/5-label": {
+          "type": "attribute",
+          "hash": "223a61cf906ab9c40d22612c588dff48",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Password"
+        },
+        "7/declaration/body/1/argument/3/7/1": {
+          "type": "element",
+          "hash": "afc02ff1df56ecf8493e9e201592d764",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Remember me"
+        },
+        "7/declaration/body/1/argument/3/7/3": {
+          "type": "element",
+          "hash": "4a0a69c05d0946a79ac6cc32bbb3c615",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Forgot password?"
+        },
+        "7/declaration/body/1/argument/3/9": {
+          "type": "element",
+          "hash": "d9b0fe0a007e54d41375447cdf3c5267",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Log in"
+        }
+      }
+    },
+    "features/auth/components/update-password-form.tsx": {
+      "scopes": {
+        "7/declaration/body/5/argument/1/1": {
+          "type": "element",
+          "hash": "3026758bd494c4db468c1e4fe8f6ff89",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Update Password"
+        },
+        "7/declaration/body/5/argument/1/3": {
+          "type": "element",
+          "hash": "742c470ca97fb2615616a18546ced32b",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Enter your new password below"
+        },
+        "7/declaration/body/5/argument/3/3-label": {
+          "type": "attribute",
+          "hash": "80d809edd5d1b66123b18faaac10537b",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "New Password"
+        },
+        "7/declaration/body/5/argument/3/3-placeholder": {
+          "type": "attribute",
+          "hash": "c67251e3002b68bc20a7cf5de23e43ac",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Enter your new password"
+        },
+        "7/declaration/body/5/argument/3/5-label": {
+          "type": "attribute",
+          "hash": "d3194bdcb74c9a912c67d7e1b030b88a",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Confirm New Password"
+        },
+        "7/declaration/body/5/argument/3/5-placeholder": {
+          "type": "attribute",
+          "hash": "a0d2935d7b63f8dd19d7c0de47524416",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Confirm your new password"
+        },
+        "7/declaration/body/5/argument/3/7": {
+          "type": "element",
+          "hash": "8e011bfb0c21d65edfa153e811b67633",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Update Password"
         }
       }
     }

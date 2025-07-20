@@ -1,20 +1,41 @@
 "use client";
 
-import { Button } from "@heroui/button";
-import { login } from "./actions";
-import { Input } from "@heroui/input";
 import Image from "next/image";
 import HappyOfficeWorkers from "$/assets/happy-office-workers.jpg";
 import Logo from "$/features/branding/components/Logo";
 import Link from "next/link";
 import { useQueryState, parseAsString } from "nuqs";
-import { useFormStatus } from "react-dom";
 import { useEffect } from "react";
-import { Alert, Checkbox } from "@heroui/react";
+import {
+  LoginForm,
+  ForgotPasswordForm,
+  EmailSentMessage,
+} from "$/features/auth/components";
+
+type AuthStep = "login" | "forgot-password" | "email-sent";
+const authSteps: AuthStep[] = ["login", "forgot-password", "email-sent"];
 
 export default function LoginPage() {
-  const { pending } = useFormStatus();
   const [error, setError] = useQueryState("error", parseAsString);
+  const [resetStatus, setResetStatus] = useQueryState("reset", parseAsString);
+  const [resetEmail, setResetEmail] = useQueryState("email", parseAsString);
+  const [step, setStep] = useQueryState<AuthStep>("step", {
+    defaultValue: "login",
+    parse: (value) => {
+      if (authSteps.includes(value as AuthStep)) {
+        return value as AuthStep;
+      }
+      return authSteps[0];
+    },
+    serialize: String,
+  });
+
+  // Handle reset status from URL parameters
+  useEffect(() => {
+    if (resetStatus === "sent" && resetEmail) {
+      setStep("email-sent");
+    }
+  }, [resetStatus, resetEmail, setStep]);
 
   // Clear error when component mounts or when user starts typing
   useEffect(() => {
@@ -31,6 +52,18 @@ export default function LoginPage() {
     if (error) {
       setError(null);
     }
+  };
+
+  const handleForgotPasswordClick = () => {
+    setStep("forgot-password");
+    setError(null);
+  };
+
+  const handleBackToLogin = () => {
+    setStep("login");
+    setError(null);
+    setResetStatus(null);
+    setResetEmail(null);
   };
 
   return (
@@ -60,45 +93,26 @@ export default function LoginPage() {
           <Logo className="h-9" />
         </div>
         <div className="flex flex-col gap-12 items-center justify-center w-sm mx-auto">
-          <div className="flex flex-col text-center gap-3">
-            <h1 className="font-heading text-4xl font-medium">Welcome Back</h1>
-            <h2 className="text-muted-foreground">
-              Fill in your email and password to continue
-            </h2>
-          </div>
-
-          <form className="w-full flex flex-col gap-6">
-            {error && <Alert color="danger" title={error} />}
-            <Input
-              label="Email"
-              name="email"
-              type="email"
-              required
-              onChange={handleInputChange}
+          {step === "login" && (
+            <LoginForm
+              error={error}
+              onInputChange={handleInputChange}
+              onForgotPasswordClick={handleForgotPasswordClick}
             />
-            <Input
-              label="Password"
-              name="password"
-              type="password"
-              required
-              onChange={handleInputChange}
+          )}
+          {step === "forgot-password" && (
+            <ForgotPasswordForm
+              error={error}
+              onInputChange={handleInputChange}
+              onBackToLogin={handleBackToLogin}
             />
-            <div className="w-full flex justify-between items-center">
-              <Checkbox>Remember me</Checkbox>
-              <Link href="/forgot-password" className="hover:text-primary">
-                Forgot password?
-              </Link>
-            </div>
-            <Button
-              className="mt-6"
-              type="submit"
-              formAction={login}
-              color="primary"
-              isLoading={pending}
-            >
-              Log in
-            </Button>
-          </form>
+          )}
+          {step === "email-sent" && (
+            <EmailSentMessage
+              resetEmail={resetEmail}
+              onBackToLogin={handleBackToLogin}
+            />
+          )}
         </div>
         <div className="flex flex-center gap-2 py-8">
           You don&apos;t have an account?

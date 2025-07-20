@@ -103,7 +103,7 @@ export default {
             en: "Welcome Back",
             pl: "Witamy ponownie",
           },
-          hash: "f6aad626f304541a1c13d3841d96aea2",
+          hash: "3d7c5b589fe3e18a1d2d7e83de7a9cf1",
         },
         "11/declaration/body/4/argument/3/3/1/3": {
           content: {
@@ -162,6 +162,139 @@ export default {
           hash: "f6781a7c70e11d9f017565ac36dcfd5a",
         },
         "11/declaration/body/4/argument/3/5": {
+          content: {
+            en: "You don't have an account?<element:Link>Contact us</element:Link>",
+            pl: "Nie masz konta?<element:Link>Skontaktuj się z nami</element:Link>",
+          },
+          hash: "560ab78ac75a5b5df43ae45aa64f171e",
+        },
+        "12/declaration/body/10/0/init/body/1/1": {
+          content: {
+            en: "Welcome Back",
+            pl: "Witamy ponownie",
+          },
+          hash: "3d7c5b589fe3e18a1d2d7e83de7a9cf1",
+        },
+        "12/declaration/body/10/0/init/body/1/3": {
+          content: {
+            en: "Fill in your email and password to continue",
+            pl: "Wprowadź swój email i hasło, aby kontynuować",
+          },
+          hash: "efe8c63f2219da23270fff479619bb1d",
+        },
+        "12/declaration/body/10/0/init/body/3/3-label": {
+          content: {
+            en: "Email",
+            pl: "E-mail",
+          },
+          hash: "e7f34943a0c2fb849db1839ff6ef5cb5",
+        },
+        "12/declaration/body/10/0/init/body/3/5-label": {
+          content: {
+            en: "Password",
+            pl: "Hasło",
+          },
+          hash: "223a61cf906ab9c40d22612c588dff48",
+        },
+        "12/declaration/body/10/0/init/body/3/7/1": {
+          content: {
+            en: "Remember me",
+            pl: "Zapamiętaj mnie",
+          },
+          hash: "afc02ff1df56ecf8493e9e201592d764",
+        },
+        "12/declaration/body/10/0/init/body/3/7/3": {
+          content: {
+            en: "Forgot password?",
+            pl: "Zapomniałeś hasła?",
+          },
+          hash: "4a0a69c05d0946a79ac6cc32bbb3c615",
+        },
+        "12/declaration/body/10/0/init/body/3/9": {
+          content: {
+            en: "Log in",
+            pl: "Zaloguj się",
+          },
+          hash: "d9b0fe0a007e54d41375447cdf3c5267",
+        },
+        "12/declaration/body/11/0/init/body/1/1": {
+          content: {
+            en: "Reset Password",
+            pl: "Zresetuj hasło",
+          },
+          hash: "52ec990b25991808a4f49db84986eefc",
+        },
+        "12/declaration/body/11/0/init/body/1/3": {
+          content: {
+            en: "Enter your email address and we'll send you a link to reset your password",
+            pl: "Wpisz swój adres email, a wyślemy Ci link do zresetowania hasła",
+          },
+          hash: "6e820fc1a74664b8acdb6f563412e0b0",
+        },
+        "12/declaration/body/11/0/init/body/3/3-label": {
+          content: {
+            en: "Email",
+            pl: "E-mail",
+          },
+          hash: "e7f34943a0c2fb849db1839ff6ef5cb5",
+        },
+        "12/declaration/body/11/0/init/body/3/3-placeholder": {
+          content: {
+            en: "Enter your email address",
+            pl: "Wpisz swój adres email",
+          },
+          hash: "9bc008365ebe3e404e241c8ca876f56e",
+        },
+        "12/declaration/body/11/0/init/body/3/5": {
+          content: {
+            en: "Send Reset Link",
+            pl: "Wyślij link do resetowania",
+          },
+          hash: "0de8cdabf0744e2a7d87ddf2f4cb4466",
+        },
+        "12/declaration/body/11/0/init/body/3/7": {
+          content: {
+            en: "Back to Login",
+            pl: "Powrót do logowania",
+          },
+          hash: "af1fe3e18ab8816b295086f5caa19bbb",
+        },
+        "12/declaration/body/12/0/init/body/1/3": {
+          content: {
+            en: "Check Your Email",
+            pl: "Sprawdź swój email",
+          },
+          hash: "128454044f09acb189bc9429173c3fe0",
+        },
+        "12/declaration/body/12/0/init/body/1/5": {
+          content: {
+            en: "We've sent a password reset link to <element:span>{resetEmail}</element:span>",
+            pl: "Wysłaliśmy link do resetowania hasła na <element:span>{resetEmail}</element:span>",
+          },
+          hash: "af47852d9b2545938f28788b1837b136",
+        },
+        "12/declaration/body/12/0/init/body/1/7": {
+          content: {
+            en: "Didn't receive the email? Check your spam folder or try again.",
+            pl: "Nie otrzymałeś emaila? Sprawdź folder spam lub spróbuj ponownie.",
+          },
+          hash: "22cf97fb73c270e87c6bc4ae49fb39d5",
+        },
+        "12/declaration/body/12/0/init/body/3/1": {
+          content: {
+            en: "Back to Login",
+            pl: "Powrót do logowania",
+          },
+          hash: "af1fe3e18ab8816b295086f5caa19bbb",
+        },
+        "12/declaration/body/14/argument/1/1/1-alt": {
+          content: {
+            en: "Happy Office Workers",
+            pl: "Szczęśliwi pracownicy biurowi",
+          },
+          hash: "84694dceff6180310fed53ccaa20c4c5",
+        },
+        "12/declaration/body/14/argument/3/5": {
           content: {
             en: "You don't have an account?<element:Link>Contact us</element:Link>",
             pl: "Nie masz konta?<element:Link>Skontaktuj się z nami</element:Link>",
@@ -560,6 +693,20 @@ export default {
           },
           hash: "560ab78ac75a5b5df43ae45aa64f171e",
         },
+        "7/declaration/body/9/argument/1/1/1-alt": {
+          content: {
+            en: "Happy Office Workers",
+            pl: "Szczęśliwi pracownicy biurowi",
+          },
+          hash: "84694dceff6180310fed53ccaa20c4c5",
+        },
+        "7/declaration/body/9/argument/3/5": {
+          content: {
+            en: "You don't have an account?<element:Link>Contact us</element:Link>",
+            pl: "Nie masz konta?<element:Link>Skontaktuj się z nami</element:Link>",
+          },
+          hash: "560ab78ac75a5b5df43ae45aa64f171e",
+        },
         "8/declaration/body/0/argument/1/1/1-alt": {
           content: {
             en: "Happy Office Workers",
@@ -798,6 +945,20 @@ export default {
           },
           hash: "2ac3b230e4814241c6c3a74969a0a6a6",
         },
+        "8/declaration/body/9/argument/1/1/1-alt": {
+          content: {
+            en: "Happy Office Workers",
+            pl: "Szczęśliwi pracownicy biurowi",
+          },
+          hash: "84694dceff6180310fed53ccaa20c4c5",
+        },
+        "8/declaration/body/9/argument/3/5": {
+          content: {
+            en: "You don't have an account?<element:Link>Contact us</element:Link>",
+            pl: "Nie masz konta?<element:Link>Skontaktuj się z nami</element:Link>",
+          },
+          hash: "560ab78ac75a5b5df43ae45aa64f171e",
+        },
         "9/declaration/body/0/argument/1/1/1-alt": {
           content: {
             en: "Happy Office Workers",
@@ -875,6 +1036,20 @@ export default {
           },
           hash: "560ab78ac75a5b5df43ae45aa64f171e",
         },
+        "9/declaration/body/9/argument/1/1/1-alt": {
+          content: {
+            en: "Happy Office Workers",
+            pl: "Szczęśliwi pracownicy biurowi",
+          },
+          hash: "84694dceff6180310fed53ccaa20c4c5",
+        },
+        "9/declaration/body/9/argument/3/5": {
+          content: {
+            en: "You don't have an account?<element:Link>Contact us</element:Link>",
+            pl: "Nie masz konta?<element:Link>Skontaktuj się z nami</element:Link>",
+          },
+          hash: "560ab78ac75a5b5df43ae45aa64f171e",
+        },
       },
     },
     "app/error.tsx": {
@@ -934,6 +1109,391 @@ export default {
             pl: "To jest długi tekst demonstrujący tłumaczenia AI",
           },
           hash: "1d9871d895f03b60e4519d246dcd7b04",
+        },
+      },
+    },
+    "features/auth/components/EmailSentMessage.tsx": {
+      entries: {
+        "3/declaration/body/0/argument/1/3": {
+          content: {
+            en: "Check Your Email",
+            pl: "Sprawdź swój email",
+          },
+          hash: "128454044f09acb189bc9429173c3fe0",
+        },
+        "3/declaration/body/0/argument/1/5": {
+          content: {
+            en: "We've sent a password reset link to <element:span>{resetEmail}</element:span>",
+            pl: "Wysłaliśmy link do resetowania hasła na <element:span>{resetEmail}</element:span>",
+          },
+          hash: "af47852d9b2545938f28788b1837b136",
+        },
+        "3/declaration/body/0/argument/1/7": {
+          content: {
+            en: "Didn't receive the email? Check your spam folder or try again.",
+            pl: "Nie otrzymałeś emaila? Sprawdź folder spam lub spróbuj ponownie.",
+          },
+          hash: "22cf97fb73c270e87c6bc4ae49fb39d5",
+        },
+        "3/declaration/body/0/argument/3/1": {
+          content: {
+            en: "Back to Login",
+            pl: "Powrót do logowania",
+          },
+          hash: "af1fe3e18ab8816b295086f5caa19bbb",
+        },
+      },
+    },
+    "features/auth/components/ForgotPasswordForm.tsx": {
+      entries: {
+        "7/declaration/body/1/argument/1/1": {
+          content: {
+            en: "Reset Password",
+            pl: "Zresetuj hasło",
+          },
+          hash: "52ec990b25991808a4f49db84986eefc",
+        },
+        "7/declaration/body/1/argument/1/3": {
+          content: {
+            en: "Enter your email address and we'll send you a link to reset your password",
+            pl: "Wpisz swój adres email, a wyślemy Ci link do zresetowania hasła",
+          },
+          hash: "6e820fc1a74664b8acdb6f563412e0b0",
+        },
+        "7/declaration/body/1/argument/3/3-label": {
+          content: {
+            en: "Email",
+            pl: "E-mail",
+          },
+          hash: "e7f34943a0c2fb849db1839ff6ef5cb5",
+        },
+        "7/declaration/body/1/argument/3/3-placeholder": {
+          content: {
+            en: "Enter your email address",
+            pl: "Wpisz swój adres email",
+          },
+          hash: "9bc008365ebe3e404e241c8ca876f56e",
+        },
+        "7/declaration/body/1/argument/3/5": {
+          content: {
+            en: "Send Reset Link",
+            pl: "Wyślij link do resetowania",
+          },
+          hash: "0de8cdabf0744e2a7d87ddf2f4cb4466",
+        },
+        "7/declaration/body/1/argument/3/7": {
+          content: {
+            en: "Back to Login",
+            pl: "Powrót do logowania",
+          },
+          hash: "af1fe3e18ab8816b295086f5caa19bbb",
+        },
+      },
+    },
+    "features/auth/components/LoginForm.tsx": {
+      entries: {
+        "7/declaration/body/1/argument/1/1": {
+          content: {
+            en: "Welcome Back",
+            pl: "Witamy ponownie",
+          },
+          hash: "3d7c5b589fe3e18a1d2d7e83de7a9cf1",
+        },
+        "7/declaration/body/1/argument/1/3": {
+          content: {
+            en: "Fill in your email and password to continue",
+            pl: "Wprowadź swój email i hasło, aby kontynuować",
+          },
+          hash: "efe8c63f2219da23270fff479619bb1d",
+        },
+        "7/declaration/body/1/argument/3/3-label": {
+          content: {
+            en: "Email",
+            pl: "E-mail",
+          },
+          hash: "e7f34943a0c2fb849db1839ff6ef5cb5",
+        },
+        "7/declaration/body/1/argument/3/5-label": {
+          content: {
+            en: "Password",
+            pl: "Hasło",
+          },
+          hash: "223a61cf906ab9c40d22612c588dff48",
+        },
+        "7/declaration/body/1/argument/3/7/1": {
+          content: {
+            en: "Remember me",
+            pl: "Zapamiętaj mnie",
+          },
+          hash: "afc02ff1df56ecf8493e9e201592d764",
+        },
+        "7/declaration/body/1/argument/3/7/3": {
+          content: {
+            en: "Forgot password?",
+            pl: "Zapomniałeś hasła?",
+          },
+          hash: "4a0a69c05d0946a79ac6cc32bbb3c615",
+        },
+        "7/declaration/body/1/argument/3/9": {
+          content: {
+            en: "Log in",
+            pl: "Zaloguj się",
+          },
+          hash: "d9b0fe0a007e54d41375447cdf3c5267",
+        },
+      },
+    },
+    "features/auth/components/email-sent-message.tsx": {
+      entries: {
+        "3/declaration/body/0/argument/1/3": {
+          content: {
+            en: "Check Your Email",
+            pl: "Sprawdź swój email",
+          },
+          hash: "128454044f09acb189bc9429173c3fe0",
+        },
+        "3/declaration/body/0/argument/1/5": {
+          content: {
+            en: "We've sent a password reset link to <element:span>{resetEmail}</element:span>",
+            pl: "Wysłaliśmy link do resetowania hasła na <element:span>{resetEmail}</element:span>",
+          },
+          hash: "af47852d9b2545938f28788b1837b136",
+        },
+        "3/declaration/body/0/argument/1/7": {
+          content: {
+            en: "Didn't receive the email? Check your spam folder or try again.",
+            pl: "Nie otrzymałeś emaila? Sprawdź folder spam lub spróbuj ponownie.",
+          },
+          hash: "22cf97fb73c270e87c6bc4ae49fb39d5",
+        },
+        "3/declaration/body/0/argument/3/1": {
+          content: {
+            en: "Back to Login",
+            pl: "Powrót do logowania",
+          },
+          hash: "af1fe3e18ab8816b295086f5caa19bbb",
+        },
+        "4/declaration/body/0/argument/1/3": {
+          content: {
+            en: "Check Your Email",
+            pl: "Sprawdź swój email",
+          },
+          hash: "128454044f09acb189bc9429173c3fe0",
+        },
+        "4/declaration/body/0/argument/1/5": {
+          content: {
+            en: "We've sent a password reset link to <element:span>{resetEmail}</element:span>",
+            pl: "Wysłaliśmy link do resetowania hasła na <element:span>{resetEmail}</element:span>",
+          },
+          hash: "af47852d9b2545938f28788b1837b136",
+        },
+        "4/declaration/body/0/argument/1/7": {
+          content: {
+            en: "Didn't receive the email? Check your spam folder or try again.",
+            pl: "Nie otrzymałeś emaila? Sprawdź folder spam lub spróbuj ponownie.",
+          },
+          hash: "22cf97fb73c270e87c6bc4ae49fb39d5",
+        },
+        "4/declaration/body/0/argument/3/1": {
+          content: {
+            en: "Back to Login",
+            pl: "Powrót do logowania",
+          },
+          hash: "af1fe3e18ab8816b295086f5caa19bbb",
+        },
+      },
+    },
+    "features/auth/components/forgot-password-form.tsx": {
+      entries: {
+        "6/declaration/body/1/argument/1/1": {
+          content: {
+            en: "Reset Password",
+            pl: "Zresetuj hasło",
+          },
+          hash: "52ec990b25991808a4f49db84986eefc",
+        },
+        "6/declaration/body/1/argument/1/3": {
+          content: {
+            en: "Enter your email address and we'll send you a link to reset your password",
+            pl: "Wpisz swój adres email, a wyślemy Ci link do zresetowania hasła",
+          },
+          hash: "6e820fc1a74664b8acdb6f563412e0b0",
+        },
+        "6/declaration/body/1/argument/3/3-label": {
+          content: {
+            en: "Email",
+            pl: "E-mail",
+          },
+          hash: "e7f34943a0c2fb849db1839ff6ef5cb5",
+        },
+        "6/declaration/body/1/argument/3/3-placeholder": {
+          content: {
+            en: "Enter your email address",
+            pl: "Wpisz swój adres email",
+          },
+          hash: "9bc008365ebe3e404e241c8ca876f56e",
+        },
+        "6/declaration/body/1/argument/3/5": {
+          content: {
+            en: "Send Reset Link",
+            pl: "Wyślij link do resetowania",
+          },
+          hash: "0de8cdabf0744e2a7d87ddf2f4cb4466",
+        },
+        "6/declaration/body/1/argument/3/7": {
+          content: {
+            en: "Back to Login",
+            pl: "Powrót do logowania",
+          },
+          hash: "af1fe3e18ab8816b295086f5caa19bbb",
+        },
+        "7/declaration/body/1/argument/1/1": {
+          content: {
+            en: "Reset Password",
+            pl: "Zresetuj hasło",
+          },
+          hash: "52ec990b25991808a4f49db84986eefc",
+        },
+        "7/declaration/body/1/argument/1/3": {
+          content: {
+            en: "Enter your email address and we'll send you a link to reset your password",
+            pl: "Wpisz swój adres email, a wyślemy Ci link do zresetowania hasła",
+          },
+          hash: "6e820fc1a74664b8acdb6f563412e0b0",
+        },
+        "7/declaration/body/1/argument/3/3-label": {
+          content: {
+            en: "Email",
+            pl: "E-mail",
+          },
+          hash: "e7f34943a0c2fb849db1839ff6ef5cb5",
+        },
+        "7/declaration/body/1/argument/3/3-placeholder": {
+          content: {
+            en: "Enter your email address",
+            pl: "Wpisz swój adres email",
+          },
+          hash: "9bc008365ebe3e404e241c8ca876f56e",
+        },
+        "7/declaration/body/1/argument/3/5": {
+          content: {
+            en: "Send Reset Link",
+            pl: "Wyślij link do resetowania",
+          },
+          hash: "0de8cdabf0744e2a7d87ddf2f4cb4466",
+        },
+        "7/declaration/body/1/argument/3/7": {
+          content: {
+            en: "Back to Login",
+            pl: "Powrót do logowania",
+          },
+          hash: "af1fe3e18ab8816b295086f5caa19bbb",
+        },
+      },
+    },
+    "features/auth/components/login-form.tsx": {
+      entries: {
+        "7/declaration/body/1/argument/1/1": {
+          content: {
+            en: "Welcome Back",
+            pl: "Witamy ponownie",
+          },
+          hash: "3d7c5b589fe3e18a1d2d7e83de7a9cf1",
+        },
+        "7/declaration/body/1/argument/1/3": {
+          content: {
+            en: "Fill in your email and password to continue",
+            pl: "Wprowadź swój email i hasło, aby kontynuować",
+          },
+          hash: "efe8c63f2219da23270fff479619bb1d",
+        },
+        "7/declaration/body/1/argument/3/3-label": {
+          content: {
+            en: "Email",
+            pl: "E-mail",
+          },
+          hash: "e7f34943a0c2fb849db1839ff6ef5cb5",
+        },
+        "7/declaration/body/1/argument/3/5-label": {
+          content: {
+            en: "Password",
+            pl: "Hasło",
+          },
+          hash: "223a61cf906ab9c40d22612c588dff48",
+        },
+        "7/declaration/body/1/argument/3/7/1": {
+          content: {
+            en: "Remember me",
+            pl: "Zapamiętaj mnie",
+          },
+          hash: "afc02ff1df56ecf8493e9e201592d764",
+        },
+        "7/declaration/body/1/argument/3/7/3": {
+          content: {
+            en: "Forgot password?",
+            pl: "Zapomniałeś hasła?",
+          },
+          hash: "4a0a69c05d0946a79ac6cc32bbb3c615",
+        },
+        "7/declaration/body/1/argument/3/9": {
+          content: {
+            en: "Log in",
+            pl: "Zaloguj się",
+          },
+          hash: "d9b0fe0a007e54d41375447cdf3c5267",
+        },
+      },
+    },
+    "features/auth/components/update-password-form.tsx": {
+      entries: {
+        "7/declaration/body/5/argument/1/1": {
+          content: {
+            en: "Update Password",
+            pl: "Zaktualizuj hasło",
+          },
+          hash: "3026758bd494c4db468c1e4fe8f6ff89",
+        },
+        "7/declaration/body/5/argument/1/3": {
+          content: {
+            en: "Enter your new password below",
+            pl: "Wprowadź swoje nowe hasło poniżej",
+          },
+          hash: "742c470ca97fb2615616a18546ced32b",
+        },
+        "7/declaration/body/5/argument/3/3-label": {
+          content: {
+            en: "New Password",
+            pl: "Nowe hasło",
+          },
+          hash: "80d809edd5d1b66123b18faaac10537b",
+        },
+        "7/declaration/body/5/argument/3/3-placeholder": {
+          content: {
+            en: "Enter your new password",
+            pl: "Wprowadź swoje nowe hasło",
+          },
+          hash: "c67251e3002b68bc20a7cf5de23e43ac",
+        },
+        "7/declaration/body/5/argument/3/5-label": {
+          content: {
+            en: "Confirm New Password",
+            pl: "Potwierdź nowe hasło",
+          },
+          hash: "d3194bdcb74c9a912c67d7e1b030b88a",
+        },
+        "7/declaration/body/5/argument/3/5-placeholder": {
+          content: {
+            en: "Confirm your new password",
+            pl: "Potwierdź swoje nowe hasło",
+          },
+          hash: "a0d2935d7b63f8dd19d7c0de47524416",
+        },
+        "7/declaration/body/5/argument/3/7": {
+          content: {
+            en: "Update Password",
+            pl: "Zaktualizuj hasło",
+          },
+          hash: "8e011bfb0c21d65edfa153e811b67633",
         },
       },
     },
