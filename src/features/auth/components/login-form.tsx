@@ -4,7 +4,7 @@ import { Button } from "@heroui/button";
 import { Input } from "@heroui/input";
 import { Alert, Checkbox } from "@heroui/react";
 import { useFormStatus } from "react-dom";
-import { login } from "$/app/(platform)/login/actions";
+import { login } from "$/features/auth/actions";
 
 interface LoginFormProps {
   error: string | null;

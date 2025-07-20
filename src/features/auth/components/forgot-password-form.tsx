@@ -4,7 +4,7 @@ import { Button } from "@heroui/button";
 import { Input } from "@heroui/input";
 import { Alert } from "@heroui/react";
 import { useFormStatus } from "react-dom";
-import { forgotPassword } from "$/app/(platform)/login/actions";
+import { forgotPassword } from "$/features/auth/actions";
 
 interface ForgotPasswordFormProps {
   error: string | null;

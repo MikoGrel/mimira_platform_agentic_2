@@ -11,11 +11,15 @@ import {
   ForgotPasswordForm,
   EmailSentMessage,
 } from "$/features/auth/components";
+import ProgressiveBlurMask from "$/features/shared/ui/progressive-blur-mask";
+import useQueryToast from "$/features/shared/hooks/use-query-toast";
 
 type AuthStep = "login" | "forgot-password" | "email-sent";
 const authSteps: AuthStep[] = ["login", "forgot-password", "email-sent"];
 
 export default function LoginPage() {
+  useQueryToast("loggedOut", <span>Logged out successfully</span>, "success");
+
   const [error, setError] = useQueryState("error", parseAsString);
   const [resetStatus, setResetStatus] = useQueryState("reset", parseAsString);
   const [resetEmail, setResetEmail] = useQueryState("email", parseAsString);
@@ -76,15 +80,7 @@ export default function LoginPage() {
             fill
             className="object-cover grayscale"
           />
-          <div
-            className="absolute inset-0 backdrop-blur-sm bg-gradient-to-b from-transparent to-black/10"
-            style={{
-              maskImage:
-                "linear-gradient(to bottom, transparent 60%, black 100%)",
-              WebkitMaskImage:
-                "linear-gradient(to bottom, transparent 60%, black 100%)",
-            }}
-          />
+          <ProgressiveBlurMask />
           <div className="absolute inset-0 bg-gradient-to-b from-primary/10 to-primary/60" />
         </div>
       </section>

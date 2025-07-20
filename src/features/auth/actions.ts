@@ -64,3 +64,9 @@ export async function forgotPassword(formData: FormData) {
   // Redirect with success message
   redirect(`/login?reset=sent&email=${encodeURIComponent(email)}`);
 }
+
+export async function logout() {
+  const supabase = await createClient();
+  await supabase.auth.signOut();
+  redirect("/login?loggedOut=true");
+}
