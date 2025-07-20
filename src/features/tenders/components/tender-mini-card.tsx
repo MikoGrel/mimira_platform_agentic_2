@@ -24,7 +24,7 @@ export function TenderMiniCard(props: TenderMiniCardProps) {
     <div className="bg-white border border-default p-4 flex justify-between rounded-xl">
       <div className="flex flex-col gap-2">
         <p>{title}</p>
-        <p className="text-xs flex gap-4">
+        <div className="text-xs flex gap-4">
           <div className="flex items-center gap-1">
             <DollarSign className="w-4 h-4" />
             {formattedAmount}
@@ -33,7 +33,7 @@ export function TenderMiniCard(props: TenderMiniCardProps) {
             <CalendarClock className="w-4 h-4" />
             {timeUntilExpiration}
           </div>
-        </p>
+        </div>
       </div>
       <div className="h-full">
         <Button

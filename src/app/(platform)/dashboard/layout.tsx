@@ -27,8 +27,10 @@ export default async function DashboardLayout({
       <DashboardSidebar />
 
       <SidebarInset>
-        <header className="flex h-16 shrink-0 items-center justify-between gap-4 bg-sidebar px-4">
-          <div className="flex items-center gap-2"></div>
+        <header className="flex h-16 shrink-0 items-center justify-between gap-4 bg-sidebar px-4 sticky top-0 z-10">
+          <div className="flex items-center gap-2">
+            <SidebarTrigger className="-ml-1" />
+          </div>
 
           <div className="relative">
             <Search className="absolute left-2 top-1/2 h-4 w-4 -translate-y-1/2 text-sidebar-foreground/70" />
@@ -46,8 +48,7 @@ export default async function DashboardLayout({
             </div>
           </div>
         </header>
-        <div className="flex flex-1 flex-col gap-4 p-4 rounded-tl-2xl border-l border-t border-sidebar-border">
-          <SidebarTrigger className="-ml-1" />
+        <div className="flex flex-1 flex-col gap-4 rounded-tl-2xl border-l border-t border-sidebar-border">
           {children}
         </div>
       </SidebarInset>

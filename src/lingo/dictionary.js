@@ -1,6 +1,59 @@
 export default {
   version: 0.1,
   files: {
+    "app/(platform)/dashboard/inbox/page.tsx": {
+      entries: {
+        "0/declaration/body/0/argument": {
+          content: {
+            en: "Inbox",
+            pl: "Skrzynka odbiorcza",
+          },
+          hash: "57e9db873911bf848c79e2ed546ecf45",
+        },
+        "2/declaration/body/0/argument/1/1/1/3-placeholder": {
+          content: {
+            en: "Search",
+            pl: "Szukaj",
+          },
+          hash: "49dd6c21604b5e8d4153ff1aff2177e1",
+        },
+        "2/declaration/body/0/argument/1/1/3-label": {
+          content: {
+            en: "Search",
+            pl: "Szukaj",
+          },
+          hash: "49dd6c21604b5e8d4153ff1aff2177e1",
+        },
+        "2/declaration/body/0/argument/1/1/3-placeholder": {
+          content: {
+            en: "Search",
+            pl: "Szukaj",
+          },
+          hash: "49dd6c21604b5e8d4153ff1aff2177e1",
+        },
+        "3/declaration/body/2/argument/1/1/1/3-placeholder": {
+          content: {
+            en: "Search",
+            pl: "Szukaj",
+          },
+          hash: "49dd6c21604b5e8d4153ff1aff2177e1",
+        },
+        "3/declaration/body/2/argument/1/3/1/expression/0/body/3": {
+          content: {
+            en: "<element:span>{t.organizationname}</element:span> ·<element:span>{t.submittingoffersdate}</element:span>",
+            pl: "<element:span>{t.organizationname}</element:span> ·<element:span>{t.submittingoffersdate}</element:span>",
+          },
+          hash: "9cd73e2c9c17a934d08f9b894c190cb0",
+        },
+        "3/declaration/body/2/argument/1/3/1/expression/0/body/3/3": {
+          content: {
+            en: " · ",
+            pl: " · ",
+          },
+          hash: "21ca490ec79ca57af655c1df4287bbd0",
+        },
+      },
+    },
     "app/(platform)/dashboard/layout.tsx": {
       entries: {
         "10/declaration/body/1/argument/1/3/1/1": {
@@ -163,6 +216,13 @@ export default {
             pl: "Pulpit",
           },
           hash: "c9380ea68c8c76ea451bd9613329a07c",
+        },
+        "7/declaration/body/2/argument/3/1/3/1/3-placeholder": {
+          content: {
+            en: "Search...",
+            pl: "Szukaj...",
+          },
+          hash: "fe877a75eac472fc5b188c135c78a558",
         },
         "7/declaration/body/2/argument/3/1/3/3-placeholder": {
           content: {
@@ -357,6 +417,151 @@ export default {
     },
     "app/(platform)/dashboard/page.tsx": {
       entries: {
+        "10/declaration/body/0/argument/1/1/1/1": {
+          content: {
+            en: "Welcome back",
+            pl: "Witamy ponownie",
+          },
+          hash: "824eab5b8d8d3fbda56c7a46c9e05275",
+        },
+        "10/declaration/body/0/argument/1/1/1/3/1": {
+          content: {
+            en: "Generated using:",
+            pl: "Wygenerowano za pomocą:",
+          },
+          hash: "d695a89e3bf9a1d7dbd8f439acbbc769",
+        },
+        "10/declaration/body/0/argument/1/1/1/3/4": {
+          content: {
+            en: "<element:Symbol></element:Symbol> AI",
+            pl: "<element:Symbol></element:Symbol> AI",
+          },
+          hash: "c9994261129e9a2d8b64d75f39060b65",
+        },
+        "10/declaration/body/0/argument/1/1/3": {
+          content: {
+            en: "Today's briefing: Since yesterday we've managed to find you 5 new tenders, 3 require your attention.",
+            pl: "Dzisiejszy briefing: Od wczoraj udało nam się znaleźć dla Ciebie 5 nowych przetargów, 3 z nich wymagają Twojej uwagi.",
+          },
+          hash: "07b033c5d821d60469e4dd460fcea3bc",
+        },
+        "10/declaration/body/0/argument/1/3/1/1/1-title": {
+          content: {
+            en: "Purchase of paraffin candles",
+            pl: "Zakup świec parafinowych",
+          },
+          hash: "12e0bad314c616da4bae345d99f447d6",
+        },
+        "10/declaration/body/0/argument/1/3/1/1/3-title": {
+          content: {
+            en: "Procurement of wax lights",
+            pl: "Zakup świec woskowych",
+          },
+          hash: "5807fc4c30f27d97ce1d8f8459e97db6",
+        },
+        "10/declaration/body/0/argument/1/3/1/1/5-title": {
+          content: {
+            en: "Acquisition of candle supplies",
+            pl: "Zakup materiałów do produkcji świec",
+          },
+          hash: "24976e1c7da9b714080547738cf8c681",
+        },
+        "10/declaration/body/0/argument/1/3/1/openingElement/0/value/expression":
+          {
+            content: {
+              en: "New tenders",
+              pl: "Nowe przetargi",
+            },
+            hash: "b6a405902627530cdf66b4c52e322ee3",
+          },
+        "10/declaration/body/0/argument/1/3/1/openingElement/1/value/expression":
+          {
+            content: {
+              en: "Open full list",
+              pl: "Otwórz pełną listę",
+            },
+            hash: "1ce3d95b245c12a1f7b97a62bc37754b",
+          },
+        "10/declaration/body/0/argument/1/3/3/1/1": {
+          content: {
+            en: "New tenders: <element:span>3</element:span>",
+            pl: "Nowe przetargi: <element:span>3</element:span>",
+          },
+          hash: "212465f4c40466b6098ce4dc22b6799d",
+        },
+        "10/declaration/body/0/argument/1/3/3/1/3": {
+          content: {
+            en: "Overall: <element:span>50</element:span>",
+            pl: "Ogółem: <element:span>50</element:span>",
+          },
+          hash: "0ff17b0cb0ac6e48173443e8cacdc8f4",
+        },
+        "10/declaration/body/0/argument/1/3/3/1/5": {
+          content: {
+            en: "Accepted: <element:span>10</element:span>",
+            pl: "Zaakceptowane: <element:span>10</element:span>",
+          },
+          hash: "5c9d3a12840830e07b5c156553031ce0",
+        },
+        "10/declaration/body/0/argument/1/3/3/openingElement/0/value/expression":
+          {
+            content: {
+              en: "Stats",
+              pl: "Statystyki",
+            },
+            hash: "5cf8b052c89fa1b05397a956ebec69b2",
+          },
+        "10/declaration/body/0/argument/1/3/5/1": {
+          content: {
+            en: "Restocking medical equipment",
+            pl: "Uzupełnianie zapasów sprzętu medycznego",
+          },
+          hash: "48eb8dbecbc3734bd6d08d4a4c14db98",
+        },
+        "10/declaration/body/0/argument/1/3/5/3/1/1": {
+          content: {
+            en: "Preview",
+            pl: "Podgląd",
+          },
+          hash: "b4b4d5565c0424b040cf1f637a797a4b",
+        },
+        "10/declaration/body/0/argument/1/3/5/3/3/1": {
+          content: {
+            en: "Filling-out data",
+            pl: "Wypełnianie danych",
+          },
+          hash: "c90b263e7ad3362341dec40d5e86f98a",
+        },
+        "10/declaration/body/0/argument/1/3/5/3/5/1": {
+          content: {
+            en: "Application",
+            pl: "Aplikacja",
+          },
+          hash: "6dee9191cf69144d6b569683c49631d8",
+        },
+        "10/declaration/body/0/argument/1/3/5/5": {
+          content: {
+            en: "Continue",
+            pl: "Kontynuuj",
+          },
+          hash: "15635dc0f0dc3457d0e266830029e34c",
+        },
+        "10/declaration/body/0/argument/1/3/5/openingElement/0/value/expression":
+          {
+            content: {
+              en: "Return to last tender",
+              pl: "Wróć do ostatniego przetargu",
+            },
+            hash: "8208df3c0f89efff2b48433a4f98902e",
+          },
+        "10/declaration/body/0/argument/1/3/7/openingElement/0/value/expression":
+          {
+            content: {
+              en: "Deadline calendar",
+              pl: "Kalendarz terminów",
+            },
+            hash: "a943e8c4f3795b51abf0f1b7c9171701",
+          },
         "10/declaration/body/4/consequent/0/argument": {
           content: {
             en: "Loading...",
@@ -439,6 +644,151 @@ export default {
             hash: "8208df3c0f89efff2b48433a4f98902e",
           },
         "10/declaration/body/6/argument/1/5/7/openingElement/0/value/expression":
+          {
+            content: {
+              en: "Deadline calendar",
+              pl: "Kalendarz terminów",
+            },
+            hash: "a943e8c4f3795b51abf0f1b7c9171701",
+          },
+        "11/declaration/body/0/argument/1/1/1/1": {
+          content: {
+            en: "Welcome back",
+            pl: "Witamy ponownie",
+          },
+          hash: "824eab5b8d8d3fbda56c7a46c9e05275",
+        },
+        "11/declaration/body/0/argument/1/1/1/3/1": {
+          content: {
+            en: "Generated using:",
+            pl: "Wygenerowano za pomocą:",
+          },
+          hash: "d695a89e3bf9a1d7dbd8f439acbbc769",
+        },
+        "11/declaration/body/0/argument/1/1/1/3/4": {
+          content: {
+            en: "<element:Symbol></element:Symbol> AI",
+            pl: "<element:Symbol></element:Symbol> AI",
+          },
+          hash: "c9994261129e9a2d8b64d75f39060b65",
+        },
+        "11/declaration/body/0/argument/1/1/3": {
+          content: {
+            en: "Today's briefing: Since yesterday we've managed to find you 5 new tenders, 3 require your attention.",
+            pl: "Dzisiejszy briefing: Od wczoraj udało nam się znaleźć dla Ciebie 5 nowych przetargów, 3 z nich wymagają Twojej uwagi.",
+          },
+          hash: "07b033c5d821d60469e4dd460fcea3bc",
+        },
+        "11/declaration/body/0/argument/1/3/1/1/1-title": {
+          content: {
+            en: "Purchase of paraffin candles",
+            pl: "Zakup świec parafinowych",
+          },
+          hash: "12e0bad314c616da4bae345d99f447d6",
+        },
+        "11/declaration/body/0/argument/1/3/1/1/3-title": {
+          content: {
+            en: "Procurement of wax lights",
+            pl: "Zakup świec woskowych",
+          },
+          hash: "5807fc4c30f27d97ce1d8f8459e97db6",
+        },
+        "11/declaration/body/0/argument/1/3/1/1/5-title": {
+          content: {
+            en: "Acquisition of candle supplies",
+            pl: "Zakup materiałów do produkcji świec",
+          },
+          hash: "24976e1c7da9b714080547738cf8c681",
+        },
+        "11/declaration/body/0/argument/1/3/1/openingElement/0/value/expression":
+          {
+            content: {
+              en: "New tenders",
+              pl: "Nowe przetargi",
+            },
+            hash: "b6a405902627530cdf66b4c52e322ee3",
+          },
+        "11/declaration/body/0/argument/1/3/1/openingElement/1/value/expression":
+          {
+            content: {
+              en: "Open full list",
+              pl: "Otwórz pełną listę",
+            },
+            hash: "1ce3d95b245c12a1f7b97a62bc37754b",
+          },
+        "11/declaration/body/0/argument/1/3/3/1/1": {
+          content: {
+            en: "New tenders: <element:span>3</element:span>",
+            pl: "Nowe przetargi: <element:span>3</element:span>",
+          },
+          hash: "212465f4c40466b6098ce4dc22b6799d",
+        },
+        "11/declaration/body/0/argument/1/3/3/1/3": {
+          content: {
+            en: "Overall: <element:span>50</element:span>",
+            pl: "Ogółem: <element:span>50</element:span>",
+          },
+          hash: "0ff17b0cb0ac6e48173443e8cacdc8f4",
+        },
+        "11/declaration/body/0/argument/1/3/3/1/5": {
+          content: {
+            en: "Accepted: <element:span>10</element:span>",
+            pl: "Zaakceptowane: <element:span>10</element:span>",
+          },
+          hash: "5c9d3a12840830e07b5c156553031ce0",
+        },
+        "11/declaration/body/0/argument/1/3/3/openingElement/0/value/expression":
+          {
+            content: {
+              en: "Stats",
+              pl: "Statystyki",
+            },
+            hash: "5cf8b052c89fa1b05397a956ebec69b2",
+          },
+        "11/declaration/body/0/argument/1/3/5/1": {
+          content: {
+            en: "Restocking medical equipment",
+            pl: "Uzupełnianie zapasów sprzętu medycznego",
+          },
+          hash: "48eb8dbecbc3734bd6d08d4a4c14db98",
+        },
+        "11/declaration/body/0/argument/1/3/5/3/1/1": {
+          content: {
+            en: "Preview",
+            pl: "Podgląd",
+          },
+          hash: "b4b4d5565c0424b040cf1f637a797a4b",
+        },
+        "11/declaration/body/0/argument/1/3/5/3/3/1": {
+          content: {
+            en: "Filling-out data",
+            pl: "Wypełnianie danych",
+          },
+          hash: "c90b263e7ad3362341dec40d5e86f98a",
+        },
+        "11/declaration/body/0/argument/1/3/5/3/5/1": {
+          content: {
+            en: "Application",
+            pl: "Aplikacja",
+          },
+          hash: "6dee9191cf69144d6b569683c49631d8",
+        },
+        "11/declaration/body/0/argument/1/3/5/5": {
+          content: {
+            en: "Continue",
+            pl: "Kontynuuj",
+          },
+          hash: "15635dc0f0dc3457d0e266830029e34c",
+        },
+        "11/declaration/body/0/argument/1/3/5/openingElement/0/value/expression":
+          {
+            content: {
+              en: "Return to last tender",
+              pl: "Wróć do ostatniego przetargu",
+            },
+            hash: "8208df3c0f89efff2b48433a4f98902e",
+          },
+        "11/declaration/body/0/argument/1/3/7/openingElement/0/value/expression":
           {
             content: {
               en: "Deadline calendar",
@@ -881,6 +1231,296 @@ export default {
           },
           hash: "c8588240862fbb20fb2e444e9bae14df",
         },
+        "13/declaration/body/0/argument/1/1/1/1": {
+          content: {
+            en: "Welcome back",
+            pl: "Witamy ponownie",
+          },
+          hash: "824eab5b8d8d3fbda56c7a46c9e05275",
+        },
+        "13/declaration/body/0/argument/1/1/1/3/1": {
+          content: {
+            en: "Generated using:",
+            pl: "Wygenerowano za pomocą:",
+          },
+          hash: "d695a89e3bf9a1d7dbd8f439acbbc769",
+        },
+        "13/declaration/body/0/argument/1/1/1/3/4": {
+          content: {
+            en: "<element:Symbol></element:Symbol> AI",
+            pl: "<element:Symbol></element:Symbol> AI",
+          },
+          hash: "c9994261129e9a2d8b64d75f39060b65",
+        },
+        "13/declaration/body/0/argument/1/1/3": {
+          content: {
+            en: "Today's briefing: Since yesterday we've managed to find you 5 new tenders, 3 require your attention.",
+            pl: "Dzisiejszy briefing: Od wczoraj udało nam się znaleźć dla Ciebie 5 nowych przetargów, 3 z nich wymagają Twojej uwagi.",
+          },
+          hash: "07b033c5d821d60469e4dd460fcea3bc",
+        },
+        "13/declaration/body/0/argument/1/3/1/1/1-title": {
+          content: {
+            en: "Purchase of paraffin candles",
+            pl: "Zakup świec parafinowych",
+          },
+          hash: "12e0bad314c616da4bae345d99f447d6",
+        },
+        "13/declaration/body/0/argument/1/3/1/1/3-title": {
+          content: {
+            en: "Procurement of wax lights",
+            pl: "Zakup świec woskowych",
+          },
+          hash: "5807fc4c30f27d97ce1d8f8459e97db6",
+        },
+        "13/declaration/body/0/argument/1/3/1/1/5-title": {
+          content: {
+            en: "Acquisition of candle supplies",
+            pl: "Zakup materiałów do produkcji świec",
+          },
+          hash: "24976e1c7da9b714080547738cf8c681",
+        },
+        "13/declaration/body/0/argument/1/3/1/openingElement/0/value/expression":
+          {
+            content: {
+              en: "New tenders",
+              pl: "Nowe przetargi",
+            },
+            hash: "b6a405902627530cdf66b4c52e322ee3",
+          },
+        "13/declaration/body/0/argument/1/3/1/openingElement/1/value/expression":
+          {
+            content: {
+              en: "Open full list",
+              pl: "Otwórz pełną listę",
+            },
+            hash: "1ce3d95b245c12a1f7b97a62bc37754b",
+          },
+        "13/declaration/body/0/argument/1/3/3/1/1": {
+          content: {
+            en: "New tenders: <element:span>3</element:span>",
+            pl: "Nowe przetargi: <element:span>3</element:span>",
+          },
+          hash: "212465f4c40466b6098ce4dc22b6799d",
+        },
+        "13/declaration/body/0/argument/1/3/3/1/3": {
+          content: {
+            en: "Overall: <element:span>50</element:span>",
+            pl: "Ogółem: <element:span>50</element:span>",
+          },
+          hash: "0ff17b0cb0ac6e48173443e8cacdc8f4",
+        },
+        "13/declaration/body/0/argument/1/3/3/1/5": {
+          content: {
+            en: "Accepted: <element:span>10</element:span>",
+            pl: "Zaakceptowane: <element:span>10</element:span>",
+          },
+          hash: "5c9d3a12840830e07b5c156553031ce0",
+        },
+        "13/declaration/body/0/argument/1/3/3/openingElement/0/value/expression":
+          {
+            content: {
+              en: "Stats",
+              pl: "Statystyki",
+            },
+            hash: "5cf8b052c89fa1b05397a956ebec69b2",
+          },
+        "13/declaration/body/0/argument/1/3/5/1": {
+          content: {
+            en: "Restocking medical equipment",
+            pl: "Uzupełnianie zapasów sprzętu medycznego",
+          },
+          hash: "48eb8dbecbc3734bd6d08d4a4c14db98",
+        },
+        "13/declaration/body/0/argument/1/3/5/3/1/1": {
+          content: {
+            en: "Preview",
+            pl: "Podgląd",
+          },
+          hash: "b4b4d5565c0424b040cf1f637a797a4b",
+        },
+        "13/declaration/body/0/argument/1/3/5/3/3/1": {
+          content: {
+            en: "Filling-out data",
+            pl: "Wypełnianie danych",
+          },
+          hash: "c90b263e7ad3362341dec40d5e86f98a",
+        },
+        "13/declaration/body/0/argument/1/3/5/3/5/1": {
+          content: {
+            en: "Application",
+            pl: "Aplikacja",
+          },
+          hash: "6dee9191cf69144d6b569683c49631d8",
+        },
+        "13/declaration/body/0/argument/1/3/5/5": {
+          content: {
+            en: "Continue",
+            pl: "Kontynuuj",
+          },
+          hash: "15635dc0f0dc3457d0e266830029e34c",
+        },
+        "13/declaration/body/0/argument/1/3/5/openingElement/0/value/expression":
+          {
+            content: {
+              en: "Return to last tender",
+              pl: "Wróć do ostatniego przetargu",
+            },
+            hash: "8208df3c0f89efff2b48433a4f98902e",
+          },
+        "13/declaration/body/0/argument/1/3/7/openingElement/0/value/expression":
+          {
+            content: {
+              en: "Deadline calendar",
+              pl: "Kalendarz terminów",
+            },
+            hash: "a943e8c4f3795b51abf0f1b7c9171701",
+          },
+        "13/declaration/body/1/argument/1/1/1/1": {
+          content: {
+            en: "Welcome back",
+            pl: "Witamy ponownie",
+          },
+          hash: "824eab5b8d8d3fbda56c7a46c9e05275",
+        },
+        "13/declaration/body/1/argument/1/1/1/3/1": {
+          content: {
+            en: "Generated using:",
+            pl: "Wygenerowano za pomocą:",
+          },
+          hash: "d695a89e3bf9a1d7dbd8f439acbbc769",
+        },
+        "13/declaration/body/1/argument/1/1/1/3/4": {
+          content: {
+            en: "<element:Symbol></element:Symbol> AI",
+            pl: "<element:Symbol></element:Symbol> AI",
+          },
+          hash: "c9994261129e9a2d8b64d75f39060b65",
+        },
+        "13/declaration/body/1/argument/1/1/3": {
+          content: {
+            en: "Today's briefing: Since yesterday we've managed to find you 5 new tenders, 3 require your attention.",
+            pl: "Dzisiejszy briefing: Od wczoraj udało nam się znaleźć dla Ciebie 5 nowych przetargów, 3 z nich wymagają Twojej uwagi.",
+          },
+          hash: "07b033c5d821d60469e4dd460fcea3bc",
+        },
+        "13/declaration/body/1/argument/1/3/1/1/1-title": {
+          content: {
+            en: "Purchase of paraffin candles",
+            pl: "Zakup świec parafinowych",
+          },
+          hash: "12e0bad314c616da4bae345d99f447d6",
+        },
+        "13/declaration/body/1/argument/1/3/1/1/3-title": {
+          content: {
+            en: "Procurement of wax lights",
+            pl: "Zakup świec woskowych",
+          },
+          hash: "5807fc4c30f27d97ce1d8f8459e97db6",
+        },
+        "13/declaration/body/1/argument/1/3/1/1/5-title": {
+          content: {
+            en: "Acquisition of candle supplies",
+            pl: "Zakup materiałów do produkcji świec",
+          },
+          hash: "24976e1c7da9b714080547738cf8c681",
+        },
+        "13/declaration/body/1/argument/1/3/1/openingElement/0/value/expression":
+          {
+            content: {
+              en: "New tenders",
+              pl: "Nowe przetargi",
+            },
+            hash: "b6a405902627530cdf66b4c52e322ee3",
+          },
+        "13/declaration/body/1/argument/1/3/1/openingElement/1/value/expression":
+          {
+            content: {
+              en: "Open full list",
+              pl: "Otwórz pełną listę",
+            },
+            hash: "1ce3d95b245c12a1f7b97a62bc37754b",
+          },
+        "13/declaration/body/1/argument/1/3/3/1/1": {
+          content: {
+            en: "New tenders: <element:span>3</element:span>",
+            pl: "Nowe przetargi: <element:span>3</element:span>",
+          },
+          hash: "212465f4c40466b6098ce4dc22b6799d",
+        },
+        "13/declaration/body/1/argument/1/3/3/1/3": {
+          content: {
+            en: "Overall: <element:span>50</element:span>",
+            pl: "Ogółem: <element:span>50</element:span>",
+          },
+          hash: "0ff17b0cb0ac6e48173443e8cacdc8f4",
+        },
+        "13/declaration/body/1/argument/1/3/3/1/5": {
+          content: {
+            en: "Accepted: <element:span>10</element:span>",
+            pl: "Zaakceptowane: <element:span>10</element:span>",
+          },
+          hash: "5c9d3a12840830e07b5c156553031ce0",
+        },
+        "13/declaration/body/1/argument/1/3/3/openingElement/0/value/expression":
+          {
+            content: {
+              en: "Stats",
+              pl: "Statystyki",
+            },
+            hash: "5cf8b052c89fa1b05397a956ebec69b2",
+          },
+        "13/declaration/body/1/argument/1/3/5/1": {
+          content: {
+            en: "Restocking medical equipment",
+            pl: "Uzupełnianie zapasów sprzętu medycznego",
+          },
+          hash: "48eb8dbecbc3734bd6d08d4a4c14db98",
+        },
+        "13/declaration/body/1/argument/1/3/5/3/1/1": {
+          content: {
+            en: "Preview",
+            pl: "Podgląd",
+          },
+          hash: "b4b4d5565c0424b040cf1f637a797a4b",
+        },
+        "13/declaration/body/1/argument/1/3/5/3/3/1": {
+          content: {
+            en: "Filling-out data",
+            pl: "Wypełnianie danych",
+          },
+          hash: "c90b263e7ad3362341dec40d5e86f98a",
+        },
+        "13/declaration/body/1/argument/1/3/5/3/5/1": {
+          content: {
+            en: "Application",
+            pl: "Aplikacja",
+          },
+          hash: "6dee9191cf69144d6b569683c49631d8",
+        },
+        "13/declaration/body/1/argument/1/3/5/5": {
+          content: {
+            en: "Continue",
+            pl: "Kontynuuj",
+          },
+          hash: "15635dc0f0dc3457d0e266830029e34c",
+        },
+        "13/declaration/body/1/argument/1/3/5/openingElement/0/value/expression":
+          {
+            content: {
+              en: "Return to last tender",
+              pl: "Wróć do ostatniego przetargu",
+            },
+            hash: "8208df3c0f89efff2b48433a4f98902e",
+          },
+        "13/declaration/body/1/argument/1/3/7/openingElement/0/value/expression":
+          {
+            content: {
+              en: "Deadline calendar",
+              pl: "Kalendarz terminów",
+            },
+            hash: "a943e8c4f3795b51abf0f1b7c9171701",
+          },
         "2/declaration/body/3/argument": {
           content: {
             en: "You are logged in as {user.email}",
@@ -1211,6 +1851,291 @@ export default {
             },
             hash: "a943e8c4f3795b51abf0f1b7c9171701",
           },
+        "8/declaration/body/0/argument/1/1/1": {
+          content: {
+            en: "Welcome back",
+            pl: "Witamy ponownie",
+          },
+          hash: "4928884739ba559e6e4b960e80fe1452",
+        },
+        "8/declaration/body/0/argument/1/1/1/1": {
+          content: {
+            en: "Welcome back",
+            pl: "Witamy ponownie",
+          },
+          hash: "824eab5b8d8d3fbda56c7a46c9e05275",
+        },
+        "8/declaration/body/0/argument/1/1/1/3/1": {
+          content: {
+            en: "Generated using:",
+            pl: "Wygenerowano za pomocą:",
+          },
+          hash: "d695a89e3bf9a1d7dbd8f439acbbc769",
+        },
+        "8/declaration/body/0/argument/1/1/1/3/4": {
+          content: {
+            en: "<element:Symbol></element:Symbol> AI",
+            pl: "<element:Symbol></element:Symbol> AI",
+          },
+          hash: "c9994261129e9a2d8b64d75f39060b65",
+        },
+        "8/declaration/body/0/argument/1/1/3": {
+          content: {
+            en: "Today's briefing: Since yesterday we've managed to find you 5 new tenders, 3 require your attention.",
+            pl: "Dzisiejszy briefing: Od wczoraj udało nam się znaleźć dla Ciebie 5 nowych przetargów, 3 z nich wymagają Twojej uwagi.",
+          },
+          hash: "07b033c5d821d60469e4dd460fcea3bc",
+        },
+        "8/declaration/body/0/argument/1/1/3/1": {
+          content: {
+            en: "Generated using:",
+            pl: "Wygenerowano za pomocą:",
+          },
+          hash: "d695a89e3bf9a1d7dbd8f439acbbc769",
+        },
+        "8/declaration/body/0/argument/1/1/3/4": {
+          content: {
+            en: "<element:Symbol></element:Symbol> AI",
+            pl: "<element:Symbol></element:Symbol> AI",
+          },
+          hash: "17b6bff56042912b140ae4643179b3de",
+        },
+        "8/declaration/body/0/argument/1/3": {
+          content: {
+            en: "Today's briefing: Since yesterday we've managed to find you 5 new tenders, 3 require your attention.",
+            pl: "Dzisiejszy briefing: Od wczoraj udało nam się znaleźć dla Ciebie 5 nowych przetargów, 3 z nich wymagają Twojej uwagi.",
+          },
+          hash: "bb23bee9cbd51ec0a4c3678877f28602",
+        },
+        "8/declaration/body/0/argument/1/3/1/1/1-title": {
+          content: {
+            en: "Purchase of paraffin candles",
+            pl: "Zakup świec parafinowych",
+          },
+          hash: "12e0bad314c616da4bae345d99f447d6",
+        },
+        "8/declaration/body/0/argument/1/3/1/1/3-title": {
+          content: {
+            en: "Procurement of wax lights",
+            pl: "Zakup świec woskowych",
+          },
+          hash: "5807fc4c30f27d97ce1d8f8459e97db6",
+        },
+        "8/declaration/body/0/argument/1/3/1/1/5-title": {
+          content: {
+            en: "Acquisition of candle supplies",
+            pl: "Zakup materiałów do produkcji świec",
+          },
+          hash: "24976e1c7da9b714080547738cf8c681",
+        },
+        "8/declaration/body/0/argument/1/3/1/openingElement/0/value/expression":
+          {
+            content: {
+              en: "New tenders",
+              pl: "Nowe przetargi",
+            },
+            hash: "b6a405902627530cdf66b4c52e322ee3",
+          },
+        "8/declaration/body/0/argument/1/3/1/openingElement/1/value/expression":
+          {
+            content: {
+              en: "Open full list",
+              pl: "Otwórz pełną listę",
+            },
+            hash: "1ce3d95b245c12a1f7b97a62bc37754b",
+          },
+        "8/declaration/body/0/argument/1/3/3/1/1": {
+          content: {
+            en: "New tenders: <element:span>3</element:span>",
+            pl: "Nowe przetargi: <element:span>3</element:span>",
+          },
+          hash: "212465f4c40466b6098ce4dc22b6799d",
+        },
+        "8/declaration/body/0/argument/1/3/3/1/3": {
+          content: {
+            en: "Overall: <element:span>50</element:span>",
+            pl: "Ogółem: <element:span>50</element:span>",
+          },
+          hash: "0ff17b0cb0ac6e48173443e8cacdc8f4",
+        },
+        "8/declaration/body/0/argument/1/3/3/1/5": {
+          content: {
+            en: "Accepted: <element:span>10</element:span>",
+            pl: "Zaakceptowane: <element:span>10</element:span>",
+          },
+          hash: "5c9d3a12840830e07b5c156553031ce0",
+        },
+        "8/declaration/body/0/argument/1/3/3/openingElement/0/value/expression":
+          {
+            content: {
+              en: "Stats",
+              pl: "Statystyki",
+            },
+            hash: "5cf8b052c89fa1b05397a956ebec69b2",
+          },
+        "8/declaration/body/0/argument/1/3/5/1": {
+          content: {
+            en: "Restocking medical equipment",
+            pl: "Uzupełnianie zapasów sprzętu medycznego",
+          },
+          hash: "48eb8dbecbc3734bd6d08d4a4c14db98",
+        },
+        "8/declaration/body/0/argument/1/3/5/3/1/1": {
+          content: {
+            en: "Preview",
+            pl: "Podgląd",
+          },
+          hash: "b4b4d5565c0424b040cf1f637a797a4b",
+        },
+        "8/declaration/body/0/argument/1/3/5/3/3/1": {
+          content: {
+            en: "Filling-out data",
+            pl: "Wypełnianie danych",
+          },
+          hash: "c90b263e7ad3362341dec40d5e86f98a",
+        },
+        "8/declaration/body/0/argument/1/3/5/3/5/1": {
+          content: {
+            en: "Application",
+            pl: "Aplikacja",
+          },
+          hash: "6dee9191cf69144d6b569683c49631d8",
+        },
+        "8/declaration/body/0/argument/1/3/5/5": {
+          content: {
+            en: "Continue",
+            pl: "Kontynuuj",
+          },
+          hash: "15635dc0f0dc3457d0e266830029e34c",
+        },
+        "8/declaration/body/0/argument/1/3/5/openingElement/0/value/expression":
+          {
+            content: {
+              en: "Return to last tender",
+              pl: "Wróć do ostatniego przetargu",
+            },
+            hash: "8208df3c0f89efff2b48433a4f98902e",
+          },
+        "8/declaration/body/0/argument/1/3/7/openingElement/0/value/expression":
+          {
+            content: {
+              en: "Deadline calendar",
+              pl: "Kalendarz terminów",
+            },
+            hash: "a943e8c4f3795b51abf0f1b7c9171701",
+          },
+        "8/declaration/body/0/argument/3/1/1/1-title": {
+          content: {
+            en: "Purchase of paraffin candles",
+            pl: "Zakup świec parafinowych",
+          },
+          hash: "12e0bad314c616da4bae345d99f447d6",
+        },
+        "8/declaration/body/0/argument/3/1/1/3-title": {
+          content: {
+            en: "Procurement of wax lights",
+            pl: "Zakup świec woskowych",
+          },
+          hash: "5807fc4c30f27d97ce1d8f8459e97db6",
+        },
+        "8/declaration/body/0/argument/3/1/1/5-title": {
+          content: {
+            en: "Acquisition of candle supplies",
+            pl: "Zakup materiałów do produkcji świec",
+          },
+          hash: "24976e1c7da9b714080547738cf8c681",
+        },
+        "8/declaration/body/0/argument/3/1/openingElement/0/value/expression": {
+          content: {
+            en: "New tenders",
+            pl: "Nowe przetargi",
+          },
+          hash: "b6a405902627530cdf66b4c52e322ee3",
+        },
+        "8/declaration/body/0/argument/3/1/openingElement/1/value/expression": {
+          content: {
+            en: "Open full list",
+            pl: "Otwórz pełną listę",
+          },
+          hash: "d7d42078fa4055c4d41ab919488af90d",
+        },
+        "8/declaration/body/0/argument/3/3/1/1": {
+          content: {
+            en: "New tenders: <element:span>3</element:span>",
+            pl: "Nowe przetargi: <element:span>3</element:span>",
+          },
+          hash: "939fffc5290191ce1f5634d1ac040918",
+        },
+        "8/declaration/body/0/argument/3/3/1/3": {
+          content: {
+            en: "Overall: <element:span>50</element:span>",
+            pl: "Łącznie: <element:span>50</element:span>",
+          },
+          hash: "2ec94a1c76bb85545c95a05da0cb5795",
+        },
+        "8/declaration/body/0/argument/3/3/1/5": {
+          content: {
+            en: "Accepted: <element:span>10</element:span>",
+            pl: "Zaakceptowane: <element:span>10</element:span>",
+          },
+          hash: "bbde79ce975a43f71350ef605bfa3875",
+        },
+        "8/declaration/body/0/argument/3/3/openingElement/0/value/expression": {
+          content: {
+            en: "Stats",
+            pl: "Statystyki",
+          },
+          hash: "5cf8b052c89fa1b05397a956ebec69b2",
+        },
+        "8/declaration/body/0/argument/3/5/1": {
+          content: {
+            en: "Restocking medical equipment",
+            pl: "Uzupełnianie sprzętu medycznego",
+          },
+          hash: "c18ed7834c8bb0a3d6f1bf2c43dd172e",
+        },
+        "8/declaration/body/0/argument/3/5/3/1/1": {
+          content: {
+            en: "Preview",
+            pl: "Podgląd",
+          },
+          hash: "0b755f01c22d8f5f9232744cd6e70fe2",
+        },
+        "8/declaration/body/0/argument/3/5/3/3/1": {
+          content: {
+            en: "Filling-out data",
+            pl: "Wypełnianie danych",
+          },
+          hash: "0fea090a139a4174c3f1b2ca4a4c12d3",
+        },
+        "8/declaration/body/0/argument/3/5/3/5/1": {
+          content: {
+            en: "Application",
+            pl: "Aplikacja",
+          },
+          hash: "6dee9191cf69144d6b569683c49631d8",
+        },
+        "8/declaration/body/0/argument/3/5/5": {
+          content: {
+            en: "Continue",
+            pl: "Kontynuuj",
+          },
+          hash: "d34fc8a0b1f9070a796a8be4422bc439",
+        },
+        "8/declaration/body/0/argument/3/5/openingElement/0/value/expression": {
+          content: {
+            en: "Return to last tender",
+            pl: "Wróć do ostatniego przetargu",
+          },
+          hash: "8208df3c0f89efff2b48433a4f98902e",
+        },
+        "8/declaration/body/0/argument/3/7/openingElement/0/value/expression": {
+          content: {
+            en: "Deadline calendar",
+            pl: "Kalendarz terminów",
+          },
+          hash: "a943e8c4f3795b51abf0f1b7c9171701",
+        },
         "8/declaration/body/3/argument/1/1/1": {
           content: {
             en: "Welcome back",
@@ -1278,6 +2203,151 @@ export default {
             hash: "8208df3c0f89efff2b48433a4f98902e",
           },
         "8/declaration/body/3/argument/1/5/7/openingElement/0/value/expression":
+          {
+            content: {
+              en: "Deadline calendar",
+              pl: "Kalendarz terminów",
+            },
+            hash: "a943e8c4f3795b51abf0f1b7c9171701",
+          },
+        "9/declaration/body/0/argument/1/1/1/1": {
+          content: {
+            en: "Welcome back",
+            pl: "Witamy ponownie",
+          },
+          hash: "824eab5b8d8d3fbda56c7a46c9e05275",
+        },
+        "9/declaration/body/0/argument/1/1/1/3/1": {
+          content: {
+            en: "Generated using:",
+            pl: "Wygenerowano za pomocą:",
+          },
+          hash: "d695a89e3bf9a1d7dbd8f439acbbc769",
+        },
+        "9/declaration/body/0/argument/1/1/1/3/4": {
+          content: {
+            en: "<element:Symbol></element:Symbol> AI",
+            pl: "<element:Symbol></element:Symbol> AI",
+          },
+          hash: "c9994261129e9a2d8b64d75f39060b65",
+        },
+        "9/declaration/body/0/argument/1/1/3": {
+          content: {
+            en: "Today's briefing: Since yesterday we've managed to find you 5 new tenders, 3 require your attention.",
+            pl: "Dzisiejszy briefing: Od wczoraj udało nam się znaleźć dla Ciebie 5 nowych przetargów, 3 z nich wymagają Twojej uwagi.",
+          },
+          hash: "07b033c5d821d60469e4dd460fcea3bc",
+        },
+        "9/declaration/body/0/argument/1/3/1/1/1-title": {
+          content: {
+            en: "Purchase of paraffin candles",
+            pl: "Zakup świec parafinowych",
+          },
+          hash: "12e0bad314c616da4bae345d99f447d6",
+        },
+        "9/declaration/body/0/argument/1/3/1/1/3-title": {
+          content: {
+            en: "Procurement of wax lights",
+            pl: "Zakup świec woskowych",
+          },
+          hash: "5807fc4c30f27d97ce1d8f8459e97db6",
+        },
+        "9/declaration/body/0/argument/1/3/1/1/5-title": {
+          content: {
+            en: "Acquisition of candle supplies",
+            pl: "Zakup materiałów do produkcji świec",
+          },
+          hash: "24976e1c7da9b714080547738cf8c681",
+        },
+        "9/declaration/body/0/argument/1/3/1/openingElement/0/value/expression":
+          {
+            content: {
+              en: "New tenders",
+              pl: "Nowe przetargi",
+            },
+            hash: "b6a405902627530cdf66b4c52e322ee3",
+          },
+        "9/declaration/body/0/argument/1/3/1/openingElement/1/value/expression":
+          {
+            content: {
+              en: "Open full list",
+              pl: "Otwórz pełną listę",
+            },
+            hash: "1ce3d95b245c12a1f7b97a62bc37754b",
+          },
+        "9/declaration/body/0/argument/1/3/3/1/1": {
+          content: {
+            en: "New tenders: <element:span>3</element:span>",
+            pl: "Nowe przetargi: <element:span>3</element:span>",
+          },
+          hash: "212465f4c40466b6098ce4dc22b6799d",
+        },
+        "9/declaration/body/0/argument/1/3/3/1/3": {
+          content: {
+            en: "Overall: <element:span>50</element:span>",
+            pl: "Ogółem: <element:span>50</element:span>",
+          },
+          hash: "0ff17b0cb0ac6e48173443e8cacdc8f4",
+        },
+        "9/declaration/body/0/argument/1/3/3/1/5": {
+          content: {
+            en: "Accepted: <element:span>10</element:span>",
+            pl: "Zaakceptowane: <element:span>10</element:span>",
+          },
+          hash: "5c9d3a12840830e07b5c156553031ce0",
+        },
+        "9/declaration/body/0/argument/1/3/3/openingElement/0/value/expression":
+          {
+            content: {
+              en: "Stats",
+              pl: "Statystyki",
+            },
+            hash: "5cf8b052c89fa1b05397a956ebec69b2",
+          },
+        "9/declaration/body/0/argument/1/3/5/1": {
+          content: {
+            en: "Restocking medical equipment",
+            pl: "Uzupełnianie zapasów sprzętu medycznego",
+          },
+          hash: "48eb8dbecbc3734bd6d08d4a4c14db98",
+        },
+        "9/declaration/body/0/argument/1/3/5/3/1/1": {
+          content: {
+            en: "Preview",
+            pl: "Podgląd",
+          },
+          hash: "b4b4d5565c0424b040cf1f637a797a4b",
+        },
+        "9/declaration/body/0/argument/1/3/5/3/3/1": {
+          content: {
+            en: "Filling-out data",
+            pl: "Wypełnianie danych",
+          },
+          hash: "c90b263e7ad3362341dec40d5e86f98a",
+        },
+        "9/declaration/body/0/argument/1/3/5/3/5/1": {
+          content: {
+            en: "Application",
+            pl: "Aplikacja",
+          },
+          hash: "6dee9191cf69144d6b569683c49631d8",
+        },
+        "9/declaration/body/0/argument/1/3/5/5": {
+          content: {
+            en: "Continue",
+            pl: "Kontynuuj",
+          },
+          hash: "15635dc0f0dc3457d0e266830029e34c",
+        },
+        "9/declaration/body/0/argument/1/3/5/openingElement/0/value/expression":
+          {
+            content: {
+              en: "Return to last tender",
+              pl: "Wróć do ostatniego przetargu",
+            },
+            hash: "8208df3c0f89efff2b48433a4f98902e",
+          },
+        "9/declaration/body/0/argument/1/3/7/openingElement/0/value/expression":
           {
             content: {
               en: "Deadline calendar",

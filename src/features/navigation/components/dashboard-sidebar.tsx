@@ -25,21 +25,25 @@ const navigationItems = [
   {
     title: <span>Home</span>,
     icon: Home,
+    tooltip: "Home",
     url: "/dashboard",
   },
   {
     title: <span>Discover new tenders</span>,
     icon: SparklesIcon,
-    url: "/dashboard/analytics",
+    tooltip: "Discover new tenders",
+    url: "/dashboard/inbox",
   },
   {
     title: <span>Active tenders</span>,
     icon: FolderOpen,
+    tooltip: "Active tenders",
     url: "/dashboard/projects",
   },
   {
     title: <span>Documents</span>,
     icon: FileCheck,
+    tooltip: "Documents",
     url: "/dashboard/team",
   },
 ];
@@ -60,7 +64,7 @@ export default function DashboardSidebar() {
             <SidebarMenu>
               {navigationItems.map((item) => (
                 <SidebarMenuItem key={item.url}>
-                  <SidebarMenuButton asChild tooltip={item.title}>
+                  <SidebarMenuButton asChild tooltip={item.tooltip}>
                     <a href={item.url}>
                       <item.icon />
                       <span>{item.title}</span>
