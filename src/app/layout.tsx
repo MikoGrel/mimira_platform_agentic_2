@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Space_Grotesk } from "next/font/google";
 import "$/styles/globals.css";
 import ThemeProvider from "$/features/shared/providers/ThemeProvider";
 import { LingoProvider, loadDictionary } from "lingo.dev/react/rsc";
+import { NuqsAdapter } from "nuqs/adapters/next/app";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -11,6 +12,11 @@ const geistSans = Geist({
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
+  subsets: ["latin"],
+});
+
+const spaceGrotesk = Space_Grotesk({
+  variable: "--font-space-grotesk",
   subsets: ["latin"],
 });
 
@@ -28,9 +34,11 @@ export default function RootLayout({
     <LingoProvider loadDictionary={(locale) => loadDictionary(locale)}>
       <html lang="en">
         <body
-          className={`${geistSans.variable} ${geistMono.variable} antialiased light text-foreground bg-background`}
+          className={`${geistSans.variable} ${geistMono.variable} ${spaceGrotesk.variable} antialiased light font-body bg-background text-font-base`}
         >
-          <ThemeProvider>{children}</ThemeProvider>
+          <ThemeProvider>
+            <NuqsAdapter>{children}</NuqsAdapter>
+          </ThemeProvider>
         </body>
       </html>
     </LingoProvider>

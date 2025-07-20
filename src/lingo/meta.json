@@ -1,7 +1,339 @@
 {
   "files": {
+    "app/(platform)/dashboard/page.tsx": {
+      "scopes": {
+        "2/declaration/body/3/argument": {
+          "type": "element",
+          "hash": "5d99f08a4b31c9dbb4182457024a5520",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "You are logged in as {user.email}"
+        }
+      }
+    },
     "app/(platform)/login/page.tsx": {
       "scopes": {
+        "11/declaration/body/3/argument/1/1/1-alt": {
+          "type": "attribute",
+          "hash": "84694dceff6180310fed53ccaa20c4c5",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Happy Office Workers"
+        },
+        "11/declaration/body/3/argument/3/3/1/1": {
+          "type": "element",
+          "hash": "f6aad626f304541a1c13d3841d96aea2",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Welcome Back"
+        },
+        "11/declaration/body/3/argument/3/3/1/3": {
+          "type": "element",
+          "hash": "527af8a7c9d51a324aacb81a9c96bd26",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Fill in your email and password to continue"
+        },
+        "11/declaration/body/3/argument/3/3/5/1-label": {
+          "type": "attribute",
+          "hash": "e7f34943a0c2fb849db1839ff6ef5cb5",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Email"
+        },
+        "11/declaration/body/3/argument/3/3/5/1-placeholder": {
+          "type": "attribute",
+          "hash": "39931962707c99b99a5a073ab579396b",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Enter your email"
+        },
+        "11/declaration/body/3/argument/3/3/5/3-label": {
+          "type": "attribute",
+          "hash": "223a61cf906ab9c40d22612c588dff48",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Password"
+        },
+        "11/declaration/body/3/argument/3/3/5/3-placeholder": {
+          "type": "attribute",
+          "hash": "ea4fdd034522dead21bae0c0abb52eae",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Enter your password"
+        },
+        "11/declaration/body/3/argument/3/3/5/5/1": {
+          "type": "element",
+          "hash": "090e3a4ca59fa95a243a350a2866ef51",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Forgot password?"
+        },
+        "11/declaration/body/3/argument/3/3/5/7": {
+          "type": "element",
+          "hash": "f6781a7c70e11d9f017565ac36dcfd5a",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Log in"
+        },
+        "11/declaration/body/3/argument/3/3/5/9": {
+          "type": "element",
+          "hash": "954742a111815a647e34b2a08e0d3675",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Register"
+        },
+        "11/declaration/body/3/argument/3/5": {
+          "type": "element",
+          "hash": "560ab78ac75a5b5df43ae45aa64f171e",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "You don't have an account?<element:Link>Contact us</element:Link>"
+        },
+        "11/declaration/body/4/argument/1/1/1-alt": {
+          "type": "attribute",
+          "hash": "84694dceff6180310fed53ccaa20c4c5",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Happy Office Workers"
+        },
+        "11/declaration/body/4/argument/3/3/1/1": {
+          "type": "element",
+          "hash": "3d7c5b589fe3e18a1d2d7e83de7a9cf1",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Welcome Back"
+        },
+        "11/declaration/body/4/argument/3/3/1/3": {
+          "type": "element",
+          "hash": "527af8a7c9d51a324aacb81a9c96bd26",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Fill in your email and password to continue"
+        },
+        "11/declaration/body/4/argument/3/3/3/3-label": {
+          "type": "attribute",
+          "hash": "e7f34943a0c2fb849db1839ff6ef5cb5",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Email"
+        },
+        "11/declaration/body/4/argument/3/3/3/3-placeholder": {
+          "type": "attribute",
+          "hash": "39931962707c99b99a5a073ab579396b",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Enter your email"
+        },
+        "11/declaration/body/4/argument/3/3/3/5-label": {
+          "type": "attribute",
+          "hash": "223a61cf906ab9c40d22612c588dff48",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Password"
+        },
+        "11/declaration/body/4/argument/3/3/3/5-placeholder": {
+          "type": "attribute",
+          "hash": "ea4fdd034522dead21bae0c0abb52eae",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Enter your password"
+        },
+        "11/declaration/body/4/argument/3/3/3/7/1": {
+          "type": "element",
+          "hash": "afc02ff1df56ecf8493e9e201592d764",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Remember me"
+        },
+        "11/declaration/body/4/argument/3/3/3/7/3": {
+          "type": "element",
+          "hash": "090e3a4ca59fa95a243a350a2866ef51",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Forgot password?"
+        },
+        "11/declaration/body/4/argument/3/3/3/9": {
+          "type": "element",
+          "hash": "f6781a7c70e11d9f017565ac36dcfd5a",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Log in"
+        },
+        "11/declaration/body/4/argument/3/5": {
+          "type": "element",
+          "hash": "560ab78ac75a5b5df43ae45aa64f171e",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "You don't have an account?<element:Link>Contact us</element:Link>"
+        },
+        "12/declaration/body/3/argument/1/1/1-alt": {
+          "type": "attribute",
+          "hash": "84694dceff6180310fed53ccaa20c4c5",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Happy Office Workers"
+        },
+        "12/declaration/body/3/argument/3/3/1/1": {
+          "type": "element",
+          "hash": "f6aad626f304541a1c13d3841d96aea2",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Welcome Back"
+        },
+        "12/declaration/body/3/argument/3/3/1/3": {
+          "type": "element",
+          "hash": "527af8a7c9d51a324aacb81a9c96bd26",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Fill in your email and password to continue"
+        },
+        "12/declaration/body/3/argument/3/3/3/11": {
+          "type": "element",
+          "hash": "954742a111815a647e34b2a08e0d3675",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Register"
+        },
+        "12/declaration/body/3/argument/3/3/3/3-label": {
+          "type": "attribute",
+          "hash": "e7f34943a0c2fb849db1839ff6ef5cb5",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Email"
+        },
+        "12/declaration/body/3/argument/3/3/3/3-placeholder": {
+          "type": "attribute",
+          "hash": "39931962707c99b99a5a073ab579396b",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Enter your email"
+        },
+        "12/declaration/body/3/argument/3/3/3/5-label": {
+          "type": "attribute",
+          "hash": "223a61cf906ab9c40d22612c588dff48",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Password"
+        },
+        "12/declaration/body/3/argument/3/3/3/5-placeholder": {
+          "type": "attribute",
+          "hash": "ea4fdd034522dead21bae0c0abb52eae",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Enter your password"
+        },
+        "12/declaration/body/3/argument/3/3/3/7/1": {
+          "type": "element",
+          "hash": "090e3a4ca59fa95a243a350a2866ef51",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Forgot password?"
+        },
+        "12/declaration/body/3/argument/3/3/3/9": {
+          "type": "element",
+          "hash": "f6781a7c70e11d9f017565ac36dcfd5a",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Log in"
+        },
+        "12/declaration/body/3/argument/3/3/5/1-label": {
+          "type": "attribute",
+          "hash": "e7f34943a0c2fb849db1839ff6ef5cb5",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Email"
+        },
+        "12/declaration/body/3/argument/3/3/5/1-placeholder": {
+          "type": "attribute",
+          "hash": "39931962707c99b99a5a073ab579396b",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Enter your email"
+        },
+        "12/declaration/body/3/argument/3/3/5/3-label": {
+          "type": "attribute",
+          "hash": "223a61cf906ab9c40d22612c588dff48",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Password"
+        },
+        "12/declaration/body/3/argument/3/3/5/3-placeholder": {
+          "type": "attribute",
+          "hash": "ea4fdd034522dead21bae0c0abb52eae",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Enter your password"
+        },
+        "12/declaration/body/3/argument/3/3/5/5/1": {
+          "type": "element",
+          "hash": "090e3a4ca59fa95a243a350a2866ef51",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Forgot password?"
+        },
+        "12/declaration/body/3/argument/3/3/5/7": {
+          "type": "element",
+          "hash": "f6781a7c70e11d9f017565ac36dcfd5a",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Log in"
+        },
+        "12/declaration/body/3/argument/3/3/5/9": {
+          "type": "element",
+          "hash": "954742a111815a647e34b2a08e0d3675",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Register"
+        },
+        "12/declaration/body/3/argument/3/5": {
+          "type": "element",
+          "hash": "560ab78ac75a5b5df43ae45aa64f171e",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "You don't have an account?<element:Link>Contact us</element:Link>"
+        },
         "5/declaration/body/0/argument/1/1/1/1": {
           "type": "element",
           "hash": "f4f219abeb5a465ecb1c7efaf50246de",
@@ -41,6 +373,630 @@
           "skip": false,
           "overrides": {},
           "content": "Sign up"
+        },
+        "5/declaration/body/0/argument/3/1/1/1/1": {
+          "type": "element",
+          "hash": "f4f219abeb5a465ecb1c7efaf50246de",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Login"
+        },
+        "5/declaration/body/0/argument/3/1/1/3/1-label": {
+          "type": "attribute",
+          "hash": "e7f34943a0c2fb849db1839ff6ef5cb5",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Email"
+        },
+        "5/declaration/body/0/argument/3/1/1/3/3-label": {
+          "type": "attribute",
+          "hash": "223a61cf906ab9c40d22612c588dff48",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Password"
+        },
+        "5/declaration/body/0/argument/3/1/1/7/1": {
+          "type": "element",
+          "hash": "3bfa8726f069ab3f9a50525e65d37742",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Log in"
+        },
+        "5/declaration/body/0/argument/3/1/1/7/3": {
+          "type": "element",
+          "hash": "b9be26331e585ab9e479fd45c9abd080",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Sign up"
+        },
+        "6/declaration/body/0/argument/1/1-alt": {
+          "type": "attribute",
+          "hash": "84694dceff6180310fed53ccaa20c4c5",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Happy Office Workers"
+        },
+        "6/declaration/body/0/argument/3/1/1/1/1": {
+          "type": "element",
+          "hash": "f4f219abeb5a465ecb1c7efaf50246de",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Login"
+        },
+        "6/declaration/body/0/argument/3/1/1/3/1-label": {
+          "type": "attribute",
+          "hash": "e7f34943a0c2fb849db1839ff6ef5cb5",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Email"
+        },
+        "6/declaration/body/0/argument/3/1/1/3/3-label": {
+          "type": "attribute",
+          "hash": "223a61cf906ab9c40d22612c588dff48",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Password"
+        },
+        "6/declaration/body/0/argument/3/1/1/7/1": {
+          "type": "element",
+          "hash": "3bfa8726f069ab3f9a50525e65d37742",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Log in"
+        },
+        "6/declaration/body/0/argument/3/1/1/7/3": {
+          "type": "element",
+          "hash": "b9be26331e585ab9e479fd45c9abd080",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Sign up"
+        },
+        "7/declaration/body/0/argument/1/1-alt": {
+          "type": "attribute",
+          "hash": "84694dceff6180310fed53ccaa20c4c5",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Happy Office Workers"
+        },
+        "7/declaration/body/0/argument/1/1/1-alt": {
+          "type": "attribute",
+          "hash": "84694dceff6180310fed53ccaa20c4c5",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Happy Office Workers"
+        },
+        "7/declaration/body/0/argument/3/1/1/1/1": {
+          "type": "element",
+          "hash": "f4f219abeb5a465ecb1c7efaf50246de",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Login"
+        },
+        "7/declaration/body/0/argument/3/1/1/3/1-label": {
+          "type": "attribute",
+          "hash": "e7f34943a0c2fb849db1839ff6ef5cb5",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Email"
+        },
+        "7/declaration/body/0/argument/3/1/1/3/3-label": {
+          "type": "attribute",
+          "hash": "223a61cf906ab9c40d22612c588dff48",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Password"
+        },
+        "7/declaration/body/0/argument/3/1/1/7/1": {
+          "type": "element",
+          "hash": "3bfa8726f069ab3f9a50525e65d37742",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Log in"
+        },
+        "7/declaration/body/0/argument/3/1/1/7/3": {
+          "type": "element",
+          "hash": "b9be26331e585ab9e479fd45c9abd080",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Sign up"
+        },
+        "7/declaration/body/0/argument/3/3/1/1": {
+          "type": "element",
+          "hash": "f6aad626f304541a1c13d3841d96aea2",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Welcome Back"
+        },
+        "7/declaration/body/0/argument/3/3/1/1/1": {
+          "type": "element",
+          "hash": "f4f219abeb5a465ecb1c7efaf50246de",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Login"
+        },
+        "7/declaration/body/0/argument/3/3/1/3": {
+          "type": "element",
+          "hash": "527af8a7c9d51a324aacb81a9c96bd26",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Fill in your email and password to continue"
+        },
+        "7/declaration/body/0/argument/3/3/1/3/1-label": {
+          "type": "attribute",
+          "hash": "e7f34943a0c2fb849db1839ff6ef5cb5",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Email"
+        },
+        "7/declaration/body/0/argument/3/3/1/3/3-label": {
+          "type": "attribute",
+          "hash": "223a61cf906ab9c40d22612c588dff48",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Password"
+        },
+        "7/declaration/body/0/argument/3/3/1/7/1": {
+          "type": "element",
+          "hash": "3bfa8726f069ab3f9a50525e65d37742",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Log in"
+        },
+        "7/declaration/body/0/argument/3/3/1/7/3": {
+          "type": "element",
+          "hash": "b9be26331e585ab9e479fd45c9abd080",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Sign up"
+        },
+        "7/declaration/body/0/argument/3/3/3/1-label": {
+          "type": "attribute",
+          "hash": "e7f34943a0c2fb849db1839ff6ef5cb5",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Email"
+        },
+        "7/declaration/body/0/argument/3/3/3/1-placeholder": {
+          "type": "attribute",
+          "hash": "39931962707c99b99a5a073ab579396b",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Enter your email"
+        },
+        "7/declaration/body/0/argument/3/3/3/3-label": {
+          "type": "attribute",
+          "hash": "223a61cf906ab9c40d22612c588dff48",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Password"
+        },
+        "7/declaration/body/0/argument/3/3/3/3-placeholder": {
+          "type": "attribute",
+          "hash": "ea4fdd034522dead21bae0c0abb52eae",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Enter your password"
+        },
+        "7/declaration/body/0/argument/3/3/3/5/1": {
+          "type": "element",
+          "hash": "090e3a4ca59fa95a243a350a2866ef51",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Forgot password?"
+        },
+        "7/declaration/body/0/argument/3/3/3/7": {
+          "type": "element",
+          "hash": "f6781a7c70e11d9f017565ac36dcfd5a",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Log in"
+        },
+        "7/declaration/body/0/argument/3/3/3/9": {
+          "type": "element",
+          "hash": "954742a111815a647e34b2a08e0d3675",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Register"
+        },
+        "7/declaration/body/0/argument/3/5": {
+          "type": "element",
+          "hash": "560ab78ac75a5b5df43ae45aa64f171e",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "You don't have an account?<element:Link>Contact us</element:Link>"
+        },
+        "8/declaration/body/0/argument/1/1/1-alt": {
+          "type": "attribute",
+          "hash": "84694dceff6180310fed53ccaa20c4c5",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Happy Office Workers"
+        },
+        "8/declaration/body/0/argument/1/1/3-alt": {
+          "type": "attribute",
+          "hash": "84694dceff6180310fed53ccaa20c4c5",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Happy Office Workers"
+        },
+        "8/declaration/body/0/argument/3/1/1/1/1": {
+          "type": "element",
+          "hash": "f4f219abeb5a465ecb1c7efaf50246de",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Login"
+        },
+        "8/declaration/body/0/argument/3/1/1/3/1-label": {
+          "type": "attribute",
+          "hash": "e7f34943a0c2fb849db1839ff6ef5cb5",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Email"
+        },
+        "8/declaration/body/0/argument/3/1/1/3/3-label": {
+          "type": "attribute",
+          "hash": "223a61cf906ab9c40d22612c588dff48",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Password"
+        },
+        "8/declaration/body/0/argument/3/1/1/7/1": {
+          "type": "element",
+          "hash": "3bfa8726f069ab3f9a50525e65d37742",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Log in"
+        },
+        "8/declaration/body/0/argument/3/1/1/7/3": {
+          "type": "element",
+          "hash": "b9be26331e585ab9e479fd45c9abd080",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Sign up"
+        },
+        "8/declaration/body/0/argument/3/3/1": {
+          "type": "element",
+          "hash": "3d7c5b589fe3e18a1d2d7e83de7a9cf1",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Welcome Back"
+        },
+        "8/declaration/body/0/argument/3/3/1-label": {
+          "type": "attribute",
+          "hash": "e7f34943a0c2fb849db1839ff6ef5cb5",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Email"
+        },
+        "8/declaration/body/0/argument/3/3/1/1": {
+          "type": "element",
+          "hash": "f6aad626f304541a1c13d3841d96aea2",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Welcome Back"
+        },
+        "8/declaration/body/0/argument/3/3/1/1-label": {
+          "type": "attribute",
+          "hash": "e7f34943a0c2fb849db1839ff6ef5cb5",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Email"
+        },
+        "8/declaration/body/0/argument/3/3/1/1/1": {
+          "type": "element",
+          "hash": "f4f219abeb5a465ecb1c7efaf50246de",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Login"
+        },
+        "8/declaration/body/0/argument/3/3/1/3": {
+          "type": "element",
+          "hash": "527af8a7c9d51a324aacb81a9c96bd26",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Fill in your email and password to continue"
+        },
+        "8/declaration/body/0/argument/3/3/1/3-label": {
+          "type": "attribute",
+          "hash": "223a61cf906ab9c40d22612c588dff48",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Password"
+        },
+        "8/declaration/body/0/argument/3/3/1/3/1-label": {
+          "type": "attribute",
+          "hash": "e7f34943a0c2fb849db1839ff6ef5cb5",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Email"
+        },
+        "8/declaration/body/0/argument/3/3/1/3/3-label": {
+          "type": "attribute",
+          "hash": "223a61cf906ab9c40d22612c588dff48",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Password"
+        },
+        "8/declaration/body/0/argument/3/3/1/5": {
+          "type": "element",
+          "hash": "f6781a7c70e11d9f017565ac36dcfd5a",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Log in"
+        },
+        "8/declaration/body/0/argument/3/3/1/7": {
+          "type": "element",
+          "hash": "b43ea26a8a18e15841aba848f7be2d5f",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Sign up"
+        },
+        "8/declaration/body/0/argument/3/3/1/7/1": {
+          "type": "element",
+          "hash": "3bfa8726f069ab3f9a50525e65d37742",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Log in"
+        },
+        "8/declaration/body/0/argument/3/3/1/7/3": {
+          "type": "element",
+          "hash": "b9be26331e585ab9e479fd45c9abd080",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Sign up"
+        },
+        "8/declaration/body/0/argument/3/3/3": {
+          "type": "element",
+          "hash": "4a38ff42473bdc8ed1c52554f331fd5c",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Fill in your email and password to continue"
+        },
+        "8/declaration/body/0/argument/3/3/3-label": {
+          "type": "attribute",
+          "hash": "223a61cf906ab9c40d22612c588dff48",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Password"
+        },
+        "8/declaration/body/0/argument/3/3/3/1-label": {
+          "type": "attribute",
+          "hash": "e7f34943a0c2fb849db1839ff6ef5cb5",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Email"
+        },
+        "8/declaration/body/0/argument/3/3/3/1-placeholder": {
+          "type": "attribute",
+          "hash": "39931962707c99b99a5a073ab579396b",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Enter your email"
+        },
+        "8/declaration/body/0/argument/3/3/3/3-label": {
+          "type": "attribute",
+          "hash": "223a61cf906ab9c40d22612c588dff48",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Password"
+        },
+        "8/declaration/body/0/argument/3/3/3/3-placeholder": {
+          "type": "attribute",
+          "hash": "ea4fdd034522dead21bae0c0abb52eae",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Enter your password"
+        },
+        "8/declaration/body/0/argument/3/3/3/5": {
+          "type": "element",
+          "hash": "f6781a7c70e11d9f017565ac36dcfd5a",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Log in"
+        },
+        "8/declaration/body/0/argument/3/3/3/7": {
+          "type": "element",
+          "hash": "b43ea26a8a18e15841aba848f7be2d5f",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Sign up"
+        },
+        "8/declaration/body/0/argument/3/3/5": {
+          "type": "element",
+          "hash": "af15e012fd87cc736fe9af57242bd490",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Log in"
+        },
+        "8/declaration/body/0/argument/3/3/5/1-label": {
+          "type": "attribute",
+          "hash": "e7f34943a0c2fb849db1839ff6ef5cb5",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Email"
+        },
+        "8/declaration/body/0/argument/3/3/5/3-label": {
+          "type": "attribute",
+          "hash": "223a61cf906ab9c40d22612c588dff48",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Password"
+        },
+        "8/declaration/body/0/argument/3/3/5/5": {
+          "type": "element",
+          "hash": "f6781a7c70e11d9f017565ac36dcfd5a",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Log in"
+        },
+        "8/declaration/body/0/argument/3/3/5/7": {
+          "type": "element",
+          "hash": "b43ea26a8a18e15841aba848f7be2d5f",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Sign up"
+        },
+        "8/declaration/body/0/argument/3/3/7": {
+          "type": "element",
+          "hash": "2ac3b230e4814241c6c3a74969a0a6a6",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Sign up"
+        },
+        "9/declaration/body/0/argument/1/1/1-alt": {
+          "type": "attribute",
+          "hash": "84694dceff6180310fed53ccaa20c4c5",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Happy Office Workers"
+        },
+        "9/declaration/body/0/argument/3/3/1/1": {
+          "type": "element",
+          "hash": "f6aad626f304541a1c13d3841d96aea2",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Welcome Back"
+        },
+        "9/declaration/body/0/argument/3/3/1/3": {
+          "type": "element",
+          "hash": "527af8a7c9d51a324aacb81a9c96bd26",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Fill in your email and password to continue"
+        },
+        "9/declaration/body/0/argument/3/3/3/1-label": {
+          "type": "attribute",
+          "hash": "e7f34943a0c2fb849db1839ff6ef5cb5",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Email"
+        },
+        "9/declaration/body/0/argument/3/3/3/1-placeholder": {
+          "type": "attribute",
+          "hash": "39931962707c99b99a5a073ab579396b",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Enter your email"
+        },
+        "9/declaration/body/0/argument/3/3/3/3-label": {
+          "type": "attribute",
+          "hash": "223a61cf906ab9c40d22612c588dff48",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Password"
+        },
+        "9/declaration/body/0/argument/3/3/3/3-placeholder": {
+          "type": "attribute",
+          "hash": "ea4fdd034522dead21bae0c0abb52eae",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Enter your password"
+        },
+        "9/declaration/body/0/argument/3/3/3/5": {
+          "type": "element",
+          "hash": "f6781a7c70e11d9f017565ac36dcfd5a",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Log in"
+        },
+        "9/declaration/body/0/argument/3/3/3/5/1": {
+          "type": "element",
+          "hash": "090e3a4ca59fa95a243a350a2866ef51",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Forgot password?"
+        },
+        "9/declaration/body/0/argument/3/3/3/7": {
+          "type": "element",
+          "hash": "f6781a7c70e11d9f017565ac36dcfd5a",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Log in"
+        },
+        "9/declaration/body/0/argument/3/5": {
+          "type": "element",
+          "hash": "560ab78ac75a5b5df43ae45aa64f171e",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "You don't have an account?<element:Link>Contact us</element:Link>"
         }
       }
     },
