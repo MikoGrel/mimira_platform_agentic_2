@@ -5818,6 +5818,192 @@ export default {
     },
     "features/inbox/components/tender-preview.tsx": {
       entries: {
+        "10/declaration/body/6/consequent/0/argument/1/1": {
+          content: {
+            en: "Select a tender to view details",
+            pl: "Wybierz ofertę, aby zobaczyć szczegóły",
+          },
+          hash: "067789b01a081458db2f872f10a37c3f",
+        },
+        "10/declaration/body/8/argument/1/1/3/1/expression/right/1/3": {
+          content: {
+            en: "·",
+            pl: "·",
+          },
+          hash: "26b80ae8a680de73667e096098aa69d8",
+        },
+        "10/declaration/body/8/argument/1/1/3/1/expression/right/3/1": {
+          content: {
+            en: "Apply",
+          },
+          hash: "3c759ab832d6ab75ae050da5cb1b826c",
+        },
+        "10/declaration/body/8/argument/1/1/3/1/expression/right/3/3": {
+          content: {
+            en: "Reject",
+            pl: "Odrzuć",
+          },
+          hash: "93f700a2adda13be3723040c587ab812",
+        },
+        "10/declaration/body/8/argument/1/1/3/3": {
+          content: {
+            en: "·",
+            pl: "·",
+          },
+          hash: "26b80ae8a680de73667e096098aa69d8",
+        },
+        "10/declaration/body/8/argument/1/1/5/1": {
+          content: {
+            en: "Apply",
+          },
+          hash: "a91df23e32b5d1457b62f98e6d90c2c0",
+        },
+        "10/declaration/body/8/argument/1/1/5/3": {
+          content: {
+            en: "Reject",
+            pl: "Odrzuć",
+          },
+          hash: "21c303829516a636a6c306dcd68a64ec",
+        },
+        "10/declaration/body/8/argument/1/1/5/expression/right/3/1": {
+          content: {
+            en: "Apply",
+          },
+          hash: "564f71b8fe2a63142499b340b1872989",
+        },
+        "10/declaration/body/8/argument/1/1/5/expression/right/3/3": {
+          content: {
+            en: "Reject",
+            pl: "Odrzuć",
+          },
+          hash: "2c1f1ee6b00186ee3a5adc2d86d00511",
+        },
+        "10/declaration/body/8/argument/1/3/1/1/1/1": {
+          content: {
+            en: "At a Glance",
+            pl: "W skrócie",
+          },
+          hash: "9d55775994a0e6c016fe7e271533bf45",
+        },
+        "10/declaration/body/8/argument/1/3/1/1/1/3/3/3/expression/right/1/1": {
+          content: {
+            en: "W",
+            pl: "W",
+          },
+          hash: "537bf79791e7f93cb2e3140ab49ce70d",
+        },
+        "10/declaration/body/8/argument/1/3/1/1/1/3/3/3/expression/right/3": {
+          content: {
+            en: "Wadium: {tender.wadium_llm}",
+            pl: "Wadium: {tender.wadium_llm}",
+          },
+          hash: "a7908a3166c9eccd9acd413e39b72c11",
+        },
+        "10/declaration/body/8/argument/1/3/1/1/1/3/3/5/expression/right/3": {
+          content: {
+            en: "Completion: {tender.ordercompletiondate_llm}",
+            pl: "Zakończenie: {tender.ordercompletiondate_llm}",
+          },
+          hash: "329ae0d02b034c7833b81d6d9cfc4a3a",
+        },
+        "10/declaration/body/8/argument/1/3/1/1/13/1": {
+          content: {
+            en: "Others",
+            pl: "Inne",
+          },
+          hash: "39160224ce0e35eb4eb252c997edf4d8",
+        },
+        "10/declaration/body/8/argument/1/3/1/1/13/3/1/expression/right/1": {
+          content: {
+            en: "Application Form",
+            pl: "Formularz zgłoszeniowy",
+          },
+          hash: "269871c885cc75e625cd37409d6aa6f3",
+        },
+        "10/declaration/body/8/argument/1/3/1/1/13/3/3/expression/right/1": {
+          content: {
+            en: "Payment Terms",
+            pl: "Warunki płatności",
+          },
+          hash: "e6953edd0fa1d95783cc7e77cf663edc",
+        },
+        "10/declaration/body/8/argument/1/3/1/1/13/3/5/expression/right/1": {
+          content: {
+            en: "Contract Penalties",
+            pl: "Kary umowne",
+          },
+          hash: "a1bf0fb468c850f31f5f7ea7c576173f",
+        },
+        "10/declaration/body/8/argument/1/3/1/1/13/3/7/expression/right/1": {
+          content: {
+            en: "Deposit Information",
+            pl: "Informacje o zaliczce",
+          },
+          hash: "6c3e69c83f7ab356409c710497965d46",
+        },
+        "10/declaration/body/8/argument/1/3/1/1/13/3/9/expression/right/1": {
+          content: {
+            en: "Source URL",
+            pl: "Źródłowy URL",
+          },
+          hash: "8a990e2d4cde34bbf42ef54a7a837633",
+        },
+        "10/declaration/body/8/argument/1/3/1/1/5/1": {
+          content: {
+            en: "Description",
+            pl: "Opis",
+          },
+          hash: "e17686a22ffad04cc7bb70524ed4478b",
+        },
+        "10/declaration/body/8/argument/1/3/1/1/5/3/1/expression/alternate": {
+          content: {
+            en: "No detailed description available",
+            pl: "Brak szczegółowego opisu",
+          },
+          hash: "2654605a88bc1dc81e93e3207f50486d",
+        },
+        "10/declaration/body/8/argument/1/3/1/1/9/1": {
+          content: {
+            en: "Requirements",
+            pl: "Wymagania",
+          },
+          hash: "e108e149e0fd5b65f5850b6f032ccabe",
+        },
+        "10/declaration/body/8/argument/1/3/1/1/9/3/11/expression/right/1": {
+          content: {
+            en: "<element:AlertCircle></element:AlertCircle> Not Met Requirements",
+            pl: "<element:AlertCircle></element:AlertCircle> Niespełnione wymagania",
+          },
+          hash: "4ee1504b99ff60d74488ab34426ed8ad",
+        },
+        "10/declaration/body/8/argument/1/3/1/1/9/3/15/expression/right/1": {
+          content: {
+            en: "Review Criteria",
+            pl: "Kryteria oceny",
+          },
+          hash: "73f2098c339274d847f5086bf5bcf61f",
+        },
+        "10/declaration/body/8/argument/1/3/1/1/9/3/3/expression/right/1": {
+          content: {
+            en: "<element:CheckCircle></element:CheckCircle> Met Requirements",
+            pl: "<element:CheckCircle></element:CheckCircle> Spełnione wymagania",
+          },
+          hash: "de1873a50cb65483443431e1c2d60c5b",
+        },
+        "10/declaration/body/8/argument/1/3/1/1/9/3/7/expression/right/1": {
+          content: {
+            en: "<element:AlertCircle></element:AlertCircle> Needs Confirmation",
+            pl: "<element:AlertCircle></element:AlertCircle> Wymaga potwierdzenia",
+          },
+          hash: "9fc1a16e6fd34b2e038519daf7ed6406",
+        },
+        "10/declaration/body/8/argument/1/3/5/1/1": {
+          content: {
+            en: "Outline",
+            pl: "Zarys",
+          },
+          hash: "c0afd302caeecd63803a83f8b51e3e49",
+        },
         "4/declaration/body/0/consequent/0/argument/1/1": {
           content: {
             en: "Select a tender to view details",
@@ -6073,6 +6259,145 @@ export default {
           },
           hash: "067789b01a081458db2f872f10a37c3f",
         },
+        "6/declaration/body/5/argument/1/1/3/3": {
+          content: {
+            en: "·",
+            pl: "·",
+          },
+          hash: "26b80ae8a680de73667e096098aa69d8",
+        },
+        "6/declaration/body/5/argument/1/1/5/1": {
+          content: {
+            en: "Apply",
+          },
+          hash: "a91df23e32b5d1457b62f98e6d90c2c0",
+        },
+        "6/declaration/body/5/argument/1/1/5/3": {
+          content: {
+            en: "Reject",
+            pl: "Odrzuć",
+          },
+          hash: "21c303829516a636a6c306dcd68a64ec",
+        },
+        "6/declaration/body/5/argument/1/3/1/1/1/1": {
+          content: {
+            en: "At a Glance",
+            pl: "W skrócie",
+          },
+          hash: "9d55775994a0e6c016fe7e271533bf45",
+        },
+        "6/declaration/body/5/argument/1/3/1/1/1/3/3/3/expression/right/1/1": {
+          content: {
+            en: "W",
+            pl: "W",
+          },
+          hash: "537bf79791e7f93cb2e3140ab49ce70d",
+        },
+        "6/declaration/body/5/argument/1/3/1/1/1/3/3/3/expression/right/3": {
+          content: {
+            en: "Wadium: {tender.wadium_llm}",
+            pl: "Wadium: {tender.wadium_llm}",
+          },
+          hash: "a7908a3166c9eccd9acd413e39b72c11",
+        },
+        "6/declaration/body/5/argument/1/3/1/1/1/3/3/5/expression/right/3": {
+          content: {
+            en: "Completion: {tender.ordercompletiondate_llm}",
+            pl: "Zakończenie: {tender.ordercompletiondate_llm}",
+          },
+          hash: "329ae0d02b034c7833b81d6d9cfc4a3a",
+        },
+        "6/declaration/body/5/argument/1/3/1/1/13/1": {
+          content: {
+            en: "Others",
+            pl: "Inne",
+          },
+          hash: "39160224ce0e35eb4eb252c997edf4d8",
+        },
+        "6/declaration/body/5/argument/1/3/1/1/13/3/1/expression/right/1": {
+          content: {
+            en: "Application Form",
+            pl: "Formularz zgłoszeniowy",
+          },
+          hash: "269871c885cc75e625cd37409d6aa6f3",
+        },
+        "6/declaration/body/5/argument/1/3/1/1/13/3/3/expression/right/1": {
+          content: {
+            en: "Payment Terms",
+            pl: "Warunki płatności",
+          },
+          hash: "e6953edd0fa1d95783cc7e77cf663edc",
+        },
+        "6/declaration/body/5/argument/1/3/1/1/13/3/5/expression/right/1": {
+          content: {
+            en: "Contract Penalties",
+            pl: "Kary umowne",
+          },
+          hash: "a1bf0fb468c850f31f5f7ea7c576173f",
+        },
+        "6/declaration/body/5/argument/1/3/1/1/13/3/7/expression/right/1": {
+          content: {
+            en: "Deposit Information",
+            pl: "Informacje o zaliczce",
+          },
+          hash: "6c3e69c83f7ab356409c710497965d46",
+        },
+        "6/declaration/body/5/argument/1/3/1/1/13/3/9/expression/right/1": {
+          content: {
+            en: "Source URL",
+            pl: "Źródłowy URL",
+          },
+          hash: "8a990e2d4cde34bbf42ef54a7a837633",
+        },
+        "6/declaration/body/5/argument/1/3/1/1/5/1": {
+          content: {
+            en: "Description",
+            pl: "Opis",
+          },
+          hash: "e17686a22ffad04cc7bb70524ed4478b",
+        },
+        "6/declaration/body/5/argument/1/3/1/1/5/3/1/expression/alternate": {
+          content: {
+            en: "No detailed description available",
+            pl: "Brak szczegółowego opisu",
+          },
+          hash: "2654605a88bc1dc81e93e3207f50486d",
+        },
+        "6/declaration/body/5/argument/1/3/1/1/9/1": {
+          content: {
+            en: "Requirements",
+            pl: "Wymagania",
+          },
+          hash: "e108e149e0fd5b65f5850b6f032ccabe",
+        },
+        "6/declaration/body/5/argument/1/3/1/1/9/3/11/expression/right/1": {
+          content: {
+            en: "<element:AlertCircle></element:AlertCircle> Not Met Requirements",
+            pl: "<element:AlertCircle></element:AlertCircle> Niespełnione wymagania",
+          },
+          hash: "4ee1504b99ff60d74488ab34426ed8ad",
+        },
+        "6/declaration/body/5/argument/1/3/1/1/9/3/15/expression/right/1": {
+          content: {
+            en: "Review Criteria",
+            pl: "Kryteria oceny",
+          },
+          hash: "73f2098c339274d847f5086bf5bcf61f",
+        },
+        "6/declaration/body/5/argument/1/3/1/1/9/3/3/expression/right/1": {
+          content: {
+            en: "<element:CheckCircle></element:CheckCircle> Met Requirements",
+            pl: "<element:CheckCircle></element:CheckCircle> Spełnione wymagania",
+          },
+          hash: "de1873a50cb65483443431e1c2d60c5b",
+        },
+        "6/declaration/body/5/argument/1/3/1/1/9/3/7/expression/right/1": {
+          content: {
+            en: "<element:AlertCircle></element:AlertCircle> Needs Confirmation",
+            pl: "<element:AlertCircle></element:AlertCircle> Wymaga potwierdzenia",
+          },
+          hash: "9fc1a16e6fd34b2e038519daf7ed6406",
+        },
         "6/declaration/body/5/argument/1/3/3/3": {
           content: {
             en: "·",
@@ -6085,6 +6410,13 @@ export default {
             en: "Apply",
           },
           hash: "a91df23e32b5d1457b62f98e6d90c2c0",
+        },
+        "6/declaration/body/5/argument/1/3/5/1/1": {
+          content: {
+            en: "Outline",
+            pl: "Zarys",
+          },
+          hash: "c0afd302caeecd63803a83f8b51e3e49",
         },
         "6/declaration/body/5/argument/1/3/5/3": {
           content: {
@@ -6213,6 +6545,465 @@ export default {
           hash: "2654605a88bc1dc81e93e3207f50486d",
         },
         "6/declaration/body/5/argument/1/7/7/1/1": {
+          content: {
+            en: "Outline",
+            pl: "Zarys",
+          },
+          hash: "c0afd302caeecd63803a83f8b51e3e49",
+        },
+        "8/declaration/body/3/consequent/0/argument/1/1": {
+          content: {
+            en: "Select a tender to view details",
+            pl: "Wybierz ofertę, aby zobaczyć szczegóły",
+          },
+          hash: "067789b01a081458db2f872f10a37c3f",
+        },
+        "8/declaration/body/5/argument/1/1/3/3": {
+          content: {
+            en: "·",
+            pl: "·",
+          },
+          hash: "26b80ae8a680de73667e096098aa69d8",
+        },
+        "8/declaration/body/5/argument/1/1/5/1": {
+          content: {
+            en: "Apply",
+          },
+          hash: "a91df23e32b5d1457b62f98e6d90c2c0",
+        },
+        "8/declaration/body/5/argument/1/1/5/3": {
+          content: {
+            en: "Reject",
+            pl: "Odrzuć",
+          },
+          hash: "21c303829516a636a6c306dcd68a64ec",
+        },
+        "8/declaration/body/5/argument/1/3/1/1/1/1": {
+          content: {
+            en: "At a Glance",
+            pl: "W skrócie",
+          },
+          hash: "9d55775994a0e6c016fe7e271533bf45",
+        },
+        "8/declaration/body/5/argument/1/3/1/1/1/3/3/3/expression/right/1/1": {
+          content: {
+            en: "W",
+            pl: "W",
+          },
+          hash: "537bf79791e7f93cb2e3140ab49ce70d",
+        },
+        "8/declaration/body/5/argument/1/3/1/1/1/3/3/3/expression/right/3": {
+          content: {
+            en: "Wadium: {tender.wadium_llm}",
+            pl: "Wadium: {tender.wadium_llm}",
+          },
+          hash: "a7908a3166c9eccd9acd413e39b72c11",
+        },
+        "8/declaration/body/5/argument/1/3/1/1/1/3/3/5/expression/right/3": {
+          content: {
+            en: "Completion: {tender.ordercompletiondate_llm}",
+            pl: "Zakończenie: {tender.ordercompletiondate_llm}",
+          },
+          hash: "329ae0d02b034c7833b81d6d9cfc4a3a",
+        },
+        "8/declaration/body/5/argument/1/3/1/1/13/1": {
+          content: {
+            en: "Others",
+            pl: "Inne",
+          },
+          hash: "39160224ce0e35eb4eb252c997edf4d8",
+        },
+        "8/declaration/body/5/argument/1/3/1/1/13/3/1/expression/right/1": {
+          content: {
+            en: "Application Form",
+            pl: "Formularz zgłoszeniowy",
+          },
+          hash: "269871c885cc75e625cd37409d6aa6f3",
+        },
+        "8/declaration/body/5/argument/1/3/1/1/13/3/3/expression/right/1": {
+          content: {
+            en: "Payment Terms",
+            pl: "Warunki płatności",
+          },
+          hash: "e6953edd0fa1d95783cc7e77cf663edc",
+        },
+        "8/declaration/body/5/argument/1/3/1/1/13/3/5/expression/right/1": {
+          content: {
+            en: "Contract Penalties",
+            pl: "Kary umowne",
+          },
+          hash: "a1bf0fb468c850f31f5f7ea7c576173f",
+        },
+        "8/declaration/body/5/argument/1/3/1/1/13/3/7/expression/right/1": {
+          content: {
+            en: "Deposit Information",
+            pl: "Informacje o zaliczce",
+          },
+          hash: "6c3e69c83f7ab356409c710497965d46",
+        },
+        "8/declaration/body/5/argument/1/3/1/1/13/3/9/expression/right/1": {
+          content: {
+            en: "Source URL",
+            pl: "Źródłowy URL",
+          },
+          hash: "8a990e2d4cde34bbf42ef54a7a837633",
+        },
+        "8/declaration/body/5/argument/1/3/1/1/5/1": {
+          content: {
+            en: "Description",
+            pl: "Opis",
+          },
+          hash: "e17686a22ffad04cc7bb70524ed4478b",
+        },
+        "8/declaration/body/5/argument/1/3/1/1/5/3/1/expression/alternate": {
+          content: {
+            en: "No detailed description available",
+            pl: "Brak szczegółowego opisu",
+          },
+          hash: "2654605a88bc1dc81e93e3207f50486d",
+        },
+        "8/declaration/body/5/argument/1/3/1/1/9/1": {
+          content: {
+            en: "Requirements",
+            pl: "Wymagania",
+          },
+          hash: "e108e149e0fd5b65f5850b6f032ccabe",
+        },
+        "8/declaration/body/5/argument/1/3/1/1/9/3/11/expression/right/1": {
+          content: {
+            en: "<element:AlertCircle></element:AlertCircle> Not Met Requirements",
+            pl: "<element:AlertCircle></element:AlertCircle> Niespełnione wymagania",
+          },
+          hash: "4ee1504b99ff60d74488ab34426ed8ad",
+        },
+        "8/declaration/body/5/argument/1/3/1/1/9/3/15/expression/right/1": {
+          content: {
+            en: "Review Criteria",
+            pl: "Kryteria oceny",
+          },
+          hash: "73f2098c339274d847f5086bf5bcf61f",
+        },
+        "8/declaration/body/5/argument/1/3/1/1/9/3/3/expression/right/1": {
+          content: {
+            en: "<element:CheckCircle></element:CheckCircle> Met Requirements",
+            pl: "<element:CheckCircle></element:CheckCircle> Spełnione wymagania",
+          },
+          hash: "de1873a50cb65483443431e1c2d60c5b",
+        },
+        "8/declaration/body/5/argument/1/3/1/1/9/3/7/expression/right/1": {
+          content: {
+            en: "<element:AlertCircle></element:AlertCircle> Needs Confirmation",
+            pl: "<element:AlertCircle></element:AlertCircle> Wymaga potwierdzenia",
+          },
+          hash: "9fc1a16e6fd34b2e038519daf7ed6406",
+        },
+        "8/declaration/body/5/argument/1/3/5/1/1": {
+          content: {
+            en: "Outline",
+            pl: "Zarys",
+          },
+          hash: "c0afd302caeecd63803a83f8b51e3e49",
+        },
+        "9/declaration/body/5/consequent/0/argument/1/1": {
+          content: {
+            en: "Select a tender to view details",
+            pl: "Wybierz ofertę, aby zobaczyć szczegóły",
+          },
+          hash: "067789b01a081458db2f872f10a37c3f",
+        },
+        "9/declaration/body/6/consequent/0/argument/1/1": {
+          content: {
+            en: "Select a tender to view details",
+            pl: "Wybierz ofertę, aby zobaczyć szczegóły",
+          },
+          hash: "067789b01a081458db2f872f10a37c3f",
+        },
+        "9/declaration/body/7/argument/1/1/3/3": {
+          content: {
+            en: "·",
+            pl: "·",
+          },
+          hash: "26b80ae8a680de73667e096098aa69d8",
+        },
+        "9/declaration/body/7/argument/1/1/5/1": {
+          content: {
+            en: "Apply",
+          },
+          hash: "a91df23e32b5d1457b62f98e6d90c2c0",
+        },
+        "9/declaration/body/7/argument/1/1/5/3": {
+          content: {
+            en: "Reject",
+            pl: "Odrzuć",
+          },
+          hash: "21c303829516a636a6c306dcd68a64ec",
+        },
+        "9/declaration/body/7/argument/1/3/1/1/1/1": {
+          content: {
+            en: "At a Glance",
+            pl: "W skrócie",
+          },
+          hash: "9d55775994a0e6c016fe7e271533bf45",
+        },
+        "9/declaration/body/7/argument/1/3/1/1/1/3/3/3/expression/right/1/1": {
+          content: {
+            en: "W",
+            pl: "W",
+          },
+          hash: "537bf79791e7f93cb2e3140ab49ce70d",
+        },
+        "9/declaration/body/7/argument/1/3/1/1/1/3/3/3/expression/right/3": {
+          content: {
+            en: "Wadium: {tender.wadium_llm}",
+            pl: "Wadium: {tender.wadium_llm}",
+          },
+          hash: "a7908a3166c9eccd9acd413e39b72c11",
+        },
+        "9/declaration/body/7/argument/1/3/1/1/1/3/3/5/expression/right/3": {
+          content: {
+            en: "Completion: {tender.ordercompletiondate_llm}",
+            pl: "Zakończenie: {tender.ordercompletiondate_llm}",
+          },
+          hash: "329ae0d02b034c7833b81d6d9cfc4a3a",
+        },
+        "9/declaration/body/7/argument/1/3/1/1/13/1": {
+          content: {
+            en: "Others",
+            pl: "Inne",
+          },
+          hash: "39160224ce0e35eb4eb252c997edf4d8",
+        },
+        "9/declaration/body/7/argument/1/3/1/1/13/3/1/expression/right/1": {
+          content: {
+            en: "Application Form",
+            pl: "Formularz zgłoszeniowy",
+          },
+          hash: "269871c885cc75e625cd37409d6aa6f3",
+        },
+        "9/declaration/body/7/argument/1/3/1/1/13/3/3/expression/right/1": {
+          content: {
+            en: "Payment Terms",
+            pl: "Warunki płatności",
+          },
+          hash: "e6953edd0fa1d95783cc7e77cf663edc",
+        },
+        "9/declaration/body/7/argument/1/3/1/1/13/3/5/expression/right/1": {
+          content: {
+            en: "Contract Penalties",
+            pl: "Kary umowne",
+          },
+          hash: "a1bf0fb468c850f31f5f7ea7c576173f",
+        },
+        "9/declaration/body/7/argument/1/3/1/1/13/3/7/expression/right/1": {
+          content: {
+            en: "Deposit Information",
+            pl: "Informacje o zaliczce",
+          },
+          hash: "6c3e69c83f7ab356409c710497965d46",
+        },
+        "9/declaration/body/7/argument/1/3/1/1/13/3/9/expression/right/1": {
+          content: {
+            en: "Source URL",
+            pl: "Źródłowy URL",
+          },
+          hash: "8a990e2d4cde34bbf42ef54a7a837633",
+        },
+        "9/declaration/body/7/argument/1/3/1/1/5/1": {
+          content: {
+            en: "Description",
+            pl: "Opis",
+          },
+          hash: "e17686a22ffad04cc7bb70524ed4478b",
+        },
+        "9/declaration/body/7/argument/1/3/1/1/5/3/1/expression/alternate": {
+          content: {
+            en: "No detailed description available",
+            pl: "Brak szczegółowego opisu",
+          },
+          hash: "2654605a88bc1dc81e93e3207f50486d",
+        },
+        "9/declaration/body/7/argument/1/3/1/1/9/1": {
+          content: {
+            en: "Requirements",
+            pl: "Wymagania",
+          },
+          hash: "e108e149e0fd5b65f5850b6f032ccabe",
+        },
+        "9/declaration/body/7/argument/1/3/1/1/9/3/11/expression/right/1": {
+          content: {
+            en: "<element:AlertCircle></element:AlertCircle> Not Met Requirements",
+            pl: "<element:AlertCircle></element:AlertCircle> Niespełnione wymagania",
+          },
+          hash: "4ee1504b99ff60d74488ab34426ed8ad",
+        },
+        "9/declaration/body/7/argument/1/3/1/1/9/3/15/expression/right/1": {
+          content: {
+            en: "Review Criteria",
+            pl: "Kryteria oceny",
+          },
+          hash: "73f2098c339274d847f5086bf5bcf61f",
+        },
+        "9/declaration/body/7/argument/1/3/1/1/9/3/3/expression/right/1": {
+          content: {
+            en: "<element:CheckCircle></element:CheckCircle> Met Requirements",
+            pl: "<element:CheckCircle></element:CheckCircle> Spełnione wymagania",
+          },
+          hash: "de1873a50cb65483443431e1c2d60c5b",
+        },
+        "9/declaration/body/7/argument/1/3/1/1/9/3/7/expression/right/1": {
+          content: {
+            en: "<element:AlertCircle></element:AlertCircle> Needs Confirmation",
+            pl: "<element:AlertCircle></element:AlertCircle> Wymaga potwierdzenia",
+          },
+          hash: "9fc1a16e6fd34b2e038519daf7ed6406",
+        },
+        "9/declaration/body/7/argument/1/3/5/1/1": {
+          content: {
+            en: "Outline",
+            pl: "Zarys",
+          },
+          hash: "c0afd302caeecd63803a83f8b51e3e49",
+        },
+        "9/declaration/body/8/argument/1/1/3/3": {
+          content: {
+            en: "·",
+            pl: "·",
+          },
+          hash: "26b80ae8a680de73667e096098aa69d8",
+        },
+        "9/declaration/body/8/argument/1/1/5/1": {
+          content: {
+            en: "Apply",
+          },
+          hash: "a91df23e32b5d1457b62f98e6d90c2c0",
+        },
+        "9/declaration/body/8/argument/1/1/5/3": {
+          content: {
+            en: "Reject",
+            pl: "Odrzuć",
+          },
+          hash: "21c303829516a636a6c306dcd68a64ec",
+        },
+        "9/declaration/body/8/argument/1/3/1/1/1/1": {
+          content: {
+            en: "At a Glance",
+            pl: "W skrócie",
+          },
+          hash: "9d55775994a0e6c016fe7e271533bf45",
+        },
+        "9/declaration/body/8/argument/1/3/1/1/1/3/3/3/expression/right/1/1": {
+          content: {
+            en: "W",
+            pl: "W",
+          },
+          hash: "537bf79791e7f93cb2e3140ab49ce70d",
+        },
+        "9/declaration/body/8/argument/1/3/1/1/1/3/3/3/expression/right/3": {
+          content: {
+            en: "Wadium: {tender.wadium_llm}",
+            pl: "Wadium: {tender.wadium_llm}",
+          },
+          hash: "a7908a3166c9eccd9acd413e39b72c11",
+        },
+        "9/declaration/body/8/argument/1/3/1/1/1/3/3/5/expression/right/3": {
+          content: {
+            en: "Completion: {tender.ordercompletiondate_llm}",
+            pl: "Zakończenie: {tender.ordercompletiondate_llm}",
+          },
+          hash: "329ae0d02b034c7833b81d6d9cfc4a3a",
+        },
+        "9/declaration/body/8/argument/1/3/1/1/13/1": {
+          content: {
+            en: "Others",
+            pl: "Inne",
+          },
+          hash: "39160224ce0e35eb4eb252c997edf4d8",
+        },
+        "9/declaration/body/8/argument/1/3/1/1/13/3/1/expression/right/1": {
+          content: {
+            en: "Application Form",
+            pl: "Formularz zgłoszeniowy",
+          },
+          hash: "269871c885cc75e625cd37409d6aa6f3",
+        },
+        "9/declaration/body/8/argument/1/3/1/1/13/3/3/expression/right/1": {
+          content: {
+            en: "Payment Terms",
+            pl: "Warunki płatności",
+          },
+          hash: "e6953edd0fa1d95783cc7e77cf663edc",
+        },
+        "9/declaration/body/8/argument/1/3/1/1/13/3/5/expression/right/1": {
+          content: {
+            en: "Contract Penalties",
+            pl: "Kary umowne",
+          },
+          hash: "a1bf0fb468c850f31f5f7ea7c576173f",
+        },
+        "9/declaration/body/8/argument/1/3/1/1/13/3/7/expression/right/1": {
+          content: {
+            en: "Deposit Information",
+            pl: "Informacje o zaliczce",
+          },
+          hash: "6c3e69c83f7ab356409c710497965d46",
+        },
+        "9/declaration/body/8/argument/1/3/1/1/13/3/9/expression/right/1": {
+          content: {
+            en: "Source URL",
+            pl: "Źródłowy URL",
+          },
+          hash: "8a990e2d4cde34bbf42ef54a7a837633",
+        },
+        "9/declaration/body/8/argument/1/3/1/1/5/1": {
+          content: {
+            en: "Description",
+            pl: "Opis",
+          },
+          hash: "e17686a22ffad04cc7bb70524ed4478b",
+        },
+        "9/declaration/body/8/argument/1/3/1/1/5/3/1/expression/alternate": {
+          content: {
+            en: "No detailed description available",
+            pl: "Brak szczegółowego opisu",
+          },
+          hash: "2654605a88bc1dc81e93e3207f50486d",
+        },
+        "9/declaration/body/8/argument/1/3/1/1/9/1": {
+          content: {
+            en: "Requirements",
+            pl: "Wymagania",
+          },
+          hash: "e108e149e0fd5b65f5850b6f032ccabe",
+        },
+        "9/declaration/body/8/argument/1/3/1/1/9/3/11/expression/right/1": {
+          content: {
+            en: "<element:AlertCircle></element:AlertCircle> Not Met Requirements",
+            pl: "<element:AlertCircle></element:AlertCircle> Niespełnione wymagania",
+          },
+          hash: "4ee1504b99ff60d74488ab34426ed8ad",
+        },
+        "9/declaration/body/8/argument/1/3/1/1/9/3/15/expression/right/1": {
+          content: {
+            en: "Review Criteria",
+            pl: "Kryteria oceny",
+          },
+          hash: "73f2098c339274d847f5086bf5bcf61f",
+        },
+        "9/declaration/body/8/argument/1/3/1/1/9/3/3/expression/right/1": {
+          content: {
+            en: "<element:CheckCircle></element:CheckCircle> Met Requirements",
+            pl: "<element:CheckCircle></element:CheckCircle> Spełnione wymagania",
+          },
+          hash: "de1873a50cb65483443431e1c2d60c5b",
+        },
+        "9/declaration/body/8/argument/1/3/1/1/9/3/7/expression/right/1": {
+          content: {
+            en: "<element:AlertCircle></element:AlertCircle> Needs Confirmation",
+            pl: "<element:AlertCircle></element:AlertCircle> Wymaga potwierdzenia",
+          },
+          hash: "9fc1a16e6fd34b2e038519daf7ed6406",
+        },
+        "9/declaration/body/8/argument/1/3/5/1/1": {
           content: {
             en: "Outline",
             pl: "Zarys",

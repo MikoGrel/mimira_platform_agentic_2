@@ -13,7 +13,9 @@ import {
 } from "lucide-react";
 import { Tables } from "$/types/supabase";
 import { cn } from "$/lib/utils";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
+import { useScroll } from "react-use";
+import { motion, AnimatePresence } from "motion/react";
 
 interface TenderPreviewProps {
   tender: Tables<"tenders"> | null;
@@ -136,6 +138,12 @@ function ReviewCriteriaVisualization({ criteria }: { criteria: string }) {
 export function TenderPreview({ tender }: TenderPreviewProps) {
   const [activeSection, setActiveSection] = useState<string>("");
 
+  const scrollRef = useRef<HTMLDivElement>(null);
+  const { y } = useScroll(scrollRef as React.RefObject<HTMLElement>);
+
+  // Track if header should be collapsed based on scroll position
+  const isHeaderCollapsed = y > 50;
+
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -172,40 +180,107 @@ export function TenderPreview({ tender }: TenderPreviewProps) {
   }
 
   const sections = [
-    { id: "at-glance", label: "At a Glance" },
-    { id: "description", label: "Description" },
-    { id: "requirements", label: "Requirements" },
-    { id: "others", label: "Others" },
+    { id: "at-glance", label: <span>At a Glance</span> },
+    { id: "description", label: <span>Description</span> },
+    { id: "requirements", label: <span>Requirements</span> },
+    { id: "others", label: <span>Others</span> },
   ];
 
   return (
     <section className="h-full w-full">
       <div className="h-full w-full flex flex-col">
-        <div className="p-4 border-b border-sidebar-border flex flex-col gap-4 bg-white">
-          <h1 className="font-medium w-2/3">{tender.orderobject}</h1>
-          <div className="flex gap-2">
-            <span className="flex items-center gap-2">
-              <House className="w-4 h-4" />
-              {tender.organizationname}
-            </span>
-            <span>&middot;</span>
-            <span className="flex items-center gap-2">
-              <Calendar className="w-4 h-4" />
-              {tender.submittingoffersdate}
-            </span>
-          </div>
-          <div className="flex gap-2">
-            <Button color="primary" data-lingo-override-pl="Aplikuj">
-              Apply
-            </Button>
-            <Button variant="flat" color="danger">
-              Reject
-            </Button>
-          </div>
-        </div>
+        <motion.div
+          className="border-b border-sidebar-border bg-white overflow-hidden"
+          animate={{
+            paddingTop: isHeaderCollapsed ? "8px" : "16px",
+            paddingBottom: isHeaderCollapsed ? "8px" : "16px",
+            paddingLeft: "16px",
+            paddingRight: "16px",
+          }}
+          transition={{
+            duration: 0.25,
+            ease: [0.4, 0.0, 0.2, 1], // Custom easing for smoother feel
+          }}
+        >
+          <motion.h1
+            className="font-medium w-2/3"
+            animate={{
+              fontSize: isHeaderCollapsed ? "14px" : "16px",
+              lineHeight: isHeaderCollapsed ? "20px" : "24px",
+              marginBottom: isHeaderCollapsed ? "4px" : "0px",
+            }}
+            transition={{ duration: 0.25, ease: [0.4, 0.0, 0.2, 1] }}
+          >
+            {tender.orderobject}
+          </motion.h1>
+
+          <AnimatePresence>
+            {!isHeaderCollapsed && (
+              <motion.div
+                className="space-y-4"
+                initial={{ opacity: 0, height: 0 }}
+                animate={{ opacity: 1, height: "auto" }}
+                exit={{ opacity: 0, height: 0 }}
+                transition={{ duration: 0.25, ease: [0.4, 0.0, 0.2, 1] }}
+              >
+                <div className="flex gap-2">
+                  <span className="flex items-center gap-2">
+                    <House className="w-4 h-4" />
+                    {tender.organizationname}
+                  </span>
+                  <span>&middot;</span>
+                  <span className="flex items-center gap-2">
+                    <Calendar className="w-4 h-4" />
+                    {tender.submittingoffersdate}
+                  </span>
+                </div>
+                <div className="flex gap-2">
+                  <Button color="primary" data-lingo-override-pl="Aplikuj">
+                    Apply
+                  </Button>
+                  <Button variant="flat" color="danger">
+                    Reject
+                  </Button>
+                </div>
+              </motion.div>
+            )}
+          </AnimatePresence>
+
+          {isHeaderCollapsed && (
+            <motion.div
+              className="flex items-center justify-between"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.25, ease: [0.4, 0.0, 0.2, 1] }}
+            >
+              <div className="flex items-center gap-4 text-sm text-gray-600">
+                <span className="flex items-center gap-1">
+                  <House className="w-3 h-3" />
+                  {tender.organizationname}
+                </span>
+                <span className="flex items-center gap-1">
+                  <Calendar className="w-3 h-3" />
+                  {tender.submittingoffersdate}
+                </span>
+              </div>
+              <div className="flex gap-2">
+                <Button
+                  size="sm"
+                  color="primary"
+                  data-lingo-override-pl="Aplikuj"
+                >
+                  Apply
+                </Button>
+                <Button size="sm" variant="flat" color="danger">
+                  Reject
+                </Button>
+              </div>
+            </motion.div>
+          )}
+        </motion.div>
 
         <div className="flex overflow-hidden h-full flex-[1_0_0]">
-          <div className="flex-1 overflow-y-auto">
+          <div className="flex-1 overflow-y-auto" ref={scrollRef}>
             <div className="p-4 space-y-8">
               <Section id="at-glance" data-section>
                 <SectionHeader>At a Glance</SectionHeader>
@@ -441,7 +516,7 @@ export function TenderPreview({ tender }: TenderPreviewProps) {
           </div>
 
           {/* Navigation Sidebar */}
-          <div className="w-48 border-l border-sidebar-border bg-gray-50/50 p-4">
+          <div className="border-l border-sidebar-border bg-gray-50/50 overflow-hidden w-48 p-4">
             <div className="sticky top-4">
               <h3 className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-3">
                 Outline
@@ -459,7 +534,7 @@ export function TenderPreview({ tender }: TenderPreviewProps) {
                     )}
                   >
                     <Hash className="w-3 h-3 opacity-60" />
-                    <span className="truncate">{section.label}</span>
+                    {section.label}
                   </button>
                 ))}
               </nav>
