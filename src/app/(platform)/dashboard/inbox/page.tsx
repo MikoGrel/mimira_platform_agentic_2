@@ -123,7 +123,7 @@ export default function InboxPage() {
             </ul>
           </div>
         </div>
-        <div className="absolute bottom-0 left-0 right-0 p-3 px-4 text-sm bg-blue-100 border-t border-sidebar-border ">
+        <div className="absolute bottom-0 left-0 right-0 p-3 px-4 text-sm bg-primary/10 backdrop-blur-md">
           <div className="flex items-center justify-start gap-2">
             <Symbol className="w-6 h-6" />
             <p className="font-medium">Ask Mimir</p>

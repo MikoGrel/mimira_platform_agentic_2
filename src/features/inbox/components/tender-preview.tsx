@@ -1,6 +1,6 @@
 "use client";
 
-import { Button } from "@heroui/react";
+import { Button, Spinner } from "@heroui/react";
 import {
   Calendar,
   House,
@@ -8,143 +8,236 @@ import {
   AlertCircle,
   Clock,
   Hash,
-  Target,
-  Percent,
 } from "lucide-react";
 import { Tables } from "$/types/supabase";
 import { cn } from "$/lib/utils";
 import { useEffect, useRef, useState } from "react";
-import { useScroll } from "react-use";
 import { motion, AnimatePresence } from "motion/react";
+import { useCompletion } from "@ai-sdk/react";
+import useCurrentLocale from "$/features/i18n/hooks/use-current-locale";
+import Markdown from "react-markdown";
+import { useScrollTrigger } from "$/features/shared/hooks/use-scroll-trigger";
 
 interface TenderPreviewProps {
   tender: Tables<"tenders"> | null;
 }
 
-interface ReviewCriterion {
-  kryterium: string;
-  waga: string;
-  opis: string;
+// Reusable Section Components
+function Section({
+  children,
+  className,
+  id,
+  ...props
+}: {
+  children: React.ReactNode;
+  className?: string;
+  id?: string;
+} & React.HTMLAttributes<HTMLDivElement>) {
+  return (
+    <div id={id} className={cn("scroll-mt-6 space-y-4", className)} {...props}>
+      {children}
+    </div>
+  );
 }
 
-function ReviewCriteriaVisualization({ criteria }: { criteria: string }) {
-  let parsedCriteria: ReviewCriterion[] = [];
+function SectionTitle({ children }: { children: React.ReactNode }) {
+  return (
+    <h2 className="text-base font-semibold text-gray-900 border-b border-gray-100 pb-3">
+      {children}
+    </h2>
+  );
+}
 
-  try {
-    parsedCriteria = JSON.parse(criteria);
-  } catch {
-    return (
-      <div className="bg-gray-50 p-3 rounded-lg">
-        <p className="text-sm whitespace-pre-wrap">{criteria}</p>
-      </div>
-    );
-  }
+function SectionContent({
+  children,
+  className,
+}: {
+  children: React.ReactNode;
+  className?: string;
+}) {
+  return <div className={cn("space-y-3", className)}>{children}</div>;
+}
 
-  if (!Array.isArray(parsedCriteria)) {
-    return (
-      <div className="bg-gray-50 p-3 rounded-lg">
-        <p className="text-sm whitespace-pre-wrap">{criteria}</p>
-      </div>
-    );
-  }
+// Status Badge Component
+function StatusBadge({
+  type,
+  children,
+}: {
+  type: "success" | "warning" | "error" | "neutral";
+  children: React.ReactNode;
+}) {
+  const styles = {
+    success: "bg-green-50 text-green-700 border-green-200",
+    warning: "bg-amber-50 text-amber-700 border-amber-200",
+    error: "bg-red-50 text-red-700 border-red-200",
+    neutral: "bg-gray-50 text-gray-700 border-gray-200",
+  };
+
+  const icons = {
+    success: CheckCircle,
+    warning: AlertCircle,
+    error: AlertCircle,
+    neutral: Clock,
+  };
+
+  const Icon = icons[type];
 
   return (
-    <div className="space-y-4">
-      {/* Criteria Overview */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-3 mb-6">
-        {parsedCriteria.map((criterion, index) => {
-          const weight = parseInt(criterion.waga.replace("%", ""));
-          return (
-            <div
-              key={index}
-              className="bg-white border border-gray-200 rounded-lg p-4 shadow-sm"
-            >
-              <div className="flex items-center gap-2 mb-2">
-                <Target className="w-4 h-4 text-blue-500" />
-                <span className="font-medium text-sm text-gray-700 capitalize">
-                  {criterion.kryterium}
-                </span>
-              </div>
-              <div className="flex items-center gap-2">
-                <div className="flex-1 bg-gray-200 rounded-full h-2">
-                  <div
-                    className="bg-blue-500 h-2 rounded-full transition-all duration-300"
-                    style={{ width: `${weight}%` }}
-                  />
-                </div>
-                <span className="text-sm font-semibold text-blue-600 flex items-center gap-1">
-                  <Percent className="w-3 h-3" />
-                  {criterion.waga}
-                </span>
-              </div>
-            </div>
-          );
-        })}
+    <div className={cn("flex gap-2 px-3 py-2 rounded-lg text-sm")}>
+      <Icon className={cn("w-4 h-4 flex-shrink-0", styles[type])} />
+      {children}
+    </div>
+  );
+}
+
+// Requirements List Component
+function RequirementsList({
+  title,
+  items,
+  type,
+}: {
+  title: string;
+  items: string[];
+  type: "success" | "warning" | "error";
+}) {
+  if (!items || items.length === 0) return null;
+
+  return (
+    <div className="space-y-2">
+      <h4 className="text-sm font-medium text-gray-900">{title}</h4>
+      <div className="space-y-1">
+        {items.map((item, index) => (
+          <StatusBadge key={index} type={type}>
+            {String(item)}
+          </StatusBadge>
+        ))}
       </div>
+    </div>
+  );
+}
 
-      {/* Detailed Criteria */}
-      <div className="space-y-4">
-        {parsedCriteria.map((criterion, index) => {
-          const colors = [
-            {
-              bg: "bg-blue-50",
-              border: "border-blue-200",
-              accent: "text-blue-700",
-            },
-            {
-              bg: "bg-green-50",
-              border: "border-green-200",
-              accent: "text-green-700",
-            },
-            {
-              bg: "bg-purple-50",
-              border: "border-purple-200",
-              accent: "text-purple-700",
-            },
-          ];
-          const color = colors[index % colors.length];
+// Info Card Component
+function InfoCard({
+  title,
+  content,
+  variant = "default",
+}: {
+  title: string;
+  content: string;
+  variant?: "default" | "highlight";
+}) {
+  return (
+    <div
+      className={cn(
+        "p-4 rounded-lg border",
+        variant === "highlight"
+          ? "bg-blue-50 border-blue-200"
+          : "bg-gray-50 border-gray-200"
+      )}
+    >
+      <h4 className="text-sm font-medium text-gray-900 mb-2">{title}</h4>
+      <p className="text-sm text-gray-600 whitespace-pre-wrap leading-relaxed">
+        {content}
+      </p>
+    </div>
+  );
+}
 
-          return (
-            <div
-              key={index}
-              className={`${color.bg} ${color.border} border rounded-lg p-4`}
-            >
-              <div className="flex items-start justify-between mb-3">
-                <h5
-                  className={`font-semibold ${color.accent} capitalize flex items-center gap-2`}
-                >
-                  <span className="bg-white rounded-full w-6 h-6 flex items-center justify-center text-xs font-bold">
-                    {index + 1}
-                  </span>
-                  {criterion.kryterium}
-                </h5>
-                <span className={`${color.accent} font-bold text-lg`}>
-                  {criterion.waga}
-                </span>
-              </div>
-              <div className="bg-white bg-opacity-60 rounded-md p-3">
-                <p className="text-sm text-gray-700 leading-relaxed whitespace-pre-wrap">
-                  {criterion.opis}
-                </p>
-              </div>
-            </div>
-          );
-        })}
+// Status Card Component
+function StatusCard({
+  icon: Icon,
+  title,
+  value,
+  type = "neutral",
+}: {
+  icon: React.ComponentType<{ className?: string }>;
+  title: string;
+  value: string;
+  type?: "success" | "warning" | "error" | "neutral";
+}) {
+  const iconColors = {
+    success: "text-green-600",
+    warning: "text-amber-600",
+    error: "text-red-600",
+    neutral: "text-gray-600",
+  };
+
+  return (
+    <div className="bg-white border border-gray-200 rounded-lg p-4 hover:shadow-sm transition-shadow">
+      <div className="flex items-start gap-3">
+        <Icon
+          className={cn("w-5 h-5 mt-0.5 flex-shrink-0", iconColors[type])}
+        />
+        <div className="min-w-0 flex-1">
+          <p className="text-xs font-medium text-gray-500 uppercase tracking-wide mb-1">
+            {title}
+          </p>
+          <p className="text-sm font-medium text-gray-900 leading-tight">
+            {value}
+          </p>
+        </div>
       </div>
     </div>
   );
 }
 
 export function TenderPreview({ tender }: TenderPreviewProps) {
+  const locale = useCurrentLocale();
+
+  const { completion, isLoading, complete } = useCompletion({
+    api: "/api/completion",
+    id: tender?.id + "-summary",
+  });
+
+  const [showSummary, setShowSummary] = useState(false);
+
+  // Auto-generate summary when tender changes
+  useEffect(() => {
+    if (tender?.description_long_llm) {
+      setShowSummary(true);
+      if (!completion && !isLoading) {
+        complete(
+          `Analyze this tender and provide a single, comprehensive summary in ${locale} language.
+
+TENDER: ${tender.description_long_llm}
+
+REQUIREMENTS STATUS:
+- Met: ${tender.met_requirements ? JSON.stringify(tender.met_requirements) : "None specified"}
+- Need confirmation: ${tender.needs_confirmation_requirements ? JSON.stringify(tender.needs_confirmation_requirements) : "None specified"}  
+- Not met: ${tender.not_met_requirements ? JSON.stringify(tender.not_met_requirements) : "None specified"}
+
+REVIEW CRITERIA: ${tender.review_criteria_llm || "Not specified"}
+
+Write a natural, conversational summary in 3-4 sentences that explains what this tender is about, assesses your company's fit based on the requirements, highlights any key risks or opportunities, and provides a clear recommendation. Use professional but friendly tone, address the user directly, and avoid bullet points or structured formatting. If locale is not en, Replate tender word with local language equivalents, for example Tender -> Przetarg in Polish.`
+        );
+      }
+    } else {
+      setShowSummary(false);
+    }
+  }, [
+    tender?.id,
+    tender?.description_long_llm,
+    locale,
+    completion,
+    isLoading,
+    complete,
+    tender?.met_requirements,
+    tender?.needs_confirmation_requirements,
+    tender?.not_met_requirements,
+    tender?.review_criteria_llm,
+  ]);
+
   const [activeSection, setActiveSection] = useState<string>("");
 
   const scrollRef = useRef<HTMLDivElement>(null);
-  const { y } = useScroll(scrollRef as React.RefObject<HTMLElement>);
-
-  // Track if header should be collapsed based on scroll position
-  const isHeaderCollapsed = y > 50;
+  const isHeaderCollapsed = useScrollTrigger({
+    threshold: 100,
+    containerRef: scrollRef,
+  });
 
   useEffect(() => {
+    if (!scrollRef.current) return;
+
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -153,19 +246,41 @@ export function TenderPreview({ tender }: TenderPreviewProps) {
           }
         });
       },
-      { rootMargin: "-20% 0px -80% 0px" }
+      {
+        root: scrollRef.current,
+        rootMargin: "-10% 0px -60% 0px",
+        threshold: 0.1,
+      }
     );
 
-    const sections = document.querySelectorAll("[data-section]");
-    sections.forEach((section) => observer.observe(section));
+    // Wait a bit for sections to be rendered
+    const timeoutId = setTimeout(() => {
+      const sections = document.querySelectorAll("[data-section]");
+      sections.forEach((section) => observer.observe(section));
+    }, 100);
 
-    return () => observer.disconnect();
+    return () => {
+      clearTimeout(timeoutId);
+      observer.disconnect();
+    };
   }, [tender]);
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth", block: "start" });
+    const container = scrollRef.current;
+
+    if (element && container) {
+      const containerRect = container.getBoundingClientRect();
+      const elementRect = element.getBoundingClientRect();
+      const scrollTop = container.scrollTop;
+
+      const targetScrollTop =
+        scrollTop + elementRect.top - containerRect.top - 24;
+
+      container.scrollTo({
+        top: targetScrollTop,
+        behavior: "smooth",
+      });
     }
   };
 
@@ -173,40 +288,29 @@ export function TenderPreview({ tender }: TenderPreviewProps) {
     return (
       <section className="sticky top-0 flex items-center justify-center h-full">
         <div className="text-center text-gray-500">
-          <p>Select a tender to view details</p>
+          <p className="text-sm">Select a tender to view details</p>
         </div>
       </section>
     );
   }
 
   const sections = [
-    { id: "at-glance", label: <span>At a Glance</span> },
-    { id: "description", label: <span>Description</span> },
+    { id: "at-glance", label: <span>Overview</span> },
     { id: "requirements", label: <span>Requirements</span> },
-    { id: "others", label: <span>Others</span> },
+    { id: "description", label: <span>Description</span> },
+    { id: "others", label: <span>Additional Info</span> },
   ];
 
   return (
     <section className="h-full w-full">
       <div className="h-full w-full flex flex-col">
-        <motion.div
-          className="border-b border-sidebar-border bg-white overflow-hidden"
-          animate={{
-            paddingTop: isHeaderCollapsed ? "8px" : "16px",
-            paddingBottom: isHeaderCollapsed ? "8px" : "16px",
-            paddingLeft: "16px",
-            paddingRight: "16px",
-          }}
-          transition={{
-            duration: 0.25,
-            ease: [0.4, 0.0, 0.2, 1], // Custom easing for smoother feel
-          }}
-        >
+        {/* Header */}
+        <div className="border-b border-gray-200 bg-white overflow-hidden px-6 py-4">
           <motion.h1
-            className="font-medium w-2/3"
+            className="font-semibold text-gray-900 w-2/3"
             animate={{
-              fontSize: isHeaderCollapsed ? "14px" : "16px",
-              lineHeight: isHeaderCollapsed ? "20px" : "24px",
+              fontSize: isHeaderCollapsed ? "14px" : "18px",
+              lineHeight: isHeaderCollapsed ? "20px" : "28px",
               marginBottom: isHeaderCollapsed ? "4px" : "0px",
             }}
             transition={{ duration: 0.25, ease: [0.4, 0.0, 0.2, 1] }}
@@ -223,18 +327,17 @@ export function TenderPreview({ tender }: TenderPreviewProps) {
                 exit={{ opacity: 0, height: 0 }}
                 transition={{ duration: 0.25, ease: [0.4, 0.0, 0.2, 1] }}
               >
-                <div className="flex gap-2">
+                <div className="flex items-center gap-4 text-sm text-gray-600">
                   <span className="flex items-center gap-2">
                     <House className="w-4 h-4" />
                     {tender.organizationname}
                   </span>
-                  <span>&middot;</span>
                   <span className="flex items-center gap-2">
                     <Calendar className="w-4 h-4" />
                     {tender.submittingoffersdate}
                   </span>
                 </div>
-                <div className="flex gap-2">
+                <div className="flex gap-3">
                   <Button color="primary" data-lingo-override-pl="Aplikuj">
                     Apply
                   </Button>
@@ -277,249 +380,191 @@ export function TenderPreview({ tender }: TenderPreviewProps) {
               </div>
             </motion.div>
           )}
-        </motion.div>
+        </div>
 
         <div className="flex overflow-hidden h-full flex-[1_0_0]">
           <div className="flex-1 overflow-y-auto" ref={scrollRef}>
-            <div className="p-4 space-y-8">
+            <div className="px-6 py-6 space-y-8">
+              {/* Overview Section */}
               <Section id="at-glance" data-section>
-                <SectionHeader>At a Glance</SectionHeader>
-                <div className="space-y-4">
-                  {tender.description_long_llm && (
-                    <div className="bg-blue-50 border border-blue-200 p-4 rounded-lg">
-                      <p className="text-blue-900">
-                        {tender.description_long_llm}
+                <SectionTitle>Overview</SectionTitle>
+                <SectionContent>
+                  {/* AI Summary */}
+                  {tender?.description_long_llm ? (
+                    showSummary && (
+                      <div className="p-4 bg-blue-50 border border-blue-200 rounded-lg">
+                        {completion ? (
+                          <p className="text-sm leading-relaxed text-gray-700">
+                            {completion}
+                          </p>
+                        ) : isLoading ? (
+                          <div className="flex items-center gap-2">
+                            <Spinner size="sm" />
+                            <span className="text-sm text-gray-600">
+                              Generating summary...
+                            </span>
+                          </div>
+                        ) : null}
+                      </div>
+                    )
+                  ) : (
+                    <div className="p-4 bg-gray-50 border border-gray-200 rounded-lg">
+                      <p className="text-sm text-gray-500">
+                        No description available for AI summary generation
                       </p>
                     </div>
                   )}
 
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  {/* Key Information Cards */}
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                     {tender.can_participate !== null && (
-                      <div className="flex items-center gap-2">
-                        {tender.can_participate ? (
-                          <CheckCircle className="w-5 h-5 text-green-500" />
-                        ) : (
-                          <AlertCircle className="w-5 h-5 text-red-500" />
-                        )}
-                        <span
-                          className={
-                            tender.can_participate
-                              ? "text-green-700"
-                              : "text-red-700"
-                          }
-                        >
-                          {tender.can_participate
+                      <StatusCard
+                        icon={
+                          tender.can_participate ? CheckCircle : AlertCircle
+                        }
+                        title="Eligibility"
+                        value={
+                          tender.can_participate
                             ? "Eligible to participate"
-                            : "Not eligible to participate"}
-                        </span>
-                      </div>
+                            : "Not eligible to participate"
+                        }
+                        type={tender.can_participate ? "success" : "error"}
+                      />
                     )}
 
                     {tender.wadium_llm && (
-                      <div className="flex items-center gap-2">
-                        <div className="w-5 h-5 bg-yellow-500 rounded-full flex items-center justify-center">
-                          <span className="text-white text-xs font-bold">
-                            W
-                          </span>
-                        </div>
-                        <span>Wadium: {tender.wadium_llm}</span>
-                      </div>
+                      <StatusCard
+                        icon={AlertCircle}
+                        title="Wadium"
+                        value={tender.wadium_llm}
+                        type="warning"
+                      />
                     )}
 
                     {tender.ordercompletiondate_llm && (
-                      <div className="flex items-center gap-2">
-                        <Clock className="w-5 h-5 text-gray-500" />
-                        <span>
-                          Completion: {tender.ordercompletiondate_llm}
-                        </span>
-                      </div>
+                      <StatusCard
+                        icon={Clock}
+                        title="Completion Date"
+                        value={tender.ordercompletiondate_llm}
+                        type="neutral"
+                      />
                     )}
                   </div>
-                </div>
-              </Section>
-
-              {/* Description Section */}
-              <Section id="description" data-section>
-                <SectionHeader>Description</SectionHeader>
-                <div className="prose max-w-none">
-                  {tender.description_long_llm ? (
-                    <div className="bg-gray-50 p-4 rounded-lg">
-                      <p className="whitespace-pre-wrap">
-                        {tender.description_long_llm}
-                      </p>
-                    </div>
-                  ) : (
-                    <p className="text-gray-500 italic">
-                      No detailed description available
-                    </p>
-                  )}
-                </div>
+                </SectionContent>
               </Section>
 
               {/* Requirements Section */}
               <Section id="requirements" data-section>
-                <SectionHeader>Requirements</SectionHeader>
-                <div className="space-y-4">
-                  {/* Met Requirements */}
-                  {tender.met_requirements &&
-                    Array.isArray(tender.met_requirements) &&
-                    tender.met_requirements.length > 0 && (
-                      <div>
-                        <h4 className="font-medium text-green-700 mb-2 flex items-center gap-2">
-                          <CheckCircle className="w-4 h-4" />
-                          Met Requirements
-                        </h4>
-                        <ul className="space-y-2">
-                          {tender.met_requirements.map((req, index) => (
-                            <li key={index} className="flex items-start gap-2">
-                              <CheckCircle className="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0" />
-                              <span className="text-sm">{String(req)}</span>
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                    )}
+                <SectionTitle>Requirements</SectionTitle>
+                <SectionContent>
+                  <div className="space-y-6">
+                    <RequirementsList
+                      title="Met Requirements"
+                      items={(tender.met_requirements as string[]) || []}
+                      type="success"
+                    />
 
-                  {/* Needs Confirmation Requirements */}
-                  {tender.needs_confirmation_requirements &&
-                    Array.isArray(tender.needs_confirmation_requirements) &&
-                    tender.needs_confirmation_requirements.length > 0 && (
-                      <div>
-                        <h4 className="font-medium text-yellow-700 mb-2 flex items-center gap-2">
-                          <AlertCircle className="w-4 h-4" />
-                          Needs Confirmation
-                        </h4>
-                        <ul className="space-y-2">
-                          {tender.needs_confirmation_requirements.map(
-                            (req, index) => (
-                              <li
-                                key={index}
-                                className="flex items-start gap-2"
-                              >
-                                <AlertCircle className="w-4 h-4 text-yellow-500 mt-0.5 flex-shrink-0" />
-                                <span className="text-sm">{String(req)}</span>
-                              </li>
-                            )
-                          )}
-                        </ul>
-                      </div>
-                    )}
+                    <RequirementsList
+                      title="Needs Confirmation"
+                      items={
+                        (tender.needs_confirmation_requirements as string[]) ||
+                        []
+                      }
+                      type="warning"
+                    />
 
-                  {/* Not Met Requirements */}
-                  {tender.not_met_requirements &&
-                    Array.isArray(tender.not_met_requirements) &&
-                    tender.not_met_requirements.length > 0 && (
-                      <div>
-                        <h4 className="font-medium text-red-700 mb-2 flex items-center gap-2">
-                          <AlertCircle className="w-4 h-4" />
-                          Not Met Requirements
-                        </h4>
-                        <ul className="space-y-2">
-                          {tender.not_met_requirements.map((req, index) => (
-                            <li key={index} className="flex items-start gap-2">
-                              <AlertCircle className="w-4 h-4 text-red-500 mt-0.5 flex-shrink-0" />
-                              <span className="text-sm">{String(req)}</span>
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                    )}
+                    <RequirementsList
+                      title="Not Met Requirements"
+                      items={(tender.not_met_requirements as string[]) || []}
+                      type="error"
+                    />
 
-                  {/* Review Criteria */}
-                  {tender.review_criteria_llm && (
-                    <div>
-                      <h4 className="font-medium text-gray-700 mb-4">
-                        Review Criteria
-                      </h4>
-                      <ReviewCriteriaVisualization
-                        criteria={tender.review_criteria_llm}
+                    {tender.review_criteria_llm && (
+                      <InfoCard
+                        title="Review Criteria"
+                        content={tender.review_criteria_llm}
+                        variant="highlight"
                       />
-                    </div>
-                  )}
-                </div>
+                    )}
+                  </div>
+                </SectionContent>
               </Section>
 
-              {/* Others Section */}
+              {/* Description Section */}
+              <Section id="description" data-section>
+                <SectionTitle>Description</SectionTitle>
+                <SectionContent>
+                  {tender.description_long_llm ? (
+                    <div className="prose prose-sm max-w-none text-gray-700">
+                      <Markdown>{tender.description_long_llm}</Markdown>
+                    </div>
+                  ) : (
+                    <p className="text-sm text-gray-500 italic">
+                      No detailed description available
+                    </p>
+                  )}
+                </SectionContent>
+              </Section>
+
+              {/* Additional Information Section */}
               <Section id="others" data-section>
-                <SectionHeader>Others</SectionHeader>
-                <div className="space-y-4">
-                  {tender.application_form_llm && (
-                    <div>
-                      <h4 className="font-medium text-gray-700 mb-2">
-                        Application Form
-                      </h4>
-                      <div className="bg-blue-50 p-3 rounded-lg">
-                        <p className="text-sm whitespace-pre-wrap">
-                          {tender.application_form_llm}
-                        </p>
-                      </div>
-                    </div>
-                  )}
+                <SectionTitle>Additional Information</SectionTitle>
+                <SectionContent>
+                  <div className="space-y-4">
+                    {tender.application_form_llm && (
+                      <InfoCard
+                        title="Application Form"
+                        content={tender.application_form_llm}
+                      />
+                    )}
 
-                  {tender.payment_terms_llm && (
-                    <div>
-                      <h4 className="font-medium text-gray-700 mb-2">
-                        Payment Terms
-                      </h4>
-                      <div className="bg-green-50 p-3 rounded-lg">
-                        <p className="text-sm whitespace-pre-wrap">
-                          {tender.payment_terms_llm}
-                        </p>
-                      </div>
-                    </div>
-                  )}
+                    {tender.payment_terms_llm && (
+                      <InfoCard
+                        title="Payment Terms"
+                        content={tender.payment_terms_llm}
+                      />
+                    )}
 
-                  {tender.contract_penalties_llm && (
-                    <div>
-                      <h4 className="font-medium text-gray-700 mb-2">
-                        Contract Penalties
-                      </h4>
-                      <div className="bg-red-50 p-3 rounded-lg">
-                        <p className="text-sm whitespace-pre-wrap">
-                          {tender.contract_penalties_llm}
-                        </p>
-                      </div>
-                    </div>
-                  )}
+                    {tender.contract_penalties_llm && (
+                      <InfoCard
+                        title="Contract Penalties"
+                        content={tender.contract_penalties_llm}
+                      />
+                    )}
 
-                  {tender.deposit_llm && (
-                    <div>
-                      <h4 className="font-medium text-gray-700 mb-2">
-                        Deposit Information
-                      </h4>
-                      <div className="bg-yellow-50 p-3 rounded-lg">
-                        <p className="text-sm whitespace-pre-wrap">
-                          {tender.deposit_llm}
-                        </p>
-                      </div>
-                    </div>
-                  )}
+                    {tender.deposit_llm && (
+                      <InfoCard
+                        title="Deposit Information"
+                        content={tender.deposit_llm}
+                      />
+                    )}
 
-                  {tender.url && (
-                    <div>
-                      <h4 className="font-medium text-gray-700 mb-2">
-                        Source URL
-                      </h4>
-                      <a
-                        href={tender.url}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-blue-600 hover:text-blue-800 underline text-sm break-all"
-                      >
-                        {tender.url}
-                      </a>
-                    </div>
-                  )}
-                </div>
+                    {tender.url && (
+                      <div className="p-4 bg-gray-50 border border-gray-200 rounded-lg">
+                        <h4 className="text-sm font-medium text-gray-900 mb-2">
+                          Source URL
+                        </h4>
+                        <a
+                          href={tender.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-sm text-blue-600 hover:text-blue-800 underline break-all"
+                        >
+                          {tender.url}
+                        </a>
+                      </div>
+                    )}
+                  </div>
+                </SectionContent>
               </Section>
             </div>
           </div>
 
           {/* Navigation Sidebar */}
-          <div className="border-l border-sidebar-border bg-gray-50/50 overflow-hidden w-48 p-4">
+          <div className="border-l border-gray-200 bg-gray-50/50 overflow-hidden w-48 p-4">
             <div className="sticky top-4">
               <h3 className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-3">
-                Outline
+                Contents
               </h3>
               <nav className="space-y-1">
                 {sections.map((section) => (
@@ -527,10 +572,12 @@ export function TenderPreview({ tender }: TenderPreviewProps) {
                     key={section.id}
                     onClick={() => scrollToSection(section.id)}
                     className={cn(
-                      "flex items-center gap-2 w-full text-left px-2 py-1.5 text-sm rounded-md transition-colors",
-                      activeSection === section.id
-                        ? "bg-blue-100 text-blue-700 border-l-2 border-blue-500"
-                        : "text-gray-600 hover:text-gray-900 hover:bg-gray-100"
+                      "flex items-center gap-2 w-full text-left px-3 py-2 text-sm rounded-lg transition-colors hover:bg-gray-100",
+                      {
+                        "bg-gray-100 text-gray-900":
+                          activeSection === section.id,
+                        "text-gray-600": activeSection !== section.id,
+                      }
                     )}
                   >
                     <Hash className="w-3 h-3 opacity-60" />
@@ -543,30 +590,5 @@ export function TenderPreview({ tender }: TenderPreviewProps) {
         </div>
       </div>
     </section>
-  );
-}
-
-function SectionHeader({ children }: { children: React.ReactNode }) {
-  return (
-    <h2 className="font-semibold font-heading uppercase text-lg text-gray-600 border-b border-gray-200 pb-2 mb-4">
-      {children}
-    </h2>
-  );
-}
-
-function Section({
-  children,
-  className,
-  id,
-  ...props
-}: {
-  children: React.ReactNode;
-  className?: string;
-  id?: string;
-} & React.HTMLAttributes<HTMLDivElement>) {
-  return (
-    <div id={id} className={cn("scroll-mt-6", className)} {...props}>
-      {children}
-    </div>
   );
 }

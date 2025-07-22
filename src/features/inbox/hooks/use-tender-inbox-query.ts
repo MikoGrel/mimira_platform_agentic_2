@@ -41,6 +41,8 @@ export default function useTenderInboxQuery({
         .select("*", { count: "exact" })
         .eq("company", user!.profile!.customer!);
 
+      query = query.eq("can_participate", true);
+
       if (search) {
         query = query.textSearch("orderobject", search);
       }

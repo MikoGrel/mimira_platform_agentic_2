@@ -86,7 +86,7 @@ export default function DashboardSidebar() {
                 fullWidth
                 type="submit"
                 formAction={logout}
-                variant="flat"
+                variant="light"
                 startContent={<LogOut className="w-4 h-4" />}
               >
                 <span>Sign Out</span>

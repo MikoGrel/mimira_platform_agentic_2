@@ -6558,6 +6558,766 @@
     },
     "features/inbox/components/tender-preview.tsx": {
       "scopes": {
+        "10/declaration/body/10/consequent/0/argument/1/1": {
+          "type": "element",
+          "hash": "067789b01a081458db2f872f10a37c3f",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Select a tender to view details"
+        },
+        "10/declaration/body/11/0/init/0/1/value": {
+          "type": "element",
+          "hash": "9d55775994a0e6c016fe7e271533bf45",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "At a Glance"
+        },
+        "10/declaration/body/11/0/init/1/1/value": {
+          "type": "element",
+          "hash": "e17686a22ffad04cc7bb70524ed4478b",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Description"
+        },
+        "10/declaration/body/11/0/init/2/1/value": {
+          "type": "element",
+          "hash": "e108e149e0fd5b65f5850b6f032ccabe",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Requirements"
+        },
+        "10/declaration/body/11/0/init/3/1/value": {
+          "type": "element",
+          "hash": "39160224ce0e35eb4eb252c997edf4d8",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Others"
+        },
+        "10/declaration/body/11/consequent/0/argument/1/1": {
+          "type": "element",
+          "hash": "067789b01a081458db2f872f10a37c3f",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Select a tender to view details"
+        },
+        "10/declaration/body/12/0/init/0/1/value": {
+          "type": "element",
+          "hash": "9d55775994a0e6c016fe7e271533bf45",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "At a Glance"
+        },
+        "10/declaration/body/12/0/init/1/1/value": {
+          "type": "element",
+          "hash": "e17686a22ffad04cc7bb70524ed4478b",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Description"
+        },
+        "10/declaration/body/12/0/init/2/1/value": {
+          "type": "element",
+          "hash": "e108e149e0fd5b65f5850b6f032ccabe",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Requirements"
+        },
+        "10/declaration/body/12/0/init/3/1/value": {
+          "type": "element",
+          "hash": "39160224ce0e35eb4eb252c997edf4d8",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Others"
+        },
+        "10/declaration/body/12/argument/1/1/3/1/expression/right/1/3": {
+          "type": "element",
+          "hash": "26b80ae8a680de73667e096098aa69d8",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "·"
+        },
+        "10/declaration/body/12/argument/1/1/3/1/expression/right/3/1": {
+          "type": "element",
+          "hash": "3c759ab832d6ab75ae050da5cb1b826c",
+          "context": "",
+          "skip": false,
+          "overrides": {
+            "pl": "Aplikuj"
+          },
+          "content": "Apply"
+        },
+        "10/declaration/body/12/argument/1/1/3/1/expression/right/3/3": {
+          "type": "element",
+          "hash": "93f700a2adda13be3723040c587ab812",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Reject"
+        },
+        "10/declaration/body/12/argument/1/1/5/expression/right/3/1": {
+          "type": "element",
+          "hash": "564f71b8fe2a63142499b340b1872989",
+          "context": "",
+          "skip": false,
+          "overrides": {
+            "pl": "Aplikuj"
+          },
+          "content": "Apply"
+        },
+        "10/declaration/body/12/argument/1/1/5/expression/right/3/3": {
+          "type": "element",
+          "hash": "2c1f1ee6b00186ee3a5adc2d86d00511",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Reject"
+        },
+        "10/declaration/body/12/argument/1/3/1/1/1/1": {
+          "type": "element",
+          "hash": "9d55775994a0e6c016fe7e271533bf45",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "At a Glance"
+        },
+        "10/declaration/body/12/argument/1/3/1/1/1/3/3/1/1": {
+          "type": "element",
+          "hash": "13eb7b8a239fb4702dfdaee69100a220",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Summary"
+        },
+        "10/declaration/body/12/argument/1/3/1/1/1/3/3/3/expression/alternate/1": {
+          "type": "element",
+          "hash": "f914ac02528d45d0b9e336e9fe77783e",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "No description available for AI summary generation"
+        },
+        "10/declaration/body/12/argument/1/3/1/1/1/3/3/3/expression/consequent/right/1/expression/alternate/consequent/3": {
+          "type": "element",
+          "hash": "2ff9be7323ab3b9d0338b1ddb7894323",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Generating summary..."
+        },
+        "10/declaration/body/12/argument/1/3/1/1/1/3/3/3/expression/right/1/expression/alternate/consequent/3": {
+          "type": "element",
+          "hash": "6879cc83bbf88e959c706ef5d51a6d39",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Generating summary..."
+        },
+        "10/declaration/body/12/argument/1/3/1/1/1/3/5/3/expression/right/1/1": {
+          "type": "element",
+          "hash": "537bf79791e7f93cb2e3140ab49ce70d",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "W"
+        },
+        "10/declaration/body/12/argument/1/3/1/1/1/3/5/3/expression/right/3": {
+          "type": "element",
+          "hash": "a7908a3166c9eccd9acd413e39b72c11",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Wadium: {tender.wadium_llm}"
+        },
+        "10/declaration/body/12/argument/1/3/1/1/1/3/5/5/expression/right/3": {
+          "type": "element",
+          "hash": "329ae0d02b034c7833b81d6d9cfc4a3a",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Completion: {tender.ordercompletiondate_llm}"
+        },
+        "10/declaration/body/12/argument/1/3/1/1/1/3/5/expression/right/1": {
+          "type": "element",
+          "hash": "205d15780ee1cf0b73fbd5d20f514755",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Full Description"
+        },
+        "10/declaration/body/12/argument/1/3/1/1/1/3/7/3/expression/right/1/1": {
+          "type": "element",
+          "hash": "537bf79791e7f93cb2e3140ab49ce70d",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "W"
+        },
+        "10/declaration/body/12/argument/1/3/1/1/1/3/7/3/expression/right/3": {
+          "type": "element",
+          "hash": "a7908a3166c9eccd9acd413e39b72c11",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Wadium: {tender.wadium_llm}"
+        },
+        "10/declaration/body/12/argument/1/3/1/1/1/3/7/5/expression/right/3": {
+          "type": "element",
+          "hash": "329ae0d02b034c7833b81d6d9cfc4a3a",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Completion: {tender.ordercompletiondate_llm}"
+        },
+        "10/declaration/body/12/argument/1/3/1/1/11/1": {
+          "type": "element",
+          "hash": "39160224ce0e35eb4eb252c997edf4d8",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Others"
+        },
+        "10/declaration/body/12/argument/1/3/1/1/11/3/1/expression/right/1": {
+          "type": "element",
+          "hash": "269871c885cc75e625cd37409d6aa6f3",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Application Form"
+        },
+        "10/declaration/body/12/argument/1/3/1/1/11/3/3/expression/right/1": {
+          "type": "element",
+          "hash": "e6953edd0fa1d95783cc7e77cf663edc",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Payment Terms"
+        },
+        "10/declaration/body/12/argument/1/3/1/1/11/3/5/expression/right/1": {
+          "type": "element",
+          "hash": "a1bf0fb468c850f31f5f7ea7c576173f",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Contract Penalties"
+        },
+        "10/declaration/body/12/argument/1/3/1/1/11/3/7/expression/right/1": {
+          "type": "element",
+          "hash": "6c3e69c83f7ab356409c710497965d46",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Deposit Information"
+        },
+        "10/declaration/body/12/argument/1/3/1/1/11/3/9/expression/right/1": {
+          "type": "element",
+          "hash": "8a990e2d4cde34bbf42ef54a7a837633",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Source URL"
+        },
+        "10/declaration/body/12/argument/1/3/1/1/13/1": {
+          "type": "element",
+          "hash": "39160224ce0e35eb4eb252c997edf4d8",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Others"
+        },
+        "10/declaration/body/12/argument/1/3/1/1/13/3/1/expression/right/1": {
+          "type": "element",
+          "hash": "269871c885cc75e625cd37409d6aa6f3",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Application Form"
+        },
+        "10/declaration/body/12/argument/1/3/1/1/13/3/3/expression/right/1": {
+          "type": "element",
+          "hash": "e6953edd0fa1d95783cc7e77cf663edc",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Payment Terms"
+        },
+        "10/declaration/body/12/argument/1/3/1/1/13/3/5/expression/right/1": {
+          "type": "element",
+          "hash": "a1bf0fb468c850f31f5f7ea7c576173f",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Contract Penalties"
+        },
+        "10/declaration/body/12/argument/1/3/1/1/13/3/7/expression/right/1": {
+          "type": "element",
+          "hash": "6c3e69c83f7ab356409c710497965d46",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Deposit Information"
+        },
+        "10/declaration/body/12/argument/1/3/1/1/13/3/9/expression/right/1": {
+          "type": "element",
+          "hash": "8a990e2d4cde34bbf42ef54a7a837633",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Source URL"
+        },
+        "10/declaration/body/12/argument/1/3/1/1/5/1": {
+          "type": "element",
+          "hash": "e17686a22ffad04cc7bb70524ed4478b",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Description"
+        },
+        "10/declaration/body/12/argument/1/3/1/1/5/3/1/expression/alternate": {
+          "type": "element",
+          "hash": "2654605a88bc1dc81e93e3207f50486d",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "No detailed description available"
+        },
+        "10/declaration/body/12/argument/1/3/1/1/7/1": {
+          "type": "element",
+          "hash": "e108e149e0fd5b65f5850b6f032ccabe",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Requirements"
+        },
+        "10/declaration/body/12/argument/1/3/1/1/7/3/11/expression/right/1": {
+          "type": "element",
+          "hash": "bea6aeeaba8aa4e8850b56957aa1af1c",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Not Met Requirements"
+        },
+        "10/declaration/body/12/argument/1/3/1/1/7/3/15/expression/right/1": {
+          "type": "element",
+          "hash": "73f2098c339274d847f5086bf5bcf61f",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Review Criteria"
+        },
+        "10/declaration/body/12/argument/1/3/1/1/7/3/3/expression/right/1": {
+          "type": "element",
+          "hash": "c149d0f6f856d9e8e8661abbf754148c",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Met Requirements"
+        },
+        "10/declaration/body/12/argument/1/3/1/1/7/3/7/expression/right/1": {
+          "type": "element",
+          "hash": "2de265558f6e9d347c07b5f54eff825c",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Needs Confirmation"
+        },
+        "10/declaration/body/12/argument/1/3/1/1/9/1": {
+          "type": "element",
+          "hash": "e108e149e0fd5b65f5850b6f032ccabe",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Requirements"
+        },
+        "10/declaration/body/12/argument/1/3/1/1/9/3/11/expression/right/1": {
+          "type": "element",
+          "hash": "4ee1504b99ff60d74488ab34426ed8ad",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "<element:AlertCircle></element:AlertCircle> Not Met Requirements"
+        },
+        "10/declaration/body/12/argument/1/3/1/1/9/3/15/expression/right/1": {
+          "type": "element",
+          "hash": "73f2098c339274d847f5086bf5bcf61f",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Review Criteria"
+        },
+        "10/declaration/body/12/argument/1/3/1/1/9/3/3/expression/right/1": {
+          "type": "element",
+          "hash": "de1873a50cb65483443431e1c2d60c5b",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "<element:CheckCircle></element:CheckCircle> Met Requirements"
+        },
+        "10/declaration/body/12/argument/1/3/1/1/9/3/7/expression/right/1": {
+          "type": "element",
+          "hash": "9fc1a16e6fd34b2e038519daf7ed6406",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "<element:AlertCircle></element:AlertCircle> Needs Confirmation"
+        },
+        "10/declaration/body/12/argument/1/3/5/1/1": {
+          "type": "element",
+          "hash": "c0afd302caeecd63803a83f8b51e3e49",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Outline"
+        },
+        "10/declaration/body/13/argument/1/1/3/1/expression/right/1/3": {
+          "type": "element",
+          "hash": "26b80ae8a680de73667e096098aa69d8",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "·"
+        },
+        "10/declaration/body/13/argument/1/1/3/1/expression/right/3/1": {
+          "type": "element",
+          "hash": "3c759ab832d6ab75ae050da5cb1b826c",
+          "context": "",
+          "skip": false,
+          "overrides": {
+            "pl": "Aplikuj"
+          },
+          "content": "Apply"
+        },
+        "10/declaration/body/13/argument/1/1/3/1/expression/right/3/3": {
+          "type": "element",
+          "hash": "93f700a2adda13be3723040c587ab812",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Reject"
+        },
+        "10/declaration/body/13/argument/1/1/5/expression/right/3/1": {
+          "type": "element",
+          "hash": "564f71b8fe2a63142499b340b1872989",
+          "context": "",
+          "skip": false,
+          "overrides": {
+            "pl": "Aplikuj"
+          },
+          "content": "Apply"
+        },
+        "10/declaration/body/13/argument/1/1/5/expression/right/3/3": {
+          "type": "element",
+          "hash": "2c1f1ee6b00186ee3a5adc2d86d00511",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Reject"
+        },
+        "10/declaration/body/13/argument/1/3/1/1/1/1": {
+          "type": "element",
+          "hash": "9d55775994a0e6c016fe7e271533bf45",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "At a Glance"
+        },
+        "10/declaration/body/13/argument/1/3/1/1/1/3/3/1/1": {
+          "type": "element",
+          "hash": "13eb7b8a239fb4702dfdaee69100a220",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Summary"
+        },
+        "10/declaration/body/13/argument/1/3/1/1/1/3/3/3/expression/alternate/1": {
+          "type": "element",
+          "hash": "f914ac02528d45d0b9e336e9fe77783e",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "No description available for AI summary generation"
+        },
+        "10/declaration/body/13/argument/1/3/1/1/1/3/3/3/expression/consequent/right/1/expression/alternate/consequent/3": {
+          "type": "element",
+          "hash": "2ff9be7323ab3b9d0338b1ddb7894323",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Generating summary..."
+        },
+        "10/declaration/body/13/argument/1/3/1/1/1/3/3/3/expression/right/1/expression/alternate/consequent/3": {
+          "type": "element",
+          "hash": "6879cc83bbf88e959c706ef5d51a6d39",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Generating summary..."
+        },
+        "10/declaration/body/13/argument/1/3/1/1/1/3/5/3/expression/right/1/1": {
+          "type": "element",
+          "hash": "537bf79791e7f93cb2e3140ab49ce70d",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "W"
+        },
+        "10/declaration/body/13/argument/1/3/1/1/1/3/5/3/expression/right/3": {
+          "type": "element",
+          "hash": "a7908a3166c9eccd9acd413e39b72c11",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Wadium: {tender.wadium_llm}"
+        },
+        "10/declaration/body/13/argument/1/3/1/1/1/3/5/5/expression/right/3": {
+          "type": "element",
+          "hash": "329ae0d02b034c7833b81d6d9cfc4a3a",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Completion: {tender.ordercompletiondate_llm}"
+        },
+        "10/declaration/body/13/argument/1/3/1/1/1/3/5/expression/right/1": {
+          "type": "element",
+          "hash": "205d15780ee1cf0b73fbd5d20f514755",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Full Description"
+        },
+        "10/declaration/body/13/argument/1/3/1/1/1/3/7/3/expression/right/1/1": {
+          "type": "element",
+          "hash": "537bf79791e7f93cb2e3140ab49ce70d",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "W"
+        },
+        "10/declaration/body/13/argument/1/3/1/1/1/3/7/3/expression/right/3": {
+          "type": "element",
+          "hash": "a7908a3166c9eccd9acd413e39b72c11",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Wadium: {tender.wadium_llm}"
+        },
+        "10/declaration/body/13/argument/1/3/1/1/1/3/7/5/expression/right/3": {
+          "type": "element",
+          "hash": "329ae0d02b034c7833b81d6d9cfc4a3a",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Completion: {tender.ordercompletiondate_llm}"
+        },
+        "10/declaration/body/13/argument/1/3/1/1/11/1": {
+          "type": "element",
+          "hash": "39160224ce0e35eb4eb252c997edf4d8",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Others"
+        },
+        "10/declaration/body/13/argument/1/3/1/1/11/3/1/expression/right/1": {
+          "type": "element",
+          "hash": "269871c885cc75e625cd37409d6aa6f3",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Application Form"
+        },
+        "10/declaration/body/13/argument/1/3/1/1/11/3/3/expression/right/1": {
+          "type": "element",
+          "hash": "e6953edd0fa1d95783cc7e77cf663edc",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Payment Terms"
+        },
+        "10/declaration/body/13/argument/1/3/1/1/11/3/5/expression/right/1": {
+          "type": "element",
+          "hash": "a1bf0fb468c850f31f5f7ea7c576173f",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Contract Penalties"
+        },
+        "10/declaration/body/13/argument/1/3/1/1/11/3/7/expression/right/1": {
+          "type": "element",
+          "hash": "6c3e69c83f7ab356409c710497965d46",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Deposit Information"
+        },
+        "10/declaration/body/13/argument/1/3/1/1/11/3/9/expression/right/1": {
+          "type": "element",
+          "hash": "8a990e2d4cde34bbf42ef54a7a837633",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Source URL"
+        },
+        "10/declaration/body/13/argument/1/3/1/1/13/1": {
+          "type": "element",
+          "hash": "39160224ce0e35eb4eb252c997edf4d8",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Others"
+        },
+        "10/declaration/body/13/argument/1/3/1/1/13/3/1/expression/right/1": {
+          "type": "element",
+          "hash": "269871c885cc75e625cd37409d6aa6f3",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Application Form"
+        },
+        "10/declaration/body/13/argument/1/3/1/1/13/3/3/expression/right/1": {
+          "type": "element",
+          "hash": "e6953edd0fa1d95783cc7e77cf663edc",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Payment Terms"
+        },
+        "10/declaration/body/13/argument/1/3/1/1/13/3/5/expression/right/1": {
+          "type": "element",
+          "hash": "a1bf0fb468c850f31f5f7ea7c576173f",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Contract Penalties"
+        },
+        "10/declaration/body/13/argument/1/3/1/1/13/3/7/expression/right/1": {
+          "type": "element",
+          "hash": "6c3e69c83f7ab356409c710497965d46",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Deposit Information"
+        },
+        "10/declaration/body/13/argument/1/3/1/1/13/3/9/expression/right/1": {
+          "type": "element",
+          "hash": "8a990e2d4cde34bbf42ef54a7a837633",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Source URL"
+        },
+        "10/declaration/body/13/argument/1/3/1/1/5/1": {
+          "type": "element",
+          "hash": "e17686a22ffad04cc7bb70524ed4478b",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Description"
+        },
+        "10/declaration/body/13/argument/1/3/1/1/5/3/1/expression/alternate": {
+          "type": "element",
+          "hash": "2654605a88bc1dc81e93e3207f50486d",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "No detailed description available"
+        },
+        "10/declaration/body/13/argument/1/3/1/1/7/1": {
+          "type": "element",
+          "hash": "e108e149e0fd5b65f5850b6f032ccabe",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Requirements"
+        },
+        "10/declaration/body/13/argument/1/3/1/1/7/3/11/expression/right/1": {
+          "type": "element",
+          "hash": "bea6aeeaba8aa4e8850b56957aa1af1c",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Not Met Requirements"
+        },
+        "10/declaration/body/13/argument/1/3/1/1/7/3/15/expression/right/1": {
+          "type": "element",
+          "hash": "73f2098c339274d847f5086bf5bcf61f",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Review Criteria"
+        },
+        "10/declaration/body/13/argument/1/3/1/1/7/3/3/expression/right/1": {
+          "type": "element",
+          "hash": "c149d0f6f856d9e8e8661abbf754148c",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Met Requirements"
+        },
+        "10/declaration/body/13/argument/1/3/1/1/7/3/7/expression/right/1": {
+          "type": "element",
+          "hash": "2de265558f6e9d347c07b5f54eff825c",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Needs Confirmation"
+        },
+        "10/declaration/body/13/argument/1/3/1/1/9/1": {
+          "type": "element",
+          "hash": "e108e149e0fd5b65f5850b6f032ccabe",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Requirements"
+        },
+        "10/declaration/body/13/argument/1/3/1/1/9/3/11/expression/right/1": {
+          "type": "element",
+          "hash": "4ee1504b99ff60d74488ab34426ed8ad",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "<element:AlertCircle></element:AlertCircle> Not Met Requirements"
+        },
+        "10/declaration/body/13/argument/1/3/1/1/9/3/15/expression/right/1": {
+          "type": "element",
+          "hash": "73f2098c339274d847f5086bf5bcf61f",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Review Criteria"
+        },
+        "10/declaration/body/13/argument/1/3/1/1/9/3/3/expression/right/1": {
+          "type": "element",
+          "hash": "de1873a50cb65483443431e1c2d60c5b",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "<element:CheckCircle></element:CheckCircle> Met Requirements"
+        },
+        "10/declaration/body/13/argument/1/3/1/1/9/3/7/expression/right/1": {
+          "type": "element",
+          "hash": "9fc1a16e6fd34b2e038519daf7ed6406",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "<element:AlertCircle></element:AlertCircle> Needs Confirmation"
+        },
+        "10/declaration/body/13/argument/1/3/5/1/1": {
+          "type": "element",
+          "hash": "c0afd302caeecd63803a83f8b51e3e49",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Outline"
+        },
         "10/declaration/body/6/consequent/0/argument/1/1": {
           "type": "element",
           "hash": "067789b01a081458db2f872f10a37c3f",
@@ -6598,6 +7358,54 @@
           "overrides": {},
           "content": "Others"
         },
+        "10/declaration/body/7/consequent/0/argument/1/1": {
+          "type": "element",
+          "hash": "067789b01a081458db2f872f10a37c3f",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Select a tender to view details"
+        },
+        "10/declaration/body/8/0/init/0/1/value": {
+          "type": "element",
+          "hash": "9d55775994a0e6c016fe7e271533bf45",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "At a Glance"
+        },
+        "10/declaration/body/8/0/init/1/1/value": {
+          "type": "element",
+          "hash": "e17686a22ffad04cc7bb70524ed4478b",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Description"
+        },
+        "10/declaration/body/8/0/init/2/1/value": {
+          "type": "element",
+          "hash": "e108e149e0fd5b65f5850b6f032ccabe",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Requirements"
+        },
+        "10/declaration/body/8/0/init/3/1/value": {
+          "type": "element",
+          "hash": "39160224ce0e35eb4eb252c997edf4d8",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Others"
+        },
+        "10/declaration/body/8/argument/1/1/3/1/1/expression/right/3": {
+          "type": "element",
+          "hash": "26b80ae8a680de73667e096098aa69d8",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "·"
+        },
         "10/declaration/body/8/argument/1/1/3/1/expression/right/1/3": {
           "type": "element",
           "hash": "26b80ae8a680de73667e096098aa69d8",
@@ -6631,6 +7439,24 @@
           "skip": false,
           "overrides": {},
           "content": "·"
+        },
+        "10/declaration/body/8/argument/1/1/3/3/3/1": {
+          "type": "element",
+          "hash": "564f71b8fe2a63142499b340b1872989",
+          "context": "",
+          "skip": false,
+          "overrides": {
+            "pl": "Aplikuj"
+          },
+          "content": "Apply"
+        },
+        "10/declaration/body/8/argument/1/1/3/3/3/3": {
+          "type": "element",
+          "hash": "2c1f1ee6b00186ee3a5adc2d86d00511",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Reject"
         },
         "10/declaration/body/8/argument/1/1/3/3/3/expression/right": {
           "type": "element",
@@ -6881,6 +7707,1518 @@
           "skip": false,
           "overrides": {},
           "content": "Outline"
+        },
+        "10/declaration/body/9/argument/1/1/3/1/expression/right/1/3": {
+          "type": "element",
+          "hash": "26b80ae8a680de73667e096098aa69d8",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "·"
+        },
+        "10/declaration/body/9/argument/1/1/3/1/expression/right/3/1": {
+          "type": "element",
+          "hash": "3c759ab832d6ab75ae050da5cb1b826c",
+          "context": "",
+          "skip": false,
+          "overrides": {
+            "pl": "Aplikuj"
+          },
+          "content": "Apply"
+        },
+        "10/declaration/body/9/argument/1/1/3/1/expression/right/3/3": {
+          "type": "element",
+          "hash": "93f700a2adda13be3723040c587ab812",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Reject"
+        },
+        "10/declaration/body/9/argument/1/1/5/expression/right/3/1": {
+          "type": "element",
+          "hash": "564f71b8fe2a63142499b340b1872989",
+          "context": "",
+          "skip": false,
+          "overrides": {
+            "pl": "Aplikuj"
+          },
+          "content": "Apply"
+        },
+        "10/declaration/body/9/argument/1/1/5/expression/right/3/3": {
+          "type": "element",
+          "hash": "2c1f1ee6b00186ee3a5adc2d86d00511",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Reject"
+        },
+        "10/declaration/body/9/argument/1/3/1/1/1/1": {
+          "type": "element",
+          "hash": "9d55775994a0e6c016fe7e271533bf45",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "At a Glance"
+        },
+        "10/declaration/body/9/argument/1/3/1/1/1/3/3/3/expression/right/1/1": {
+          "type": "element",
+          "hash": "537bf79791e7f93cb2e3140ab49ce70d",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "W"
+        },
+        "10/declaration/body/9/argument/1/3/1/1/1/3/3/3/expression/right/3": {
+          "type": "element",
+          "hash": "a7908a3166c9eccd9acd413e39b72c11",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Wadium: {tender.wadium_llm}"
+        },
+        "10/declaration/body/9/argument/1/3/1/1/1/3/3/5/expression/right/3": {
+          "type": "element",
+          "hash": "329ae0d02b034c7833b81d6d9cfc4a3a",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Completion: {tender.ordercompletiondate_llm}"
+        },
+        "10/declaration/body/9/argument/1/3/1/1/13/1": {
+          "type": "element",
+          "hash": "39160224ce0e35eb4eb252c997edf4d8",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Others"
+        },
+        "10/declaration/body/9/argument/1/3/1/1/13/3/1/expression/right/1": {
+          "type": "element",
+          "hash": "269871c885cc75e625cd37409d6aa6f3",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Application Form"
+        },
+        "10/declaration/body/9/argument/1/3/1/1/13/3/3/expression/right/1": {
+          "type": "element",
+          "hash": "e6953edd0fa1d95783cc7e77cf663edc",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Payment Terms"
+        },
+        "10/declaration/body/9/argument/1/3/1/1/13/3/5/expression/right/1": {
+          "type": "element",
+          "hash": "a1bf0fb468c850f31f5f7ea7c576173f",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Contract Penalties"
+        },
+        "10/declaration/body/9/argument/1/3/1/1/13/3/7/expression/right/1": {
+          "type": "element",
+          "hash": "6c3e69c83f7ab356409c710497965d46",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Deposit Information"
+        },
+        "10/declaration/body/9/argument/1/3/1/1/13/3/9/expression/right/1": {
+          "type": "element",
+          "hash": "8a990e2d4cde34bbf42ef54a7a837633",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Source URL"
+        },
+        "10/declaration/body/9/argument/1/3/1/1/5/1": {
+          "type": "element",
+          "hash": "e17686a22ffad04cc7bb70524ed4478b",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Description"
+        },
+        "10/declaration/body/9/argument/1/3/1/1/5/3/1/expression/alternate": {
+          "type": "element",
+          "hash": "2654605a88bc1dc81e93e3207f50486d",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "No detailed description available"
+        },
+        "10/declaration/body/9/argument/1/3/1/1/9/1": {
+          "type": "element",
+          "hash": "e108e149e0fd5b65f5850b6f032ccabe",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Requirements"
+        },
+        "10/declaration/body/9/argument/1/3/1/1/9/3/11/expression/right/1": {
+          "type": "element",
+          "hash": "4ee1504b99ff60d74488ab34426ed8ad",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "<element:AlertCircle></element:AlertCircle> Not Met Requirements"
+        },
+        "10/declaration/body/9/argument/1/3/1/1/9/3/15/expression/right/1": {
+          "type": "element",
+          "hash": "73f2098c339274d847f5086bf5bcf61f",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Review Criteria"
+        },
+        "10/declaration/body/9/argument/1/3/1/1/9/3/3/expression/right/1": {
+          "type": "element",
+          "hash": "de1873a50cb65483443431e1c2d60c5b",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "<element:CheckCircle></element:CheckCircle> Met Requirements"
+        },
+        "10/declaration/body/9/argument/1/3/1/1/9/3/7/expression/right/1": {
+          "type": "element",
+          "hash": "9fc1a16e6fd34b2e038519daf7ed6406",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "<element:AlertCircle></element:AlertCircle> Needs Confirmation"
+        },
+        "10/declaration/body/9/argument/1/3/5/1/1": {
+          "type": "element",
+          "hash": "c0afd302caeecd63803a83f8b51e3e49",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Outline"
+        },
+        "11/declaration/body/10/0/init/0/1/value": {
+          "type": "element",
+          "hash": "9d55775994a0e6c016fe7e271533bf45",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "At a Glance"
+        },
+        "11/declaration/body/10/0/init/1/1/value": {
+          "type": "element",
+          "hash": "e108e149e0fd5b65f5850b6f032ccabe",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Requirements"
+        },
+        "11/declaration/body/10/0/init/2/1/value": {
+          "type": "element",
+          "hash": "e17686a22ffad04cc7bb70524ed4478b",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Description"
+        },
+        "11/declaration/body/10/0/init/3/1/value": {
+          "type": "element",
+          "hash": "39160224ce0e35eb4eb252c997edf4d8",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Others"
+        },
+        "11/declaration/body/10/argument/1/1/3/1/expression/right/1/3": {
+          "type": "element",
+          "hash": "26b80ae8a680de73667e096098aa69d8",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "·"
+        },
+        "11/declaration/body/10/argument/1/1/3/1/expression/right/3/1": {
+          "type": "element",
+          "hash": "3c759ab832d6ab75ae050da5cb1b826c",
+          "context": "",
+          "skip": false,
+          "overrides": {
+            "pl": "Aplikuj"
+          },
+          "content": "Apply"
+        },
+        "11/declaration/body/10/argument/1/1/3/1/expression/right/3/3": {
+          "type": "element",
+          "hash": "93f700a2adda13be3723040c587ab812",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Reject"
+        },
+        "11/declaration/body/10/argument/1/1/5/expression/right/3/1": {
+          "type": "element",
+          "hash": "564f71b8fe2a63142499b340b1872989",
+          "context": "",
+          "skip": false,
+          "overrides": {
+            "pl": "Aplikuj"
+          },
+          "content": "Apply"
+        },
+        "11/declaration/body/10/argument/1/1/5/expression/right/3/3": {
+          "type": "element",
+          "hash": "2c1f1ee6b00186ee3a5adc2d86d00511",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Reject"
+        },
+        "11/declaration/body/10/argument/1/3/1/1/1/1": {
+          "type": "element",
+          "hash": "9d55775994a0e6c016fe7e271533bf45",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "At a Glance"
+        },
+        "11/declaration/body/10/argument/1/3/1/1/1/3/3/1/1": {
+          "type": "element",
+          "hash": "13eb7b8a239fb4702dfdaee69100a220",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Summary"
+        },
+        "11/declaration/body/10/argument/1/3/1/1/1/3/3/3/expression/alternate/1": {
+          "type": "element",
+          "hash": "f914ac02528d45d0b9e336e9fe77783e",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "No description available for AI summary generation"
+        },
+        "11/declaration/body/10/argument/1/3/1/1/1/3/3/3/expression/consequent/right/1/expression/alternate/consequent/3": {
+          "type": "element",
+          "hash": "2ff9be7323ab3b9d0338b1ddb7894323",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Generating summary..."
+        },
+        "11/declaration/body/10/argument/1/3/1/1/1/3/5/3/expression/right/1/1": {
+          "type": "element",
+          "hash": "537bf79791e7f93cb2e3140ab49ce70d",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "W"
+        },
+        "11/declaration/body/10/argument/1/3/1/1/1/3/5/3/expression/right/3": {
+          "type": "element",
+          "hash": "a7908a3166c9eccd9acd413e39b72c11",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Wadium: {tender.wadium_llm}"
+        },
+        "11/declaration/body/10/argument/1/3/1/1/1/3/5/5/expression/right/3": {
+          "type": "element",
+          "hash": "329ae0d02b034c7833b81d6d9cfc4a3a",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Completion: {tender.ordercompletiondate_llm}"
+        },
+        "11/declaration/body/10/argument/1/3/1/1/11/1": {
+          "type": "element",
+          "hash": "39160224ce0e35eb4eb252c997edf4d8",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Others"
+        },
+        "11/declaration/body/10/argument/1/3/1/1/11/3/1/expression/right/1": {
+          "type": "element",
+          "hash": "269871c885cc75e625cd37409d6aa6f3",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Application Form"
+        },
+        "11/declaration/body/10/argument/1/3/1/1/11/3/3/expression/right/1": {
+          "type": "element",
+          "hash": "e6953edd0fa1d95783cc7e77cf663edc",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Payment Terms"
+        },
+        "11/declaration/body/10/argument/1/3/1/1/11/3/5/expression/right/1": {
+          "type": "element",
+          "hash": "a1bf0fb468c850f31f5f7ea7c576173f",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Contract Penalties"
+        },
+        "11/declaration/body/10/argument/1/3/1/1/11/3/7/expression/right/1": {
+          "type": "element",
+          "hash": "6c3e69c83f7ab356409c710497965d46",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Deposit Information"
+        },
+        "11/declaration/body/10/argument/1/3/1/1/11/3/9/expression/right/1": {
+          "type": "element",
+          "hash": "8a990e2d4cde34bbf42ef54a7a837633",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Source URL"
+        },
+        "11/declaration/body/10/argument/1/3/1/1/5/1": {
+          "type": "element",
+          "hash": "e17686a22ffad04cc7bb70524ed4478b",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Description"
+        },
+        "11/declaration/body/10/argument/1/3/1/1/5/3/1/expression/alternate": {
+          "type": "element",
+          "hash": "2654605a88bc1dc81e93e3207f50486d",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "No detailed description available"
+        },
+        "11/declaration/body/10/argument/1/3/1/1/7/1": {
+          "type": "element",
+          "hash": "e108e149e0fd5b65f5850b6f032ccabe",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Requirements"
+        },
+        "11/declaration/body/10/argument/1/3/1/1/7/3/11/expression/right/1": {
+          "type": "element",
+          "hash": "bea6aeeaba8aa4e8850b56957aa1af1c",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Not Met Requirements"
+        },
+        "11/declaration/body/10/argument/1/3/1/1/7/3/15/expression/right/1": {
+          "type": "element",
+          "hash": "73f2098c339274d847f5086bf5bcf61f",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Review Criteria"
+        },
+        "11/declaration/body/10/argument/1/3/1/1/7/3/3/expression/right/1": {
+          "type": "element",
+          "hash": "c149d0f6f856d9e8e8661abbf754148c",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Met Requirements"
+        },
+        "11/declaration/body/10/argument/1/3/1/1/7/3/7/expression/right/1": {
+          "type": "element",
+          "hash": "2de265558f6e9d347c07b5f54eff825c",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Needs Confirmation"
+        },
+        "11/declaration/body/10/argument/1/3/5/1/1": {
+          "type": "element",
+          "hash": "c0afd302caeecd63803a83f8b51e3e49",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Outline"
+        },
+        "11/declaration/body/10/consequent/0/argument/1/1": {
+          "type": "element",
+          "hash": "067789b01a081458db2f872f10a37c3f",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Select a tender to view details"
+        },
+        "11/declaration/body/11/0/init/0/1/value": {
+          "type": "element",
+          "hash": "9d55775994a0e6c016fe7e271533bf45",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "At a Glance"
+        },
+        "11/declaration/body/11/0/init/1/1/value": {
+          "type": "element",
+          "hash": "e17686a22ffad04cc7bb70524ed4478b",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Description"
+        },
+        "11/declaration/body/11/0/init/2/1/value": {
+          "type": "element",
+          "hash": "e108e149e0fd5b65f5850b6f032ccabe",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Requirements"
+        },
+        "11/declaration/body/11/0/init/3/1/value": {
+          "type": "element",
+          "hash": "39160224ce0e35eb4eb252c997edf4d8",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Others"
+        },
+        "11/declaration/body/11/argument/1/1/3/1/expression/right/1/3": {
+          "type": "element",
+          "hash": "26b80ae8a680de73667e096098aa69d8",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "·"
+        },
+        "11/declaration/body/11/argument/1/1/3/1/expression/right/3/1": {
+          "type": "element",
+          "hash": "3c759ab832d6ab75ae050da5cb1b826c",
+          "context": "",
+          "skip": false,
+          "overrides": {
+            "pl": "Aplikuj"
+          },
+          "content": "Apply"
+        },
+        "11/declaration/body/11/argument/1/1/3/1/expression/right/3/3": {
+          "type": "element",
+          "hash": "93f700a2adda13be3723040c587ab812",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Reject"
+        },
+        "11/declaration/body/11/argument/1/1/5/expression/right/3/1": {
+          "type": "element",
+          "hash": "564f71b8fe2a63142499b340b1872989",
+          "context": "",
+          "skip": false,
+          "overrides": {
+            "pl": "Aplikuj"
+          },
+          "content": "Apply"
+        },
+        "11/declaration/body/11/argument/1/1/5/expression/right/3/3": {
+          "type": "element",
+          "hash": "2c1f1ee6b00186ee3a5adc2d86d00511",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Reject"
+        },
+        "11/declaration/body/11/argument/1/3/1/1/1/1": {
+          "type": "element",
+          "hash": "9d55775994a0e6c016fe7e271533bf45",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "At a Glance"
+        },
+        "11/declaration/body/11/argument/1/3/1/1/1/3/1/1/expression/alternate/1": {
+          "type": "element",
+          "hash": "f914ac02528d45d0b9e336e9fe77783e",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "No description available for AI summary generation"
+        },
+        "11/declaration/body/11/argument/1/3/1/1/1/3/1/1/expression/consequent/right/1/expression/alternate/consequent": {
+          "type": "element",
+          "hash": "3947cc8a77593bd5e7dfac6bb79a7d48",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Generating summary"
+        },
+        "11/declaration/body/11/argument/1/3/1/1/1/3/3/1/1": {
+          "type": "element",
+          "hash": "13eb7b8a239fb4702dfdaee69100a220",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Summary"
+        },
+        "11/declaration/body/11/argument/1/3/1/1/1/3/3/3/expression/alternate/1": {
+          "type": "element",
+          "hash": "f914ac02528d45d0b9e336e9fe77783e",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "No description available for AI summary generation"
+        },
+        "11/declaration/body/11/argument/1/3/1/1/1/3/3/3/expression/consequent/right/1/expression/alternate/consequent": {
+          "type": "element",
+          "hash": "3947cc8a77593bd5e7dfac6bb79a7d48",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Generating summary"
+        },
+        "11/declaration/body/11/argument/1/3/1/1/1/3/3/3/expression/consequent/right/1/expression/alternate/consequent/3": {
+          "type": "element",
+          "hash": "2ff9be7323ab3b9d0338b1ddb7894323",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Generating summary..."
+        },
+        "11/declaration/body/11/argument/1/3/1/1/1/3/3/3/expression/right/1/1": {
+          "type": "element",
+          "hash": "537bf79791e7f93cb2e3140ab49ce70d",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "W"
+        },
+        "11/declaration/body/11/argument/1/3/1/1/1/3/3/3/expression/right/3": {
+          "type": "element",
+          "hash": "a7908a3166c9eccd9acd413e39b72c11",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Wadium: {tender.wadium_llm}"
+        },
+        "11/declaration/body/11/argument/1/3/1/1/1/3/3/5/expression/right/3": {
+          "type": "element",
+          "hash": "329ae0d02b034c7833b81d6d9cfc4a3a",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Completion: {tender.ordercompletiondate_llm}"
+        },
+        "11/declaration/body/11/argument/1/3/1/1/1/3/5/3/expression/right/1/1": {
+          "type": "element",
+          "hash": "537bf79791e7f93cb2e3140ab49ce70d",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "W"
+        },
+        "11/declaration/body/11/argument/1/3/1/1/1/3/5/3/expression/right/3": {
+          "type": "element",
+          "hash": "a7908a3166c9eccd9acd413e39b72c11",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Wadium: {tender.wadium_llm}"
+        },
+        "11/declaration/body/11/argument/1/3/1/1/1/3/5/5/expression/right/3": {
+          "type": "element",
+          "hash": "329ae0d02b034c7833b81d6d9cfc4a3a",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Completion: {tender.ordercompletiondate_llm}"
+        },
+        "11/declaration/body/11/argument/1/3/1/1/11/1": {
+          "type": "element",
+          "hash": "39160224ce0e35eb4eb252c997edf4d8",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Others"
+        },
+        "11/declaration/body/11/argument/1/3/1/1/11/3/1/expression/right/1": {
+          "type": "element",
+          "hash": "269871c885cc75e625cd37409d6aa6f3",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Application Form"
+        },
+        "11/declaration/body/11/argument/1/3/1/1/11/3/3/expression/right/1": {
+          "type": "element",
+          "hash": "e6953edd0fa1d95783cc7e77cf663edc",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Payment Terms"
+        },
+        "11/declaration/body/11/argument/1/3/1/1/11/3/5/expression/right/1": {
+          "type": "element",
+          "hash": "a1bf0fb468c850f31f5f7ea7c576173f",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Contract Penalties"
+        },
+        "11/declaration/body/11/argument/1/3/1/1/11/3/7/expression/right/1": {
+          "type": "element",
+          "hash": "6c3e69c83f7ab356409c710497965d46",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Deposit Information"
+        },
+        "11/declaration/body/11/argument/1/3/1/1/11/3/9/expression/right/1": {
+          "type": "element",
+          "hash": "8a990e2d4cde34bbf42ef54a7a837633",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Source URL"
+        },
+        "11/declaration/body/11/argument/1/3/1/1/3/1": {
+          "type": "element",
+          "hash": "e108e149e0fd5b65f5850b6f032ccabe",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Requirements"
+        },
+        "11/declaration/body/11/argument/1/3/1/1/3/3/11/expression/right/1": {
+          "type": "element",
+          "hash": "bea6aeeaba8aa4e8850b56957aa1af1c",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Not Met Requirements"
+        },
+        "11/declaration/body/11/argument/1/3/1/1/3/3/15/expression/right/1": {
+          "type": "element",
+          "hash": "73f2098c339274d847f5086bf5bcf61f",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Review Criteria"
+        },
+        "11/declaration/body/11/argument/1/3/1/1/3/3/3/expression/right/1": {
+          "type": "element",
+          "hash": "c149d0f6f856d9e8e8661abbf754148c",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Met Requirements"
+        },
+        "11/declaration/body/11/argument/1/3/1/1/3/3/7/expression/right/1": {
+          "type": "element",
+          "hash": "2de265558f6e9d347c07b5f54eff825c",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Needs Confirmation"
+        },
+        "11/declaration/body/11/argument/1/3/1/1/5/1": {
+          "type": "element",
+          "hash": "e17686a22ffad04cc7bb70524ed4478b",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Description"
+        },
+        "11/declaration/body/11/argument/1/3/1/1/5/3/1/expression/alternate": {
+          "type": "element",
+          "hash": "2654605a88bc1dc81e93e3207f50486d",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "No detailed description available"
+        },
+        "11/declaration/body/11/argument/1/3/1/1/7/1": {
+          "type": "element",
+          "hash": "e17686a22ffad04cc7bb70524ed4478b",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Description"
+        },
+        "11/declaration/body/11/argument/1/3/1/1/7/3/1/expression/alternate": {
+          "type": "element",
+          "hash": "2654605a88bc1dc81e93e3207f50486d",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "No detailed description available"
+        },
+        "11/declaration/body/11/argument/1/3/1/1/7/3/1/expression/right/1": {
+          "type": "element",
+          "hash": "269871c885cc75e625cd37409d6aa6f3",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Application Form"
+        },
+        "11/declaration/body/11/argument/1/3/1/1/7/3/11/expression/right/1": {
+          "type": "element",
+          "hash": "bea6aeeaba8aa4e8850b56957aa1af1c",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Not Met Requirements"
+        },
+        "11/declaration/body/11/argument/1/3/1/1/7/3/15/expression/right/1": {
+          "type": "element",
+          "hash": "73f2098c339274d847f5086bf5bcf61f",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Review Criteria"
+        },
+        "11/declaration/body/11/argument/1/3/1/1/7/3/3/expression/right/1": {
+          "type": "element",
+          "hash": "e6953edd0fa1d95783cc7e77cf663edc",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Payment Terms"
+        },
+        "11/declaration/body/11/argument/1/3/1/1/7/3/5/expression/right/1": {
+          "type": "element",
+          "hash": "a1bf0fb468c850f31f5f7ea7c576173f",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Contract Penalties"
+        },
+        "11/declaration/body/11/argument/1/3/1/1/7/3/7/expression/right/1": {
+          "type": "element",
+          "hash": "6c3e69c83f7ab356409c710497965d46",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Deposit Information"
+        },
+        "11/declaration/body/11/argument/1/3/1/1/7/3/9/expression/right/1": {
+          "type": "element",
+          "hash": "8a990e2d4cde34bbf42ef54a7a837633",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Source URL"
+        },
+        "11/declaration/body/11/argument/1/3/5/1/1": {
+          "type": "element",
+          "hash": "c0afd302caeecd63803a83f8b51e3e49",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Outline"
+        },
+        "11/declaration/body/12/argument/1/1/3/1/expression/right/1/3": {
+          "type": "element",
+          "hash": "26b80ae8a680de73667e096098aa69d8",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "·"
+        },
+        "11/declaration/body/12/argument/1/1/3/1/expression/right/3/1": {
+          "type": "element",
+          "hash": "3c759ab832d6ab75ae050da5cb1b826c",
+          "context": "",
+          "skip": false,
+          "overrides": {
+            "pl": "Aplikuj"
+          },
+          "content": "Apply"
+        },
+        "11/declaration/body/12/argument/1/1/3/1/expression/right/3/3": {
+          "type": "element",
+          "hash": "93f700a2adda13be3723040c587ab812",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Reject"
+        },
+        "11/declaration/body/12/argument/1/1/5/expression/right/3/1": {
+          "type": "element",
+          "hash": "564f71b8fe2a63142499b340b1872989",
+          "context": "",
+          "skip": false,
+          "overrides": {
+            "pl": "Aplikuj"
+          },
+          "content": "Apply"
+        },
+        "11/declaration/body/12/argument/1/1/5/expression/right/3/3": {
+          "type": "element",
+          "hash": "2c1f1ee6b00186ee3a5adc2d86d00511",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Reject"
+        },
+        "11/declaration/body/12/argument/1/3/1/1/1/1": {
+          "type": "element",
+          "hash": "9d55775994a0e6c016fe7e271533bf45",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "At a Glance"
+        },
+        "11/declaration/body/12/argument/1/3/1/1/1/3/3/1/1": {
+          "type": "element",
+          "hash": "13eb7b8a239fb4702dfdaee69100a220",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Summary"
+        },
+        "11/declaration/body/12/argument/1/3/1/1/1/3/3/3/expression/alternate/1": {
+          "type": "element",
+          "hash": "f914ac02528d45d0b9e336e9fe77783e",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "No description available for AI summary generation"
+        },
+        "11/declaration/body/12/argument/1/3/1/1/1/3/3/3/expression/consequent/right/1/expression/alternate/consequent/3": {
+          "type": "element",
+          "hash": "2ff9be7323ab3b9d0338b1ddb7894323",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Generating summary..."
+        },
+        "11/declaration/body/12/argument/1/3/1/1/1/3/5/3/expression/right/1/1": {
+          "type": "element",
+          "hash": "537bf79791e7f93cb2e3140ab49ce70d",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "W"
+        },
+        "11/declaration/body/12/argument/1/3/1/1/1/3/5/3/expression/right/3": {
+          "type": "element",
+          "hash": "a7908a3166c9eccd9acd413e39b72c11",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Wadium: {tender.wadium_llm}"
+        },
+        "11/declaration/body/12/argument/1/3/1/1/1/3/5/5/expression/right/3": {
+          "type": "element",
+          "hash": "329ae0d02b034c7833b81d6d9cfc4a3a",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Completion: {tender.ordercompletiondate_llm}"
+        },
+        "11/declaration/body/12/argument/1/3/1/1/11/1": {
+          "type": "element",
+          "hash": "39160224ce0e35eb4eb252c997edf4d8",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Others"
+        },
+        "11/declaration/body/12/argument/1/3/1/1/11/3/1/expression/right/1": {
+          "type": "element",
+          "hash": "269871c885cc75e625cd37409d6aa6f3",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Application Form"
+        },
+        "11/declaration/body/12/argument/1/3/1/1/11/3/3/expression/right/1": {
+          "type": "element",
+          "hash": "e6953edd0fa1d95783cc7e77cf663edc",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Payment Terms"
+        },
+        "11/declaration/body/12/argument/1/3/1/1/11/3/5/expression/right/1": {
+          "type": "element",
+          "hash": "a1bf0fb468c850f31f5f7ea7c576173f",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Contract Penalties"
+        },
+        "11/declaration/body/12/argument/1/3/1/1/11/3/7/expression/right/1": {
+          "type": "element",
+          "hash": "6c3e69c83f7ab356409c710497965d46",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Deposit Information"
+        },
+        "11/declaration/body/12/argument/1/3/1/1/11/3/9/expression/right/1": {
+          "type": "element",
+          "hash": "8a990e2d4cde34bbf42ef54a7a837633",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Source URL"
+        },
+        "11/declaration/body/12/argument/1/3/1/1/5/1": {
+          "type": "element",
+          "hash": "e17686a22ffad04cc7bb70524ed4478b",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Description"
+        },
+        "11/declaration/body/12/argument/1/3/1/1/5/3/1/expression/alternate": {
+          "type": "element",
+          "hash": "2654605a88bc1dc81e93e3207f50486d",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "No detailed description available"
+        },
+        "11/declaration/body/12/argument/1/3/1/1/7/1": {
+          "type": "element",
+          "hash": "e108e149e0fd5b65f5850b6f032ccabe",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Requirements"
+        },
+        "11/declaration/body/12/argument/1/3/1/1/7/3/11/expression/right/1": {
+          "type": "element",
+          "hash": "bea6aeeaba8aa4e8850b56957aa1af1c",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Not Met Requirements"
+        },
+        "11/declaration/body/12/argument/1/3/1/1/7/3/15/expression/right/1": {
+          "type": "element",
+          "hash": "73f2098c339274d847f5086bf5bcf61f",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Review Criteria"
+        },
+        "11/declaration/body/12/argument/1/3/1/1/7/3/3/expression/right/1": {
+          "type": "element",
+          "hash": "c149d0f6f856d9e8e8661abbf754148c",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Met Requirements"
+        },
+        "11/declaration/body/12/argument/1/3/1/1/7/3/7/expression/right/1": {
+          "type": "element",
+          "hash": "2de265558f6e9d347c07b5f54eff825c",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Needs Confirmation"
+        },
+        "11/declaration/body/12/argument/1/3/5/1/1": {
+          "type": "element",
+          "hash": "c0afd302caeecd63803a83f8b51e3e49",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Outline"
+        },
+        "11/declaration/body/8/consequent/0/argument/1/1": {
+          "type": "element",
+          "hash": "067789b01a081458db2f872f10a37c3f",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Select a tender to view details"
+        },
+        "11/declaration/body/9/0/init/0/1/value": {
+          "type": "element",
+          "hash": "9d55775994a0e6c016fe7e271533bf45",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "At a Glance"
+        },
+        "11/declaration/body/9/0/init/1/1/value": {
+          "type": "element",
+          "hash": "e17686a22ffad04cc7bb70524ed4478b",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Description"
+        },
+        "11/declaration/body/9/0/init/2/1/value": {
+          "type": "element",
+          "hash": "e108e149e0fd5b65f5850b6f032ccabe",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Requirements"
+        },
+        "11/declaration/body/9/0/init/3/1/value": {
+          "type": "element",
+          "hash": "39160224ce0e35eb4eb252c997edf4d8",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Others"
+        },
+        "11/declaration/body/9/consequent/0/argument/1/1": {
+          "type": "element",
+          "hash": "067789b01a081458db2f872f10a37c3f",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Select a tender to view details"
+        },
+        "17/declaration/body/11/argument/1/3/3/1/expression/right/3/1": {
+          "type": "element",
+          "hash": "3c759ab832d6ab75ae050da5cb1b826c",
+          "context": "",
+          "skip": false,
+          "overrides": {
+            "pl": "Aplikuj"
+          },
+          "content": "Apply"
+        },
+        "17/declaration/body/11/argument/1/3/3/1/expression/right/3/3": {
+          "type": "element",
+          "hash": "93f700a2adda13be3723040c587ab812",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Reject"
+        },
+        "17/declaration/body/11/argument/1/3/5/expression/right/3/1": {
+          "type": "element",
+          "hash": "564f71b8fe2a63142499b340b1872989",
+          "context": "",
+          "skip": false,
+          "overrides": {
+            "pl": "Aplikuj"
+          },
+          "content": "Apply"
+        },
+        "17/declaration/body/11/argument/1/3/5/expression/right/3/3": {
+          "type": "element",
+          "hash": "2c1f1ee6b00186ee3a5adc2d86d00511",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Reject"
+        },
+        "17/declaration/body/11/argument/1/5/1/1/11/1": {
+          "type": "element",
+          "hash": "e17686a22ffad04cc7bb70524ed4478b",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Description"
+        },
+        "17/declaration/body/11/argument/1/5/1/1/11/3/1/expression/alternate": {
+          "type": "element",
+          "hash": "2654605a88bc1dc81e93e3207f50486d",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "No detailed description available"
+        },
+        "17/declaration/body/11/argument/1/5/1/1/15/1": {
+          "type": "element",
+          "hash": "8d1fc247855abcb3e1ab7ddbbb742945",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Additional Information"
+        },
+        "17/declaration/body/11/argument/1/5/1/1/15/3/1/1/expression/right-title": {
+          "type": "attribute",
+          "hash": "c59c5c19b7235bd028026a6088c90b9b",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Application Form"
+        },
+        "17/declaration/body/11/argument/1/5/1/1/15/3/1/3/expression/right-title": {
+          "type": "attribute",
+          "hash": "ca6f26774e7e5e2c51cb11b7e305e5e2",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Payment Terms"
+        },
+        "17/declaration/body/11/argument/1/5/1/1/15/3/1/5/expression/right-title": {
+          "type": "attribute",
+          "hash": "02fb39147ed4e21a831c31033ec0221b",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Contract Penalties"
+        },
+        "17/declaration/body/11/argument/1/5/1/1/15/3/1/7/expression/right-title": {
+          "type": "attribute",
+          "hash": "34d811d0d02e76753d176ae6b99fb933",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Deposit Information"
+        },
+        "17/declaration/body/11/argument/1/5/1/1/15/3/1/9/expression/right/1": {
+          "type": "element",
+          "hash": "d52ee227db889054a3976901f99cb5d0",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Source URL"
+        },
+        "17/declaration/body/11/argument/1/5/1/1/3/1": {
+          "type": "element",
+          "hash": "30c54e4dc4ce599b87d94be34a8617f5",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Overview"
+        },
+        "17/declaration/body/11/argument/1/5/1/1/3/3/3/expression/alternate/1": {
+          "type": "element",
+          "hash": "bda1cf737dabd369c67934266a4cbd3d",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "No description available for AI summary generation"
+        },
+        "17/declaration/body/11/argument/1/5/1/1/3/3/3/expression/consequent/right/1/expression/alternate/consequent/3": {
+          "type": "element",
+          "hash": "6879cc83bbf88e959c706ef5d51a6d39",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Generating summary..."
+        },
+        "17/declaration/body/11/argument/1/5/1/1/3/3/7/3/expression/right": {
+          "type": "element",
+          "hash": "7e5a6d07f53c7911c593b669d21449b6",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Wadium: {tender.wadium_llm}"
+        },
+        "17/declaration/body/11/argument/1/5/1/1/3/3/7/5/expression/right": {
+          "type": "element",
+          "hash": "6c568559e461e1c605515344498bb3b1",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Completion: {tender.ordercompletiondate_llm}"
+        },
+        "17/declaration/body/11/argument/1/5/1/1/7/1": {
+          "type": "element",
+          "hash": "e108e149e0fd5b65f5850b6f032ccabe",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Requirements"
+        },
+        "17/declaration/body/11/argument/1/5/1/1/7/3/1/1-title": {
+          "type": "attribute",
+          "hash": "f5251ea9ac1d7825fd0b543fb0e0b4f5",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Met Requirements"
+        },
+        "17/declaration/body/11/argument/1/5/1/1/7/3/1/3-title": {
+          "type": "attribute",
+          "hash": "a7d90ec8d0e7143313dfbfd6368cf79c",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Needs Confirmation"
+        },
+        "17/declaration/body/11/argument/1/5/1/1/7/3/1/5-title": {
+          "type": "attribute",
+          "hash": "c358cf9796d545d7b72954dc6ddd6dc2",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Not Met Requirements"
+        },
+        "17/declaration/body/11/argument/1/5/1/1/7/3/1/7/expression/right-title": {
+          "type": "attribute",
+          "hash": "d524df30da3658fdbc1794408fcfdab4",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Review Criteria"
+        },
+        "17/declaration/body/11/argument/1/5/5/1/1": {
+          "type": "element",
+          "hash": "308ac174be63d9df33b2c23f60a6ecd1",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Contents"
+        },
+        "17/declaration/body/9/consequent/0/argument/1/1": {
+          "type": "element",
+          "hash": "067789b01a081458db2f872f10a37c3f",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Select a tender to view details"
+        },
+        "18/declaration/body/10/0/init/0/1/value": {
+          "type": "element",
+          "hash": "30c54e4dc4ce599b87d94be34a8617f5",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Overview"
+        },
+        "18/declaration/body/10/0/init/1/1/value": {
+          "type": "element",
+          "hash": "e108e149e0fd5b65f5850b6f032ccabe",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Requirements"
+        },
+        "18/declaration/body/10/0/init/2/1/value": {
+          "type": "element",
+          "hash": "e17686a22ffad04cc7bb70524ed4478b",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Description"
+        },
+        "18/declaration/body/10/0/init/3/1/value": {
+          "type": "element",
+          "hash": "d5bf1e70991802fd4a801f3a79cf9e5d",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Additional Info"
+        },
+        "18/declaration/body/11/argument/1/3/3/1/expression/right/3/1": {
+          "type": "element",
+          "hash": "3c759ab832d6ab75ae050da5cb1b826c",
+          "context": "",
+          "skip": false,
+          "overrides": {
+            "pl": "Aplikuj"
+          },
+          "content": "Apply"
+        },
+        "18/declaration/body/11/argument/1/3/3/1/expression/right/3/3": {
+          "type": "element",
+          "hash": "93f700a2adda13be3723040c587ab812",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Reject"
+        },
+        "18/declaration/body/11/argument/1/3/5/expression/right/3/1": {
+          "type": "element",
+          "hash": "564f71b8fe2a63142499b340b1872989",
+          "context": "",
+          "skip": false,
+          "overrides": {
+            "pl": "Aplikuj"
+          },
+          "content": "Apply"
+        },
+        "18/declaration/body/11/argument/1/3/5/expression/right/3/3": {
+          "type": "element",
+          "hash": "2c1f1ee6b00186ee3a5adc2d86d00511",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Reject"
+        },
+        "18/declaration/body/11/argument/1/5/1/1/11/1": {
+          "type": "element",
+          "hash": "e17686a22ffad04cc7bb70524ed4478b",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Description"
+        },
+        "18/declaration/body/11/argument/1/5/1/1/11/3/1/expression/alternate": {
+          "type": "element",
+          "hash": "2654605a88bc1dc81e93e3207f50486d",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "No detailed description available"
+        },
+        "18/declaration/body/11/argument/1/5/1/1/15/1": {
+          "type": "element",
+          "hash": "8d1fc247855abcb3e1ab7ddbbb742945",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Additional Information"
+        },
+        "18/declaration/body/11/argument/1/5/1/1/15/3/1/1/expression/right-title": {
+          "type": "attribute",
+          "hash": "c59c5c19b7235bd028026a6088c90b9b",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Application Form"
+        },
+        "18/declaration/body/11/argument/1/5/1/1/15/3/1/3/expression/right-title": {
+          "type": "attribute",
+          "hash": "ca6f26774e7e5e2c51cb11b7e305e5e2",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Payment Terms"
+        },
+        "18/declaration/body/11/argument/1/5/1/1/15/3/1/5/expression/right-title": {
+          "type": "attribute",
+          "hash": "02fb39147ed4e21a831c31033ec0221b",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Contract Penalties"
+        },
+        "18/declaration/body/11/argument/1/5/1/1/15/3/1/7/expression/right-title": {
+          "type": "attribute",
+          "hash": "34d811d0d02e76753d176ae6b99fb933",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Deposit Information"
+        },
+        "18/declaration/body/11/argument/1/5/1/1/15/3/1/9/expression/right/1": {
+          "type": "element",
+          "hash": "d52ee227db889054a3976901f99cb5d0",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Source URL"
+        },
+        "18/declaration/body/11/argument/1/5/1/1/3/1": {
+          "type": "element",
+          "hash": "30c54e4dc4ce599b87d94be34a8617f5",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Overview"
+        },
+        "18/declaration/body/11/argument/1/5/1/1/3/3/3/expression/alternate/1": {
+          "type": "element",
+          "hash": "bda1cf737dabd369c67934266a4cbd3d",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "No description available for AI summary generation"
+        },
+        "18/declaration/body/11/argument/1/5/1/1/3/3/3/expression/consequent/right/1/expression/alternate/consequent/3": {
+          "type": "element",
+          "hash": "6879cc83bbf88e959c706ef5d51a6d39",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Generating summary..."
+        },
+        "18/declaration/body/11/argument/1/5/1/1/3/3/7/1/expression/right-title": {
+          "type": "attribute",
+          "hash": "a895f9c2afd359f5f525b176d1c6010e",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Eligibility"
+        },
+        "18/declaration/body/11/argument/1/5/1/1/3/3/7/3/expression/right": {
+          "type": "element",
+          "hash": "7e5a6d07f53c7911c593b669d21449b6",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Wadium: {tender.wadium_llm}"
+        },
+        "18/declaration/body/11/argument/1/5/1/1/3/3/7/3/expression/right-title": {
+          "type": "attribute",
+          "hash": "cc1df5b4bb18ef18f1084db990961f72",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Wadium"
+        },
+        "18/declaration/body/11/argument/1/5/1/1/3/3/7/5/expression/right": {
+          "type": "element",
+          "hash": "6c568559e461e1c605515344498bb3b1",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Completion: {tender.ordercompletiondate_llm}"
+        },
+        "18/declaration/body/11/argument/1/5/1/1/3/3/7/5/expression/right-title": {
+          "type": "attribute",
+          "hash": "26465009e23d5f17e452842785193bda",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Completion Date"
+        },
+        "18/declaration/body/11/argument/1/5/1/1/7/1": {
+          "type": "element",
+          "hash": "e108e149e0fd5b65f5850b6f032ccabe",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Requirements"
+        },
+        "18/declaration/body/11/argument/1/5/1/1/7/3/1/1-title": {
+          "type": "attribute",
+          "hash": "f5251ea9ac1d7825fd0b543fb0e0b4f5",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Met Requirements"
+        },
+        "18/declaration/body/11/argument/1/5/1/1/7/3/1/3-title": {
+          "type": "attribute",
+          "hash": "a7d90ec8d0e7143313dfbfd6368cf79c",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Needs Confirmation"
+        },
+        "18/declaration/body/11/argument/1/5/1/1/7/3/1/5-title": {
+          "type": "attribute",
+          "hash": "c358cf9796d545d7b72954dc6ddd6dc2",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Not Met Requirements"
+        },
+        "18/declaration/body/11/argument/1/5/1/1/7/3/1/7/expression/right-title": {
+          "type": "attribute",
+          "hash": "d524df30da3658fdbc1794408fcfdab4",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Review Criteria"
+        },
+        "18/declaration/body/11/argument/1/5/5/1/1": {
+          "type": "element",
+          "hash": "308ac174be63d9df33b2c23f60a6ecd1",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Contents"
+        },
+        "18/declaration/body/9/consequent/0/argument/1/1": {
+          "type": "element",
+          "hash": "067789b01a081458db2f872f10a37c3f",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Select a tender to view details"
         },
         "4/declaration/body/0/consequent/0/argument/1/1": {
           "type": "element",
@@ -7704,6 +10042,478 @@
           "overrides": {},
           "content": "Outline"
         },
+        "8/declaration/body/6/consequent/0/argument/1/1": {
+          "type": "element",
+          "hash": "067789b01a081458db2f872f10a37c3f",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Select a tender to view details"
+        },
+        "8/declaration/body/7/0/init/0/1/value": {
+          "type": "element",
+          "hash": "9d55775994a0e6c016fe7e271533bf45",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "At a Glance"
+        },
+        "8/declaration/body/7/0/init/1/1/value": {
+          "type": "element",
+          "hash": "e17686a22ffad04cc7bb70524ed4478b",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Description"
+        },
+        "8/declaration/body/7/0/init/2/1/value": {
+          "type": "element",
+          "hash": "e108e149e0fd5b65f5850b6f032ccabe",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Requirements"
+        },
+        "8/declaration/body/7/0/init/3/1/value": {
+          "type": "element",
+          "hash": "39160224ce0e35eb4eb252c997edf4d8",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Others"
+        },
+        "8/declaration/body/8/argument/1/1/3/1/expression/right/1/3": {
+          "type": "element",
+          "hash": "26b80ae8a680de73667e096098aa69d8",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "·"
+        },
+        "8/declaration/body/8/argument/1/1/3/1/expression/right/3/1": {
+          "type": "element",
+          "hash": "3c759ab832d6ab75ae050da5cb1b826c",
+          "context": "",
+          "skip": false,
+          "overrides": {
+            "pl": "Aplikuj"
+          },
+          "content": "Apply"
+        },
+        "8/declaration/body/8/argument/1/1/3/1/expression/right/3/3": {
+          "type": "element",
+          "hash": "93f700a2adda13be3723040c587ab812",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Reject"
+        },
+        "8/declaration/body/8/argument/1/1/5/expression/right/3/1": {
+          "type": "element",
+          "hash": "564f71b8fe2a63142499b340b1872989",
+          "context": "",
+          "skip": false,
+          "overrides": {
+            "pl": "Aplikuj"
+          },
+          "content": "Apply"
+        },
+        "8/declaration/body/8/argument/1/1/5/expression/right/3/3": {
+          "type": "element",
+          "hash": "2c1f1ee6b00186ee3a5adc2d86d00511",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Reject"
+        },
+        "8/declaration/body/8/argument/1/3/1/1/1/1": {
+          "type": "element",
+          "hash": "9d55775994a0e6c016fe7e271533bf45",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "At a Glance"
+        },
+        "8/declaration/body/8/argument/1/3/1/1/1/3/3/3/expression/right/1/1": {
+          "type": "element",
+          "hash": "537bf79791e7f93cb2e3140ab49ce70d",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "W"
+        },
+        "8/declaration/body/8/argument/1/3/1/1/1/3/3/3/expression/right/3": {
+          "type": "element",
+          "hash": "a7908a3166c9eccd9acd413e39b72c11",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Wadium: {tender.wadium_llm}"
+        },
+        "8/declaration/body/8/argument/1/3/1/1/1/3/3/5/expression/right/3": {
+          "type": "element",
+          "hash": "329ae0d02b034c7833b81d6d9cfc4a3a",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Completion: {tender.ordercompletiondate_llm}"
+        },
+        "8/declaration/body/8/argument/1/3/1/1/13/1": {
+          "type": "element",
+          "hash": "39160224ce0e35eb4eb252c997edf4d8",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Others"
+        },
+        "8/declaration/body/8/argument/1/3/1/1/13/3/1/expression/right/1": {
+          "type": "element",
+          "hash": "269871c885cc75e625cd37409d6aa6f3",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Application Form"
+        },
+        "8/declaration/body/8/argument/1/3/1/1/13/3/3/expression/right/1": {
+          "type": "element",
+          "hash": "e6953edd0fa1d95783cc7e77cf663edc",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Payment Terms"
+        },
+        "8/declaration/body/8/argument/1/3/1/1/13/3/5/expression/right/1": {
+          "type": "element",
+          "hash": "a1bf0fb468c850f31f5f7ea7c576173f",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Contract Penalties"
+        },
+        "8/declaration/body/8/argument/1/3/1/1/13/3/7/expression/right/1": {
+          "type": "element",
+          "hash": "6c3e69c83f7ab356409c710497965d46",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Deposit Information"
+        },
+        "8/declaration/body/8/argument/1/3/1/1/13/3/9/expression/right/1": {
+          "type": "element",
+          "hash": "8a990e2d4cde34bbf42ef54a7a837633",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Source URL"
+        },
+        "8/declaration/body/8/argument/1/3/1/1/5/1": {
+          "type": "element",
+          "hash": "e17686a22ffad04cc7bb70524ed4478b",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Description"
+        },
+        "8/declaration/body/8/argument/1/3/1/1/5/3/1/expression/alternate": {
+          "type": "element",
+          "hash": "2654605a88bc1dc81e93e3207f50486d",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "No detailed description available"
+        },
+        "8/declaration/body/8/argument/1/3/1/1/9/1": {
+          "type": "element",
+          "hash": "e108e149e0fd5b65f5850b6f032ccabe",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Requirements"
+        },
+        "8/declaration/body/8/argument/1/3/1/1/9/3/11/expression/right/1": {
+          "type": "element",
+          "hash": "4ee1504b99ff60d74488ab34426ed8ad",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "<element:AlertCircle></element:AlertCircle> Not Met Requirements"
+        },
+        "8/declaration/body/8/argument/1/3/1/1/9/3/15/expression/right/1": {
+          "type": "element",
+          "hash": "73f2098c339274d847f5086bf5bcf61f",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Review Criteria"
+        },
+        "8/declaration/body/8/argument/1/3/1/1/9/3/3/expression/right/1": {
+          "type": "element",
+          "hash": "de1873a50cb65483443431e1c2d60c5b",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "<element:CheckCircle></element:CheckCircle> Met Requirements"
+        },
+        "8/declaration/body/8/argument/1/3/1/1/9/3/7/expression/right/1": {
+          "type": "element",
+          "hash": "9fc1a16e6fd34b2e038519daf7ed6406",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "<element:AlertCircle></element:AlertCircle> Needs Confirmation"
+        },
+        "8/declaration/body/8/argument/1/3/5/1/1": {
+          "type": "element",
+          "hash": "c0afd302caeecd63803a83f8b51e3e49",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Outline"
+        },
+        "9/declaration/body/10/0/init/0/1/value": {
+          "type": "element",
+          "hash": "9d55775994a0e6c016fe7e271533bf45",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "At a Glance"
+        },
+        "9/declaration/body/10/0/init/1/1/value": {
+          "type": "element",
+          "hash": "e17686a22ffad04cc7bb70524ed4478b",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Description"
+        },
+        "9/declaration/body/10/0/init/2/1/value": {
+          "type": "element",
+          "hash": "e108e149e0fd5b65f5850b6f032ccabe",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Requirements"
+        },
+        "9/declaration/body/10/0/init/3/1/value": {
+          "type": "element",
+          "hash": "39160224ce0e35eb4eb252c997edf4d8",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Others"
+        },
+        "9/declaration/body/11/argument/1/1/3/1/expression/right/1/3": {
+          "type": "element",
+          "hash": "26b80ae8a680de73667e096098aa69d8",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "·"
+        },
+        "9/declaration/body/11/argument/1/1/3/1/expression/right/3/1": {
+          "type": "element",
+          "hash": "3c759ab832d6ab75ae050da5cb1b826c",
+          "context": "",
+          "skip": false,
+          "overrides": {
+            "pl": "Aplikuj"
+          },
+          "content": "Apply"
+        },
+        "9/declaration/body/11/argument/1/1/3/1/expression/right/3/3": {
+          "type": "element",
+          "hash": "93f700a2adda13be3723040c587ab812",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Reject"
+        },
+        "9/declaration/body/11/argument/1/1/5/expression/right/3/1": {
+          "type": "element",
+          "hash": "564f71b8fe2a63142499b340b1872989",
+          "context": "",
+          "skip": false,
+          "overrides": {
+            "pl": "Aplikuj"
+          },
+          "content": "Apply"
+        },
+        "9/declaration/body/11/argument/1/1/5/expression/right/3/3": {
+          "type": "element",
+          "hash": "2c1f1ee6b00186ee3a5adc2d86d00511",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Reject"
+        },
+        "9/declaration/body/11/argument/1/3/1/1/1/1": {
+          "type": "element",
+          "hash": "9d55775994a0e6c016fe7e271533bf45",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "At a Glance"
+        },
+        "9/declaration/body/11/argument/1/3/1/1/1/3/3/1/1": {
+          "type": "element",
+          "hash": "c0aac56506d52658a4f57b25d02869b3",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "AI Summary"
+        },
+        "9/declaration/body/11/argument/1/3/1/1/1/3/3/3/expression/right/1/expression/alternate/consequent/3": {
+          "type": "element",
+          "hash": "6879cc83bbf88e959c706ef5d51a6d39",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Generating summary..."
+        },
+        "9/declaration/body/11/argument/1/3/1/1/1/3/5/expression/right/1": {
+          "type": "element",
+          "hash": "205d15780ee1cf0b73fbd5d20f514755",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Full Description"
+        },
+        "9/declaration/body/11/argument/1/3/1/1/1/3/7/3/expression/right/1/1": {
+          "type": "element",
+          "hash": "537bf79791e7f93cb2e3140ab49ce70d",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "W"
+        },
+        "9/declaration/body/11/argument/1/3/1/1/1/3/7/3/expression/right/3": {
+          "type": "element",
+          "hash": "a7908a3166c9eccd9acd413e39b72c11",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Wadium: {tender.wadium_llm}"
+        },
+        "9/declaration/body/11/argument/1/3/1/1/1/3/7/5/expression/right/3": {
+          "type": "element",
+          "hash": "329ae0d02b034c7833b81d6d9cfc4a3a",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Completion: {tender.ordercompletiondate_llm}"
+        },
+        "9/declaration/body/11/argument/1/3/1/1/13/1": {
+          "type": "element",
+          "hash": "39160224ce0e35eb4eb252c997edf4d8",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Others"
+        },
+        "9/declaration/body/11/argument/1/3/1/1/13/3/1/expression/right/1": {
+          "type": "element",
+          "hash": "269871c885cc75e625cd37409d6aa6f3",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Application Form"
+        },
+        "9/declaration/body/11/argument/1/3/1/1/13/3/3/expression/right/1": {
+          "type": "element",
+          "hash": "e6953edd0fa1d95783cc7e77cf663edc",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Payment Terms"
+        },
+        "9/declaration/body/11/argument/1/3/1/1/13/3/5/expression/right/1": {
+          "type": "element",
+          "hash": "a1bf0fb468c850f31f5f7ea7c576173f",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Contract Penalties"
+        },
+        "9/declaration/body/11/argument/1/3/1/1/13/3/7/expression/right/1": {
+          "type": "element",
+          "hash": "6c3e69c83f7ab356409c710497965d46",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Deposit Information"
+        },
+        "9/declaration/body/11/argument/1/3/1/1/13/3/9/expression/right/1": {
+          "type": "element",
+          "hash": "8a990e2d4cde34bbf42ef54a7a837633",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Source URL"
+        },
+        "9/declaration/body/11/argument/1/3/1/1/5/1": {
+          "type": "element",
+          "hash": "e17686a22ffad04cc7bb70524ed4478b",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Description"
+        },
+        "9/declaration/body/11/argument/1/3/1/1/5/3/1/expression/alternate": {
+          "type": "element",
+          "hash": "2654605a88bc1dc81e93e3207f50486d",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "No detailed description available"
+        },
+        "9/declaration/body/11/argument/1/3/1/1/9/1": {
+          "type": "element",
+          "hash": "e108e149e0fd5b65f5850b6f032ccabe",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Requirements"
+        },
+        "9/declaration/body/11/argument/1/3/1/1/9/3/11/expression/right/1": {
+          "type": "element",
+          "hash": "4ee1504b99ff60d74488ab34426ed8ad",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "<element:AlertCircle></element:AlertCircle> Not Met Requirements"
+        },
+        "9/declaration/body/11/argument/1/3/1/1/9/3/15/expression/right/1": {
+          "type": "element",
+          "hash": "73f2098c339274d847f5086bf5bcf61f",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Review Criteria"
+        },
+        "9/declaration/body/11/argument/1/3/1/1/9/3/3/expression/right/1": {
+          "type": "element",
+          "hash": "de1873a50cb65483443431e1c2d60c5b",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "<element:CheckCircle></element:CheckCircle> Met Requirements"
+        },
+        "9/declaration/body/11/argument/1/3/1/1/9/3/7/expression/right/1": {
+          "type": "element",
+          "hash": "9fc1a16e6fd34b2e038519daf7ed6406",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "<element:AlertCircle></element:AlertCircle> Needs Confirmation"
+        },
+        "9/declaration/body/11/argument/1/3/5/1/1": {
+          "type": "element",
+          "hash": "c0afd302caeecd63803a83f8b51e3e49",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Outline"
+        },
         "9/declaration/body/5/consequent/0/argument/1/1": {
           "type": "element",
           "hash": "067789b01a081458db2f872f10a37c3f",
@@ -7719,6 +10529,38 @@
           "skip": false,
           "overrides": {},
           "content": "Select a tender to view details"
+        },
+        "9/declaration/body/7/0/init/0/1/value": {
+          "type": "element",
+          "hash": "9d55775994a0e6c016fe7e271533bf45",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "At a Glance"
+        },
+        "9/declaration/body/7/0/init/1/1/value": {
+          "type": "element",
+          "hash": "e17686a22ffad04cc7bb70524ed4478b",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Description"
+        },
+        "9/declaration/body/7/0/init/2/1/value": {
+          "type": "element",
+          "hash": "e108e149e0fd5b65f5850b6f032ccabe",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Requirements"
+        },
+        "9/declaration/body/7/0/init/3/1/value": {
+          "type": "element",
+          "hash": "39160224ce0e35eb4eb252c997edf4d8",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Others"
         },
         "9/declaration/body/7/argument/1/1/3/3": {
           "type": "element",
@@ -7890,6 +10732,40 @@
           "overrides": {},
           "content": "Outline"
         },
+        "9/declaration/body/8/argument/1/1/3/1/1/expression/right/3": {
+          "type": "element",
+          "hash": "26b80ae8a680de73667e096098aa69d8",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "·"
+        },
+        "9/declaration/body/8/argument/1/1/3/1/expression/right/1/3": {
+          "type": "element",
+          "hash": "26b80ae8a680de73667e096098aa69d8",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "·"
+        },
+        "9/declaration/body/8/argument/1/1/3/1/expression/right/3/1": {
+          "type": "element",
+          "hash": "3c759ab832d6ab75ae050da5cb1b826c",
+          "context": "",
+          "skip": false,
+          "overrides": {
+            "pl": "Aplikuj"
+          },
+          "content": "Apply"
+        },
+        "9/declaration/body/8/argument/1/1/3/1/expression/right/3/3": {
+          "type": "element",
+          "hash": "93f700a2adda13be3723040c587ab812",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Reject"
+        },
         "9/declaration/body/8/argument/1/1/3/3": {
           "type": "element",
           "hash": "26b80ae8a680de73667e096098aa69d8",
@@ -7897,6 +10773,24 @@
           "skip": false,
           "overrides": {},
           "content": "·"
+        },
+        "9/declaration/body/8/argument/1/1/3/3/3/1": {
+          "type": "element",
+          "hash": "564f71b8fe2a63142499b340b1872989",
+          "context": "",
+          "skip": false,
+          "overrides": {
+            "pl": "Aplikuj"
+          },
+          "content": "Apply"
+        },
+        "9/declaration/body/8/argument/1/1/3/3/3/3": {
+          "type": "element",
+          "hash": "2c1f1ee6b00186ee3a5adc2d86d00511",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Reject"
         },
         "9/declaration/body/8/argument/1/1/5/1": {
           "type": "element",
@@ -7911,6 +10805,24 @@
         "9/declaration/body/8/argument/1/1/5/3": {
           "type": "element",
           "hash": "21c303829516a636a6c306dcd68a64ec",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Reject"
+        },
+        "9/declaration/body/8/argument/1/1/5/expression/right/3/1": {
+          "type": "element",
+          "hash": "564f71b8fe2a63142499b340b1872989",
+          "context": "",
+          "skip": false,
+          "overrides": {
+            "pl": "Aplikuj"
+          },
+          "content": "Apply"
+        },
+        "9/declaration/body/8/argument/1/1/5/expression/right/3/3": {
+          "type": "element",
+          "hash": "2c1f1ee6b00186ee3a5adc2d86d00511",
           "context": "",
           "skip": false,
           "overrides": {},
@@ -8059,6 +10971,14 @@
           "skip": false,
           "overrides": {},
           "content": "Outline"
+        },
+        "9/declaration/body/9/consequent/0/argument/1/1": {
+          "type": "element",
+          "hash": "067789b01a081458db2f872f10a37c3f",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Select a tender to view details"
         }
       }
     },
