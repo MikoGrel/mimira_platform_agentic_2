@@ -20,6 +20,7 @@ import {
 import { Button } from "@heroui/react";
 import { logout } from "$/features/auth/actions";
 import SidebarLogo from "./sidebar-logo";
+import Link from "next/link";
 
 const navigationItems = [
   {
@@ -65,10 +66,10 @@ export default function DashboardSidebar() {
               {navigationItems.map((item) => (
                 <SidebarMenuItem key={item.url}>
                   <SidebarMenuButton asChild tooltip={item.tooltip}>
-                    <a href={item.url}>
+                    <Link href={item.url}>
                       <item.icon />
                       <span>{item.title}</span>
-                    </a>
+                    </Link>
                   </SidebarMenuButton>
                 </SidebarMenuItem>
               ))}

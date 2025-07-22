@@ -10,6 +10,663 @@ export default {
           },
           hash: "57e9db873911bf848c79e2ed546ecf45",
         },
+        "10/body/0/argument/1/expression/0/body/3/3": {
+          content: {
+            en: "·",
+            pl: "·",
+          },
+          hash: "26b80ae8a680de73667e096098aa69d8",
+        },
+        "10/declaration/body/5/argument/1/1/1/3-placeholder": {
+          content: {
+            en: "Search",
+            pl: "Szukaj",
+          },
+          hash: "49dd6c21604b5e8d4153ff1aff2177e1",
+        },
+        "10/declaration/body/5/argument/1/1/1/5/3/1/1-label": {
+          content: {
+            en: "Date range",
+            pl: "Zakres dat",
+          },
+          hash: "be548c93a997ed6c2e9ac5c943faac10",
+        },
+        "10/declaration/body/5/argument/1/1/1/5/3/1/3-label": {
+          content: {
+            en: "Voivodeship",
+            pl: "Województwo",
+          },
+          hash: "b29e7fb41cd951f791b73fc5fc19561c",
+        },
+        "10/declaration/body/5/argument/1/3/3/expression/right/1/expression/0/body/3/3":
+          {
+            content: {
+              en: " · ",
+              pl: " · ",
+            },
+            hash: "21ca490ec79ca57af655c1df4287bbd0",
+          },
+        "10/declaration/body/5/argument/1/5/1/3": {
+          content: {
+            en: "Ask Mimir",
+            pl: "Zapytaj Mimira",
+          },
+          hash: "c516ed1af9463ccd6bdcb19a1f13e4ac",
+        },
+        "10/declaration/body/5/argument/1/5/1/5": {
+          content: {
+            en: "Coming soon",
+            pl: "Już wkrótce",
+          },
+          hash: "05a8fc9f6d826fd88a809d98684edcad",
+        },
+        "10/declaration/body/5/argument/3/1/expression/right/1/3/3": {
+          content: {
+            en: "·",
+            pl: "·",
+          },
+          hash: "26b80ae8a680de73667e096098aa69d8",
+        },
+        "10/declaration/body/5/argument/3/1/expression/right/1/5/1": {
+          content: {
+            en: "Apply",
+          },
+          hash: "564f71b8fe2a63142499b340b1872989",
+        },
+        "10/declaration/body/5/argument/3/1/expression/right/1/5/3": {
+          content: {
+            en: "Reject",
+            pl: "Odrzuć",
+          },
+          hash: "2c1f1ee6b00186ee3a5adc2d86d00511",
+        },
+        "10/declaration/body/6/argument/1/1/1/3-placeholder": {
+          content: {
+            en: "Search",
+            pl: "Szukaj",
+          },
+          hash: "49dd6c21604b5e8d4153ff1aff2177e1",
+        },
+        "10/declaration/body/6/argument/1/1/1/5/3/1/1/openingElement/2/value/expression/body-label":
+          {
+            content: {
+              en: "Date range",
+              pl: "Zakres dat",
+            },
+            hash: "be548c93a997ed6c2e9ac5c943faac10",
+          },
+        "10/declaration/body/6/argument/1/1/1/5/3/1/3/openingElement/2/value/expression/body-label":
+          {
+            content: {
+              en: "Voivodeship",
+              pl: "Województwo",
+            },
+            hash: "b29e7fb41cd951f791b73fc5fc19561c",
+          },
+        "10/declaration/body/6/argument/1/1/1/5/3/1/5": {
+          content: {
+            en: "Apply Filters",
+            pl: "Zastosuj filtry",
+          },
+          hash: "35a239ea941e76c3b915ddf0e3fa637c",
+        },
+        "10/declaration/body/6/argument/1/1/3/1/expression/0/body": {
+          content: {
+            en: "{key}: {value}",
+            pl: "{key}: {value}",
+          },
+          hash: "55fbfae876e515b8ac8b5884a1011bac",
+        },
+        "10/declaration/body/6/argument/1/3/1/1/1/3/expression/0/body/3/3": {
+          content: {
+            en: " · ",
+            pl: " · ",
+          },
+          hash: "21ca490ec79ca57af655c1df4287bbd0",
+        },
+        "10/declaration/body/6/argument/1/3/3/expression/right/1/expression/0/body/3/3":
+          {
+            content: {
+              en: " · ",
+              pl: " · ",
+            },
+            hash: "21ca490ec79ca57af655c1df4287bbd0",
+          },
+        "10/declaration/body/6/argument/1/5/1/3": {
+          content: {
+            en: "Ask Mimir",
+            pl: "Zapytaj Mimira",
+          },
+          hash: "c516ed1af9463ccd6bdcb19a1f13e4ac",
+        },
+        "10/declaration/body/6/argument/1/5/1/5": {
+          content: {
+            en: "Coming soon",
+            pl: "Już wkrótce",
+          },
+          hash: "05a8fc9f6d826fd88a809d98684edcad",
+        },
+        "10/declaration/body/6/argument/3/1/expression/right/1/3/3": {
+          content: {
+            en: "·",
+            pl: "·",
+          },
+          hash: "26b80ae8a680de73667e096098aa69d8",
+        },
+        "10/declaration/body/6/argument/3/1/expression/right/1/5/1": {
+          content: {
+            en: "Apply",
+          },
+          hash: "564f71b8fe2a63142499b340b1872989",
+        },
+        "10/declaration/body/6/argument/3/1/expression/right/1/5/3": {
+          content: {
+            en: "Reject",
+            pl: "Odrzuć",
+          },
+          hash: "2c1f1ee6b00186ee3a5adc2d86d00511",
+        },
+        "10/declaration/body/8/argument/1/1/1/3-placeholder": {
+          content: {
+            en: "Search",
+            pl: "Szukaj",
+          },
+          hash: "49dd6c21604b5e8d4153ff1aff2177e1",
+        },
+        "10/declaration/body/8/argument/1/1/1/5/3/1/1/openingElement/2/value/expression/body-label":
+          {
+            content: {
+              en: "Date range",
+              pl: "Zakres dat",
+            },
+            hash: "be548c93a997ed6c2e9ac5c943faac10",
+          },
+        "10/declaration/body/8/argument/1/1/1/5/3/1/3/openingElement/2/value/expression/body-label":
+          {
+            content: {
+              en: "Voivodeship",
+              pl: "Województwo",
+            },
+            hash: "b29e7fb41cd951f791b73fc5fc19561c",
+          },
+        "10/declaration/body/8/argument/1/1/1/5/3/1/5": {
+          content: {
+            en: "Apply Filters",
+            pl: "Zastosuj filtry",
+          },
+          hash: "35a239ea941e76c3b915ddf0e3fa637c",
+        },
+        "10/declaration/body/8/argument/1/1/3/1/expression/0/body": {
+          content: {
+            en: "{key}: {value}",
+            pl: "{key}: {value}",
+          },
+          hash: "55fbfae876e515b8ac8b5884a1011bac",
+        },
+        "10/declaration/body/8/argument/1/3/3/expression/right/1/expression/0/body/3/3":
+          {
+            content: {
+              en: " · ",
+              pl: " · ",
+            },
+            hash: "21ca490ec79ca57af655c1df4287bbd0",
+          },
+        "10/declaration/body/8/argument/1/5/1/3": {
+          content: {
+            en: "Ask Mimir",
+            pl: "Zapytaj Mimira",
+          },
+          hash: "c516ed1af9463ccd6bdcb19a1f13e4ac",
+        },
+        "10/declaration/body/8/argument/1/5/1/5": {
+          content: {
+            en: "Coming soon",
+            pl: "Już wkrótce",
+          },
+          hash: "05a8fc9f6d826fd88a809d98684edcad",
+        },
+        "10/declaration/body/8/argument/3/1/expression/right/1/3/3": {
+          content: {
+            en: "·",
+            pl: "·",
+          },
+          hash: "26b80ae8a680de73667e096098aa69d8",
+        },
+        "10/declaration/body/8/argument/3/1/expression/right/1/5/1": {
+          content: {
+            en: "Apply",
+          },
+          hash: "564f71b8fe2a63142499b340b1872989",
+        },
+        "10/declaration/body/8/argument/3/1/expression/right/1/5/3": {
+          content: {
+            en: "Reject",
+            pl: "Odrzuć",
+          },
+          hash: "2c1f1ee6b00186ee3a5adc2d86d00511",
+        },
+        "10/declaration/body/9/argument/1/1/1/3-placeholder": {
+          content: {
+            en: "Search",
+            pl: "Szukaj",
+          },
+          hash: "49dd6c21604b5e8d4153ff1aff2177e1",
+        },
+        "10/declaration/body/9/argument/1/3/3/expression/right/1/1/1/expression/0/body/3/3":
+          {
+            content: {
+              en: " · ",
+              pl: " · ",
+            },
+            hash: "21ca490ec79ca57af655c1df4287bbd0",
+          },
+        "10/declaration/body/9/argument/1/5/1/3": {
+          content: {
+            en: "Ask Mimir",
+            pl: "Zapytaj Mimira",
+          },
+          hash: "c516ed1af9463ccd6bdcb19a1f13e4ac",
+        },
+        "10/declaration/body/9/argument/1/5/1/5": {
+          content: {
+            en: "Coming soon",
+            pl: "Już wkrótce",
+          },
+          hash: "05a8fc9f6d826fd88a809d98684edcad",
+        },
+        "10/declaration/body/9/argument/3/1/expression/right/1/3/3": {
+          content: {
+            en: "·",
+            pl: "·",
+          },
+          hash: "26b80ae8a680de73667e096098aa69d8",
+        },
+        "10/declaration/body/9/argument/3/1/expression/right/1/5/1": {
+          content: {
+            en: "Apply",
+          },
+          hash: "564f71b8fe2a63142499b340b1872989",
+        },
+        "10/declaration/body/9/argument/3/1/expression/right/1/5/3": {
+          content: {
+            en: "Reject",
+            pl: "Odrzuć",
+          },
+          hash: "2c1f1ee6b00186ee3a5adc2d86d00511",
+        },
+        "11/body/0/argument/1/expression/0/body/3/3": {
+          content: {
+            en: "·",
+            pl: "·",
+          },
+          hash: "26b80ae8a680de73667e096098aa69d8",
+        },
+        "11/declaration/body/6/argument/1/1/1/3-placeholder": {
+          content: {
+            en: "Search",
+            pl: "Szukaj",
+          },
+          hash: "49dd6c21604b5e8d4153ff1aff2177e1",
+        },
+        "11/declaration/body/6/argument/1/3/3/expression/right/1/1/expression/0/body/3/3":
+          {
+            content: {
+              en: " · ",
+              pl: " · ",
+            },
+            hash: "21ca490ec79ca57af655c1df4287bbd0",
+          },
+        "11/declaration/body/6/argument/1/3/3/expression/right/1/expression/0/body/3/3":
+          {
+            content: {
+              en: " · ",
+              pl: " · ",
+            },
+            hash: "21ca490ec79ca57af655c1df4287bbd0",
+          },
+        "11/declaration/body/6/argument/1/5/1/3": {
+          content: {
+            en: "Ask Mimir",
+            pl: "Zapytaj Mimira",
+          },
+          hash: "c516ed1af9463ccd6bdcb19a1f13e4ac",
+        },
+        "11/declaration/body/6/argument/1/5/1/5": {
+          content: {
+            en: "Coming soon",
+            pl: "Już wkrótce",
+          },
+          hash: "05a8fc9f6d826fd88a809d98684edcad",
+        },
+        "11/declaration/body/6/argument/3/1/expression/right/1/3/3": {
+          content: {
+            en: "·",
+            pl: "·",
+          },
+          hash: "26b80ae8a680de73667e096098aa69d8",
+        },
+        "11/declaration/body/6/argument/3/1/expression/right/1/5/1": {
+          content: {
+            en: "Apply",
+          },
+          hash: "564f71b8fe2a63142499b340b1872989",
+        },
+        "11/declaration/body/6/argument/3/1/expression/right/1/5/3": {
+          content: {
+            en: "Reject",
+            pl: "Odrzuć",
+          },
+          hash: "2c1f1ee6b00186ee3a5adc2d86d00511",
+        },
+        "11/declaration/body/7/argument/1/1/1/3-placeholder": {
+          content: {
+            en: "Search",
+            pl: "Szukaj",
+          },
+          hash: "49dd6c21604b5e8d4153ff1aff2177e1",
+        },
+        "11/declaration/body/7/argument/1/3/3/expression/right/1/1/1/expression/0/body/3/3":
+          {
+            content: {
+              en: " · ",
+              pl: " · ",
+            },
+            hash: "21ca490ec79ca57af655c1df4287bbd0",
+          },
+        "11/declaration/body/7/argument/1/3/3/expression/right/1/1/expression/0/body/3/3":
+          {
+            content: {
+              en: " · ",
+              pl: " · ",
+            },
+            hash: "21ca490ec79ca57af655c1df4287bbd0",
+          },
+        "11/declaration/body/7/argument/1/5/1/3": {
+          content: {
+            en: "Ask Mimir",
+            pl: "Zapytaj Mimira",
+          },
+          hash: "c516ed1af9463ccd6bdcb19a1f13e4ac",
+        },
+        "11/declaration/body/7/argument/1/5/1/5": {
+          content: {
+            en: "Coming soon",
+            pl: "Już wkrótce",
+          },
+          hash: "05a8fc9f6d826fd88a809d98684edcad",
+        },
+        "11/declaration/body/7/argument/3/1/expression/right/1/3/3": {
+          content: {
+            en: "·",
+            pl: "·",
+          },
+          hash: "26b80ae8a680de73667e096098aa69d8",
+        },
+        "11/declaration/body/7/argument/3/1/expression/right/1/5/1": {
+          content: {
+            en: "Apply",
+          },
+          hash: "564f71b8fe2a63142499b340b1872989",
+        },
+        "11/declaration/body/7/argument/3/1/expression/right/1/5/3": {
+          content: {
+            en: "Reject",
+            pl: "Odrzuć",
+          },
+          hash: "2c1f1ee6b00186ee3a5adc2d86d00511",
+        },
+        "11/declaration/body/9/argument/1/1/1/3-placeholder": {
+          content: {
+            en: "Search",
+            pl: "Szukaj",
+          },
+          hash: "49dd6c21604b5e8d4153ff1aff2177e1",
+        },
+        "11/declaration/body/9/argument/1/3/3/expression/right/1/1/1/expression/0/body/3/3":
+          {
+            content: {
+              en: " · ",
+              pl: " · ",
+            },
+            hash: "21ca490ec79ca57af655c1df4287bbd0",
+          },
+        "11/declaration/body/9/argument/1/5/1/3": {
+          content: {
+            en: "Ask Mimir",
+            pl: "Zapytaj Mimira",
+          },
+          hash: "c516ed1af9463ccd6bdcb19a1f13e4ac",
+        },
+        "11/declaration/body/9/argument/1/5/1/5": {
+          content: {
+            en: "Coming soon",
+            pl: "Już wkrótce",
+          },
+          hash: "05a8fc9f6d826fd88a809d98684edcad",
+        },
+        "11/declaration/body/9/argument/3/1/expression/right/1/3/3": {
+          content: {
+            en: "·",
+            pl: "·",
+          },
+          hash: "26b80ae8a680de73667e096098aa69d8",
+        },
+        "11/declaration/body/9/argument/3/1/expression/right/1/5/1": {
+          content: {
+            en: "Apply",
+          },
+          hash: "564f71b8fe2a63142499b340b1872989",
+        },
+        "11/declaration/body/9/argument/3/1/expression/right/1/5/3": {
+          content: {
+            en: "Reject",
+            pl: "Odrzuć",
+          },
+          hash: "2c1f1ee6b00186ee3a5adc2d86d00511",
+        },
+        "12/declaration/body/8/argument/1/1/1/3-placeholder": {
+          content: {
+            en: "Search",
+            pl: "Szukaj",
+          },
+          hash: "49dd6c21604b5e8d4153ff1aff2177e1",
+        },
+        "12/declaration/body/8/argument/1/1/1/5/1/3/1/openingElement/2/value/expression/body-label":
+          {
+            content: {
+              en: "Date range",
+              pl: "Zakres dat",
+            },
+            hash: "be548c93a997ed6c2e9ac5c943faac10",
+          },
+        "12/declaration/body/8/argument/1/1/1/5/1/3/3/openingElement/2/value/expression/body-label":
+          {
+            content: {
+              en: "Voivodeship",
+              pl: "Województwo",
+            },
+            hash: "b29e7fb41cd951f791b73fc5fc19561c",
+          },
+        "12/declaration/body/8/argument/1/1/1/5/1/3/5": {
+          content: {
+            en: "Apply Filters",
+            pl: "Zastosuj filtry",
+          },
+          hash: "35a239ea941e76c3b915ddf0e3fa637c",
+        },
+        "12/declaration/body/8/argument/1/1/1/5/3/1/1/openingElement/2/value/expression/body-label":
+          {
+            content: {
+              en: "Date range",
+              pl: "Zakres dat",
+            },
+            hash: "be548c93a997ed6c2e9ac5c943faac10",
+          },
+        "12/declaration/body/8/argument/1/1/1/5/3/1/3/openingElement/2/value/expression/body-label":
+          {
+            content: {
+              en: "Voivodeship",
+              pl: "Województwo",
+            },
+            hash: "b29e7fb41cd951f791b73fc5fc19561c",
+          },
+        "12/declaration/body/8/argument/1/1/1/5/3/1/5": {
+          content: {
+            en: "Apply Filters",
+            pl: "Zastosuj filtry",
+          },
+          hash: "35a239ea941e76c3b915ddf0e3fa637c",
+        },
+        "12/declaration/body/8/argument/1/1/1/7/expression/0/body": {
+          content: {
+            en: "{key}: {value}",
+            pl: "{key}: {value}",
+          },
+          hash: "0557127793ba6e0d78a507f76a7bc81c",
+        },
+        "12/declaration/body/8/argument/1/1/3": {
+          content: {
+            en: "<function:Object.entries/> ))}",
+            pl: "<function:Object.entries/> ))}",
+          },
+          hash: "d61d059520923268b17c6f7a1e8a8cc9",
+        },
+        "12/declaration/body/8/argument/1/1/3/1/expression/0/body": {
+          content: {
+            en: "{key}: {value}",
+            pl: "{key}: {value}",
+          },
+          hash: "55fbfae876e515b8ac8b5884a1011bac",
+        },
+        "12/declaration/body/8/argument/1/1/3/expression/0/body": {
+          content: {
+            en: "{key}: {value}",
+            pl: "{key}: {value}",
+          },
+          hash: "ff11fa72c57b6e303293954be490bd21",
+        },
+        "12/declaration/body/8/argument/1/3/3/expression/right/1/expression/0/body/3/3":
+          {
+            content: {
+              en: " · ",
+              pl: " · ",
+            },
+            hash: "21ca490ec79ca57af655c1df4287bbd0",
+          },
+        "12/declaration/body/8/argument/1/5/1/3": {
+          content: {
+            en: "Ask Mimir",
+            pl: "Zapytaj Mimira",
+          },
+          hash: "c516ed1af9463ccd6bdcb19a1f13e4ac",
+        },
+        "12/declaration/body/8/argument/1/5/1/5": {
+          content: {
+            en: "Coming soon",
+            pl: "Już wkrótce",
+          },
+          hash: "05a8fc9f6d826fd88a809d98684edcad",
+        },
+        "12/declaration/body/8/argument/3/1/expression/right/1/3/3": {
+          content: {
+            en: "·",
+            pl: "·",
+          },
+          hash: "26b80ae8a680de73667e096098aa69d8",
+        },
+        "12/declaration/body/8/argument/3/1/expression/right/1/5/1": {
+          content: {
+            en: "Apply",
+          },
+          hash: "564f71b8fe2a63142499b340b1872989",
+        },
+        "12/declaration/body/8/argument/3/1/expression/right/1/5/3": {
+          content: {
+            en: "Reject",
+            pl: "Odrzuć",
+          },
+          hash: "2c1f1ee6b00186ee3a5adc2d86d00511",
+        },
+        "12/declaration/body/9/argument/1/1/1/3-placeholder": {
+          content: {
+            en: "Search",
+            pl: "Szukaj",
+          },
+          hash: "49dd6c21604b5e8d4153ff1aff2177e1",
+        },
+        "12/declaration/body/9/argument/1/1/1/5/3/1/1/openingElement/2/value/expression/body-label":
+          {
+            content: {
+              en: "Date range",
+              pl: "Zakres dat",
+            },
+            hash: "be548c93a997ed6c2e9ac5c943faac10",
+          },
+        "12/declaration/body/9/argument/1/1/1/5/3/1/3/openingElement/2/value/expression/body-label":
+          {
+            content: {
+              en: "Voivodeship",
+              pl: "Województwo",
+            },
+            hash: "b29e7fb41cd951f791b73fc5fc19561c",
+          },
+        "12/declaration/body/9/argument/1/1/1/5/3/1/5": {
+          content: {
+            en: "Apply Filters",
+            pl: "Zastosuj filtry",
+          },
+          hash: "35a239ea941e76c3b915ddf0e3fa637c",
+        },
+        "12/declaration/body/9/argument/1/3/3/expression/right/1/1/1/expression/0/body/3/3":
+          {
+            content: {
+              en: " · ",
+              pl: " · ",
+            },
+            hash: "21ca490ec79ca57af655c1df4287bbd0",
+          },
+        "12/declaration/body/9/argument/1/3/3/expression/right/1/expression/0/body/3/3":
+          {
+            content: {
+              en: " · ",
+              pl: " · ",
+            },
+            hash: "21ca490ec79ca57af655c1df4287bbd0",
+          },
+        "12/declaration/body/9/argument/1/5/1/3": {
+          content: {
+            en: "Ask Mimir",
+            pl: "Zapytaj Mimira",
+          },
+          hash: "c516ed1af9463ccd6bdcb19a1f13e4ac",
+        },
+        "12/declaration/body/9/argument/1/5/1/5": {
+          content: {
+            en: "Coming soon",
+            pl: "Już wkrótce",
+          },
+          hash: "05a8fc9f6d826fd88a809d98684edcad",
+        },
+        "12/declaration/body/9/argument/3/1/expression/right/1/3/3": {
+          content: {
+            en: "·",
+            pl: "·",
+          },
+          hash: "26b80ae8a680de73667e096098aa69d8",
+        },
+        "12/declaration/body/9/argument/3/1/expression/right/1/5/1": {
+          content: {
+            en: "Apply",
+          },
+          hash: "564f71b8fe2a63142499b340b1872989",
+        },
+        "12/declaration/body/9/argument/3/1/expression/right/1/5/3": {
+          content: {
+            en: "Reject",
+            pl: "Odrzuć",
+          },
+          hash: "2c1f1ee6b00186ee3a5adc2d86d00511",
+        },
         "2/declaration/body/0/argument/1/1/1/3-placeholder": {
           content: {
             en: "Search",
@@ -370,6 +1027,266 @@ export default {
           },
           hash: "2c1f1ee6b00186ee3a5adc2d86d00511",
         },
+        "9/declaration/body/5/argument/1/1/1/3-placeholder": {
+          content: {
+            en: "Search",
+            pl: "Szukaj",
+          },
+          hash: "49dd6c21604b5e8d4153ff1aff2177e1",
+        },
+        "9/declaration/body/5/argument/1/1/1/5/3/1/1": {
+          content: {
+            en: "Filter",
+            pl: "Filtr",
+          },
+          hash: "626325a05e4c8800f7ede7012b0cadaf",
+        },
+        "9/declaration/body/5/argument/1/1/1/5/3/1/1-label": {
+          content: {
+            en: "Date range",
+            pl: "Zakres dat",
+          },
+          hash: "be548c93a997ed6c2e9ac5c943faac10",
+        },
+        "9/declaration/body/5/argument/1/1/1/5/3/1/3-label": {
+          content: {
+            en: "Voivodeship",
+            pl: "Województwo",
+          },
+          hash: "b29e7fb41cd951f791b73fc5fc19561c",
+        },
+        "9/declaration/body/5/argument/1/3/3/expression/right/1/expression/0/body/3/3":
+          {
+            content: {
+              en: " · ",
+              pl: " · ",
+            },
+            hash: "21ca490ec79ca57af655c1df4287bbd0",
+          },
+        "9/declaration/body/5/argument/1/5/1/3": {
+          content: {
+            en: "Ask Mimir",
+            pl: "Zapytaj Mimira",
+          },
+          hash: "c516ed1af9463ccd6bdcb19a1f13e4ac",
+        },
+        "9/declaration/body/5/argument/1/5/1/5": {
+          content: {
+            en: "Coming soon",
+            pl: "Już wkrótce",
+          },
+          hash: "05a8fc9f6d826fd88a809d98684edcad",
+        },
+        "9/declaration/body/5/argument/3/1/expression/right/1/3": {
+          content: {
+            en: "<element:span><element:House></element:House>{selectedTender.organizationname}</element:span> ·<element:span><element:Calendar></element:Calendar>{selectedTender.submittingoffersdate}</element:span>",
+            pl: "<element:span>{t.organizationname}</element:span> ·<element:span>{t.submittingoffersdate}</element:span>",
+          },
+          hash: "9cd73e2c9c17a934d08f9b894c190cb0",
+        },
+        "9/declaration/body/5/argument/3/1/expression/right/1/3/3": {
+          content: {
+            en: "·",
+            pl: "·",
+          },
+          hash: "26b80ae8a680de73667e096098aa69d8",
+        },
+        "9/declaration/body/5/argument/3/1/expression/right/1/5/1": {
+          content: {
+            en: "Apply",
+          },
+          hash: "564f71b8fe2a63142499b340b1872989",
+        },
+        "9/declaration/body/5/argument/3/1/expression/right/1/5/3": {
+          content: {
+            en: "Reject",
+            pl: "Odrzuć",
+          },
+          hash: "2c1f1ee6b00186ee3a5adc2d86d00511",
+        },
+        "9/declaration/body/7/argument/1/1/1/3-placeholder": {
+          content: {
+            en: "Search",
+            pl: "Szukaj",
+          },
+          hash: "49dd6c21604b5e8d4153ff1aff2177e1",
+        },
+        "9/declaration/body/7/argument/1/3/1/1/1/1/expression/0/body/3/3": {
+          content: {
+            en: " · ",
+            pl: " · ",
+          },
+          hash: "21ca490ec79ca57af655c1df4287bbd0",
+        },
+        "9/declaration/body/7/argument/1/3/1/1/1/3/expression/0/body/3/3": {
+          content: {
+            en: " · ",
+            pl: " · ",
+          },
+          hash: "21ca490ec79ca57af655c1df4287bbd0",
+        },
+        "9/declaration/body/7/argument/1/3/1/1/3/1/expression/0/body/3/3": {
+          content: {
+            en: " · ",
+            pl: " · ",
+          },
+          hash: "21ca490ec79ca57af655c1df4287bbd0",
+        },
+        "9/declaration/body/7/argument/1/3/1/expression/consequent/1/1/1/expression/0/body/3/3":
+          {
+            content: {
+              en: " · ",
+              pl: " · ",
+            },
+            hash: "21ca490ec79ca57af655c1df4287bbd0",
+          },
+        "9/declaration/body/7/argument/1/3/1/expression/right/1/1/1/expression/0/body/3/3":
+          {
+            content: {
+              en: " · ",
+              pl: " · ",
+            },
+            hash: "21ca490ec79ca57af655c1df4287bbd0",
+          },
+        "9/declaration/body/7/argument/1/3/3/expression/right/1/1/1/expression/0/body/3/3":
+          {
+            content: {
+              en: " · ",
+              pl: " · ",
+            },
+            hash: "21ca490ec79ca57af655c1df4287bbd0",
+          },
+        "9/declaration/body/7/argument/1/5/1/3": {
+          content: {
+            en: "Ask Mimir",
+            pl: "Zapytaj Mimira",
+          },
+          hash: "c516ed1af9463ccd6bdcb19a1f13e4ac",
+        },
+        "9/declaration/body/7/argument/1/5/1/5": {
+          content: {
+            en: "Coming soon",
+            pl: "Już wkrótce",
+          },
+          hash: "05a8fc9f6d826fd88a809d98684edcad",
+        },
+        "9/declaration/body/7/argument/3/1/expression/right/1/3/3": {
+          content: {
+            en: "·",
+            pl: "·",
+          },
+          hash: "26b80ae8a680de73667e096098aa69d8",
+        },
+        "9/declaration/body/7/argument/3/1/expression/right/1/5/1": {
+          content: {
+            en: "Apply",
+          },
+          hash: "564f71b8fe2a63142499b340b1872989",
+        },
+        "9/declaration/body/7/argument/3/1/expression/right/1/5/3": {
+          content: {
+            en: "Reject",
+            pl: "Odrzuć",
+          },
+          hash: "2c1f1ee6b00186ee3a5adc2d86d00511",
+        },
+        "9/declaration/body/8/argument/1/1/1/3-placeholder": {
+          content: {
+            en: "Search",
+            pl: "Szukaj",
+          },
+          hash: "49dd6c21604b5e8d4153ff1aff2177e1",
+        },
+        "9/declaration/body/8/argument/1/3/1/1/1/3/expression/0/body/3/3": {
+          content: {
+            en: " · ",
+            pl: " · ",
+          },
+          hash: "21ca490ec79ca57af655c1df4287bbd0",
+        },
+        "9/declaration/body/8/argument/1/5/1/3": {
+          content: {
+            en: "Ask Mimir",
+            pl: "Zapytaj Mimira",
+          },
+          hash: "c516ed1af9463ccd6bdcb19a1f13e4ac",
+        },
+        "9/declaration/body/8/argument/1/5/1/5": {
+          content: {
+            en: "Coming soon",
+            pl: "Już wkrótce",
+          },
+          hash: "05a8fc9f6d826fd88a809d98684edcad",
+        },
+        "9/declaration/body/8/argument/3/1/expression/right/1/3/3": {
+          content: {
+            en: "·",
+            pl: "·",
+          },
+          hash: "26b80ae8a680de73667e096098aa69d8",
+        },
+        "9/declaration/body/8/argument/3/1/expression/right/1/5/1": {
+          content: {
+            en: "Apply",
+          },
+          hash: "564f71b8fe2a63142499b340b1872989",
+        },
+        "9/declaration/body/8/argument/3/1/expression/right/1/5/3": {
+          content: {
+            en: "Reject",
+            pl: "Odrzuć",
+          },
+          hash: "2c1f1ee6b00186ee3a5adc2d86d00511",
+        },
+        "9/declaration/body/9/argument/1/1/1/3-placeholder": {
+          content: {
+            en: "Search",
+            pl: "Szukaj",
+          },
+          hash: "49dd6c21604b5e8d4153ff1aff2177e1",
+        },
+        "9/declaration/body/9/argument/1/3/3/expression/right/1/1/1/expression/0/body/3/3":
+          {
+            content: {
+              en: " · ",
+              pl: " · ",
+            },
+            hash: "21ca490ec79ca57af655c1df4287bbd0",
+          },
+        "9/declaration/body/9/argument/1/5/1/3": {
+          content: {
+            en: "Ask Mimir",
+            pl: "Zapytaj Mimira",
+          },
+          hash: "c516ed1af9463ccd6bdcb19a1f13e4ac",
+        },
+        "9/declaration/body/9/argument/1/5/1/5": {
+          content: {
+            en: "Coming soon",
+            pl: "Już wkrótce",
+          },
+          hash: "05a8fc9f6d826fd88a809d98684edcad",
+        },
+        "9/declaration/body/9/argument/3/1/expression/right/1/3/3": {
+          content: {
+            en: "·",
+            pl: "·",
+          },
+          hash: "26b80ae8a680de73667e096098aa69d8",
+        },
+        "9/declaration/body/9/argument/3/1/expression/right/1/5/1": {
+          content: {
+            en: "Apply",
+          },
+          hash: "564f71b8fe2a63142499b340b1872989",
+        },
+        "9/declaration/body/9/argument/3/1/expression/right/1/5/3": {
+          content: {
+            en: "Reject",
+            pl: "Odrzuć",
+          },
+          hash: "2c1f1ee6b00186ee3a5adc2d86d00511",
+        },
       },
     },
     "app/(platform)/dashboard/layout.tsx": {
@@ -535,6 +1452,13 @@ export default {
           },
           hash: "06efb815f8e1f5d09e63d262ba48b4e7",
         },
+        "6/declaration/body/0/argument/3/1/3/1/3-placeholder": {
+          content: {
+            en: "Search...",
+            pl: "Szukaj...",
+          },
+          hash: "fe877a75eac472fc5b188c135c78a558",
+        },
         "6/declaration/body/0/argument/3/1/3/3-placeholder": {
           content: {
             en: "Search...",
@@ -555,6 +1479,20 @@ export default {
             pl: "Szukaj...",
           },
           hash: "fe877a75eac472fc5b188c135c78a558",
+        },
+        "7/declaration/body/0/argument/3/1/3/1/3-placeholder": {
+          content: {
+            en: "Search...",
+            pl: "Szukaj...",
+          },
+          hash: "fe877a75eac472fc5b188c135c78a558",
+        },
+        "7/declaration/body/0/argument/3/1/3/1/5": {
+          content: {
+            en: "K",
+            pl: "K",
+          },
+          hash: "489f9f6741e7c0ccffc1d8afa8a8e775",
         },
         "7/declaration/body/2/argument/3/1/3/1/3-placeholder": {
           content: {
@@ -653,6 +1591,20 @@ export default {
             pl: "Pulpit",
           },
           hash: "c9380ea68c8c76ea451bd9613329a07c",
+        },
+        "8/declaration/body/0/argument/5/1/3/1/3-placeholder": {
+          content: {
+            en: "Search...",
+            pl: "Szukaj...",
+          },
+          hash: "fe877a75eac472fc5b188c135c78a558",
+        },
+        "8/declaration/body/0/argument/5/1/3/1/5": {
+          content: {
+            en: "J",
+            pl: "J",
+          },
+          hash: "1dcfe2bd5ca155b558530a4add45261a",
         },
         "9/declaration/body/0/argument/1/3/1/1": {
           content: {
@@ -894,6 +1846,151 @@ export default {
             hash: "8208df3c0f89efff2b48433a4f98902e",
           },
         "10/declaration/body/0/argument/1/3/7/openingElement/0/value/expression":
+          {
+            content: {
+              en: "Deadline calendar",
+              pl: "Kalendarz terminów",
+            },
+            hash: "a943e8c4f3795b51abf0f1b7c9171701",
+          },
+        "10/declaration/body/2/argument/1/1/1": {
+          content: {
+            en: "Welcome back",
+            pl: "Witamy ponownie",
+          },
+          hash: "4928884739ba559e6e4b960e80fe1452",
+        },
+        "10/declaration/body/2/argument/1/1/3/1": {
+          content: {
+            en: "Generated using:",
+            pl: "Wygenerowano za pomocą:",
+          },
+          hash: "d695a89e3bf9a1d7dbd8f439acbbc769",
+        },
+        "10/declaration/body/2/argument/1/1/3/4": {
+          content: {
+            en: "<element:Symbol></element:Symbol> AI",
+            pl: "<element:Symbol></element:Symbol> AI",
+          },
+          hash: "17b6bff56042912b140ae4643179b3de",
+        },
+        "10/declaration/body/2/argument/1/3": {
+          content: {
+            en: "Today's briefing: Since yesterday we've managed to find you 5 new tenders, 3 require your attention.",
+            pl: "Dzisiejszy briefing: Od wczoraj udało nam się znaleźć dla Ciebie 5 nowych przetargów, 3 z nich wymagają Twojej uwagi.",
+          },
+          hash: "bb23bee9cbd51ec0a4c3678877f28602",
+        },
+        "10/declaration/body/2/argument/3/1/1/1-title": {
+          content: {
+            en: "Purchase of paraffin candles",
+            pl: "Zakup świec parafinowych",
+          },
+          hash: "12e0bad314c616da4bae345d99f447d6",
+        },
+        "10/declaration/body/2/argument/3/1/1/3-title": {
+          content: {
+            en: "Procurement of wax lights",
+            pl: "Zakup świec woskowych",
+          },
+          hash: "5807fc4c30f27d97ce1d8f8459e97db6",
+        },
+        "10/declaration/body/2/argument/3/1/1/5-title": {
+          content: {
+            en: "Acquisition of candle supplies",
+            pl: "Zakup materiałów do produkcji świec",
+          },
+          hash: "24976e1c7da9b714080547738cf8c681",
+        },
+        "10/declaration/body/2/argument/3/1/openingElement/0/value/expression":
+          {
+            content: {
+              en: "New tenders",
+              pl: "Nowe przetargi",
+            },
+            hash: "b6a405902627530cdf66b4c52e322ee3",
+          },
+        "10/declaration/body/2/argument/3/1/openingElement/1/value/expression":
+          {
+            content: {
+              en: "Open full list",
+              pl: "Otwórz pełną listę",
+            },
+            hash: "d7d42078fa4055c4d41ab919488af90d",
+          },
+        "10/declaration/body/2/argument/3/3/1/1": {
+          content: {
+            en: "New tenders: <element:span>3</element:span>",
+            pl: "Nowe przetargi: <element:span>3</element:span>",
+          },
+          hash: "939fffc5290191ce1f5634d1ac040918",
+        },
+        "10/declaration/body/2/argument/3/3/1/3": {
+          content: {
+            en: "Overall: <element:span>50</element:span>",
+            pl: "Łącznie: <element:span>50</element:span>",
+          },
+          hash: "2ec94a1c76bb85545c95a05da0cb5795",
+        },
+        "10/declaration/body/2/argument/3/3/1/5": {
+          content: {
+            en: "Accepted: <element:span>10</element:span>",
+            pl: "Zaakceptowane: <element:span>10</element:span>",
+          },
+          hash: "bbde79ce975a43f71350ef605bfa3875",
+        },
+        "10/declaration/body/2/argument/3/3/openingElement/0/value/expression":
+          {
+            content: {
+              en: "Stats",
+              pl: "Statystyki",
+            },
+            hash: "5cf8b052c89fa1b05397a956ebec69b2",
+          },
+        "10/declaration/body/2/argument/3/5/1": {
+          content: {
+            en: "Restocking medical equipment",
+            pl: "Uzupełnianie sprzętu medycznego",
+          },
+          hash: "c18ed7834c8bb0a3d6f1bf2c43dd172e",
+        },
+        "10/declaration/body/2/argument/3/5/3/1/1": {
+          content: {
+            en: "Preview",
+            pl: "Podgląd",
+          },
+          hash: "0b755f01c22d8f5f9232744cd6e70fe2",
+        },
+        "10/declaration/body/2/argument/3/5/3/3/1": {
+          content: {
+            en: "Filling-out data",
+            pl: "Wypełnianie danych",
+          },
+          hash: "0fea090a139a4174c3f1b2ca4a4c12d3",
+        },
+        "10/declaration/body/2/argument/3/5/3/5/1": {
+          content: {
+            en: "Application",
+            pl: "Aplikacja",
+          },
+          hash: "6dee9191cf69144d6b569683c49631d8",
+        },
+        "10/declaration/body/2/argument/3/5/5": {
+          content: {
+            en: "Continue",
+            pl: "Kontynuuj",
+          },
+          hash: "d34fc8a0b1f9070a796a8be4422bc439",
+        },
+        "10/declaration/body/2/argument/3/5/openingElement/0/value/expression":
+          {
+            content: {
+              en: "Return to last tender",
+              pl: "Wróć do ostatniego przetargu",
+            },
+            hash: "8208df3c0f89efff2b48433a4f98902e",
+          },
+        "10/declaration/body/2/argument/3/7/openingElement/0/value/expression":
           {
             content: {
               en: "Deadline calendar",
@@ -2694,6 +3791,153 @@ export default {
             },
             hash: "a943e8c4f3795b51abf0f1b7c9171701",
           },
+        "9/declaration/body/2/argument/1/1/1": {
+          content: {
+            en: "Welcome back",
+            pl: "Witamy ponownie",
+          },
+          hash: "4928884739ba559e6e4b960e80fe1452",
+        },
+        "9/declaration/body/2/argument/1/1/3/1": {
+          content: {
+            en: "Generated using:",
+            pl: "Wygenerowano za pomocą:",
+          },
+          hash: "d695a89e3bf9a1d7dbd8f439acbbc769",
+        },
+        "9/declaration/body/2/argument/1/1/3/4": {
+          content: {
+            en: "<element:Symbol></element:Symbol> AI",
+            pl: "<element:Symbol></element:Symbol> AI",
+          },
+          hash: "17b6bff56042912b140ae4643179b3de",
+        },
+        "9/declaration/body/2/argument/1/3": {
+          content: {
+            en: "Today's briefing: Since yesterday we've managed to find you 5 new tenders, 3 require your attention.",
+            pl: "Dzisiejszy briefing: Od wczoraj udało nam się znaleźć dla Ciebie 5 nowych przetargów, 3 z nich wymagają Twojej uwagi.",
+          },
+          hash: "bb23bee9cbd51ec0a4c3678877f28602",
+        },
+        "9/declaration/body/2/argument/3/1/openingElement/0/value/expression": {
+          content: {
+            en: "New tenders",
+            pl: "Nowe przetargi",
+          },
+          hash: "b6a405902627530cdf66b4c52e322ee3",
+        },
+        "9/declaration/body/2/argument/3/1/openingElement/1/value/expression": {
+          content: {
+            en: "New tenders",
+            pl: "Nowe przetargi",
+          },
+          hash: "b6a405902627530cdf66b4c52e322ee3",
+        },
+        "9/declaration/body/2/argument/3/1/openingElement/2/value/expression": {
+          content: {
+            en: "Open full list",
+            pl: "Otwórz pełną listę",
+          },
+          hash: "d7d42078fa4055c4d41ab919488af90d",
+        },
+        "9/declaration/body/2/argument/3/3/1/1": {
+          content: {
+            en: "New tenders: <element:span>3</element:span>",
+            pl: "Nowe przetargi: <element:span>3</element:span>",
+          },
+          hash: "939fffc5290191ce1f5634d1ac040918",
+        },
+        "9/declaration/body/2/argument/3/3/1/3": {
+          content: {
+            en: "Overall: <element:span>50</element:span>",
+            pl: "Łącznie: <element:span>50</element:span>",
+          },
+          hash: "2ec94a1c76bb85545c95a05da0cb5795",
+        },
+        "9/declaration/body/2/argument/3/3/1/5": {
+          content: {
+            en: "Accepted: <element:span>10</element:span>",
+            pl: "Zaakceptowane: <element:span>10</element:span>",
+          },
+          hash: "bbde79ce975a43f71350ef605bfa3875",
+        },
+        "9/declaration/body/2/argument/3/3/openingElement/0/value/expression": {
+          content: {
+            en: "Stats",
+            pl: "Statystyki",
+          },
+          hash: "5cf8b052c89fa1b05397a956ebec69b2",
+        },
+        "9/declaration/body/2/argument/3/3/openingElement/1/value/expression": {
+          content: {
+            en: "Stats",
+            pl: "Statystyki",
+          },
+          hash: "5cf8b052c89fa1b05397a956ebec69b2",
+        },
+        "9/declaration/body/2/argument/3/5/1": {
+          content: {
+            en: "Restocking medical equipment",
+            pl: "Uzupełnianie sprzętu medycznego",
+          },
+          hash: "c18ed7834c8bb0a3d6f1bf2c43dd172e",
+        },
+        "9/declaration/body/2/argument/3/5/3/1/1": {
+          content: {
+            en: "Preview",
+            pl: "Podgląd",
+          },
+          hash: "0b755f01c22d8f5f9232744cd6e70fe2",
+        },
+        "9/declaration/body/2/argument/3/5/3/3/1": {
+          content: {
+            en: "Filling-out data",
+            pl: "Wypełnianie danych",
+          },
+          hash: "0fea090a139a4174c3f1b2ca4a4c12d3",
+        },
+        "9/declaration/body/2/argument/3/5/3/5/1": {
+          content: {
+            en: "Application",
+            pl: "Aplikacja",
+          },
+          hash: "6dee9191cf69144d6b569683c49631d8",
+        },
+        "9/declaration/body/2/argument/3/5/5": {
+          content: {
+            en: "Continue",
+            pl: "Kontynuuj",
+          },
+          hash: "d34fc8a0b1f9070a796a8be4422bc439",
+        },
+        "9/declaration/body/2/argument/3/5/openingElement/0/value/expression": {
+          content: {
+            en: "Return to last tender",
+            pl: "Wróć do ostatniego przetargu",
+          },
+          hash: "8208df3c0f89efff2b48433a4f98902e",
+        },
+        "9/declaration/body/2/argument/3/5/openingElement/1/value/expression": {
+          content: {
+            en: "Return to last tender",
+            pl: "Wróć do ostatniego przetargu",
+          },
+          hash: "8208df3c0f89efff2b48433a4f98902e",
+        },
+        "9/declaration/body/2/argument/3/7/openingElement/0/value/expression": {
+          content: {
+            en: "Deadline calendar",
+            pl: "Kalendarz terminów",
+          },
+          hash: "a943e8c4f3795b51abf0f1b7c9171701",
+        },
+        "9/declaration/body/2/argument/3/7/openingElement/1/value/expression": {
+          content: {
+            en: "Deadline calendar",
+            pl: "Kalendarz terminów",
+          },
+          hash: "a943e8c4f3795b51abf0f1b7c9171701",
+        },
         "9/declaration/body/4/consequent/0/argument": {
           content: {
             en: "Loading...",
@@ -3945,6 +5189,34 @@ export default {
           },
           hash: "1d9871d895f03b60e4519d246dcd7b04",
         },
+        "3/declaration/body/3/argument/3/expression/alternate": {
+          content: {
+            en: "Not logged in",
+            pl: "Nie zalogowano",
+          },
+          hash: "bb319f3116b5316a6a1452af9d4e4022",
+        },
+        "3/declaration/body/3/argument/3/expression/consequent": {
+          content: {
+            en: "Logged in as {user.email}",
+            pl: "Zalogowano jako {user.email}",
+          },
+          hash: "1e299b7c5f37adedb2a5845af3e73e76",
+        },
+        "3/declaration/body/3/argument/5/1": {
+          content: {
+            en: "Mimira - Agentic platform for public tenders",
+            pl: "Mimira - platforma agentowa dla przetargów publicznych",
+          },
+          hash: "ff9449bff5d1d321c65ceaa4bc551f7c",
+        },
+        "3/declaration/body/3/argument/5/3": {
+          content: {
+            en: "This is long text demonstrating AI Translations",
+            pl: "To jest długi tekst demonstrujący tłumaczenia AI",
+          },
+          hash: "1d9871d895f03b60e4519d246dcd7b04",
+        },
       },
     },
     "features/auth/components/EmailSentMessage.tsx": {
@@ -4332,6 +5604,1125 @@ export default {
         },
       },
     },
+    "features/inbox/components/filter-chips.tsx": {
+      entries: {
+        "2/declaration/body/2/argument/1/expression/0/body": {
+          content: {
+            en: "<element:span>{label}</element:span>: {value}",
+            pl: "<element:span>{label}</element:span>: {value}",
+          },
+          hash: "b5ff5f82c340938863156b2fba30b411",
+        },
+        "2/declaration/body/2/argument/1/expression/0/body/1": {
+          content: {
+            en: "{label}: ",
+            pl: "{label}: ",
+          },
+          hash: "415c5299ca607ad17fcd26c58e7e1a5a",
+        },
+        "2/declaration/body/3/argument/1/expression/0/body": {
+          content: {
+            en: "<element:span>{label}</element:span>: {value}",
+            pl: "<element:span>{label}</element:span>: {value}",
+          },
+          hash: "b5ff5f82c340938863156b2fba30b411",
+        },
+        "3/declaration/body/3/argument/1/expression/0/body": {
+          content: {
+            en: "<element:span><function:t/></element:span>: {value}",
+            pl: "<element:span>{label}</element:span>: {value}",
+          },
+          hash: "b5ff5f82c340938863156b2fba30b411",
+        },
+        "4/declaration/body/4/argument/1/expression/0/body": {
+          content: {
+            en: "<element:span><function:getLabel/></element:span>: <element:span>{value}</element:span>",
+            pl: "<element:span>{label}</element:span>: {value}",
+          },
+          hash: "b5ff5f82c340938863156b2fba30b411",
+        },
+      },
+    },
+    "features/inbox/components/filter-form.tsx": {
+      entries: {
+        "4/declaration/body/1/argument/1-label": {
+          content: {
+            en: "Date Range",
+            pl: "Zakres dat",
+          },
+          hash: "9b3aa5954144de586931f60ef9594e99",
+        },
+        "4/declaration/body/1/argument/1/openingElement/2/value/expression/body-label":
+          {
+            content: {
+              en: "Date Range",
+              pl: "Zakres dat",
+            },
+            hash: "9b3aa5954144de586931f60ef9594e99",
+          },
+        "4/declaration/body/1/argument/3/openingElement/2/value/expression/body-label":
+          {
+            content: {
+              en: "Voivodeship",
+              pl: "Województwo",
+            },
+            hash: "b29e7fb41cd951f791b73fc5fc19561c",
+          },
+        "4/declaration/body/1/argument/5": {
+          content: {
+            en: "Apply Filters",
+            pl: "Zastosuj filtry",
+          },
+          hash: "654bc45ae1a830657660662ecfe83468",
+        },
+        "4/declaration/body/1/argument/5/openingElement/2/value/expression/body-label":
+          {
+            content: {
+              en: "Sort by offers deadline",
+              pl: "Sortuj według terminu oferty",
+            },
+            hash: "0d941d5622d495d9136ca81491fd1699",
+          },
+        "4/declaration/body/1/argument/5/openingElement/2/value/expression/body-placeholder":
+          {
+            content: {
+              en: "Select sorting order",
+              pl: "Wybierz kolejność sortowania",
+            },
+            hash: "b1f1eae0af0ad6b503637d0fe60d3e48",
+          },
+        "4/declaration/body/1/argument/5/openingElement/2/value/expression/body/1":
+          {
+            content: {
+              en: "Ascending (Earliest first)",
+              pl: "Rosnąco (Najwcześniejsze pierwsze)",
+            },
+            hash: "4fd1fc831a94f10e33bff13b66c2b939",
+          },
+        "4/declaration/body/1/argument/5/openingElement/2/value/expression/body/3":
+          {
+            content: {
+              en: "Ascending (Earliest first)",
+              pl: "Rosnąco (Najwcześniejsze pierwsze)",
+            },
+            hash: "4fd1fc831a94f10e33bff13b66c2b939",
+          },
+        "4/declaration/body/1/argument/7": {
+          content: {
+            en: "Apply Filters",
+            pl: "Zastosuj filtry",
+          },
+          hash: "654bc45ae1a830657660662ecfe83468",
+        },
+        "4/declaration/body/2/argument/1/openingElement/2/value/expression/body-label":
+          {
+            content: {
+              en: "Date Range",
+              pl: "Zakres dat",
+            },
+            hash: "9b3aa5954144de586931f60ef9594e99",
+          },
+        "4/declaration/body/2/argument/3/openingElement/2/value/expression/body-label":
+          {
+            content: {
+              en: "Voivodeship",
+              pl: "Województwo",
+            },
+            hash: "b29e7fb41cd951f791b73fc5fc19561c",
+          },
+        "4/declaration/body/2/argument/5": {
+          content: {
+            en: "Apply Filters",
+            pl: "Zastosuj filtry",
+          },
+          hash: "654bc45ae1a830657660662ecfe83468",
+        },
+        "5/declaration/body/1/argument/1/openingElement/2/value/expression/body-label":
+          {
+            content: {
+              en: "Date Range",
+              pl: "Zakres dat",
+            },
+            hash: "9b3aa5954144de586931f60ef9594e99",
+          },
+        "5/declaration/body/1/argument/3/openingElement/2/value/expression/body-label":
+          {
+            content: {
+              en: "Voivodeship",
+              pl: "Województwo",
+            },
+            hash: "b29e7fb41cd951f791b73fc5fc19561c",
+          },
+        "5/declaration/body/1/argument/5": {
+          content: {
+            en: "Apply Filters",
+            pl: "Zastosuj filtry",
+          },
+          hash: "654bc45ae1a830657660662ecfe83468",
+        },
+        "5/declaration/body/1/argument/5/openingElement/2/value/expression/body-label":
+          {
+            content: {
+              en: "Sort by Offers Date",
+              pl: "Sortuj według daty ofert",
+            },
+            hash: "e0789487e9da7425c6ac6f0fedafb03c",
+          },
+        "5/declaration/body/1/argument/5/openingElement/2/value/expression/body/1/expression/0/body/1/expression/alternate":
+          {
+            content: {
+              en: "Descending ",
+              pl: "Malejąco ",
+            },
+            hash: "1753fa05ae1a15b2e68d387501d841b8",
+          },
+        "5/declaration/body/1/argument/5/openingElement/2/value/expression/body/1/expression/0/body/1/expression/consequent":
+          {
+            content: {
+              en: "Ascending ",
+              pl: "Rosnąco ",
+            },
+            hash: "83b2b5091ce614ccbee9d74e9f244502",
+          },
+        "5/declaration/body/1/argument/7": {
+          content: {
+            en: "Apply Filters",
+            pl: "Zastosuj filtry",
+          },
+          hash: "654bc45ae1a830657660662ecfe83468",
+        },
+        "5/declaration/body/2/argument/1/openingElement/2/value/expression/body-label":
+          {
+            content: {
+              en: "Date Range",
+              pl: "Zakres dat",
+            },
+            hash: "9b3aa5954144de586931f60ef9594e99",
+          },
+        "5/declaration/body/2/argument/3/openingElement/2/value/expression/body-label":
+          {
+            content: {
+              en: "Voivodeship",
+              pl: "Województwo",
+            },
+            hash: "b29e7fb41cd951f791b73fc5fc19561c",
+          },
+        "5/declaration/body/2/argument/5": {
+          content: {
+            en: "Apply Filters",
+            pl: "Zastosuj filtry",
+          },
+          hash: "654bc45ae1a830657660662ecfe83468",
+        },
+      },
+    },
+    "features/inbox/components/tender-preview.tsx": {
+      entries: {
+        "4/declaration/body/0/consequent/0/argument/1/1": {
+          content: {
+            en: "Select a tender to view details",
+            pl: "Wybierz ofertę, aby zobaczyć szczegóły",
+          },
+          hash: "067789b01a081458db2f872f10a37c3f",
+        },
+        "4/declaration/body/1/argument/1/1/3/3": {
+          content: {
+            en: "·",
+            pl: "·",
+          },
+          hash: "26b80ae8a680de73667e096098aa69d8",
+        },
+        "4/declaration/body/1/argument/1/1/5/1": {
+          content: {
+            en: "Apply",
+          },
+          hash: "a91df23e32b5d1457b62f98e6d90c2c0",
+        },
+        "4/declaration/body/1/argument/1/1/5/3": {
+          content: {
+            en: "Reject",
+            pl: "Odrzuć",
+          },
+          hash: "21c303829516a636a6c306dcd68a64ec",
+        },
+        "4/declaration/body/1/argument/1/3/1/1": {
+          content: {
+            en: "Description",
+            pl: "Opis",
+          },
+          hash: "e17686a22ffad04cc7bb70524ed4478b",
+        },
+        "4/declaration/body/2/argument/1/1/3/3": {
+          content: {
+            en: "·",
+            pl: "·",
+          },
+          hash: "26b80ae8a680de73667e096098aa69d8",
+        },
+        "4/declaration/body/2/argument/1/1/5/1": {
+          content: {
+            en: "Apply",
+          },
+          hash: "a91df23e32b5d1457b62f98e6d90c2c0",
+        },
+        "4/declaration/body/2/argument/1/1/5/3": {
+          content: {
+            en: "Reject",
+            pl: "Odrzuć",
+          },
+          hash: "21c303829516a636a6c306dcd68a64ec",
+        },
+        "4/declaration/body/2/argument/1/3/1/1": {
+          content: {
+            en: "At a glance",
+            pl: "W skrócie",
+          },
+          hash: "c52ee5a5653c68ec4ce5c3907eced38e",
+        },
+        "4/declaration/body/2/argument/1/3/1/1/1": {
+          content: {
+            en: "At a glance",
+            pl: "W skrócie",
+          },
+          hash: "c52ee5a5653c68ec4ce5c3907eced38e",
+        },
+        "4/declaration/body/2/argument/1/3/1/1/1-title": {
+          content: {
+            en: "At a glance",
+            pl: "W skrócie",
+          },
+          hash: "c52ee5a5653c68ec4ce5c3907eced38e",
+        },
+        "5/declaration/body/0/consequent/0/argument/1/1": {
+          content: {
+            en: "Select a tender to view details",
+            pl: "Wybierz ofertę, aby zobaczyć szczegóły",
+          },
+          hash: "067789b01a081458db2f872f10a37c3f",
+        },
+        "5/declaration/body/1/argument/1/3/3/3": {
+          content: {
+            en: "·",
+            pl: "·",
+          },
+          hash: "26b80ae8a680de73667e096098aa69d8",
+        },
+        "5/declaration/body/1/argument/1/3/5/1": {
+          content: {
+            en: "Apply",
+          },
+          hash: "a91df23e32b5d1457b62f98e6d90c2c0",
+        },
+        "5/declaration/body/1/argument/1/3/5/3": {
+          content: {
+            en: "Reject",
+            pl: "Odrzuć",
+          },
+          hash: "21c303829516a636a6c306dcd68a64ec",
+        },
+        "5/declaration/body/1/argument/1/7/1/11/1": {
+          content: {
+            en: "Requirements",
+            pl: "Wymagania",
+          },
+          hash: "e108e149e0fd5b65f5850b6f032ccabe",
+        },
+        "5/declaration/body/1/argument/1/7/1/11/3/11/expression/right/1": {
+          content: {
+            en: "<element:AlertCircle></element:AlertCircle> Not Met Requirements",
+            pl: "<element:AlertCircle></element:AlertCircle> Niespełnione wymagania",
+          },
+          hash: "dd39f93db23a5bdc8c28063b00404f57",
+        },
+        "5/declaration/body/1/argument/1/7/1/11/3/15/expression/right/1": {
+          content: {
+            en: "Review Criteria",
+            pl: "Kryteria oceny",
+          },
+          hash: "e969366ddcde49563a1f3c3e3e1ac51e",
+        },
+        "5/declaration/body/1/argument/1/7/1/11/3/3/expression/right/1": {
+          content: {
+            en: "<element:CheckCircle></element:CheckCircle> Met Requirements",
+            pl: "<element:CheckCircle></element:CheckCircle> Spełnione wymagania",
+          },
+          hash: "8cde35838b1e8d3c0a0154451ca06b77",
+        },
+        "5/declaration/body/1/argument/1/7/1/11/3/7/expression/right/1": {
+          content: {
+            en: "<element:AlertCircle></element:AlertCircle> Needs Confirmation",
+            pl: "<element:AlertCircle></element:AlertCircle> Wymaga potwierdzenia",
+          },
+          hash: "53c8108a5cb092758b1df0c005114bc3",
+        },
+        "5/declaration/body/1/argument/1/7/1/15/1": {
+          content: {
+            en: "Others",
+            pl: "Inne",
+          },
+          hash: "39160224ce0e35eb4eb252c997edf4d8",
+        },
+        "5/declaration/body/1/argument/1/7/1/15/3/1/expression/right/1": {
+          content: {
+            en: "Application Form",
+            pl: "Formularz zgłoszeniowy",
+          },
+          hash: "c220b9c5021006d1d23af4cfdf20afd5",
+        },
+        "5/declaration/body/1/argument/1/7/1/15/3/3/expression/right/1": {
+          content: {
+            en: "Payment Terms",
+            pl: "Warunki płatności",
+          },
+          hash: "a3f41e5d04d5dffd5668d53fc113ad99",
+        },
+        "5/declaration/body/1/argument/1/7/1/15/3/5/expression/right/1": {
+          content: {
+            en: "Contract Penalties",
+            pl: "Kary umowne",
+          },
+          hash: "37f6dcb654b781e022026a7b63e94b68",
+        },
+        "5/declaration/body/1/argument/1/7/1/15/3/7/expression/right/1": {
+          content: {
+            en: "Deposit Information",
+            pl: "Informacje o depozycie",
+          },
+          hash: "556b5a641d5f7505486c2d77ae22cae9",
+        },
+        "5/declaration/body/1/argument/1/7/1/15/3/9/expression/right/1": {
+          content: {
+            en: "Source URL",
+            pl: "Źródłowy URL",
+          },
+          hash: "b6372d7741707764e2a306a7c6a35959",
+        },
+        "5/declaration/body/1/argument/1/7/1/3/1": {
+          content: {
+            en: "At a Glance",
+            pl: "W skrócie",
+          },
+          hash: "9d55775994a0e6c016fe7e271533bf45",
+        },
+        "5/declaration/body/1/argument/1/7/1/3/3/3/3/expression/right/1/1": {
+          content: {
+            en: "W",
+            pl: "W",
+          },
+          hash: "fc9ed8fef7b4900c27435c8d75d6112c",
+        },
+        "5/declaration/body/1/argument/1/7/1/3/3/3/3/expression/right/3": {
+          content: {
+            en: "Wadium: {tender.wadium_llm}",
+            pl: "Wadium: {tender.wadium_llm}",
+          },
+          hash: "a7908a3166c9eccd9acd413e39b72c11",
+        },
+        "5/declaration/body/1/argument/1/7/1/3/3/3/5/expression/right/3": {
+          content: {
+            en: "Completion: {tender.ordercompletiondate_llm}",
+            pl: "Realizacja: {tender.ordercompletiondate_llm}",
+          },
+          hash: "02db4c377c520adfab6b28ad89dcc12a",
+        },
+        "5/declaration/body/1/argument/1/7/1/7/1": {
+          content: {
+            en: "Description",
+            pl: "Opis",
+          },
+          hash: "e17686a22ffad04cc7bb70524ed4478b",
+        },
+        "5/declaration/body/1/argument/1/7/1/7/3/1/expression/alternate": {
+          content: {
+            en: "No detailed description available",
+            pl: "Brak szczegółowego opisu",
+          },
+          hash: "ce0c0d478fcf8da31bbb6ad7a1478868",
+        },
+        "5/declaration/body/2/argument/1/1/3/3": {
+          content: {
+            en: "·",
+            pl: "·",
+          },
+          hash: "26b80ae8a680de73667e096098aa69d8",
+        },
+        "5/declaration/body/2/argument/1/1/5/1": {
+          content: {
+            en: "Apply",
+          },
+          hash: "a91df23e32b5d1457b62f98e6d90c2c0",
+        },
+        "5/declaration/body/2/argument/1/1/5/3": {
+          content: {
+            en: "Reject",
+            pl: "Odrzuć",
+          },
+          hash: "21c303829516a636a6c306dcd68a64ec",
+        },
+        "5/declaration/body/2/argument/1/3/1/1/1": {
+          content: {
+            en: "At a glance",
+            pl: "W skrócie",
+          },
+          hash: "c52ee5a5653c68ec4ce5c3907eced38e",
+        },
+        "6/declaration/body/3/consequent/0/argument/1/1": {
+          content: {
+            en: "Select a tender to view details",
+            pl: "Wybierz ofertę, aby zobaczyć szczegóły",
+          },
+          hash: "067789b01a081458db2f872f10a37c3f",
+        },
+        "6/declaration/body/5/argument/1/3/3/3": {
+          content: {
+            en: "·",
+            pl: "·",
+          },
+          hash: "26b80ae8a680de73667e096098aa69d8",
+        },
+        "6/declaration/body/5/argument/1/3/5/1": {
+          content: {
+            en: "Apply",
+          },
+          hash: "a91df23e32b5d1457b62f98e6d90c2c0",
+        },
+        "6/declaration/body/5/argument/1/3/5/3": {
+          content: {
+            en: "Reject",
+            pl: "Odrzuć",
+          },
+          hash: "21c303829516a636a6c306dcd68a64ec",
+        },
+        "6/declaration/body/5/argument/1/7/3/1/11/1": {
+          content: {
+            en: "Requirements",
+            pl: "Wymagania",
+          },
+          hash: "e108e149e0fd5b65f5850b6f032ccabe",
+        },
+        "6/declaration/body/5/argument/1/7/3/1/11/3/11/expression/right/1": {
+          content: {
+            en: "<element:AlertCircle></element:AlertCircle> Not Met Requirements",
+            pl: "<element:AlertCircle></element:AlertCircle> Niespełnione wymagania",
+          },
+          hash: "4ee1504b99ff60d74488ab34426ed8ad",
+        },
+        "6/declaration/body/5/argument/1/7/3/1/11/3/15/expression/right/1": {
+          content: {
+            en: "Review Criteria",
+            pl: "Kryteria oceny",
+          },
+          hash: "73f2098c339274d847f5086bf5bcf61f",
+        },
+        "6/declaration/body/5/argument/1/7/3/1/11/3/3/expression/right/1": {
+          content: {
+            en: "<element:CheckCircle></element:CheckCircle> Met Requirements",
+            pl: "<element:CheckCircle></element:CheckCircle> Spełnione wymagania",
+          },
+          hash: "de1873a50cb65483443431e1c2d60c5b",
+        },
+        "6/declaration/body/5/argument/1/7/3/1/11/3/7/expression/right/1": {
+          content: {
+            en: "<element:AlertCircle></element:AlertCircle> Needs Confirmation",
+            pl: "<element:AlertCircle></element:AlertCircle> Wymaga potwierdzenia",
+          },
+          hash: "9fc1a16e6fd34b2e038519daf7ed6406",
+        },
+        "6/declaration/body/5/argument/1/7/3/1/15/1": {
+          content: {
+            en: "Others",
+            pl: "Inne",
+          },
+          hash: "39160224ce0e35eb4eb252c997edf4d8",
+        },
+        "6/declaration/body/5/argument/1/7/3/1/15/3/1/expression/right/1": {
+          content: {
+            en: "Application Form",
+            pl: "Formularz zgłoszeniowy",
+          },
+          hash: "269871c885cc75e625cd37409d6aa6f3",
+        },
+        "6/declaration/body/5/argument/1/7/3/1/15/3/3/expression/right/1": {
+          content: {
+            en: "Payment Terms",
+            pl: "Warunki płatności",
+          },
+          hash: "e6953edd0fa1d95783cc7e77cf663edc",
+        },
+        "6/declaration/body/5/argument/1/7/3/1/15/3/5/expression/right/1": {
+          content: {
+            en: "Contract Penalties",
+            pl: "Kary umowne",
+          },
+          hash: "a1bf0fb468c850f31f5f7ea7c576173f",
+        },
+        "6/declaration/body/5/argument/1/7/3/1/15/3/7/expression/right/1": {
+          content: {
+            en: "Deposit Information",
+            pl: "Informacje o zaliczce",
+          },
+          hash: "6c3e69c83f7ab356409c710497965d46",
+        },
+        "6/declaration/body/5/argument/1/7/3/1/15/3/9/expression/right/1": {
+          content: {
+            en: "Source URL",
+            pl: "Źródłowy URL",
+          },
+          hash: "8a990e2d4cde34bbf42ef54a7a837633",
+        },
+        "6/declaration/body/5/argument/1/7/3/1/3/1": {
+          content: {
+            en: "At a Glance",
+            pl: "W skrócie",
+          },
+          hash: "9d55775994a0e6c016fe7e271533bf45",
+        },
+        "6/declaration/body/5/argument/1/7/3/1/3/3/3/3/expression/right/1/1": {
+          content: {
+            en: "W",
+            pl: "W",
+          },
+          hash: "537bf79791e7f93cb2e3140ab49ce70d",
+        },
+        "6/declaration/body/5/argument/1/7/3/1/3/3/3/3/expression/right/3": {
+          content: {
+            en: "Wadium: {tender.wadium_llm}",
+            pl: "Wadium: {tender.wadium_llm}",
+          },
+          hash: "a7908a3166c9eccd9acd413e39b72c11",
+        },
+        "6/declaration/body/5/argument/1/7/3/1/3/3/3/5/expression/right/3": {
+          content: {
+            en: "Completion: {tender.ordercompletiondate_llm}",
+            pl: "Zakończenie: {tender.ordercompletiondate_llm}",
+          },
+          hash: "329ae0d02b034c7833b81d6d9cfc4a3a",
+        },
+        "6/declaration/body/5/argument/1/7/3/1/7/1": {
+          content: {
+            en: "Description",
+            pl: "Opis",
+          },
+          hash: "e17686a22ffad04cc7bb70524ed4478b",
+        },
+        "6/declaration/body/5/argument/1/7/3/1/7/3/1/expression/alternate": {
+          content: {
+            en: "No detailed description available",
+            pl: "Brak szczegółowego opisu",
+          },
+          hash: "2654605a88bc1dc81e93e3207f50486d",
+        },
+        "6/declaration/body/5/argument/1/7/7/1/1": {
+          content: {
+            en: "Outline",
+            pl: "Zarys",
+          },
+          hash: "c0afd302caeecd63803a83f8b51e3e49",
+        },
+      },
+    },
+    "features/inbox/hooks/use-filter-form.tsx": {
+      entries: {
+        "11/declaration/body/3/0/init/0/body/1/consequent/0/expression/0/1/value":
+          {
+            content: {
+              en: "Date From",
+              pl: "Data od",
+            },
+            hash: "c2cf744143e5fb6574a5c602dbcdf546",
+          },
+        "11/declaration/body/3/0/init/0/body/2/consequent/0/expression/0/1/value":
+          {
+            content: {
+              en: "Date To",
+              pl: "Data do",
+            },
+            hash: "b22b608c827041a82ddedd8680badabb",
+          },
+        "11/declaration/body/3/0/init/0/body/3/consequent/0/expression/0/1/value":
+          {
+            content: {
+              en: "Voivodeship",
+              pl: "Województwo",
+            },
+            hash: "b29e7fb41cd951f791b73fc5fc19561c",
+          },
+        "11/declaration/body/3/0/init/0/body/4/consequent/0/expression/0/1/value":
+          {
+            content: {
+              en: "Sort by Offers Date",
+              pl: "Sortuj według daty ofert",
+            },
+            hash: "e0789487e9da7425c6ac6f0fedafb03c",
+          },
+        "12/declaration/body/3/0/init/0/body/1/consequent/0/expression/0/1/value":
+          {
+            content: {
+              en: "Date From",
+              pl: "Data od",
+            },
+            hash: "c2cf744143e5fb6574a5c602dbcdf546",
+          },
+        "12/declaration/body/3/0/init/0/body/2/consequent/0/expression/0/1/value":
+          {
+            content: {
+              en: "Date To",
+              pl: "Data do",
+            },
+            hash: "b22b608c827041a82ddedd8680badabb",
+          },
+        "12/declaration/body/3/0/init/0/body/3/consequent/0/expression/0/1/value":
+          {
+            content: {
+              en: "Voivodeship",
+              pl: "Województwo",
+            },
+            hash: "b29e7fb41cd951f791b73fc5fc19561c",
+          },
+        "12/declaration/body/3/0/init/0/body/4/consequent/0/expression/0/1/value":
+          {
+            content: {
+              en: "Sort by Offers Date",
+              pl: "Sortuj według daty ofert",
+            },
+            hash: "e0789487e9da7425c6ac6f0fedafb03c",
+          },
+        "12/declaration/body/3/0/init/0/body/4/consequent/1/expression/0/1/value":
+          {
+            content: {
+              en: "Sort by Offers Date",
+              pl: "Sortuj według daty ofert",
+            },
+            hash: "e0789487e9da7425c6ac6f0fedafb03c",
+          },
+        "12/declaration/body/3/0/init/0/body/4/consequent/1/expression/0/2/value/1/expression/right":
+          {
+            content: {
+              en: "Ascending",
+              pl: "Rosnąco",
+            },
+            hash: "d8d7ee5f9fba1e29a313e7f7d012830a",
+          },
+        "12/declaration/body/3/0/init/0/body/4/consequent/1/expression/0/2/value/3/expression/right":
+          {
+            content: {
+              en: "Descending",
+              pl: "Malejąco",
+            },
+            hash: "04dc77f3df63ba7700a697a9cac8f8cc",
+          },
+        "8/declaration/0/init/0/1/value": {
+          content: {
+            en: "Ascending",
+            pl: "Rosnąco",
+          },
+          hash: "d8d7ee5f9fba1e29a313e7f7d012830a",
+        },
+        "8/declaration/0/init/1/1/value": {
+          content: {
+            en: "Descending",
+            pl: "Malejąco",
+          },
+          hash: "04dc77f3df63ba7700a697a9cac8f8cc",
+        },
+      },
+    },
+    "features/navigation/components/dashboard-command.tsx": {
+      entries: {
+        "3/declaration/body/2/argument/1/1-placeholder": {
+          content: {
+            en: "Search tenders, navigate, or run commands...",
+            pl: "Wyszukaj przetargi, nawiguj lub wykonaj polecenia...",
+          },
+          hash: "c9f9b1094baadc06057ca69704870898",
+        },
+        "3/declaration/body/2/argument/1/3/1": {
+          content: {
+            en: "No results found.",
+            pl: "Nie znaleziono wyników.",
+          },
+          hash: "8e37a23d37d7b4f501a20991a0d311ea",
+        },
+        "3/declaration/body/2/argument/1/3/11/1/3": {
+          content: {
+            en: "Profile",
+            pl: "Profil",
+          },
+          hash: "d7878693f91303a438852d617f6d35df",
+        },
+        "3/declaration/body/2/argument/1/3/11/1/5": {
+          content: {
+            en: "⌘P",
+            pl: "⌘P",
+          },
+          hash: "14bb9839b2d8347dbca254b5ee37332b",
+        },
+        "3/declaration/body/2/argument/1/3/11/3/3": {
+          content: {
+            en: "Settings",
+            pl: "Ustawienia",
+          },
+          hash: "8df6777277469c1fd88cc18dde2f1cc3",
+        },
+        "3/declaration/body/2/argument/1/3/11/3/5": {
+          content: {
+            en: "⌘S",
+            pl: "⌘S",
+          },
+          hash: "952c1f09d305e01568eaba0298f8faae",
+        },
+        "3/declaration/body/2/argument/1/3/3/1/3": {
+          content: {
+            en: "Go to Dashboard",
+            pl: "Przejdź do pulpitu",
+          },
+          hash: "a6efa97d25e36fedc0af794f6ba610f2",
+        },
+        "3/declaration/body/2/argument/1/3/3/1/5": {
+          content: {
+            en: "⌘H",
+            pl: "⌘H",
+          },
+          hash: "cee99c1cdf38e7eaf74d4d6f321f5c9e",
+        },
+        "3/declaration/body/2/argument/1/3/3/3/3": {
+          content: {
+            en: "Discover New Tenders",
+            pl: "Odkryj nowe przetargi",
+          },
+          hash: "bff28bbb9a32e0ddf1aba571d27ea42e",
+        },
+        "3/declaration/body/2/argument/1/3/3/3/5": {
+          content: {
+            en: "⌘D",
+            pl: "⌘D",
+          },
+          hash: "2983b3b406ccea5d9a13909b908cb6da",
+        },
+        "3/declaration/body/2/argument/1/3/3/5/3": {
+          content: {
+            en: "Active Tenders",
+            pl: "Aktywne przetargi",
+          },
+          hash: "0147723bff53dafb49b3b28df5e1b059",
+        },
+        "3/declaration/body/2/argument/1/3/3/5/5": {
+          content: {
+            en: "⌘A",
+            pl: "⌘A",
+          },
+          hash: "27b3cc61b7915696bb9780c010a54c6b",
+        },
+        "3/declaration/body/2/argument/1/3/3/7/3": {
+          content: {
+            en: "Documents",
+            pl: "Dokumenty",
+          },
+          hash: "c3882fc98216636873ab9091f3453f0c",
+        },
+        "3/declaration/body/2/argument/1/3/3/7/5": {
+          content: {
+            en: "⌘E",
+            pl: "⌘E",
+          },
+          hash: "fcb84ce36894141f2f0d5c32109b591c",
+        },
+        "3/declaration/body/2/argument/1/3/7/1/3": {
+          content: {
+            en: "Search Tenders",
+            pl: "Wyszukaj przetargi",
+          },
+          hash: "ad07e00950c1c509ab70b3af30e16d44",
+        },
+        "3/declaration/body/2/argument/1/3/7/1/5": {
+          content: {
+            en: "⌘K",
+            pl: "⌘K",
+          },
+          hash: "59a141903af748938873fd73757936f4",
+        },
+        "3/declaration/body/2/argument/1/3/7/3/3": {
+          content: {
+            en: "Filter by Date Range",
+            pl: "Filtruj według zakresu dat",
+          },
+          hash: "4b90d4c7e6a89e9fcbdd97c0b8906f0d",
+        },
+        "3/declaration/body/2/argument/1/3/7/3/5": {
+          content: {
+            en: "⌘B",
+            pl: "⌘B",
+          },
+          hash: "5de426ac8b1b0188c016c52116d34f5e",
+        },
+        "3/declaration/body/2/argument/1/3/7/5/3": {
+          content: {
+            en: "View Notifications",
+            pl: "Zobacz powiadomienia",
+          },
+          hash: "bf2dcc693869ceee19b29be9b977b571",
+        },
+        "3/declaration/body/2/argument/1/3/7/5/5": {
+          content: {
+            en: "⌘S",
+            pl: "⌘S",
+          },
+          hash: "952c1f09d305e01568eaba0298f8faae",
+        },
+        "4/declaration/body/3/argument/1/1-placeholder": {
+          content: {
+            en: "Search tenders, navigate, or run commands...",
+            pl: "Wyszukaj przetargi, nawiguj lub wykonaj polecenia...",
+          },
+          hash: "c9f9b1094baadc06057ca69704870898",
+        },
+        "4/declaration/body/3/argument/1/3/1": {
+          content: {
+            en: "No results found.",
+            pl: "Nie znaleziono wyników.",
+          },
+          hash: "8e37a23d37d7b4f501a20991a0d311ea",
+        },
+        "4/declaration/body/3/argument/1/3/11/1/3": {
+          content: {
+            en: "Profile",
+            pl: "Profil",
+          },
+          hash: "d7878693f91303a438852d617f6d35df",
+        },
+        "4/declaration/body/3/argument/1/3/11/1/5": {
+          content: {
+            en: "⌘P",
+            pl: "⌘P",
+          },
+          hash: "14bb9839b2d8347dbca254b5ee37332b",
+        },
+        "4/declaration/body/3/argument/1/3/11/3/3": {
+          content: {
+            en: "Settings",
+            pl: "Ustawienia",
+          },
+          hash: "8df6777277469c1fd88cc18dde2f1cc3",
+        },
+        "4/declaration/body/3/argument/1/3/11/3/5": {
+          content: {
+            en: "⌘S",
+            pl: "⌘S",
+          },
+          hash: "952c1f09d305e01568eaba0298f8faae",
+        },
+        "4/declaration/body/3/argument/1/3/3/1/3": {
+          content: {
+            en: "Go to Dashboard",
+            pl: "Przejdź do pulpitu",
+          },
+          hash: "a6efa97d25e36fedc0af794f6ba610f2",
+        },
+        "4/declaration/body/3/argument/1/3/3/1/5": {
+          content: {
+            en: "⌘H",
+            pl: "⌘H",
+          },
+          hash: "cee99c1cdf38e7eaf74d4d6f321f5c9e",
+        },
+        "4/declaration/body/3/argument/1/3/3/3/3": {
+          content: {
+            en: "Discover New Tenders",
+            pl: "Odkryj nowe przetargi",
+          },
+          hash: "bff28bbb9a32e0ddf1aba571d27ea42e",
+        },
+        "4/declaration/body/3/argument/1/3/3/3/5": {
+          content: {
+            en: "⌘D",
+            pl: "⌘D",
+          },
+          hash: "2983b3b406ccea5d9a13909b908cb6da",
+        },
+        "4/declaration/body/3/argument/1/3/3/5/3": {
+          content: {
+            en: "Active Tenders",
+            pl: "Aktywne przetargi",
+          },
+          hash: "0147723bff53dafb49b3b28df5e1b059",
+        },
+        "4/declaration/body/3/argument/1/3/3/5/5": {
+          content: {
+            en: "⌘A",
+            pl: "⌘A",
+          },
+          hash: "27b3cc61b7915696bb9780c010a54c6b",
+        },
+        "4/declaration/body/3/argument/1/3/3/7/3": {
+          content: {
+            en: "Documents",
+            pl: "Dokumenty",
+          },
+          hash: "c3882fc98216636873ab9091f3453f0c",
+        },
+        "4/declaration/body/3/argument/1/3/3/7/5": {
+          content: {
+            en: "⌘E",
+            pl: "⌘E",
+          },
+          hash: "fcb84ce36894141f2f0d5c32109b591c",
+        },
+        "4/declaration/body/3/argument/1/3/7/1/3": {
+          content: {
+            en: "Search Tenders",
+            pl: "Wyszukaj przetargi",
+          },
+          hash: "ad07e00950c1c509ab70b3af30e16d44",
+        },
+        "4/declaration/body/3/argument/1/3/7/1/5": {
+          content: {
+            en: "⌘K",
+            pl: "⌘K",
+          },
+          hash: "59a141903af748938873fd73757936f4",
+        },
+        "4/declaration/body/3/argument/1/3/7/3/3": {
+          content: {
+            en: "Filter by Date Range",
+            pl: "Filtruj według zakresu dat",
+          },
+          hash: "4b90d4c7e6a89e9fcbdd97c0b8906f0d",
+        },
+        "4/declaration/body/3/argument/1/3/7/5/3": {
+          content: {
+            en: "View Notifications",
+            pl: "Zobacz powiadomienia",
+          },
+          hash: "bf2dcc693869ceee19b29be9b977b571",
+        },
+        "4/declaration/body/4/argument/1/1-placeholder": {
+          content: {
+            en: "Search tenders, navigate, or run commands...",
+            pl: "Wyszukaj przetargi, nawiguj lub wykonaj polecenia...",
+          },
+          hash: "c9f9b1094baadc06057ca69704870898",
+        },
+        "4/declaration/body/4/argument/1/3/1": {
+          content: {
+            en: "No results found.",
+            pl: "Nie znaleziono wyników.",
+          },
+          hash: "8e37a23d37d7b4f501a20991a0d311ea",
+        },
+        "4/declaration/body/4/argument/1/3/11/1/3": {
+          content: {
+            en: "Profile",
+            pl: "Profil",
+          },
+          hash: "d7878693f91303a438852d617f6d35df",
+        },
+        "4/declaration/body/4/argument/1/3/11/1/5": {
+          content: {
+            en: "⌘P",
+            pl: "⌘P",
+          },
+          hash: "14bb9839b2d8347dbca254b5ee37332b",
+        },
+        "4/declaration/body/4/argument/1/3/11/3/3": {
+          content: {
+            en: "Settings",
+            pl: "Ustawienia",
+          },
+          hash: "8df6777277469c1fd88cc18dde2f1cc3",
+        },
+        "4/declaration/body/4/argument/1/3/11/3/5": {
+          content: {
+            en: "⌘S",
+            pl: "⌘S",
+          },
+          hash: "952c1f09d305e01568eaba0298f8faae",
+        },
+        "4/declaration/body/4/argument/1/3/3/1/3": {
+          content: {
+            en: "Go to Dashboard",
+            pl: "Przejdź do pulpitu",
+          },
+          hash: "a6efa97d25e36fedc0af794f6ba610f2",
+        },
+        "4/declaration/body/4/argument/1/3/3/1/5": {
+          content: {
+            en: "⌘H",
+            pl: "⌘H",
+          },
+          hash: "cee99c1cdf38e7eaf74d4d6f321f5c9e",
+        },
+        "4/declaration/body/4/argument/1/3/3/3/3": {
+          content: {
+            en: "Discover New Tenders",
+            pl: "Odkryj nowe przetargi",
+          },
+          hash: "bff28bbb9a32e0ddf1aba571d27ea42e",
+        },
+        "4/declaration/body/4/argument/1/3/3/3/5": {
+          content: {
+            en: "⌘D",
+            pl: "⌘D",
+          },
+          hash: "2983b3b406ccea5d9a13909b908cb6da",
+        },
+        "4/declaration/body/4/argument/1/3/3/5/3": {
+          content: {
+            en: "Active Tenders",
+            pl: "Aktywne przetargi",
+          },
+          hash: "0147723bff53dafb49b3b28df5e1b059",
+        },
+        "4/declaration/body/4/argument/1/3/3/5/5": {
+          content: {
+            en: "⌘A",
+            pl: "⌘A",
+          },
+          hash: "27b3cc61b7915696bb9780c010a54c6b",
+        },
+        "4/declaration/body/4/argument/1/3/3/7/3": {
+          content: {
+            en: "Documents",
+            pl: "Dokumenty",
+          },
+          hash: "c3882fc98216636873ab9091f3453f0c",
+        },
+        "4/declaration/body/4/argument/1/3/3/7/5": {
+          content: {
+            en: "⌘E",
+            pl: "⌘E",
+          },
+          hash: "fcb84ce36894141f2f0d5c32109b591c",
+        },
+        "4/declaration/body/4/argument/1/3/7/1/3": {
+          content: {
+            en: "Search Tenders",
+            pl: "Wyszukaj przetargi",
+          },
+          hash: "ad07e00950c1c509ab70b3af30e16d44",
+        },
+        "4/declaration/body/4/argument/1/3/7/1/5": {
+          content: {
+            en: "⌘K",
+            pl: "⌘K",
+          },
+          hash: "59a141903af748938873fd73757936f4",
+        },
+        "4/declaration/body/4/argument/1/3/7/3/3": {
+          content: {
+            en: "Filter by Date Range",
+            pl: "Filtruj według zakresu dat",
+          },
+          hash: "4b90d4c7e6a89e9fcbdd97c0b8906f0d",
+        },
+        "4/declaration/body/4/argument/1/3/7/5/3": {
+          content: {
+            en: "View Notifications",
+            pl: "Zobacz powiadomienia",
+          },
+          hash: "bf2dcc693869ceee19b29be9b977b571",
+        },
+      },
+    },
     "features/navigation/components/dashboard-sidebar.tsx": {
       entries: {
         "5/0/init/0/0/value": {
@@ -4417,6 +6808,17 @@ export default {
             pl: "Wyloguj się",
           },
           hash: "06efb815f8e1f5d09e63d262ba48b4e7",
+        },
+      },
+    },
+    "features/shared/ui/dialog.tsx": {
+      entries: {
+        "9/body/0/argument/3/3/expression/right/3": {
+          content: {
+            en: "Close",
+            pl: "Zamknij",
+          },
+          hash: "2c2e22f8424a1031de89063bd0022e16",
         },
       },
     },

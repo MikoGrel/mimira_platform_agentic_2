@@ -2,16 +2,28 @@
 
 import { Button, Checkbox } from "@heroui/react";
 import Symbol from "$/features/branding/components/Symbol";
-import { addDays } from "date-fns";
 import { MoveRight } from "lucide-react";
 import { Area, AreaChart, ResponsiveContainer } from "recharts";
 import MiniTenderCalendar from "$/features/tenders/components/mini-tender-calendar";
 import { TenderMiniCard } from "$/features/tenders/components/tender-mini-card";
 import { BentoCard } from "$/features/shared/ui/bento-card";
+import { useQuery } from "@tanstack/react-query";
+import { createClient } from "$/lib/supabase/client";
 
 export default function DashboardPage() {
+  const client = createClient();
+  const { data: tenders, isLoading } = useQuery({
+    queryKey: ["home-tenders"],
+    queryFn: async () =>
+      await client
+        .from("tenders")
+        .select("*")
+        .order("submittingoffersdate", { ascending: false })
+        .limit(3),
+  });
+
   return (
-    <div className="max-w-4xl mx-auto h-full flex flex-col gap-8 pt-8">
+    <main className="max-w-4xl mx-auto flex flex-col gap-8 p-4 lg:pt-12">
       <header className="flex flex-col gap-4">
         <div className="flex flex-col-reverse lg:flex-row lg:items-center justify-between gap-4">
           <h1 className="text-3xl font-semibold font-heading">Welcome back</h1>
@@ -32,6 +44,7 @@ export default function DashboardPage() {
 
       <section className="grid grid-cols-1 lg:grid-rows-[300px_320px] lg:grid-cols-6 gap-6">
         <BentoCard
+          loading={isLoading}
           title={<span>New tenders</span>}
           titleExtra={
             <Button variant="light" size="sm">
@@ -42,27 +55,19 @@ export default function DashboardPage() {
           bodyClassName="lg:pb-0"
         >
           <div className="h-full overflow-y-auto space-y-4 scrollbar-hide pr-2 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
-            <TenderMiniCard
-              id="123"
-              title="Purchase of paraffin candles"
-              amount={100_000}
-              expirationDate={addDays(new Date(), 2)}
-            />
-            <TenderMiniCard
-              id="456"
-              title="Procurement of wax lights"
-              amount={100_000}
-              expirationDate={addDays(new Date(), 2)}
-            />
-            <TenderMiniCard
-              id="789"
-              title="Acquisition of candle supplies"
-              amount={100_000}
-              expirationDate={addDays(new Date(), 2)}
-            />
+            {tenders?.data?.map((tender) => (
+              <TenderMiniCard
+                key={tender.id}
+                id={tender.id}
+                title={tender.orderobject!}
+                amount={10_000}
+                expirationDate={new Date(tender.submittingoffersdate!)}
+              />
+            ))}
           </div>
         </BentoCard>
         <BentoCard
+          loading={isLoading}
           title={<div className="px-4">Stats</div>}
           className="lg:col-start-5 lg:col-end-7 relative overflow-hidden px-0"
           bodyClassName="lg:p-0"
@@ -119,6 +124,7 @@ export default function DashboardPage() {
           </div>
         </BentoCard>
         <BentoCard
+          loading={isLoading}
           title={<span>Return to last tender</span>}
           className="lg:col-start-1 lg:col-end-4"
           bodyClassName="flex flex-col gap-4"
@@ -146,26 +152,20 @@ export default function DashboardPage() {
           </Button>
         </BentoCard>
         <BentoCard
+          loading={isLoading}
           title={<span>Deadline calendar</span>}
           className="lg:col-start-4 lg:col-end-7"
           bodyClassName="lg:p-0"
         >
           <MiniTenderCalendar
-            expiringTenders={[
-              {
-                id: "123",
-                expiresAt: addDays(new Date(), 2),
-                title: "Purchase of paraffin candles",
-              },
-              {
-                id: "456",
-                expiresAt: addDays(new Date(), 5),
-                title: "Procurement of wax lights",
-              },
-            ]}
+            expiringTenders={tenders?.data?.map((tender) => ({
+              id: tender.id,
+              expiresAt: new Date(tender.submittingoffersdate!),
+              title: tender.orderobject!,
+            }))}
           />
         </BentoCard>
       </section>
-    </div>
+    </main>
   );
 }

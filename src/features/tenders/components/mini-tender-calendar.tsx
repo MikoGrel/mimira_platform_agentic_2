@@ -49,7 +49,7 @@ export default function MiniTenderCalendar({
   };
 
   return (
-    <div className="grid grid-cols-[1fr_160px] grid-rows-1 gap-4">
+    <div className="grid grid-cols-[1fr_140px] grid-rows-1 gap-4">
       <Calendar
         mode="single"
         selected={selectedDate}
@@ -64,8 +64,8 @@ export default function MiniTenderCalendar({
         className="w-full h-full p-0"
         components={{
           Nav: () => <span className="hidden" />,
-          MonthCaption: () => <td className="hidden" />,
-          Weekdays: () => <td className="hidden" />,
+          MonthCaption: () => <span className="hidden" />,
+          Weekdays: () => <></>,
         }}
         showOutsideDays={false}
       />

@@ -1,9 +1,7 @@
 import type { NextConfig } from "next";
 import lingoCompiler from "lingo.dev/compiler";
 
-const nextConfig: NextConfig = {
-  /* config options here */
-};
+const nextConfig: NextConfig = {};
 
 export default lingoCompiler.next({
   sourceLocale: "en",

@@ -35,8 +35,8 @@ export default function RootLayout({
     <LingoProvider loadDictionary={(locale) => loadDictionary(locale)}>
       <html lang="pl">
         <head>
-          <link rel="icon" href="symbol-dark.svg" id="light-scheme-icon" />
-          <link rel="icon" href="symbol-white.svg" id="dark-scheme-icon" />
+          <link rel="icon" href="/symbol-white.svg" id="light-scheme-icon" />
+          <link rel="icon" href="/symbol-dark.svg" id="dark-scheme-icon" />
         </head>
         <body
           className={`${geistSans.variable} ${geistMono.variable} ${spaceGrotesk.variable} antialiased light font-body bg-background text-font-base`}

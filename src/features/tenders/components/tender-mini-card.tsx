@@ -21,7 +21,7 @@ export function TenderMiniCard(props: TenderMiniCardProps) {
   const timeUntilExpiration = relativeToNow(expirationDate);
 
   return (
-    <div className="bg-white border border-default p-4 flex justify-between rounded-xl">
+    <div className="bg-white border p-4 flex justify-between rounded-xl">
       <div className="flex flex-col gap-2">
         <p>{title}</p>
         <div className="text-xs flex gap-4">
@@ -35,7 +35,7 @@ export function TenderMiniCard(props: TenderMiniCardProps) {
           </div>
         </div>
       </div>
-      <div className="h-full">
+      <div className="h-full ml-4">
         <Button
           href={`/tenders/${id}`}
           variant="bordered"
