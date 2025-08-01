@@ -10,6 +10,6 @@ export default function SidebarLogo() {
   return state === "collapsed" ? (
     <Symbol className="h-8 w-8" />
   ) : (
-    <Logo className="h-8 w-24" />
+    <Logo className="h-8 w-24 min-w-24" />
   );
 }
