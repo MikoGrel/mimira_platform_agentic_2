@@ -6,7 +6,7 @@ import {
   ChartContainer,
   ChartTooltip,
   type ChartConfig,
-} from "$/features/shared/ui/chart";
+} from "$/components/ui/chart";
 
 interface Criteria {
   opis: string;
@@ -25,7 +25,11 @@ const chartColors = [
   "#374151", // dark gray
 ];
 
-export function ReviewCriteria({ reviewCriteria }: { reviewCriteria: Criteria[] }) {
+export function ReviewCriteria({
+  reviewCriteria,
+}: {
+  reviewCriteria: Criteria[];
+}) {
   // Transform criteria data for pie chart
   const chartData = reviewCriteria.map((criteria, index) => ({
     name: criteria.kryterium,
@@ -127,4 +131,4 @@ export function ReviewCriteria({ reviewCriteria }: { reviewCriteria: Criteria[] 
       </Accordion>
     </div>
   );
-} 
+}

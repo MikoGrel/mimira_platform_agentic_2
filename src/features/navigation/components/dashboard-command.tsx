@@ -8,7 +8,7 @@ import {
   CommandInput,
   CommandItem,
   CommandList,
-} from "$/features/shared/ui/command";
+} from "$/components/ui/command";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 

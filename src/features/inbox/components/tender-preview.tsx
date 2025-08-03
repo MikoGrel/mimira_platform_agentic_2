@@ -2,7 +2,7 @@
 
 import { Tables } from "$/types/supabase";
 import { useRef } from "react";
-import { useScrollTrigger } from "$/features/shared/hooks/use-scroll-trigger";
+import { useScrollTrigger } from "$/hooks/use-scroll-trigger";
 import { AdditionalInfoSection } from "./additional-info-section";
 import { DescriptionSection } from "./description-section";
 import { NavigationSidebar } from "./navigation-sidebar";
@@ -12,7 +12,7 @@ import { ReviewCriteriaSection } from "./review-criteria-section";
 import { TenderHeader } from "./tender-header";
 
 interface TenderPreviewProps {
-  tender: Tables<"tenders"> | null;
+  tender?: Tables<"tenders"> | null;
 }
 
 export function TenderPreview({ tender }: TenderPreviewProps) {

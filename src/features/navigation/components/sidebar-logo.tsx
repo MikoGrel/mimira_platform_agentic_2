@@ -2,7 +2,7 @@
 
 import Logo from "$/features/branding/components/Logo";
 import Symbol from "$/features/branding/components/Symbol";
-import { useSidebar } from "$/features/shared/ui/sidebar";
+import { useSidebar } from "$/components/ui/sidebar";
 
 export default function SidebarLogo() {
   const { state } = useSidebar();

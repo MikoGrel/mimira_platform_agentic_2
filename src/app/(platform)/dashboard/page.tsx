@@ -6,7 +6,7 @@ import { MoveRight } from "lucide-react";
 import { Area, AreaChart, ResponsiveContainer } from "recharts";
 import MiniTenderCalendar from "$/features/tenders/components/mini-tender-calendar";
 import { TenderMiniCard } from "$/features/tenders/components/tender-mini-card";
-import { BentoCard } from "$/features/shared/ui/bento-card";
+import { BentoCard } from "$/components/ui/bento-card";
 import { useQuery } from "@tanstack/react-query";
 import { createClient } from "$/lib/supabase/client";
 

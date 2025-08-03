@@ -9,7 +9,7 @@ import {
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
-} from "$/features/shared/ui/sidebar";
+} from "$/components/ui/sidebar";
 import {
   Home,
   FolderOpen,

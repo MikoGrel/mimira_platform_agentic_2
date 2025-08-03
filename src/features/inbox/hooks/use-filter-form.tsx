@@ -11,7 +11,7 @@ import {
   parseDate,
 } from "@internationalized/date";
 import { ReactNode, useMemo } from "react";
-import { parseAsSet } from "$/features/shared/utils/query";
+import { parseAsSet } from "$/utils/query";
 
 export type SortDirection = "asc" | "desc";
 

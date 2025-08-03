@@ -13,7 +13,7 @@ import {
 } from "@heroui/react";
 import { Archive, SlidersHorizontal } from "lucide-react";
 import { parseAsString, useQueryState } from "nuqs";
-import { useState } from "react";
+import { useMemo } from "react";
 import Symbol from "$/features/branding/components/Symbol";
 import {
   FilterForm,
@@ -22,7 +22,7 @@ import {
   useFilterForm,
   useTenderInboxQuery,
 } from "$/features/inbox";
-import { useInfiniteList } from "$/features/shared/hooks/use-infinite-list";
+import { useInfiniteList } from "$/hooks/use-infinite-list";
 import { AnimatePresence, motion } from "motion/react";
 
 const PAGE_SIZE = 10;
@@ -34,12 +34,15 @@ export default function InboxPage() {
     "search",
     parseAsString.withDefault("")
   );
+  const [selectedId, setSelectedId] = useQueryState("id", parseAsString);
 
   const { tenders, isPending, fetchNextPage, hasNextPage, isFetchingNextPage } =
     useTenderInboxQuery({ search, filterQuery, pageSize: PAGE_SIZE });
 
-  const [selectedTender, setSelectedTender] =
-    useState<Tables<"tenders"> | null>(null);
+  const selectedTender = useMemo(
+    () => tenders.find((t) => t.id === selectedId),
+    [tenders, selectedId]
+  );
 
   const { getRef } = useInfiniteList({
     onIntersect: () => {
@@ -51,7 +54,7 @@ export default function InboxPage() {
   });
 
   function handleTenderSelect(tender: Tables<"tenders">) {
-    setSelectedTender(tender);
+    setSelectedId(tender.id);
   }
 
   return (

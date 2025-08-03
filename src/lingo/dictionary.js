@@ -13022,7 +13022,7 @@ export default {
         },
       },
     },
-    "features/shared/ui/dialog.tsx": {
+    "components/ui/dialog.tsx": {
       entries: {
         "9/body/0/argument/3/3/expression/right/3": {
           content: {
@@ -13033,7 +13033,7 @@ export default {
         },
       },
     },
-    "features/shared/ui/sheet.tsx": {
+    "components/ui/sheet.tsx": {
       entries: {
         "9/body/0/argument/3/3/3": {
           content: {
@@ -13044,7 +13044,7 @@ export default {
         },
       },
     },
-    "features/shared/ui/sidebar.tsx": {
+    "components/ui/sidebar.tsx": {
       entries: {
         "22/body/2/consequent/0/argument/1/1/1": {
           content: {

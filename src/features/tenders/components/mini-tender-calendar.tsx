@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useMemo } from "react";
-import { Calendar } from "$/features/shared/ui/calendar";
+import { Calendar } from "$/components/ui/calendar";
 
 type ExpiringTender = {
   id: string;

@@ -1,7 +1,7 @@
 "use client";
 
 import { HeroUIProvider } from "@heroui/react";
-import useFavicon from "../hooks/use-favicon";
+import useFavicon from "$/hooks/use-favicon";
 
 export default function ThemeProvider({
   children,

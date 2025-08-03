@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Space_Grotesk } from "next/font/google";
 import "$/styles/globals.css";
-import ThemeProvider from "$/features/shared/providers/ThemeProvider";
-import QueryProvider from "$/features/shared/providers/QueryProvider";
+import ThemeProvider from "$/providers/ThemeProvider";
+import QueryProvider from "$/providers/QueryProvider";
 import { LingoProvider, loadDictionary } from "lingo.dev/react/rsc";
 import { NuqsAdapter } from "nuqs/adapters/next/app";
 import { Toaster } from "sonner";

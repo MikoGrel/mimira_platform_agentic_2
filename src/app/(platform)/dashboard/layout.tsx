@@ -2,8 +2,8 @@ import {
   SidebarInset,
   SidebarProvider,
   SidebarTrigger,
-} from "$/features/shared/ui/sidebar";
-import { Input } from "$/features/shared/ui/input";
+} from "$/components/ui/sidebar";
+import { Input } from "$/components/ui/input";
 import { Search, User } from "lucide-react";
 import { LocaleSwitcher } from "lingo.dev/react-client";
 import { DashboardSidebar } from "$/features/navigation/components";

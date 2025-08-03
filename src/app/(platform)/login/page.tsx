@@ -11,8 +11,8 @@ import {
   ForgotPasswordForm,
   EmailSentMessage,
 } from "$/features/auth/components";
-import ProgressiveBlurMask from "$/features/shared/ui/progressive-blur-mask";
-import useQueryToast from "$/features/shared/hooks/use-query-toast";
+import ProgressiveBlurMask from "$/components/ui/progressive-blur-mask";
+import useQueryToast from "$/hooks/use-query-toast";
 
 type AuthStep = "login" | "forgot-password" | "email-sent";
 const authSteps: AuthStep[] = ["login", "forgot-password", "email-sent"];
