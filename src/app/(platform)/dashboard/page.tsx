@@ -41,7 +41,7 @@ export default function DashboardPage() {
         <div className="flex flex-col-reverse lg:flex-row lg:items-center justify-between gap-4">
           <h1 className="text-3xl font-semibold font-heading flex items-center gap-2">
             <Symbol className="w-8 h-8 text-primary" /> Hello,{" "}
-            {user?.profile?.first_name}!
+            {user?.profile?.first_name || "there"}!
           </h1>
         </div>
         <p className="max-w-[75%] text-muted-foreground">
