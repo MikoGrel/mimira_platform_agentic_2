@@ -1,4 +1,8 @@
-import { useInfiniteQuery } from "@tanstack/react-query";
+import {
+  useInfiniteQuery,
+  useQueryClient,
+  InfiniteData,
+} from "@tanstack/react-query";
 import { createClient } from "$/lib/supabase/client";
 import useCurrentUser from "$/features/auth/hooks/use-current-user";
 import { CalendarDate } from "@heroui/react";
@@ -6,6 +10,7 @@ import { getLocalTimeZone } from "@internationalized/date";
 import { format } from "date-fns";
 import { Voivodeship } from "$/features/i18n/config/poland-config";
 import { SortDirection } from "./use-filter-form";
+import { Tables } from "$/types/supabase";
 
 interface UseTenderInboxQueryParams {
   pageSize: number;
@@ -24,6 +29,9 @@ export default function useTenderInboxQuery({
   filterQuery,
 }: UseTenderInboxQueryParams) {
   const { user } = useCurrentUser();
+  const queryClient = useQueryClient();
+
+  const queryKey = ["tenders", search, ...Object.values(filterQuery)];
 
   const {
     data: tendersData,
@@ -33,7 +41,7 @@ export default function useTenderInboxQuery({
     isFetchingNextPage,
     isPending,
   } = useInfiniteQuery({
-    queryKey: ["tenders", search, ...Object.values(filterQuery)],
+    queryKey,
     queryFn: async ({ pageParam = 0 }) => {
       const client = createClient();
       let query = client
@@ -87,6 +95,35 @@ export default function useTenderInboxQuery({
     enabled: !!user,
   });
 
+  function updateSeenAt(id: string) {
+    queryClient.setQueryData(
+      queryKey,
+      (
+        oldData:
+          | InfiniteData<{
+              data: Tables<"tenders">[];
+              count: number | null;
+              nextPage: number | null;
+            }>
+          | undefined
+      ) => {
+        if (!oldData) return oldData;
+
+        return {
+          ...oldData,
+          pages: oldData.pages.map((page) => ({
+            ...page,
+            data: page.data.map((tender) =>
+              tender.id === id
+                ? { ...tender, seen_at: new Date().toISOString() }
+                : tender
+            ),
+          })),
+        };
+      }
+    );
+  }
+
   // Flatten the pages data and remove duplicates based on id
   const tenders = tendersData?.pages.flatMap((page) => page.data) || [];
   const uniqueTenders = tenders.filter(
@@ -100,5 +137,6 @@ export default function useTenderInboxQuery({
     fetchNextPage,
     hasNextPage,
     isFetchingNextPage,
+    updateSeenAt,
   };
 }

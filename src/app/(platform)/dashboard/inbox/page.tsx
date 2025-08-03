@@ -24,6 +24,9 @@ import {
 } from "$/features/inbox";
 import { useInfiniteList } from "$/hooks/use-infinite-list";
 import { AnimatePresence, motion } from "motion/react";
+import { truncate } from "lodash";
+import { useMarkAsSeen } from "$/features/inbox/hooks/use-mark-as-seen";
+import { cn } from "$/lib/utils";
 
 const PAGE_SIZE = 10;
 
@@ -36,8 +39,15 @@ export default function InboxPage() {
   );
   const [selectedId, setSelectedId] = useQueryState("id", parseAsString);
 
-  const { tenders, isPending, fetchNextPage, hasNextPage, isFetchingNextPage } =
-    useTenderInboxQuery({ search, filterQuery, pageSize: PAGE_SIZE });
+  const {
+    tenders,
+    isPending,
+    fetchNextPage,
+    hasNextPage,
+    isFetchingNextPage,
+    updateSeenAt,
+  } = useTenderInboxQuery({ search, filterQuery, pageSize: PAGE_SIZE });
+  const { mutate: markAsSeen } = useMarkAsSeen();
 
   const selectedTender = useMemo(
     () => tenders.find((t) => t.id === selectedId),
@@ -54,7 +64,9 @@ export default function InboxPage() {
   });
 
   function handleTenderSelect(tender: Tables<"tenders">) {
+    updateSeenAt(tender.id);
     setSelectedId(tender.id);
+    markAsSeen(tender.id);
   }
 
   return (
@@ -95,7 +107,7 @@ export default function InboxPage() {
                     as={motion.li}
                     initial={{ opacity: 0 }}
                     animate={{
-                      opacity: 1,
+                      opacity: t.seen_at ? (t.id === selectedId ? 1 : 0.6) : 1,
                       transition: {
                         duration: 0.25,
                         delay: (index % PAGE_SIZE) * 0.025,
@@ -109,16 +121,30 @@ export default function InboxPage() {
                     isPressable
                     onPress={() => handleTenderSelect(t)}
                     key={t.id}
-                    className="p-4 border-b flex flex-col gap-2 rounded-none text-left"
+                    className={cn("border-b rounded-none text-left", {
+                      "border-l-2 border-l-primary": t.id === selectedId,
+                    })}
                     shadow="none"
                   >
-                    <p className="font-semibold text-sm">{t.orderobject}</p>
-                    <div className="flex flex-wrap text-slate-500">
-                      <span className="text-sm">{t.organizationname}</span>
-                      <span>&nbsp;&middot;&nbsp;</span>
-                      <span className="text-sm text-danger">
-                        {t.submittingoffersdate}
-                      </span>
+                    <div className="p-4 px-6 flex flex-col gap-2">
+                      <p className="font-semibold text-sm relative">
+                        {truncate(t.orderobject!, {
+                          length: 120,
+                          omission: "...",
+                        })}
+
+                        {!t.seen_at && (
+                          <div className="w-1.5 rounded-full h-1.5 bg-primary absolute -left-3.5 top-1.5" />
+                        )}
+                      </p>
+                      <div className="flex items-center gap-2 flex-wrap text-slate-500">
+                        <Chip size="sm" variant="flat">
+                          {t.submittingoffersdate}
+                        </Chip>
+                        <span className="text-sm">
+                          {truncate(t.organizationname!, { length: 40 })}
+                        </span>
+                      </div>
                     </div>
                   </Card>
                 ))}

@@ -109,6 +109,21 @@ export type Database = {
           },
         ]
       }
+      product_catalogues_customers: {
+        Row: {
+          created_at: string
+          id: number
+        }
+        Insert: {
+          created_at?: string
+          id?: number
+        }
+        Update: {
+          created_at?: string
+          id?: number
+        }
+        Relationships: []
+      }
       profiles: {
         Row: {
           customer: string | null
@@ -131,7 +146,48 @@ export type Database = {
           last_name?: string | null
           preferred_locale?: string | null
         }
-        Relationships: []
+        Relationships: [
+          {
+            foreignKeyName: "fk_profiles_customer"
+            columns: ["customer"]
+            isOneToOne: false
+            referencedRelation: "customers"
+            referencedColumns: ["company"]
+          },
+        ]
+      }
+      tender_archivals: {
+        Row: {
+          customer: string | null
+          id: string
+          tender_id: string | null
+        }
+        Insert: {
+          customer?: string | null
+          id?: string
+          tender_id?: string | null
+        }
+        Update: {
+          customer?: string | null
+          id?: string
+          tender_id?: string | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "fk_tender"
+            columns: ["tender_id"]
+            isOneToOne: false
+            referencedRelation: "tenders"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "fk_tender_archivals_customer"
+            columns: ["customer"]
+            isOneToOne: false
+            referencedRelation: "customers"
+            referencedColumns: ["company"]
+          },
+        ]
       }
       tender_parts: {
         Row: {
@@ -188,6 +244,39 @@ export type Database = {
             referencedColumns: ["id"]
           },
         ]
+      }
+      tender_products: {
+        Row: {
+          alternative_products: string | null
+          closest_match: string | null
+          part_uuid: string
+          product_req_name: string | null
+          product_req_quantity: string | null
+          product_req_spec: string | null
+          requirements_to_confirm: string | null
+          tender_id: string | null
+        }
+        Insert: {
+          alternative_products?: string | null
+          closest_match?: string | null
+          part_uuid: string
+          product_req_name?: string | null
+          product_req_quantity?: string | null
+          product_req_spec?: string | null
+          requirements_to_confirm?: string | null
+          tender_id?: string | null
+        }
+        Update: {
+          alternative_products?: string | null
+          closest_match?: string | null
+          part_uuid?: string
+          product_req_name?: string | null
+          product_req_quantity?: string | null
+          product_req_spec?: string | null
+          requirements_to_confirm?: string | null
+          tender_id?: string | null
+        }
+        Relationships: []
       }
       tender_requirements: {
         Row: {
@@ -247,6 +336,7 @@ export type Database = {
           payment_terms_llm: string | null
           publicationdate: string | null
           review_criteria_llm: string | null
+          seen_at: string | null
           status: string
           submittingoffersdate: string | null
           url: string | null
@@ -273,6 +363,7 @@ export type Database = {
           payment_terms_llm?: string | null
           publicationdate?: string | null
           review_criteria_llm?: string | null
+          seen_at?: string | null
           status: string
           submittingoffersdate?: string | null
           url?: string | null
@@ -299,6 +390,7 @@ export type Database = {
           payment_terms_llm?: string | null
           publicationdate?: string | null
           review_criteria_llm?: string | null
+          seen_at?: string | null
           status?: string
           submittingoffersdate?: string | null
           url?: string | null
