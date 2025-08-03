@@ -12,24 +12,32 @@ interface ForgotPasswordFormProps {
   onBackToLogin: () => void;
 }
 
+function SubmitButton() {
+  const { pending } = useFormStatus();
+
+  return (
+    <Button className="mt-6" type="submit" color="primary" isLoading={pending}>
+      Send Reset Link
+    </Button>
+  );
+}
+
 export default function ForgotPasswordForm({
   error,
   onInputChange,
   onBackToLogin,
 }: ForgotPasswordFormProps) {
-  const { pending } = useFormStatus();
-
   return (
     <div className="flex flex-col gap-4">
       <div className="flex flex-col gap-3">
-        <h1 className="font-heading text-4xl font-medium">Reset Password</h1>
+        <h1 className="font-heading text-3xl font-medium">Reset Password</h1>
         <h2 className="text-muted-foreground">
           Enter your email address and we&apos;ll send you a link to reset your
           password
         </h2>
       </div>
 
-      <form className="w-full flex flex-col gap-3">
+      <form action={forgotPassword} className="w-full flex flex-col gap-3">
         {error && <Alert color="danger" title={error} />}
         <Input
           label="Email"
@@ -39,15 +47,7 @@ export default function ForgotPasswordForm({
           onChange={onInputChange}
           placeholder="Enter your email address"
         />
-        <Button
-          className="mt-6"
-          type="submit"
-          formAction={forgotPassword}
-          color="primary"
-          isLoading={pending}
-        >
-          Send Reset Link
-        </Button>
+        <SubmitButton />
         <Button type="button" variant="bordered" onClick={onBackToLogin}>
           Back to Login
         </Button>

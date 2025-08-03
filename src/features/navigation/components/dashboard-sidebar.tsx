@@ -10,17 +10,10 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
 } from "$/components/ui/sidebar";
-import {
-  Home,
-  FolderOpen,
-  LogOut,
-  SparklesIcon,
-  FileCheck,
-} from "lucide-react";
-import { Button } from "@heroui/react";
-import { logout } from "$/features/auth/actions";
+import { Home, FolderOpen, SparklesIcon, FileCheck } from "lucide-react";
 import SidebarLogo from "./sidebar-logo";
 import Link from "next/link";
+import { SidebarLogOutButton } from "./sidebar-logout-button";
 
 const navigationItems = [
   {
@@ -81,17 +74,7 @@ export default function DashboardSidebar() {
       <SidebarFooter>
         <SidebarMenu>
           <SidebarMenuItem>
-            <form className="w-full">
-              <Button
-                fullWidth
-                type="submit"
-                formAction={logout}
-                variant="light"
-                startContent={<LogOut className="w-4 h-4" />}
-              >
-                <span>Sign Out</span>
-              </Button>
-            </form>
+            <SidebarLogOutButton />
           </SidebarMenuItem>
         </SidebarMenu>
       </SidebarFooter>

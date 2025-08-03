@@ -4590,6 +4590,14 @@
     },
     "app/(platform)/login/page.tsx": {
       "scopes": {
+        "10/declaration/body/0/expression/1": {
+          "type": "element",
+          "hash": "1dd7a3bce7f7d46670dbd5de79f32c93",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Logged out successfully"
+        },
         "10/declaration/body/10/argument/1/1/1-alt": {
           "type": "attribute",
           "hash": "84694dceff6180310fed53ccaa20c4c5",
@@ -4597,6 +4605,38 @@
           "skip": false,
           "overrides": {},
           "content": "Happy Office Workers"
+        },
+        "10/declaration/body/10/argument/1/3/3": {
+          "type": "element",
+          "hash": "891ab655f0771dcaab8944d7b8c168b7",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Welcome back"
+        },
+        "10/declaration/body/10/argument/1/3/5": {
+          "type": "element",
+          "hash": "bc08d7a9c081e38025ff84e56960c8dc",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Log in to browse, analyze and manage your tenders."
+        },
+        "10/declaration/body/10/argument/1/5/1": {
+          "type": "element",
+          "hash": "2f30f0e419c4906cb48884c792d03a5a",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Trusted by:"
+        },
+        "10/declaration/body/10/argument/3/3": {
+          "type": "element",
+          "hash": "560ab78ac75a5b5df43ae45aa64f171e",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "You don't have an account?<element:Link>Contact us</element:Link>"
         },
         "10/declaration/body/10/argument/3/5": {
           "type": "element",
@@ -4629,6 +4669,46 @@
           "skip": false,
           "overrides": {},
           "content": "Happy Office Workers"
+        },
+        "11/declaration/body/10/argument/1/3/1": {
+          "type": "element",
+          "hash": "891ab655f0771dcaab8944d7b8c168b7",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Welcome back"
+        },
+        "11/declaration/body/10/argument/1/3/3": {
+          "type": "element",
+          "hash": "891ab655f0771dcaab8944d7b8c168b7",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Welcome back"
+        },
+        "11/declaration/body/10/argument/1/3/5": {
+          "type": "element",
+          "hash": "bc08d7a9c081e38025ff84e56960c8dc",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Log in to browse, analyze and manage your tenders."
+        },
+        "11/declaration/body/10/argument/1/5/1": {
+          "type": "element",
+          "hash": "2f30f0e419c4906cb48884c792d03a5a",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Trusted by:"
+        },
+        "11/declaration/body/10/argument/3/3": {
+          "type": "element",
+          "hash": "560ab78ac75a5b5df43ae45aa64f171e",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "You don't have an account?<element:Link>Contact us</element:Link>"
         },
         "11/declaration/body/10/argument/3/5": {
           "type": "element",
@@ -4822,6 +4902,14 @@
           "overrides": {},
           "content": "Logged out successfully"
         },
+        "12/declaration/body/0/expression/1": {
+          "type": "element",
+          "hash": "1dd7a3bce7f7d46670dbd5de79f32c93",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Logged out successfully"
+        },
         "12/declaration/body/10/0/init/body/1/1": {
           "type": "element",
           "hash": "3d7c5b589fe3e18a1d2d7e83de7a9cf1",
@@ -4877,6 +4965,38 @@
           "skip": false,
           "overrides": {},
           "content": "Log in"
+        },
+        "12/declaration/body/10/argument/1/3/1": {
+          "type": "element",
+          "hash": "891ab655f0771dcaab8944d7b8c168b7",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Welcome back"
+        },
+        "12/declaration/body/10/argument/1/3/3": {
+          "type": "element",
+          "hash": "bc08d7a9c081e38025ff84e56960c8dc",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Log in to browse, analyze and manage your tenders."
+        },
+        "12/declaration/body/10/argument/1/5/1": {
+          "type": "element",
+          "hash": "2f30f0e419c4906cb48884c792d03a5a",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Trusted by:"
+        },
+        "12/declaration/body/10/argument/3/3": {
+          "type": "element",
+          "hash": "560ab78ac75a5b5df43ae45aa64f171e",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "You don't have an account?<element:Link>Contact us</element:Link>"
         },
         "12/declaration/body/11/0/init/body/1/1": {
           "type": "element",
@@ -5814,6 +5934,46 @@
           "overrides": {},
           "content": "You don't have an account?<element:Link>Contact us</element:Link>"
         },
+        "9/declaration/body/0/expression/1": {
+          "type": "element",
+          "hash": "1dd7a3bce7f7d46670dbd5de79f32c93",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Logged out successfully"
+        },
+        "9/declaration/body/10/argument/1/3/1": {
+          "type": "element",
+          "hash": "891ab655f0771dcaab8944d7b8c168b7",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Welcome back"
+        },
+        "9/declaration/body/10/argument/1/3/3": {
+          "type": "element",
+          "hash": "bc08d7a9c081e38025ff84e56960c8dc",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Log in to browse, analyze and manage your tenders."
+        },
+        "9/declaration/body/10/argument/1/5/1": {
+          "type": "element",
+          "hash": "2f30f0e419c4906cb48884c792d03a5a",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Trusted by:"
+        },
+        "9/declaration/body/10/argument/3/3": {
+          "type": "element",
+          "hash": "560ab78ac75a5b5df43ae45aa64f171e",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "You don't have an account?<element:Link>Contact us</element:Link>"
+        },
         "9/declaration/body/9/argument/1/1/1-alt": {
           "type": "attribute",
           "hash": "84694dceff6180310fed53ccaa20c4c5",
@@ -6214,6 +6374,22 @@
     },
     "features/auth/components/forgot-password-form.tsx": {
       "scopes": {
+        "6/body/0/argument": {
+          "type": "element",
+          "hash": "8348c4baada14cc0ae5abbe99d96f98e",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Send Reset Link"
+        },
+        "6/body/1/argument": {
+          "type": "element",
+          "hash": "8348c4baada14cc0ae5abbe99d96f98e",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Send Reset Link"
+        },
         "6/declaration/body/1/argument/1/1": {
           "type": "element",
           "hash": "52ec990b25991808a4f49db84986eefc",
@@ -6255,6 +6431,54 @@
           "content": "Send Reset Link"
         },
         "6/declaration/body/1/argument/3/7": {
+          "type": "element",
+          "hash": "af1fe3e18ab8816b295086f5caa19bbb",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Back to Login"
+        },
+        "7/declaration/body/0/argument/1/1": {
+          "type": "element",
+          "hash": "52ec990b25991808a4f49db84986eefc",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Reset Password"
+        },
+        "7/declaration/body/0/argument/1/3": {
+          "type": "element",
+          "hash": "6e820fc1a74664b8acdb6f563412e0b0",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Enter your email address and we'll send you a link to reset your password"
+        },
+        "7/declaration/body/0/argument/3/3-label": {
+          "type": "attribute",
+          "hash": "e7f34943a0c2fb849db1839ff6ef5cb5",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Email"
+        },
+        "7/declaration/body/0/argument/3/3-placeholder": {
+          "type": "attribute",
+          "hash": "9bc008365ebe3e404e241c8ca876f56e",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Enter your email address"
+        },
+        "7/declaration/body/0/argument/3/5": {
+          "type": "element",
+          "hash": "0de8cdabf0744e2a7d87ddf2f4cb4466",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Send Reset Link"
+        },
+        "7/declaration/body/0/argument/3/7": {
           "type": "element",
           "hash": "af1fe3e18ab8816b295086f5caa19bbb",
           "context": "",
@@ -6314,21 +6538,181 @@
     },
     "features/auth/components/login-form.tsx": {
       "scopes": {
-        "7/declaration/body/1/argument/1/1": {
+        "6/body/1/argument": {
           "type": "element",
-          "hash": "3d7c5b589fe3e18a1d2d7e83de7a9cf1",
+          "hash": "f902082746b643593b910bcd7d1ebcf9",
           "context": "",
           "skip": false,
           "overrides": {},
-          "content": "Welcome Back"
+          "content": "Log in"
+        },
+        "6/declaration/body/1/argument/1/1": {
+          "type": "element",
+          "hash": "9fb886eff8d1d67d8bb79f5c3f78edde",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Log in"
+        },
+        "6/declaration/body/1/argument/1/3": {
+          "type": "element",
+          "hash": "78c8c873e0f2083d7ed85523a68a72e7",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Enter your email address and password to enter your dashboard"
+        },
+        "6/declaration/body/1/argument/3/3-label": {
+          "type": "attribute",
+          "hash": "e7f34943a0c2fb849db1839ff6ef5cb5",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Email"
+        },
+        "6/declaration/body/1/argument/3/5-label": {
+          "type": "attribute",
+          "hash": "223a61cf906ab9c40d22612c588dff48",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Password"
+        },
+        "6/declaration/body/1/argument/3/7/1": {
+          "type": "element",
+          "hash": "afc02ff1df56ecf8493e9e201592d764",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Remember me"
+        },
+        "6/declaration/body/1/argument/3/7/3": {
+          "type": "element",
+          "hash": "4a0a69c05d0946a79ac6cc32bbb3c615",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Forgot password?"
+        },
+        "6/declaration/body/1/argument/3/9": {
+          "type": "element",
+          "hash": "d9b0fe0a007e54d41375447cdf3c5267",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Log in"
+        },
+        "7/declaration/body/0/argument/1/1": {
+          "type": "element",
+          "hash": "9fb886eff8d1d67d8bb79f5c3f78edde",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Log in"
+        },
+        "7/declaration/body/0/argument/1/3": {
+          "type": "element",
+          "hash": "78c8c873e0f2083d7ed85523a68a72e7",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Enter your email address and password to enter your dashboard"
+        },
+        "7/declaration/body/0/argument/3/3-label": {
+          "type": "attribute",
+          "hash": "e7f34943a0c2fb849db1839ff6ef5cb5",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Email"
+        },
+        "7/declaration/body/0/argument/3/5-label": {
+          "type": "attribute",
+          "hash": "223a61cf906ab9c40d22612c588dff48",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Password"
+        },
+        "7/declaration/body/0/argument/3/7/1": {
+          "type": "element",
+          "hash": "afc02ff1df56ecf8493e9e201592d764",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Remember me"
+        },
+        "7/declaration/body/0/argument/3/7/3": {
+          "type": "element",
+          "hash": "4a0a69c05d0946a79ac6cc32bbb3c615",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Forgot password?"
+        },
+        "7/declaration/body/1/argument/1": {
+          "type": "element",
+          "hash": "c9173dc26518515f64d179c8bd928760",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Log in to your account"
+        },
+        "7/declaration/body/1/argument/1/1": {
+          "type": "element",
+          "hash": "9fb886eff8d1d67d8bb79f5c3f78edde",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Log in"
         },
         "7/declaration/body/1/argument/1/3": {
           "type": "element",
-          "hash": "efe8c63f2219da23270fff479619bb1d",
+          "hash": "d2eb1b2efe7855401d190fc40be61ff6",
           "context": "",
           "skip": false,
           "overrides": {},
-          "content": "Fill in your email and password to continue"
+          "content": "Enter your email address and we'll send you a link to log into your account"
+        },
+        "7/declaration/body/1/argument/1/3-label": {
+          "type": "attribute",
+          "hash": "e7f34943a0c2fb849db1839ff6ef5cb5",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Email"
+        },
+        "7/declaration/body/1/argument/1/5-label": {
+          "type": "attribute",
+          "hash": "223a61cf906ab9c40d22612c588dff48",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Password"
+        },
+        "7/declaration/body/1/argument/1/7/1": {
+          "type": "element",
+          "hash": "afc02ff1df56ecf8493e9e201592d764",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Remember me"
+        },
+        "7/declaration/body/1/argument/1/7/3": {
+          "type": "element",
+          "hash": "4a0a69c05d0946a79ac6cc32bbb3c615",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Forgot password?"
+        },
+        "7/declaration/body/1/argument/1/9": {
+          "type": "element",
+          "hash": "d9b0fe0a007e54d41375447cdf3c5267",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Log in"
         },
         "7/declaration/body/1/argument/3/3-label": {
           "type": "attribute",
@@ -6429,6 +6813,74 @@
           "skip": false,
           "overrides": {},
           "content": "Update Password"
+        }
+      }
+    },
+    "features/branding/components/Partners.tsx": {
+      "scopes": {
+        "0/declaration/body/0/argument/1-alt": {
+          "type": "attribute",
+          "hash": "9b3d004c84df523535429ec29562569c",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Zarys"
+        },
+        "0/declaration/body/0/argument/3-alt": {
+          "type": "attribute",
+          "hash": "92f51f4458a34da1e694a242bab3e31c",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Bluebrain"
+        },
+        "0/declaration/body/0/argument/5-alt": {
+          "type": "attribute",
+          "hash": "37481d08ba871e03dc949580a4e300bc",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Forcepol"
+        },
+        "0/declaration/body/0/argument/7-alt": {
+          "type": "attribute",
+          "hash": "691b443da0fc99175fc9d12e9021bc50",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Seka"
+        },
+        "1/declaration/body/0/argument/1-alt": {
+          "type": "attribute",
+          "hash": "9b3d004c84df523535429ec29562569c",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Zarys"
+        },
+        "1/declaration/body/0/argument/3-alt": {
+          "type": "attribute",
+          "hash": "92f51f4458a34da1e694a242bab3e31c",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Bluebrain"
+        },
+        "1/declaration/body/0/argument/5-alt": {
+          "type": "attribute",
+          "hash": "37481d08ba871e03dc949580a4e300bc",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Forcepol"
+        },
+        "1/declaration/body/0/argument/7-alt": {
+          "type": "attribute",
+          "hash": "691b443da0fc99175fc9d12e9021bc50",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Seka"
         }
       }
     },
@@ -15237,6 +15689,42 @@
           "content": "Main Navigation"
         },
         "7/declaration/body/0/argument/5/1/1/1/1/1": {
+          "type": "element",
+          "hash": "06efb815f8e1f5d09e63d262ba48b4e7",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Sign Out"
+        },
+        "8/body/1/argument/1/1/expression/right": {
+          "type": "element",
+          "hash": "06efb815f8e1f5d09e63d262ba48b4e7",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Sign Out"
+        }
+      }
+    },
+    "features/navigation/components/sidebar-logout-button.tsx": {
+      "scopes": {
+        "0/declaration/body/1/argument/1/1/expression/right": {
+          "type": "element",
+          "hash": "06efb815f8e1f5d09e63d262ba48b4e7",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Sign Out"
+        },
+        "3/declaration/body/1/argument/1/1/expression/right": {
+          "type": "element",
+          "hash": "06efb815f8e1f5d09e63d262ba48b4e7",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Sign Out"
+        },
+        "4/declaration/body/1/argument/1/1/expression/right": {
           "type": "element",
           "hash": "06efb815f8e1f5d09e63d262ba48b4e7",
           "context": "",

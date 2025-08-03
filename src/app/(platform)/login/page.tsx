@@ -1,7 +1,5 @@
 "use client";
 
-import Image from "next/image";
-import HappyOfficeWorkers from "$/assets/happy-office-workers.jpg";
 import Logo from "$/features/branding/components/Logo";
 import Link from "next/link";
 import { useQueryState, parseAsString } from "nuqs";
@@ -11,8 +9,9 @@ import {
   ForgotPasswordForm,
   EmailSentMessage,
 } from "$/features/auth/components";
-import ProgressiveBlurMask from "$/components/ui/progressive-blur-mask";
 import useQueryToast from "$/hooks/use-query-toast";
+import Partners from "$/features/branding/components/Partners";
+import { GateIllustration } from "$/features/branding/components/gate";
 
 type AuthStep = "login" | "forgot-password" | "email-sent";
 const authSteps: AuthStep[] = ["login", "forgot-password", "email-sent"];
@@ -34,19 +33,17 @@ export default function LoginPage() {
     serialize: String,
   });
 
-  // Handle reset status from URL parameters
   useEffect(() => {
     if (resetStatus === "sent" && resetEmail) {
       setStep("email-sent");
     }
   }, [resetStatus, resetEmail, setStep]);
 
-  // Clear error when component mounts or when user starts typing
   useEffect(() => {
     if (error) {
       const timer = setTimeout(() => {
         setError(null);
-      }, 5000); // Auto-clear error after 5 seconds
+      }, 5000);
 
       return () => clearTimeout(timer);
     }
@@ -72,22 +69,25 @@ export default function LoginPage() {
 
   return (
     <main className="w-screen h-screen grid grid-cols-2 grid-rows-1 mx-auto">
-      <section className="p-6">
-        <div className="relative w-full h-full rounded-3xl overflow-hidden">
-          <Image
-            src={HappyOfficeWorkers}
-            alt="Happy Office Workers"
-            fill
-            className="object-cover grayscale"
-          />
-          <ProgressiveBlurMask />
-          <div className="absolute inset-0 bg-gradient-to-b from-primary/10 to-primary/60" />
+      <section className="p-24 grid grid-cols-1 grid-rows-[auto_1fr_auto] bg-accent">
+        <div>
+          <Logo className="h-10" />
+        </div>
+        <div className="flex flex-col justify-center gap-6">
+          <GateIllustration className="h-50 w-fit text-muted-foreground" />
+          <h1 className="font-heading text-6xl font-bold text-font-base">
+            Welcome back
+          </h1>
+          <h2 className="text-muted-foreground text-xl w-3/4">
+            Log in to browse, analyze and manage your tenders.
+          </h2>
+        </div>
+        <div className="flex flex-col gap-4 uppercase text-muted-foreground font-medium tracking-wide">
+          <p>Trusted by:</p>
+          <Partners />
         </div>
       </section>
-      <section className="grid grid-cols-1 grid-rows-[auto_1fr_auto] p-6">
-        <div className="flex flex-center py-8">
-          <Logo className="h-9" />
-        </div>
+      <section className="grid grid-cols-1 grid-rows-[1fr_auto] p-24">
         <div className="flex flex-col gap-12 items-center justify-center w-sm mx-auto">
           {step === "login" && (
             <LoginForm
@@ -110,7 +110,7 @@ export default function LoginPage() {
             />
           )}
         </div>
-        <div className="flex flex-center gap-2 py-8">
+        <div className="flex flex-center gap-2">
           You don&apos;t have an account?
           <Link
             href="https://cal.com/mikolaj-grelewicz-kke2et/mimira"

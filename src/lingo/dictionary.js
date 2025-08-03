@@ -166,6 +166,34 @@ export default {
           },
           hash: "2c1f1ee6b00186ee3a5adc2d86d00511",
         },
+        "10/declaration/body/7/argument/1/1/1/3-placeholder": {
+          content: {
+            en: "Search",
+            pl: "Szukaj",
+          },
+          hash: "49dd6c21604b5e8d4153ff1aff2177e1",
+        },
+        "10/declaration/body/7/argument/1/3/1/1/1/3/expression/0/body/3/3": {
+          content: {
+            en: " · ",
+            pl: " · ",
+          },
+          hash: "21ca490ec79ca57af655c1df4287bbd0",
+        },
+        "10/declaration/body/7/argument/1/5/1/3": {
+          content: {
+            en: "Ask Mimir",
+            pl: "Zapytaj Mimira",
+          },
+          hash: "c516ed1af9463ccd6bdcb19a1f13e4ac",
+        },
+        "10/declaration/body/7/argument/1/5/1/5": {
+          content: {
+            en: "Coming soon",
+            pl: "Już wkrótce",
+          },
+          hash: "05a8fc9f6d826fd88a809d98684edcad",
+        },
         "10/declaration/body/8/argument/1/1/1/3-placeholder": {
           content: {
             en: "Search",
@@ -4044,12 +4072,47 @@ export default {
     },
     "app/(platform)/login/page.tsx": {
       entries: {
+        "10/declaration/body/0/expression/1": {
+          content: {
+            en: "Logged out successfully",
+            pl: "Wylogowano pomyślnie",
+          },
+          hash: "1dd7a3bce7f7d46670dbd5de79f32c93",
+        },
         "10/declaration/body/10/argument/1/1/1-alt": {
           content: {
             en: "Happy Office Workers",
             pl: "Szczęśliwi pracownicy biurowi",
           },
           hash: "84694dceff6180310fed53ccaa20c4c5",
+        },
+        "10/declaration/body/10/argument/1/3/3": {
+          content: {
+            en: "Welcome back",
+            pl: "Witamy ponownie",
+          },
+          hash: "891ab655f0771dcaab8944d7b8c168b7",
+        },
+        "10/declaration/body/10/argument/1/3/5": {
+          content: {
+            en: "Log in to browse, analyze and manage your tenders.",
+            pl: "Zaloguj się, aby przeglądać, analizować i zarządzać swoimi przetargami.",
+          },
+          hash: "bc08d7a9c081e38025ff84e56960c8dc",
+        },
+        "10/declaration/body/10/argument/1/5/1": {
+          content: {
+            en: "Trusted by:",
+            pl: "Zaufali nam:",
+          },
+          hash: "2f30f0e419c4906cb48884c792d03a5a",
+        },
+        "10/declaration/body/10/argument/3/3": {
+          content: {
+            en: "You don't have an account?<element:Link>Contact us</element:Link>",
+            pl: "Nie masz konta?<element:Link>Skontaktuj się z nami</element:Link>",
+          },
+          hash: "560ab78ac75a5b5df43ae45aa64f171e",
         },
         "10/declaration/body/10/argument/3/5": {
           content: {
@@ -4078,6 +4141,41 @@ export default {
             pl: "Szczęśliwi pracownicy biurowi",
           },
           hash: "84694dceff6180310fed53ccaa20c4c5",
+        },
+        "11/declaration/body/10/argument/1/3/1": {
+          content: {
+            en: "Welcome back",
+            pl: "Witamy ponownie",
+          },
+          hash: "891ab655f0771dcaab8944d7b8c168b7",
+        },
+        "11/declaration/body/10/argument/1/3/3": {
+          content: {
+            en: "Welcome back",
+            pl: "Witamy ponownie",
+          },
+          hash: "891ab655f0771dcaab8944d7b8c168b7",
+        },
+        "11/declaration/body/10/argument/1/3/5": {
+          content: {
+            en: "Log in to browse, analyze and manage your tenders.",
+            pl: "Zaloguj się, aby przeglądać, analizować i zarządzać swoimi przetargami.",
+          },
+          hash: "bc08d7a9c081e38025ff84e56960c8dc",
+        },
+        "11/declaration/body/10/argument/1/5/1": {
+          content: {
+            en: "Trusted by:",
+            pl: "Zaufali nam:",
+          },
+          hash: "2f30f0e419c4906cb48884c792d03a5a",
+        },
+        "11/declaration/body/10/argument/3/3": {
+          content: {
+            en: "You don't have an account?<element:Link>Contact us</element:Link>",
+            pl: "Nie masz konta?<element:Link>Skontaktuj się z nami</element:Link>",
+          },
+          hash: "560ab78ac75a5b5df43ae45aa64f171e",
         },
         "11/declaration/body/10/argument/3/5": {
           content: {
@@ -4247,6 +4345,13 @@ export default {
           },
           hash: "1dd7a3bce7f7d46670dbd5de79f32c93",
         },
+        "12/declaration/body/0/expression/1": {
+          content: {
+            en: "Logged out successfully",
+            pl: "Wylogowano pomyślnie",
+          },
+          hash: "1dd7a3bce7f7d46670dbd5de79f32c93",
+        },
         "12/declaration/body/10/0/init/body/1/1": {
           content: {
             en: "Welcome Back",
@@ -4295,6 +4400,34 @@ export default {
             pl: "Zaloguj się",
           },
           hash: "d9b0fe0a007e54d41375447cdf3c5267",
+        },
+        "12/declaration/body/10/argument/1/3/1": {
+          content: {
+            en: "Welcome back",
+            pl: "Witamy ponownie",
+          },
+          hash: "891ab655f0771dcaab8944d7b8c168b7",
+        },
+        "12/declaration/body/10/argument/1/3/3": {
+          content: {
+            en: "Log in to browse, analyze and manage your tenders.",
+            pl: "Zaloguj się, aby przeglądać, analizować i zarządzać swoimi przetargami.",
+          },
+          hash: "bc08d7a9c081e38025ff84e56960c8dc",
+        },
+        "12/declaration/body/10/argument/1/5/1": {
+          content: {
+            en: "Trusted by:",
+            pl: "Zaufali nam:",
+          },
+          hash: "2f30f0e419c4906cb48884c792d03a5a",
+        },
+        "12/declaration/body/10/argument/3/3": {
+          content: {
+            en: "You don't have an account?<element:Link>Contact us</element:Link>",
+            pl: "Nie masz konta?<element:Link>Skontaktuj się z nami</element:Link>",
+          },
+          hash: "560ab78ac75a5b5df43ae45aa64f171e",
         },
         "12/declaration/body/11/0/init/body/1/1": {
           content: {
@@ -5115,6 +5248,41 @@ export default {
           },
           hash: "560ab78ac75a5b5df43ae45aa64f171e",
         },
+        "9/declaration/body/0/expression/1": {
+          content: {
+            en: "Logged out successfully",
+            pl: "Wylogowano pomyślnie",
+          },
+          hash: "1dd7a3bce7f7d46670dbd5de79f32c93",
+        },
+        "9/declaration/body/10/argument/1/3/1": {
+          content: {
+            en: "Welcome back",
+            pl: "Witamy ponownie",
+          },
+          hash: "891ab655f0771dcaab8944d7b8c168b7",
+        },
+        "9/declaration/body/10/argument/1/3/3": {
+          content: {
+            en: "Log in to browse, analyze and manage your tenders.",
+            pl: "Zaloguj się, aby przeglądać, analizować i zarządzać swoimi przetargami.",
+          },
+          hash: "bc08d7a9c081e38025ff84e56960c8dc",
+        },
+        "9/declaration/body/10/argument/1/5/1": {
+          content: {
+            en: "Trusted by:",
+            pl: "Zaufali nam:",
+          },
+          hash: "2f30f0e419c4906cb48884c792d03a5a",
+        },
+        "9/declaration/body/10/argument/3/3": {
+          content: {
+            en: "You don't have an account?<element:Link>Contact us</element:Link>",
+            pl: "Nie masz konta?<element:Link>Skontaktuj się z nami</element:Link>",
+          },
+          hash: "560ab78ac75a5b5df43ae45aa64f171e",
+        },
         "9/declaration/body/9/argument/1/1/1-alt": {
           content: {
             en: "Happy Office Workers",
@@ -5216,6 +5384,67 @@ export default {
             pl: "To jest długi tekst demonstrujący tłumaczenia AI",
           },
           hash: "1d9871d895f03b60e4519d246dcd7b04",
+        },
+      },
+    },
+    "components/ui/dialog.tsx": {
+      entries: {
+        "9/body/0/argument/3/3/expression/right/3": {
+          content: {
+            en: "Close",
+            pl: "Zamknij",
+          },
+          hash: "2c2e22f8424a1031de89063bd0022e16",
+        },
+      },
+    },
+    "components/ui/sheet.tsx": {
+      entries: {
+        "9/body/0/argument/3/3/3": {
+          content: {
+            en: "Close",
+            pl: "Zamknij",
+          },
+          hash: "2c2e22f8424a1031de89063bd0022e16",
+        },
+      },
+    },
+    "components/ui/sidebar.tsx": {
+      entries: {
+        "22/body/2/consequent/0/argument/1/1/1": {
+          content: {
+            en: "Sidebar",
+            pl: "Pasek boczny",
+          },
+          hash: "85fcd93a6f051c26d057e4b30d392317",
+        },
+        "22/body/2/consequent/0/argument/1/1/3": {
+          content: {
+            en: "Displays the mobile sidebar.",
+            pl: "Wyświetla mobilny pasek boczny.",
+          },
+          hash: "51aa5f202c817560f38d3527a9a1366d",
+        },
+        "23/body/1/argument/3": {
+          content: {
+            en: "Toggle Sidebar",
+            pl: "Przełącz pasek boczny",
+          },
+          hash: "0ef91fcb33b04612eb8a202f673d7881",
+        },
+        "24/body/1/argument-aria-label": {
+          content: {
+            en: "Toggle Sidebar",
+            pl: "Przełącz pasek boczny",
+          },
+          hash: "0ef91fcb33b04612eb8a202f673d7881",
+        },
+        "24/body/1/argument-title": {
+          content: {
+            en: "Toggle Sidebar",
+            pl: "Przełącz pasek boczny",
+          },
+          hash: "0ef91fcb33b04612eb8a202f673d7881",
         },
       },
     },
@@ -5412,6 +5641,19 @@ export default {
     },
     "features/auth/components/forgot-password-form.tsx": {
       entries: {
+        "6/body/0/argument": {
+          content: {
+            en: "Send Reset Link",
+            pl: "Wyślij link resetujący",
+          },
+          hash: "8348c4baada14cc0ae5abbe99d96f98e",
+        },
+        "6/body/1/argument": {
+          content: {
+            en: "Send Reset Link",
+          },
+          hash: "8348c4baada14cc0ae5abbe99d96f98e",
+        },
         "6/declaration/body/1/argument/1/1": {
           content: {
             en: "Reset Password",
@@ -5451,6 +5693,42 @@ export default {
           content: {
             en: "Back to Login",
             pl: "Powrót do logowania",
+          },
+          hash: "af1fe3e18ab8816b295086f5caa19bbb",
+        },
+        "7/declaration/body/0/argument/1/1": {
+          content: {
+            en: "Reset Password",
+          },
+          hash: "52ec990b25991808a4f49db84986eefc",
+        },
+        "7/declaration/body/0/argument/1/3": {
+          content: {
+            en: "Enter your email address and we'll send you a link to reset your password",
+          },
+          hash: "6e820fc1a74664b8acdb6f563412e0b0",
+        },
+        "7/declaration/body/0/argument/3/3-label": {
+          content: {
+            en: "Email",
+          },
+          hash: "e7f34943a0c2fb849db1839ff6ef5cb5",
+        },
+        "7/declaration/body/0/argument/3/3-placeholder": {
+          content: {
+            en: "Enter your email address",
+          },
+          hash: "9bc008365ebe3e404e241c8ca876f56e",
+        },
+        "7/declaration/body/0/argument/3/5": {
+          content: {
+            en: "Send Reset Link",
+          },
+          hash: "0de8cdabf0744e2a7d87ddf2f4cb4466",
+        },
+        "7/declaration/body/0/argument/3/7": {
+          content: {
+            en: "Back to Login",
           },
           hash: "af1fe3e18ab8816b295086f5caa19bbb",
         },
@@ -5500,19 +5778,159 @@ export default {
     },
     "features/auth/components/login-form.tsx": {
       entries: {
+        "6/body/1/argument": {
+          content: {
+            en: "Log in",
+            pl: "Zaloguj się",
+          },
+          hash: "f902082746b643593b910bcd7d1ebcf9",
+        },
+        "6/declaration/body/1/argument/1/1": {
+          content: {
+            en: "Log in",
+            pl: "Zaloguj się",
+          },
+          hash: "9fb886eff8d1d67d8bb79f5c3f78edde",
+        },
+        "6/declaration/body/1/argument/1/3": {
+          content: {
+            en: "Enter your email address and password to enter your dashboard",
+            pl: "Wprowadź swój adres e-mail i hasło, aby uzyskać dostęp do swojego panelu",
+          },
+          hash: "78c8c873e0f2083d7ed85523a68a72e7",
+        },
+        "6/declaration/body/1/argument/3/3-label": {
+          content: {
+            en: "Email",
+            pl: "E-mail",
+          },
+          hash: "e7f34943a0c2fb849db1839ff6ef5cb5",
+        },
+        "6/declaration/body/1/argument/3/5-label": {
+          content: {
+            en: "Password",
+            pl: "Hasło",
+          },
+          hash: "223a61cf906ab9c40d22612c588dff48",
+        },
+        "6/declaration/body/1/argument/3/7/1": {
+          content: {
+            en: "Remember me",
+            pl: "Zapamiętaj mnie",
+          },
+          hash: "afc02ff1df56ecf8493e9e201592d764",
+        },
+        "6/declaration/body/1/argument/3/7/3": {
+          content: {
+            en: "Forgot password?",
+            pl: "Zapomniałeś hasła?",
+          },
+          hash: "4a0a69c05d0946a79ac6cc32bbb3c615",
+        },
+        "6/declaration/body/1/argument/3/9": {
+          content: {
+            en: "Log in",
+            pl: "Zaloguj się",
+          },
+          hash: "d9b0fe0a007e54d41375447cdf3c5267",
+        },
+        "7/declaration/body/0/argument/1/1": {
+          content: {
+            en: "Log in",
+            pl: "Zaloguj się",
+          },
+          hash: "9fb886eff8d1d67d8bb79f5c3f78edde",
+        },
+        "7/declaration/body/0/argument/1/3": {
+          content: {
+            en: "Enter your email address and password to enter your dashboard",
+            pl: "Wprowadź swój adres e-mail i hasło, aby uzyskać dostęp do swojego panelu",
+          },
+          hash: "78c8c873e0f2083d7ed85523a68a72e7",
+        },
+        "7/declaration/body/0/argument/3/3-label": {
+          content: {
+            en: "Email",
+            pl: "E-mail",
+          },
+          hash: "e7f34943a0c2fb849db1839ff6ef5cb5",
+        },
+        "7/declaration/body/0/argument/3/5-label": {
+          content: {
+            en: "Password",
+            pl: "Hasło",
+          },
+          hash: "223a61cf906ab9c40d22612c588dff48",
+        },
+        "7/declaration/body/0/argument/3/7/1": {
+          content: {
+            en: "Remember me",
+            pl: "Zapamiętaj mnie",
+          },
+          hash: "afc02ff1df56ecf8493e9e201592d764",
+        },
+        "7/declaration/body/0/argument/3/7/3": {
+          content: {
+            en: "Forgot password?",
+            pl: "Zapomniałeś hasła?",
+          },
+          hash: "4a0a69c05d0946a79ac6cc32bbb3c615",
+        },
+        "7/declaration/body/1/argument/1": {
+          content: {
+            en: "Log in to your account",
+            pl: "Zaloguj się do swojego konta",
+          },
+          hash: "c9173dc26518515f64d179c8bd928760",
+        },
         "7/declaration/body/1/argument/1/1": {
           content: {
-            en: "Welcome Back",
-            pl: "Witamy ponownie",
+            en: "Log in",
+            pl: "Zaloguj się",
           },
-          hash: "3d7c5b589fe3e18a1d2d7e83de7a9cf1",
+          hash: "9fb886eff8d1d67d8bb79f5c3f78edde",
         },
         "7/declaration/body/1/argument/1/3": {
           content: {
-            en: "Fill in your email and password to continue",
-            pl: "Wprowadź swój email i hasło, aby kontynuować",
+            en: "Enter your email address and we'll send you a link to log into your account",
+            pl: "Wprowadź swój adres e-mail, a my wyślemy Ci link do zalogowania się na Twoje konto",
           },
-          hash: "efe8c63f2219da23270fff479619bb1d",
+          hash: "d2eb1b2efe7855401d190fc40be61ff6",
+        },
+        "7/declaration/body/1/argument/1/3-label": {
+          content: {
+            en: "Email",
+            pl: "E-mail",
+          },
+          hash: "e7f34943a0c2fb849db1839ff6ef5cb5",
+        },
+        "7/declaration/body/1/argument/1/5-label": {
+          content: {
+            en: "Password",
+            pl: "Hasło",
+          },
+          hash: "223a61cf906ab9c40d22612c588dff48",
+        },
+        "7/declaration/body/1/argument/1/7/1": {
+          content: {
+            en: "Remember me",
+            pl: "Zapamiętaj mnie",
+          },
+          hash: "afc02ff1df56ecf8493e9e201592d764",
+        },
+        "7/declaration/body/1/argument/1/7/3": {
+          content: {
+            en: "Forgot password?",
+            pl: "Zapomniałeś hasła?",
+          },
+          hash: "4a0a69c05d0946a79ac6cc32bbb3c615",
+        },
+        "7/declaration/body/1/argument/1/9": {
+          content: {
+            en: "Log in",
+            pl: "Zaloguj się",
+          },
+          hash: "d9b0fe0a007e54d41375447cdf3c5267",
         },
         "7/declaration/body/1/argument/3/3-label": {
           content: {
@@ -5601,6 +6019,130 @@ export default {
             pl: "Zaktualizuj hasło",
           },
           hash: "8e011bfb0c21d65edfa153e811b67633",
+        },
+      },
+    },
+    "features/branding/components/Partners.tsx": {
+      entries: {
+        "0/declaration/body/0/argument/1-alt": {
+          content: {
+            en: "Zarys",
+            pl: "Zarys",
+          },
+          hash: "9b3d004c84df523535429ec29562569c",
+        },
+        "0/declaration/body/0/argument/3-alt": {
+          content: {
+            en: "Bluebrain",
+            pl: "Bluebrain",
+          },
+          hash: "92f51f4458a34da1e694a242bab3e31c",
+        },
+        "0/declaration/body/0/argument/5-alt": {
+          content: {
+            en: "Forcepol",
+            pl: "Forcepol",
+          },
+          hash: "37481d08ba871e03dc949580a4e300bc",
+        },
+        "0/declaration/body/0/argument/7-alt": {
+          content: {
+            en: "Seka",
+            pl: "Seka",
+          },
+          hash: "691b443da0fc99175fc9d12e9021bc50",
+        },
+        "1/declaration/body/0/argument/1-alt": {
+          content: {
+            en: "Zarys",
+            pl: "Zarys",
+          },
+          hash: "9b3d004c84df523535429ec29562569c",
+        },
+        "1/declaration/body/0/argument/3-alt": {
+          content: {
+            en: "Bluebrain",
+            pl: "Bluebrain",
+          },
+          hash: "92f51f4458a34da1e694a242bab3e31c",
+        },
+        "1/declaration/body/0/argument/5-alt": {
+          content: {
+            en: "Forcepol",
+            pl: "Forcepol",
+          },
+          hash: "37481d08ba871e03dc949580a4e300bc",
+        },
+        "1/declaration/body/0/argument/7-alt": {
+          content: {
+            en: "Seka",
+            pl: "Seka",
+          },
+          hash: "691b443da0fc99175fc9d12e9021bc50",
+        },
+      },
+    },
+    "features/inbox/components/additional-info-section.tsx": {
+      entries: {
+        "3/declaration/body/0/argument/1": {
+          content: {
+            en: "Additional Information",
+            pl: "Dodatkowe informacje",
+          },
+          hash: "8d1fc247855abcb3e1ab7ddbbb742945",
+        },
+        "3/declaration/body/0/argument/3/1/1/expression/right-title": {
+          content: {
+            en: "Application Form",
+            pl: "Formularz zgłoszeniowy",
+          },
+          hash: "c59c5c19b7235bd028026a6088c90b9b",
+        },
+        "3/declaration/body/0/argument/3/1/3/expression/right-title": {
+          content: {
+            en: "Payment Terms",
+            pl: "Warunki płatności",
+          },
+          hash: "ca6f26774e7e5e2c51cb11b7e305e5e2",
+        },
+        "3/declaration/body/0/argument/3/1/5/expression/right-title": {
+          content: {
+            en: "Contract Penalties",
+            pl: "Kary umowne",
+          },
+          hash: "02fb39147ed4e21a831c31033ec0221b",
+        },
+        "3/declaration/body/0/argument/3/1/7/expression/right-title": {
+          content: {
+            en: "Deposit Information",
+            pl: "Informacje o depozycie",
+          },
+          hash: "34d811d0d02e76753d176ae6b99fb933",
+        },
+        "3/declaration/body/0/argument/3/1/9/expression/right/1": {
+          content: {
+            en: "Source URL",
+            pl: "Źródłowy URL",
+          },
+          hash: "72378667b9dc0085f00ab6ab5909db4c",
+        },
+      },
+    },
+    "features/inbox/components/description-section.tsx": {
+      entries: {
+        "4/declaration/body/0/argument/1": {
+          content: {
+            en: "Description",
+            pl: "Opis",
+          },
+          hash: "e17686a22ffad04cc7bb70524ed4478b",
+        },
+        "4/declaration/body/0/argument/3/1/expression/alternate": {
+          content: {
+            en: "No detailed description available",
+            pl: "Brak dostępnego szczegółowego opisu",
+          },
+          hash: "5a678e8cb008d9e16b7555a27eac9dfc",
         },
       },
     },
@@ -5816,6 +6358,84 @@ export default {
         },
       },
     },
+    "features/inbox/components/navigation-sidebar.tsx": {
+      entries: {
+        "4/declaration/body/1/0/init/0/1/value": {
+          content: {
+            en: "Overview",
+            pl: "Przegląd",
+          },
+          hash: "30c54e4dc4ce599b87d94be34a8617f5",
+        },
+        "4/declaration/body/1/0/init/1/1/value": {
+          content: {
+            en: "Requirements",
+            pl: "Wymagania",
+          },
+          hash: "e108e149e0fd5b65f5850b6f032ccabe",
+        },
+        "4/declaration/body/1/0/init/2/1/value": {
+          content: {
+            en: "Review Criteria",
+            pl: "Kryteria oceny",
+          },
+          hash: "d524df30da3658fdbc1794408fcfdab4",
+        },
+        "4/declaration/body/1/0/init/3/1/value": {
+          content: {
+            en: "Description",
+            pl: "Opis",
+          },
+          hash: "e17686a22ffad04cc7bb70524ed4478b",
+        },
+        "4/declaration/body/1/0/init/4/1/value": {
+          content: {
+            en: "Additional Info",
+            pl: "Dodatkowe informacje",
+          },
+          hash: "d5bf1e70991802fd4a801f3a79cf9e5d",
+        },
+        "4/declaration/body/4/argument/1/1": {
+          content: {
+            en: "Contents",
+            pl: "Spis treści",
+          },
+          hash: "935785ca48ce760173b2096c2e8be8e6",
+        },
+      },
+    },
+    "features/inbox/components/overview-section.tsx": {
+      entries: {
+        "5/declaration/body/0/argument/1": {
+          content: {
+            en: "Overview",
+            pl: "Przegląd",
+          },
+          hash: "30c54e4dc4ce599b87d94be34a8617f5",
+        },
+        "5/declaration/body/0/argument/3/7/1/expression/right-title": {
+          content: {
+            en: "Eligibility",
+            pl: "Kwalifikowalność",
+          },
+          hash: "a895f9c2afd359f5f525b176d1c6010e",
+        },
+        "5/declaration/body/0/argument/3/7/3/expression/right-title": {
+          content: {
+            en: "Wadium",
+            pl: "Wadium",
+          },
+          hash: "cc1df5b4bb18ef18f1084db990961f72",
+        },
+        "5/declaration/body/0/argument/3/7/5/expression/right-title": {
+          content: {
+            en: "Completion Date",
+            pl: "Data zakończenia",
+          },
+          hash: "26465009e23d5f17e452842785193bda",
+        },
+      },
+    },
     "features/inbox/components/preview/additional-info-section.tsx": {
       entries: {
         "3/declaration/body/0/argument/1": {
@@ -5883,6 +6503,48 @@ export default {
     "features/inbox/components/preview/navigation-sidebar.tsx": {
       entries: {
         "3/declaration/body/0/argument/1/1": {
+          content: {
+            en: "Contents",
+            pl: "Spis treści",
+          },
+          hash: "935785ca48ce760173b2096c2e8be8e6",
+        },
+        "4/declaration/body/1/0/init/0/1/value": {
+          content: {
+            en: "Overview",
+            pl: "Przegląd",
+          },
+          hash: "30c54e4dc4ce599b87d94be34a8617f5",
+        },
+        "4/declaration/body/1/0/init/1/1/value": {
+          content: {
+            en: "Requirements",
+            pl: "Wymagania",
+          },
+          hash: "e108e149e0fd5b65f5850b6f032ccabe",
+        },
+        "4/declaration/body/1/0/init/2/1/value": {
+          content: {
+            en: "Review Criteria",
+            pl: "Kryteria oceny",
+          },
+          hash: "d524df30da3658fdbc1794408fcfdab4",
+        },
+        "4/declaration/body/1/0/init/3/1/value": {
+          content: {
+            en: "Description",
+            pl: "Opis",
+          },
+          hash: "e17686a22ffad04cc7bb70524ed4478b",
+        },
+        "4/declaration/body/1/0/init/4/1/value": {
+          content: {
+            en: "Additional Info",
+            pl: "Dodatkowe informacje",
+          },
+          hash: "d5bf1e70991802fd4a801f3a79cf9e5d",
+        },
+        "4/declaration/body/4/argument/1/1": {
           content: {
             en: "Contents",
             pl: "Spis treści",
@@ -5986,6 +6648,98 @@ export default {
       },
     },
     "features/inbox/components/preview/tender-header.tsx": {
+      entries: {
+        "5/declaration/body/0/argument/3/1/expression/right/3/1": {
+          content: {
+            en: "Apply",
+          },
+          hash: "77fc03abc14d71c8c36f000fb65f93f8",
+        },
+        "5/declaration/body/0/argument/3/1/expression/right/3/3": {
+          content: {
+            en: "Reject",
+            pl: "Odrzuć",
+          },
+          hash: "447bdd205a7407328c84f618e3bf1d40",
+        },
+        "5/declaration/body/0/argument/5/expression/right/3/1": {
+          content: {
+            en: "Apply",
+          },
+          hash: "a91df23e32b5d1457b62f98e6d90c2c0",
+        },
+        "5/declaration/body/0/argument/5/expression/right/3/3": {
+          content: {
+            en: "Reject",
+            pl: "Odrzuć",
+          },
+          hash: "21c303829516a636a6c306dcd68a64ec",
+        },
+      },
+    },
+    "features/inbox/components/requirements-section.tsx": {
+      entries: {
+        "4/declaration/body/0/argument/1": {
+          content: {
+            en: "Requirements",
+            pl: "Wymagania",
+          },
+          hash: "e108e149e0fd5b65f5850b6f032ccabe",
+        },
+        "4/declaration/body/0/argument/3/1/1-title": {
+          content: {
+            en: "Met Requirements",
+            pl: "Spełnione wymagania",
+          },
+          hash: "f5251ea9ac1d7825fd0b543fb0e0b4f5",
+        },
+        "4/declaration/body/0/argument/3/1/3-title": {
+          content: {
+            en: "Needs Confirmation",
+            pl: "Wymaga potwierdzenia",
+          },
+          hash: "a7d90ec8d0e7143313dfbfd6368cf79c",
+        },
+        "4/declaration/body/0/argument/3/1/5-title": {
+          content: {
+            en: "Not Met Requirements",
+            pl: "Niespełnione wymagania",
+          },
+          hash: "c358cf9796d545d7b72954dc6ddd6dc2",
+        },
+      },
+    },
+    "features/inbox/components/review-criteria-section.tsx": {
+      entries: {
+        "4/declaration/body/0/argument/1": {
+          content: {
+            en: "Review Criteria",
+            pl: "Kryteria oceny",
+          },
+          hash: "d524df30da3658fdbc1794408fcfdab4",
+        },
+      },
+    },
+    "features/inbox/components/review-criteria.tsx": {
+      entries: {
+        "5/declaration/body/2/consequent/0/argument/1": {
+          content: {
+            en: "No review criteria available",
+            pl: "Brak dostępnych kryteriów oceny",
+          },
+          hash: "59733806329de4c2ced81f375ea4e60c",
+        },
+        "5/declaration/body/3/argument/1/1/1/3/openingElement/0/value/expression/body/0/consequent/1/argument/1/1/3":
+          {
+            content: {
+              en: "{data.value}%",
+              pl: "{data.value}%",
+            },
+            hash: "84387a33605fd62116612bf3a74b77f6",
+          },
+      },
+    },
+    "features/inbox/components/tender-header.tsx": {
       entries: {
         "5/declaration/body/0/argument/3/1/expression/right/3/1": {
           content: {
@@ -7882,6 +8636,13 @@ export default {
             pl: "Zarys",
           },
           hash: "c0afd302caeecd63803a83f8b51e3e49",
+        },
+        "11/declaration/body/2/consequent/0/argument/1/1": {
+          content: {
+            en: "Select a tender to view details",
+            pl: "Wybierz ofertę, aby zobaczyć szczegóły",
+          },
+          hash: "067789b01a081458db2f872f10a37c3f",
         },
         "11/declaration/body/8/consequent/0/argument/1/1": {
           content: {
@@ -10966,6 +11727,13 @@ export default {
           },
           hash: "c52ee5a5653c68ec4ce5c3907eced38e",
         },
+        "4/declaration/body/2/consequent/0/argument/1/1": {
+          content: {
+            en: "Select a tender to view details",
+            pl: "Wybierz ofertę, aby zobaczyć szczegóły",
+          },
+          hash: "067789b01a081458db2f872f10a37c3f",
+        },
         "5/declaration/body/0/consequent/0/argument/1/1": {
           content: {
             en: "Select a tender to view details",
@@ -11138,6 +11906,13 @@ export default {
             pl: "W skrócie",
           },
           hash: "c52ee5a5653c68ec4ce5c3907eced38e",
+        },
+        "5/declaration/body/2/consequent/0/argument/1/1": {
+          content: {
+            en: "Select a tender to view details",
+            pl: "Wybierz ofertę, aby zobaczyć szczegóły",
+          },
+          hash: "067789b01a081458db2f872f10a37c3f",
         },
         "5/declaration/body/5/consequent/0/argument/1/1": {
           content: {
@@ -13019,67 +13794,6 @@ export default {
             pl: "Wyloguj się",
           },
           hash: "06efb815f8e1f5d09e63d262ba48b4e7",
-        },
-      },
-    },
-    "components/ui/dialog.tsx": {
-      entries: {
-        "9/body/0/argument/3/3/expression/right/3": {
-          content: {
-            en: "Close",
-            pl: "Zamknij",
-          },
-          hash: "2c2e22f8424a1031de89063bd0022e16",
-        },
-      },
-    },
-    "components/ui/sheet.tsx": {
-      entries: {
-        "9/body/0/argument/3/3/3": {
-          content: {
-            en: "Close",
-            pl: "Zamknij",
-          },
-          hash: "2c2e22f8424a1031de89063bd0022e16",
-        },
-      },
-    },
-    "components/ui/sidebar.tsx": {
-      entries: {
-        "22/body/2/consequent/0/argument/1/1/1": {
-          content: {
-            en: "Sidebar",
-            pl: "Pasek boczny",
-          },
-          hash: "85fcd93a6f051c26d057e4b30d392317",
-        },
-        "22/body/2/consequent/0/argument/1/1/3": {
-          content: {
-            en: "Displays the mobile sidebar.",
-            pl: "Wyświetla mobilny pasek boczny.",
-          },
-          hash: "51aa5f202c817560f38d3527a9a1366d",
-        },
-        "23/body/1/argument/3": {
-          content: {
-            en: "Toggle Sidebar",
-            pl: "Przełącz pasek boczny",
-          },
-          hash: "0ef91fcb33b04612eb8a202f673d7881",
-        },
-        "24/body/1/argument-aria-label": {
-          content: {
-            en: "Toggle Sidebar",
-            pl: "Przełącz pasek boczny",
-          },
-          hash: "0ef91fcb33b04612eb8a202f673d7881",
-        },
-        "24/body/1/argument-title": {
-          content: {
-            en: "Toggle Sidebar",
-            pl: "Przełącz pasek boczny",
-          },
-          hash: "0ef91fcb33b04612eb8a202f673d7881",
         },
       },
     },
