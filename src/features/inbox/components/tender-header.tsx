@@ -21,6 +21,11 @@ export function TenderHeader({ tender, isHeaderCollapsed }: TenderHeaderProps) {
           marginBottom: isHeaderCollapsed ? "4px" : "0px",
         }}
         transition={{ duration: 0.25, ease: [0.4, 0.0, 0.2, 1] }}
+        initial={{
+          fontSize: "18px",
+          lineHeight: "28px",
+          marginBottom: "0px",
+        }}
       >
         {tender.orderobject}
       </motion.h1>
@@ -74,11 +79,7 @@ export function TenderHeader({ tender, isHeaderCollapsed }: TenderHeaderProps) {
             </span>
           </div>
           <div className="flex gap-2">
-            <Button
-              size="sm"
-              color="primary"
-              data-lingo-override-pl="Aplikuj"
-            >
+            <Button size="sm" color="primary" data-lingo-override-pl="Aplikuj">
               Apply
             </Button>
             <Button size="sm" variant="flat" color="danger">
@@ -89,4 +90,4 @@ export function TenderHeader({ tender, isHeaderCollapsed }: TenderHeaderProps) {
       )}
     </div>
   );
-} 
+}

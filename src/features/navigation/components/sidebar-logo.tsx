@@ -7,9 +7,10 @@ import { useSidebar } from "$/components/ui/sidebar";
 export default function SidebarLogo() {
   const { state } = useSidebar();
 
-  return state === "collapsed" ? (
-    <Symbol className="h-8 w-8" />
-  ) : (
-    <Logo className="h-8 w-24 min-w-24" />
+  return (
+    <div className="flex justify-start w-full">
+      {state === "collapsed" && <Symbol className="h-8 w-8 ml-2" />}
+      {state !== "collapsed" && <Logo className="h-8 w-24 min-w-24" />}
+    </div>
   );
 }

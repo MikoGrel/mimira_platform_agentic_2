@@ -1958,6 +1958,27 @@ export default {
             },
             hash: "a943e8c4f3795b51abf0f1b7c9171701",
           },
+        "10/declaration/body/1/0/init/0/1/value": {
+          content: {
+            en: "Preview",
+            pl: "Podgląd",
+          },
+          hash: "3173ee1f0f1d4e50665ca4a84c38e15d",
+        },
+        "10/declaration/body/1/0/init/1/1/value": {
+          content: {
+            en: "Filling-out data",
+            pl: "Wypełnianie danych",
+          },
+          hash: "6b21fd589cc826495915020a9c6c36c0",
+        },
+        "10/declaration/body/1/0/init/2/1/value": {
+          content: {
+            en: "Application",
+            pl: "Aplikacja",
+          },
+          hash: "6dee9191cf69144d6b569683c49631d8",
+        },
         "10/declaration/body/2/argument/1/1/1": {
           content: {
             en: "Welcome back",
@@ -2383,6 +2404,233 @@ export default {
             },
             hash: "a943e8c4f3795b51abf0f1b7c9171701",
           },
+        "11/declaration/body/1/argument/1/1/1": {
+          content: {
+            en: "Welcome back",
+            pl: "Witamy ponownie",
+          },
+          hash: "4928884739ba559e6e4b960e80fe1452",
+        },
+        "11/declaration/body/1/argument/1/3": {
+          content: {
+            en: "Today's briefing: Since yesterday we've managed to find you 5 new tenders, 3 require your attention.",
+            pl: "Dzisiejszy briefing: Od wczoraj udało nam się znaleźć dla Ciebie 5 nowych przetargów, 3 z nich wymagają Twojej uwagi.",
+          },
+          hash: "bb23bee9cbd51ec0a4c3678877f28602",
+        },
+        "11/declaration/body/1/argument/3/1/openingElement/1/value/expression":
+          {
+            content: {
+              en: "New tenders",
+              pl: "Nowe przetargi",
+            },
+            hash: "b6a405902627530cdf66b4c52e322ee3",
+          },
+        "11/declaration/body/1/argument/3/1/openingElement/2/value/expression":
+          {
+            content: {
+              en: "Open full list",
+              pl: "Otwórz pełną listę",
+            },
+            hash: "d7d42078fa4055c4d41ab919488af90d",
+          },
+        "11/declaration/body/1/argument/3/3/3/1": {
+          content: {
+            en: "<element:span>Total deals:</element:span> 50",
+            pl: "<element:span>Łączna liczba transakcji:</element:span> 50",
+          },
+          hash: "9b1f553d2df5f3548cf26e784af90a4a",
+        },
+        "11/declaration/body/1/argument/3/3/3/3": {
+          content: {
+            en: "<element:span>Conversion rate:</element:span> 10%",
+            pl: "<element:span>Współczynnik konwersji:</element:span> 10%",
+          },
+          hash: "d75e468637e5f1fb99e23a04c99b3a9a",
+        },
+        "11/declaration/body/1/argument/3/3/openingElement/1/value/expression":
+          {
+            content: {
+              en: "Stats",
+              pl: "Statystyki",
+            },
+            hash: "5cf8b052c89fa1b05397a956ebec69b2",
+          },
+        "11/declaration/body/1/argument/3/5/1": {
+          content: {
+            en: "Restocking medical equipment",
+            pl: "Uzupełnianie zapasów sprzętu medycznego",
+          },
+          hash: "b05bdaa28e1b01bbc15fa5c13bc1ff0d",
+        },
+        "11/declaration/body/1/argument/3/5/3/1/1": {
+          content: {
+            en: "Preview",
+            pl: "Podgląd",
+          },
+          hash: "0b755f01c22d8f5f9232744cd6e70fe2",
+        },
+        "11/declaration/body/1/argument/3/5/3/3/1": {
+          content: {
+            en: "Filling-out data",
+            pl: "Wypełnianie danych",
+          },
+          hash: "0fea090a139a4174c3f1b2ca4a4c12d3",
+        },
+        "11/declaration/body/1/argument/3/5/3/5/1": {
+          content: {
+            en: "Application",
+            pl: "Aplikacja",
+          },
+          hash: "6dee9191cf69144d6b569683c49631d8",
+        },
+        "11/declaration/body/1/argument/3/5/5": {
+          content: {
+            en: "Continue",
+            pl: "Kontynuuj",
+          },
+          hash: "d34fc8a0b1f9070a796a8be4422bc439",
+        },
+        "11/declaration/body/1/argument/3/5/openingElement/1/value/expression":
+          {
+            content: {
+              en: "Return to last tender",
+              pl: "Wróć do ostatniego przetargu",
+            },
+            hash: "8208df3c0f89efff2b48433a4f98902e",
+          },
+        "11/declaration/body/1/argument/3/7/openingElement/1/value/expression":
+          {
+            content: {
+              en: "Deadline calendar",
+              pl: "Kalendarz terminów",
+            },
+            hash: "a943e8c4f3795b51abf0f1b7c9171701",
+          },
+        "11/declaration/body/2/0/init/0/1/value": {
+          content: {
+            en: "Preview",
+            pl: "Podgląd",
+          },
+          hash: "3173ee1f0f1d4e50665ca4a84c38e15d",
+        },
+        "11/declaration/body/2/0/init/1/1/value": {
+          content: {
+            en: "Filling-out data",
+            pl: "Wypełnianie danych",
+          },
+          hash: "6b21fd589cc826495915020a9c6c36c0",
+        },
+        "11/declaration/body/2/0/init/2/1/value": {
+          content: {
+            en: "Application",
+            pl: "Aplikacja",
+          },
+          hash: "6dee9191cf69144d6b569683c49631d8",
+        },
+        "11/declaration/body/3/argument/1/1/1": {
+          content: {
+            en: "Hello, <expression/>!",
+            pl: "Cześć, <expression/>!",
+          },
+          hash: "c94e261f959a12a2ef085d684e7aa5cd",
+        },
+        "11/declaration/body/3/argument/1/3": {
+          content: {
+            en: "Today's briefing: Since yesterday we've managed to find you 5 new tenders, 3 require your attention.",
+            pl: "Dzisiejszy briefing: Od wczoraj udało nam się znaleźć dla Ciebie 5 nowych przetargów, 3 z nich wymagają Twojej uwagi.",
+          },
+          hash: "bb23bee9cbd51ec0a4c3678877f28602",
+        },
+        "11/declaration/body/3/argument/3/1/openingElement/1/value/expression":
+          {
+            content: {
+              en: "New tenders",
+              pl: "Nowe przetargi",
+            },
+            hash: "b6a405902627530cdf66b4c52e322ee3",
+          },
+        "11/declaration/body/3/argument/3/1/openingElement/2/value/expression":
+          {
+            content: {
+              en: "Open full list",
+              pl: "Otwórz pełną listę",
+            },
+            hash: "d7d42078fa4055c4d41ab919488af90d",
+          },
+        "11/declaration/body/3/argument/3/3/3/1": {
+          content: {
+            en: "<element:span>Total deals:</element:span> 50",
+            pl: "<element:span>Łączna liczba transakcji:</element:span> 50",
+          },
+          hash: "9b1f553d2df5f3548cf26e784af90a4a",
+        },
+        "11/declaration/body/3/argument/3/3/3/3": {
+          content: {
+            en: "<element:span>Conversion rate:</element:span> 10%",
+            pl: "<element:span>Współczynnik konwersji:</element:span> 10%",
+          },
+          hash: "d75e468637e5f1fb99e23a04c99b3a9a",
+        },
+        "11/declaration/body/3/argument/3/3/openingElement/1/value/expression":
+          {
+            content: {
+              en: "Stats",
+              pl: "Statystyki",
+            },
+            hash: "5cf8b052c89fa1b05397a956ebec69b2",
+          },
+        "11/declaration/body/3/argument/3/5/1": {
+          content: {
+            en: "Restocking medical equipment",
+            pl: "Uzupełnianie zapasów sprzętu medycznego",
+          },
+          hash: "b05bdaa28e1b01bbc15fa5c13bc1ff0d",
+        },
+        "11/declaration/body/3/argument/3/5/3/1/1": {
+          content: {
+            en: "Preview",
+            pl: "Podgląd",
+          },
+          hash: "0b755f01c22d8f5f9232744cd6e70fe2",
+        },
+        "11/declaration/body/3/argument/3/5/3/3/1": {
+          content: {
+            en: "Filling-out data",
+            pl: "Wypełnianie danych",
+          },
+          hash: "0fea090a139a4174c3f1b2ca4a4c12d3",
+        },
+        "11/declaration/body/3/argument/3/5/3/5/1": {
+          content: {
+            en: "Application",
+            pl: "Aplikacja",
+          },
+          hash: "6dee9191cf69144d6b569683c49631d8",
+        },
+        "11/declaration/body/3/argument/3/5/5": {
+          content: {
+            en: "Continue",
+            pl: "Kontynuuj",
+          },
+          hash: "d34fc8a0b1f9070a796a8be4422bc439",
+        },
+        "11/declaration/body/3/argument/3/5/openingElement/1/value/expression":
+          {
+            content: {
+              en: "Return to last tender",
+              pl: "Wróć do ostatniego przetargu",
+            },
+            hash: "8208df3c0f89efff2b48433a4f98902e",
+          },
+        "11/declaration/body/3/argument/3/7/openingElement/1/value/expression":
+          {
+            content: {
+              en: "Deadline calendar",
+              pl: "Kalendarz terminów",
+            },
+            hash: "a943e8c4f3795b51abf0f1b7c9171701",
+          },
         "11/declaration/body/4/consequent/0/argument": {
           content: {
             en: "Loading...",
@@ -2486,6 +2734,212 @@ export default {
             hash: "8208df3c0f89efff2b48433a4f98902e",
           },
         "11/declaration/body/6/argument/1/5/7/openingElement/0/value/expression":
+          {
+            content: {
+              en: "Deadline calendar",
+              pl: "Kalendarz terminów",
+            },
+            hash: "a943e8c4f3795b51abf0f1b7c9171701",
+          },
+        "12/declaration/body/1/argument/1/1/1": {
+          content: {
+            en: "Welcome back",
+            pl: "Witamy ponownie",
+          },
+          hash: "4928884739ba559e6e4b960e80fe1452",
+        },
+        "12/declaration/body/1/argument/1/3": {
+          content: {
+            en: "Today's briefing: Since yesterday we've managed to find you 5 new tenders, 3 require your attention.",
+            pl: "Dzisiejszy briefing: Od wczoraj udało nam się znaleźć dla Ciebie 5 nowych przetargów, 3 z nich wymagają Twojej uwagi.",
+          },
+          hash: "bb23bee9cbd51ec0a4c3678877f28602",
+        },
+        "12/declaration/body/1/argument/3/1/openingElement/1/value/expression":
+          {
+            content: {
+              en: "New tenders",
+              pl: "Nowe przetargi",
+            },
+            hash: "b6a405902627530cdf66b4c52e322ee3",
+          },
+        "12/declaration/body/1/argument/3/1/openingElement/2/value/expression":
+          {
+            content: {
+              en: "Open full list",
+              pl: "Otwórz pełną listę",
+            },
+            hash: "d7d42078fa4055c4d41ab919488af90d",
+          },
+        "12/declaration/body/1/argument/3/3/3/1": {
+          content: {
+            en: "<element:span>Total deals:</element:span> 50",
+            pl: "<element:span>Łączna liczba transakcji:</element:span> 50",
+          },
+          hash: "9b1f553d2df5f3548cf26e784af90a4a",
+        },
+        "12/declaration/body/1/argument/3/3/3/3": {
+          content: {
+            en: "<element:span>Conversion rate:</element:span> 10%",
+            pl: "<element:span>Współczynnik konwersji:</element:span> 10%",
+          },
+          hash: "d75e468637e5f1fb99e23a04c99b3a9a",
+        },
+        "12/declaration/body/1/argument/3/3/openingElement/1/value/expression":
+          {
+            content: {
+              en: "Stats",
+              pl: "Statystyki",
+            },
+            hash: "5cf8b052c89fa1b05397a956ebec69b2",
+          },
+        "12/declaration/body/1/argument/3/5/1": {
+          content: {
+            en: "Restocking medical equipment",
+            pl: "Uzupełnianie zapasów sprzętu medycznego",
+          },
+          hash: "b05bdaa28e1b01bbc15fa5c13bc1ff0d",
+        },
+        "12/declaration/body/1/argument/3/5/3/1/1": {
+          content: {
+            en: "Preview",
+            pl: "Podgląd",
+          },
+          hash: "0b755f01c22d8f5f9232744cd6e70fe2",
+        },
+        "12/declaration/body/1/argument/3/5/3/3/1": {
+          content: {
+            en: "Filling-out data",
+            pl: "Wypełnianie danych",
+          },
+          hash: "0fea090a139a4174c3f1b2ca4a4c12d3",
+        },
+        "12/declaration/body/1/argument/3/5/3/5/1": {
+          content: {
+            en: "Application",
+            pl: "Aplikacja",
+          },
+          hash: "6dee9191cf69144d6b569683c49631d8",
+        },
+        "12/declaration/body/1/argument/3/5/5": {
+          content: {
+            en: "Continue",
+            pl: "Kontynuuj",
+          },
+          hash: "d34fc8a0b1f9070a796a8be4422bc439",
+        },
+        "12/declaration/body/1/argument/3/5/openingElement/1/value/expression":
+          {
+            content: {
+              en: "Return to last tender",
+              pl: "Wróć do ostatniego przetargu",
+            },
+            hash: "8208df3c0f89efff2b48433a4f98902e",
+          },
+        "12/declaration/body/1/argument/3/7/openingElement/1/value/expression":
+          {
+            content: {
+              en: "Deadline calendar",
+              pl: "Kalendarz terminów",
+            },
+            hash: "a943e8c4f3795b51abf0f1b7c9171701",
+          },
+        "12/declaration/body/2/0/init/0/1/value": {
+          content: {
+            en: "Preview",
+            pl: "Podgląd",
+          },
+          hash: "3173ee1f0f1d4e50665ca4a84c38e15d",
+        },
+        "12/declaration/body/2/0/init/1/1/value": {
+          content: {
+            en: "Filling-out data",
+            pl: "Wypełnianie danych",
+          },
+          hash: "6b21fd589cc826495915020a9c6c36c0",
+        },
+        "12/declaration/body/2/0/init/2/1/value": {
+          content: {
+            en: "Application",
+            pl: "Aplikacja",
+          },
+          hash: "6dee9191cf69144d6b569683c49631d8",
+        },
+        "12/declaration/body/3/argument/1/1/1": {
+          content: {
+            en: "<element:Symbol></element:Symbol> Hello, <expression/>!",
+            pl: "<element:Symbol></element:Symbol> Cześć, <expression/>!",
+          },
+          hash: "de340c4d2c784f3d184dd900d84b1ede",
+        },
+        "12/declaration/body/3/argument/1/3": {
+          content: {
+            en: "Today's briefing: Since yesterday we've managed to find you 5 new tenders, 3 require your attention.",
+            pl: "Dzisiejszy briefing: Od wczoraj udało nam się znaleźć dla Ciebie 5 nowych przetargów, 3 z nich wymagają Twojej uwagi.",
+          },
+          hash: "bb23bee9cbd51ec0a4c3678877f28602",
+        },
+        "12/declaration/body/3/argument/3/1/openingElement/1/value/expression":
+          {
+            content: {
+              en: "New tenders",
+              pl: "Nowe przetargi",
+            },
+            hash: "b6a405902627530cdf66b4c52e322ee3",
+          },
+        "12/declaration/body/3/argument/3/1/openingElement/2/value/expression":
+          {
+            content: {
+              en: "Open full list",
+              pl: "Otwórz pełną listę",
+            },
+            hash: "d7d42078fa4055c4d41ab919488af90d",
+          },
+        "12/declaration/body/3/argument/3/3/3/1": {
+          content: {
+            en: "<element:span>Total deals:</element:span> 50",
+            pl: "<element:span>Łączna liczba transakcji:</element:span> 50",
+          },
+          hash: "9b1f553d2df5f3548cf26e784af90a4a",
+        },
+        "12/declaration/body/3/argument/3/3/3/3": {
+          content: {
+            en: "<element:span>Conversion rate:</element:span> 10%",
+            pl: "<element:span>Współczynnik konwersji:</element:span> 10%",
+          },
+          hash: "d75e468637e5f1fb99e23a04c99b3a9a",
+        },
+        "12/declaration/body/3/argument/3/3/openingElement/1/value/expression":
+          {
+            content: {
+              en: "Stats",
+              pl: "Statystyki",
+            },
+            hash: "5cf8b052c89fa1b05397a956ebec69b2",
+          },
+        "12/declaration/body/3/argument/3/5/1": {
+          content: {
+            en: "Restocking medical equipment",
+            pl: "Uzupełnianie zapasów sprzętu medycznego",
+          },
+          hash: "b05bdaa28e1b01bbc15fa5c13bc1ff0d",
+        },
+        "12/declaration/body/3/argument/3/5/5": {
+          content: {
+            en: "Continue",
+            pl: "Kontynuuj",
+          },
+          hash: "d34fc8a0b1f9070a796a8be4422bc439",
+        },
+        "12/declaration/body/3/argument/3/5/openingElement/1/value/expression":
+          {
+            content: {
+              en: "Return to last tender",
+              pl: "Wróć do ostatniego przetargu",
+            },
+            hash: "8208df3c0f89efff2b48433a4f98902e",
+          },
+        "12/declaration/body/3/argument/3/7/openingElement/1/value/expression":
           {
             content: {
               en: "Deadline calendar",
@@ -3723,6 +4177,104 @@ export default {
           },
           hash: "a943e8c4f3795b51abf0f1b7c9171701",
         },
+        "8/declaration/body/1/argument/1/1/1": {
+          content: {
+            en: "Welcome back",
+            pl: "Witamy ponownie",
+          },
+          hash: "4928884739ba559e6e4b960e80fe1452",
+        },
+        "8/declaration/body/1/argument/1/3": {
+          content: {
+            en: "Today's briefing: Since yesterday we've managed to find you 5 new tenders, 3 require your attention.",
+            pl: "Dzisiejszy briefing: Od wczoraj udało nam się znaleźć dla Ciebie 5 nowych przetargów, 3 z nich wymagają Twojej uwagi.",
+          },
+          hash: "bb23bee9cbd51ec0a4c3678877f28602",
+        },
+        "8/declaration/body/1/argument/3/1/openingElement/1/value/expression": {
+          content: {
+            en: "New tenders",
+            pl: "Nowe przetargi",
+          },
+          hash: "b6a405902627530cdf66b4c52e322ee3",
+        },
+        "8/declaration/body/1/argument/3/1/openingElement/2/value/expression": {
+          content: {
+            en: "Open full list",
+            pl: "Otwórz pełną listę",
+          },
+          hash: "d7d42078fa4055c4d41ab919488af90d",
+        },
+        "8/declaration/body/1/argument/3/3/3/1": {
+          content: {
+            en: "<element:span>Total deals:</element:span> 50",
+            pl: "<element:span>Łączna liczba transakcji:</element:span> 50",
+          },
+          hash: "9b1f553d2df5f3548cf26e784af90a4a",
+        },
+        "8/declaration/body/1/argument/3/3/3/3": {
+          content: {
+            en: "<element:span>Conversion rate:</element:span> 10%",
+            pl: "<element:span>Współczynnik konwersji:</element:span> 10%",
+          },
+          hash: "d75e468637e5f1fb99e23a04c99b3a9a",
+        },
+        "8/declaration/body/1/argument/3/3/openingElement/1/value/expression": {
+          content: {
+            en: "Stats",
+            pl: "Statystyki",
+          },
+          hash: "5cf8b052c89fa1b05397a956ebec69b2",
+        },
+        "8/declaration/body/1/argument/3/5/1": {
+          content: {
+            en: "Restocking medical equipment",
+            pl: "Uzupełnianie zapasów sprzętu medycznego",
+          },
+          hash: "b05bdaa28e1b01bbc15fa5c13bc1ff0d",
+        },
+        "8/declaration/body/1/argument/3/5/3/1/1": {
+          content: {
+            en: "Preview",
+            pl: "Podgląd",
+          },
+          hash: "0b755f01c22d8f5f9232744cd6e70fe2",
+        },
+        "8/declaration/body/1/argument/3/5/3/3/1": {
+          content: {
+            en: "Filling-out data",
+            pl: "Wypełnianie danych",
+          },
+          hash: "0fea090a139a4174c3f1b2ca4a4c12d3",
+        },
+        "8/declaration/body/1/argument/3/5/3/5/1": {
+          content: {
+            en: "Application",
+            pl: "Aplikacja",
+          },
+          hash: "6dee9191cf69144d6b569683c49631d8",
+        },
+        "8/declaration/body/1/argument/3/5/5": {
+          content: {
+            en: "Continue",
+            pl: "Kontynuuj",
+          },
+          hash: "d34fc8a0b1f9070a796a8be4422bc439",
+        },
+        "8/declaration/body/1/argument/3/5/openingElement/1/value/expression": {
+          content: {
+            en: "Return to last tender",
+            pl: "Wróć do ostatniego przetargu",
+          },
+          hash: "8208df3c0f89efff2b48433a4f98902e",
+        },
+        "8/declaration/body/1/argument/3/7/openingElement/1/value/expression": {
+          content: {
+            en: "Deadline calendar",
+            pl: "Kalendarz terminów",
+          },
+          hash: "a943e8c4f3795b51abf0f1b7c9171701",
+        },
         "8/declaration/body/3/argument/1/1/1": {
           content: {
             en: "Welcome back",
@@ -3942,6 +4494,104 @@ export default {
             },
             hash: "a943e8c4f3795b51abf0f1b7c9171701",
           },
+        "9/declaration/body/1/argument/1/1/1": {
+          content: {
+            en: "Welcome back",
+            pl: "Witamy ponownie",
+          },
+          hash: "4928884739ba559e6e4b960e80fe1452",
+        },
+        "9/declaration/body/1/argument/1/3": {
+          content: {
+            en: "Today's briefing: Since yesterday we've managed to find you 5 new tenders, 3 require your attention.",
+            pl: "Dzisiejszy briefing: Od wczoraj udało nam się znaleźć dla Ciebie 5 nowych przetargów, 3 z nich wymagają Twojej uwagi.",
+          },
+          hash: "bb23bee9cbd51ec0a4c3678877f28602",
+        },
+        "9/declaration/body/1/argument/3/1/openingElement/1/value/expression": {
+          content: {
+            en: "New tenders",
+            pl: "Nowe przetargi",
+          },
+          hash: "b6a405902627530cdf66b4c52e322ee3",
+        },
+        "9/declaration/body/1/argument/3/1/openingElement/2/value/expression": {
+          content: {
+            en: "Open full list",
+            pl: "Otwórz pełną listę",
+          },
+          hash: "d7d42078fa4055c4d41ab919488af90d",
+        },
+        "9/declaration/body/1/argument/3/3/3/1": {
+          content: {
+            en: "<element:span>Total deals:</element:span> 50",
+            pl: "<element:span>Łączna liczba transakcji:</element:span> 50",
+          },
+          hash: "9b1f553d2df5f3548cf26e784af90a4a",
+        },
+        "9/declaration/body/1/argument/3/3/3/3": {
+          content: {
+            en: "<element:span>Conversion rate:</element:span> 10%",
+            pl: "<element:span>Współczynnik konwersji:</element:span> 10%",
+          },
+          hash: "d75e468637e5f1fb99e23a04c99b3a9a",
+        },
+        "9/declaration/body/1/argument/3/3/openingElement/1/value/expression": {
+          content: {
+            en: "Stats",
+            pl: "Statystyki",
+          },
+          hash: "5cf8b052c89fa1b05397a956ebec69b2",
+        },
+        "9/declaration/body/1/argument/3/5/1": {
+          content: {
+            en: "Restocking medical equipment",
+            pl: "Uzupełnianie zapasów sprzętu medycznego",
+          },
+          hash: "b05bdaa28e1b01bbc15fa5c13bc1ff0d",
+        },
+        "9/declaration/body/1/argument/3/5/3/1/1": {
+          content: {
+            en: "Preview",
+            pl: "Podgląd",
+          },
+          hash: "0b755f01c22d8f5f9232744cd6e70fe2",
+        },
+        "9/declaration/body/1/argument/3/5/3/3/1": {
+          content: {
+            en: "Filling-out data",
+            pl: "Wypełnianie danych",
+          },
+          hash: "0fea090a139a4174c3f1b2ca4a4c12d3",
+        },
+        "9/declaration/body/1/argument/3/5/3/5/1": {
+          content: {
+            en: "Application",
+            pl: "Aplikacja",
+          },
+          hash: "6dee9191cf69144d6b569683c49631d8",
+        },
+        "9/declaration/body/1/argument/3/5/5": {
+          content: {
+            en: "Continue",
+            pl: "Kontynuuj",
+          },
+          hash: "d34fc8a0b1f9070a796a8be4422bc439",
+        },
+        "9/declaration/body/1/argument/3/5/openingElement/1/value/expression": {
+          content: {
+            en: "Return to last tender",
+            pl: "Wróć do ostatniego przetargu",
+          },
+          hash: "8208df3c0f89efff2b48433a4f98902e",
+        },
+        "9/declaration/body/1/argument/3/7/openingElement/1/value/expression": {
+          content: {
+            en: "Deadline calendar",
+            pl: "Kalendarz terminów",
+          },
+          hash: "a943e8c4f3795b51abf0f1b7c9171701",
+        },
         "9/declaration/body/2/argument/1/1/1": {
           content: {
             en: "Welcome back",
@@ -4012,6 +4662,20 @@ export default {
           },
           hash: "bbde79ce975a43f71350ef605bfa3875",
         },
+        "9/declaration/body/2/argument/3/3/3/1": {
+          content: {
+            en: "<element:span>Total deals:</element:span> 50",
+            pl: "<element:span>Łączna liczba transakcji:</element:span> 50",
+          },
+          hash: "9b1f553d2df5f3548cf26e784af90a4a",
+        },
+        "9/declaration/body/2/argument/3/3/3/3": {
+          content: {
+            en: "<element:span>Conversion rate:</element:span> 10%",
+            pl: "<element:span>Współczynnik konwersji:</element:span> 10%",
+          },
+          hash: "d75e468637e5f1fb99e23a04c99b3a9a",
+        },
         "9/declaration/body/2/argument/3/3/openingElement/0/value/expression": {
           content: {
             en: "Stats",
@@ -4029,9 +4693,9 @@ export default {
         "9/declaration/body/2/argument/3/5/1": {
           content: {
             en: "Restocking medical equipment",
-            pl: "Uzupełnianie sprzętu medycznego",
+            pl: "Uzupełnianie zapasów sprzętu medycznego",
           },
-          hash: "c18ed7834c8bb0a3d6f1bf2c43dd172e",
+          hash: "b05bdaa28e1b01bbc15fa5c13bc1ff0d",
         },
         "9/declaration/body/2/argument/3/5/3/1/1": {
           content: {
@@ -13911,6 +14575,34 @@ export default {
           },
           hash: "06efb815f8e1f5d09e63d262ba48b4e7",
         },
+        "7/0/init/0/0/value": {
+          content: {
+            en: "Home",
+            pl: "Strona główna",
+          },
+          hash: "104a3db3b671c04e167eafbe21e57881",
+        },
+        "7/0/init/1/0/value": {
+          content: {
+            en: "Discover new tenders",
+            pl: "Odkryj nowe przetargi",
+          },
+          hash: "a94c4eb8b9f76eedf17a5b47e0f12908",
+        },
+        "7/0/init/2/0/value": {
+          content: {
+            en: "Active tenders",
+            pl: "Aktywne przetargi",
+          },
+          hash: "bd9a5531afffb07a322a91ec689859ee",
+        },
+        "7/0/init/3/0/value": {
+          content: {
+            en: "Documents",
+            pl: "Dokumenty",
+          },
+          hash: "c3882fc98216636873ab9091f3453f0c",
+        },
         "7/declaration/body/0/argument/3/1/1": {
           content: {
             en: "Main Navigation",
@@ -13925,12 +14617,26 @@ export default {
           },
           hash: "06efb815f8e1f5d09e63d262ba48b4e7",
         },
+        "7/declaration/body/1/argument/3/1/1": {
+          content: {
+            en: "Main Navigation",
+            pl: "Główna nawigacja",
+          },
+          hash: "9e8d5035217a4088af5d7de48c14283b",
+        },
         "8/body/1/argument/1/1/expression/right": {
           content: {
             en: "Sign Out",
             pl: "Wyloguj się",
           },
           hash: "06efb815f8e1f5d09e63d262ba48b4e7",
+        },
+        "8/declaration/body/1/argument/3/1/1": {
+          content: {
+            en: "Main Navigation",
+            pl: "Główna nawigacja",
+          },
+          hash: "9e8d5035217a4088af5d7de48c14283b",
         },
       },
     },

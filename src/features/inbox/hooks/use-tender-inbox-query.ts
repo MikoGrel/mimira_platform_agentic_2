@@ -13,9 +13,9 @@ import { SortDirection } from "./use-filter-form";
 import { Tables } from "$/types/supabase";
 
 interface UseTenderInboxQueryParams {
-  pageSize: number;
-  search: string;
-  filterQuery: {
+  pageSize?: number;
+  search?: string;
+  filterQuery?: {
     dateFrom: CalendarDate | null;
     dateTo: CalendarDate | null;
     voivodeship: Set<Voivodeship> | null;
@@ -30,8 +30,14 @@ export default function useTenderInboxQuery({
 }: UseTenderInboxQueryParams) {
   const { user } = useCurrentUser();
   const queryClient = useQueryClient();
+  const filters: UseTenderInboxQueryParams["filterQuery"] = filterQuery || {
+    dateFrom: null,
+    dateTo: null,
+    voivodeship: null,
+    sortBy: null,
+  };
 
-  const queryKey = ["tenders", search, ...Object.values(filterQuery)];
+  const queryKey = ["tenders", search, ...Object.values(filters)];
 
   const {
     data: tendersData,
@@ -55,33 +61,33 @@ export default function useTenderInboxQuery({
         query = query.textSearch("orderobject", search);
       }
 
-      if (filterQuery.dateFrom) {
+      if (filters.dateFrom) {
         query = query.gte(
           "submittingoffersdate",
-          format(filterQuery.dateFrom.toDate(getLocalTimeZone()), "yyyy-MM-dd")
+          format(filters.dateFrom.toDate(getLocalTimeZone()), "yyyy-MM-dd")
         );
       }
-      if (filterQuery.dateTo) {
+      if (filters.dateTo) {
         query = query.lte(
           "submittingoffersdate",
-          format(filterQuery.dateTo.toDate(getLocalTimeZone()), "yyyy-MM-dd")
+          format(filters.dateTo.toDate(getLocalTimeZone()), "yyyy-MM-dd")
         );
       }
 
-      if (filterQuery.voivodeship) {
-        query = query.in("voivodship", Array.from(filterQuery.voivodeship));
+      if (filters.voivodeship) {
+        query = query.in("voivodship", Array.from(filters.voivodeship));
       }
 
       const sortAscending =
-        Array.from(filterQuery.sortBy || new Set())[0] === "asc";
-      const shouldSort = filterQuery.sortBy !== null;
+        Array.from(filters.sortBy || new Set())[0] === "asc";
+      const shouldSort = filters.sortBy !== null;
 
       const result = await query
         .order("submittingoffersdate", {
           ascending: shouldSort ? sortAscending : false,
         })
         .order("id", { ascending: false })
-        .range(pageParam * pageSize, pageParam * pageSize + pageSize - 1);
+        .range(pageParam * pageSize!, pageParam * pageSize! + pageSize! - 1);
 
       return {
         data: result.data || [],

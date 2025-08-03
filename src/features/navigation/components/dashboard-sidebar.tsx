@@ -17,6 +17,7 @@ import SidebarLogo from "./sidebar-logo";
 import Link from "next/link";
 import { SidebarLogOutButton } from "./sidebar-logout-button";
 import { usePathname } from "next/navigation";
+import { cn } from "$/lib/utils";
 
 const navigationItems = [
   {
@@ -61,20 +62,24 @@ export default function DashboardSidebar() {
           <SidebarGroupLabel>Main Navigation</SidebarGroupLabel>
           <SidebarGroupContent>
             <SidebarMenu>
-              {navigationItems.map((item) => (
-                <SidebarMenuItem key={item.url}>
-                  <SidebarMenuButton
-                    asChild
-                    tooltip={item.tooltip}
-                    isActive={pathname.endsWith(item.url)}
-                  >
-                    <Link href={item.url}>
-                      <item.icon />
-                      <span>{item.title}</span>
-                    </Link>
-                  </SidebarMenuButton>
-                </SidebarMenuItem>
-              ))}
+              {navigationItems.map((item) => {
+                const isActive = pathname.endsWith(item.url);
+
+                return (
+                  <SidebarMenuItem key={item.url}>
+                    <SidebarMenuButton
+                      asChild
+                      tooltip={item.tooltip}
+                      isActive={isActive}
+                    >
+                      <Link href={item.url}>
+                        <item.icon className={cn(isActive && "text-primary")} />
+                        <span>{item.title}</span>
+                      </Link>
+                    </SidebarMenuButton>
+                  </SidebarMenuItem>
+                );
+              })}
             </SidebarMenu>
           </SidebarGroupContent>
         </SidebarGroup>

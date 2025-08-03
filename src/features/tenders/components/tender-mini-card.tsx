@@ -1,6 +1,7 @@
 import { useDateFormat } from "$/features/i18n/hooks/use-date-format";
-import { Button } from "@heroui/react";
-import { CalendarClock, DollarSign, MoveRight } from "lucide-react";
+import { Chip } from "@heroui/react";
+import { ArrowUpRight, CalendarClock } from "lucide-react";
+import Link from "next/link";
 
 interface TenderMiniCardProps {
   title: string;
@@ -11,40 +12,29 @@ interface TenderMiniCardProps {
 
 export function TenderMiniCard(props: TenderMiniCardProps) {
   const { relativeToNow } = useDateFormat();
-  const { title, amount, expirationDate, id } = props;
-
-  const formattedAmount = new Intl.NumberFormat("pl-PL", {
-    style: "currency",
-    currency: "PLN",
-  }).format(amount);
+  const { title, expirationDate, id } = props;
 
   const timeUntilExpiration = relativeToNow(expirationDate);
 
   return (
-    <div className="bg-white border p-4 flex justify-between rounded-xl">
+    <Link
+      href={`/dashboard/inbox/?id=${id}`}
+      className="bg-white hover:bg-gray-50 transition-all group border p-4 flex justify-between rounded-xl"
+    >
       <div className="flex flex-col gap-2">
-        <p>{title}</p>
+        <p className="text-sm font-medium">{title}</p>
         <div className="text-xs flex gap-4">
-          <div className="flex items-center gap-1">
-            <DollarSign className="w-4 h-4" />
-            {formattedAmount}
-          </div>
-          <div className="flex items-center gap-1">
-            <CalendarClock className="w-4 h-4" />
+          <Chip
+            variant="flat"
+            startContent={<CalendarClock className="w-4 h-4 ml-1" />}
+          >
             {timeUntilExpiration}
-          </div>
+          </Chip>
         </div>
       </div>
-      <div className="h-full ml-4">
-        <Button
-          href={`/tenders/${id}`}
-          variant="bordered"
-          className="border-1"
-          isIconOnly
-        >
-          <MoveRight />
-        </Button>
+      <div className="h-full ml-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-all">
+        <ArrowUpRight strokeWidth={1.5} />
       </div>
-    </div>
+    </Link>
   );
 }
