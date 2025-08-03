@@ -1,3 +1,5 @@
+"use client";
+
 import {
   Sidebar,
   SidebarContent,
@@ -14,6 +16,7 @@ import { Home, FolderOpen, SparklesIcon, FileCheck } from "lucide-react";
 import SidebarLogo from "./sidebar-logo";
 import Link from "next/link";
 import { SidebarLogOutButton } from "./sidebar-logout-button";
+import { usePathname } from "next/navigation";
 
 const navigationItems = [
   {
@@ -43,6 +46,8 @@ const navigationItems = [
 ];
 
 export default function DashboardSidebar() {
+  const pathname = usePathname();
+
   return (
     <Sidebar collapsible="icon" className="group-data-[side=left]:border-r-0">
       <SidebarHeader className="group-data-[state=collapsed]:px-0 p-4">
@@ -58,7 +63,11 @@ export default function DashboardSidebar() {
             <SidebarMenu>
               {navigationItems.map((item) => (
                 <SidebarMenuItem key={item.url}>
-                  <SidebarMenuButton asChild tooltip={item.tooltip}>
+                  <SidebarMenuButton
+                    asChild
+                    tooltip={item.tooltip}
+                    isActive={pathname.endsWith(item.url)}
+                  >
                     <Link href={item.url}>
                       <item.icon />
                       <span>{item.title}</span>

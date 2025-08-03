@@ -393,6 +393,13 @@ export default {
           },
           hash: "49dd6c21604b5e8d4153ff1aff2177e1",
         },
+        "11/declaration/body/7/argument/1/3/1/1/1/3/expression/0/body/3/3": {
+          content: {
+            en: " · ",
+            pl: " · ",
+          },
+          hash: "21ca490ec79ca57af655c1df4287bbd0",
+        },
         "11/declaration/body/7/argument/1/3/3/expression/right/1/1/1/expression/0/body/3/3":
           {
             content: {
@@ -492,6 +499,13 @@ export default {
           },
           hash: "2c1f1ee6b00186ee3a5adc2d86d00511",
         },
+        "12/body/0/argument/1/expression/0/body/3/3": {
+          content: {
+            en: "·",
+            pl: "·",
+          },
+          hash: "26b80ae8a680de73667e096098aa69d8",
+        },
         "12/declaration/body/8/argument/1/1/1/3-placeholder": {
           content: {
             en: "Search",
@@ -572,6 +586,13 @@ export default {
             pl: "{key}: {value}",
           },
           hash: "ff11fa72c57b6e303293954be490bd21",
+        },
+        "12/declaration/body/8/argument/1/3/1/1/1/3/expression/0/body/3/3": {
+          content: {
+            en: " · ",
+            pl: " · ",
+          },
+          hash: "21ca490ec79ca57af655c1df4287bbd0",
         },
         "12/declaration/body/8/argument/1/3/3/expression/right/1/expression/0/body/3/3":
           {
@@ -694,6 +715,62 @@ export default {
             pl: "Odrzuć",
           },
           hash: "2c1f1ee6b00186ee3a5adc2d86d00511",
+        },
+        "13/body/0/argument/1/expression/0/body/3/3": {
+          content: {
+            en: "·",
+            pl: "·",
+          },
+          hash: "26b80ae8a680de73667e096098aa69d8",
+        },
+        "13/declaration/body/8/argument/1/1/1/3-placeholder": {
+          content: {
+            en: "Search",
+            pl: "Szukaj",
+          },
+          hash: "49dd6c21604b5e8d4153ff1aff2177e1",
+        },
+        "13/declaration/body/8/argument/1/3/1/1/1/3/expression/0/body/1/3/3": {
+          content: {
+            en: " · ",
+            pl: " · ",
+          },
+          hash: "21ca490ec79ca57af655c1df4287bbd0",
+        },
+        "13/declaration/body/8/argument/1/3/1/1/1/3/expression/0/body/3/3": {
+          content: {
+            en: " · ",
+            pl: " · ",
+          },
+          hash: "21ca490ec79ca57af655c1df4287bbd0",
+        },
+        "13/declaration/body/8/argument/1/3/1/1/1/3/expression/0/body/5/3": {
+          content: {
+            en: " · ",
+            pl: " · ",
+          },
+          hash: "21ca490ec79ca57af655c1df4287bbd0",
+        },
+        "13/declaration/body/8/argument/1/5/1/3": {
+          content: {
+            en: "Ask Mimir",
+            pl: "Zapytaj Mimira",
+          },
+          hash: "c516ed1af9463ccd6bdcb19a1f13e4ac",
+        },
+        "13/declaration/body/8/argument/1/5/1/5": {
+          content: {
+            en: "Coming soon",
+            pl: "Już wkrótce",
+          },
+          hash: "05a8fc9f6d826fd88a809d98684edcad",
+        },
+        "14/body/0/argument/1/expression/0/body/3/3": {
+          content: {
+            en: "·",
+            pl: "·",
+          },
+          hash: "26b80ae8a680de73667e096098aa69d8",
         },
         "2/declaration/body/0/argument/1/1/1/3-placeholder": {
           content: {
@@ -1941,6 +2018,14 @@ export default {
         "10/declaration/body/2/argument/3/1/openingElement/1/value/expression":
           {
             content: {
+              en: "New tenders",
+              pl: "Nowe przetargi",
+            },
+            hash: "b6a405902627530cdf66b4c52e322ee3",
+          },
+        "10/declaration/body/2/argument/3/1/openingElement/2/value/expression":
+          {
+            content: {
               en: "Open full list",
               pl: "Otwórz pełną listę",
             },
@@ -1967,7 +2052,29 @@ export default {
           },
           hash: "bbde79ce975a43f71350ef605bfa3875",
         },
+        "10/declaration/body/2/argument/3/3/3/1": {
+          content: {
+            en: "<element:span>Total deals:</element:span> 50",
+            pl: "<element:span>Łączna liczba transakcji:</element:span> 50",
+          },
+          hash: "9b1f553d2df5f3548cf26e784af90a4a",
+        },
+        "10/declaration/body/2/argument/3/3/3/3": {
+          content: {
+            en: "<element:span>Conversion rate:</element:span> 10%",
+            pl: "<element:span>Współczynnik konwersji:</element:span> 10%",
+          },
+          hash: "d75e468637e5f1fb99e23a04c99b3a9a",
+        },
         "10/declaration/body/2/argument/3/3/openingElement/0/value/expression":
+          {
+            content: {
+              en: "Stats",
+              pl: "Statystyki",
+            },
+            hash: "5cf8b052c89fa1b05397a956ebec69b2",
+          },
+        "10/declaration/body/2/argument/3/3/openingElement/1/value/expression":
           {
             content: {
               en: "Stats",
@@ -1978,9 +2085,9 @@ export default {
         "10/declaration/body/2/argument/3/5/1": {
           content: {
             en: "Restocking medical equipment",
-            pl: "Uzupełnianie sprzętu medycznego",
+            pl: "Uzupełnianie zapasów sprzętu medycznego",
           },
-          hash: "c18ed7834c8bb0a3d6f1bf2c43dd172e",
+          hash: "b05bdaa28e1b01bbc15fa5c13bc1ff0d",
         },
         "10/declaration/body/2/argument/3/5/3/1/1": {
           content: {
@@ -2018,7 +2125,23 @@ export default {
             },
             hash: "8208df3c0f89efff2b48433a4f98902e",
           },
+        "10/declaration/body/2/argument/3/5/openingElement/1/value/expression":
+          {
+            content: {
+              en: "Return to last tender",
+              pl: "Wróć do ostatniego przetargu",
+            },
+            hash: "8208df3c0f89efff2b48433a4f98902e",
+          },
         "10/declaration/body/2/argument/3/7/openingElement/0/value/expression":
+          {
+            content: {
+              en: "Deadline calendar",
+              pl: "Kalendarz terminów",
+            },
+            hash: "a943e8c4f3795b51abf0f1b7c9171701",
+          },
+        "10/declaration/body/2/argument/3/7/openingElement/1/value/expression":
           {
             content: {
               en: "Deadline calendar",
@@ -5651,6 +5774,7 @@ export default {
         "6/body/1/argument": {
           content: {
             en: "Send Reset Link",
+            pl: "Wyślij link resetujący",
           },
           hash: "8348c4baada14cc0ae5abbe99d96f98e",
         },
@@ -5699,36 +5823,42 @@ export default {
         "7/declaration/body/0/argument/1/1": {
           content: {
             en: "Reset Password",
+            pl: "Zresetuj hasło",
           },
           hash: "52ec990b25991808a4f49db84986eefc",
         },
         "7/declaration/body/0/argument/1/3": {
           content: {
             en: "Enter your email address and we'll send you a link to reset your password",
+            pl: "Wpisz swój adres email, a wyślemy Ci link do zresetowania hasła",
           },
           hash: "6e820fc1a74664b8acdb6f563412e0b0",
         },
         "7/declaration/body/0/argument/3/3-label": {
           content: {
             en: "Email",
+            pl: "E-mail",
           },
           hash: "e7f34943a0c2fb849db1839ff6ef5cb5",
         },
         "7/declaration/body/0/argument/3/3-placeholder": {
           content: {
             en: "Enter your email address",
+            pl: "Wpisz swój adres email",
           },
           hash: "9bc008365ebe3e404e241c8ca876f56e",
         },
         "7/declaration/body/0/argument/3/5": {
           content: {
             en: "Send Reset Link",
+            pl: "Wyślij link do resetowania",
           },
           hash: "0de8cdabf0744e2a7d87ddf2f4cb4466",
         },
         "7/declaration/body/0/argument/3/7": {
           content: {
             en: "Back to Login",
+            pl: "Powrót do logowania",
           },
           hash: "af1fe3e18ab8816b295086f5caa19bbb",
         },
@@ -13795,6 +13925,84 @@ export default {
           },
           hash: "06efb815f8e1f5d09e63d262ba48b4e7",
         },
+        "8/body/1/argument/1/1/expression/right": {
+          content: {
+            en: "Sign Out",
+            pl: "Wyloguj się",
+          },
+          hash: "06efb815f8e1f5d09e63d262ba48b4e7",
+        },
+      },
+    },
+    "features/navigation/components/sidebar-logout-button.tsx": {
+      entries: {
+        "0/declaration/body/1/argument/1/1/expression/right": {
+          content: {
+            en: "Sign Out",
+            pl: "Wyloguj się",
+          },
+          hash: "06efb815f8e1f5d09e63d262ba48b4e7",
+        },
+        "3/declaration/body/1/argument/1/1/expression/right": {
+          content: {
+            en: "Sign Out",
+            pl: "Wyloguj się",
+          },
+          hash: "06efb815f8e1f5d09e63d262ba48b4e7",
+        },
+        "4/declaration/body/1/argument/1/1/expression/right": {
+          content: {
+            en: "Sign Out",
+            pl: "Wyloguj się",
+          },
+          hash: "06efb815f8e1f5d09e63d262ba48b4e7",
+        },
+      },
+    },
+    "features/stats/components/state-funnel.tsx": {
+      entries: {
+        "1/declaration/body/0/argument/1/openingElement/0/value/expression": {
+          content: {
+            en: "Found",
+            pl: "Znaleziono",
+          },
+          hash: "8cb2dd2518b1621873b4488e3da83d50",
+        },
+        "1/declaration/body/0/argument/3/openingElement/0/value/expression": {
+          content: {
+            en: "Qualified",
+            pl: "Zakwalifikowano",
+          },
+          hash: "ab91566819bc36d0831f136690b32878",
+        },
+        "1/declaration/body/0/argument/5/openingElement/0/value/expression": {
+          content: {
+            en: "Applied",
+            pl: "Zastosowano",
+          },
+          hash: "a79bcd1e53b38db7b03b506ff2e05904",
+        },
+        "1/declaration/body/0/argument/7/openingElement/0/value/expression": {
+          content: {
+            en: "Won",
+            pl: "Wygrano",
+          },
+          hash: "61dcd4c53a7b9b4b86c20ebe571f111f",
+        },
+        "1/declaration/body/0/argument/9/openingElement/0/value/expression": {
+          content: {
+            en: "Lost",
+            pl: "Przegrano",
+          },
+          hash: "52ca04dc5bfb7642586e67a469aa3e24",
+        },
+        "3/declaration/body/1/argument/3/3": {
+          content: {
+            en: "({percentage}%)",
+            pl: "({percentage}%)",
+          },
+          hash: "941a386f0a1da9f7ea122244021229ea",
+        },
       },
     },
     "features/tenders/components/mini-tender-calendar.tsx": {
@@ -13854,7 +14062,59 @@ export default {
           },
           hash: "41d774fc16b1edf68e73123d2487b01f",
         },
+        "5/declaration/0/init/0/body/2/argument/1/1": {
+          content: {
+            en: "AI Summary",
+            pl: "Podsumowanie AI",
+          },
+          hash: "c0aac56506d52658a4f57b25d02869b3",
+        },
+        "5/declaration/0/init/0/body/2/argument/1/3/1/expression/right": {
+          content: {
+            en: "Generating...",
+            pl: "Generowanie...",
+          },
+          hash: "d55ce9138ed4a7d033bd9030425bf850",
+        },
+        "5/declaration/0/init/0/body/2/argument/1/3/3/expression/right": {
+          content: {
+            en: "Generate Summary",
+            pl: "Generuj podsumowanie",
+          },
+          hash: "a9c3d92b38424e6339dc353ef8ef7a32",
+        },
+        "5/declaration/0/init/0/body/2/argument/3/expression/alternate/alternate":
+          {
+            content: {
+              en: 'Click "Generate Summary" to create an AI analysis of this tender',
+              pl: 'Kliknij "Wygeneruj podsumowanie", aby stworzyć analizę tego przetargu za pomocą AI',
+            },
+            hash: "ba86a91f89278f1b2ac79ad15436c589",
+          },
+        "5/declaration/0/init/0/body/2/argument/3/expression/alternate/consequent/3":
+          {
+            content: {
+              en: "Generating summary...",
+              pl: "Generowanie podsumowania...",
+            },
+            hash: "4c2912b717d358d5e0265fca7823eb9b",
+          },
+        "5/declaration/0/init/0/body/2/consequent/0/argument/1": {
+          content: {
+            en: "No description available for AI summary generation",
+            pl: "Brak opisu dostępnego do wygenerowania podsumowania AI",
+          },
+          hash: "41d774fc16b1edf68e73123d2487b01f",
+        },
         "5/declaration/0/init/0/body/3/argument/1/expression/alternate/consequent/3":
+          {
+            content: {
+              en: "Generating summary...",
+              pl: "Generowanie podsumowania...",
+            },
+            hash: "4c2912b717d358d5e0265fca7823eb9b",
+          },
+        "5/declaration/0/init/0/body/4/argument/1/expression/alternate/consequent/3":
           {
             content: {
               en: "Generating summary...",

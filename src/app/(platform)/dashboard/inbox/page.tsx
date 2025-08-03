@@ -107,7 +107,7 @@ export default function InboxPage() {
                     as={motion.li}
                     initial={{ opacity: 0 }}
                     animate={{
-                      opacity: t.seen_at ? (t.id === selectedId ? 1 : 0.6) : 1,
+                      opacity: t.seen_at ? (t.id === selectedId ? 1 : 0.8) : 1,
                       transition: {
                         duration: 0.25,
                         delay: (index % PAGE_SIZE) * 0.025,
@@ -122,7 +122,7 @@ export default function InboxPage() {
                     onPress={() => handleTenderSelect(t)}
                     key={t.id}
                     className={cn("border-b rounded-none text-left", {
-                      "border-l-2 border-l-primary": t.id === selectedId,
+                      "border-l border-l-primary": t.id === selectedId,
                     })}
                     shadow="none"
                   >
@@ -134,7 +134,7 @@ export default function InboxPage() {
                         })}
 
                         {!t.seen_at && (
-                          <div className="w-1.5 rounded-full h-1.5 bg-primary absolute -left-3.5 top-1.5" />
+                          <span className="block w-1.5 rounded-full h-1.5 bg-primary absolute -left-3.5 top-1.5" />
                         )}
                       </p>
                       <div className="flex items-center gap-2 flex-wrap text-slate-500">
@@ -152,7 +152,7 @@ export default function InboxPage() {
             </ul>
           </div>
         </div>
-        <div className="absolute bottom-0 left-0 right-0 p-3 px-4 text-sm bg-primary/10 backdrop-blur-md">
+        <div className="absolute bottom-0 left-0 right-0 p-3 px-4 text-sm bg-white border-t border-border">
           <div className="flex items-center justify-start gap-2">
             <Symbol className="w-6 h-6" />
             <p className="font-medium">Ask Mimir</p>

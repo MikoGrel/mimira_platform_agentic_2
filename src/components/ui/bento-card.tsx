@@ -20,7 +20,7 @@ export function BentoCard({
   loading,
 }: PropsWithChildren<BentoCardProps>) {
   return (
-    <Card className={cn("rounded-3xl p-4", className)} shadow="sm">
+    <Card className={cn("rounded-2xl p-3", className)} shadow="sm">
       <CardHeader className="flex justify-between">
         <h3 className="font-medium">{title}</h3>
 

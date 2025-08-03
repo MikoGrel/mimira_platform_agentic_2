@@ -12,6 +12,7 @@ import {
 import useQueryToast from "$/hooks/use-query-toast";
 import Partners from "$/features/branding/components/Partners";
 import { GateIllustration } from "$/features/branding/components/gate";
+import { LocaleSwitcher } from "lingo.dev/react-client";
 
 type AuthStep = "login" | "forgot-password" | "email-sent";
 const authSteps: AuthStep[] = ["login", "forgot-password", "email-sent"];
@@ -70,8 +71,9 @@ export default function LoginPage() {
   return (
     <main className="w-screen h-screen grid grid-cols-2 grid-rows-1 mx-auto">
       <section className="p-24 grid grid-cols-1 grid-rows-[auto_1fr_auto] bg-accent">
-        <div>
+        <div className="flex items-center gap-4">
           <Logo className="h-10" />
+          <LocaleSwitcher locales={["en", "pl"]} />
         </div>
         <div className="flex flex-col justify-center gap-6">
           <GateIllustration className="h-50 w-fit text-muted-foreground" />
