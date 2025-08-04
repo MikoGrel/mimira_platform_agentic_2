@@ -1,16 +1,21 @@
 "use client";
 
 import { Button } from "@heroui/react";
-import { Calendar, House } from "lucide-react";
+import { Calendar, House, MessageSquareText } from "lucide-react";
 import { motion, AnimatePresence } from "motion/react";
 import { Tables } from "$/types/supabase";
 
 interface TenderHeaderProps {
   tender: Tables<"tenders">;
   isHeaderCollapsed: boolean;
+  setCommentsOpened: (value: boolean) => void;
 }
 
-export function TenderHeader({ tender, isHeaderCollapsed }: TenderHeaderProps) {
+export function TenderHeader({
+  tender,
+  isHeaderCollapsed,
+  setCommentsOpened,
+}: TenderHeaderProps) {
   return (
     <div className="border-b border-gray-200 bg-white overflow-hidden px-6 py-4">
       <motion.h1
@@ -54,6 +59,12 @@ export function TenderHeader({ tender, isHeaderCollapsed }: TenderHeaderProps) {
                 Apply
               </Button>
               <Button variant="flat">Reject</Button>
+              <Button
+                variant="ghost"
+                startContent={<MessageSquareText className="w-5 h-5" />}
+                isIconOnly
+                onPress={() => setCommentsOpened(true)}
+              />
             </div>
           </motion.div>
         )}
@@ -83,6 +94,12 @@ export function TenderHeader({ tender, isHeaderCollapsed }: TenderHeaderProps) {
             <Button size="sm" variant="flat">
               Reject
             </Button>
+            <Button
+              size="sm"
+              variant="ghost"
+              startContent={<MessageSquareText className="w-4 h-4" />}
+              isIconOnly
+            />
           </div>
         </motion.div>
       )}

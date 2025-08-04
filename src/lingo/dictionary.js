@@ -7047,6 +7047,20 @@ export default {
           },
           hash: "31b50a6e655b9e4c34034afe38b5fa0f",
         },
+        "8/declaration/body/1/argument/openingElement/1/value/expression": {
+          content: {
+            en: "New tenders",
+            pl: "Nowe przetargi",
+          },
+          hash: "b6a405902627530cdf66b4c52e322ee3",
+        },
+        "8/declaration/body/1/argument/openingElement/2/value/expression": {
+          content: {
+            en: "Open full list",
+            pl: "Otwórz pełną listę",
+          },
+          hash: "31b50a6e655b9e4c34034afe38b5fa0f",
+        },
       },
     },
     "features/hub/components/stats-bento.tsx": {
@@ -7257,6 +7271,73 @@ export default {
             pl: "Źródłowy URL",
           },
           hash: "72378667b9dc0085f00ab6ab5909db4c",
+        },
+      },
+    },
+    "features/inbox/components/comments-section.tsx": {
+      entries: {
+        "0/declaration/body/0/argument": {
+          content: {
+            en: "CommentsDrawer",
+            pl: "SekcjaKomentarzy",
+          },
+          hash: "a568e38d611881398c84c60d846c4fda",
+        },
+        "3/declaration/body/0/argument/1": {
+          content: {
+            en: "Comments",
+            pl: "Komentarze",
+          },
+          hash: "502237cd1044491c48494aa60967a985",
+        },
+        "3/declaration/body/0/argument/3/1/1/1": {
+          content: {
+            en: "Comments",
+            pl: "Komentarze",
+          },
+          hash: "502237cd1044491c48494aa60967a985",
+        },
+        "4/declaration/body/0/argument/1/1/expression/body/1": {
+          content: {
+            en: "Drawer Title",
+            pl: "Tytuł szuflady",
+          },
+          hash: "4e310b7c04abccb08be0853986139bff",
+        },
+        "4/declaration/body/0/argument/1/1/expression/body/3/1": {
+          content: {
+            en: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam pulvinar risus non risus hendrerit venenatis. Pellentesque sit amet hendrerit risus, sed porttitor quam.",
+            pl: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam pulvinar risus non risus hendrerit venenatis. Pellentesque sit amet hendrerit risus, sed porttitor quam.",
+          },
+          hash: "cda074681f5229ece299070a36b76242",
+        },
+        "4/declaration/body/0/argument/1/1/expression/body/3/3": {
+          content: {
+            en: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam pulvinar risus non risus hendrerit venenatis. Pellentesque sit amet hendrerit risus, sed porttitor quam.",
+            pl: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam pulvinar risus non risus hendrerit venenatis. Pellentesque sit amet hendrerit risus, sed porttitor quam.",
+          },
+          hash: "cda074681f5229ece299070a36b76242",
+        },
+        "4/declaration/body/0/argument/1/1/expression/body/3/5": {
+          content: {
+            en: "Magna exercitation reprehenderit magna aute tempor cupidatat consequat elit dolor adipisicing. Mollit dolor eiusmod sunt ex incididunt cillum quis. Velit duis sit officia eiusmod Lorem aliqua enim laboris do dolor eiusmod. Et mollit incididunt nisi consectetur esse laborum eiusmod pariatur proident Lorem eiusmod et. Culpa deserunt nostrud ad veniam.",
+            pl: "Magna exercitation reprehenderit magna aute tempor cupidatat consequat elit dolor adipisicing. Mollit dolor eiusmod sunt ex incididunt cillum quis. Velit duis sit officia eiusmod Lorem aliqua enim laboris do dolor eiusmod. Et mollit incididunt nisi consectetur esse laborum eiusmod pariatur proident Lorem eiusmod et. Culpa deserunt nostrud ad veniam.",
+          },
+          hash: "82717273036a2f71424201a7ea349c2c",
+        },
+        "4/declaration/body/0/argument/1/1/expression/body/5/1": {
+          content: {
+            en: "Close",
+            pl: "Zamknij",
+          },
+          hash: "1a97bc2b1ad01b81b070928d056cc66b",
+        },
+        "4/declaration/body/0/argument/1/1/expression/body/5/3": {
+          content: {
+            en: "Action",
+            pl: "Akcja",
+          },
+          hash: "75e5ea73d898992b9c635959e2adc278",
         },
       },
     },
@@ -7527,7 +7608,49 @@ export default {
           },
           hash: "d5bf1e70991802fd4a801f3a79cf9e5d",
         },
+        "4/declaration/body/2/0/init/0/1/value": {
+          content: {
+            en: "Overview",
+            pl: "Przegląd",
+          },
+          hash: "30c54e4dc4ce599b87d94be34a8617f5",
+        },
+        "4/declaration/body/2/0/init/1/1/value": {
+          content: {
+            en: "Requirements",
+            pl: "Wymagania",
+          },
+          hash: "e108e149e0fd5b65f5850b6f032ccabe",
+        },
+        "4/declaration/body/2/0/init/2/1/value": {
+          content: {
+            en: "Review Criteria",
+            pl: "Kryteria oceny",
+          },
+          hash: "d524df30da3658fdbc1794408fcfdab4",
+        },
+        "4/declaration/body/2/0/init/3/1/value": {
+          content: {
+            en: "Description",
+            pl: "Opis",
+          },
+          hash: "e17686a22ffad04cc7bb70524ed4478b",
+        },
+        "4/declaration/body/2/0/init/4/1/value": {
+          content: {
+            en: "Additional Info",
+            pl: "Dodatkowe informacje",
+          },
+          hash: "d5bf1e70991802fd4a801f3a79cf9e5d",
+        },
         "4/declaration/body/4/argument/1/1": {
+          content: {
+            en: "Contents",
+            pl: "Spis treści",
+          },
+          hash: "935785ca48ce760173b2096c2e8be8e6",
+        },
+        "4/declaration/body/5/argument/1/1": {
           content: {
             en: "Contents",
             pl: "Spis treści",
@@ -9841,6 +9964,20 @@ export default {
           hash: "067789b01a081458db2f872f10a37c3f",
         },
         "12/declaration/body/3/consequent/0/argument/1/1": {
+          content: {
+            en: "Select a tender to view details",
+            pl: "Wybierz ofertę, aby zobaczyć szczegóły",
+          },
+          hash: "067789b01a081458db2f872f10a37c3f",
+        },
+        "12/declaration/body/4/consequent/0/argument/1/1": {
+          content: {
+            en: "Select a tender to view details",
+            pl: "Wybierz ofertę, aby zobaczyć szczegóły",
+          },
+          hash: "067789b01a081458db2f872f10a37c3f",
+        },
+        "13/declaration/body/4/consequent/0/argument/1/1": {
           content: {
             en: "Select a tender to view details",
             pl: "Wybierz ofertę, aby zobaczyć szczegóły",
@@ -15214,6 +15351,508 @@ export default {
         },
       },
     },
+    "features/tenders/components/comments-drawer.tsx": {
+      entries: {
+        "7/declaration/body/5/argument/1/1/expression/body/1/1/1": {
+          content: {
+            en: "Comments",
+            pl: "Komentarze",
+          },
+          hash: "502237cd1044491c48494aa60967a985",
+        },
+        "7/declaration/body/5/argument/1/1/expression/body/1/1/3": {
+          content: {
+            en: "({comments.length})",
+            pl: "({comments.length})",
+          },
+          hash: "895b88c60569a51652e866f90ef0ca1e",
+        },
+        "7/declaration/body/5/argument/1/1/expression/body/1/1/5": {
+          content: {
+            en: "({comments.length} comment<expression/>)",
+            pl: "({comments.length} komentarz<expression/>)",
+          },
+          hash: "30baa9b7e3daf8dfeb37ab78056d9a4a",
+        },
+        "7/declaration/body/5/argument/1/1/expression/body/3/1/1/expression/right/1":
+          {
+            content: {
+              en: "Loading comments ...",
+              pl: "Ładowanie komentarzy ...",
+            },
+            hash: "07fd5bc8da48fc1808b846440596014d",
+          },
+        "7/declaration/body/5/argument/1/1/expression/body/3/1/3/expression/right/3":
+          {
+            content: {
+              en: "No comments yet",
+              pl: "Brak komentarzy",
+            },
+            hash: "9679834e9f203646c5350bdc6e457e2e",
+          },
+        "7/declaration/body/5/argument/1/1/expression/body/3/1/3/expression/right/5":
+          {
+            content: {
+              en: "Be the first to add a comment",
+              pl: "Bądź pierwszą osobą, która doda komentarz",
+            },
+            hash: "cad1ca8d20a0a04c1b0eb61611810164",
+          },
+        "7/declaration/body/5/argument/1/1/expression/body/5/1/1/1/3/3-placeholder":
+          {
+            content: {
+              en: "Write your comment...",
+              pl: "Napisz swój komentarz...",
+            },
+            hash: "29ec89da19361daeeab43d9310211237",
+          },
+        "7/declaration/body/5/argument/1/1/expression/body/5/1/1/3/3-placeholder":
+          {
+            content: {
+              en: "Write your comment...",
+              pl: "Napisz swój komentarz...",
+            },
+            hash: "29ec89da19361daeeab43d9310211237",
+          },
+        "7/declaration/body/5/argument/1/1/expression/body/5/1/1/3/expression/right":
+          {
+            content: {
+              en: "Failed to add comment. Please try again.",
+              pl: "Nie udało się dodać komentarza. Spróbuj ponownie.",
+            },
+            hash: "bff7376ce7349d11de27a2d666873f16",
+          },
+        "7/declaration/body/5/argument/1/1/expression/body/5/1/1/5/1": {
+          content: {
+            en: "Clear",
+            pl: "Wyczyść",
+          },
+          hash: "6860b22cd8b750558bc130a216f0048c",
+        },
+        "7/declaration/body/5/argument/1/1/expression/body/5/1/1/5/3": {
+          content: {
+            en: "Add Comment",
+            pl: "Dodaj komentarz",
+          },
+          hash: "ec534ddb96cb00afcb8e338299aa3770",
+        },
+        "7/declaration/body/5/argument/1/1/expression/body/5/1/1/5/3/1/expression/alternate":
+          {
+            content: {
+              en: "<element:Send></element:Send> Add Comment",
+              pl: "<element:Send></element:Send> Dodaj komentarz",
+            },
+            hash: "efbebff3cabfc4bd104af160b28b6518",
+          },
+        "7/declaration/body/5/argument/1/1/expression/body/5/1/1/expression/alternate/1/3/3-placeholder":
+          {
+            content: {
+              en: "Write your comment...",
+              pl: "Napisz swój komentarz...",
+            },
+            hash: "29ec89da19361daeeab43d9310211237",
+          },
+        "7/declaration/body/5/argument/1/1/expression/body/5/1/1/expression/alternate/3/expression/right":
+          {
+            content: {
+              en: "Failed to add comment. Please try again.",
+              pl: "Nie udało się dodać komentarza. Spróbuj ponownie.",
+            },
+            hash: "952d1a7c616c0bbe9a63c7c72c7ca8e3",
+          },
+        "7/declaration/body/5/argument/1/1/expression/body/5/1/1/expression/alternate/5/1":
+          {
+            content: {
+              en: "Cancel",
+              pl: "Anuluj",
+            },
+            hash: "1230d21c067e341f36a3d7f71c0a0bd8",
+          },
+        "7/declaration/body/5/argument/1/1/expression/body/5/1/1/expression/alternate/5/3/1/expression/alternate":
+          {
+            content: {
+              en: "<element:Send></element:Send> Add Comment",
+              pl: "<element:Send></element:Send> Dodaj komentarz",
+            },
+            hash: "57e393deadb935f66e017357a88dd2b8",
+          },
+        "7/declaration/body/5/argument/1/1/expression/body/5/1/1/expression/consequent":
+          {
+            content: {
+              en: "<element:Plus></element:Plus> Add Comment",
+              pl: "<element:Plus></element:Plus> Dodaj komentarz",
+            },
+            hash: "39cdbefd37c1c688464db6511a366192",
+          },
+        "7/declaration/body/5/argument/1/1/expression/body/5/1/3/expression/right":
+          {
+            content: {
+              en: "Failed to add comment. Please try again.",
+              pl: "Nie udało się dodać komentarza. Spróbuj ponownie.",
+            },
+            hash: "fae6b9787fce079bf47989b0a3dca61a",
+          },
+        "7/declaration/body/5/argument/1/1/expression/body/5/1/5/1": {
+          content: {
+            en: "Clear",
+            pl: "Wyczyść",
+          },
+          hash: "5569d2faf44191c9efb051e8c7d0e856",
+        },
+        "7/declaration/body/5/argument/1/1/expression/body/5/1/5/3": {
+          content: {
+            en: "Add Comment",
+            pl: "Dodaj komentarz",
+          },
+          hash: "eea09569b8b3c2a6ae9a11ee472f4c49",
+        },
+        "7/declaration/body/6/argument/1/1/expression/body/1/1/3": {
+          content: {
+            en: "Comments",
+            pl: "Komentarze",
+          },
+          hash: "502237cd1044491c48494aa60967a985",
+        },
+        "7/declaration/body/6/argument/1/1/expression/body/1/1/5": {
+          content: {
+            en: "({comments.length} comment<expression/>)",
+            pl: "({comments.length} komentarz<expression/>)",
+          },
+          hash: "30baa9b7e3daf8dfeb37ab78056d9a4a",
+        },
+        "7/declaration/body/6/argument/1/1/expression/body/3/1": {
+          content: {
+            en: "<expression/><expression/> comments.map((comment) => (<element:div><element:div><element:div><element:User></element:User></element:div></element:div><element:div><element:div><element:p><function:formatUserName/></element:p><expression/></element:div><element:p>{comment.text}</element:p></element:div></element:div> )) )}",
+            pl: "<expression/><expression/> comments.map((comment) => (<element:div><element:div><element:div><element:User></element:User></element:div></element:div><element:div><element:div><element:p><function:formatUserName/></element:p><expression/></element:div><element:p>{comment.text}</element:p></element:div></element:div> )) )}",
+          },
+          hash: "5ef1c4ce88ad47fcf8baa7d4cf4885e5",
+        },
+        "7/declaration/body/6/argument/1/1/expression/body/3/1/1/expression/alternate/consequent/3":
+          {
+            content: {
+              en: "No comments yet",
+              pl: "Brak komentarzy",
+            },
+            hash: "9679834e9f203646c5350bdc6e457e2e",
+          },
+        "7/declaration/body/6/argument/1/1/expression/body/3/1/1/expression/alternate/consequent/5":
+          {
+            content: {
+              en: "Be the first to add a comment",
+              pl: "Bądź pierwszą osobą, która doda komentarz",
+            },
+            hash: "cad1ca8d20a0a04c1b0eb61611810164",
+          },
+        "7/declaration/body/6/argument/1/1/expression/body/3/1/1/expression/consequent/1":
+          {
+            content: {
+              en: "Loading comments...",
+              pl: "Ładowanie komentarzy...",
+            },
+            hash: "7406b9d46727407f9ba568bf3985a73a",
+          },
+        "7/declaration/body/6/argument/1/1/expression/body/3/1/1/expression/right/1":
+          {
+            content: {
+              en: "Loading comments ...",
+              pl: "Ładowanie komentarzy ...",
+            },
+            hash: "07fd5bc8da48fc1808b846440596014d",
+          },
+        "7/declaration/body/6/argument/1/1/expression/body/3/1/3/expression/right/3":
+          {
+            content: {
+              en: "No comments yet",
+              pl: "Brak komentarzy",
+            },
+            hash: "9679834e9f203646c5350bdc6e457e2e",
+          },
+        "7/declaration/body/6/argument/1/1/expression/body/3/1/3/expression/right/5":
+          {
+            content: {
+              en: "Be the first to add a comment",
+              pl: "Bądź pierwszą osobą, która doda komentarz",
+            },
+            hash: "cad1ca8d20a0a04c1b0eb61611810164",
+          },
+        "7/declaration/body/6/argument/1/1/expression/body/3/3/1/expression/alternate/1/3/3-placeholder":
+          {
+            content: {
+              en: "Write your comment...",
+              pl: "Napisz swój komentarz...",
+            },
+            hash: "29ec89da19361daeeab43d9310211237",
+          },
+        "7/declaration/body/6/argument/1/1/expression/body/3/3/1/expression/alternate/3/expression/right":
+          {
+            content: {
+              en: "Failed to add comment. Please try again.",
+              pl: "Nie udało się dodać komentarza. Spróbuj ponownie.",
+            },
+            hash: "952d1a7c616c0bbe9a63c7c72c7ca8e3",
+          },
+        "7/declaration/body/6/argument/1/1/expression/body/3/3/1/expression/alternate/5/1":
+          {
+            content: {
+              en: "Cancel",
+              pl: "Anuluj",
+            },
+            hash: "1230d21c067e341f36a3d7f71c0a0bd8",
+          },
+        "7/declaration/body/6/argument/1/1/expression/body/3/3/1/expression/alternate/5/3/1/expression/alternate":
+          {
+            content: {
+              en: "<element:Send></element:Send> Add Comment",
+              pl: "<element:Send></element:Send> Dodaj komentarz",
+            },
+            hash: "57e393deadb935f66e017357a88dd2b8",
+          },
+        "7/declaration/body/6/argument/1/1/expression/body/3/3/1/expression/alternate/consequent/3":
+          {
+            content: {
+              en: "No comments yet",
+              pl: "Brak komentarzy",
+            },
+            hash: "9679834e9f203646c5350bdc6e457e2e",
+          },
+        "7/declaration/body/6/argument/1/1/expression/body/3/3/1/expression/alternate/consequent/5":
+          {
+            content: {
+              en: "Be the first to add a comment",
+              pl: "Bądź pierwszą osobą, która doda komentarz",
+            },
+            hash: "cad1ca8d20a0a04c1b0eb61611810164",
+          },
+        "7/declaration/body/6/argument/1/1/expression/body/3/3/1/expression/consequent":
+          {
+            content: {
+              en: "<element:Plus></element:Plus> Add Comment",
+              pl: "<element:Plus></element:Plus> Dodaj komentarz",
+            },
+            hash: "39cdbefd37c1c688464db6511a366192",
+          },
+        "7/declaration/body/6/argument/1/1/expression/body/3/3/1/expression/consequent/1":
+          {
+            content: {
+              en: "Loading comments...",
+              pl: "Ładowanie komentarzy...",
+            },
+            hash: "7406b9d46727407f9ba568bf3985a73a",
+          },
+        "7/declaration/body/6/argument/1/1/expression/body/3/5/1/expression/alternate/1/3/3-placeholder":
+          {
+            content: {
+              en: "Write your comment...",
+              pl: "Napisz swój komentarz...",
+            },
+            hash: "29ec89da19361daeeab43d9310211237",
+          },
+        "7/declaration/body/6/argument/1/1/expression/body/3/5/1/expression/alternate/3/expression/right":
+          {
+            content: {
+              en: "Failed to add comment. Please try again.",
+              pl: "Nie udało się dodać komentarza. Spróbuj ponownie.",
+            },
+            hash: "952d1a7c616c0bbe9a63c7c72c7ca8e3",
+          },
+        "7/declaration/body/6/argument/1/1/expression/body/3/5/1/expression/alternate/5/1":
+          {
+            content: {
+              en: "Cancel",
+              pl: "Anuluj",
+            },
+            hash: "1230d21c067e341f36a3d7f71c0a0bd8",
+          },
+        "7/declaration/body/6/argument/1/1/expression/body/3/5/1/expression/alternate/5/3/1/expression/alternate":
+          {
+            content: {
+              en: "<element:Send></element:Send> Add Comment",
+              pl: "<element:Send></element:Send> Dodaj komentarz",
+            },
+            hash: "57e393deadb935f66e017357a88dd2b8",
+          },
+        "7/declaration/body/6/argument/1/1/expression/body/3/5/1/expression/consequent":
+          {
+            content: {
+              en: "<element:Plus></element:Plus> Add Comment",
+              pl: "<element:Plus></element:Plus> Dodaj komentarz",
+            },
+            hash: "39cdbefd37c1c688464db6511a366192",
+          },
+        "7/declaration/body/6/argument/1/1/expression/body/3/7/expression/right/1/expression/alternate/1/3/3-placeholder":
+          {
+            content: {
+              en: "Write your comment...",
+              pl: "Napisz swój komentarz...",
+            },
+            hash: "29ec89da19361daeeab43d9310211237",
+          },
+        "7/declaration/body/6/argument/1/1/expression/body/3/7/expression/right/1/expression/alternate/3/expression/right":
+          {
+            content: {
+              en: "Failed to add comment. Please try again.",
+              pl: "Nie udało się dodać komentarza. Spróbuj ponownie.",
+            },
+            hash: "ad8027a75d206fec31d910bfeb3e5358",
+          },
+        "7/declaration/body/6/argument/1/1/expression/body/3/7/expression/right/1/expression/alternate/5/1":
+          {
+            content: {
+              en: "Cancel",
+              pl: "Anuluj",
+            },
+            hash: "12a3b5a32764d4c8b893812bc2087b82",
+          },
+        "7/declaration/body/6/argument/1/1/expression/body/3/7/expression/right/1/expression/alternate/5/3/1/expression/alternate":
+          {
+            content: {
+              en: "<element:Send></element:Send> Add Comment",
+              pl: "<element:Send></element:Send> Dodaj komentarz",
+            },
+            hash: "bcd71b4e982a60df398230a3012fa6da",
+          },
+        "7/declaration/body/6/argument/1/1/expression/body/3/7/expression/right/1/expression/consequent":
+          {
+            content: {
+              en: "<element:Plus></element:Plus> Add Comment",
+              pl: "<element:Plus></element:Plus> Dodaj komentarz",
+            },
+            hash: "8a2c8c60d9a2313122d992fe1beecac4",
+          },
+        "7/declaration/body/6/argument/1/1/expression/body/5/1": {
+          content: {
+            en: "Close",
+            pl: "Zamknij",
+          },
+          hash: "1a97bc2b1ad01b81b070928d056cc66b",
+        },
+        "7/declaration/body/6/argument/1/1/expression/body/5/1/1/expression/alternate/1/3/3-placeholder":
+          {
+            content: {
+              en: "Write your comment...",
+              pl: "Napisz swój komentarz...",
+            },
+            hash: "29ec89da19361daeeab43d9310211237",
+          },
+        "7/declaration/body/6/argument/1/1/expression/body/5/1/1/expression/alternate/3/expression/right":
+          {
+            content: {
+              en: "Failed to add comment. Please try again.",
+              pl: "Nie udało się dodać komentarza. Spróbuj ponownie.",
+            },
+            hash: "952d1a7c616c0bbe9a63c7c72c7ca8e3",
+          },
+        "7/declaration/body/6/argument/1/1/expression/body/5/1/1/expression/alternate/5/1":
+          {
+            content: {
+              en: "Cancel",
+              pl: "Anuluj",
+            },
+            hash: "1230d21c067e341f36a3d7f71c0a0bd8",
+          },
+        "7/declaration/body/6/argument/1/1/expression/body/5/1/1/expression/alternate/5/3/1/expression/alternate":
+          {
+            content: {
+              en: "<element:Send></element:Send> Add Comment",
+              pl: "<element:Send></element:Send> Dodaj komentarz",
+            },
+            hash: "57e393deadb935f66e017357a88dd2b8",
+          },
+        "7/declaration/body/6/argument/1/1/expression/body/5/1/1/expression/consequent":
+          {
+            content: {
+              en: "<element:Plus></element:Plus> Add Comment",
+              pl: "<element:Plus></element:Plus> Dodaj komentarz",
+            },
+            hash: "39cdbefd37c1c688464db6511a366192",
+          },
+        "9/declaration/body/6/argument/1/1/expression/body/1/1/3": {
+          content: {
+            en: "Comments",
+            pl: "Komentarze",
+          },
+          hash: "502237cd1044491c48494aa60967a985",
+        },
+        "9/declaration/body/6/argument/1/1/expression/body/1/1/5": {
+          content: {
+            en: "({comments.length} comment<expression/>)",
+            pl: "({comments.length} komentarz<expression/>)",
+          },
+          hash: "30baa9b7e3daf8dfeb37ab78056d9a4a",
+        },
+        "9/declaration/body/6/argument/1/1/expression/body/3/3/1/expression/alternate/consequent/3":
+          {
+            content: {
+              en: "No comments yet",
+              pl: "Brak komentarzy",
+            },
+            hash: "9679834e9f203646c5350bdc6e457e2e",
+          },
+        "9/declaration/body/6/argument/1/1/expression/body/3/3/1/expression/alternate/consequent/5":
+          {
+            content: {
+              en: "Be the first to add a comment",
+              pl: "Bądź pierwszą osobą, która doda komentarz",
+            },
+            hash: "cad1ca8d20a0a04c1b0eb61611810164",
+          },
+        "9/declaration/body/6/argument/1/1/expression/body/3/3/1/expression/consequent/1":
+          {
+            content: {
+              en: "Loading comments...",
+              pl: "Ładowanie komentarzy...",
+            },
+            hash: "7406b9d46727407f9ba568bf3985a73a",
+          },
+        "9/declaration/body/6/argument/1/1/expression/body/3/7/expression/right/1/expression/alternate/1/3/3-placeholder":
+          {
+            content: {
+              en: "Write your comment...",
+              pl: "Napisz swój komentarz...",
+            },
+            hash: "29ec89da19361daeeab43d9310211237",
+          },
+        "9/declaration/body/6/argument/1/1/expression/body/3/7/expression/right/1/expression/alternate/3/expression/right":
+          {
+            content: {
+              en: "Failed to add comment. Please try again.",
+              pl: "Nie udało się dodać komentarza. Spróbuj ponownie.",
+            },
+            hash: "ad8027a75d206fec31d910bfeb3e5358",
+          },
+        "9/declaration/body/6/argument/1/1/expression/body/3/7/expression/right/1/expression/alternate/5/1":
+          {
+            content: {
+              en: "Cancel",
+              pl: "Anuluj",
+            },
+            hash: "12a3b5a32764d4c8b893812bc2087b82",
+          },
+        "9/declaration/body/6/argument/1/1/expression/body/3/7/expression/right/1/expression/alternate/5/3/1/expression/alternate":
+          {
+            content: {
+              en: "<element:Send></element:Send> Add Comment",
+              pl: "<element:Send></element:Send> Dodaj komentarz",
+            },
+            hash: "bcd71b4e982a60df398230a3012fa6da",
+          },
+        "9/declaration/body/6/argument/1/1/expression/body/3/7/expression/right/1/expression/consequent":
+          {
+            content: {
+              en: "<element:Plus></element:Plus> Add Comment",
+              pl: "<element:Plus></element:Plus> Dodaj komentarz",
+            },
+            hash: "8a2c8c60d9a2313122d992fe1beecac4",
+          },
+        "9/declaration/body/6/argument/1/1/expression/body/5/1": {
+          content: {
+            en: "Close",
+            pl: "Zamknij",
+          },
+          hash: "1a97bc2b1ad01b81b070928d056cc66b",
+        },
+      },
+    },
     "features/tenders/components/mini-tender-calendar.tsx": {
       entries: {
         "1/declaration/body/0/argument/3/1": {
@@ -15296,7 +15935,7 @@ export default {
       entries: {
         "5/declaration/body/3/argument/1/3": {
           content: {
-            en: "<element:Chip>{timeUntilExpiration}</element:Chip> ·{organization}",
+            en: "<element:Chip>{timeUntilExpiration}</element:Chip> ·<element:span>{organization}</element:span>",
             pl: "<element:Chip>{timeUntilExpiration}</element:Chip> ·{organization}",
           },
           hash: "3a504fc6f0ab67552115cc4edde7931d",

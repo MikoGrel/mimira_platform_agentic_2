@@ -1,7 +1,7 @@
 "use client";
 
 import { Tables } from "$/types/supabase";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import { useScrollTrigger } from "$/hooks/use-scroll-trigger";
 import { Skeleton } from "@heroui/react";
 import { AdditionalInfoSection } from "./additional-info-section";
@@ -11,6 +11,7 @@ import { OverviewSection } from "./overview-section";
 import { RequirementsSection } from "./requirements-section";
 import { ReviewCriteriaSection } from "./review-criteria-section";
 import { TenderHeader } from "./tender-header";
+import { CommentsDrawer } from "$/features/tenders/components";
 
 interface TenderPreviewProps {
   tender?: Tables<"tenders"> | null;
@@ -18,6 +19,8 @@ interface TenderPreviewProps {
 }
 
 export function TenderPreview({ tender, isLoading }: TenderPreviewProps) {
+  const [commentsOpened, setCommentsOpened] = useState(false);
+
   const scrollRef = useRef<HTMLDivElement>(null);
   const isHeaderCollapsed = useScrollTrigger({
     threshold: 100,
@@ -55,7 +58,11 @@ export function TenderPreview({ tender, isLoading }: TenderPreviewProps) {
   return (
     <section className="h-full w-full">
       <div className="h-full w-full flex flex-col">
-        <TenderHeader tender={tender} isHeaderCollapsed={isHeaderCollapsed} />
+        <TenderHeader
+          tender={tender}
+          isHeaderCollapsed={isHeaderCollapsed}
+          setCommentsOpened={setCommentsOpened}
+        />
 
         <div className="flex overflow-hidden h-full flex-[1_0_0]">
           <div className="flex-1 overflow-y-auto" ref={scrollRef}>
@@ -69,6 +76,12 @@ export function TenderPreview({ tender, isLoading }: TenderPreviewProps) {
           </div>
 
           <NavigationSidebar scrollRef={scrollRef} />
+
+          <CommentsDrawer
+            open={commentsOpened}
+            setOpen={setCommentsOpened}
+            tender={tender}
+          />
         </div>
       </div>
     </section>
