@@ -76,7 +76,7 @@ export default function LoginPage() {
           <LocaleSwitcher locales={["en", "pl"]} />
         </div>
         <div className="flex flex-col justify-center gap-6">
-          <GateIllustration className="h-50 w-fit text-muted-foreground" />
+          <GateIllustration className="h-50 w-fit text-primary" />
           <h1 className="font-heading text-6xl font-bold text-font-base">
             Welcome back
           </h1>
