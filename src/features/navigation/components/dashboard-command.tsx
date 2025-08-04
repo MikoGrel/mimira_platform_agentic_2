@@ -9,23 +9,28 @@ import {
   CommandItem,
   CommandList,
 } from "$/components/ui/command";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { useRouter } from "next/navigation";
 
-export function DashboardCommand() {
-  const [open, setOpen] = useState(false);
+export function DashboardCommand({
+  open,
+  setOpen,
+}: {
+  open: boolean;
+  setOpen: (open: boolean) => void;
+}) {
   const router = useRouter();
   useEffect(() => {
     const down = (e: KeyboardEvent) => {
       if (e.key === "j" && (e.metaKey || e.ctrlKey)) {
         e.preventDefault();
-        setOpen((open) => !open);
+        setOpen(!open);
       }
     };
 
     document.addEventListener("keydown", down);
     return () => document.removeEventListener("keydown", down);
-  }, []);
+  }, [setOpen, open]);
 
   const goToPage = (path: string) => {
     router.push(path);

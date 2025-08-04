@@ -723,6 +723,27 @@ export default {
           },
           hash: "26b80ae8a680de73667e096098aa69d8",
         },
+        "13/declaration/body/10/argument/1/1/1/3-placeholder": {
+          content: {
+            en: "Search",
+            pl: "Szukaj",
+          },
+          hash: "49dd6c21604b5e8d4153ff1aff2177e1",
+        },
+        "13/declaration/body/10/argument/1/5/1/3": {
+          content: {
+            en: "Ask Mimir",
+            pl: "Zapytaj Mimira",
+          },
+          hash: "c516ed1af9463ccd6bdcb19a1f13e4ac",
+        },
+        "13/declaration/body/10/argument/1/5/1/5": {
+          content: {
+            en: "Coming soon",
+            pl: "Już wkrótce",
+          },
+          hash: "05a8fc9f6d826fd88a809d98684edcad",
+        },
         "13/declaration/body/8/argument/1/1/1/3-placeholder": {
           content: {
             en: "Search",
@@ -766,6 +787,55 @@ export default {
           hash: "05a8fc9f6d826fd88a809d98684edcad",
         },
         "14/body/0/argument/1/expression/0/body/3/3": {
+          content: {
+            en: "·",
+            pl: "·",
+          },
+          hash: "26b80ae8a680de73667e096098aa69d8",
+        },
+        "14/declaration/body/10/argument/1/1/1/3-placeholder": {
+          content: {
+            en: "Search",
+            pl: "Szukaj",
+          },
+          hash: "49dd6c21604b5e8d4153ff1aff2177e1",
+        },
+        "14/declaration/body/10/argument/1/5/1/3": {
+          content: {
+            en: "Ask Mimir",
+            pl: "Zapytaj Mimira",
+          },
+          hash: "c516ed1af9463ccd6bdcb19a1f13e4ac",
+        },
+        "14/declaration/body/10/argument/1/5/1/5": {
+          content: {
+            en: "Coming soon",
+            pl: "Już wkrótce",
+          },
+          hash: "05a8fc9f6d826fd88a809d98684edcad",
+        },
+        "14/declaration/body/8/argument/1/1/1/3-placeholder": {
+          content: {
+            en: "Search",
+            pl: "Szukaj",
+          },
+          hash: "49dd6c21604b5e8d4153ff1aff2177e1",
+        },
+        "14/declaration/body/8/argument/1/5/1/3": {
+          content: {
+            en: "Ask Mimir",
+            pl: "Zapytaj Mimira",
+          },
+          hash: "c516ed1af9463ccd6bdcb19a1f13e4ac",
+        },
+        "14/declaration/body/8/argument/1/5/1/5": {
+          content: {
+            en: "Coming soon",
+            pl: "Już wkrótce",
+          },
+          hash: "05a8fc9f6d826fd88a809d98684edcad",
+        },
+        "15/body/0/argument/1/expression/0/body/3/3": {
           content: {
             en: "·",
             pl: "·",
@@ -1766,6 +1836,20 @@ export default {
             pl: "<element:User></element:User> Profil<element:ChevronDown></element:ChevronDown>",
           },
           hash: "e68af56e8c615cd81bb81b3561e80993",
+        },
+        "9/declaration/body/1/argument/5/1/3/1/3-placeholder": {
+          content: {
+            en: "Search...",
+            pl: "Szukaj...",
+          },
+          hash: "fe877a75eac472fc5b188c135c78a558",
+        },
+        "9/declaration/body/1/argument/5/1/3/1/5": {
+          content: {
+            en: "J",
+            pl: "J",
+          },
+          hash: "1dcfe2bd5ca155b558530a4add45261a",
         },
         "9/declaration/body/2/argument/1/3/1/1": {
           content: {
@@ -3736,6 +3820,20 @@ export default {
             pl: "Wygeneruj raport",
           },
           hash: "279ab2356e79c56af78353c5dcaeb5e6",
+        },
+        "3/declaration/body/1/argument/1/1/1": {
+          content: {
+            en: "<element:Symbol></element:Symbol> Hello, <expression/>!",
+            pl: "<element:Symbol></element:Symbol> Cześć, <expression/>!",
+          },
+          hash: "de340c4d2c784f3d184dd900d84b1ede",
+        },
+        "3/declaration/body/1/argument/1/3": {
+          content: {
+            en: "Today's briefing: Since yesterday we've managed to find you 5 new tenders, 3 require your attention.",
+            pl: "Dzisiejszy briefing: Od wczoraj udało nam się znaleźć dla Ciebie 5 nowych przetargów, 3 z nich wymagają Twojej uwagi.",
+          },
+          hash: "bb23bee9cbd51ec0a4c3678877f28602",
         },
         "4/declaration/body/3/argument/1/1/1": {
           content: {
@@ -6876,6 +6974,246 @@ export default {
         },
       },
     },
+    "features/hub/components/deadline-calendar-bento.tsx": {
+      entries: {
+        "4/declaration/body/1/argument/openingElement/1/value/expression": {
+          content: {
+            en: "Deadline calendar",
+            pl: "Kalendarz terminów",
+          },
+          hash: "a943e8c4f3795b51abf0f1b7c9171701",
+        },
+      },
+    },
+    "features/hub/components/last-tender-bento.tsx": {
+      entries: {
+        "6/declaration/body/0/0/init/0/1/value": {
+          content: {
+            en: "Preview",
+            pl: "Podgląd",
+          },
+          hash: "3173ee1f0f1d4e50665ca4a84c38e15d",
+        },
+        "6/declaration/body/0/0/init/1/1/value": {
+          content: {
+            en: "Filling-out data",
+            pl: "Wypełnianie danych",
+          },
+          hash: "6b21fd589cc826495915020a9c6c36c0",
+        },
+        "6/declaration/body/0/0/init/2/1/value": {
+          content: {
+            en: "Application",
+            pl: "Aplikacja",
+          },
+          hash: "6dee9191cf69144d6b569683c49631d8",
+        },
+        "6/declaration/body/1/argument/1": {
+          content: {
+            en: "Restocking medical equipment",
+            pl: "Uzupełnianie zapasów sprzętu medycznego",
+          },
+          hash: "b05bdaa28e1b01bbc15fa5c13bc1ff0d",
+        },
+        "6/declaration/body/1/argument/5": {
+          content: {
+            en: "Continue",
+            pl: "Kontynuuj",
+          },
+          hash: "3f894c5b6419e20fd455a1b0d8dbc279",
+        },
+        "6/declaration/body/1/argument/openingElement/1/value/expression": {
+          content: {
+            en: "Return to last tender",
+            pl: "Wróć do ostatniego przetargu",
+          },
+          hash: "8208df3c0f89efff2b48433a4f98902e",
+        },
+      },
+    },
+    "features/hub/components/new-tenders-bento.tsx": {
+      entries: {
+        "7/declaration/body/1/argument/openingElement/1/value/expression": {
+          content: {
+            en: "New tenders",
+            pl: "Nowe przetargi",
+          },
+          hash: "b6a405902627530cdf66b4c52e322ee3",
+        },
+        "7/declaration/body/1/argument/openingElement/2/value/expression": {
+          content: {
+            en: "Open full list",
+            pl: "Otwórz pełną listę",
+          },
+          hash: "31b50a6e655b9e4c34034afe38b5fa0f",
+        },
+      },
+    },
+    "features/hub/components/stats-bento.tsx": {
+      entries: {
+        "4/declaration/body/0/argument/3/1": {
+          content: {
+            en: "<element:span>Total deals:</element:span> 50",
+            pl: "<element:span>Łączna liczba ofert:</element:span> 50",
+          },
+          hash: "dae0998c98a09d510391cd2a33d9a8b6",
+        },
+        "4/declaration/body/0/argument/3/3": {
+          content: {
+            en: "<element:span>Conversion rate:</element:span> 10%",
+            pl: "<element:span>Wskaźnik konwersji:</element:span> 10%",
+          },
+          hash: "6dd57ee0d55bba3637ed03cf8de47bb3",
+        },
+        "4/declaration/body/0/argument/openingElement/1/value/expression": {
+          content: {
+            en: "Stats",
+            pl: "Statystyki",
+          },
+          hash: "5cf8b052c89fa1b05397a956ebec69b2",
+        },
+        "5/declaration/body/0/argument/3/1": {
+          content: {
+            en: "<element:span>Total deals:</element:span> 50",
+            pl: "<element:span>Łączna liczba ofert:</element:span> 50",
+          },
+          hash: "dae0998c98a09d510391cd2a33d9a8b6",
+        },
+        "5/declaration/body/0/argument/3/3": {
+          content: {
+            en: "<element:span>Conversion rate:</element:span> 10%",
+            pl: "<element:span>Wskaźnik konwersji:</element:span> 10%",
+          },
+          hash: "6dd57ee0d55bba3637ed03cf8de47bb3",
+        },
+        "5/declaration/body/0/argument/openingElement/1/value/expression": {
+          content: {
+            en: "Stats",
+            pl: "Statystyki",
+          },
+          hash: "5cf8b052c89fa1b05397a956ebec69b2",
+        },
+        "6/declaration/body/0/argument/3/1": {
+          content: {
+            en: "<element:span>Total deals:</element:span> 50",
+            pl: "<element:span>Łączna liczba ofert:</element:span> 50",
+          },
+          hash: "dae0998c98a09d510391cd2a33d9a8b6",
+        },
+        "6/declaration/body/0/argument/3/3": {
+          content: {
+            en: "<element:span>Conversion rate:</element:span> 10%",
+            pl: "<element:span>Wskaźnik konwersji:</element:span> 10%",
+          },
+          hash: "6dd57ee0d55bba3637ed03cf8de47bb3",
+        },
+        "6/declaration/body/0/argument/openingElement/1/value/expression": {
+          content: {
+            en: "Stats",
+            pl: "Statystyki",
+          },
+          hash: "5cf8b052c89fa1b05397a956ebec69b2",
+        },
+        "6/declaration/body/0/argument/openingElement/2/value/expression/1-aria-label":
+          {
+            content: {
+              en: "Funnel",
+              pl: "Lejek",
+            },
+            hash: "9ba2520431cfd8b6f2967ed6d0d842ae",
+          },
+        "6/declaration/body/0/argument/openingElement/2/value/expression/3-aria-label":
+          {
+            content: {
+              en: "Weekly",
+              pl: "Tygodniowo",
+            },
+            hash: "9e687411dbf1248496a4ae5dd5391679",
+          },
+        "7/declaration/body/1/argument/3/1": {
+          content: {
+            en: "<element:span>Total deals:</element:span> 50",
+            pl: "<element:span>Łączna liczba ofert:</element:span> 50",
+          },
+          hash: "dae0998c98a09d510391cd2a33d9a8b6",
+        },
+        "7/declaration/body/1/argument/3/3": {
+          content: {
+            en: "<element:span>Conversion rate:</element:span> 10%",
+            pl: "<element:span>Wskaźnik konwersji:</element:span> 10%",
+          },
+          hash: "6dd57ee0d55bba3637ed03cf8de47bb3",
+        },
+        "7/declaration/body/1/argument/openingElement/1/value/expression": {
+          content: {
+            en: "Stats",
+            pl: "Statystyki",
+          },
+          hash: "5cf8b052c89fa1b05397a956ebec69b2",
+        },
+        "7/declaration/body/1/argument/openingElement/2/value/expression/1": {
+          content: {
+            en: "<element:AlignLeft></element:AlignLeft> test",
+            pl: "<element:AlignLeft></element:AlignLeft> test",
+          },
+          hash: "0b4bbe4448b77fef471cb1d53413f417",
+        },
+        "7/declaration/body/1/argument/openingElement/2/value/expression/1-aria-label":
+          {
+            content: {
+              en: "Funnel",
+              pl: "Lejek",
+            },
+            hash: "9ba2520431cfd8b6f2967ed6d0d842ae",
+          },
+        "7/declaration/body/1/argument/openingElement/2/value/expression/1-title":
+          {
+            content: {
+              en: "Funnel",
+              pl: "Lejek",
+            },
+            hash: "9ba2520431cfd8b6f2967ed6d0d842ae",
+          },
+        "7/declaration/body/1/argument/openingElement/2/value/expression/1/openingElement/1/value/expression":
+          {
+            content: {
+              en: "<element:AlignLeft></element:AlignLeft> Funnel",
+              pl: "<element:AlignLeft></element:AlignLeft> Lejek",
+            },
+            hash: "34b7c84c87199ea676d568b48e70419d",
+          },
+        "7/declaration/body/1/argument/openingElement/2/value/expression/3": {
+          content: {
+            en: "<element:Calendar></element:Calendar> test",
+            pl: "<element:AlignLeft></element:AlignLeft> test",
+          },
+          hash: "0b4bbe4448b77fef471cb1d53413f417",
+        },
+        "7/declaration/body/1/argument/openingElement/2/value/expression/3-aria-label":
+          {
+            content: {
+              en: "Weekly",
+              pl: "Tygodniowo",
+            },
+            hash: "9e687411dbf1248496a4ae5dd5391679",
+          },
+        "7/declaration/body/1/argument/openingElement/2/value/expression/3/openingElement/1/value/expression":
+          {
+            content: {
+              en: "<element:Calendar></element:Calendar> Weekly",
+              pl: "<element:Calendar></element:Calendar> Tygodniowo",
+            },
+            hash: "25491fd112b3c9ff895c179abf45c4b0",
+          },
+        "8/declaration/body/1/argument/openingElement/1/value/expression": {
+          content: {
+            en: "Stats",
+            pl: "Statystyki",
+          },
+          hash: "5cf8b052c89fa1b05397a956ebec69b2",
+        },
+      },
+    },
     "features/inbox/components/additional-info-section.tsx": {
       entries: {
         "3/declaration/body/0/argument/1": {
@@ -7546,7 +7884,7 @@ export default {
             en: "Reject",
             pl: "Odrzuć",
           },
-          hash: "447bdd205a7407328c84f618e3bf1d40",
+          hash: "417c19f66db70a0548bdeb398cdc46e0",
         },
         "5/declaration/body/0/argument/5/expression/right/3/1": {
           content: {
@@ -9495,6 +9833,20 @@ export default {
             },
             hash: "84387a33605fd62116612bf3a74b77f6",
           },
+        "12/declaration/body/2/consequent/0/argument/1/1": {
+          content: {
+            en: "Select a tender to view details",
+            pl: "Wybierz ofertę, aby zobaczyć szczegóły",
+          },
+          hash: "067789b01a081458db2f872f10a37c3f",
+        },
+        "12/declaration/body/3/consequent/0/argument/1/1": {
+          content: {
+            en: "Select a tender to view details",
+            pl: "Wybierz ofertę, aby zobaczyć szczegóły",
+          },
+          hash: "067789b01a081458db2f872f10a37c3f",
+        },
         "13/declaration/body/5/consequent/0/argument/1/1": {
           content: {
             en: "Select a tender to view details",
@@ -14667,12 +15019,75 @@ export default {
     },
     "features/stats/components/state-funnel.tsx": {
       entries: {
+        "1/declaration/body/0/argument/1/1/openingElement/0/value/expression": {
+          content: {
+            en: "Found",
+            pl: "Znaleziono",
+          },
+          hash: "8cb2dd2518b1621873b4488e3da83d50",
+        },
+        "1/declaration/body/0/argument/1/3/openingElement/0/value/expression": {
+          content: {
+            en: "Qualified",
+            pl: "Zakwalifikowano",
+          },
+          hash: "ab91566819bc36d0831f136690b32878",
+        },
+        "1/declaration/body/0/argument/1/5/openingElement/0/value/expression": {
+          content: {
+            en: "Applied",
+            pl: "Zastosowano",
+          },
+          hash: "a79bcd1e53b38db7b03b506ff2e05904",
+        },
+        "1/declaration/body/0/argument/1/7/openingElement/0/value/expression": {
+          content: {
+            en: "Won",
+            pl: "Wygrano",
+          },
+          hash: "61dcd4c53a7b9b4b86c20ebe571f111f",
+        },
+        "1/declaration/body/0/argument/1/9/openingElement/0/value/expression": {
+          content: {
+            en: "Lost",
+            pl: "Przegrano",
+          },
+          hash: "52ca04dc5bfb7642586e67a469aa3e24",
+        },
         "1/declaration/body/0/argument/1/openingElement/0/value/expression": {
           content: {
             en: "Found",
             pl: "Znaleziono",
           },
           hash: "8cb2dd2518b1621873b4488e3da83d50",
+        },
+        "1/declaration/body/0/argument/11/1": {
+          content: {
+            en: "<element:span>Total deals:</element:span> 50",
+            pl: "<element:span>Łączna liczba ofert:</element:span> 50",
+          },
+          hash: "dae0998c98a09d510391cd2a33d9a8b6",
+        },
+        "1/declaration/body/0/argument/11/3": {
+          content: {
+            en: "<element:span>Conversion rate:</element:span> 10%",
+            pl: "<element:span>Wskaźnik konwersji:</element:span> 10%",
+          },
+          hash: "6dd57ee0d55bba3637ed03cf8de47bb3",
+        },
+        "1/declaration/body/0/argument/3/1": {
+          content: {
+            en: "<element:span>Total deals:</element:span> 50",
+            pl: "<element:span>Łączna liczba ofert:</element:span> 50",
+          },
+          hash: "dae0998c98a09d510391cd2a33d9a8b6",
+        },
+        "1/declaration/body/0/argument/3/3": {
+          content: {
+            en: "<element:span>Conversion rate:</element:span> 10%",
+            pl: "<element:span>Wskaźnik konwersji:</element:span> 10%",
+          },
+          hash: "6dd57ee0d55bba3637ed03cf8de47bb3",
         },
         "1/declaration/body/0/argument/3/openingElement/0/value/expression": {
           content: {
@@ -14708,6 +15123,94 @@ export default {
             pl: "({percentage}%)",
           },
           hash: "941a386f0a1da9f7ea122244021229ea",
+        },
+      },
+    },
+    "features/stats/components/weekly-stats.tsx": {
+      entries: {
+        "0/declaration/body/0/argument": {
+          content: {
+            en: "WeeklyStats",
+            pl: "StatystykiTygodniowe",
+          },
+          hash: "5ce278ce87a9109270bf9479f9718672",
+        },
+        "0/declaration/body/0/argument/1": {
+          content: {
+            en: "Last 4 weeks",
+            pl: "Ostatnie 4 tygodnie",
+          },
+          hash: "ff82774f1a7e6b68ac287b90b33d35a7",
+        },
+        "0/declaration/body/0/argument/3/1": {
+          content: {
+            en: "Total: 50",
+            pl: "Razem: 50",
+          },
+          hash: "fed0886a7d8a96cf27e9f53cd5e4ea9a",
+        },
+        "0/declaration/body/0/argument/3/3": {
+          content: {
+            en: "Weekly average: 10",
+            pl: "Średnia tygodniowa: 10",
+          },
+          hash: "bfb3e64a43ad9137eb1872fca61216b2",
+        },
+        "0/declaration/body/0/argument/5/1": {
+          content: {
+            en: "Total: 50",
+            pl: "Razem: 50",
+          },
+          hash: "fed0886a7d8a96cf27e9f53cd5e4ea9a",
+        },
+        "0/declaration/body/0/argument/5/3": {
+          content: {
+            en: "Weekly average: 10",
+            pl: "Średnia tygodniowa: 10",
+          },
+          hash: "bfb3e64a43ad9137eb1872fca61216b2",
+        },
+        "5/declaration/body/0/argument/1": {
+          content: {
+            en: "Last 4 weeks",
+            pl: "Ostatnie 4 tygodnie",
+          },
+          hash: "ff82774f1a7e6b68ac287b90b33d35a7",
+        },
+        "5/declaration/body/0/argument/5/1": {
+          content: {
+            en: "<element:span>Total:</element:span> 50",
+            pl: "<element:span>Łączna liczba ofert:</element:span> 50",
+          },
+          hash: "dae0998c98a09d510391cd2a33d9a8b6",
+        },
+        "5/declaration/body/0/argument/5/3": {
+          content: {
+            en: "<element:span>Weekly average:</element:span> 10",
+            pl: "<element:span>Średnia tygodniowa:</element:span> 10",
+          },
+          hash: "6341f69e8c41704bab990c5e11201eb6",
+        },
+        "6/declaration/body/0/argument/1": {
+          content: {
+            en: "Last 4 weeks",
+            pl: "Ostatnie 4 tygodnie",
+          },
+          hash: "ff82774f1a7e6b68ac287b90b33d35a7",
+        },
+        "6/declaration/body/0/argument/5/1": {
+          content: {
+            en: "Total: 50",
+            pl: "Razem: 50",
+          },
+          hash: "fed0886a7d8a96cf27e9f53cd5e4ea9a",
+        },
+        "6/declaration/body/0/argument/5/3": {
+          content: {
+            en: "Weekly average: 10",
+            pl: "Średnia tygodniowa: 10",
+          },
+          hash: "bfb3e64a43ad9137eb1872fca61216b2",
         },
       },
     },
@@ -14757,6 +15260,47 @@ export default {
             },
             hash: "0ba1a65084182188ac8229eacdd19007",
           },
+        "5/declaration/body/5/argument/3/1/expression/alternate/1": {
+          content: {
+            en: "Select a date",
+            pl: "Wybierz datę",
+          },
+          hash: "521e4a705800da06d091fde3e801ce02",
+        },
+        "5/declaration/body/5/argument/3/1/expression/alternate/3": {
+          content: {
+            en: "Click on highlighted dates to see expiring tenders",
+            pl: "Kliknij na podświetlone daty, aby zobaczyć wygasające przetargi",
+          },
+          hash: "8352840e0e68b2afae6082a391fed57a",
+        },
+        "5/declaration/body/5/argument/3/1/expression/consequent/3/expression/alternate":
+          {
+            content: {
+              en: "No tenders expiring on this date",
+              pl: "Brak przetargów wygasających w tym dniu",
+            },
+            hash: "cefc610408938006240eebc1df03abae",
+          },
+        "5/declaration/body/5/argument/3/1/expression/consequent/3/expression/consequent/1":
+          {
+            content: {
+              en: "Expiring Tenders:",
+              pl: "Wygasające przetargi:",
+            },
+            hash: "0ba1a65084182188ac8229eacdd19007",
+          },
+      },
+    },
+    "features/tenders/components/tender-mini-card.tsx": {
+      entries: {
+        "5/declaration/body/3/argument/1/3": {
+          content: {
+            en: "<element:Chip>{timeUntilExpiration}</element:Chip> ·{organization}",
+            pl: "<element:Chip>{timeUntilExpiration}</element:Chip> ·{organization}",
+          },
+          hash: "3a504fc6f0ab67552115cc4edde7931d",
+        },
       },
     },
     "features/tenders/components/tender-summary.tsx": {

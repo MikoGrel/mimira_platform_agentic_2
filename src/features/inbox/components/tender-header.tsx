@@ -49,13 +49,11 @@ export function TenderHeader({ tender, isHeaderCollapsed }: TenderHeaderProps) {
                 {tender.submittingoffersdate}
               </span>
             </div>
-            <div className="flex gap-3">
+            <div className="flex gap-2">
               <Button color="primary" data-lingo-override-pl="Aplikuj">
                 Apply
               </Button>
-              <Button variant="flat" color="danger">
-                Reject
-              </Button>
+              <Button variant="flat">Reject</Button>
             </div>
           </motion.div>
         )}
@@ -82,7 +80,7 @@ export function TenderHeader({ tender, isHeaderCollapsed }: TenderHeaderProps) {
             <Button size="sm" color="primary" data-lingo-override-pl="Aplikuj">
               Apply
             </Button>
-            <Button size="sm" variant="flat" color="danger">
+            <Button size="sm" variant="flat">
               Reject
             </Button>
           </div>

@@ -21,6 +21,7 @@ import {
   TenderPreview,
   useFilterForm,
   useTenderInboxQuery,
+  useIndividualTender,
 } from "$/features/inbox";
 import { useInfiniteList } from "$/hooks/use-infinite-list";
 import { AnimatePresence, motion } from "motion/react";
@@ -49,10 +50,19 @@ export default function InboxPage() {
   } = useTenderInboxQuery({ search, filterQuery, pageSize: PAGE_SIZE });
   const { mutate: markAsSeen } = useMarkAsSeen();
 
-  const selectedTender = useMemo(
+  const selectedTenderFromList = useMemo(
     () => tenders.find((t) => t.id === selectedId),
     [tenders, selectedId]
   );
+
+  // Fallback query for when tender is not in current results
+  const { data: individualTender, isLoading: isLoadingIndividual } =
+    useIndividualTender({
+      tenderId: selectedId,
+      enabled: selectedId !== null && !selectedTenderFromList,
+    });
+
+  const selectedTender = selectedTenderFromList || individualTender;
 
   const { getRef } = useInfiniteList({
     onIntersect: () => {
@@ -126,7 +136,7 @@ export default function InboxPage() {
                     })}
                     shadow="none"
                   >
-                    <div className="p-4 px-6 flex flex-col gap-2">
+                    <div className="p-4 px-6 flex flex-col gap-2 hover:bg-muted">
                       <p className="font-semibold text-sm relative">
                         {truncate(t.orderobject!, {
                           length: 120,
@@ -162,7 +172,12 @@ export default function InboxPage() {
           </div>
         </div>
       </aside>
-      <TenderPreview tender={selectedTender} />
+      <TenderPreview
+        tender={selectedTender}
+        isLoading={
+          isLoadingIndividual && selectedId !== null && !selectedTenderFromList
+        }
+      />
     </main>
   );
 }

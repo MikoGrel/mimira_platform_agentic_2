@@ -2,6 +2,7 @@
 
 import { useState, useMemo } from "react";
 import { Calendar } from "$/components/ui/calendar";
+import Link from "next/link";
 
 type ExpiringTender = {
   id: string;
@@ -49,7 +50,7 @@ export default function MiniTenderCalendar({
   };
 
   return (
-    <div className="grid grid-cols-[1fr_140px] grid-rows-1 gap-4">
+    <div className="grid grid-cols-[1fr_1fr] grid-rows-1 gap-4">
       <Calendar
         mode="single"
         selected={selectedDate}
@@ -84,9 +85,14 @@ export default function MiniTenderCalendar({
                   {selectedDateTenders.map((tender) => (
                     <li
                       key={tender.id}
-                      className="text-xs p-2 bg-background rounded border"
+                      className="text-xs p-2 bg-background rounded-md border group"
                     >
-                      {tender.title}
+                      <Link
+                        href={`/dashboard/inbox?id=${tender.id}`}
+                        className="group-hover:text-primary"
+                      >
+                        {tender.title}
+                      </Link>
                     </li>
                   ))}
                 </ul>

@@ -1,3 +1,5 @@
+"use client";
+
 import {
   SidebarInset,
   SidebarProvider,
@@ -10,16 +12,19 @@ import { DashboardSidebar } from "$/features/navigation/components";
 import { DashboardCommand } from "$/features/navigation/components/dashboard-command";
 import UserName from "$/features/auth/components/user-name";
 import { Kbd } from "@heroui/react";
+import { useState } from "react";
 
-export default async function DashboardLayout({
+export default function DashboardLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
+  const [commandOpen, setCommandOpen] = useState(false);
+
   return (
     <SidebarProvider>
       <DashboardSidebar />
-      <DashboardCommand />
+      <DashboardCommand open={commandOpen} setOpen={setCommandOpen} />
 
       <SidebarInset className="flex flex-col h-screen">
         <header className="grid grid-cols-3 grid-rows-1 h-16 shrink-0  gap-4 bg-sidebar px-4 sticky top-0 z-10">
@@ -31,6 +36,7 @@ export default async function DashboardLayout({
             <div className="relative">
               <Search className="absolute left-2 top-1/2 h-4 w-4 -translate-y-1/2 text-sidebar-foreground/70" />
               <Input
+                onFocus={() => setCommandOpen(true)}
                 placeholder="Search..."
                 className="w-64 pl-8 bg-white border-sidebar-border text-sidebar-foreground placeholder:text-sidebar-foreground/70"
               />

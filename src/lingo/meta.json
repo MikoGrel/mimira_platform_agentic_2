@@ -828,6 +828,30 @@
           "overrides": {},
           "content": "·"
         },
+        "13/declaration/body/10/argument/1/1/1/3-placeholder": {
+          "type": "attribute",
+          "hash": "49dd6c21604b5e8d4153ff1aff2177e1",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Search"
+        },
+        "13/declaration/body/10/argument/1/5/1/3": {
+          "type": "element",
+          "hash": "c516ed1af9463ccd6bdcb19a1f13e4ac",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Ask Mimir"
+        },
+        "13/declaration/body/10/argument/1/5/1/5": {
+          "type": "element",
+          "hash": "05a8fc9f6d826fd88a809d98684edcad",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Coming soon"
+        },
         "13/declaration/body/8/argument/1/1/1/3-placeholder": {
           "type": "attribute",
           "hash": "49dd6c21604b5e8d4153ff1aff2177e1",
@@ -877,6 +901,62 @@
           "content": "Coming soon"
         },
         "14/body/0/argument/1/expression/0/body/3/3": {
+          "type": "element",
+          "hash": "26b80ae8a680de73667e096098aa69d8",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "·"
+        },
+        "14/declaration/body/10/argument/1/1/1/3-placeholder": {
+          "type": "attribute",
+          "hash": "49dd6c21604b5e8d4153ff1aff2177e1",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Search"
+        },
+        "14/declaration/body/10/argument/1/5/1/3": {
+          "type": "element",
+          "hash": "c516ed1af9463ccd6bdcb19a1f13e4ac",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Ask Mimir"
+        },
+        "14/declaration/body/10/argument/1/5/1/5": {
+          "type": "element",
+          "hash": "05a8fc9f6d826fd88a809d98684edcad",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Coming soon"
+        },
+        "14/declaration/body/8/argument/1/1/1/3-placeholder": {
+          "type": "attribute",
+          "hash": "49dd6c21604b5e8d4153ff1aff2177e1",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Search"
+        },
+        "14/declaration/body/8/argument/1/5/1/3": {
+          "type": "element",
+          "hash": "c516ed1af9463ccd6bdcb19a1f13e4ac",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Ask Mimir"
+        },
+        "14/declaration/body/8/argument/1/5/1/5": {
+          "type": "element",
+          "hash": "05a8fc9f6d826fd88a809d98684edcad",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Coming soon"
+        },
+        "15/body/0/argument/1/expression/0/body/3/3": {
           "type": "element",
           "hash": "26b80ae8a680de73667e096098aa69d8",
           "context": "",
@@ -2037,6 +2117,22 @@
           "skip": false,
           "overrides": {},
           "content": "<element:User></element:User> Profile<element:ChevronDown></element:ChevronDown>"
+        },
+        "9/declaration/body/1/argument/5/1/3/1/3-placeholder": {
+          "type": "attribute",
+          "hash": "fe877a75eac472fc5b188c135c78a558",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Search..."
+        },
+        "9/declaration/body/1/argument/5/1/3/1/5": {
+          "type": "element",
+          "hash": "1dcfe2bd5ca155b558530a4add45261a",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "J"
         },
         "9/declaration/body/2/argument/1/3/1/1": {
           "type": "element",
@@ -4209,6 +4305,22 @@
           "skip": false,
           "overrides": {},
           "content": "Generate report"
+        },
+        "3/declaration/body/1/argument/1/1/1": {
+          "type": "element",
+          "hash": "de340c4d2c784f3d184dd900d84b1ede",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "<element:Symbol></element:Symbol> Hello, <expression/>!"
+        },
+        "3/declaration/body/1/argument/1/3": {
+          "type": "element",
+          "hash": "bb23bee9cbd51ec0a4c3678877f28602",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Today's briefing: Since yesterday we've managed to find you 5 new tenders, 3 require your attention."
         },
         "4/declaration/body/3/argument/1/1/1": {
           "type": "element",
@@ -7756,6 +7868,286 @@
         }
       }
     },
+    "features/hub/components/deadline-calendar-bento.tsx": {
+      "scopes": {
+        "4/declaration/body/1/argument/openingElement/1/value/expression": {
+          "type": "element",
+          "hash": "a943e8c4f3795b51abf0f1b7c9171701",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Deadline calendar"
+        }
+      }
+    },
+    "features/hub/components/last-tender-bento.tsx": {
+      "scopes": {
+        "6/declaration/body/0/0/init/0/1/value": {
+          "type": "element",
+          "hash": "3173ee1f0f1d4e50665ca4a84c38e15d",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Preview"
+        },
+        "6/declaration/body/0/0/init/1/1/value": {
+          "type": "element",
+          "hash": "6b21fd589cc826495915020a9c6c36c0",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Filling-out data"
+        },
+        "6/declaration/body/0/0/init/2/1/value": {
+          "type": "element",
+          "hash": "6dee9191cf69144d6b569683c49631d8",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Application"
+        },
+        "6/declaration/body/1/argument/1": {
+          "type": "element",
+          "hash": "b05bdaa28e1b01bbc15fa5c13bc1ff0d",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Restocking medical equipment"
+        },
+        "6/declaration/body/1/argument/5": {
+          "type": "element",
+          "hash": "3f894c5b6419e20fd455a1b0d8dbc279",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Continue"
+        },
+        "6/declaration/body/1/argument/openingElement/1/value/expression": {
+          "type": "element",
+          "hash": "8208df3c0f89efff2b48433a4f98902e",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Return to last tender"
+        }
+      }
+    },
+    "features/hub/components/new-tenders-bento.tsx": {
+      "scopes": {
+        "7/declaration/body/1/argument/openingElement/1/value/expression": {
+          "type": "element",
+          "hash": "b6a405902627530cdf66b4c52e322ee3",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "New tenders"
+        },
+        "7/declaration/body/1/argument/openingElement/2/value/expression": {
+          "type": "element",
+          "hash": "31b50a6e655b9e4c34034afe38b5fa0f",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Open full list"
+        },
+        "8/declaration/body/1/argument/openingElement/1/value/expression": {
+          "type": "element",
+          "hash": "b6a405902627530cdf66b4c52e322ee3",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "New tenders"
+        },
+        "8/declaration/body/1/argument/openingElement/2/value/expression": {
+          "type": "element",
+          "hash": "31b50a6e655b9e4c34034afe38b5fa0f",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Open full list"
+        }
+      }
+    },
+    "features/hub/components/stats-bento.tsx": {
+      "scopes": {
+        "4/declaration/body/0/argument/3/1": {
+          "type": "element",
+          "hash": "dae0998c98a09d510391cd2a33d9a8b6",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "<element:span>Total deals:</element:span> 50"
+        },
+        "4/declaration/body/0/argument/3/3": {
+          "type": "element",
+          "hash": "6dd57ee0d55bba3637ed03cf8de47bb3",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "<element:span>Conversion rate:</element:span> 10%"
+        },
+        "4/declaration/body/0/argument/openingElement/1/value/expression": {
+          "type": "element",
+          "hash": "5cf8b052c89fa1b05397a956ebec69b2",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Stats"
+        },
+        "5/declaration/body/0/argument/3/1": {
+          "type": "element",
+          "hash": "dae0998c98a09d510391cd2a33d9a8b6",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "<element:span>Total deals:</element:span> 50"
+        },
+        "5/declaration/body/0/argument/3/3": {
+          "type": "element",
+          "hash": "6dd57ee0d55bba3637ed03cf8de47bb3",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "<element:span>Conversion rate:</element:span> 10%"
+        },
+        "5/declaration/body/0/argument/openingElement/1/value/expression": {
+          "type": "element",
+          "hash": "5cf8b052c89fa1b05397a956ebec69b2",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Stats"
+        },
+        "6/declaration/body/0/argument/3/1": {
+          "type": "element",
+          "hash": "dae0998c98a09d510391cd2a33d9a8b6",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "<element:span>Total deals:</element:span> 50"
+        },
+        "6/declaration/body/0/argument/3/3": {
+          "type": "element",
+          "hash": "6dd57ee0d55bba3637ed03cf8de47bb3",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "<element:span>Conversion rate:</element:span> 10%"
+        },
+        "6/declaration/body/0/argument/openingElement/1/value/expression": {
+          "type": "element",
+          "hash": "5cf8b052c89fa1b05397a956ebec69b2",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Stats"
+        },
+        "6/declaration/body/0/argument/openingElement/2/value/expression/1-aria-label": {
+          "type": "attribute",
+          "hash": "9ba2520431cfd8b6f2967ed6d0d842ae",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Funnel"
+        },
+        "6/declaration/body/0/argument/openingElement/2/value/expression/3-aria-label": {
+          "type": "attribute",
+          "hash": "9e687411dbf1248496a4ae5dd5391679",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Weekly"
+        },
+        "7/declaration/body/1/argument/3/1": {
+          "type": "element",
+          "hash": "dae0998c98a09d510391cd2a33d9a8b6",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "<element:span>Total deals:</element:span> 50"
+        },
+        "7/declaration/body/1/argument/3/3": {
+          "type": "element",
+          "hash": "6dd57ee0d55bba3637ed03cf8de47bb3",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "<element:span>Conversion rate:</element:span> 10%"
+        },
+        "7/declaration/body/1/argument/openingElement/1/value/expression": {
+          "type": "element",
+          "hash": "5cf8b052c89fa1b05397a956ebec69b2",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Stats"
+        },
+        "7/declaration/body/1/argument/openingElement/2/value/expression/1": {
+          "type": "element",
+          "hash": "0b4bbe4448b77fef471cb1d53413f417",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "<element:AlignLeft></element:AlignLeft> test"
+        },
+        "7/declaration/body/1/argument/openingElement/2/value/expression/1-aria-label": {
+          "type": "attribute",
+          "hash": "9ba2520431cfd8b6f2967ed6d0d842ae",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Funnel"
+        },
+        "7/declaration/body/1/argument/openingElement/2/value/expression/1-title": {
+          "type": "attribute",
+          "hash": "9ba2520431cfd8b6f2967ed6d0d842ae",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Funnel"
+        },
+        "7/declaration/body/1/argument/openingElement/2/value/expression/1/openingElement/1/value/expression": {
+          "type": "element",
+          "hash": "34b7c84c87199ea676d568b48e70419d",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "<element:AlignLeft></element:AlignLeft> Funnel"
+        },
+        "7/declaration/body/1/argument/openingElement/2/value/expression/3": {
+          "type": "element",
+          "hash": "0b4bbe4448b77fef471cb1d53413f417",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "<element:Calendar></element:Calendar> test"
+        },
+        "7/declaration/body/1/argument/openingElement/2/value/expression/3-aria-label": {
+          "type": "attribute",
+          "hash": "9e687411dbf1248496a4ae5dd5391679",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Weekly"
+        },
+        "7/declaration/body/1/argument/openingElement/2/value/expression/3/openingElement/1/value/expression": {
+          "type": "element",
+          "hash": "25491fd112b3c9ff895c179abf45c4b0",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "<element:Calendar></element:Calendar> Weekly"
+        },
+        "8/declaration/body/1/argument/openingElement/1/value/expression": {
+          "type": "element",
+          "hash": "5cf8b052c89fa1b05397a956ebec69b2",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Stats"
+        }
+      }
+    },
     "features/inbox/components/additional-info-section.tsx": {
       "scopes": {
         "3/declaration/body/0/argument/1": {
@@ -8498,7 +8890,7 @@
         },
         "5/declaration/body/0/argument/3/1/expression/right/3/3": {
           "type": "element",
-          "hash": "447bdd205a7407328c84f618e3bf1d40",
+          "hash": "417c19f66db70a0548bdeb398cdc46e0",
           "context": "",
           "skip": false,
           "overrides": {},
@@ -10763,6 +11155,22 @@
           "skip": false,
           "overrides": {},
           "content": "{data.value}%"
+        },
+        "12/declaration/body/2/consequent/0/argument/1/1": {
+          "type": "element",
+          "hash": "067789b01a081458db2f872f10a37c3f",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Select a tender to view details"
+        },
+        "12/declaration/body/3/consequent/0/argument/1/1": {
+          "type": "element",
+          "hash": "067789b01a081458db2f872f10a37c3f",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Select a tender to view details"
         },
         "13/declaration/body/5/consequent/0/argument/1/1": {
           "type": "element",
@@ -16656,6 +17064,46 @@
     },
     "features/stats/components/state-funnel.tsx": {
       "scopes": {
+        "1/declaration/body/0/argument/1/1/openingElement/0/value/expression": {
+          "type": "element",
+          "hash": "8cb2dd2518b1621873b4488e3da83d50",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Found"
+        },
+        "1/declaration/body/0/argument/1/3/openingElement/0/value/expression": {
+          "type": "element",
+          "hash": "ab91566819bc36d0831f136690b32878",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Qualified"
+        },
+        "1/declaration/body/0/argument/1/5/openingElement/0/value/expression": {
+          "type": "element",
+          "hash": "a79bcd1e53b38db7b03b506ff2e05904",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Applied"
+        },
+        "1/declaration/body/0/argument/1/7/openingElement/0/value/expression": {
+          "type": "element",
+          "hash": "61dcd4c53a7b9b4b86c20ebe571f111f",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Won"
+        },
+        "1/declaration/body/0/argument/1/9/openingElement/0/value/expression": {
+          "type": "element",
+          "hash": "52ca04dc5bfb7642586e67a469aa3e24",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Lost"
+        },
         "1/declaration/body/0/argument/1/openingElement/0/value/expression": {
           "type": "element",
           "hash": "8cb2dd2518b1621873b4488e3da83d50",
@@ -16663,6 +17111,38 @@
           "skip": false,
           "overrides": {},
           "content": "Found"
+        },
+        "1/declaration/body/0/argument/11/1": {
+          "type": "element",
+          "hash": "dae0998c98a09d510391cd2a33d9a8b6",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "<element:span>Total deals:</element:span> 50"
+        },
+        "1/declaration/body/0/argument/11/3": {
+          "type": "element",
+          "hash": "6dd57ee0d55bba3637ed03cf8de47bb3",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "<element:span>Conversion rate:</element:span> 10%"
+        },
+        "1/declaration/body/0/argument/3/1": {
+          "type": "element",
+          "hash": "dae0998c98a09d510391cd2a33d9a8b6",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "<element:span>Total deals:</element:span> 50"
+        },
+        "1/declaration/body/0/argument/3/3": {
+          "type": "element",
+          "hash": "6dd57ee0d55bba3637ed03cf8de47bb3",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "<element:span>Conversion rate:</element:span> 10%"
         },
         "1/declaration/body/0/argument/3/openingElement/0/value/expression": {
           "type": "element",
@@ -16703,6 +17183,106 @@
           "skip": false,
           "overrides": {},
           "content": "({percentage}%)"
+        }
+      }
+    },
+    "features/stats/components/weekly-stats.tsx": {
+      "scopes": {
+        "0/declaration/body/0/argument": {
+          "type": "element",
+          "hash": "5ce278ce87a9109270bf9479f9718672",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "WeeklyStats"
+        },
+        "0/declaration/body/0/argument/1": {
+          "type": "element",
+          "hash": "ff82774f1a7e6b68ac287b90b33d35a7",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Last 4 weeks"
+        },
+        "0/declaration/body/0/argument/3/1": {
+          "type": "element",
+          "hash": "fed0886a7d8a96cf27e9f53cd5e4ea9a",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Total: 50"
+        },
+        "0/declaration/body/0/argument/3/3": {
+          "type": "element",
+          "hash": "bfb3e64a43ad9137eb1872fca61216b2",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Weekly average: 10"
+        },
+        "0/declaration/body/0/argument/5/1": {
+          "type": "element",
+          "hash": "fed0886a7d8a96cf27e9f53cd5e4ea9a",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Total: 50"
+        },
+        "0/declaration/body/0/argument/5/3": {
+          "type": "element",
+          "hash": "bfb3e64a43ad9137eb1872fca61216b2",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Weekly average: 10"
+        },
+        "5/declaration/body/0/argument/1": {
+          "type": "element",
+          "hash": "ff82774f1a7e6b68ac287b90b33d35a7",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Last 4 weeks"
+        },
+        "5/declaration/body/0/argument/5/1": {
+          "type": "element",
+          "hash": "dae0998c98a09d510391cd2a33d9a8b6",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "<element:span>Total:</element:span> 50"
+        },
+        "5/declaration/body/0/argument/5/3": {
+          "type": "element",
+          "hash": "6341f69e8c41704bab990c5e11201eb6",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "<element:span>Weekly average:</element:span> 10"
+        },
+        "6/declaration/body/0/argument/1": {
+          "type": "element",
+          "hash": "ff82774f1a7e6b68ac287b90b33d35a7",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Last 4 weeks"
+        },
+        "6/declaration/body/0/argument/5/1": {
+          "type": "element",
+          "hash": "fed0886a7d8a96cf27e9f53cd5e4ea9a",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Total: 50"
+        },
+        "6/declaration/body/0/argument/5/3": {
+          "type": "element",
+          "hash": "bfb3e64a43ad9137eb1872fca61216b2",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Weekly average: 10"
         }
       }
     },
@@ -16755,6 +17335,50 @@
           "skip": false,
           "overrides": {},
           "content": "Expiring Tenders:"
+        },
+        "5/declaration/body/5/argument/3/1/expression/alternate/1": {
+          "type": "element",
+          "hash": "521e4a705800da06d091fde3e801ce02",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Select a date"
+        },
+        "5/declaration/body/5/argument/3/1/expression/alternate/3": {
+          "type": "element",
+          "hash": "8352840e0e68b2afae6082a391fed57a",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Click on highlighted dates to see expiring tenders"
+        },
+        "5/declaration/body/5/argument/3/1/expression/consequent/3/expression/alternate": {
+          "type": "element",
+          "hash": "cefc610408938006240eebc1df03abae",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "No tenders expiring on this date"
+        },
+        "5/declaration/body/5/argument/3/1/expression/consequent/3/expression/consequent/1": {
+          "type": "element",
+          "hash": "0ba1a65084182188ac8229eacdd19007",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Expiring Tenders:"
+        }
+      }
+    },
+    "features/tenders/components/tender-mini-card.tsx": {
+      "scopes": {
+        "5/declaration/body/3/argument/1/3": {
+          "type": "element",
+          "hash": "3a504fc6f0ab67552115cc4edde7931d",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "<element:Chip>{timeUntilExpiration}</element:Chip> ·<element:span>{organization}</element:span>"
         }
       }
     },

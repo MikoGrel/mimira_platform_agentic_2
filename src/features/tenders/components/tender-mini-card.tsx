@@ -1,40 +1,58 @@
+"use client";
+
 import { useDateFormat } from "$/features/i18n/hooks/use-date-format";
 import { Chip } from "@heroui/react";
 import { ArrowUpRight, CalendarClock } from "lucide-react";
 import Link from "next/link";
+import { motion } from "motion/react";
 
 interface TenderMiniCardProps {
   title: string;
-  amount: number;
+  organization: string;
   expirationDate: Date;
   id: string;
+  index?: number;
 }
 
 export function TenderMiniCard(props: TenderMiniCardProps) {
   const { relativeToNow } = useDateFormat();
-  const { title, expirationDate, id } = props;
+  const { title, organization, expirationDate, id, index = 0 } = props;
 
   const timeUntilExpiration = relativeToNow(expirationDate);
 
   return (
-    <Link
-      href={`/dashboard/inbox/?id=${id}`}
-      className="bg-white hover:bg-gray-50 transition-all group border p-4 flex justify-between rounded-xl"
+    <motion.div
+      initial={{ opacity: 0, y: 25 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{
+        duration: 0.3,
+        delay: index * 0.1,
+        ease: "easeOut",
+      }}
     >
-      <div className="flex flex-col gap-2">
-        <p className="text-sm font-medium">{title}</p>
-        <div className="text-xs flex gap-4">
-          <Chip
-            variant="flat"
-            startContent={<CalendarClock className="w-4 h-4 ml-1" />}
-          >
-            {timeUntilExpiration}
-          </Chip>
+      <Link
+        href={`/dashboard/inbox/?id=${id}`}
+        className="bg-white hover:bg-gray-50 transition-all group border p-4 flex justify-between rounded-xl"
+      >
+        <div className="flex flex-col gap-2">
+          <p className="text-sm font-medium">{title}</p>
+          <div className="text-sm flex items-center gap-2">
+            <Chip
+              variant="flat"
+              startContent={<CalendarClock className="w-4 h-4 ml-1" />}
+            >
+              {timeUntilExpiration}
+            </Chip>
+            <span className="block text-muted-foreground">{organization}</span>
+          </div>
         </div>
-      </div>
-      <div className="h-full ml-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-all">
-        <ArrowUpRight strokeWidth={1.5} />
-      </div>
-    </Link>
+        <div className="h-full ml-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-all">
+          <ArrowUpRight
+            strokeWidth={1.5}
+            className="text-muted-foreground group-hover:text-primary transition-all"
+          />
+        </div>
+      </Link>
+    </motion.div>
   );
 }
