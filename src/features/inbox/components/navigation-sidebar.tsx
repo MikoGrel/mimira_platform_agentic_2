@@ -1,7 +1,7 @@
 "use client";
 
 import { cn } from "$/lib/utils";
-import { Hash } from "lucide-react";
+import { ChevronLeft, ChevronRight, Hash } from "lucide-react";
 import { useEffect, useState } from "react";
 
 interface NavigationSidebarProps {
@@ -10,6 +10,7 @@ interface NavigationSidebarProps {
 
 export function NavigationSidebar({ scrollRef }: NavigationSidebarProps) {
   const [activeSection, setActiveSection] = useState<string>("");
+  const [collapsed, setCollapsed] = useState(false);
 
   const sections = [
     { id: "at-glance", label: <span>Overview</span> },
@@ -69,7 +70,12 @@ export function NavigationSidebar({ scrollRef }: NavigationSidebarProps) {
   };
 
   return (
-    <div className="border-l border-gray-200 bg-gray-50/50 overflow-hidden w-48 p-4">
+    <div
+      className={cn(
+        "border-l border-sidebar-border w-full max-w-48 p-4 relative transition-all",
+        collapsed && "max-w-0 p-0"
+      )}
+    >
       <div className="sticky top-4">
         <h3 className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-3">
           Contents
@@ -87,12 +93,22 @@ export function NavigationSidebar({ scrollRef }: NavigationSidebarProps) {
                 }
               )}
             >
-              <Hash className="w-3 h-3 opacity-60" />
+              <Hash className="w-3 h-3 opacity-60 shrink-0" />
               {section.label}
             </button>
           ))}
         </nav>
       </div>
+      <button
+        className="cursor-pointer absolute top-1/2 -translate-y-1/2 -left-[26px] rounded-r-none py-2 p-1 bg-white rounded-lg border border-sidebar-border"
+        onClick={() => setCollapsed(!collapsed)}
+      >
+        {collapsed ? (
+          <ChevronLeft className="w-4 h-4" />
+        ) : (
+          <ChevronRight className="w-4 h-4" />
+        )}
+      </button>
     </div>
   );
 }

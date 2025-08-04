@@ -37,7 +37,7 @@ export function LastTenderBento({ loading, className }: LastTenderBentoProps) {
       className={className}
       bodyClassName="flex flex-col gap-4 pt-0"
     >
-      <p className="font-medium">Restocking medical equipment</p>
+      <p>Restocking medical equipment</p>
       <VerticalStepper steps={tenderSteps} />
       <Button color="primary" endContent={<MoveRight />}>
         Continue

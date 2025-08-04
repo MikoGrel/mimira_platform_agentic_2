@@ -59,7 +59,7 @@ export function TenderPreview({ tender, isLoading }: TenderPreviewProps) {
 
         <div className="flex overflow-hidden h-full flex-[1_0_0]">
           <div className="flex-1 overflow-y-auto" ref={scrollRef}>
-            <div className="px-6 py-6 space-y-8">
+            <div className="px-6 py-6 space-y-8 max-w-5xl">
               <OverviewSection tender={tender} />
               <RequirementsSection tender={tender} />
               <ReviewCriteriaSection tender={tender} />
