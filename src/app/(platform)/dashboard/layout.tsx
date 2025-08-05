@@ -7,7 +7,7 @@ import {
 } from "$/components/ui/sidebar";
 import { Input } from "$/components/ui/input";
 import { Search, User } from "lucide-react";
-import { LocaleSwitcher } from "lingo.dev/react-client";
+import { LocaleSwitcher } from "$/features/i18n/components/LocaleSwitcher";
 import { DashboardSidebar } from "$/features/navigation/components";
 import { DashboardCommand } from "$/features/navigation/components/dashboard-command";
 import UserName from "$/features/auth/components/user-name";

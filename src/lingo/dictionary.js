@@ -7305,6 +7305,31 @@ export default {
         },
       },
     },
+    "features/i18n/components/LocaleSwitcher.tsx": {
+      entries: {
+        "7/0/init/expression/0/value": {
+          content: {
+            en: "Polish",
+            pl: "Polski",
+          },
+          hash: "899b2c2dffd931727410867326c5f722",
+        },
+        "7/0/init/expression/1/value": {
+          content: {
+            en: "English",
+            pl: "Angielski",
+          },
+          hash: "e1eeeb379f86a015d6e581fcbc4af7f3",
+        },
+        "8/declaration/body/4/argument-aria-label": {
+          content: {
+            en: "Select language",
+            pl: "Wybierz język",
+          },
+          hash: "7fa8806eeb911aa9ba9f013b274a2e47",
+        },
+      },
+    },
     "features/inbox/components/additional-info-section.tsx": {
       entries: {
         "3/declaration/body/0/argument/1": {

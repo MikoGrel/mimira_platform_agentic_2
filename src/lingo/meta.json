@@ -8236,6 +8236,34 @@
         }
       }
     },
+    "features/i18n/components/LocaleSwitcher.tsx": {
+      "scopes": {
+        "7/0/init/expression/0/value": {
+          "type": "element",
+          "hash": "899b2c2dffd931727410867326c5f722",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Polish"
+        },
+        "7/0/init/expression/1/value": {
+          "type": "element",
+          "hash": "e1eeeb379f86a015d6e581fcbc4af7f3",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "English"
+        },
+        "8/declaration/body/4/argument-aria-label": {
+          "type": "attribute",
+          "hash": "7fa8806eeb911aa9ba9f013b274a2e47",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Select language"
+        }
+      }
+    },
     "features/inbox/components/additional-info-section.tsx": {
       "scopes": {
         "3/declaration/body/0/argument/1": {

@@ -6,6 +6,8 @@ import QueryProvider from "$/providers/QueryProvider";
 import { LingoProvider, loadDictionary } from "lingo.dev/react/rsc";
 import { NuqsAdapter } from "nuqs/adapters/next/app";
 import { Toaster } from "sonner";
+import { cookies } from "next/headers";
+import { LocaleProvider } from "$/features/i18n/components/LocaleProvider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -26,14 +28,17 @@ export const metadata: Metadata = {
   title: "Mimira Agentic Platform",
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const cookieStore = await cookies();
+  const locale = (cookieStore.get("lingo-locale")?.value as "pl" | "en") || "en";
+
   return (
     <LingoProvider loadDictionary={(locale) => loadDictionary(locale)}>
-      <html lang="pl">
+      <html lang={locale}>
         <head>
           <link rel="icon" href="/symbol-white.svg" id="light-scheme-icon" />
           <link rel="icon" href="/symbol-dark.svg" id="dark-scheme-icon" />
@@ -41,12 +46,14 @@ export default function RootLayout({
         <body
           className={`${geistSans.variable} ${geistMono.variable} ${spaceGrotesk.variable} antialiased light font-body bg-background text-font-base`}
         >
-          <QueryProvider>
-            <ThemeProvider>
-              <NuqsAdapter>{children}</NuqsAdapter>
-            </ThemeProvider>
-          </QueryProvider>
-          <Toaster />
+          <LocaleProvider locale={locale}>
+            <QueryProvider>
+              <ThemeProvider>
+                <NuqsAdapter>{children}</NuqsAdapter>
+              </ThemeProvider>
+            </QueryProvider>
+            <Toaster />
+          </LocaleProvider>
         </body>
       </html>
     </LingoProvider>

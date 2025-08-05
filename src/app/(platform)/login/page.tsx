@@ -12,7 +12,7 @@ import {
 import useQueryToast from "$/hooks/use-query-toast";
 import Partners from "$/features/branding/components/Partners";
 import { GateIllustration } from "$/features/branding/components/gate";
-import { LocaleSwitcher } from "lingo.dev/react-client";
+import { LocaleSwitcher } from "$/features/i18n/components/LocaleSwitcher";
 
 type AuthStep = "login" | "forgot-password" | "email-sent";
 const authSteps: AuthStep[] = ["login", "forgot-password", "email-sent"];
