@@ -49,4 +49,4 @@ export default function useCurrentUser() {
   }, [data]);
 
   return { user: data, ...rest };
-}
+} 

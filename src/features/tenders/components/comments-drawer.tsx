@@ -1,8 +1,8 @@
 "use client";
 
 import { Tables } from "$/types/supabase";
-import useCurrentUser from "$/features/auth/hooks/use-current-user";
-import useTenderComments from "../hooks/use-tender-comments";
+import { useCurrentUser } from "$/features/auth/api";
+import { useTenderComments } from "../api";
 import {
   Drawer,
   DrawerBody,

@@ -2,7 +2,7 @@
 
 import { pl } from "date-fns/locale";
 import { enUS } from "date-fns/locale";
-import { formatRelative } from "date-fns";
+import { format, formatRelative } from "date-fns";
 
 import useCurrentLocale from "./use-current-locale";
 
@@ -23,7 +23,11 @@ export function useDateFormat() {
   const relativeToNow = (d: Date) =>
     formatRelative(d, new Date(), { locale: getDateFnsLocale(locale) });
 
+  const readableMonth = (d: Date) =>
+    format(d, "MMMM", { locale: getDateFnsLocale(locale) });
+
   return {
     relativeToNow,
+    readableMonth,
   };
 }

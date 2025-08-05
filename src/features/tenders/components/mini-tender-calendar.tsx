@@ -12,10 +12,14 @@ type ExpiringTender = {
 
 interface MiniTenderCalendarProps {
   expiringTenders?: ExpiringTender[];
+  month?: Date;
+  onMonthChange?: (date: Date) => void;
 }
 
 export default function MiniTenderCalendar({
   expiringTenders = [],
+  month,
+  onMonthChange,
 }: MiniTenderCalendarProps) {
   const [selectedDate, setSelectedDate] = useState<Date | undefined>();
 
@@ -52,6 +56,9 @@ export default function MiniTenderCalendar({
   return (
     <div className="grid grid-cols-[1fr_1fr] grid-rows-1 gap-4">
       <Calendar
+        defaultMonth={new Date()}
+        month={month}
+        onMonthChange={onMonthChange}
         mode="single"
         selected={selectedDate}
         onSelect={handleDateSelect}

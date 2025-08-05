@@ -1,15 +1,17 @@
+"use client";
+
 import {
   useInfiniteQuery,
   useQueryClient,
   InfiniteData,
 } from "@tanstack/react-query";
 import { createClient } from "$/lib/supabase/client";
-import useCurrentUser from "$/features/auth/hooks/use-current-user";
+import useCurrentUser from "$/features/auth/api/use-current-user";
 import { CalendarDate } from "@heroui/react";
 import { getLocalTimeZone } from "@internationalized/date";
 import { format } from "date-fns";
 import { Voivodeship } from "$/features/i18n/config/poland-config";
-import { SortDirection } from "./use-filter-form";
+import { SortDirection } from "../hooks/use-filter-form";
 import { Tables } from "$/types/supabase";
 
 interface UseTenderInboxQueryParams {
@@ -145,4 +147,4 @@ export default function useTenderInboxQuery({
     isFetchingNextPage,
     updateSeenAt,
   };
-}
+} 

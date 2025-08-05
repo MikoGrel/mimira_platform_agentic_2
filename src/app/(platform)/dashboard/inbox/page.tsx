@@ -20,14 +20,13 @@ import {
   FilterChips,
   TenderPreview,
   useFilterForm,
-  useTenderInboxQuery,
-  useIndividualTender,
 } from "$/features/inbox";
+import { useTenderInboxQuery, useMarkAsSeen } from "$/features/inbox/api";
 import { useInfiniteList } from "$/hooks/use-infinite-list";
 import { AnimatePresence, motion } from "motion/react";
 import { truncate } from "lodash";
-import { useMarkAsSeen } from "$/features/inbox/hooks/use-mark-as-seen";
 import { cn } from "$/lib/utils";
+import { useIndividualTender } from "$/features/tenders/api";
 
 const PAGE_SIZE = 10;
 
@@ -55,7 +54,6 @@ export default function InboxPage() {
     [tenders, selectedId]
   );
 
-  // Fallback query for when tender is not in current results
   const { data: individualTender, isLoading: isLoadingIndividual } =
     useIndividualTender({
       tenderId: selectedId,

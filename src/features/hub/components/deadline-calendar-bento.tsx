@@ -2,7 +2,12 @@
 
 import { BentoCard } from "$/components/ui/bento-card";
 import MiniTenderCalendar from "$/features/tenders/components/mini-tender-calendar";
-import { useTenderInboxQuery } from "$/features/inbox";
+import { useState } from "react";
+import { useExpiringTenders } from "../api";
+import { addMonths, endOfMonth, startOfMonth, subMonths } from "date-fns";
+import { Button, ButtonGroup } from "@heroui/react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
+import { useDateFormat } from "$/features/i18n/hooks/use-date-format";
 
 interface DeadlineCalendarBentoProps {
   className?: string;
@@ -11,16 +16,53 @@ interface DeadlineCalendarBentoProps {
 export function DeadlineCalendarBento({
   className,
 }: DeadlineCalendarBentoProps) {
-  const { tenders, loading } = useTenderInboxQuery({ pageSize: 3 });
+  const [month, setMonth] = useState<Date>(new Date());
+  const { readableMonth } = useDateFormat();
+
+  const { data: tenders, isLoading } = useExpiringTenders({
+    from: startOfMonth(month),
+    to: endOfMonth(month),
+  });
+
+  function handleNextMonth() {
+    setMonth(addMonths(month, 1));
+  }
+
+  function handlePreviousMonth() {
+    setMonth(subMonths(month, 1));
+  }
 
   return (
     <BentoCard
-      loading={loading}
-      title={<span>Deadline calendar</span>}
+      loading={isLoading}
+      title={<span>Deadline calendar {readableMonth(month)}</span>}
+      titleExtra={
+        <ButtonGroup size="sm" className="rounded-md p-1 bg-muted">
+          <Button
+            isIconOnly
+            onPress={handlePreviousMonth}
+            variant="shadow"
+            className="bg-white border border-r-0 px-2"
+            fullWidth
+          >
+            <ChevronLeft />
+          </Button>
+          <Button
+            isIconOnly
+            onPress={handleNextMonth}
+            variant="shadow"
+            className="bg-white border px-2"
+          >
+            <ChevronRight />
+          </Button>
+        </ButtonGroup>
+      }
       className={className}
       bodyClassName="lg:p-0 lg:pr-3"
     >
       <MiniTenderCalendar
+        month={month}
+        onMonthChange={setMonth}
         expiringTenders={tenders?.map((tender) => ({
           id: tender.id,
           expiresAt: new Date(tender.submittingoffersdate!),

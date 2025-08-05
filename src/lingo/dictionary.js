@@ -6726,6 +6726,13 @@ export default {
           },
           hash: "d9b0fe0a007e54d41375447cdf3c5267",
         },
+        "7/body/1/argument": {
+          content: {
+            en: "Log in",
+            pl: "Zaloguj się",
+          },
+          hash: "f902082746b643593b910bcd7d1ebcf9",
+        },
         "7/declaration/body/0/argument/1/1": {
           content: {
             en: "Log in",
@@ -6859,6 +6866,48 @@ export default {
           },
           hash: "d9b0fe0a007e54d41375447cdf3c5267",
         },
+        "8/declaration/body/0/argument/1/1": {
+          content: {
+            en: "Log in",
+            pl: "Zaloguj się",
+          },
+          hash: "9fb886eff8d1d67d8bb79f5c3f78edde",
+        },
+        "8/declaration/body/0/argument/1/3": {
+          content: {
+            en: "Enter your email address and password to enter your dashboard",
+            pl: "Wprowadź swój adres e-mail i hasło, aby uzyskać dostęp do swojego panelu",
+          },
+          hash: "78c8c873e0f2083d7ed85523a68a72e7",
+        },
+        "8/declaration/body/0/argument/3/3-label": {
+          content: {
+            en: "Email",
+            pl: "E-mail",
+          },
+          hash: "e7f34943a0c2fb849db1839ff6ef5cb5",
+        },
+        "8/declaration/body/0/argument/3/5-label": {
+          content: {
+            en: "Password",
+            pl: "Hasło",
+          },
+          hash: "223a61cf906ab9c40d22612c588dff48",
+        },
+        "8/declaration/body/0/argument/3/7/1": {
+          content: {
+            en: "Remember me",
+            pl: "Zapamiętaj mnie",
+          },
+          hash: "afc02ff1df56ecf8493e9e201592d764",
+        },
+        "8/declaration/body/0/argument/3/7/3": {
+          content: {
+            en: "Forgot password?",
+            pl: "Zapomniałeś hasła?",
+          },
+          hash: "4a0a69c05d0946a79ac6cc32bbb3c615",
+        },
       },
     },
     "features/auth/components/update-password-form.tsx": {
@@ -6982,6 +7031,34 @@ export default {
             pl: "Kalendarz terminów",
           },
           hash: "a943e8c4f3795b51abf0f1b7c9171701",
+        },
+        "6/declaration/body/2/argument/openingElement/1/value/expression": {
+          content: {
+            en: "Deadline calendar",
+            pl: "Kalendarz terminów",
+          },
+          hash: "a943e8c4f3795b51abf0f1b7c9171701",
+        },
+        "8/declaration/body/2/argument/openingElement/1/value/expression": {
+          content: {
+            en: "Deadline calendar",
+            pl: "Kalendarz terminów",
+          },
+          hash: "a943e8c4f3795b51abf0f1b7c9171701",
+        },
+        "8/declaration/body/4/argument/openingElement/1/value/expression": {
+          content: {
+            en: "Deadline calendar",
+            pl: "Kalendarz terminów",
+          },
+          hash: "a943e8c4f3795b51abf0f1b7c9171701",
+        },
+        "9/declaration/body/5/argument/openingElement/1/value/expression": {
+          content: {
+            en: "Deadline calendar <function:readableMonth/>",
+            pl: "Kalendarz terminów <function:readableMonth/>",
+          },
+          hash: "160bdfdc4ea36f7a424efe43d2ecf656",
         },
       },
     },
@@ -15353,6 +15430,74 @@ export default {
     },
     "features/tenders/components/comments-drawer.tsx": {
       entries: {
+        "7/declaration/body/4/argument/1/1/expression/body/1/1/1": {
+          content: {
+            en: "Comments",
+            pl: "Komentarze",
+          },
+          hash: "502237cd1044491c48494aa60967a985",
+        },
+        "7/declaration/body/4/argument/1/1/expression/body/1/1/3": {
+          content: {
+            en: "({comments.length})",
+            pl: "({comments.length})",
+          },
+          hash: "895b88c60569a51652e866f90ef0ca1e",
+        },
+        "7/declaration/body/4/argument/1/1/expression/body/3/1/1/expression/right/1":
+          {
+            content: {
+              en: "Loading comments ...",
+              pl: "Ładowanie komentarzy ...",
+            },
+            hash: "07fd5bc8da48fc1808b846440596014d",
+          },
+        "7/declaration/body/4/argument/1/1/expression/body/3/1/3/expression/right/3":
+          {
+            content: {
+              en: "No comments yet",
+              pl: "Brak komentarzy",
+            },
+            hash: "9679834e9f203646c5350bdc6e457e2e",
+          },
+        "7/declaration/body/4/argument/1/1/expression/body/3/1/3/expression/right/5":
+          {
+            content: {
+              en: "Be the first to add a comment",
+              pl: "Bądź pierwszą osobą, która doda komentarz",
+            },
+            hash: "cad1ca8d20a0a04c1b0eb61611810164",
+          },
+        "7/declaration/body/4/argument/1/1/expression/body/5/1/1/3/3-placeholder":
+          {
+            content: {
+              en: "Write your comment...",
+              pl: "Napisz swój komentarz...",
+            },
+            hash: "29ec89da19361daeeab43d9310211237",
+          },
+        "7/declaration/body/4/argument/1/1/expression/body/5/1/3/expression/right":
+          {
+            content: {
+              en: "Failed to add comment. Please try again.",
+              pl: "Nie udało się dodać komentarza. Spróbuj ponownie.",
+            },
+            hash: "fae6b9787fce079bf47989b0a3dca61a",
+          },
+        "7/declaration/body/4/argument/1/1/expression/body/5/1/5/1": {
+          content: {
+            en: "Clear",
+            pl: "Wyczyść",
+          },
+          hash: "5569d2faf44191c9efb051e8c7d0e856",
+        },
+        "7/declaration/body/4/argument/1/1/expression/body/5/1/5/3": {
+          content: {
+            en: "Add Comment",
+            pl: "Dodaj komentarz",
+          },
+          hash: "eea09569b8b3c2a6ae9a11ee472f4c49",
+        },
         "7/declaration/body/5/argument/1/1/expression/body/1/1/1": {
           content: {
             en: "Comments",

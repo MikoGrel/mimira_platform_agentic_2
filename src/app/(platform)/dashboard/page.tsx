@@ -1,6 +1,6 @@
 "use client";
 
-import useCurrentUser from "$/features/auth/hooks/use-current-user";
+import { useCurrentUser } from "$/features/auth/api";
 import Symbol from "$/features/branding/components/Symbol";
 import {
   NewTendersBento,

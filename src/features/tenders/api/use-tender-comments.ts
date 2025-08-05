@@ -102,4 +102,4 @@ export default function useTenderComments(tenderId: string | null) {
     deleteComment: deleteCommentMutation.mutate,
     isDeletingComment: deleteCommentMutation.isPending,
   };
-}
+} 

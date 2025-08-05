@@ -2,7 +2,7 @@
 
 import { useQuery } from "@tanstack/react-query";
 import { createClient } from "$/lib/supabase/client";
-import useCurrentUser from "$/features/auth/hooks/use-current-user";
+import useCurrentUser from "$/features/auth/api/use-current-user";
 
 interface UseIndividualTenderParams {
   tenderId: string | null;
