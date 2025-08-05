@@ -8,6 +8,7 @@ import {
   LastTenderBento,
   DeadlineCalendarBento,
 } from "$/features/hub";
+import { AnimatePresence, motion } from "motion/react";
 
 export default function DashboardPage() {
   const { user } = useCurrentUser();
@@ -16,9 +17,22 @@ export default function DashboardPage() {
     <main className="max-w-5xl mx-auto flex flex-col gap-6 p-4 lg:pt-12">
       <header className="flex flex-col gap-4">
         <div className="flex flex-col-reverse lg:flex-row lg:items-center justify-between gap-4">
-          <h1 className="text-3xl font-semibold font-heading flex items-center gap-2">
+          <h1 className="text-3xl font-semibold font-heading flex items-center gap-2 overflow-hidden">
             <Symbol className="w-8 h-8 text-primary" /> Hello,{" "}
-            {user?.profile?.first_name || "there"}!
+            <AnimatePresence>
+              {user?.profile?.first_name && (
+                <motion.span
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{
+                    ease: "easeInOut",
+                    duration: 0.2,
+                  }}
+                >
+                  {user.profile.first_name}
+                </motion.span>
+              )}
+            </AnimatePresence>
           </h1>
         </div>
         <p className="max-w-[75%] text-muted-foreground">

@@ -57,7 +57,7 @@ export default function DashboardLayout({
             </div>
           </div>
         </header>
-        <div className="flex-1 rounded-tl-2xl border-l border-t border-sidebar-border overflow-y-auto">
+        <div className="flex-1 rounded-tl-2xl border-l border-t border-sidebar-border overflow-y-auto overflow-x-hidden">
           {children}
         </div>
       </SidebarInset>

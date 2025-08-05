@@ -3,7 +3,9 @@
 import { Button } from "@heroui/react";
 import { Calendar, House, MessageSquareText } from "lucide-react";
 import { motion, AnimatePresence } from "motion/react";
+import { useEffect, useState } from "react";
 import { Tables } from "$/types/supabase";
+import { useCommentsCount } from "$/features/tenders/api/use-comments-count";
 
 interface TenderHeaderProps {
   tender: Tables<"tenders">;
@@ -16,6 +18,15 @@ export function TenderHeader({
   isHeaderCollapsed,
   setCommentsOpened,
 }: TenderHeaderProps) {
+  const [hasRendered, setHasRendered] = useState(false);
+  const { count } = useCommentsCount({
+    tenderId: tender.id,
+  });
+
+  useEffect(() => {
+    setHasRendered(true);
+  }, []);
+
   return (
     <div className="border-b border-gray-200 bg-white overflow-hidden px-6 py-4">
       <motion.h1
@@ -39,7 +50,11 @@ export function TenderHeader({
         {!isHeaderCollapsed && (
           <motion.div
             className="space-y-4"
-            initial={{ opacity: 0, height: 0 }}
+            initial={
+              hasRendered
+                ? { opacity: 0, height: 0 }
+                : { opacity: 1, height: "auto" }
+            }
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.25, ease: [0.4, 0.0, 0.2, 1] }}
@@ -55,16 +70,17 @@ export function TenderHeader({
               </span>
             </div>
             <div className="flex gap-2">
-              <Button color="primary" data-lingo-override-pl="Aplikuj">
-                Apply
-              </Button>
+              <Button color="primary">Save</Button>
               <Button variant="flat">Reject</Button>
               <Button
                 variant="ghost"
-                startContent={<MessageSquareText className="w-5 h-5" />}
-                isIconOnly
                 onPress={() => setCommentsOpened(true)}
-              />
+                className="!min-w-10"
+                isIconOnly={!count}
+              >
+                <MessageSquareText className="w-5 h-5" />
+                {!!count && count}
+              </Button>
             </div>
           </motion.div>
         )}
@@ -88,8 +104,8 @@ export function TenderHeader({
             </span>
           </div>
           <div className="flex gap-2">
-            <Button size="sm" color="primary" data-lingo-override-pl="Aplikuj">
-              Apply
+            <Button size="sm" color="primary">
+              Save
             </Button>
             <Button size="sm" variant="flat">
               Reject
@@ -97,9 +113,13 @@ export function TenderHeader({
             <Button
               size="sm"
               variant="ghost"
-              startContent={<MessageSquareText className="w-4 h-4" />}
-              isIconOnly
-            />
+              onPress={() => setCommentsOpened(true)}
+              className="!min-w-10"
+              isIconOnly={!count}
+            >
+              <MessageSquareText className="w-5 h-5" />
+              {!!count && count}
+            </Button>
           </div>
         </motion.div>
       )}

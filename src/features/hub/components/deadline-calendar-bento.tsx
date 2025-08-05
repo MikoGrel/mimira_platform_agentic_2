@@ -8,6 +8,7 @@ import { addMonths, endOfMonth, startOfMonth, subMonths } from "date-fns";
 import { Button, ButtonGroup } from "@heroui/react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { useDateFormat } from "$/features/i18n/hooks/use-date-format";
+import { truncate } from "lodash";
 
 interface DeadlineCalendarBentoProps {
   className?: string;
@@ -66,7 +67,7 @@ export function DeadlineCalendarBento({
         expiringTenders={tenders?.map((tender) => ({
           id: tender.id,
           expiresAt: new Date(tender.submittingoffersdate!),
-          title: tender.orderobject!,
+          title: truncate(tender.orderobject!, { length: 40 }),
         }))}
       />
     </BentoCard>

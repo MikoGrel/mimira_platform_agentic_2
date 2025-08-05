@@ -3835,6 +3835,20 @@ export default {
           },
           hash: "bb23bee9cbd51ec0a4c3678877f28602",
         },
+        "4/declaration/body/1/argument/1/1/1": {
+          content: {
+            en: "<element:Symbol></element:Symbol> Hello, <element:AnimatePresence><expression/></element:AnimatePresence>",
+            pl: "<element:Symbol></element:Symbol> Cześć, <element:AnimatePresence><expression/></element:AnimatePresence>",
+          },
+          hash: "6e2b8f592ac6d73d1a78d11becbf2798",
+        },
+        "4/declaration/body/1/argument/1/3": {
+          content: {
+            en: "Today's briefing: Since yesterday we've managed to find you 5 new tenders, 3 require your attention.",
+            pl: "Dzisiejszy briefing: Od wczoraj udało nam się znaleźć dla Ciebie 5 nowych przetargów, 3 z nich wymagają Twojej uwagi.",
+          },
+          hash: "bb23bee9cbd51ec0a4c3678877f28602",
+        },
         "4/declaration/body/3/argument/1/1/1": {
           content: {
             en: "Welcome back",
@@ -7025,6 +7039,13 @@ export default {
     },
     "features/hub/components/deadline-calendar-bento.tsx": {
       entries: {
+        "10/declaration/body/5/argument/openingElement/1/value/expression": {
+          content: {
+            en: "Deadline calendar <function:readableMonth/>",
+            pl: "Kalendarz terminów <function:readableMonth/>",
+          },
+          hash: "160bdfdc4ea36f7a424efe43d2ecf656",
+        },
         "4/declaration/body/1/argument/openingElement/1/value/expression": {
           content: {
             en: "Deadline calendar",
@@ -7297,6 +7318,34 @@ export default {
             hash: "25491fd112b3c9ff895c179abf45c4b0",
           },
         "8/declaration/body/1/argument/openingElement/1/value/expression": {
+          content: {
+            en: "Stats",
+            pl: "Statystyki",
+          },
+          hash: "5cf8b052c89fa1b05397a956ebec69b2",
+        },
+        "9/declaration/body/1/argument/openingElement/1/value/expression": {
+          content: {
+            en: "Stats",
+            pl: "Statystyki",
+          },
+          hash: "5cf8b052c89fa1b05397a956ebec69b2",
+        },
+        "9/declaration/body/4/argument/openingElement/1/value/expression": {
+          content: {
+            en: "Stats",
+            pl: "Statystyki",
+          },
+          hash: "5cf8b052c89fa1b05397a956ebec69b2",
+        },
+        "9/declaration/body/5/argument/openingElement/1/value/expression": {
+          content: {
+            en: "Stats",
+            pl: "Statystyki",
+          },
+          hash: "5cf8b052c89fa1b05397a956ebec69b2",
+        },
+        "9/declaration/body/6/argument/openingElement/1/value/expression": {
           content: {
             en: "Stats",
             pl: "Statystyki",
@@ -8034,6 +8083,17 @@ export default {
         },
       },
     },
+    "features/inbox/components/requirements-list.tsx": {
+      entries: {
+        "3/declaration/body/3/argument/1/5": {
+          content: {
+            en: "({items.length})",
+            pl: "({items.length})",
+          },
+          hash: "1409f9e98be0e57da01149ada6e30953",
+        },
+      },
+    },
     "features/inbox/components/requirements-section.tsx": {
       entries: {
         "4/declaration/body/0/argument/1": {
@@ -8118,6 +8178,140 @@ export default {
           hash: "a91df23e32b5d1457b62f98e6d90c2c0",
         },
         "5/declaration/body/0/argument/5/expression/right/3/3": {
+          content: {
+            en: "Reject",
+            pl: "Odrzuć",
+          },
+          hash: "21c303829516a636a6c306dcd68a64ec",
+        },
+        "5/declaration/body/1/argument/3/1/expression/right/3/1": {
+          content: {
+            en: "Apply",
+          },
+          hash: "77fc03abc14d71c8c36f000fb65f93f8",
+        },
+        "5/declaration/body/1/argument/3/1/expression/right/3/3": {
+          content: {
+            en: "Reject",
+            pl: "Odrzuć",
+          },
+          hash: "417c19f66db70a0548bdeb398cdc46e0",
+        },
+        "5/declaration/body/1/argument/5/expression/right/3/1": {
+          content: {
+            en: "Apply",
+          },
+          hash: "a91df23e32b5d1457b62f98e6d90c2c0",
+        },
+        "5/declaration/body/1/argument/5/expression/right/3/3": {
+          content: {
+            en: "Reject",
+            pl: "Odrzuć",
+          },
+          hash: "21c303829516a636a6c306dcd68a64ec",
+        },
+        "5/declaration/body/2/argument/3/1/expression/right/3/1": {
+          content: {
+            en: "Apply",
+          },
+          hash: "77fc03abc14d71c8c36f000fb65f93f8",
+        },
+        "5/declaration/body/2/argument/3/1/expression/right/3/3": {
+          content: {
+            en: "Reject",
+            pl: "Odrzuć",
+          },
+          hash: "417c19f66db70a0548bdeb398cdc46e0",
+        },
+        "5/declaration/body/2/argument/5/expression/right/3/1": {
+          content: {
+            en: "Apply",
+          },
+          hash: "a91df23e32b5d1457b62f98e6d90c2c0",
+        },
+        "5/declaration/body/2/argument/5/expression/right/3/3": {
+          content: {
+            en: "Reject",
+            pl: "Odrzuć",
+          },
+          hash: "21c303829516a636a6c306dcd68a64ec",
+        },
+        "6/declaration/body/0/argument/3/1/expression/right/3/1": {
+          content: {
+            en: "Apply",
+          },
+          hash: "77fc03abc14d71c8c36f000fb65f93f8",
+        },
+        "6/declaration/body/0/argument/3/1/expression/right/3/3": {
+          content: {
+            en: "Reject",
+            pl: "Odrzuć",
+          },
+          hash: "417c19f66db70a0548bdeb398cdc46e0",
+        },
+        "6/declaration/body/0/argument/5/expression/right/3/1": {
+          content: {
+            en: "Apply",
+          },
+          hash: "a91df23e32b5d1457b62f98e6d90c2c0",
+        },
+        "6/declaration/body/0/argument/5/expression/right/3/3": {
+          content: {
+            en: "Reject",
+            pl: "Odrzuć",
+          },
+          hash: "21c303829516a636a6c306dcd68a64ec",
+        },
+        "6/declaration/body/2/argument/3/1/expression/right/3/1": {
+          content: {
+            en: "Save",
+            pl: "Zapisz",
+          },
+          hash: "f7a2929f33bc420195e59ac5a8bcd454",
+        },
+        "6/declaration/body/2/argument/3/1/expression/right/3/3": {
+          content: {
+            en: "Reject",
+            pl: "Odrzuć",
+          },
+          hash: "417c19f66db70a0548bdeb398cdc46e0",
+        },
+        "6/declaration/body/2/argument/5/expression/right/3/1": {
+          content: {
+            en: "Save",
+            pl: "Zapisz",
+          },
+          hash: "727d97b690659a69248738bdd46e8806",
+        },
+        "6/declaration/body/2/argument/5/expression/right/3/3": {
+          content: {
+            en: "Reject",
+            pl: "Odrzuć",
+          },
+          hash: "21c303829516a636a6c306dcd68a64ec",
+        },
+        "7/declaration/body/3/argument/3/1/expression/right/3/1": {
+          content: {
+            en: "Save",
+            pl: "Zapisz",
+          },
+          hash: "f7a2929f33bc420195e59ac5a8bcd454",
+        },
+        "7/declaration/body/3/argument/3/1/expression/right/3/3": {
+          content: {
+            en: "Reject",
+            pl: "Odrzuć",
+          },
+          hash: "417c19f66db70a0548bdeb398cdc46e0",
+        },
+        "7/declaration/body/3/argument/5/expression/right/3/1": {
+          content: {
+            en: "Save",
+            pl: "Zapisz",
+          },
+          hash: "727d97b690659a69248738bdd46e8806",
+        },
+        "7/declaration/body/3/argument/5/expression/right/3/3": {
           content: {
             en: "Reject",
             pl: "Odrzuć",
@@ -10073,6 +10267,13 @@ export default {
           hash: "067789b01a081458db2f872f10a37c3f",
         },
         "12/declaration/body/4/consequent/0/argument/1/1": {
+          content: {
+            en: "Select a tender to view details",
+            pl: "Wybierz ofertę, aby zobaczyć szczegóły",
+          },
+          hash: "067789b01a081458db2f872f10a37c3f",
+        },
+        "13/declaration/body/3/consequent/0/argument/1/1": {
           content: {
             en: "Select a tender to view details",
             pl: "Wybierz ofertę, aby zobaczyć szczegóły",
@@ -15356,7 +15557,91 @@ export default {
           },
           hash: "52ca04dc5bfb7642586e67a469aa3e24",
         },
+        "2/declaration/body/0/argument/1/1/openingElement/0/value/expression": {
+          content: {
+            en: "Found",
+            pl: "Znaleziono",
+          },
+          hash: "8cb2dd2518b1621873b4488e3da83d50",
+        },
+        "2/declaration/body/0/argument/1/3/openingElement/0/value/expression": {
+          content: {
+            en: "Qualified for",
+            pl: "Zakwalifikowano do",
+          },
+          hash: "ce906e32ff6e1d1daaa35befc4deb874",
+        },
+        "2/declaration/body/0/argument/1/3/openingElement/1/value/expression": {
+          content: {
+            en: "Qualified for",
+            pl: "Zakwalifikowano do",
+          },
+          hash: "ce906e32ff6e1d1daaa35befc4deb874",
+        },
+        "2/declaration/body/0/argument/1/5/openingElement/0/value/expression": {
+          content: {
+            en: "Applied to",
+            pl: "Złożono wniosek do",
+          },
+          hash: "741779e7f6068e1f9ba958bc614f60e8",
+        },
+        "2/declaration/body/0/argument/1/5/openingElement/1/value/expression": {
+          content: {
+            en: "Applied to",
+            pl: "Złożono wniosek do",
+          },
+          hash: "741779e7f6068e1f9ba958bc614f60e8",
+        },
+        "2/declaration/body/0/argument/1/7/openingElement/0/value/expression": {
+          content: {
+            en: "Won",
+            pl: "Wygrano",
+          },
+          hash: "61dcd4c53a7b9b4b86c20ebe571f111f",
+        },
+        "2/declaration/body/0/argument/1/7/openingElement/1/value/expression": {
+          content: {
+            en: "Won",
+            pl: "Wygrano",
+          },
+          hash: "61dcd4c53a7b9b4b86c20ebe571f111f",
+        },
+        "2/declaration/body/0/argument/1/9/openingElement/0/value/expression": {
+          content: {
+            en: "Lost",
+            pl: "Przegrano",
+          },
+          hash: "52ca04dc5bfb7642586e67a469aa3e24",
+        },
+        "2/declaration/body/0/argument/1/9/openingElement/1/value/expression": {
+          content: {
+            en: "Lost",
+            pl: "Przegrano",
+          },
+          hash: "52ca04dc5bfb7642586e67a469aa3e24",
+        },
+        "2/declaration/body/0/argument/3/1": {
+          content: {
+            en: "<element:span>Total deals:</element:span> 50",
+            pl: "<element:span>Łączna liczba ofert:</element:span> 50",
+          },
+          hash: "dae0998c98a09d510391cd2a33d9a8b6",
+        },
+        "2/declaration/body/0/argument/3/3": {
+          content: {
+            en: "<element:span>Conversion rate:</element:span> 10%",
+            pl: "<element:span>Wskaźnik konwersji:</element:span> 10%",
+          },
+          hash: "6dd57ee0d55bba3637ed03cf8de47bb3",
+        },
         "3/declaration/body/1/argument/3/3": {
+          content: {
+            en: "({percentage}%)",
+            pl: "({percentage}%)",
+          },
+          hash: "941a386f0a1da9f7ea122244021229ea",
+        },
+        "4/declaration/body/1/argument/3/3": {
           content: {
             en: "({percentage}%)",
             pl: "({percentage}%)",

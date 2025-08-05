@@ -18,13 +18,12 @@ export function RequirementsSection({ tender }: RequirementsSectionProps) {
             title="Met Requirements"
             items={(tender.met_requirements as string[]) || []}
             type="success"
+            collapsed
           />
 
           <RequirementsList
             title="Needs Confirmation"
-            items={
-              (tender.needs_confirmation_requirements as string[]) || []
-            }
+            items={(tender.needs_confirmation_requirements as string[]) || []}
             type="warning"
           />
 
@@ -37,4 +36,4 @@ export function RequirementsSection({ tender }: RequirementsSectionProps) {
       </SectionContent>
     </Section>
   );
-} 
+}

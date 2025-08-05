@@ -3,7 +3,6 @@
 import { Tables } from "$/types/supabase";
 import { useRef, useState } from "react";
 import { useScrollTrigger } from "$/hooks/use-scroll-trigger";
-import { Skeleton } from "@heroui/react";
 import { AdditionalInfoSection } from "./additional-info-section";
 import { DescriptionSection } from "./description-section";
 import { NavigationSidebar } from "./navigation-sidebar";
@@ -15,10 +14,9 @@ import { CommentsDrawer } from "$/features/tenders/components";
 
 interface TenderPreviewProps {
   tender?: Tables<"tenders"> | null;
-  isLoading?: boolean;
 }
 
-export function TenderPreview({ tender, isLoading }: TenderPreviewProps) {
+export function TenderPreview({ tender }: TenderPreviewProps) {
   const [commentsOpened, setCommentsOpened] = useState(false);
 
   const scrollRef = useRef<HTMLDivElement>(null);
@@ -26,24 +24,6 @@ export function TenderPreview({ tender, isLoading }: TenderPreviewProps) {
     threshold: 100,
     containerRef: scrollRef,
   });
-
-  if (isLoading) {
-    return (
-      <section className="h-full w-full">
-        <div className="h-full w-full flex flex-col">
-          <div className="border-b border-sidebar-border px-6 py-4">
-            <Skeleton className="h-8 w-3/4 rounded-lg mb-2" />
-            <Skeleton className="h-4 w-1/2 rounded-lg" />
-          </div>
-          <div className="px-6 py-6 space-y-8">
-            <Skeleton className="h-32 w-full rounded-lg" />
-            <Skeleton className="h-24 w-full rounded-lg" />
-            <Skeleton className="h-20 w-full rounded-lg" />
-          </div>
-        </div>
-      </section>
-    );
-  }
 
   if (!tender) {
     return (

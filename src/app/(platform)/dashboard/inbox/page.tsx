@@ -54,11 +54,10 @@ export default function InboxPage() {
     [tenders, selectedId]
   );
 
-  const { data: individualTender, isLoading: isLoadingIndividual } =
-    useIndividualTender({
-      tenderId: selectedId,
-      enabled: selectedId !== null && !selectedTenderFromList,
-    });
+  const { data: individualTender } = useIndividualTender({
+    tenderId: selectedId,
+    enabled: selectedId !== null && !selectedTenderFromList,
+  });
 
   const selectedTender = selectedTenderFromList || individualTender;
 
@@ -137,7 +136,7 @@ export default function InboxPage() {
                     <div className="p-4 px-6 flex flex-col gap-2 hover:bg-muted">
                       <p className="font-semibold text-sm relative">
                         {truncate(t.orderobject!, {
-                          length: 120,
+                          length: 100,
                           omission: "...",
                         })}
 
@@ -170,12 +169,7 @@ export default function InboxPage() {
           </div>
         </div>
       </aside>
-      <TenderPreview
-        tender={selectedTender}
-        isLoading={
-          isLoadingIndividual && selectedId !== null && !selectedTenderFromList
-        }
-      />
+      <TenderPreview tender={selectedTender} />
     </main>
   );
 }
