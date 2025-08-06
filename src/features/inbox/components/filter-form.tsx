@@ -4,30 +4,51 @@ import { Button, DateRangePicker, Select, SelectItem } from "@heroui/react";
 import { Controller } from "react-hook-form";
 import { PolishVoivodeships } from "$/features/i18n/config/poland-config";
 import { sortingOptions, useFilterForm } from "../hooks/use-filter-form";
+import { FilterFormType } from "..";
 
-export function FilterForm() {
-  const { control, onFilter } = useFilterForm();
+interface FilterFormProps {
+  onFiltered?: (filters: FilterFormType) => void;
+}
+
+export function FilterForm({ onFiltered }: FilterFormProps) {
+  const { control, onFilter } = useFilterForm({ onFiltered });
 
   return (
     <form onSubmit={onFilter} className="flex flex-col gap-4">
       <Controller
         control={control}
-        name="dateRange"
-        render={({ field }) => (
-          <DateRangePicker {...field} label="Date Range" />
+        name="publishedAt"
+        render={({ field, fieldState }) => (
+          <DateRangePicker
+            {...field}
+            errorMessage={fieldState.error?.message}
+            label="Published At"
+          />
+        )}
+      />
+      <Controller
+        control={control}
+        name="offersDeadline"
+        render={({ field, fieldState }) => (
+          <DateRangePicker
+            {...field}
+            errorMessage={fieldState.error?.message}
+            label="Offers Deadline"
+          />
         )}
       />
       <Controller
         control={control}
         name="voivodeship"
-        render={({ field }) => (
+        render={({ field, fieldState }) => (
           <Select
             selectedKeys={field.value || undefined}
             onSelectionChange={field.onChange}
             label="Voivodeship"
             selectionMode="multiple"
+            errorMessage={fieldState.error?.message}
           >
-            {Object.values(PolishVoivodeships).map((voivodeship) => (
+            {PolishVoivodeships.map((voivodeship) => (
               <SelectItem key={voivodeship.name}>
                 {voivodeship.label}
               </SelectItem>
@@ -38,14 +59,23 @@ export function FilterForm() {
       <Controller
         control={control}
         name="sortBy"
-        render={({ field }) => (
+        render={({ field, fieldState }) => (
           <Select
             selectedKeys={field.value || undefined}
             onSelectionChange={field.onChange}
             label="Sort by offers deadline"
+            errorMessage={fieldState.error?.message}
+            renderValue={(items) => {
+              if (items.length === 0) return null;
+              const selectedKey = items[0].key;
+              const selectedOption = sortingOptions.find(
+                (option) => option.key === selectedKey
+              );
+              return selectedOption ? selectedOption.readable : null;
+            }}
           >
             {sortingOptions.map((sortBy) => (
-              <SelectItem key={sortBy.key}>{sortBy.label}</SelectItem>
+              <SelectItem key={sortBy.key} startContent={sortBy.readable} />
             ))}
           </Select>
         )}

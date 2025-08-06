@@ -18,8 +18,10 @@ interface UseTenderInboxQueryParams {
   pageSize?: number;
   search?: string;
   filterQuery?: {
-    dateFrom: CalendarDate | null;
-    dateTo: CalendarDate | null;
+    offersDeadlineFrom: CalendarDate | null;
+    offersDeadlineTo: CalendarDate | null;
+    publishedAtFrom: CalendarDate | null;
+    publishedAtTo: CalendarDate | null;
     voivodeship: Set<Voivodeship> | null;
     sortBy: Set<SortDirection> | null;
   };
@@ -33,8 +35,10 @@ export default function useTenderInboxQuery({
   const { user } = useCurrentUser();
   const queryClient = useQueryClient();
   const filters: UseTenderInboxQueryParams["filterQuery"] = filterQuery || {
-    dateFrom: null,
-    dateTo: null,
+    offersDeadlineFrom: null,
+    offersDeadlineTo: null,
+    publishedAtFrom: null,
+    publishedAtTo: null,
     voivodeship: null,
     sortBy: null,
   };
@@ -43,8 +47,10 @@ export default function useTenderInboxQuery({
     "tenders",
     search,
     [
-      filters.dateFrom?.toString(),
-      filters.dateTo?.toString,
+      filters.publishedAtFrom?.toString(),
+      filters.publishedAtTo?.toString,
+      filters.offersDeadlineFrom?.toString(),
+      filters.offersDeadlineTo?.toString(),
       JSON.stringify(Array.from(filters.sortBy || [])),
       JSON.stringify(Array.from(filters.voivodeship || [])),
     ],
@@ -72,16 +78,38 @@ export default function useTenderInboxQuery({
         query = query.textSearch("orderobject", search);
       }
 
-      if (filters.dateFrom) {
+      if (filters.publishedAtFrom) {
         query = query.gte(
-          "submittingoffersdate",
-          format(filters.dateFrom.toDate(getLocalTimeZone()), "yyyy-MM-dd")
+          "publicationdate",
+          format(
+            filters.publishedAtFrom.toDate(getLocalTimeZone()),
+            "yyyy-MM-dd"
+          )
         );
       }
-      if (filters.dateTo) {
+      if (filters.publishedAtTo) {
+        query = query.lte(
+          "publicationdate",
+          format(filters.publishedAtTo.toDate(getLocalTimeZone()), "yyyy-MM-dd")
+        );
+      }
+
+      if (filters.offersDeadlineFrom) {
+        query = query.gte(
+          "submittingoffersdate",
+          format(
+            filters.offersDeadlineFrom.toDate(getLocalTimeZone()),
+            "yyyy-MM-dd"
+          )
+        );
+      }
+      if (filters.offersDeadlineTo) {
         query = query.lte(
           "submittingoffersdate",
-          format(filters.dateTo.toDate(getLocalTimeZone()), "yyyy-MM-dd")
+          format(
+            filters.offersDeadlineTo.toDate(getLocalTimeZone()),
+            "yyyy-MM-dd"
+          )
         );
       }
 

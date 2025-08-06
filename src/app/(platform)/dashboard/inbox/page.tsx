@@ -1,19 +1,10 @@
 "use client";
 
 import { Tables } from "$/types/supabase";
-import {
-  Button,
-  Card,
-  Chip,
-  Input,
-  Popover,
-  PopoverContent,
-  PopoverTrigger,
-  Skeleton,
-} from "@heroui/react";
+import { Button, Card, Chip, Input, Skeleton } from "@heroui/react";
 import { Archive, SlidersHorizontal } from "lucide-react";
 import { parseAsString, useQueryState } from "nuqs";
-import { useMemo } from "react";
+import { useMemo, useState } from "react";
 import Symbol from "$/features/branding/components/Symbol";
 import {
   FilterForm,
@@ -32,6 +23,7 @@ const PAGE_SIZE = 10;
 
 export default function InboxPage() {
   const { filterQuery } = useFilterForm();
+  const [showFilterForm, setShowFilterForm] = useState(false);
 
   const [search, setSearch] = useQueryState(
     "search",
@@ -80,7 +72,7 @@ export default function InboxPage() {
     <main className="grid grid-cols-[450px_1fr] h-full">
       <aside className="border-r border-sidebar-border flex flex-col h-full relative">
         <div className="py-4 border-b border-sidebar-border flex-shrink-0">
-          <div className="flex items-center justify-between gap-2 px-2">
+          <div className="flex items-center justify-between gap-2 px-2 overflow-y-hidden">
             <Button variant="light" isIconOnly>
               <Archive className="w-5 h-5" />
             </Button>
@@ -89,18 +81,36 @@ export default function InboxPage() {
               value={search}
               onChange={(e) => setSearch(e.target.value)}
             />
-            <Popover placement="bottom-end">
-              <PopoverTrigger>
-                <Button variant="light" isIconOnly>
-                  <SlidersHorizontal className="w-5 h-5" />
-                </Button>
-              </PopoverTrigger>
-              <PopoverContent className="p-4">
-                <FilterForm />
-              </PopoverContent>
-            </Popover>
+
+            <Button
+              variant="light"
+              isIconOnly
+              onPress={() => setShowFilterForm(!showFilterForm)}
+            >
+              <SlidersHorizontal className="w-5 h-5" />
+            </Button>
           </div>
           <FilterChips />
+          <AnimatePresence>
+            {showFilterForm && (
+              <motion.div
+                initial={{ height: 0 }}
+                animate={{
+                  height: "auto",
+                }}
+                exit={{
+                  height: 0,
+                }}
+                transition={{
+                  duration: 0.15,
+                  ease: "easeInOut",
+                }}
+                className="p-4 pb-0 overflow-hidden"
+              >
+                <FilterForm onFiltered={() => setShowFilterForm(false)} />
+              </motion.div>
+            )}
+          </AnimatePresence>
         </div>
 
         <div className="flex-[1_0_0] overflow-y-auto">

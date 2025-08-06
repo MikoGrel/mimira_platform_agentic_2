@@ -932,6 +932,30 @@
           "overrides": {},
           "content": "Coming soon"
         },
+        "14/declaration/body/11/argument/1/1/1/3-placeholder": {
+          "type": "attribute",
+          "hash": "49dd6c21604b5e8d4153ff1aff2177e1",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Search"
+        },
+        "14/declaration/body/11/argument/1/5/1/3": {
+          "type": "element",
+          "hash": "c516ed1af9463ccd6bdcb19a1f13e4ac",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Ask Mimir"
+        },
+        "14/declaration/body/11/argument/1/5/1/5": {
+          "type": "element",
+          "hash": "05a8fc9f6d826fd88a809d98684edcad",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Coming soon"
+        },
         "14/declaration/body/8/argument/1/1/1/3-placeholder": {
           "type": "attribute",
           "hash": "49dd6c21604b5e8d4153ff1aff2177e1",
@@ -8532,19 +8556,19 @@
         },
         "4/declaration/body/1/argument/1/openingElement/2/value/expression/body-label": {
           "type": "attribute",
-          "hash": "9b3aa5954144de586931f60ef9594e99",
+          "hash": "aa161424e8e866bd537580a1104661fa",
           "context": "",
           "skip": false,
           "overrides": {},
-          "content": "Date Range"
+          "content": "Published At"
         },
         "4/declaration/body/1/argument/3/openingElement/2/value/expression/body-label": {
           "type": "attribute",
-          "hash": "b29e7fb41cd951f791b73fc5fc19561c",
+          "hash": "7abc979f34c132048618c9605ef311e2",
           "context": "",
           "skip": false,
           "overrides": {},
-          "content": "Voivodeship"
+          "content": "Offers Deadline"
         },
         "4/declaration/body/1/argument/5": {
           "type": "element",
@@ -8556,11 +8580,11 @@
         },
         "4/declaration/body/1/argument/5/openingElement/2/value/expression/body-label": {
           "type": "attribute",
-          "hash": "0d941d5622d495d9136ca81491fd1699",
+          "hash": "b29e7fb41cd951f791b73fc5fc19561c",
           "context": "",
           "skip": false,
           "overrides": {},
-          "content": "Sort by offers deadline"
+          "content": "Voivodeship"
         },
         "4/declaration/body/1/argument/5/openingElement/2/value/expression/body-placeholder": {
           "type": "attribute",
@@ -8594,6 +8618,22 @@
           "overrides": {},
           "content": "Apply Filters"
         },
+        "4/declaration/body/1/argument/7/openingElement/2/value/expression/body-label": {
+          "type": "attribute",
+          "hash": "0d941d5622d495d9136ca81491fd1699",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Sort by offers deadline"
+        },
+        "4/declaration/body/1/argument/9": {
+          "type": "element",
+          "hash": "654bc45ae1a830657660662ecfe83468",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Apply Filters"
+        },
         "4/declaration/body/2/argument/1/openingElement/2/value/expression/body-label": {
           "type": "attribute",
           "hash": "9b3aa5954144de586931f60ef9594e99",
@@ -8620,19 +8660,19 @@
         },
         "5/declaration/body/1/argument/1/openingElement/2/value/expression/body-label": {
           "type": "attribute",
-          "hash": "9b3aa5954144de586931f60ef9594e99",
+          "hash": "aa161424e8e866bd537580a1104661fa",
           "context": "",
           "skip": false,
           "overrides": {},
-          "content": "Date Range"
+          "content": "Published At"
         },
         "5/declaration/body/1/argument/3/openingElement/2/value/expression/body-label": {
           "type": "attribute",
-          "hash": "b29e7fb41cd951f791b73fc5fc19561c",
+          "hash": "7abc979f34c132048618c9605ef311e2",
           "context": "",
           "skip": false,
           "overrides": {},
-          "content": "Voivodeship"
+          "content": "Offers Deadline"
         },
         "5/declaration/body/1/argument/5": {
           "type": "element",
@@ -8644,11 +8684,11 @@
         },
         "5/declaration/body/1/argument/5/openingElement/2/value/expression/body-label": {
           "type": "attribute",
-          "hash": "e0789487e9da7425c6ac6f0fedafb03c",
+          "hash": "b29e7fb41cd951f791b73fc5fc19561c",
           "context": "",
           "skip": false,
           "overrides": {},
-          "content": "Sort by Offers Date"
+          "content": "Voivodeship"
         },
         "5/declaration/body/1/argument/5/openingElement/2/value/expression/body/1/expression/0/body/1/expression/alternate": {
           "type": "element",
@@ -8674,6 +8714,38 @@
           "overrides": {},
           "content": "Apply Filters"
         },
+        "5/declaration/body/1/argument/7/openingElement/2/value/expression/body-label": {
+          "type": "attribute",
+          "hash": "0d941d5622d495d9136ca81491fd1699",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Sort by offers deadline"
+        },
+        "5/declaration/body/1/argument/7/openingElement/2/value/expression/body/1": {
+          "type": "element",
+          "hash": "5faf80bfe7dd7598039205179294c69a",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Earliest first Ascending"
+        },
+        "5/declaration/body/1/argument/7/openingElement/2/value/expression/body/3": {
+          "type": "element",
+          "hash": "a3f47aa6f7675598c21c2af3667f9774",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Latest first Descending"
+        },
+        "5/declaration/body/1/argument/9": {
+          "type": "element",
+          "hash": "654bc45ae1a830657660662ecfe83468",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Apply Filters"
+        },
         "5/declaration/body/2/argument/1/openingElement/2/value/expression/body-label": {
           "type": "attribute",
           "hash": "9b3aa5954144de586931f60ef9594e99",
@@ -8691,6 +8763,78 @@
           "content": "Voivodeship"
         },
         "5/declaration/body/2/argument/5": {
+          "type": "element",
+          "hash": "654bc45ae1a830657660662ecfe83468",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Apply Filters"
+        },
+        "5/declaration/body/3/argument/1/openingElement/2/value/expression/body-label": {
+          "type": "attribute",
+          "hash": "aa161424e8e866bd537580a1104661fa",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Published At"
+        },
+        "5/declaration/body/3/argument/3/openingElement/2/value/expression/body-label": {
+          "type": "attribute",
+          "hash": "7abc979f34c132048618c9605ef311e2",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Offers Deadline"
+        },
+        "5/declaration/body/3/argument/5/openingElement/2/value/expression/body-label": {
+          "type": "attribute",
+          "hash": "b29e7fb41cd951f791b73fc5fc19561c",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Voivodeship"
+        },
+        "5/declaration/body/3/argument/7/openingElement/2/value/expression/body-label": {
+          "type": "attribute",
+          "hash": "0d941d5622d495d9136ca81491fd1699",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Sort by offers deadline"
+        },
+        "6/declaration/body/1/argument/1/openingElement/2/value/expression/body-label": {
+          "type": "attribute",
+          "hash": "aa161424e8e866bd537580a1104661fa",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Published At"
+        },
+        "6/declaration/body/1/argument/3/openingElement/2/value/expression/body-label": {
+          "type": "attribute",
+          "hash": "7abc979f34c132048618c9605ef311e2",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Offers Deadline"
+        },
+        "6/declaration/body/1/argument/5/openingElement/2/value/expression/body-label": {
+          "type": "attribute",
+          "hash": "b29e7fb41cd951f791b73fc5fc19561c",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Voivodeship"
+        },
+        "6/declaration/body/1/argument/7/openingElement/2/value/expression/body-label": {
+          "type": "attribute",
+          "hash": "0d941d5622d495d9136ca81491fd1699",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Sort by offers deadline"
+        },
+        "6/declaration/body/1/argument/9": {
           "type": "element",
           "hash": "654bc45ae1a830657660662ecfe83468",
           "context": "",
@@ -16834,29 +16978,37 @@
       "scopes": {
         "11/declaration/body/3/0/init/0/body/1/consequent/0/expression/0/1/value": {
           "type": "element",
-          "hash": "c2cf744143e5fb6574a5c602dbcdf546",
+          "hash": "7be26b49e50e1024e4f87ef8fdd26b69",
           "context": "",
           "skip": false,
           "overrides": {},
-          "content": "Date From"
+          "content": "Deadline From"
         },
         "11/declaration/body/3/0/init/0/body/2/consequent/0/expression/0/1/value": {
           "type": "element",
-          "hash": "b22b608c827041a82ddedd8680badabb",
+          "hash": "649366f5c0be691c1c9c680fd4dfc39f",
           "context": "",
           "skip": false,
           "overrides": {},
-          "content": "Date To"
+          "content": "Deadline To"
         },
         "11/declaration/body/3/0/init/0/body/3/consequent/0/expression/0/1/value": {
           "type": "element",
-          "hash": "b29e7fb41cd951f791b73fc5fc19561c",
+          "hash": "d2d522ccc07c7b89150dbd523a487648",
           "context": "",
           "skip": false,
           "overrides": {},
-          "content": "Voivodeship"
+          "content": "Published from"
         },
         "11/declaration/body/3/0/init/0/body/4/consequent/0/expression/0/1/value": {
+          "type": "element",
+          "hash": "910b98f4908369f90381b014984f67a3",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Published to"
+        },
+        "11/declaration/body/3/0/init/0/body/6/consequent/1/expression/0/1/value": {
           "type": "element",
           "hash": "e0789487e9da7425c6ac6f0fedafb03c",
           "context": "",
@@ -16864,29 +17016,45 @@
           "overrides": {},
           "content": "Sort by Offers Date"
         },
-        "12/declaration/body/3/0/init/0/body/1/consequent/0/expression/0/1/value": {
+        "11/declaration/body/3/0/init/0/body/6/consequent/1/expression/0/2/value/1/expression/right": {
           "type": "element",
-          "hash": "c2cf744143e5fb6574a5c602dbcdf546",
+          "hash": "d8d7ee5f9fba1e29a313e7f7d012830a",
           "context": "",
           "skip": false,
           "overrides": {},
-          "content": "Date From"
+          "content": "Ascending"
+        },
+        "11/declaration/body/3/0/init/0/body/6/consequent/1/expression/0/2/value/3/expression/right": {
+          "type": "element",
+          "hash": "04dc77f3df63ba7700a697a9cac8f8cc",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Descending"
+        },
+        "12/declaration/body/3/0/init/0/body/1/consequent/0/expression/0/1/value": {
+          "type": "element",
+          "hash": "7be26b49e50e1024e4f87ef8fdd26b69",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Deadline From"
         },
         "12/declaration/body/3/0/init/0/body/2/consequent/0/expression/0/1/value": {
           "type": "element",
-          "hash": "b22b608c827041a82ddedd8680badabb",
+          "hash": "649366f5c0be691c1c9c680fd4dfc39f",
           "context": "",
           "skip": false,
           "overrides": {},
-          "content": "Date To"
+          "content": "Deadline To"
         },
         "12/declaration/body/3/0/init/0/body/3/consequent/0/expression/0/1/value": {
           "type": "element",
-          "hash": "b29e7fb41cd951f791b73fc5fc19561c",
+          "hash": "d2d522ccc07c7b89150dbd523a487648",
           "context": "",
           "skip": false,
           "overrides": {},
-          "content": "Voivodeship"
+          "content": "Published from"
         },
         "12/declaration/body/3/0/init/0/body/3/consequent/0/expression/0/body/1/expression/0/1/value": {
           "type": "element",
@@ -16898,11 +17066,11 @@
         },
         "12/declaration/body/3/0/init/0/body/4/consequent/0/expression/0/1/value": {
           "type": "element",
-          "hash": "e0789487e9da7425c6ac6f0fedafb03c",
+          "hash": "910b98f4908369f90381b014984f67a3",
           "context": "",
           "skip": false,
           "overrides": {},
-          "content": "Sort by Offers Date"
+          "content": "Published to"
         },
         "12/declaration/body/3/0/init/0/body/4/consequent/1/expression/0/1/value": {
           "type": "element",
@@ -16928,6 +17096,86 @@
           "overrides": {},
           "content": "Descending"
         },
+        "12/declaration/body/3/0/init/0/body/6/consequent/1/expression/0/1/value": {
+          "type": "element",
+          "hash": "e0789487e9da7425c6ac6f0fedafb03c",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Sort by Offers Date"
+        },
+        "12/declaration/body/3/0/init/0/body/6/consequent/1/expression/0/2/value/1/expression/right": {
+          "type": "element",
+          "hash": "d8d7ee5f9fba1e29a313e7f7d012830a",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Ascending"
+        },
+        "12/declaration/body/3/0/init/0/body/6/consequent/1/expression/0/2/value/3/expression/right": {
+          "type": "element",
+          "hash": "04dc77f3df63ba7700a697a9cac8f8cc",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Descending"
+        },
+        "13/declaration/body/3/0/init/0/body/1/consequent/0/expression/0/1/value": {
+          "type": "element",
+          "hash": "7be26b49e50e1024e4f87ef8fdd26b69",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Deadline From"
+        },
+        "13/declaration/body/3/0/init/0/body/2/consequent/0/expression/0/1/value": {
+          "type": "element",
+          "hash": "649366f5c0be691c1c9c680fd4dfc39f",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Deadline To"
+        },
+        "13/declaration/body/3/0/init/0/body/3/consequent/0/expression/0/1/value": {
+          "type": "element",
+          "hash": "d2d522ccc07c7b89150dbd523a487648",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Published from"
+        },
+        "13/declaration/body/3/0/init/0/body/4/consequent/0/expression/0/1/value": {
+          "type": "element",
+          "hash": "910b98f4908369f90381b014984f67a3",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Published to"
+        },
+        "13/declaration/body/3/0/init/0/body/6/consequent/1/expression/0/1/value": {
+          "type": "element",
+          "hash": "e0789487e9da7425c6ac6f0fedafb03c",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Sort by Offers Date"
+        },
+        "13/declaration/body/3/0/init/0/body/6/consequent/1/expression/0/2/value/1/expression/right": {
+          "type": "element",
+          "hash": "d8d7ee5f9fba1e29a313e7f7d012830a",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Ascending"
+        },
+        "13/declaration/body/3/0/init/0/body/6/consequent/1/expression/0/2/value/3/expression/right": {
+          "type": "element",
+          "hash": "04dc77f3df63ba7700a697a9cac8f8cc",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Descending"
+        },
         "8/declaration/0/init/0/1/value": {
           "type": "element",
           "hash": "d8d7ee5f9fba1e29a313e7f7d012830a",
@@ -16937,6 +17185,22 @@
           "content": "Ascending"
         },
         "8/declaration/0/init/1/1/value": {
+          "type": "element",
+          "hash": "04dc77f3df63ba7700a697a9cac8f8cc",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Descending"
+        },
+        "9/declaration/0/init/0/2/value": {
+          "type": "element",
+          "hash": "d8d7ee5f9fba1e29a313e7f7d012830a",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Ascending"
+        },
+        "9/declaration/0/init/1/2/value": {
           "type": "element",
           "hash": "04dc77f3df63ba7700a697a9cac8f8cc",
           "context": "",

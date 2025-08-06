@@ -19,12 +19,17 @@ import { parseAsSet } from "$/utils/query";
 export type SortDirection = "asc" | "desc";
 
 export const sortingOptions = [
-  { key: "asc", label: "Ascending" },
-  { key: "desc", label: "Descending" },
+  { key: "asc", label: "Ascending", readable: <span>Ascending</span> },
+  { key: "desc", label: "Descending", readable: <span>Descending</span> },
 ];
 
+export interface FilterFormOptions {
+  onFiltered?: (filters: FilterForm) => void;
+}
+
 export interface FilterForm {
-  dateRange: RangeValue<CalendarDate> | null;
+  publishedAt: RangeValue<CalendarDate> | null;
+  offersDeadline: RangeValue<CalendarDate> | null;
   voivodeship: Set<Voivodeship> | null;
   sortBy: Set<SortDirection> | null;
 }
@@ -37,13 +42,21 @@ export interface ActiveFilter {
   icon?: string;
 }
 
-export function useFilterForm() {
+export function useFilterForm({ onFiltered }: FilterFormOptions = {}) {
   const [filterQuery, setFilterQuery] = useQueryStates({
-    dateFrom: {
+    publishedAtFrom: {
       parse: parseDate,
       serialize: (date) => date?.toString() ?? null,
     },
-    dateTo: {
+    publishedAtTo: {
+      parse: parseDate,
+      serialize: (date) => date?.toString() ?? null,
+    },
+    offersDeadlineFrom: {
+      parse: parseDate,
+      serialize: (date) => date?.toString() ?? null,
+    },
+    offersDeadlineTo: {
       parse: parseDate,
       serialize: (date) => date?.toString() ?? null,
     },
@@ -53,48 +66,83 @@ export function useFilterForm() {
 
   const { control, handleSubmit, register } = useForm<FilterForm>({
     defaultValues: {
-      dateRange:
-        filterQuery.dateFrom && filterQuery.dateTo
+      publishedAt:
+        filterQuery.publishedAtFrom && filterQuery.publishedAtTo
           ? {
-              start: filterQuery.dateFrom,
-              end: filterQuery.dateTo,
+              start: filterQuery.publishedAtFrom,
+              end: filterQuery.publishedAtTo,
+            }
+          : null,
+      offersDeadline:
+        filterQuery.offersDeadlineFrom && filterQuery.offersDeadlineTo
+          ? {
+              start: filterQuery.offersDeadlineFrom,
+              end: filterQuery.offersDeadlineTo,
             }
           : null,
       voivodeship: filterQuery.voivodeship,
-      sortBy: filterQuery.sortBy as SortDirection | null,
+      sortBy: filterQuery.sortBy,
     },
   });
 
   const onFilter = handleSubmit((data) => {
     setFilterQuery({
-      dateFrom: data.dateRange?.start,
-      dateTo: data.dateRange?.end,
+      publishedAtFrom: data.publishedAt?.start,
+      publishedAtTo: data.publishedAt?.end,
+      offersDeadlineFrom: data.offersDeadline?.start,
+      offersDeadlineTo: data.offersDeadline?.end,
       voivodeship: data.voivodeship,
       sortBy: data.sortBy,
     });
+
+    onFiltered?.(data);
   });
 
   const activeFilters = useMemo(() => {
     const filters: ActiveFilter[] = [];
 
-    if (filterQuery.dateFrom) {
+    if (filterQuery.offersDeadlineFrom) {
       filters.push({
-        key: "dateFrom",
-        label: <span>Date From</span>,
+        key: "offersDeadlineFrom",
+        label: <span>Deadline From</span>,
         value: format(
-          filterQuery.dateFrom.toDate(getLocalTimeZone()),
+          filterQuery.offersDeadlineFrom.toDate(getLocalTimeZone()),
           "dd/MM/yyyy"
         ),
         type: "filter",
       });
     }
 
-    if (filterQuery.dateTo) {
+    if (filterQuery.offersDeadlineTo) {
       filters.push({
-        key: "dateTo",
-        label: <span>Date To</span>,
+        key: "offersDeadlineTo",
+        label: <span>Deadline To</span>,
         value: format(
-          filterQuery.dateTo.toDate(getLocalTimeZone()),
+          filterQuery.offersDeadlineTo.toDate(getLocalTimeZone()),
+          "dd/MM/yyyy"
+        ),
+        type: "filter",
+      });
+    }
+
+    if (filterQuery.publishedAtFrom) {
+      filters.push({
+        key: "publishedAtFrom",
+        label: <span>Published from</span>,
+        value: format(
+          filterQuery.publishedAtFrom.toDate(getLocalTimeZone()),
+          "dd/MM/yyyy"
+        ),
+        type: "filter",
+      });
+    }
+
+    if (filterQuery.publishedAtTo) {
+      filters.push({
+        key: "publishedAtTo",
+        label: <span>Published to</span>,
+        value: format(
+          filterQuery.publishedAtTo.toDate(getLocalTimeZone()),
           "dd/MM/yyyy"
         ),
         type: "filter",
@@ -135,7 +183,6 @@ export function useFilterForm() {
   }, [filterQuery]);
 
   const removeFilter = (key: string) => {
-    // Handle voievodeship removal
     if (key.startsWith("voivodeship")) {
       const voivodeshipToRemove = key.replace("voivodeship", "");
       const currentVoivodeships = filterQuery.voivodeship || new Set();
@@ -147,32 +194,11 @@ export function useFilterForm() {
         voivodeship: newVoivodeships.size > 0 ? newVoivodeships : null,
       });
       return;
-    }
-
-    // Handle date range removal
-    if (key === "dateFrom") {
+    } else {
       setFilterQuery({
         ...filterQuery,
-        dateFrom: null,
+        [key]: null,
       });
-      return;
-    }
-
-    if (key === "dateTo") {
-      setFilterQuery({
-        ...filterQuery,
-        dateTo: null,
-      });
-      return;
-    }
-
-    // Handle sorting removal
-    if (key === "sortBy") {
-      setFilterQuery({
-        ...filterQuery,
-        sortBy: null,
-      });
-      return;
     }
   };
 

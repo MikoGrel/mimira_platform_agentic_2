@@ -814,6 +814,27 @@ export default {
           },
           hash: "05a8fc9f6d826fd88a809d98684edcad",
         },
+        "14/declaration/body/11/argument/1/1/1/3-placeholder": {
+          content: {
+            en: "Search",
+            pl: "Szukaj",
+          },
+          hash: "49dd6c21604b5e8d4153ff1aff2177e1",
+        },
+        "14/declaration/body/11/argument/1/5/1/3": {
+          content: {
+            en: "Ask Mimir",
+            pl: "Zapytaj Mimira",
+          },
+          hash: "c516ed1af9463ccd6bdcb19a1f13e4ac",
+        },
+        "14/declaration/body/11/argument/1/5/1/5": {
+          content: {
+            en: "Coming soon",
+            pl: "Już wkrótce",
+          },
+          hash: "05a8fc9f6d826fd88a809d98684edcad",
+        },
         "14/declaration/body/8/argument/1/1/1/3-placeholder": {
           content: {
             en: "Search",
@@ -7526,6 +7547,14 @@ export default {
           },
           hash: "415c5299ca607ad17fcd26c58e7e1a5a",
         },
+        "2/declaration/body/2/argument/1/expression/0/body/1/expression/right":
+          {
+            content: {
+              en: "{label}: ",
+              pl: "{label}: ",
+            },
+            hash: "415c5299ca607ad17fcd26c58e7e1a5a",
+          },
         "2/declaration/body/3/argument/1/expression/0/body": {
           content: {
             en: "<element:span>{label}</element:span>: {value}",
@@ -7561,18 +7590,18 @@ export default {
         "4/declaration/body/1/argument/1/openingElement/2/value/expression/body-label":
           {
             content: {
-              en: "Date Range",
-              pl: "Zakres dat",
+              en: "Published At",
+              pl: "Opublikowano dnia",
             },
-            hash: "9b3aa5954144de586931f60ef9594e99",
+            hash: "aa161424e8e866bd537580a1104661fa",
           },
         "4/declaration/body/1/argument/3/openingElement/2/value/expression/body-label":
           {
             content: {
-              en: "Voivodeship",
-              pl: "Województwo",
+              en: "Offers Deadline",
+              pl: "Termin składania ofert",
             },
-            hash: "b29e7fb41cd951f791b73fc5fc19561c",
+            hash: "7abc979f34c132048618c9605ef311e2",
           },
         "4/declaration/body/1/argument/5": {
           content: {
@@ -7584,10 +7613,10 @@ export default {
         "4/declaration/body/1/argument/5/openingElement/2/value/expression/body-label":
           {
             content: {
-              en: "Sort by offers deadline",
-              pl: "Sortuj według terminu oferty",
+              en: "Voivodeship",
+              pl: "Województwo",
             },
-            hash: "0d941d5622d495d9136ca81491fd1699",
+            hash: "b29e7fb41cd951f791b73fc5fc19561c",
           },
         "4/declaration/body/1/argument/5/openingElement/2/value/expression/body-placeholder":
           {
@@ -7620,6 +7649,21 @@ export default {
           },
           hash: "654bc45ae1a830657660662ecfe83468",
         },
+        "4/declaration/body/1/argument/7/openingElement/2/value/expression/body-label":
+          {
+            content: {
+              en: "Sort by offers deadline",
+              pl: "Sortuj według terminu oferty",
+            },
+            hash: "0d941d5622d495d9136ca81491fd1699",
+          },
+        "4/declaration/body/1/argument/9": {
+          content: {
+            en: "Apply Filters",
+            pl: "Zastosuj filtry",
+          },
+          hash: "654bc45ae1a830657660662ecfe83468",
+        },
         "4/declaration/body/2/argument/1/openingElement/2/value/expression/body-label":
           {
             content: {
@@ -7646,18 +7690,18 @@ export default {
         "5/declaration/body/1/argument/1/openingElement/2/value/expression/body-label":
           {
             content: {
-              en: "Date Range",
-              pl: "Zakres dat",
+              en: "Published At",
+              pl: "Opublikowano dnia",
             },
-            hash: "9b3aa5954144de586931f60ef9594e99",
+            hash: "aa161424e8e866bd537580a1104661fa",
           },
         "5/declaration/body/1/argument/3/openingElement/2/value/expression/body-label":
           {
             content: {
-              en: "Voivodeship",
-              pl: "Województwo",
+              en: "Offers Deadline",
+              pl: "Termin składania ofert",
             },
-            hash: "b29e7fb41cd951f791b73fc5fc19561c",
+            hash: "7abc979f34c132048618c9605ef311e2",
           },
         "5/declaration/body/1/argument/5": {
           content: {
@@ -7669,10 +7713,10 @@ export default {
         "5/declaration/body/1/argument/5/openingElement/2/value/expression/body-label":
           {
             content: {
-              en: "Sort by Offers Date",
-              pl: "Sortuj według daty ofert",
+              en: "Voivodeship",
+              pl: "Województwo",
             },
-            hash: "e0789487e9da7425c6ac6f0fedafb03c",
+            hash: "b29e7fb41cd951f791b73fc5fc19561c",
           },
         "5/declaration/body/1/argument/5/openingElement/2/value/expression/body/1/expression/0/body/1/expression/alternate":
           {
@@ -7691,6 +7735,37 @@ export default {
             hash: "83b2b5091ce614ccbee9d74e9f244502",
           },
         "5/declaration/body/1/argument/7": {
+          content: {
+            en: "Apply Filters",
+            pl: "Zastosuj filtry",
+          },
+          hash: "654bc45ae1a830657660662ecfe83468",
+        },
+        "5/declaration/body/1/argument/7/openingElement/2/value/expression/body-label":
+          {
+            content: {
+              en: "Sort by offers deadline",
+              pl: "Sortuj według terminu oferty",
+            },
+            hash: "0d941d5622d495d9136ca81491fd1699",
+          },
+        "5/declaration/body/1/argument/7/openingElement/2/value/expression/body/1":
+          {
+            content: {
+              en: "Earliest first Ascending",
+              pl: "Najwcześniejsze najpierw Rosnąco",
+            },
+            hash: "5faf80bfe7dd7598039205179294c69a",
+          },
+        "5/declaration/body/1/argument/7/openingElement/2/value/expression/body/3":
+          {
+            content: {
+              en: "Latest first Descending",
+              pl: "Najpóźniejsze najpierw Malejąco",
+            },
+            hash: "a3f47aa6f7675598c21c2af3667f9774",
+          },
+        "5/declaration/body/1/argument/9": {
           content: {
             en: "Apply Filters",
             pl: "Zastosuj filtry",
@@ -7720,6 +7795,38 @@ export default {
           },
           hash: "654bc45ae1a830657660662ecfe83468",
         },
+        "5/declaration/body/3/argument/1/openingElement/2/value/expression/body-label":
+          {
+            content: {
+              en: "Published At",
+              pl: "Opublikowano dnia",
+            },
+            hash: "aa161424e8e866bd537580a1104661fa",
+          },
+        "5/declaration/body/3/argument/3/openingElement/2/value/expression/body-label":
+          {
+            content: {
+              en: "Offers Deadline",
+              pl: "Termin składania ofert",
+            },
+            hash: "7abc979f34c132048618c9605ef311e2",
+          },
+        "5/declaration/body/3/argument/5/openingElement/2/value/expression/body-label":
+          {
+            content: {
+              en: "Voivodeship",
+              pl: "Województwo",
+            },
+            hash: "b29e7fb41cd951f791b73fc5fc19561c",
+          },
+        "5/declaration/body/3/argument/7/openingElement/2/value/expression/body-label":
+          {
+            content: {
+              en: "Sort by offers deadline",
+              pl: "Sortuj według terminu oferty",
+            },
+            hash: "0d941d5622d495d9136ca81491fd1699",
+          },
       },
     },
     "features/inbox/components/navigation-sidebar.tsx": {
@@ -14830,20 +14937,28 @@ export default {
         "12/declaration/body/3/0/init/0/body/1/consequent/0/expression/0/1/value":
           {
             content: {
-              en: "Date From",
-              pl: "Data od",
+              en: "Deadline From",
+              pl: "Termin od",
             },
-            hash: "c2cf744143e5fb6574a5c602dbcdf546",
+            hash: "7be26b49e50e1024e4f87ef8fdd26b69",
           },
         "12/declaration/body/3/0/init/0/body/2/consequent/0/expression/0/1/value":
           {
             content: {
-              en: "Date To",
-              pl: "Data do",
+              en: "Deadline To",
+              pl: "Termin do",
             },
-            hash: "b22b608c827041a82ddedd8680badabb",
+            hash: "649366f5c0be691c1c9c680fd4dfc39f",
           },
         "12/declaration/body/3/0/init/0/body/3/consequent/0/expression/0/1/value":
+          {
+            content: {
+              en: "Published from",
+              pl: "Opublikowano od",
+            },
+            hash: "d2d522ccc07c7b89150dbd523a487648",
+          },
+        "12/declaration/body/3/0/init/0/body/3/consequent/0/expression/0/body/1/expression/0/1/value":
           {
             content: {
               en: "Voivodeship",
@@ -14854,10 +14969,10 @@ export default {
         "12/declaration/body/3/0/init/0/body/4/consequent/0/expression/0/1/value":
           {
             content: {
-              en: "Sort by Offers Date",
-              pl: "Sortuj według daty ofert",
+              en: "Published to",
+              pl: "Opublikowano do",
             },
-            hash: "e0789487e9da7425c6ac6f0fedafb03c",
+            hash: "910b98f4908369f90381b014984f67a3",
           },
         "12/declaration/body/3/0/init/0/body/4/consequent/1/expression/0/1/value":
           {
@@ -14876,6 +14991,30 @@ export default {
             hash: "d8d7ee5f9fba1e29a313e7f7d012830a",
           },
         "12/declaration/body/3/0/init/0/body/4/consequent/1/expression/0/2/value/3/expression/right":
+          {
+            content: {
+              en: "Descending",
+              pl: "Malejąco",
+            },
+            hash: "04dc77f3df63ba7700a697a9cac8f8cc",
+          },
+        "12/declaration/body/3/0/init/0/body/6/consequent/1/expression/0/1/value":
+          {
+            content: {
+              en: "Sort by Offers Date",
+              pl: "Sortuj według daty ofert",
+            },
+            hash: "e0789487e9da7425c6ac6f0fedafb03c",
+          },
+        "12/declaration/body/3/0/init/0/body/6/consequent/1/expression/0/2/value/1/expression/right":
+          {
+            content: {
+              en: "Ascending",
+              pl: "Rosnąco",
+            },
+            hash: "d8d7ee5f9fba1e29a313e7f7d012830a",
+          },
+        "12/declaration/body/3/0/init/0/body/6/consequent/1/expression/0/2/value/3/expression/right":
           {
             content: {
               en: "Descending",
