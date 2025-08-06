@@ -39,7 +39,16 @@ export default function useTenderInboxQuery({
     sortBy: null,
   };
 
-  const queryKey = ["tenders", search, ...Object.values(filters)];
+  const queryKey = [
+    "tenders",
+    search,
+    [
+      filters.dateFrom?.toString(),
+      filters.dateTo?.toString,
+      JSON.stringify(Array.from(filters.sortBy || [])),
+      JSON.stringify(Array.from(filters.voivodeship || [])),
+    ],
+  ];
 
   const {
     data: tendersData,
@@ -147,4 +156,4 @@ export default function useTenderInboxQuery({
     isFetchingNextPage,
     updateSeenAt,
   };
-} 
+}

@@ -20,7 +20,7 @@ export function FilterChips() {
           isCloseable
           onClose={() => removeFilter(key)}
         >
-          <span>{label}: </span>
+          {label && <span>{label}: </span>}
           <span>{value}</span>
         </Chip>
       ))}

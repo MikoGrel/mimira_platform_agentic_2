@@ -3,7 +3,10 @@
 import { useForm } from "react-hook-form";
 import { RangeValue } from "@heroui/react";
 import { useQueryStates } from "nuqs";
-import { Voivodeship } from "$/features/i18n/config/poland-config";
+import {
+  Voivodeship,
+  PolishVoivodeships,
+} from "$/features/i18n/config/poland-config";
 import { format } from "date-fns";
 import {
   CalendarDate,
@@ -99,11 +102,16 @@ export function useFilterForm() {
     }
 
     if (filterQuery.voivodeship && filterQuery.voivodeship.size > 0) {
-      filters.push({
-        key: "voivodeship",
-        label: <span>Voivodeship</span>,
-        value: Array.from(filterQuery.voivodeship).join(", "),
-        type: "filter",
+      filterQuery.voivodeship.forEach((voivodeship) => {
+        const voivodeshipConfig = PolishVoivodeships.find(
+          (v) => v.name === voivodeship
+        );
+        filters.push({
+          key: "voivodeship" + voivodeship,
+          label: null,
+          value: voivodeshipConfig?.label || voivodeship,
+          type: "filter",
+        });
       });
     }
 
@@ -127,10 +135,45 @@ export function useFilterForm() {
   }, [filterQuery]);
 
   const removeFilter = (key: string) => {
-    setFilterQuery({
-      ...filterQuery,
-      [key]: null,
-    });
+    // Handle voievodeship removal
+    if (key.startsWith("voivodeship")) {
+      const voivodeshipToRemove = key.replace("voivodeship", "");
+      const currentVoivodeships = filterQuery.voivodeship || new Set();
+      const newVoivodeships = new Set(currentVoivodeships);
+      newVoivodeships.delete(voivodeshipToRemove as Voivodeship);
+
+      setFilterQuery({
+        ...filterQuery,
+        voivodeship: newVoivodeships.size > 0 ? newVoivodeships : null,
+      });
+      return;
+    }
+
+    // Handle date range removal
+    if (key === "dateFrom") {
+      setFilterQuery({
+        ...filterQuery,
+        dateFrom: null,
+      });
+      return;
+    }
+
+    if (key === "dateTo") {
+      setFilterQuery({
+        ...filterQuery,
+        dateTo: null,
+      });
+      return;
+    }
+
+    // Handle sorting removal
+    if (key === "sortBy") {
+      setFilterQuery({
+        ...filterQuery,
+        sortBy: null,
+      });
+      return;
+    }
   };
 
   return {

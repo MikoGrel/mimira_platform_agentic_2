@@ -8486,6 +8486,14 @@
           "overrides": {},
           "content": "{label}: "
         },
+        "2/declaration/body/2/argument/1/expression/0/body/1/expression/right": {
+          "type": "element",
+          "hash": "415c5299ca607ad17fcd26c58e7e1a5a",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "{label}: "
+        },
         "2/declaration/body/3/argument/1/expression/0/body": {
           "type": "element",
           "hash": "b5ff5f82c340938863156b2fba30b411",
@@ -16873,6 +16881,14 @@
           "content": "Date To"
         },
         "12/declaration/body/3/0/init/0/body/3/consequent/0/expression/0/1/value": {
+          "type": "element",
+          "hash": "b29e7fb41cd951f791b73fc5fc19561c",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Voivodeship"
+        },
+        "12/declaration/body/3/0/init/0/body/3/consequent/0/expression/0/body/1/expression/0/1/value": {
           "type": "element",
           "hash": "b29e7fb41cd951f791b73fc5fc19561c",
           "context": "",
