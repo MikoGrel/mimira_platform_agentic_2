@@ -11,12 +11,38 @@ interface TenderHeaderProps {
   tender: Tables<"tenders">;
   isHeaderCollapsed: boolean;
   setCommentsOpened: (value: boolean) => void;
+  onSavePart?: () => void;
+  onFinishApply?: () => void;
+  canSavePart?: boolean;
+  canFinishApply?: boolean;
+  usePartActions?: boolean;
+  hasAnySavedParts?: boolean;
+  currentPartIsSaved?: boolean;
+  isOverviewSelected?: boolean;
+  hasParts?: boolean;
+  onUnselectAll?: () => void;
+  onRemoveCurrentPart?: () => void;
+  onApplySavedParts?: () => void;
+  onReject?: () => void;
 }
 
 export function TenderHeader({
   tender,
   isHeaderCollapsed,
   setCommentsOpened,
+  onSavePart,
+  onFinishApply,
+  canSavePart = true,
+  canFinishApply = true,
+  usePartActions = false,
+  hasAnySavedParts = false,
+  currentPartIsSaved = false,
+  isOverviewSelected = false,
+  hasParts = true,
+  onUnselectAll,
+  onRemoveCurrentPart,
+  onApplySavedParts,
+  onReject,
 }: TenderHeaderProps) {
   const [hasRendered, setHasRendered] = useState(false);
   const { count } = useCommentsCount({
@@ -70,15 +96,65 @@ export function TenderHeader({
               </span>
             </div>
             <div className="flex gap-2">
-              <Button color="primary">Save</Button>
-              <Button variant="flat">Reject</Button>
+              {(!hasParts || isOverviewSelected) && (
+                <>
+                  <Button color="primary" data-lingo-override-pl="Aplikuj">
+                    Apply
+                  </Button>
+                  <Button variant="flat" onPress={onReject}>
+                    Reject
+                  </Button>
+                  {hasAnySavedParts && (
+                    <Button
+                      variant="flat"
+                      onPress={onApplySavedParts}
+                      data-lingo-override-pl="Aplikuj na wybrane części"
+                    >
+                      Apply to saved parts
+                    </Button>
+                  )}
+                  {hasAnySavedParts && (
+                    <Button variant="flat" onPress={onUnselectAll}>
+                      Unselect all
+                    </Button>
+                  )}
+                </>
+              )}
+
+              {hasParts && !isOverviewSelected && (
+                <>
+                  {currentPartIsSaved ? (
+                    <Button color="primary" onPress={onRemoveCurrentPart}>
+                      Remove
+                    </Button>
+                  ) : (
+                    <Button
+                      color="primary"
+                      onPress={onSavePart}
+                      isDisabled={!canSavePart}
+                    >
+                      Save
+                    </Button>
+                  )}
+                  {hasAnySavedParts && (
+                    <Button variant="flat" onPress={onApplySavedParts}>
+                      Apply to saved parts
+                    </Button>
+                  )}
+                  {hasAnySavedParts && (
+                    <Button variant="flat" onPress={onUnselectAll}>
+                      Unselect all
+                    </Button>
+                  )}
+                </>
+              )}
               <Button
                 variant="ghost"
                 onPress={() => setCommentsOpened(true)}
                 className="!min-w-10"
                 isIconOnly={!count}
               >
-                <MessageSquareText className="w-5 h-5" />
+                <MessageSquareText className="w-5 h-5 stroke-[1.5]" />
                 {!!count && count}
               </Button>
             </div>
@@ -104,12 +180,68 @@ export function TenderHeader({
             </span>
           </div>
           <div className="flex gap-2">
-            <Button size="sm" color="primary">
-              Save
-            </Button>
-            <Button size="sm" variant="flat">
-              Reject
-            </Button>
+            {(!hasParts || isOverviewSelected) && (
+              <>
+                <Button
+                  size="sm"
+                  color="primary"
+                  data-lingo-override-pl="Aplikuj"
+                >
+                  Apply
+                </Button>
+                <Button size="sm" variant="flat" onPress={onReject}>
+                  Reject
+                </Button>
+                {hasAnySavedParts && (
+                  <Button
+                    size="sm"
+                    variant="flat"
+                    onPress={onApplySavedParts}
+                    data-lingo-override-pl="Aplikuj na wybrane części"
+                  >
+                    Apply to saved parts
+                  </Button>
+                )}
+                {hasAnySavedParts && (
+                  <Button size="sm" variant="flat" onPress={onUnselectAll}>
+                    Unselect all
+                  </Button>
+                )}
+              </>
+            )}
+
+            {hasParts && !isOverviewSelected && (
+              <>
+                {currentPartIsSaved ? (
+                  <Button
+                    size="sm"
+                    color="primary"
+                    onPress={onRemoveCurrentPart}
+                  >
+                    Remove
+                  </Button>
+                ) : (
+                  <Button
+                    size="sm"
+                    color="primary"
+                    onPress={onSavePart}
+                    isDisabled={!canSavePart}
+                  >
+                    Save
+                  </Button>
+                )}
+                {hasAnySavedParts && (
+                  <Button size="sm" variant="flat" onPress={onApplySavedParts}>
+                    Apply to saved parts
+                  </Button>
+                )}
+                {hasAnySavedParts && (
+                  <Button size="sm" variant="flat" onPress={onUnselectAll}>
+                    Unselect all
+                  </Button>
+                )}
+              </>
+            )}
             <Button
               size="sm"
               variant="ghost"
@@ -117,7 +249,7 @@ export function TenderHeader({
               className="!min-w-10"
               isIconOnly={!count}
             >
-              <MessageSquareText className="w-5 h-5" />
+              <MessageSquareText className="w-5 h-5 stroke-[1.5]" />
               {!!count && count}
             </Button>
           </div>

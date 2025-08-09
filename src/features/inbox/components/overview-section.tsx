@@ -1,51 +1,62 @@
 "use client";
 
 import { CheckCircle, AlertCircle, Clock } from "lucide-react";
-import { Tables } from "$/types/supabase";
-import { TenderSummary } from "$/features/tenders";
-import { Section, SectionTitle, SectionContent, StatusCard } from "./ui-components";
+// import { TenderSummary } from "$/features/tenders";
+import {
+  Section,
+  SectionTitle,
+  SectionContent,
+  StatusCard,
+} from "./ui-components";
+import { ReactNode } from "react";
 
 interface OverviewSectionProps {
-  tender: Tables<"tenders">;
+  extra: ReactNode;
+  canParticipate: boolean;
+  wadium: string;
+  completionDate: string;
 }
 
-export function OverviewSection({ tender }: OverviewSectionProps) {
+export function OverviewSection({
+  canParticipate,
+  wadium,
+  completionDate,
+  extra,
+}: OverviewSectionProps) {
   return (
     <Section id="at-glance" data-section>
-      <SectionTitle>Overview</SectionTitle>
+      <SectionTitle>Overview {extra}</SectionTitle>
       <SectionContent>
-        {/* AI Summary */}
-        <TenderSummary tender={tender} />
+        {/* <TenderSummary tender={tender} /> */}
 
-        {/* Key Information Cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-          {tender.can_participate !== null && (
+          {canParticipate !== null && (
             <StatusCard
-              icon={tender.can_participate ? CheckCircle : AlertCircle}
+              icon={canParticipate ? CheckCircle : AlertCircle}
               title="Eligibility"
               value={
-                tender.can_participate
+                canParticipate
                   ? "Eligible to participate"
                   : "Not eligible to participate"
               }
-              type={tender.can_participate ? "success" : "error"}
+              type={canParticipate ? "success" : "error"}
             />
           )}
 
-          {tender.wadium_llm && (
+          {wadium && (
             <StatusCard
               icon={AlertCircle}
               title="Wadium"
-              value={tender.wadium_llm}
+              value={wadium}
               type="warning"
             />
           )}
 
-          {tender.ordercompletiondate_llm && (
+          {completionDate && (
             <StatusCard
               icon={Clock}
               title="Completion Date"
-              value={tender.ordercompletiondate_llm}
+              value={completionDate}
               type="neutral"
             />
           )}
@@ -53,4 +64,4 @@ export function OverviewSection({ tender }: OverviewSectionProps) {
       </SectionContent>
     </Section>
   );
-} 
+}

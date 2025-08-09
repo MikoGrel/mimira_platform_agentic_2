@@ -1,14 +1,19 @@
 "use client";
 
-import { Tables } from "$/types/supabase";
 import { Section, SectionTitle, SectionContent } from "./ui-components";
 import { RequirementsList } from "./requirements-list";
 
 interface RequirementsSectionProps {
-  tender: Tables<"tenders">;
+  met_requirements: string[];
+  needs_confirmation_requirements: string[];
+  not_met_requirements: string[];
 }
 
-export function RequirementsSection({ tender }: RequirementsSectionProps) {
+export function RequirementsSection({
+  met_requirements,
+  needs_confirmation_requirements,
+  not_met_requirements,
+}: RequirementsSectionProps) {
   return (
     <Section id="requirements" data-section>
       <SectionTitle>Requirements</SectionTitle>
@@ -16,20 +21,20 @@ export function RequirementsSection({ tender }: RequirementsSectionProps) {
         <div className="space-y-6">
           <RequirementsList
             title="Met Requirements"
-            items={(tender.met_requirements as string[]) || []}
+            items={met_requirements}
             type="success"
             collapsed
           />
 
           <RequirementsList
             title="Needs Confirmation"
-            items={(tender.needs_confirmation_requirements as string[]) || []}
+            items={needs_confirmation_requirements}
             type="warning"
           />
 
           <RequirementsList
             title="Not Met Requirements"
-            items={(tender.not_met_requirements as string[]) || []}
+            items={not_met_requirements}
             type="error"
           />
         </div>

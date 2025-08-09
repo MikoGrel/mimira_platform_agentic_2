@@ -65,6 +65,7 @@ export default function InboxPage() {
   function handleTenderSelect(tender: Tables<"tenders">) {
     updateSeenAt(tender.id);
     setSelectedId(tender.id);
+    // part state handled in TenderPreview
     markAsSeen(tender.id);
   }
 
@@ -144,7 +145,7 @@ export default function InboxPage() {
                     shadow="none"
                   >
                     <div className="p-4 px-6 flex flex-col gap-2 hover:bg-muted">
-                      <p className="font-semibold text-sm relative">
+                      <p className="text-sm relative">
                         {truncate(t.orderobject!, {
                           length: 100,
                           omission: "...",

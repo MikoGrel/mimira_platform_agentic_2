@@ -15,7 +15,14 @@ export function Section({
   id?: string;
 } & React.HTMLAttributes<HTMLDivElement>) {
   return (
-    <div id={id} className={cn("scroll-mt-6 space-y-4", className)} {...props}>
+    <div
+      id={id}
+      className={cn(
+        "scroll-mt-6 space-y-4 max-w-5xl overflow-x-hidden",
+        className
+      )}
+      {...props}
+    >
       {children}
     </div>
   );
@@ -136,4 +143,4 @@ export function StatusCard({
       </div>
     </div>
   );
-} 
+}

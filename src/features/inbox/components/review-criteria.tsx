@@ -59,7 +59,7 @@ export function ReviewCriteria({
   }
 
   return (
-    <div className="w-full flex flex-row items-start gap-8 overflow-hidden">
+    <div className="w-full flex flex-row items-start gap-4 overflow-hidden">
       <div className="flex-shrink-0 w-40 h-44">
         <ChartContainer config={chartConfig} className="w-full h-full">
           <PieChart>
@@ -67,8 +67,8 @@ export function ReviewCriteria({
               data={chartData}
               cx="50%"
               cy="50%"
-              innerRadius={60}
-              outerRadius={75}
+              innerRadius={55}
+              outerRadius={70}
               paddingAngle={6}
               cornerRadius={4}
               dataKey="value"
@@ -109,7 +109,7 @@ export function ReviewCriteria({
             disabled={!criteria.opis}
             key={criteria.kryterium}
             title={
-              <div className="flex items-center gap-3">
+              <div className="flex items-center gap-3 text-sm">
                 <div
                   className="w-3 h-3 rounded-full flex-shrink-0"
                   style={{

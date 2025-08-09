@@ -1,19 +1,20 @@
 "use client";
 
-import { Tables } from "$/types/supabase";
 import { Section, SectionTitle, SectionContent } from "./ui-components";
 import Markdown from "react-markdown";
 
 interface DescriptionSectionProps {
-  tender: Tables<"tenders">;
+  description_long_llm: string;
 }
 
-export function DescriptionSection({ tender }: DescriptionSectionProps) {
+export function DescriptionSection({
+  description_long_llm,
+}: DescriptionSectionProps) {
   return (
     <Section id="description" data-section>
       <SectionTitle>Description</SectionTitle>
       <SectionContent>
-        {tender.description_long_llm ? (
+        {description_long_llm ? (
           <div className="prose prose-sm max-w-none text-gray-700 leading-relaxed -pt-2">
             <Markdown
               components={{
@@ -44,7 +45,7 @@ export function DescriptionSection({ tender }: DescriptionSectionProps) {
                 ),
               }}
             >
-              {tender.description_long_llm}
+              {description_long_llm}
             </Markdown>
           </div>
         ) : (
@@ -55,4 +56,4 @@ export function DescriptionSection({ tender }: DescriptionSectionProps) {
       </SectionContent>
     </Section>
   );
-} 
+}

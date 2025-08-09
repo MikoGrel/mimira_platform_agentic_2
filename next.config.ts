@@ -9,5 +9,4 @@ export default lingoCompiler.next({
   models: "lingo.dev",
   rsc: true,
   sourceRoot: "src",
-  debug: false,
 })(nextConfig);

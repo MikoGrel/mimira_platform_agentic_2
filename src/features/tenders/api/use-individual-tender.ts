@@ -23,7 +23,24 @@ export function useIndividualTender({
       const client = createClient();
       const { data, error } = await client
         .from("tenders")
-        .select("*")
+        .select(
+          `*,
+          tender_parts (
+           part_uuid,
+           part_id,
+           tender_id,
+           part_name,
+           ordercompletiondate_llm,
+           wadium_llm,
+           review_criteria_llm,
+           description_part_long_llm,
+           met_requirements,
+           needs_confirmation_requirements,
+           not_met_requirements,
+           status,
+           can_participate
+          )`
+        )
         .eq("id", tenderId)
         .eq("company", user!.profile!.customer!)
         .eq("can_participate", true)
