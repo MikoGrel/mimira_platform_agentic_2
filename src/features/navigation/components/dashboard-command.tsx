@@ -1,6 +1,6 @@
 "use client";
 
-import { Home, SparklesIcon } from "lucide-react";
+import { Home, SparklesIcon, Loader2, Scroll } from "lucide-react";
 import {
   CommandDialog,
   CommandEmpty,
@@ -9,8 +9,11 @@ import {
   CommandItem,
   CommandList,
 } from "$/components/ui/command";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
+import { useCommandSearch } from "../api/use-command-search";
+import { truncate } from "lodash";
+import { useDebouncedValue } from "$/hooks/use-debounced-value";
 
 export function DashboardCommand({
   open,
@@ -20,6 +23,9 @@ export function DashboardCommand({
   setOpen: (open: boolean) => void;
 }) {
   const router = useRouter();
+  const [search, setSearch] = useState("");
+  const debouncedSearch = useDebouncedValue(search, 250);
+  const { data: tenders, isFetching } = useCommandSearch(debouncedSearch);
   useEffect(() => {
     const down = (e: KeyboardEvent) => {
       if (e.key === "j" && (e.metaKey || e.ctrlKey)) {
@@ -39,11 +45,15 @@ export function DashboardCommand({
 
   return (
     <>
-      <CommandDialog open={open} onOpenChange={setOpen}>
-        <CommandInput placeholder="Search tenders, navigate, or run commands..." />
+      <CommandDialog open={open} onOpenChange={setOpen} shouldFilter={false}>
+        <CommandInput
+          value={search}
+          onValueChange={setSearch}
+          placeholder="Search tenders, navigate, or run commands..."
+        />
         <CommandList>
           <CommandEmpty>No results found.</CommandEmpty>
-          <CommandGroup heading="Navigation">
+          <CommandGroup heading={<span>Navigation</span>}>
             <CommandItem onSelect={() => goToPage("/dashboard")}>
               <Home />
               <span>Go to Dashboard</span>
@@ -53,6 +63,28 @@ export function DashboardCommand({
               <span>Discover New Tenders</span>
             </CommandItem>
           </CommandGroup>
+          {(isFetching || tenders?.length || 0 > 0) && (
+            <CommandGroup heading={<span>Tenders</span>}>
+              {isFetching && (
+                <CommandItem disabled>
+                  <Loader2 className="animate-spin" />
+                  <span>Searching…</span>
+                </CommandItem>
+              )}
+              {tenders?.map((tender) => (
+                <CommandItem
+                  key={tender.id}
+                  value={tender.id}
+                  onSelect={() => goToPage(`/dashboard/inbox?id=${tender.id}`)}
+                >
+                  <Scroll />
+                  <span>
+                    {truncate(tender.orderobject ?? "", { length: 60 })}
+                  </span>
+                </CommandItem>
+              ))}
+            </CommandGroup>
+          )}
         </CommandList>
       </CommandDialog>
     </>

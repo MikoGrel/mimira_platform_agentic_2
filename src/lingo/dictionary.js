@@ -24,7 +24,56 @@ export default {
           },
           hash: "05a8fc9f6d826fd88a809d98684edcad",
         },
+        "14/declaration/body/12/argument/1/1/1/3-placeholder": {
+          content: {
+            en: "Search",
+            pl: "Szukaj",
+          },
+          hash: "49dd6c21604b5e8d4153ff1aff2177e1",
+        },
+        "14/declaration/body/12/argument/1/5/1/3": {
+          content: {
+            en: "Ask Mimir",
+            pl: "Zapytaj Mimira",
+          },
+          hash: "c516ed1af9463ccd6bdcb19a1f13e4ac",
+        },
+        "14/declaration/body/12/argument/1/5/1/5": {
+          content: {
+            en: "Coming soon",
+            pl: "Wkrótce dostępne",
+          },
+          hash: "05a8fc9f6d826fd88a809d98684edcad",
+        },
         "15/body/0/argument/1/expression/0/body/3/3": {
+          content: {
+            en: "·",
+            pl: "·",
+          },
+          hash: "26b80ae8a680de73667e096098aa69d8",
+        },
+        "15/declaration/body/12/argument/1/1/1/3-placeholder": {
+          content: {
+            en: "Search",
+            pl: "Szukaj",
+          },
+          hash: "49dd6c21604b5e8d4153ff1aff2177e1",
+        },
+        "15/declaration/body/12/argument/1/5/1/3": {
+          content: {
+            en: "Ask Mimir",
+            pl: "Zapytaj Mimira",
+          },
+          hash: "c516ed1af9463ccd6bdcb19a1f13e4ac",
+        },
+        "15/declaration/body/12/argument/1/5/1/5": {
+          content: {
+            en: "Coming soon",
+            pl: "Wkrótce dostępne",
+          },
+          hash: "05a8fc9f6d826fd88a809d98684edcad",
+        },
+        "16/body/0/argument/1/expression/0/body/3/3": {
           content: {
             en: "·",
             pl: "·",
@@ -672,6 +721,68 @@ export default {
             },
             hash: "12dd9d83b84a8ba126ee327d8140d5dc",
           },
+        "16/declaration/body/21/consequent/0/argument/1/1": {
+          content: {
+            en: "Select a tender to view details",
+            pl: "Wybierz przetarg, aby zobaczyć szczegóły",
+          },
+          hash: "067789b01a081458db2f872f10a37c3f",
+        },
+        "16/declaration/body/22/argument/1/3/1/1/expression/right/1/1/openingElement/2/value/expression":
+          {
+            content: {
+              en: "Overview",
+              pl: "Przegląd",
+            },
+            hash: "30c54e4dc4ce599b87d94be34a8617f5",
+          },
+        "16/declaration/body/22/argument/1/3/1/1/expression/right/1/3/expression/0/body/openingElement/2/value/expression/3/1/4":
+          {
+            content: {
+              en: "/",
+              pl: "/",
+            },
+            hash: "d727054cb65d0e95c79cfb34bc3e3f28",
+          },
+        "16/declaration/body/22/argument/1/3/1/3/1/openingElement/0/value/expression/consequent":
+          {
+            content: {
+              en: "— {selectedPartName}",
+              pl: "— {selectedPartName}",
+            },
+            hash: "12dd9d83b84a8ba126ee327d8140d5dc",
+          },
+        "17/declaration/body/19/consequent/0/argument/1/1": {
+          content: {
+            en: "Select a tender to view details",
+            pl: "Wybierz przetarg, aby zobaczyć szczegóły",
+          },
+          hash: "067789b01a081458db2f872f10a37c3f",
+        },
+        "17/declaration/body/20/argument/1/3/1/1/expression/right/1/1/openingElement/2/value/expression":
+          {
+            content: {
+              en: "Overview",
+              pl: "Przegląd",
+            },
+            hash: "30c54e4dc4ce599b87d94be34a8617f5",
+          },
+        "17/declaration/body/20/argument/1/3/1/1/expression/right/1/3/expression/0/body/openingElement/2/value/expression/3/1/4":
+          {
+            content: {
+              en: "/",
+              pl: "/",
+            },
+            hash: "d727054cb65d0e95c79cfb34bc3e3f28",
+          },
+        "17/declaration/body/20/argument/1/3/1/3/1/openingElement/0/value/expression/consequent":
+          {
+            content: {
+              en: "— {selectedPartName}",
+              pl: "— {selectedPartName}",
+            },
+            hash: "12dd9d83b84a8ba126ee327d8140d5dc",
+          },
       },
     },
     "features/inbox/hooks/use-filter-form.tsx": {
@@ -778,6 +889,265 @@ export default {
           },
           hash: "bff28bbb9a32e0ddf1aba571d27ea42e",
         },
+        "5/declaration/body/5/argument/1/1-placeholder": {
+          content: {
+            en: "Search tenders, navigate, or run commands...",
+            pl: "Wyszukaj przetargi, nawiguj lub wykonaj polecenia...",
+          },
+          hash: "c9f9b1094baadc06057ca69704870898",
+        },
+        "5/declaration/body/5/argument/1/3/1": {
+          content: {
+            en: "No results found.",
+            pl: "Nie znaleziono wyników.",
+          },
+          hash: "8e37a23d37d7b4f501a20991a0d311ea",
+        },
+        "5/declaration/body/5/argument/1/3/3/1/3": {
+          content: {
+            en: "Go to Dashboard",
+            pl: "Przejdź do pulpitu",
+          },
+          hash: "a6efa97d25e36fedc0af794f6ba610f2",
+        },
+        "5/declaration/body/5/argument/1/3/3/3/3": {
+          content: {
+            en: "Discover New Tenders",
+            pl: "Odkryj nowe przetargi",
+          },
+          hash: "bff28bbb9a32e0ddf1aba571d27ea42e",
+        },
+        "6/declaration/body/5/argument/1/1-placeholder": {
+          content: {
+            en: "Search tenders, navigate, or run commands...",
+            pl: "Wyszukaj przetargi, nawiguj lub wykonaj polecenia...",
+          },
+          hash: "c9f9b1094baadc06057ca69704870898",
+        },
+        "6/declaration/body/5/argument/1/3/1": {
+          content: {
+            en: "No results found.",
+            pl: "Nie znaleziono wyników.",
+          },
+          hash: "8e37a23d37d7b4f501a20991a0d311ea",
+        },
+        "6/declaration/body/5/argument/1/3/3/1/3": {
+          content: {
+            en: "Go to Dashboard",
+            pl: "Przejdź do pulpitu",
+          },
+          hash: "a6efa97d25e36fedc0af794f6ba610f2",
+        },
+        "6/declaration/body/5/argument/1/3/3/1/expression/right/1/3": {
+          content: {
+            en: "Go to Dashboard",
+            pl: "Przejdź do pulpitu",
+          },
+          hash: "a6efa97d25e36fedc0af794f6ba610f2",
+        },
+        "6/declaration/body/5/argument/1/3/3/1/expression/right/3/3": {
+          content: {
+            en: "Discover New Tenders",
+            pl: "Odkryj nowe przetargi",
+          },
+          hash: "bff28bbb9a32e0ddf1aba571d27ea42e",
+        },
+        "6/declaration/body/5/argument/1/3/3/3/3": {
+          content: {
+            en: "Discover New Tenders",
+            pl: "Odkryj nowe przetargi",
+          },
+          hash: "bff28bbb9a32e0ddf1aba571d27ea42e",
+        },
+        "6/declaration/body/6/argument/1/1-placeholder": {
+          content: {
+            en: "Search tenders, navigate, or run commands...",
+            pl: "Wyszukaj przetargi, nawiguj lub wykonaj polecenia...",
+          },
+          hash: "c9f9b1094baadc06057ca69704870898",
+        },
+        "6/declaration/body/6/argument/1/3/1": {
+          content: {
+            en: "No results found.",
+            pl: "Nie znaleziono wyników.",
+          },
+          hash: "8e37a23d37d7b4f501a20991a0d311ea",
+        },
+        "6/declaration/body/6/argument/1/3/3/1/3": {
+          content: {
+            en: "Go to Dashboard",
+            pl: "Przejdź do pulpitu",
+          },
+          hash: "a6efa97d25e36fedc0af794f6ba610f2",
+        },
+        "6/declaration/body/6/argument/1/3/3/3/3": {
+          content: {
+            en: "Discover New Tenders",
+            pl: "Odkryj nowe przetargi",
+          },
+          hash: "bff28bbb9a32e0ddf1aba571d27ea42e",
+        },
+        "6/declaration/body/6/argument/1/3/3/5/expression/right/3": {
+          content: {
+            en: "Searching…",
+            pl: "Wyszukiwanie…",
+          },
+          hash: "790b828714b22aadfbb086c9a7f9a1b6",
+        },
+        "7/declaration/body/6/argument/1/1-placeholder": {
+          content: {
+            en: "Search tenders, navigate, or run commands...",
+            pl: "Wyszukaj przetargi, nawiguj lub wykonaj polecenia...",
+          },
+          hash: "c9f9b1094baadc06057ca69704870898",
+        },
+        "7/declaration/body/6/argument/1/3/1": {
+          content: {
+            en: "No results found.",
+            pl: "Nie znaleziono wyników.",
+          },
+          hash: "8e37a23d37d7b4f501a20991a0d311ea",
+        },
+        "7/declaration/body/6/argument/1/3/3/1/3": {
+          content: {
+            en: "Go to Dashboard",
+            pl: "Przejdź do pulpitu",
+          },
+          hash: "a6efa97d25e36fedc0af794f6ba610f2",
+        },
+        "7/declaration/body/6/argument/1/3/3/3/3": {
+          content: {
+            en: "Discover New Tenders",
+            pl: "Odkryj nowe przetargi",
+          },
+          hash: "bff28bbb9a32e0ddf1aba571d27ea42e",
+        },
+        "7/declaration/body/6/argument/1/3/3/openingElement/0/value/expression":
+          {
+            content: {
+              en: "Navigation",
+              pl: "Nawigacja",
+            },
+            hash: "0373afd8238db1c49f4be4fa6cdf5cd3",
+          },
+        "7/declaration/body/6/argument/1/3/5/1/expression/right/1": {
+          content: {
+            en: "No results found.",
+            pl: "Nie znaleziono wyników.",
+          },
+          hash: "8e37a23d37d7b4f501a20991a0d311ea",
+        },
+        "7/declaration/body/6/argument/1/3/5/1/expression/right/1/expression/right":
+          {
+            content: {
+              en: "No results found. Try a different search term or use the dashboard navigation.",
+              pl: "Nie znaleziono wyników. Spróbuj użyć innego terminu wyszukiwania lub skorzystaj z nawigacji w panelu.",
+            },
+            hash: "e43ea4d0f0965e42d2107285907a603b",
+          },
+        "7/declaration/body/6/argument/1/3/5/1/expression/right/3": {
+          content: {
+            en: "Searching…",
+            pl: "Wyszukiwanie…",
+          },
+          hash: "790b828714b22aadfbb086c9a7f9a1b6",
+        },
+        "7/declaration/body/6/argument/1/3/5/1/expression/right/3/expression/right":
+          {
+            content: {
+              en: "Start typing to search for tenders or use the dashboard navigation.",
+              pl: "Zacznij pisać, aby wyszukać przetargi lub skorzystaj z nawigacji w panelu.",
+            },
+            hash: "5c5eb4eef479a9bf70d6d7704cbb511a",
+          },
+        "7/declaration/body/6/argument/1/3/5/3/expression/right/3": {
+          content: {
+            en: "Searching…",
+            pl: "Wyszukiwanie…",
+          },
+          hash: "790b828714b22aadfbb086c9a7f9a1b6",
+        },
+        "7/declaration/body/6/argument/1/3/5/openingElement/0/value/expression":
+          {
+            content: {
+              en: "Tenders",
+              pl: "Przetargi",
+            },
+            hash: "ed189d7577d88989825ba289c3243a80",
+          },
+        "7/declaration/body/7/argument/1/1-placeholder": {
+          content: {
+            en: "Search tenders, navigate, or run commands...",
+            pl: "Wyszukaj przetargi, nawiguj lub wykonaj polecenia...",
+          },
+          hash: "c9f9b1094baadc06057ca69704870898",
+        },
+        "7/declaration/body/7/argument/1/3/1": {
+          content: {
+            en: "No results found.",
+            pl: "Nie znaleziono wyników.",
+          },
+          hash: "8e37a23d37d7b4f501a20991a0d311ea",
+        },
+        "7/declaration/body/7/argument/1/3/3/1/3": {
+          content: {
+            en: "Go to Dashboard",
+            pl: "Przejdź do pulpitu",
+          },
+          hash: "a6efa97d25e36fedc0af794f6ba610f2",
+        },
+        "7/declaration/body/7/argument/1/3/3/3/3": {
+          content: {
+            en: "Discover New Tenders",
+            pl: "Odkryj nowe przetargi",
+          },
+          hash: "bff28bbb9a32e0ddf1aba571d27ea42e",
+        },
+        "7/declaration/body/7/argument/1/3/3/5/expression/right/3": {
+          content: {
+            en: "Searching…",
+            pl: "Wyszukiwanie…",
+          },
+          hash: "790b828714b22aadfbb086c9a7f9a1b6",
+        },
+        "7/declaration/body/7/argument/1/3/3/openingElement/0/value/expression":
+          {
+            content: {
+              en: "Navigation",
+              pl: "Nawigacja",
+            },
+            hash: "0373afd8238db1c49f4be4fa6cdf5cd3",
+          },
+        "7/declaration/body/7/argument/1/3/5": {
+          content: {
+            en: "<expression/>><expression/>",
+            pl: "<expression/>><expression/>",
+          },
+          hash: "da4a79e6c7e7c335baf89624e1a34dcb",
+        },
+        "7/declaration/body/7/argument/1/3/5/1/expression/right/3": {
+          content: {
+            en: "Searching…",
+            pl: "Wyszukiwanie…",
+          },
+          hash: "790b828714b22aadfbb086c9a7f9a1b6",
+        },
+        "7/declaration/body/7/argument/1/3/5/openingElement/0/value/expression":
+          {
+            content: {
+              en: "Tenders",
+              pl: "Przetargi",
+            },
+            hash: "ed189d7577d88989825ba289c3243a80",
+          },
+        "7/declaration/body/7/argument/1/3/5/openingElement/0/value/expression/1":
+          {
+            content: {
+              en: "Tenders",
+              pl: "Przetargi",
+            },
+            hash: "ed189d7577d88989825ba289c3243a80",
+          },
       },
     },
     "features/navigation/components/dashboard-sidebar.tsx": {
@@ -902,7 +1272,7 @@ export default {
         "5/declaration/body/0/argument/5/1": {
           content: {
             en: "<element:span>Total:</element:span> 50",
-            pl: "<element:span>Łącznie:</element:span> 50",
+            pl: "<element:span>Łączna liczba transakcji:</element:span> 50",
           },
           hash: "dae0998c98a09d510391cd2a33d9a8b6",
         },
