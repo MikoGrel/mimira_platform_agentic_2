@@ -66,8 +66,8 @@ export function CommentsDrawer({ open, setOpen, tender }: CommentsDrawerProps) {
               )}
             </DrawerHeader>
 
-            <DrawerBody className="flex flex-col">
-              <div className="flex-1 max-h-96 overflow-y-auto">
+            <DrawerBody className="flex flex-col flex-1 pr-0">
+              <div className="flex-[1_0_0] overflow-y-scroll">
                 {isLoading && (
                   <div className="flex items-center justify-center py-8">
                     <Spinner>Loading comments ...</Spinner>

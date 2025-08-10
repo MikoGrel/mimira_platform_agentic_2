@@ -1,7 +1,7 @@
 "use client";
 
 import { Tables } from "$/types/supabase";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { parseAsString, useQueryState } from "nuqs";
 import { useScrollTrigger } from "$/hooks/use-scroll-trigger";
 import { AdditionalInfoSection } from "./additional-info-section";
@@ -10,74 +10,73 @@ import { NavigationSidebar } from "./navigation-sidebar";
 import { RequirementsSection } from "./requirements-section";
 import { ReviewCriteriaSection } from "./review-criteria-section";
 import { TenderHeader } from "./tender-header";
-import { TenderPartsCarousel } from "./tender-parts-carousel";
-import { CommentsDrawer } from "$/features/tenders/components";
+import dynamic from "next/dynamic";
+
 import { OverviewSection } from "./overview-section";
 import { isEmpty } from "lodash";
 
+const TenderPartsCarousel = dynamic(
+  () =>
+    import("./tender-parts-carousel").then((mod) => mod.TenderPartsCarousel),
+  {
+    ssr: false,
+  }
+);
+
+const CommentsDrawer = dynamic(
+  () =>
+    import("$/features/tenders/components").then((mod) => mod.CommentsDrawer),
+  {
+    ssr: false,
+  }
+);
+
 interface TenderPreviewProps {
-  tender?:
-    | (Tables<"tenders"> & { tender_parts: Tables<"tender_parts">[] })
-    | null;
+  tender: Tables<"tenders"> & { tender_parts: Tables<"tender_parts">[] };
 }
+
+export type TenderType = Tables<"tenders"> & {
+  tender_parts: Tables<"tender_parts">[];
+};
+export type TenderPartType = Tables<"tender_parts">;
 
 export function TenderPreview({ tender }: TenderPreviewProps) {
   const [commentsOpened, setCommentsOpened] = useState(false);
   const [selectedPart, setSelectedPart] = useQueryState("part", parseAsString);
-  const [savedPartIds, setSavedPartIds] = useState<Set<string>>(new Set());
-  const item = selectedPart
-    ? selectedPart === "overview"
-      ? tender
-      : tender?.tender_parts.find((part) => part.part_uuid === selectedPart)
-    : tender;
-
-  type TenderType = Tables<"tenders"> & {
-    tender_parts: Tables<"tender_parts">[];
-  };
-  type TenderPartType = Tables<"tender_parts">;
+  const [approvedPartIds, setApprovedPartIds] = useState<Set<string>>(
+    new Set()
+  );
 
   const isPartSelected = !!selectedPart && selectedPart !== "overview";
 
-  function isTenderPart(x: TenderType | TenderPartType): x is TenderPartType {
-    return "part_uuid" in x;
+  function isTenderPart(
+    x: TenderType | TenderPartType | null | undefined
+  ): x is TenderPartType {
+    return x !== null && x !== undefined && "part_uuid" in x;
   }
 
-  // After the early return below, tender is non-null; ensure we always have a fallback item
-  const resolvedItem: TenderType | TenderPartType | null = (item || tender) as
-    | TenderType
-    | TenderPartType
-    | null;
-
-  const descriptionLong = resolvedItem
-    ? isTenderPart(resolvedItem)
-      ? resolvedItem.description_part_long_llm || ""
-      : // tender-level description
-        (resolvedItem as TenderType).description_long_llm || ""
-    : "";
-  const selectedPartName = isPartSelected
-    ? tender?.tender_parts.find((part) => part.part_uuid === selectedPart)
-        ?.part_name || null
-    : null;
+  const resolvedItem: TenderType | TenderPartType | undefined | null =
+    useMemo(() => {
+      if (!selectedPart || selectedPart === "overview") return tender;
+      return tender?.tender_parts.find(
+        (part) => part.part_uuid === selectedPart
+      );
+    }, [selectedPart, tender]);
 
   const scrollRef = useRef<HTMLDivElement>(null);
   const isHeaderCollapsed = useScrollTrigger({
-    threshold: 100,
+    threshold: 60,
     containerRef: scrollRef,
   });
 
   useEffect(() => {
-    // reset saved parts when switching to another tender
-    setSavedPartIds(new Set());
+    setApprovedPartIds(new Set());
     setSelectedPart(null);
   }, [tender?.id, setSelectedPart]);
 
-  // selection persisted via nuqs
-
-  // keep definition single; do not redeclare
-
-  function handleSavePart() {
+  function handleApprovePart() {
     if (!isPartSelected || !selectedPart) return;
-    setSavedPartIds((prev) => new Set(prev).add(selectedPart));
+    setApprovedPartIds((prev) => new Set(prev).add(selectedPart));
   }
 
   function handleFinishApply() {
@@ -86,12 +85,12 @@ export function TenderPreview({ tender }: TenderPreviewProps) {
   }
 
   function handleUnselectAll() {
-    setSavedPartIds(new Set());
+    setApprovedPartIds(new Set());
   }
 
   function handleRemoveCurrentPart() {
     if (!selectedPart) return;
-    setSavedPartIds((prev) => {
+    setApprovedPartIds((prev) => {
       const next = new Set(prev);
       next.delete(selectedPart);
       return next;
@@ -102,16 +101,6 @@ export function TenderPreview({ tender }: TenderPreviewProps) {
     // Placeholder for reject action
   }
 
-  if (!tender) {
-    return (
-      <section className="sticky top-0 flex items-center justify-center h-full">
-        <div className="text-center text-gray-500">
-          <p className="text-sm">Select a tender to view details</p>
-        </div>
-      </section>
-    );
-  }
-
   return (
     <section className="h-full w-full">
       <div className="h-full w-full flex flex-col">
@@ -119,24 +108,20 @@ export function TenderPreview({ tender }: TenderPreviewProps) {
           tender={tender}
           isHeaderCollapsed={isHeaderCollapsed}
           setCommentsOpened={setCommentsOpened}
-          onSavePart={handleSavePart}
+          onApprovePart={handleApprovePart}
           onFinishApply={handleFinishApply}
-          canSavePart={Boolean(selectedPart && selectedPart !== "overview")}
-          canFinishApply={savedPartIds.size > 0}
-          usePartActions={Boolean(
-            tender.tender_parts?.length &&
-              selectedPart &&
-              selectedPart !== "overview"
-          )}
-          hasAnySavedParts={savedPartIds.size > 0}
-          currentPartIsSaved={Boolean(
-            selectedPart && savedPartIds.has(selectedPart)
-          )}
-          isOverviewSelected={selectedPart === "overview"}
-          hasParts={Boolean(tender.tender_parts?.length)}
+          canApprovePart={Boolean(selectedPart && selectedPart !== "overview")}
+          canFinishApply={approvedPartIds.size > 0}
+          hasAnyApprovedParts={approvedPartIds.size > 0}
+          currentPart={{
+            item: isTenderPart(resolvedItem) ? resolvedItem : null,
+            isApproved: Boolean(
+              selectedPart && approvedPartIds.has(selectedPart)
+            ),
+          }}
           onUnselectAll={handleUnselectAll}
           onRemoveCurrentPart={handleRemoveCurrentPart}
-          onApplySavedParts={handleFinishApply}
+          onApplySelectedParts={handleFinishApply}
           onReject={handleReject}
         />
 
@@ -148,16 +133,16 @@ export function TenderPreview({ tender }: TenderPreviewProps) {
                 tenderParts={tender.tender_parts}
                 selectedPart={selectedPart}
                 onPartSelect={setSelectedPart}
-                savedPartIds={savedPartIds}
+                approvedPartIds={approvedPartIds}
               />
             )}
             <div className="flex-1 overflow-y-auto" ref={scrollRef}>
               <div className="px-6 py-6 space-y-8 max-w-5xl">
                 <OverviewSection
                   extra={
-                    selectedPartName ? (
+                    isTenderPart(resolvedItem) ? (
                       <span className="font-normal text-gray-500">
-                        — {selectedPartName}
+                        — {resolvedItem.part_name}
                       </span>
                     ) : (
                       ""
@@ -188,7 +173,13 @@ export function TenderPreview({ tender }: TenderPreviewProps) {
                     (resolvedItem && resolvedItem.review_criteria_llm) || ""
                   }
                 />
-                <DescriptionSection description_long_llm={descriptionLong} />
+                <DescriptionSection
+                  description_long_llm={
+                    isTenderPart(resolvedItem)
+                      ? resolvedItem.description_part_long_llm || ""
+                      : resolvedItem?.description_long_llm || ""
+                  }
+                />
                 <AdditionalInfoSection
                   application_form_llm={tender.application_form_llm || ""}
                   payment_terms_llm={tender.payment_terms_llm || ""}

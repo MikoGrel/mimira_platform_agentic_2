@@ -6,18 +6,24 @@ import { Archive, SlidersHorizontal } from "lucide-react";
 import { parseAsString, useQueryState } from "nuqs";
 import { useMemo, useState } from "react";
 import Symbol from "$/features/branding/components/Symbol";
-import {
-  FilterForm,
-  FilterChips,
-  TenderPreview,
-  useFilterForm,
-} from "$/features/inbox";
+import { FilterForm, FilterChips, useFilterForm } from "$/features/inbox";
 import { useTenderInboxQuery, useMarkAsSeen } from "$/features/inbox/api";
 import { useInfiniteList } from "$/hooks/use-infinite-list";
 import { AnimatePresence, motion } from "motion/react";
 import { truncate } from "lodash";
 import { cn } from "$/lib/utils";
 import { useIndividualTender } from "$/features/tenders/api";
+import dynamic from "next/dynamic";
+
+const TenderPreview = dynamic(
+  () =>
+    import("$/features/inbox/components/tender-preview").then(
+      (mod) => mod.TenderPreview
+    ),
+  {
+    ssr: false,
+  }
+);
 
 const PAGE_SIZE = 10;
 
@@ -180,7 +186,14 @@ export default function InboxPage() {
           </div>
         </div>
       </aside>
-      <TenderPreview tender={selectedTender} />
+      {!selectedTender && (
+        <section className="sticky top-0 flex items-center justify-center h-full">
+          <div className="text-center text-gray-500">
+            <p className="text-sm">Select a tender to view details</p>
+          </div>
+        </section>
+      )}
+      {selectedTender && <TenderPreview tender={selectedTender} />}
     </main>
   );
 }

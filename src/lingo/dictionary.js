@@ -450,6 +450,48 @@ export default {
           },
           hash: "935785ca48ce760173b2096c2e8be8e6",
         },
+        "5/declaration/body/2/0/init/0/1/value": {
+          content: {
+            en: "Overview",
+            pl: "Przegląd",
+          },
+          hash: "30c54e4dc4ce599b87d94be34a8617f5",
+        },
+        "5/declaration/body/2/0/init/1/1/value": {
+          content: {
+            en: "Requirements",
+            pl: "Wymagania",
+          },
+          hash: "e108e149e0fd5b65f5850b6f032ccabe",
+        },
+        "5/declaration/body/2/0/init/2/1/value": {
+          content: {
+            en: "Review Criteria",
+            pl: "Kryteria oceny",
+          },
+          hash: "d524df30da3658fdbc1794408fcfdab4",
+        },
+        "5/declaration/body/2/0/init/3/1/value": {
+          content: {
+            en: "Description",
+            pl: "Opis",
+          },
+          hash: "e17686a22ffad04cc7bb70524ed4478b",
+        },
+        "5/declaration/body/2/0/init/4/1/value": {
+          content: {
+            en: "Additional Info",
+            pl: "Dodatkowe informacje",
+          },
+          hash: "d5bf1e70991802fd4a801f3a79cf9e5d",
+        },
+        "5/declaration/body/5/argument/1/1": {
+          content: {
+            en: "Contents",
+            pl: "Spis treści",
+          },
+          hash: "935785ca48ce760173b2096c2e8be8e6",
+        },
       },
     },
     "features/inbox/components/overview-section.tsx": {
@@ -525,6 +567,34 @@ export default {
           },
           hash: "c358cf9796d545d7b72954dc6ddd6dc2",
         },
+        "4/declaration/body/0/argument/1": {
+          content: {
+            en: "Requirements",
+            pl: "Wymagania",
+          },
+          hash: "e108e149e0fd5b65f5850b6f032ccabe",
+        },
+        "4/declaration/body/0/argument/3/1/1-title": {
+          content: {
+            en: "Met Requirements",
+            pl: "Spełnione wymagania",
+          },
+          hash: "f5251ea9ac1d7825fd0b543fb0e0b4f5",
+        },
+        "4/declaration/body/0/argument/3/1/3-title": {
+          content: {
+            en: "Needs Confirmation",
+            pl: "Wymaga potwierdzenia",
+          },
+          hash: "a7d90ec8d0e7143313dfbfd6368cf79c",
+        },
+        "4/declaration/body/0/argument/3/1/5-title": {
+          content: {
+            en: "Not Met Requirements",
+            pl: "Niespełnione wymagania",
+          },
+          hash: "c358cf9796d545d7b72954dc6ddd6dc2",
+        },
       },
     },
     "features/inbox/components/review-criteria-section.tsx": {
@@ -559,6 +629,12 @@ export default {
     },
     "features/inbox/components/tender-header.tsx": {
       entries: {
+        "7/declaration/body/3/argument/3/1/expression/right/3/1": {
+          content: {
+            en: "Apply",
+          },
+          hash: "77fc03abc14d71c8c36f000fb65f93f8",
+        },
         "7/declaration/body/3/argument/3/1/expression/right/3/1/expression/right/1":
           {
             content: {
@@ -577,10 +653,9 @@ export default {
         "7/declaration/body/3/argument/3/1/expression/right/3/1/expression/right/5/expression/right":
           {
             content: {
-              en: "Apply to saved parts",
-              pl: "Zastosuj do zapisanych części",
+              en: "Apply to selected parts",
             },
-            hash: "cb58ba5ab7edfb6dc0ab2710254c30e3",
+            hash: "13b87825c2d8d3b3fe07a09ad8f0ce42",
           },
         "7/declaration/body/3/argument/3/1/expression/right/3/1/expression/right/7/expression/right":
           {
@@ -590,13 +665,35 @@ export default {
             },
             hash: "89c0a44bb05b3ec6af54419a8c425a5e",
           },
+        "7/declaration/body/3/argument/3/1/expression/right/3/11/expression/right":
+          {
+            content: {
+              en: "Apply to selected parts",
+            },
+            hash: "81c5fc1980975113a7b3c0bfdcf0d27a",
+          },
+        "7/declaration/body/3/argument/3/1/expression/right/3/13/expression/right":
+          {
+            content: {
+              en: "Unselect",
+              pl: "Odznacz",
+            },
+            hash: "95abf29177d2693c76f5278cad6e3102",
+          },
+        "7/declaration/body/3/argument/3/1/expression/right/3/3": {
+          content: {
+            en: "Reject",
+            pl: "Odrzuć",
+          },
+          hash: "447bdd205a7407328c84f618e3bf1d40",
+        },
         "7/declaration/body/3/argument/3/1/expression/right/3/3/expression/right/1/expression/alternate":
           {
             content: {
-              en: "Save",
-              pl: "Zapisz",
+              en: "Approve",
+              pl: "Zatwierdź",
             },
-            hash: "a0f42060c471417f1b8a2883be2a03db",
+            hash: "1d6b7baeeb99dac3833b170dd47c6171",
           },
         "7/declaration/body/3/argument/3/1/expression/right/3/3/expression/right/1/expression/consequent":
           {
@@ -609,18 +706,79 @@ export default {
         "7/declaration/body/3/argument/3/1/expression/right/3/3/expression/right/3/expression/right":
           {
             content: {
-              en: "Apply to saved parts",
-              pl: "Zastosuj do zapisanych części",
+              en: "Apply to selected parts",
             },
-            hash: "cb58ba5ab7edfb6dc0ab2710254c30e3",
+            hash: "13b87825c2d8d3b3fe07a09ad8f0ce42",
           },
         "7/declaration/body/3/argument/3/1/expression/right/3/3/expression/right/5/expression/right":
+          {
+            content: {
+              en: "Unselect",
+              pl: "Odznacz",
+            },
+            hash: "25e032c7b038b333cf98ee01fd16b586",
+          },
+        "7/declaration/body/3/argument/3/1/expression/right/3/5/expression/right":
+          {
+            content: {
+              en: "Apply to selected parts",
+            },
+            hash: "81c5fc1980975113a7b3c0bfdcf0d27a",
+          },
+        "7/declaration/body/3/argument/3/1/expression/right/3/7/expression/right":
           {
             content: {
               en: "Unselect all",
               pl: "Odznacz wszystko",
             },
-            hash: "89c0a44bb05b3ec6af54419a8c425a5e",
+            hash: "4a2428c143421800cac10cbe285209ae",
+          },
+        "7/declaration/body/3/argument/3/1/expression/right/3/9/expression/alternate":
+          {
+            content: {
+              en: "Approve",
+              pl: "Zatwierdź",
+            },
+            hash: "98478f5f36910f14c852971dcf58decd",
+          },
+        "7/declaration/body/3/argument/3/1/expression/right/3/9/expression/consequent":
+          {
+            content: {
+              en: "Remove",
+              pl: "Usuń",
+            },
+            hash: "01dea4f6d9333a21546086b8df252084",
+          },
+        "7/declaration/body/3/argument/3/1/expression/right/3/9/expression/right/1/expression/alternate":
+          {
+            content: {
+              en: "Approve",
+              pl: "Zatwierdź",
+            },
+            hash: "1d6b7baeeb99dac3833b170dd47c6171",
+          },
+        "7/declaration/body/3/argument/3/1/expression/right/3/9/expression/right/1/expression/consequent":
+          {
+            content: {
+              en: "Remove",
+              pl: "Usuń",
+            },
+            hash: "feb15e75efc81c54cb85538c42a7a5c9",
+          },
+        "7/declaration/body/3/argument/3/1/expression/right/3/9/expression/right/3/expression/right":
+          {
+            content: {
+              en: "Apply to selected parts",
+            },
+            hash: "13b87825c2d8d3b3fe07a09ad8f0ce42",
+          },
+        "7/declaration/body/3/argument/3/1/expression/right/3/9/expression/right/5/expression/right":
+          {
+            content: {
+              en: "Unselect",
+              pl: "Odznacz",
+            },
+            hash: "25e032c7b038b333cf98ee01fd16b586",
           },
         "7/declaration/body/3/argument/5/expression/right/3/1/expression/right/1":
           {
@@ -641,10 +799,9 @@ export default {
         "7/declaration/body/3/argument/5/expression/right/3/1/expression/right/5/expression/right":
           {
             content: {
-              en: "Apply to saved parts",
-              pl: "Zastosuj do zapisanych części",
+              en: "Apply to selected parts",
             },
-            hash: "1afdcf62642b2eb647a3f681541d2e51",
+            hash: "72bd9abcd377cb9268a5bbb3f7efb0da",
           },
         "7/declaration/body/3/argument/5/expression/right/3/1/expression/right/7/expression/right":
           {
@@ -657,10 +814,10 @@ export default {
         "7/declaration/body/3/argument/5/expression/right/3/3/expression/right/1/expression/alternate":
           {
             content: {
-              en: "Save",
-              pl: "Zapisz",
+              en: "Approve",
+              pl: "Zatwierdź",
             },
-            hash: "2260b4ca7f12dca9e7c8cf83bc81211a",
+            hash: "733cc12e565c02c26c068ed26e8cbbb2",
           },
         "7/declaration/body/3/argument/5/expression/right/3/3/expression/right/1/expression/consequent":
           {
@@ -673,18 +830,17 @@ export default {
         "7/declaration/body/3/argument/5/expression/right/3/3/expression/right/3/expression/right":
           {
             content: {
-              en: "Apply to saved parts",
-              pl: "Zastosuj do zapisanych części",
+              en: "Apply to selected parts",
             },
-            hash: "1afdcf62642b2eb647a3f681541d2e51",
+            hash: "72bd9abcd377cb9268a5bbb3f7efb0da",
           },
         "7/declaration/body/3/argument/5/expression/right/3/3/expression/right/5/expression/right":
           {
             content: {
-              en: "Unselect all",
-              pl: "Odznacz wszystko",
+              en: "Unselect",
+              pl: "Odznacz",
             },
-            hash: "40e4856fce1723ab765f7af6042f348c",
+            hash: "4782b38d6775071a11f9fe044ff3f865",
           },
       },
     },
@@ -1076,6 +1232,21 @@ export default {
           },
           hash: "f27235edc5c81fa9d3422b1bb9bf98c0",
         },
+        "9/declaration/body/8/argument/1/5/1/1/3/expression/0/body/1/3/1/1/1": {
+          content: {
+            en: "Requirements:",
+            pl: "Wymagania:",
+          },
+          hash: "f27235edc5c81fa9d3422b1bb9bf98c0",
+        },
+        "9/declaration/body/8/argument/1/5/1/1/3/expression/0/body/1/3/1/1/3/3":
+          {
+            content: {
+              en: "/",
+              pl: "/",
+            },
+            hash: "d727054cb65d0e95c79cfb34bc3e3f28",
+          },
         "9/declaration/body/8/argument/1/5/1/1/3/expression/0/body/1/3/1/3/3": {
           content: {
             en: "/",
@@ -1083,6 +1254,14 @@ export default {
           },
           hash: "d727054cb65d0e95c79cfb34bc3e3f28",
         },
+        "9/declaration/body/8/argument/1/5/1/1/3/expression/0/body/1/3/1/3/expression/right/1":
+          {
+            content: {
+              en: "Wadium: ",
+              pl: "Wadium: ",
+            },
+            hash: "a7908a3166c9eccd9acd413e39b72c11",
+          },
         "9/declaration/body/8/argument/1/5/1/1/3/expression/0/body/1/3/3/1/expression/right/1":
           {
             content: {
@@ -1103,6 +1282,51 @@ export default {
     },
     "features/inbox/components/tender-preview.tsx": {
       entries: {
+        "15/declaration/body/16/consequent/0/argument/1/1": {
+          content: {
+            en: "Select a tender to view details",
+            pl: "Wybierz przetarg, aby zobaczyć szczegóły",
+          },
+          hash: "067789b01a081458db2f872f10a37c3f",
+        },
+        "15/declaration/body/17/argument/1/3/1/3/1/1/openingElement/0/value/expression/consequent":
+          {
+            content: {
+              en: "— {resolvedItem.part_name}",
+              pl: "— {selectedPartName}",
+            },
+            hash: "4cd331bfdf0d5cfa9a598af8510d55b7",
+          },
+        "15/declaration/body/17/consequent/0/argument/1/1": {
+          content: {
+            en: "Select a tender to view details",
+            pl: "Wybierz przetarg, aby zobaczyć szczegóły",
+          },
+          hash: "067789b01a081458db2f872f10a37c3f",
+        },
+        "15/declaration/body/18/argument/1/3/1/3/1/1/openingElement/0/value/expression/consequent":
+          {
+            content: {
+              en: "— {resolvedItem.part_name}",
+              pl: "— {selectedPartName}",
+            },
+            hash: "4cd331bfdf0d5cfa9a598af8510d55b7",
+          },
+        "15/declaration/body/18/consequent/0/argument/1/1": {
+          content: {
+            en: "Select a tender to view details",
+            pl: "Wybierz przetarg, aby zobaczyć szczegóły",
+          },
+          hash: "067789b01a081458db2f872f10a37c3f",
+        },
+        "15/declaration/body/19/argument/1/3/1/3/1/1/openingElement/0/value/expression/consequent":
+          {
+            content: {
+              en: "— {resolvedItem.part_name}",
+              pl: "— {selectedPartName}",
+            },
+            hash: "4cd331bfdf0d5cfa9a598af8510d55b7",
+          },
         "15/declaration/body/19/consequent/0/argument/1/1": {
           content: {
             en: "Select a tender to view details",
@@ -1111,6 +1335,14 @@ export default {
           hash: "067789b01a081458db2f872f10a37c3f",
         },
         "15/declaration/body/20/argument/1/3/1/1/3/1/openingElement/0/value/expression/consequent":
+          {
+            content: {
+              en: "— {selectedPartName}",
+              pl: "— {selectedPartName}",
+            },
+            hash: "4cd331bfdf0d5cfa9a598af8510d55b7",
+          },
+        "15/declaration/body/20/argument/1/3/1/3/1/1/openingElement/0/value/expression/consequent":
           {
             content: {
               en: "— {selectedPartName}",

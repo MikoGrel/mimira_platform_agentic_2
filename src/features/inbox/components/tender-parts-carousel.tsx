@@ -13,7 +13,7 @@ interface TenderPartsCarouselProps {
   tenderParts: Tables<"tender_parts">[];
   selectedPart: string | null;
   onPartSelect: (partId: string) => void;
-  savedPartIds: Set<string>;
+  approvedPartIds: Set<string>;
   isCollapsed: boolean;
 }
 
@@ -21,7 +21,7 @@ export function TenderPartsCarousel({
   tenderParts,
   selectedPart,
   onPartSelect,
-  savedPartIds,
+  approvedPartIds,
   isCollapsed,
 }: TenderPartsCarouselProps) {
   const [emblaRef, emblaApi] = useEmblaCarousel({
@@ -155,7 +155,7 @@ export function TenderPartsCarousel({
                     <CardHeader className="pb-1 px-3 pt-3 flex flex-col gap-1 text-xs">
                       <div className="flex items-center justify-between w-full">
                         <div className="flex items-center gap-1">
-                          {savedPartIds.has(part.part_uuid) && (
+                          {approvedPartIds.has(part.part_uuid) && (
                             <Check className="w-3 h-3 text-blue-600" />
                           )}
                           <h3 className="text-muted-foreground">

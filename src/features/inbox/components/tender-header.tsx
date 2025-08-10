@@ -6,23 +6,24 @@ import { motion, AnimatePresence } from "motion/react";
 import { useEffect, useState } from "react";
 import { Tables } from "$/types/supabase";
 import { useCommentsCount } from "$/features/tenders/api/use-comments-count";
+import { TenderPartType } from "./tender-preview";
 
 interface TenderHeaderProps {
   tender: Tables<"tenders">;
   isHeaderCollapsed: boolean;
   setCommentsOpened: (value: boolean) => void;
-  onSavePart?: () => void;
+  onApprovePart?: () => void;
   onFinishApply?: () => void;
-  canSavePart?: boolean;
+  canApprovePart?: boolean;
   canFinishApply?: boolean;
-  usePartActions?: boolean;
-  hasAnySavedParts?: boolean;
-  currentPartIsSaved?: boolean;
-  isOverviewSelected?: boolean;
-  hasParts?: boolean;
+  hasAnyApprovedParts?: boolean;
+  currentPart?: {
+    item: TenderPartType | null;
+    isApproved: boolean;
+  };
   onUnselectAll?: () => void;
   onRemoveCurrentPart?: () => void;
-  onApplySavedParts?: () => void;
+  onApplySelectedParts?: () => void;
   onReject?: () => void;
 }
 
@@ -30,15 +31,13 @@ export function TenderHeader({
   tender,
   isHeaderCollapsed,
   setCommentsOpened,
-  onSavePart,
-  canSavePart = true,
-  hasAnySavedParts = false,
-  currentPartIsSaved = false,
-  isOverviewSelected = false,
-  hasParts = true,
+  onApprovePart,
+  canApprovePart = true,
+  hasAnyApprovedParts = false,
+  currentPart,
   onUnselectAll,
   onRemoveCurrentPart,
-  onApplySavedParts,
+  onApplySelectedParts,
   onReject,
 }: TenderHeaderProps) {
   const [hasRendered, setHasRendered] = useState(false);
@@ -93,7 +92,7 @@ export function TenderHeader({
               </span>
             </div>
             <div className="flex gap-2">
-              {(!hasParts || isOverviewSelected) && (
+              {!hasAnyApprovedParts && !currentPart?.item && (
                 <>
                   <Button color="primary" data-lingo-override-pl="Aplikuj">
                     Apply
@@ -101,50 +100,42 @@ export function TenderHeader({
                   <Button variant="flat" onPress={onReject}>
                     Reject
                   </Button>
-                  {hasAnySavedParts && (
-                    <Button
-                      variant="flat"
-                      onPress={onApplySavedParts}
-                      data-lingo-override-pl="Aplikuj na wybrane części"
-                    >
-                      Apply to saved parts
-                    </Button>
-                  )}
-                  {hasAnySavedParts && (
-                    <Button variant="flat" onPress={onUnselectAll}>
-                      Unselect all
-                    </Button>
-                  )}
                 </>
               )}
 
-              {hasParts && !isOverviewSelected && (
+              {currentPart?.item && (
                 <>
-                  {currentPartIsSaved ? (
-                    <Button color="primary" onPress={onRemoveCurrentPart}>
+                  {currentPart?.isApproved ? (
+                    <Button color="danger" onPress={onRemoveCurrentPart}>
                       Remove
                     </Button>
                   ) : (
                     <Button
                       color="primary"
-                      onPress={onSavePart}
-                      isDisabled={!canSavePart}
+                      onPress={onApprovePart}
+                      isDisabled={!canApprovePart}
                     >
-                      Save
-                    </Button>
-                  )}
-                  {hasAnySavedParts && (
-                    <Button variant="flat" onPress={onApplySavedParts}>
-                      Apply to saved parts
-                    </Button>
-                  )}
-                  {hasAnySavedParts && (
-                    <Button variant="flat" onPress={onUnselectAll}>
-                      Unselect all
+                      Approve
                     </Button>
                   )}
                 </>
               )}
+
+              {hasAnyApprovedParts && (
+                <>
+                  <Button
+                    color="primary"
+                    onPress={onApplySelectedParts}
+                    data-lingo-override-pl="Aplikuj na wybrane części"
+                  >
+                    Apply to selected parts
+                  </Button>
+                  <Button variant="flat" onPress={onUnselectAll}>
+                    Unselect all
+                  </Button>
+                </>
+              )}
+
               <Button
                 variant="ghost"
                 onPress={() => setCommentsOpened(true)}
@@ -177,7 +168,7 @@ export function TenderHeader({
             </span>
           </div>
           <div className="flex gap-2">
-            {(!hasParts || isOverviewSelected) && (
+            {!hasAnyApprovedParts && !currentPart?.item && (
               <>
                 <Button
                   size="sm"
@@ -189,30 +180,15 @@ export function TenderHeader({
                 <Button size="sm" variant="flat" onPress={onReject}>
                   Reject
                 </Button>
-                {hasAnySavedParts && (
-                  <Button
-                    size="sm"
-                    variant="flat"
-                    onPress={onApplySavedParts}
-                    data-lingo-override-pl="Aplikuj na wybrane części"
-                  >
-                    Apply to saved parts
-                  </Button>
-                )}
-                {hasAnySavedParts && (
-                  <Button size="sm" variant="flat" onPress={onUnselectAll}>
-                    Unselect all
-                  </Button>
-                )}
               </>
             )}
 
-            {hasParts && !isOverviewSelected && (
+            {currentPart?.item && (
               <>
-                {currentPartIsSaved ? (
+                {currentPart?.isApproved ? (
                   <Button
                     size="sm"
-                    color="primary"
+                    color="danger"
                     onPress={onRemoveCurrentPart}
                   >
                     Remove
@@ -221,24 +197,31 @@ export function TenderHeader({
                   <Button
                     size="sm"
                     color="primary"
-                    onPress={onSavePart}
-                    isDisabled={!canSavePart}
+                    onPress={onApprovePart}
+                    isDisabled={!canApprovePart}
                   >
-                    Save
-                  </Button>
-                )}
-                {hasAnySavedParts && (
-                  <Button size="sm" variant="flat" onPress={onApplySavedParts}>
-                    Apply to saved parts
-                  </Button>
-                )}
-                {hasAnySavedParts && (
-                  <Button size="sm" variant="flat" onPress={onUnselectAll}>
-                    Unselect all
+                    Approve
                   </Button>
                 )}
               </>
             )}
+
+            {hasAnyApprovedParts && (
+              <>
+                <Button
+                  size="sm"
+                  color="primary"
+                  onPress={onApplySelectedParts}
+                  data-lingo-override-pl="Aplikuj na wybrane części"
+                >
+                  Apply to selected parts
+                </Button>
+                <Button size="sm" variant="flat" onPress={onUnselectAll}>
+                  Unselect all
+                </Button>
+              </>
+            )}
+
             <Button
               size="sm"
               variant="ghost"
