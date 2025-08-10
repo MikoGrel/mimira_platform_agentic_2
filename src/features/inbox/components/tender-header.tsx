@@ -49,17 +49,13 @@ export function TenderHeader({
   }, []);
 
   const h1Variants = {
-    collapsedNoPart: {
-      scale: 1,
+    collapsed: {
+      fontSize: "16px",
+      lineHeight: "20px",
     },
-    expandedNoPart: {
-      scale: 1,
-    },
-    collapsedWithPart: {
-      scale: 0.8,
-    },
-    expandedWithPart: {
-      scale: 0.8,
+    expanded: {
+      fontSize: "20px",
+      lineHeight: "28px",
     },
   };
 
@@ -72,54 +68,13 @@ export function TenderHeader({
       )}
 
       <motion.h1
-        className={`font-semibold w-2/3 text-2xl origin-top-left will-change-transform ${
-          currentPart?.item ? "text-muted-foreground" : "text-gray-900"
-        }`}
-        style={{
-          backfaceVisibility: "hidden",
-          WebkitFontSmoothing: "antialiased",
-          MozOsxFontSmoothing: "grayscale",
-          translateZ: 0,
-        }}
+        className="font-semibold w-2/3 mb-2"
         variants={h1Variants}
-        animate={
-          isHeaderCollapsed
-            ? currentPart?.item
-              ? "collapsedWithPart"
-              : "collapsedNoPart"
-            : currentPart?.item
-              ? "expandedWithPart"
-              : "expandedNoPart"
-        }
+        animate={isHeaderCollapsed ? "collapsed" : "expanded"}
         transition={{ duration: 0.3, ease: "easeInOut" }}
       >
         {tender.orderobject}
       </motion.h1>
-
-      <AnimatePresence>
-        {currentPart?.item && (
-          <motion.h2
-            className="font-semibold text-gray-700 max-w-3xl text-base leading-snug mb-1 "
-            initial={{
-              opacity: 0,
-              height: 0,
-              marginTop: 0,
-            }}
-            animate={{
-              opacity: 1,
-              height: "auto",
-            }}
-            exit={{
-              opacity: 0,
-              height: 0,
-              marginTop: 0,
-            }}
-            transition={{ duration: 0.3, ease: "easeInOut" }}
-          >
-            {currentPart.item.part_name}
-          </motion.h2>
-        )}
-      </AnimatePresence>
 
       <AnimatePresence>
         {!isHeaderCollapsed && (
