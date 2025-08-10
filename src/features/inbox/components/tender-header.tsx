@@ -99,29 +99,20 @@ export function TenderHeader({
       <AnimatePresence>
         {currentPart?.item && (
           <motion.h2
-            className="font-semibold text-gray-700 max-w-3xl text-lg leading-snug "
+            className="font-semibold text-gray-700 max-w-3xl text-base leading-snug mb-1 "
             initial={{
               opacity: 0,
               height: 0,
               marginTop: 0,
-              marginBottom: "4px",
-              fontSize: isHeaderCollapsed ? "14px" : "16px",
-              lineHeight: isHeaderCollapsed ? "20px" : "24px",
             }}
             animate={{
               opacity: 1,
-              marginBottom: "4px",
-              fontSize: isHeaderCollapsed ? "14px" : "16px",
-              lineHeight: isHeaderCollapsed ? "20px" : "24px",
               height: "auto",
             }}
             exit={{
               opacity: 0,
               height: 0,
               marginTop: 0,
-              marginBottom: "4px",
-              fontSize: isHeaderCollapsed ? "14px" : "16px",
-              lineHeight: isHeaderCollapsed ? "20px" : "24px",
             }}
             transition={{ duration: 0.3, ease: "easeInOut" }}
           >
