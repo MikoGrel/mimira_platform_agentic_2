@@ -4,7 +4,7 @@ import { Section, SectionTitle, SectionContent } from "./ui-components";
 import { ReviewCriteria } from "./review-criteria";
 
 interface ReviewCriteriaSectionProps {
-  review_criteria_llm: string;
+  review_criteria_llm?: string | null;
 }
 
 export function ReviewCriteriaSection({

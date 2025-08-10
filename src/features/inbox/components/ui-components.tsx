@@ -17,10 +17,7 @@ export function Section({
   return (
     <div
       id={id}
-      className={cn(
-        "scroll-mt-6 space-y-4 max-w-5xl overflow-x-hidden",
-        className
-      )}
+      className={cn("scroll-mt-6 space-y-4 overflow-x-hidden", className)}
       {...props}
     >
       {children}

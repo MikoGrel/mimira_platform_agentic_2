@@ -8,11 +8,10 @@ import { AdditionalInfoSection } from "./additional-info-section";
 import { DescriptionSection } from "./description-section";
 import { NavigationSidebar } from "./navigation-sidebar";
 import { RequirementsSection } from "./requirements-section";
-import { ReviewCriteriaSection } from "./review-criteria-section";
 import { TenderHeader } from "./tender-header";
 import dynamic from "next/dynamic";
-
 import { OverviewSection } from "./overview-section";
+import { ProductsSection } from "./products-section";
 import { isEmpty } from "lodash";
 import { useRejectTender } from "../api/use-reject-tender";
 
@@ -32,6 +31,16 @@ const CommentsDrawer = dynamic(
   }
 );
 
+const ReviewCriteriaSection = dynamic(
+  () =>
+    import("./review-criteria-section").then(
+      (mod) => mod.ReviewCriteriaSection
+    ),
+  {
+    ssr: false,
+  }
+);
+
 interface TenderPreviewProps {
   tender: Tables<"tenders"> & { tender_parts: Tables<"tender_parts">[] };
 }
@@ -39,7 +48,9 @@ interface TenderPreviewProps {
 export type TenderType = Tables<"tenders"> & {
   tender_parts: Tables<"tender_parts">[];
 };
-export type TenderPartType = Tables<"tender_parts">;
+export type TenderPartType = Tables<"tender_parts"> & {
+  tender_products?: Tables<"tender_products">[];
+};
 
 export function TenderPreview({ tender }: TenderPreviewProps) {
   const [commentsOpened, setCommentsOpened] = useState(false);
@@ -50,6 +61,7 @@ export function TenderPreview({ tender }: TenderPreviewProps) {
   const { mutate: rejectTender } = useRejectTender();
 
   const isPartSelected = !!selectedPart && selectedPart !== "overview";
+  const hasParts = tender.tender_parts.length > 0;
 
   function isTenderPart(
     x: TenderType | TenderPartType | null | undefined
@@ -67,7 +79,7 @@ export function TenderPreview({ tender }: TenderPreviewProps) {
 
   const scrollRef = useRef<HTMLDivElement>(null);
   const isHeaderCollapsed = useScrollTrigger({
-    threshold: 60,
+    threshold: hasParts ? 5 : 60,
     containerRef: scrollRef,
   });
 
@@ -137,19 +149,28 @@ export function TenderPreview({ tender }: TenderPreviewProps) {
               />
             )}
             <div className="flex-1 overflow-y-auto" ref={scrollRef}>
-              <div className="px-6 py-6 space-y-8 max-w-5xl">
-                <OverviewSection
-                  title={
-                    isTenderPart(resolvedItem) ? resolvedItem.part_name : null
-                  }
-                  canParticipate={Boolean(
-                    resolvedItem && resolvedItem.can_participate
+              <div className="px-6 py-6 grid grid-cols-1 gap-6 w-full">
+                {!isTenderPart(resolvedItem) && (
+                  <OverviewSection
+                    title={
+                      isTenderPart(resolvedItem) ? resolvedItem.part_name : null
+                    }
+                    canParticipate={Boolean(
+                      resolvedItem && resolvedItem.can_participate
+                    )}
+                    wadium={(resolvedItem && resolvedItem.wadium_llm) || ""}
+                    completionDate={
+                      (resolvedItem && resolvedItem.ordercompletiondate_llm) ||
+                      ""
+                    }
+                  />
+                )}
+
+                {isTenderPart(resolvedItem) &&
+                  resolvedItem.tender_products &&
+                  resolvedItem.tender_products.length > 0 && (
+                    <ProductsSection products={resolvedItem.tender_products} />
                   )}
-                  wadium={(resolvedItem && resolvedItem.wadium_llm) || ""}
-                  completionDate={
-                    (resolvedItem && resolvedItem.ordercompletiondate_llm) || ""
-                  }
-                />
                 <RequirementsSection
                   met_requirements={
                     (resolvedItem?.met_requirements || []) as string[]
@@ -162,11 +183,11 @@ export function TenderPreview({ tender }: TenderPreviewProps) {
                     (resolvedItem?.not_met_requirements || []) as string[]
                   }
                 />
-                <ReviewCriteriaSection
-                  review_criteria_llm={
-                    (resolvedItem && resolvedItem.review_criteria_llm) || ""
-                  }
-                />
+                {!isTenderPart(resolvedItem) && (
+                  <ReviewCriteriaSection
+                    review_criteria_llm={resolvedItem?.review_criteria_llm}
+                  />
+                )}
                 <DescriptionSection
                   description_long_llm={
                     isTenderPart(resolvedItem)
@@ -174,6 +195,7 @@ export function TenderPreview({ tender }: TenderPreviewProps) {
                       : resolvedItem?.description_long_llm || ""
                   }
                 />
+
                 <AdditionalInfoSection
                   application_form_llm={tender.application_form_llm || ""}
                   payment_terms_llm={tender.payment_terms_llm || ""}

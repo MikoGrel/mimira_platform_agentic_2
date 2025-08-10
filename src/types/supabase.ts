@@ -141,6 +141,41 @@ export type Database = {
           },
         ]
       }
+      documents: {
+        Row: {
+          created_at: string
+          fillable: boolean | null
+          id: number
+          info: string | null
+          s3_path: string | null
+          tender_id: string | null
+        }
+        Insert: {
+          created_at: string
+          fillable?: boolean | null
+          id?: number
+          info?: string | null
+          s3_path?: string | null
+          tender_id?: string | null
+        }
+        Update: {
+          created_at?: string
+          fillable?: boolean | null
+          id?: number
+          info?: string | null
+          s3_path?: string | null
+          tender_id?: string | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "documents_tender_id_fkey"
+            columns: ["tender_id"]
+            isOneToOne: false
+            referencedRelation: "tenders"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
       product_catalogues_customers: {
         Row: {
           created_at: string
@@ -181,39 +216,6 @@ export type Database = {
         Relationships: [
           {
             foreignKeyName: "fk_profiles_customer"
-            columns: ["customer"]
-            isOneToOne: false
-            referencedRelation: "customers"
-            referencedColumns: ["company"]
-          },
-        ]
-      }
-      tender_archivals: {
-        Row: {
-          customer: string | null
-          id: string
-          tender_id: string | null
-        }
-        Insert: {
-          customer?: string | null
-          id?: string
-          tender_id?: string | null
-        }
-        Update: {
-          customer?: string | null
-          id?: string
-          tender_id?: string | null
-        }
-        Relationships: [
-          {
-            foreignKeyName: "fk_tender"
-            columns: ["tender_id"]
-            isOneToOne: false
-            referencedRelation: "tenders"
-            referencedColumns: ["id"]
-          },
-          {
-            foreignKeyName: "fk_tender_archivals_customer"
             columns: ["customer"]
             isOneToOne: false
             referencedRelation: "customers"
@@ -308,7 +310,22 @@ export type Database = {
           requirements_to_confirm?: string | null
           tender_id?: string | null
         }
-        Relationships: []
+        Relationships: [
+          {
+            foreignKeyName: "fk_tender_products_tender_parts"
+            columns: ["part_uuid"]
+            isOneToOne: false
+            referencedRelation: "tender_parts"
+            referencedColumns: ["part_uuid"]
+          },
+          {
+            foreignKeyName: "fk_tenders_tender_producs"
+            columns: ["tender_id"]
+            isOneToOne: false
+            referencedRelation: "tenders"
+            referencedColumns: ["id"]
+          },
+        ]
       }
       tender_requirements: {
         Row: {

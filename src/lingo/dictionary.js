@@ -596,6 +596,190 @@ export default {
         },
       },
     },
+    "features/inbox/components/products-section.tsx": {
+      entries: {
+        "3/declaration/body/1/argument/1": {
+          content: {
+            en: "Products",
+            pl: "Produkty",
+          },
+          hash: "a003449ecbde6b7a73044f46ea6bbe75",
+        },
+        "3/declaration/body/1/argument/3/1/1/expression/0/body/3/1/expression/right/1":
+          {
+            content: {
+              en: "Spec:",
+              pl: "Specyfikacja:",
+            },
+            hash: "691f4af6bbc13518a408122a07528e1b",
+          },
+        "3/declaration/body/1/argument/3/1/1/expression/0/body/3/3/expression/right/1":
+          {
+            content: {
+              en: "Quantity:",
+              pl: "Ilość:",
+            },
+            hash: "d4c0f34abef974881c066c9cfc04025c",
+          },
+        "3/declaration/body/1/argument/3/1/1/expression/0/body/3/5/expression/right/1":
+          {
+            content: {
+              en: "Closest match:",
+              pl: "Najbliższe dopasowanie:",
+            },
+            hash: "8998d333d4b15020241cc7690a2ee663",
+          },
+        "3/declaration/body/1/argument/3/1/1/expression/0/body/3/7/expression/right/1":
+          {
+            content: {
+              en: "Reqs to confirm:",
+              pl: "Wymagania do potwierdzenia:",
+            },
+            hash: "403d2d004685f4ea1fd1024e28926285",
+          },
+        "3/declaration/body/1/argument/3/1/1/expression/0/body/3/9/expression/right/1":
+          {
+            content: {
+              en: "Alternatives:",
+              pl: "Alternatywy:",
+            },
+            hash: "14f8f451f2015515117525d0f9e2c6ff",
+          },
+        "4/declaration/body/1/argument/1": {
+          content: {
+            en: "Products <element:span>({products.length})</element:span>",
+            pl: "Produkty <element:span>({products.length})</element:span>",
+          },
+          hash: "b8638560dd4d00bd02c41fa219c182f2",
+        },
+        "4/declaration/body/1/argument/3/1/1/expression/0/body/3/1/expression/right/1":
+          {
+            content: {
+              en: "Spec:",
+              pl: "Specyfikacja:",
+            },
+            hash: "691f4af6bbc13518a408122a07528e1b",
+          },
+        "4/declaration/body/1/argument/3/1/1/expression/0/body/3/3/expression/right/1":
+          {
+            content: {
+              en: "Quantity:",
+              pl: "Ilość:",
+            },
+            hash: "d4c0f34abef974881c066c9cfc04025c",
+          },
+        "4/declaration/body/1/argument/3/1/1/expression/0/body/3/5/expression/right/1":
+          {
+            content: {
+              en: "Closest match:",
+              pl: "Najbliższe dopasowanie:",
+            },
+            hash: "8998d333d4b15020241cc7690a2ee663",
+          },
+        "4/declaration/body/1/argument/3/1/1/expression/0/body/3/7/expression/right/1":
+          {
+            content: {
+              en: "Reqs to confirm:",
+              pl: "Wymagania do potwierdzenia:",
+            },
+            hash: "403d2d004685f4ea1fd1024e28926285",
+          },
+        "4/declaration/body/1/argument/3/1/1/expression/0/body/3/9/expression/right/1":
+          {
+            content: {
+              en: "Alternatives:",
+              pl: "Alternatywy:",
+            },
+            hash: "14f8f451f2015515117525d0f9e2c6ff",
+          },
+        "4/declaration/body/2/argument/1": {
+          content: {
+            en: "Products <element:span>({products.length})</element:span>",
+            pl: "Produkty <element:span>({products.length})</element:span>",
+          },
+          hash: "b8638560dd4d00bd02c41fa219c182f2",
+        },
+        "4/declaration/body/2/argument/3/1/1/expression/0/body/3/expression/right/1":
+          {
+            content: {
+              en: "<element:ClipboardIcon></element:ClipboardIcon> Spec",
+              pl: "<element:ClipboardIcon></element:ClipboardIcon> Specyfikacja",
+            },
+            hash: "083a56192fe060fc56586ed41fc7a5ac",
+          },
+        "4/declaration/body/2/argument/3/1/1/expression/0/body/5/expression/right/3":
+          {
+            content: {
+              en: "Closest match:",
+              pl: "Najbliższe dopasowanie:",
+            },
+            hash: "8998d333d4b15020241cc7690a2ee663",
+          },
+        "4/declaration/body/2/argument/3/1/1/expression/0/body/7/expression/right/1/3":
+          {
+            content: {
+              en: "Requirements to confirm",
+              pl: "Wymagania do potwierdzenia",
+            },
+            hash: "0a11a1a9f68f5869a302ce40ed55538e",
+          },
+        "4/declaration/body/2/argument/3/1/1/expression/0/body/9/expression/right/1/3":
+          {
+            content: {
+              en: "Alternative products",
+              pl: "Produkty alternatywne",
+            },
+            hash: "317417f90dbcaa4f302701e4441eca04",
+          },
+        "5/declaration/body/2/argument/1": {
+          content: {
+            en: "Products <element:span>({products.length})</element:span>",
+            pl: "Produkty <element:span>({products.length})</element:span>",
+          },
+          hash: "b8638560dd4d00bd02c41fa219c182f2",
+        },
+        "5/declaration/body/2/argument/3/1/1/expression/0/body/1/3/expression/right/1":
+          {
+            content: {
+              en: "<element:ClipboardIcon></element:ClipboardIcon> Spec",
+              pl: "<element:ClipboardIcon></element:ClipboardIcon> Specyfikacja",
+            },
+            hash: "890b77582f71cc950ccfd56c872e4f5e",
+          },
+        "5/declaration/body/2/argument/3/1/1/expression/0/body/1/5/expression/right/1/3":
+          {
+            content: {
+              en: "Closest match",
+              pl: "Najbliższe dopasowanie",
+            },
+            hash: "dc38da30818aed3a65242dbb5f8345d7",
+          },
+        "5/declaration/body/2/argument/3/1/1/expression/0/body/1/5/expression/right/3":
+          {
+            content: {
+              en: "Closest match:",
+              pl: "Najbliższe dopasowanie:",
+            },
+            hash: "8998d333d4b15020241cc7690a2ee663",
+          },
+        "5/declaration/body/2/argument/3/1/1/expression/0/body/1/7/expression/right/1/3":
+          {
+            content: {
+              en: "Requirements to confirm",
+              pl: "Wymagania do potwierdzenia",
+            },
+            hash: "53cc6c9110ae6338416e67558687de0d",
+          },
+        "5/declaration/body/2/argument/3/1/1/expression/0/body/1/9/expression/right/1/3":
+          {
+            content: {
+              en: "Alternative products",
+              pl: "Produkty alternatywne",
+            },
+            hash: "b3102bae97283e81ae9f523a753979c6",
+          },
+      },
+    },
     "features/inbox/components/requirements-list.tsx": {
       entries: {
         "3/declaration/body/3/argument/1/5": {
@@ -1783,6 +1967,168 @@ export default {
           },
           hash: "fce70517f1edc1f1054823ec6ea3d4f3",
         },
+        "9/declaration/body/6/argument/3/1/expression/right/3/expression/right/1":
+          {
+            content: {
+              en: "Restore",
+              pl: "Przywróć",
+            },
+            hash: "ec219bedbdb1c917a22029501148caeb",
+          },
+        "9/declaration/body/6/argument/3/1/expression/right/5/expression/right/1/expression/right/1":
+          {
+            content: {
+              en: "Apply",
+            },
+            hash: "dd3ebfeca53ad9f644db87630d1dd7bb",
+          },
+        "9/declaration/body/6/argument/3/1/expression/right/5/expression/right/1/expression/right/3":
+          {
+            content: {
+              en: "Reject",
+              pl: "Odrzuć",
+            },
+            hash: "94363fc1a1ab2ce680c3b6141d6fc97b",
+          },
+        "9/declaration/body/6/argument/3/1/expression/right/5/expression/right/3/expression/right/1/expression/alternate":
+          {
+            content: {
+              en: "Approve",
+              pl: "Zatwierdź",
+            },
+            hash: "b9a806cc209d1e51f41979964198539b",
+          },
+        "9/declaration/body/6/argument/3/1/expression/right/5/expression/right/3/expression/right/1/expression/consequent":
+          {
+            content: {
+              en: "Unselect",
+              pl: "Odznacz",
+            },
+            hash: "16bf6ff7e1d27f9a607164e90d515b81",
+          },
+        "9/declaration/body/6/argument/3/1/expression/right/5/expression/right/5/expression/right/1":
+          {
+            content: {
+              en: "Apply to selected parts",
+            },
+            hash: "13b87825c2d8d3b3fe07a09ad8f0ce42",
+          },
+        "9/declaration/body/6/argument/3/1/expression/right/5/expression/right/5/expression/right/3":
+          {
+            content: {
+              en: "Unselect all",
+              pl: "Odznacz wszystko",
+            },
+            hash: "89c0a44bb05b3ec6af54419a8c425a5e",
+          },
+        "9/declaration/body/6/argument/5/1/expression/right/3/expression/right/1":
+          {
+            content: {
+              en: "Restore",
+              pl: "Przywróć",
+            },
+            hash: "ec219bedbdb1c917a22029501148caeb",
+          },
+        "9/declaration/body/6/argument/5/1/expression/right/5/expression/right/1/expression/right/1":
+          {
+            content: {
+              en: "Apply",
+            },
+            hash: "dd3ebfeca53ad9f644db87630d1dd7bb",
+          },
+        "9/declaration/body/6/argument/5/1/expression/right/5/expression/right/1/expression/right/3":
+          {
+            content: {
+              en: "Reject",
+              pl: "Odrzuć",
+            },
+            hash: "94363fc1a1ab2ce680c3b6141d6fc97b",
+          },
+        "9/declaration/body/6/argument/5/1/expression/right/5/expression/right/3/expression/right/1/expression/alternate":
+          {
+            content: {
+              en: "Approve",
+              pl: "Zatwierdź",
+            },
+            hash: "b9a806cc209d1e51f41979964198539b",
+          },
+        "9/declaration/body/6/argument/5/1/expression/right/5/expression/right/3/expression/right/1/expression/consequent":
+          {
+            content: {
+              en: "Unselect",
+              pl: "Odznacz",
+            },
+            hash: "16bf6ff7e1d27f9a607164e90d515b81",
+          },
+        "9/declaration/body/6/argument/5/1/expression/right/5/expression/right/5/expression/right/1":
+          {
+            content: {
+              en: "Apply to selected parts",
+            },
+            hash: "13b87825c2d8d3b3fe07a09ad8f0ce42",
+          },
+        "9/declaration/body/6/argument/5/1/expression/right/5/expression/right/5/expression/right/3":
+          {
+            content: {
+              en: "Unselect all",
+              pl: "Odznacz wszystko",
+            },
+            hash: "89c0a44bb05b3ec6af54419a8c425a5e",
+          },
+        "9/declaration/body/6/argument/5/expression/right/3/expression/right/1":
+          {
+            content: {
+              en: "Restore",
+              pl: "Przywróć",
+            },
+            hash: "9bdc81c2c478926c820a71d55bd0d6f5",
+          },
+        "9/declaration/body/6/argument/5/expression/right/5/expression/right/1/expression/right/1":
+          {
+            content: {
+              en: "Apply",
+            },
+            hash: "3c759ab832d6ab75ae050da5cb1b826c",
+          },
+        "9/declaration/body/6/argument/5/expression/right/5/expression/right/1/expression/right/3":
+          {
+            content: {
+              en: "Reject",
+              pl: "Odrzuć",
+            },
+            hash: "93f700a2adda13be3723040c587ab812",
+          },
+        "9/declaration/body/6/argument/5/expression/right/5/expression/right/3/expression/right/1/expression/alternate":
+          {
+            content: {
+              en: "Approve",
+              pl: "Zatwierdź",
+            },
+            hash: "1d6b7baeeb99dac3833b170dd47c6171",
+          },
+        "9/declaration/body/6/argument/5/expression/right/5/expression/right/3/expression/right/1/expression/consequent":
+          {
+            content: {
+              en: "Unselect",
+              pl: "Odznacz",
+            },
+            hash: "25e032c7b038b333cf98ee01fd16b586",
+          },
+        "9/declaration/body/6/argument/5/expression/right/5/expression/right/5/expression/right/1":
+          {
+            content: {
+              en: "Apply to selected parts",
+            },
+            hash: "72bd9abcd377cb9268a5bbb3f7efb0da",
+          },
+        "9/declaration/body/6/argument/5/expression/right/5/expression/right/5/expression/right/3":
+          {
+            content: {
+              en: "Unselect all",
+              pl: "Odznacz wszystko",
+            },
+            hash: "40e4856fce1723ab765f7af6042f348c",
+          },
         "9/declaration/body/6/argument/7/1/expression/right/3/expression/right/1":
           {
             content: {
@@ -1836,6 +2182,60 @@ export default {
               pl: "Odznacz wszystko",
             },
             hash: "89c0a44bb05b3ec6af54419a8c425a5e",
+          },
+        "9/declaration/body/6/argument/7/expression/right/3/expression/right/1":
+          {
+            content: {
+              en: "Restore",
+              pl: "Przywróć",
+            },
+            hash: "9bdc81c2c478926c820a71d55bd0d6f5",
+          },
+        "9/declaration/body/6/argument/7/expression/right/5/expression/right/1/expression/right/1":
+          {
+            content: {
+              en: "Apply",
+            },
+            hash: "3c759ab832d6ab75ae050da5cb1b826c",
+          },
+        "9/declaration/body/6/argument/7/expression/right/5/expression/right/1/expression/right/3":
+          {
+            content: {
+              en: "Reject",
+              pl: "Odrzuć",
+            },
+            hash: "93f700a2adda13be3723040c587ab812",
+          },
+        "9/declaration/body/6/argument/7/expression/right/5/expression/right/3/expression/right/1/expression/alternate":
+          {
+            content: {
+              en: "Approve",
+              pl: "Zatwierdź",
+            },
+            hash: "1d6b7baeeb99dac3833b170dd47c6171",
+          },
+        "9/declaration/body/6/argument/7/expression/right/5/expression/right/3/expression/right/1/expression/consequent":
+          {
+            content: {
+              en: "Unselect",
+              pl: "Odznacz",
+            },
+            hash: "25e032c7b038b333cf98ee01fd16b586",
+          },
+        "9/declaration/body/6/argument/7/expression/right/5/expression/right/5/expression/right/1":
+          {
+            content: {
+              en: "Apply to selected parts",
+            },
+            hash: "72bd9abcd377cb9268a5bbb3f7efb0da",
+          },
+        "9/declaration/body/6/argument/7/expression/right/5/expression/right/5/expression/right/3":
+          {
+            content: {
+              en: "Unselect all",
+              pl: "Odznacz wszystko",
+            },
+            hash: "40e4856fce1723ab765f7af6042f348c",
           },
         "9/declaration/body/6/argument/9/expression/right/3/expression/right/1":
           {
@@ -2326,6 +2726,57 @@ export default {
               pl: "Zakończenie: ",
             },
             hash: "02db4c377c520adfab6b28ad89dcc12a",
+          },
+        "9/declaration/body/9/argument/1/1/expression/right/1": {
+          content: {
+            en: "Tender Parts ({tenderParts.length})",
+            pl: "Części przetargu ({tenderParts.length})",
+          },
+          hash: "c3fedcbc76eb469cff51935bf57af34e",
+        },
+        "9/declaration/body/9/argument/1/5/1/1/1/1/1/1/1": {
+          content: {
+            en: "Overview",
+            pl: "Przegląd",
+          },
+          hash: "30c54e4dc4ce599b87d94be34a8617f5",
+        },
+        "9/declaration/body/9/argument/1/5/1/1/1/1/3/1": {
+          content: {
+            en: "General information about this tender",
+            pl: "Ogólne informacje o tym przetargu",
+          },
+          hash: "0f9d23cc765542b37eca23e742ebb37f",
+        },
+        "9/declaration/body/9/argument/1/5/1/1/3/expression/0/body/1/1/1/1/3": {
+          content: {
+            en: "Part #<expression/>",
+            pl: "Część nr <expression/>",
+          },
+          hash: "c081b0ad6c5ade48dc86c5a2f409e75f",
+        },
+        "9/declaration/body/9/argument/1/5/1/1/3/expression/0/body/1/3/1/1/1": {
+          content: {
+            en: "Requirements:",
+            pl: "Wymagania:",
+          },
+          hash: "f27235edc5c81fa9d3422b1bb9bf98c0",
+        },
+        "9/declaration/body/9/argument/1/5/1/1/3/expression/0/body/1/3/1/1/3/3":
+          {
+            content: {
+              en: "/",
+              pl: "/",
+            },
+            hash: "d727054cb65d0e95c79cfb34bc3e3f28",
+          },
+        "9/declaration/body/9/argument/1/5/1/1/3/expression/0/body/1/3/1/3/expression/right/1":
+          {
+            content: {
+              en: "Wadium: ",
+              pl: "Wadium: ",
+            },
+            hash: "a7908a3166c9eccd9acd413e39b72c11",
           },
       },
     },
@@ -3094,6 +3545,38 @@ export default {
             pl: "Wyloguj się",
           },
           hash: "06efb815f8e1f5d09e63d262ba48b4e7",
+        },
+      },
+    },
+    "features/products/components/product-card.tsx": {
+      entries: {
+        "5/declaration/body/1/argument/1/3/expression/right/1": {
+          content: {
+            en: "Specyfikacja",
+            pl: "Specyfikacja",
+          },
+          hash: "6c8eaa295920c5d778b6b51db63868ea",
+        },
+        "5/declaration/body/1/argument/1/5/expression/right/1/3": {
+          content: {
+            en: "Najbliższe dopasowanie",
+            pl: "Najbliższe dopasowanie",
+          },
+          hash: "047303cf0d2a5ff137ce82680446aa62",
+        },
+        "5/declaration/body/1/argument/1/7/expression/right/1/3": {
+          content: {
+            en: "Wymagania do potwierdzenia",
+            pl: "Wymagania do potwierdzenia",
+          },
+          hash: "4c44096e39d9b260612fadb21213ef13",
+        },
+        "5/declaration/body/1/argument/1/9/expression/right/1/3": {
+          content: {
+            en: "Produkty alternatywne",
+            pl: "Produkty alternatywne",
+          },
+          hash: "c9aff1fc820c52cb990911cc6e113f1c",
         },
       },
     },

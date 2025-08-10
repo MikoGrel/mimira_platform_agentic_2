@@ -75,6 +75,15 @@ export default function useTenderInboxQuery({
         .select(
           `
           *,
+          tender_products (
+            part_uuid,
+            product_req_name,
+            product_req_quantity,
+            product_req_spec,
+            requirements_to_confirm,
+            alternative_products,
+            closest_match
+          ),
           tender_parts (
            part_uuid,
            part_id,
@@ -88,7 +97,16 @@ export default function useTenderInboxQuery({
            needs_confirmation_requirements,
            not_met_requirements,
            status,
-           can_participate
+           can_participate,
+           tender_products (
+            part_uuid,
+            product_req_name,
+            product_req_quantity,
+            product_req_spec,
+            requirements_to_confirm,
+            alternative_products,
+            closest_match
+           )
           )
           `,
           { count: "exact" }

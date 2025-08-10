@@ -54,6 +54,9 @@ export function TenderPartsCarousel({
     emblaApi.on("reInit", onSelect);
   }, [emblaApi, onSelect]);
 
+  const isApproved = (part: Tables<"tender_parts">) =>
+    approvedPartIds.has(part.part_uuid);
+
   if (!tenderParts?.length) return null;
 
   return (
@@ -158,13 +161,17 @@ export function TenderPartsCarousel({
                           {approvedPartIds.has(part.part_uuid) && (
                             <Check className="w-3 h-3 text-blue-600" />
                           )}
-                          <h3 className="text-muted-foreground">
+                          <h3
+                            className={cn("text-muted-foreground", {
+                              "text-primary": isApproved(part),
+                            })}
+                          >
                             Part #{index + 1}
                           </h3>
                         </div>
                       </div>
-                      <h4 className="text-left line-clamp-2 text-font-base font-semibold">
-                        {part.part_name}
+                      <h4 className="text-left line-clamp-2 text-font-base font-semibold w-full">
+                        {part.part_name?.trim()}
                       </h4>
                     </CardHeader>
                     <CardBody className="pt-0 px-3 pb-3 text-muted-foreground">
@@ -177,14 +184,14 @@ export function TenderPartsCarousel({
                           duration: 0.2,
                         }}
                       >
-                        <div className="flex items-center justify-between text-xs">
-                          <span>Requirements:</span>
-                          <div className="flex gap-1">
+                        <div className="text-xs w-full">
+                          <span className="inline">Requirements:</span>
+                          <div className="gap-1 inline-flex ml-1">
                             <span className="text-green-600 font-medium">
                               {part.met_requirements?.length || 0}
                             </span>
                             <span className="text-gray-400">/</span>
-                            <span>
+                            <span className="text-warning-600 font-medium">
                               {(part.met_requirements?.length || 0) +
                                 (part.needs_confirmation_requirements?.length ||
                                   0) +
@@ -194,18 +201,12 @@ export function TenderPartsCarousel({
                         </div>
 
                         {part.wadium_llm && (
-                          <div className="text-xs flex items-center justify-between">
-                            <span>Wadium: </span>
-                            <span className="font-medium">
+                          <div className="text-xs w-full">
+                            <span className="inline">Wadium: </span>
+                            <span className="font-medium text-left">
                               {part.wadium_llm}
                             </span>
                           </div>
-                        )}
-
-                        {part.ordercompletiondate_llm && (
-                          <p className="text-xs mt-1 leading-snug">
-                            {part.ordercompletiondate_llm}
-                          </p>
                         )}
                       </motion.div>
                     </CardBody>

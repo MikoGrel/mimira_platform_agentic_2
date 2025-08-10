@@ -70,6 +70,7 @@ export function TenderHeader({
       <motion.h1
         className="font-semibold w-2/3 mb-2"
         variants={h1Variants}
+        initial="expanded"
         animate={isHeaderCollapsed ? "collapsed" : "expanded"}
         transition={{ duration: 0.3, ease: "easeInOut" }}
       >
