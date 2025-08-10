@@ -181,6 +181,45 @@ export default {
         },
       },
     },
+    "app/(platform)/login/page.tsx": {
+      entries: {
+        "11/declaration/body/0/expression/1": {
+          content: {
+            en: "Logged out successfully",
+            pl: "Wylogowano pomyślnie",
+          },
+          hash: "1dd7a3bce7f7d46670dbd5de79f32c93",
+        },
+        "11/declaration/body/10/argument/1/3/3": {
+          content: {
+            en: "Welcome back!",
+            pl: "Witamy ponownie!",
+          },
+          hash: "808098dce4fa0b1b9c4cfc57189f9da1",
+        },
+        "11/declaration/body/10/argument/1/3/5": {
+          content: {
+            en: "Log in to browse, analyze and manage your tenders.",
+            pl: "Zaloguj się, aby przeglądać, analizować i zarządzać swoimi przetargami.",
+          },
+          hash: "bc08d7a9c081e38025ff84e56960c8dc",
+        },
+        "11/declaration/body/10/argument/1/5/1": {
+          content: {
+            en: "Trusted by:",
+            pl: "Zaufali nam:",
+          },
+          hash: "2f30f0e419c4906cb48884c792d03a5a",
+        },
+        "11/declaration/body/10/argument/3/3": {
+          content: {
+            en: "You don't have an account?<element:Link>Contact us</element:Link>",
+            pl: "Nie masz konta?<element:Link>Skontaktuj się z nami</element:Link>",
+          },
+          hash: "560ab78ac75a5b5df43ae45aa64f171e",
+        },
+      },
+    },
     "app/error.tsx": {
       entries: {
         "0/declaration/body/0/argument": {
@@ -250,6 +289,137 @@ export default {
             pl: "Przełącz pasek boczny",
           },
           hash: "0ef91fcb33b04612eb8a202f673d7881",
+        },
+      },
+    },
+    "features/auth/components/email-sent-message.tsx": {
+      entries: {
+        "3/declaration/body/0/argument/1/3": {
+          content: {
+            en: "Check Your Email:",
+            pl: "Sprawdź swój e-mail:",
+          },
+          hash: "5ceca09d8c1c94e75930be224dad6ccf",
+        },
+        "3/declaration/body/0/argument/1/5": {
+          content: {
+            en: "We've sent a password reset link to <element:span>{resetEmail}</element:span>",
+            pl: "Wysłaliśmy link do zresetowania hasła na <element:span>{resetEmail}</element:span>",
+          },
+          hash: "af47852d9b2545938f28788b1837b136",
+        },
+        "3/declaration/body/0/argument/1/7": {
+          content: {
+            en: "Didn't receive the email? Check your spam folder or try again.",
+            pl: "Nie otrzymałeś e-maila? Sprawdź folder ze spamem lub spróbuj ponownie.",
+          },
+          hash: "22cf97fb73c270e87c6bc4ae49fb39d5",
+        },
+        "3/declaration/body/0/argument/3/1": {
+          content: {
+            en: "Back to Login",
+            pl: "Powrót do logowania",
+          },
+          hash: "af1fe3e18ab8816b295086f5caa19bbb",
+        },
+      },
+    },
+    "features/auth/components/forgot-password-form.tsx": {
+      entries: {
+        "6/body/1/argument": {
+          content: {
+            en: "Send Reset Link",
+            pl: "Wyślij link resetujący",
+          },
+          hash: "8348c4baada14cc0ae5abbe99d96f98e",
+        },
+        "7/declaration/body/0/argument/1/1": {
+          content: {
+            en: "Reset Password:",
+            pl: "Resetowanie hasła:",
+          },
+          hash: "f879d60ac5b417206b5dba472fd18fbb",
+        },
+        "7/declaration/body/0/argument/1/3": {
+          content: {
+            en: "Enter your email address and we'll send you a link to reset your password",
+            pl: "Wprowadź swój adres e-mail, a wyślemy Ci link do zresetowania hasła",
+          },
+          hash: "6e820fc1a74664b8acdb6f563412e0b0",
+        },
+        "7/declaration/body/0/argument/3/3-label": {
+          content: {
+            en: "Email",
+            pl: "E-mail",
+          },
+          hash: "e7f34943a0c2fb849db1839ff6ef5cb5",
+        },
+        "7/declaration/body/0/argument/3/3-placeholder": {
+          content: {
+            en: "Enter your email address",
+            pl: "Wprowadź swój adres e-mail",
+          },
+          hash: "9bc008365ebe3e404e241c8ca876f56e",
+        },
+        "7/declaration/body/0/argument/3/7": {
+          content: {
+            en: "Back to Login",
+            pl: "Powrót do logowania",
+          },
+          hash: "af1fe3e18ab8816b295086f5caa19bbb",
+        },
+      },
+    },
+    "features/auth/components/login-form.tsx": {
+      entries: {
+        "6/body/1/argument": {
+          content: {
+            en: "Log in",
+            pl: "Zaloguj się",
+          },
+          hash: "f902082746b643593b910bcd7d1ebcf9",
+        },
+        "7/declaration/body/0/argument/1/1": {
+          content: {
+            en: "Log in:",
+            pl: "Zaloguj się:",
+          },
+          hash: "8ef279de0a4c87e9b25cef41ab9651f0",
+        },
+        "7/declaration/body/0/argument/1/3": {
+          content: {
+            en: "Enter your email address and password to enter your dashboard",
+            pl: "Wprowadź swój adres e-mail i hasło, aby uzyskać dostęp do panelu",
+          },
+          hash: "78c8c873e0f2083d7ed85523a68a72e7",
+        },
+        "7/declaration/body/0/argument/3/3-label": {
+          content: {
+            en: "Email",
+            pl: "E-mail",
+          },
+          hash: "e7f34943a0c2fb849db1839ff6ef5cb5",
+        },
+        "7/declaration/body/0/argument/3/5-label": {
+          content: {
+            en: "Password",
+            pl: "Hasło",
+          },
+          hash: "223a61cf906ab9c40d22612c588dff48",
+        },
+        "7/declaration/body/0/argument/3/7/1": {
+          content: {
+            en: "Remember me",
+            pl: "Zapamiętaj mnie",
+          },
+          hash: "afc02ff1df56ecf8493e9e201592d764",
+        },
+        "7/declaration/body/0/argument/3/7/3": {
+          content: {
+            en: "Forgot password?",
+            pl: "Zapomniałeś hasła?",
+          },
+          hash: "4a0a69c05d0946a79ac6cc32bbb3c615",
         },
       },
     },
@@ -352,6 +522,48 @@ export default {
     },
     "features/inbox/components/additional-info-section.tsx": {
       entries: {
+        "1/declaration/body/0/argument/1": {
+          content: {
+            en: "Additional Information",
+            pl: "Dodatkowe informacje",
+          },
+          hash: "8d1fc247855abcb3e1ab7ddbbb742945",
+        },
+        "1/declaration/body/0/argument/3/1/1/expression/right-title": {
+          content: {
+            en: "Application Form",
+            pl: "Formularz zgłoszeniowy",
+          },
+          hash: "c59c5c19b7235bd028026a6088c90b9b",
+        },
+        "1/declaration/body/0/argument/3/1/3/expression/right-title": {
+          content: {
+            en: "Payment Terms",
+            pl: "Warunki płatności",
+          },
+          hash: "ca6f26774e7e5e2c51cb11b7e305e5e2",
+        },
+        "1/declaration/body/0/argument/3/1/5/expression/right-title": {
+          content: {
+            en: "Contract Penalties",
+            pl: "Kary umowne",
+          },
+          hash: "02fb39147ed4e21a831c31033ec0221b",
+        },
+        "1/declaration/body/0/argument/3/1/7/expression/right-title": {
+          content: {
+            en: "Deposit Information",
+            pl: "Informacje o zaliczce",
+          },
+          hash: "34d811d0d02e76753d176ae6b99fb933",
+        },
+        "1/declaration/body/0/argument/3/1/9/expression/right/1": {
+          content: {
+            en: "Source URL",
+            pl: "Źródłowy URL",
+          },
+          hash: "72378667b9dc0085f00ab6ab5909db4c",
+        },
         "2/declaration/body/0/argument/1": {
           content: {
             en: "Additional Information",
@@ -394,10 +606,66 @@ export default {
           },
           hash: "72378667b9dc0085f00ab6ab5909db4c",
         },
+        "5/declaration/body/0/argument/1": {
+          content: {
+            en: "Additional Information",
+            pl: "Dodatkowe informacje",
+          },
+          hash: "8d1fc247855abcb3e1ab7ddbbb742945",
+        },
+        "5/declaration/body/0/argument/3/1/1/expression/right-title": {
+          content: {
+            en: "Application Form",
+            pl: "Formularz zgłoszeniowy",
+          },
+          hash: "c59c5c19b7235bd028026a6088c90b9b",
+        },
+        "5/declaration/body/0/argument/3/1/3/expression/right-title": {
+          content: {
+            en: "Payment Terms",
+            pl: "Warunki płatności",
+          },
+          hash: "ca6f26774e7e5e2c51cb11b7e305e5e2",
+        },
+        "5/declaration/body/0/argument/3/1/5/expression/right-title": {
+          content: {
+            en: "Contract Penalties",
+            pl: "Kary umowne",
+          },
+          hash: "02fb39147ed4e21a831c31033ec0221b",
+        },
+        "5/declaration/body/0/argument/3/1/7/expression/right-title": {
+          content: {
+            en: "Deposit Information",
+            pl: "Informacje o zaliczce",
+          },
+          hash: "34d811d0d02e76753d176ae6b99fb933",
+        },
+        "5/declaration/body/0/argument/3/1/9/expression/right/1": {
+          content: {
+            en: "Source URL",
+            pl: "Źródłowy URL",
+          },
+          hash: "72378667b9dc0085f00ab6ab5909db4c",
+        },
       },
     },
     "features/inbox/components/description-section.tsx": {
       entries: {
+        "2/declaration/body/0/argument/1": {
+          content: {
+            en: "Description",
+            pl: "Opis",
+          },
+          hash: "e17686a22ffad04cc7bb70524ed4478b",
+        },
+        "2/declaration/body/0/argument/3/1/expression/alternate": {
+          content: {
+            en: "No detailed description available",
+            pl: "Brak szczegółowego opisu",
+          },
+          hash: "5a678e8cb008d9e16b7555a27eac9dfc",
+        },
         "3/declaration/body/0/argument/1": {
           content: {
             en: "Description",
@@ -406,6 +674,20 @@ export default {
           hash: "e17686a22ffad04cc7bb70524ed4478b",
         },
         "3/declaration/body/0/argument/3/1/expression/alternate": {
+          content: {
+            en: "No detailed description available",
+            pl: "Brak szczegółowego opisu",
+          },
+          hash: "5a678e8cb008d9e16b7555a27eac9dfc",
+        },
+        "5/declaration/body/0/argument/1": {
+          content: {
+            en: "Description",
+            pl: "Opis",
+          },
+          hash: "e17686a22ffad04cc7bb70524ed4478b",
+        },
+        "5/declaration/body/0/argument/3/1/expression/alternate": {
           content: {
             en: "No detailed description available",
             pl: "Brak szczegółowego opisu",
@@ -559,6 +841,34 @@ export default {
     },
     "features/inbox/components/overview-section.tsx": {
       entries: {
+        "3/declaration/body/0/argument/1/0/expression/right": {
+          content: {
+            en: "Overview",
+            pl: "Przegląd",
+          },
+          hash: "30c54e4dc4ce599b87d94be34a8617f5",
+        },
+        "3/declaration/body/0/argument/3/3/1/expression/right-title": {
+          content: {
+            en: "Eligibility",
+            pl: "Kwalifikowalność",
+          },
+          hash: "a895f9c2afd359f5f525b176d1c6010e",
+        },
+        "3/declaration/body/0/argument/3/3/3/expression/right-title": {
+          content: {
+            en: "Wadium",
+            pl: "Wadium",
+          },
+          hash: "cc1df5b4bb18ef18f1084db990961f72",
+        },
+        "3/declaration/body/0/argument/3/3/5/expression/right-title": {
+          content: {
+            en: "Completion Date",
+            pl: "Data zakończenia",
+          },
+          hash: "26465009e23d5f17e452842785193bda",
+        },
         "4/declaration/body/0/argument/1": {
           content: {
             en: "Tender overview {extra}",
@@ -588,6 +898,94 @@ export default {
           hash: "cc1df5b4bb18ef18f1084db990961f72",
         },
         "4/declaration/body/0/argument/3/3/5/expression/right-title": {
+          content: {
+            en: "Completion Date",
+            pl: "Data zakończenia",
+          },
+          hash: "26465009e23d5f17e452842785193bda",
+        },
+        "6/declaration/body/0/argument/1/0/expression/right": {
+          content: {
+            en: "Overview",
+            pl: "Przegląd",
+          },
+          hash: "30c54e4dc4ce599b87d94be34a8617f5",
+        },
+        "6/declaration/body/0/argument/3/3/1/expression/right-title": {
+          content: {
+            en: "Eligibility",
+            pl: "Kwalifikowalność",
+          },
+          hash: "a895f9c2afd359f5f525b176d1c6010e",
+        },
+        "6/declaration/body/0/argument/3/3/3/expression/right-title": {
+          content: {
+            en: "Wadium",
+            pl: "Wadium",
+          },
+          hash: "cc1df5b4bb18ef18f1084db990961f72",
+        },
+        "6/declaration/body/0/argument/3/3/5/expression/right-title": {
+          content: {
+            en: "Completion Date",
+            pl: "Data zakończenia",
+          },
+          hash: "26465009e23d5f17e452842785193bda",
+        },
+        "7/declaration/body/0/argument/1/0/expression/right": {
+          content: {
+            en: "Overview",
+            pl: "Przegląd",
+          },
+          hash: "30c54e4dc4ce599b87d94be34a8617f5",
+        },
+        "7/declaration/body/0/argument/3/3/1/expression/right-title": {
+          content: {
+            en: "Eligibility",
+            pl: "Kwalifikowalność",
+          },
+          hash: "a895f9c2afd359f5f525b176d1c6010e",
+        },
+        "7/declaration/body/0/argument/3/3/1/expression/right/1/expression/alternate":
+          {
+            content: {
+              en: "Not eligible to participate",
+              pl: "Nie kwalifikuje się do udziału",
+            },
+            hash: "0593d8433868dc2c22761f44f8ada96b",
+          },
+        "7/declaration/body/0/argument/3/3/1/expression/right/1/expression/consequent":
+          {
+            content: {
+              en: "Eligible to participate",
+              pl: "Kwalifikuje się do udziału",
+            },
+            hash: "178bdec9274b413eb458a49351fe54a0",
+          },
+        "7/declaration/body/0/argument/3/3/1/expression/right/openingElement/2/value/expression/alternate":
+          {
+            content: {
+              en: "Not eligible to participate",
+              pl: "Nie kwalifikuje się do udziału",
+            },
+            hash: "0593d8433868dc2c22761f44f8ada96b",
+          },
+        "7/declaration/body/0/argument/3/3/1/expression/right/openingElement/2/value/expression/consequent":
+          {
+            content: {
+              en: "Eligible to participate",
+              pl: "Kwalifikuje się do udziału",
+            },
+            hash: "178bdec9274b413eb458a49351fe54a0",
+          },
+        "7/declaration/body/0/argument/3/3/3/expression/right-title": {
+          content: {
+            en: "Wadium",
+            pl: "Wadium",
+          },
+          hash: "cc1df5b4bb18ef18f1084db990961f72",
+        },
+        "7/declaration/body/0/argument/3/3/5/expression/right-title": {
           content: {
             en: "Completion Date",
             pl: "Data zakończenia",
@@ -731,6 +1129,13 @@ export default {
             },
             hash: "317417f90dbcaa4f302701e4441eca04",
           },
+        "5/declaration/body/1/argument/1": {
+          content: {
+            en: "Products <element:span>({products.length})</element:span>",
+            pl: "Produkty <element:span>({products.length})</element:span>",
+          },
+          hash: "b8638560dd4d00bd02c41fa219c182f2",
+        },
         "5/declaration/body/2/argument/1": {
           content: {
             en: "Products <element:span>({products.length})</element:span>",
@@ -778,10 +1183,24 @@ export default {
             },
             hash: "b3102bae97283e81ae9f523a753979c6",
           },
+        "7/declaration/body/1/argument/1": {
+          content: {
+            en: "Products <element:span>({products.length})</element:span>",
+            pl: "Produkty <element:span>({products.length})</element:span>",
+          },
+          hash: "b8638560dd4d00bd02c41fa219c182f2",
+        },
       },
     },
     "features/inbox/components/requirements-list.tsx": {
       entries: {
+        "2/declaration/body/3/argument/1/5": {
+          content: {
+            en: "({items.length})",
+            pl: "({items.length})",
+          },
+          hash: "1409f9e98be0e57da01149ada6e30953",
+        },
         "3/declaration/body/3/argument/1/5": {
           content: {
             en: "({items.length})",
@@ -793,6 +1212,34 @@ export default {
     },
     "features/inbox/components/requirements-section.tsx": {
       entries: {
+        "2/declaration/body/0/argument/1": {
+          content: {
+            en: "Requirements",
+            pl: "Wymagania",
+          },
+          hash: "e108e149e0fd5b65f5850b6f032ccabe",
+        },
+        "2/declaration/body/0/argument/3/1/1-title": {
+          content: {
+            en: "Met Requirements",
+            pl: "Spełnione wymagania",
+          },
+          hash: "f5251ea9ac1d7825fd0b543fb0e0b4f5",
+        },
+        "2/declaration/body/0/argument/3/1/3-title": {
+          content: {
+            en: "Needs Confirmation",
+            pl: "Wymaga potwierdzenia",
+          },
+          hash: "a7d90ec8d0e7143313dfbfd6368cf79c",
+        },
+        "2/declaration/body/0/argument/3/1/5-title": {
+          content: {
+            en: "Not Met Requirements",
+            pl: "Niespełnione wymagania",
+          },
+          hash: "c358cf9796d545d7b72954dc6ddd6dc2",
+        },
         "3/declaration/body/0/argument/1": {
           content: {
             en: "Requirements",
@@ -849,11 +1296,53 @@ export default {
           },
           hash: "c358cf9796d545d7b72954dc6ddd6dc2",
         },
+        "5/declaration/body/0/argument/1": {
+          content: {
+            en: "Requirements",
+            pl: "Wymagania",
+          },
+          hash: "e108e149e0fd5b65f5850b6f032ccabe",
+        },
+        "5/declaration/body/0/argument/3/1/1-title": {
+          content: {
+            en: "Met Requirements",
+            pl: "Spełnione wymagania",
+          },
+          hash: "f5251ea9ac1d7825fd0b543fb0e0b4f5",
+        },
+        "5/declaration/body/0/argument/3/1/3-title": {
+          content: {
+            en: "Needs Confirmation",
+            pl: "Wymaga potwierdzenia",
+          },
+          hash: "a7d90ec8d0e7143313dfbfd6368cf79c",
+        },
+        "5/declaration/body/0/argument/3/1/5-title": {
+          content: {
+            en: "Not Met Requirements",
+            pl: "Niespełnione wymagania",
+          },
+          hash: "c358cf9796d545d7b72954dc6ddd6dc2",
+        },
       },
     },
     "features/inbox/components/review-criteria-section.tsx": {
       entries: {
+        "2/declaration/body/0/argument/1": {
+          content: {
+            en: "Review Criteria",
+            pl: "Kryteria oceny",
+          },
+          hash: "d524df30da3658fdbc1794408fcfdab4",
+        },
         "3/declaration/body/0/argument/1": {
+          content: {
+            en: "Review Criteria",
+            pl: "Kryteria oceny",
+          },
+          hash: "d524df30da3658fdbc1794408fcfdab4",
+        },
+        "5/declaration/body/0/argument/1": {
           content: {
             en: "Review Criteria",
             pl: "Kryteria oceny",

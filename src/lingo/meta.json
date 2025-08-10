@@ -205,6 +205,50 @@
         }
       }
     },
+    "app/(platform)/login/page.tsx": {
+      "scopes": {
+        "11/declaration/body/0/expression/1": {
+          "type": "element",
+          "hash": "1dd7a3bce7f7d46670dbd5de79f32c93",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Logged out successfully"
+        },
+        "11/declaration/body/10/argument/1/3/3": {
+          "type": "element",
+          "hash": "808098dce4fa0b1b9c4cfc57189f9da1",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Welcome back!"
+        },
+        "11/declaration/body/10/argument/1/3/5": {
+          "type": "element",
+          "hash": "bc08d7a9c081e38025ff84e56960c8dc",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Log in to browse, analyze and manage your tenders."
+        },
+        "11/declaration/body/10/argument/1/5/1": {
+          "type": "element",
+          "hash": "2f30f0e419c4906cb48884c792d03a5a",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Trusted by:"
+        },
+        "11/declaration/body/10/argument/3/3": {
+          "type": "element",
+          "hash": "560ab78ac75a5b5df43ae45aa64f171e",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "You don't have an account?<element:Link>Contact us</element:Link>"
+        }
+      }
+    },
     "app/error.tsx": {
       "scopes": {
         "0/declaration/body/0/argument": {
@@ -282,6 +326,154 @@
           "skip": false,
           "overrides": {},
           "content": "Toggle Sidebar"
+        }
+      }
+    },
+    "features/auth/components/email-sent-message.tsx": {
+      "scopes": {
+        "3/declaration/body/0/argument/1/3": {
+          "type": "element",
+          "hash": "5ceca09d8c1c94e75930be224dad6ccf",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Check Your Email:"
+        },
+        "3/declaration/body/0/argument/1/5": {
+          "type": "element",
+          "hash": "af47852d9b2545938f28788b1837b136",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "We've sent a password reset link to <element:span>{resetEmail}</element:span>"
+        },
+        "3/declaration/body/0/argument/1/7": {
+          "type": "element",
+          "hash": "22cf97fb73c270e87c6bc4ae49fb39d5",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Didn't receive the email? Check your spam folder or try again."
+        },
+        "3/declaration/body/0/argument/3/1": {
+          "type": "element",
+          "hash": "af1fe3e18ab8816b295086f5caa19bbb",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Back to Login"
+        }
+      }
+    },
+    "features/auth/components/forgot-password-form.tsx": {
+      "scopes": {
+        "6/body/1/argument": {
+          "type": "element",
+          "hash": "8348c4baada14cc0ae5abbe99d96f98e",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Send Reset Link"
+        },
+        "7/declaration/body/0/argument/1/1": {
+          "type": "element",
+          "hash": "f879d60ac5b417206b5dba472fd18fbb",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Reset Password:"
+        },
+        "7/declaration/body/0/argument/1/3": {
+          "type": "element",
+          "hash": "6e820fc1a74664b8acdb6f563412e0b0",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Enter your email address and we'll send you a link to reset your password"
+        },
+        "7/declaration/body/0/argument/3/3-label": {
+          "type": "attribute",
+          "hash": "e7f34943a0c2fb849db1839ff6ef5cb5",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Email"
+        },
+        "7/declaration/body/0/argument/3/3-placeholder": {
+          "type": "attribute",
+          "hash": "9bc008365ebe3e404e241c8ca876f56e",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Enter your email address"
+        },
+        "7/declaration/body/0/argument/3/7": {
+          "type": "element",
+          "hash": "af1fe3e18ab8816b295086f5caa19bbb",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Back to Login"
+        }
+      }
+    },
+    "features/auth/components/login-form.tsx": {
+      "scopes": {
+        "6/body/1/argument": {
+          "type": "element",
+          "hash": "f902082746b643593b910bcd7d1ebcf9",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Log in"
+        },
+        "7/declaration/body/0/argument/1/1": {
+          "type": "element",
+          "hash": "8ef279de0a4c87e9b25cef41ab9651f0",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Log in:"
+        },
+        "7/declaration/body/0/argument/1/3": {
+          "type": "element",
+          "hash": "78c8c873e0f2083d7ed85523a68a72e7",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Enter your email address and password to enter your dashboard"
+        },
+        "7/declaration/body/0/argument/3/3-label": {
+          "type": "attribute",
+          "hash": "e7f34943a0c2fb849db1839ff6ef5cb5",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Email"
+        },
+        "7/declaration/body/0/argument/3/5-label": {
+          "type": "attribute",
+          "hash": "223a61cf906ab9c40d22612c588dff48",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Password"
+        },
+        "7/declaration/body/0/argument/3/7/1": {
+          "type": "element",
+          "hash": "afc02ff1df56ecf8493e9e201592d764",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Remember me"
+        },
+        "7/declaration/body/0/argument/3/7/3": {
+          "type": "element",
+          "hash": "4a0a69c05d0946a79ac6cc32bbb3c615",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Forgot password?"
         }
       }
     },
@@ -395,6 +587,54 @@
     },
     "features/inbox/components/additional-info-section.tsx": {
       "scopes": {
+        "1/declaration/body/0/argument/1": {
+          "type": "element",
+          "hash": "8d1fc247855abcb3e1ab7ddbbb742945",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Additional Information"
+        },
+        "1/declaration/body/0/argument/3/1/1/expression/right-title": {
+          "type": "attribute",
+          "hash": "c59c5c19b7235bd028026a6088c90b9b",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Application Form"
+        },
+        "1/declaration/body/0/argument/3/1/3/expression/right-title": {
+          "type": "attribute",
+          "hash": "ca6f26774e7e5e2c51cb11b7e305e5e2",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Payment Terms"
+        },
+        "1/declaration/body/0/argument/3/1/5/expression/right-title": {
+          "type": "attribute",
+          "hash": "02fb39147ed4e21a831c31033ec0221b",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Contract Penalties"
+        },
+        "1/declaration/body/0/argument/3/1/7/expression/right-title": {
+          "type": "attribute",
+          "hash": "34d811d0d02e76753d176ae6b99fb933",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Deposit Information"
+        },
+        "1/declaration/body/0/argument/3/1/9/expression/right/1": {
+          "type": "element",
+          "hash": "72378667b9dc0085f00ab6ab5909db4c",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Source URL"
+        },
         "2/declaration/body/0/argument/1": {
           "type": "element",
           "hash": "8d1fc247855abcb3e1ab7ddbbb742945",
@@ -442,11 +682,75 @@
           "skip": false,
           "overrides": {},
           "content": "Source URL"
+        },
+        "5/declaration/body/0/argument/1": {
+          "type": "element",
+          "hash": "8d1fc247855abcb3e1ab7ddbbb742945",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Additional Information"
+        },
+        "5/declaration/body/0/argument/3/1/1/expression/right-title": {
+          "type": "attribute",
+          "hash": "c59c5c19b7235bd028026a6088c90b9b",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Application Form"
+        },
+        "5/declaration/body/0/argument/3/1/3/expression/right-title": {
+          "type": "attribute",
+          "hash": "ca6f26774e7e5e2c51cb11b7e305e5e2",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Payment Terms"
+        },
+        "5/declaration/body/0/argument/3/1/5/expression/right-title": {
+          "type": "attribute",
+          "hash": "02fb39147ed4e21a831c31033ec0221b",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Contract Penalties"
+        },
+        "5/declaration/body/0/argument/3/1/7/expression/right-title": {
+          "type": "attribute",
+          "hash": "34d811d0d02e76753d176ae6b99fb933",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Deposit Information"
+        },
+        "5/declaration/body/0/argument/3/1/9/expression/right/1": {
+          "type": "element",
+          "hash": "72378667b9dc0085f00ab6ab5909db4c",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Source URL"
         }
       }
     },
     "features/inbox/components/description-section.tsx": {
       "scopes": {
+        "2/declaration/body/0/argument/1": {
+          "type": "element",
+          "hash": "e17686a22ffad04cc7bb70524ed4478b",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Description"
+        },
+        "2/declaration/body/0/argument/3/1/expression/alternate": {
+          "type": "element",
+          "hash": "5a678e8cb008d9e16b7555a27eac9dfc",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "No detailed description available"
+        },
         "3/declaration/body/0/argument/1": {
           "type": "element",
           "hash": "e17686a22ffad04cc7bb70524ed4478b",
@@ -456,6 +760,22 @@
           "content": "Description"
         },
         "3/declaration/body/0/argument/3/1/expression/alternate": {
+          "type": "element",
+          "hash": "5a678e8cb008d9e16b7555a27eac9dfc",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "No detailed description available"
+        },
+        "5/declaration/body/0/argument/1": {
+          "type": "element",
+          "hash": "e17686a22ffad04cc7bb70524ed4478b",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Description"
+        },
+        "5/declaration/body/0/argument/3/1/expression/alternate": {
           "type": "element",
           "hash": "5a678e8cb008d9e16b7555a27eac9dfc",
           "context": "",
@@ -623,6 +943,38 @@
     },
     "features/inbox/components/overview-section.tsx": {
       "scopes": {
+        "3/declaration/body/0/argument/1/0/expression/right": {
+          "type": "element",
+          "hash": "30c54e4dc4ce599b87d94be34a8617f5",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Overview"
+        },
+        "3/declaration/body/0/argument/3/3/1/expression/right-title": {
+          "type": "attribute",
+          "hash": "a895f9c2afd359f5f525b176d1c6010e",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Eligibility"
+        },
+        "3/declaration/body/0/argument/3/3/3/expression/right-title": {
+          "type": "attribute",
+          "hash": "cc1df5b4bb18ef18f1084db990961f72",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Wadium"
+        },
+        "3/declaration/body/0/argument/3/3/5/expression/right-title": {
+          "type": "attribute",
+          "hash": "26465009e23d5f17e452842785193bda",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Completion Date"
+        },
         "4/declaration/body/0/argument/1": {
           "type": "element",
           "hash": "f6ee8f77ba6ef152e9f88b80a4317461",
@@ -656,6 +1008,102 @@
           "content": "Wadium"
         },
         "4/declaration/body/0/argument/3/3/5/expression/right-title": {
+          "type": "attribute",
+          "hash": "26465009e23d5f17e452842785193bda",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Completion Date"
+        },
+        "6/declaration/body/0/argument/1/0/expression/right": {
+          "type": "element",
+          "hash": "30c54e4dc4ce599b87d94be34a8617f5",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Overview"
+        },
+        "6/declaration/body/0/argument/3/3/1/expression/right-title": {
+          "type": "attribute",
+          "hash": "a895f9c2afd359f5f525b176d1c6010e",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Eligibility"
+        },
+        "6/declaration/body/0/argument/3/3/3/expression/right-title": {
+          "type": "attribute",
+          "hash": "cc1df5b4bb18ef18f1084db990961f72",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Wadium"
+        },
+        "6/declaration/body/0/argument/3/3/5/expression/right-title": {
+          "type": "attribute",
+          "hash": "26465009e23d5f17e452842785193bda",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Completion Date"
+        },
+        "7/declaration/body/0/argument/1/0/expression/right": {
+          "type": "element",
+          "hash": "30c54e4dc4ce599b87d94be34a8617f5",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Overview"
+        },
+        "7/declaration/body/0/argument/3/3/1/expression/right-title": {
+          "type": "attribute",
+          "hash": "a895f9c2afd359f5f525b176d1c6010e",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Eligibility"
+        },
+        "7/declaration/body/0/argument/3/3/1/expression/right/1/expression/alternate": {
+          "type": "element",
+          "hash": "0593d8433868dc2c22761f44f8ada96b",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Not eligible to participate"
+        },
+        "7/declaration/body/0/argument/3/3/1/expression/right/1/expression/consequent": {
+          "type": "element",
+          "hash": "178bdec9274b413eb458a49351fe54a0",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Eligible to participate"
+        },
+        "7/declaration/body/0/argument/3/3/1/expression/right/openingElement/2/value/expression/alternate": {
+          "type": "element",
+          "hash": "0593d8433868dc2c22761f44f8ada96b",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Not eligible to participate"
+        },
+        "7/declaration/body/0/argument/3/3/1/expression/right/openingElement/2/value/expression/consequent": {
+          "type": "element",
+          "hash": "178bdec9274b413eb458a49351fe54a0",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Eligible to participate"
+        },
+        "7/declaration/body/0/argument/3/3/3/expression/right-title": {
+          "type": "attribute",
+          "hash": "cc1df5b4bb18ef18f1084db990961f72",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Wadium"
+        },
+        "7/declaration/body/0/argument/3/3/5/expression/right-title": {
           "type": "attribute",
           "hash": "26465009e23d5f17e452842785193bda",
           "context": "",
@@ -858,11 +1306,27 @@
           "skip": false,
           "overrides": {},
           "content": "Alternative products"
+        },
+        "7/declaration/body/1/argument/1": {
+          "type": "element",
+          "hash": "b8638560dd4d00bd02c41fa219c182f2",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Products <element:span>({products.length})</element:span>"
         }
       }
     },
     "features/inbox/components/requirements-list.tsx": {
       "scopes": {
+        "2/declaration/body/3/argument/1/5": {
+          "type": "element",
+          "hash": "1409f9e98be0e57da01149ada6e30953",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "({items.length})"
+        },
         "3/declaration/body/3/argument/1/5": {
           "type": "element",
           "hash": "1409f9e98be0e57da01149ada6e30953",
@@ -875,6 +1339,38 @@
     },
     "features/inbox/components/requirements-section.tsx": {
       "scopes": {
+        "2/declaration/body/0/argument/1": {
+          "type": "element",
+          "hash": "e108e149e0fd5b65f5850b6f032ccabe",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Requirements"
+        },
+        "2/declaration/body/0/argument/3/1/1-title": {
+          "type": "attribute",
+          "hash": "f5251ea9ac1d7825fd0b543fb0e0b4f5",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Met Requirements"
+        },
+        "2/declaration/body/0/argument/3/1/3-title": {
+          "type": "attribute",
+          "hash": "a7d90ec8d0e7143313dfbfd6368cf79c",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Needs Confirmation"
+        },
+        "2/declaration/body/0/argument/3/1/5-title": {
+          "type": "attribute",
+          "hash": "c358cf9796d545d7b72954dc6ddd6dc2",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Not Met Requirements"
+        },
         "3/declaration/body/0/argument/1": {
           "type": "element",
           "hash": "e108e149e0fd5b65f5850b6f032ccabe",
@@ -938,12 +1434,60 @@
           "skip": false,
           "overrides": {},
           "content": "Not Met Requirements"
+        },
+        "5/declaration/body/0/argument/1": {
+          "type": "element",
+          "hash": "e108e149e0fd5b65f5850b6f032ccabe",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Requirements"
+        },
+        "5/declaration/body/0/argument/3/1/1-title": {
+          "type": "attribute",
+          "hash": "f5251ea9ac1d7825fd0b543fb0e0b4f5",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Met Requirements"
+        },
+        "5/declaration/body/0/argument/3/1/3-title": {
+          "type": "attribute",
+          "hash": "a7d90ec8d0e7143313dfbfd6368cf79c",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Needs Confirmation"
+        },
+        "5/declaration/body/0/argument/3/1/5-title": {
+          "type": "attribute",
+          "hash": "c358cf9796d545d7b72954dc6ddd6dc2",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Not Met Requirements"
         }
       }
     },
     "features/inbox/components/review-criteria-section.tsx": {
       "scopes": {
+        "2/declaration/body/0/argument/1": {
+          "type": "element",
+          "hash": "d524df30da3658fdbc1794408fcfdab4",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Review Criteria"
+        },
         "3/declaration/body/0/argument/1": {
+          "type": "element",
+          "hash": "d524df30da3658fdbc1794408fcfdab4",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Review Criteria"
+        },
+        "5/declaration/body/0/argument/1": {
           "type": "element",
           "hash": "d524df30da3658fdbc1794408fcfdab4",
           "context": "",

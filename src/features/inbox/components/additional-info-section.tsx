@@ -1,11 +1,9 @@
 "use client";
 
-import {
-  Section,
-  SectionTitle,
-  SectionContent,
-  InfoCard,
-} from "./ui-components";
+import { Section } from "./section";
+import { InfoCard } from "./info-card";
+import { SectionContent } from "./section-content";
+import { SectionTitle } from "./section-title";
 
 interface AdditionalInfoSectionProps {
   application_form_llm: string;

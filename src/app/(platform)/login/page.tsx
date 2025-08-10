@@ -78,7 +78,7 @@ export default function LoginPage() {
         <div className="flex flex-col justify-center gap-6">
           <GateIllustration className="h-50 w-fit text-muted-foreground" />
           <h1 className="font-heading text-6xl font-bold text-font-base">
-            Welcome back
+            Welcome back!
           </h1>
           <h2 className="text-muted-foreground text-xl w-3/4">
             Log in to browse, analyze and manage your tenders.

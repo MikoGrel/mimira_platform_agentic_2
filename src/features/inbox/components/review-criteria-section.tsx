@@ -1,7 +1,9 @@
 "use client";
 
-import { Section, SectionTitle, SectionContent } from "./ui-components";
+import { Section } from "./section";
 import { ReviewCriteria } from "./review-criteria";
+import { SectionContent } from "./section-content";
+import { SectionTitle } from "./section-title";
 
 interface ReviewCriteriaSectionProps {
   review_criteria_llm?: string | null;

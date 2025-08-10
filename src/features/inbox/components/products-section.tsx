@@ -1,9 +1,11 @@
 "use client";
 
 import { Tables } from "$/types/supabase";
-import { Section, SectionContent, SectionTitle } from "./ui-components";
 import { ProductCard } from "$/features/products/components/product-card";
 import { Masonry } from "$/components/ui/masonry";
+import { Section } from "./section";
+import { SectionContent } from "./section-content";
+import { SectionTitle } from "./section-title";
 
 export interface ProductsSectionProps {
   products: Tables<"tender_products">[];

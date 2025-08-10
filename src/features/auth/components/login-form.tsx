@@ -30,7 +30,7 @@ export default function LoginForm({
   return (
     <div className="flex flex-col gap-4">
       <div className="flex flex-col gap-3">
-        <h1 className="font-heading text-3xl font-medium">Log in</h1>
+        <h1 className="font-heading text-3xl font-medium">Log in:</h1>
         <h2 className="text-muted-foreground">
           Enter your email address and password to enter your dashboard
         </h2>

@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { ChevronDown, ChevronRight } from "lucide-react";
-import { StatusBadge } from "./ui-components";
+import { StatusBadge } from "./status-badge";
 
 // Requirements List Component
 export function RequirementsList({

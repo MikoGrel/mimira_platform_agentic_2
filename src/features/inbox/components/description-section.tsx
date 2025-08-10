@@ -1,7 +1,9 @@
 "use client";
 
-import { Section, SectionTitle, SectionContent } from "./ui-components";
+import { Section } from "./section";
 import Markdown from "react-markdown";
+import { SectionContent } from "./section-content";
+import { SectionTitle } from "./section-title";
 
 interface DescriptionSectionProps {
   description_long_llm: string;

@@ -2,13 +2,12 @@
 
 import { CheckCircle, AlertCircle, Clock } from "lucide-react";
 // import { TenderSummary } from "$/features/tenders";
-import {
-  Section,
-  SectionTitle,
-  SectionContent,
-  StatusCard,
-} from "./ui-components";
+
 import { ReactNode } from "react";
+import { Section } from "./section";
+import { SectionContent } from "./section-content";
+import { SectionTitle } from "./section-title";
+import { StatusCard } from "./status-card";
 
 interface OverviewSectionProps {
   title?: ReactNode;
@@ -34,31 +33,26 @@ export function OverviewSection({
             <StatusCard
               icon={canParticipate ? CheckCircle : AlertCircle}
               title="Eligibility"
-              value={
-                canParticipate
-                  ? "Eligible to participate"
-                  : "Not eligible to participate"
-              }
               type={canParticipate ? "success" : "error"}
-            />
+            >
+              {canParticipate ? (
+                <span>Eligible to participate</span>
+              ) : (
+                <span>Not eligible to participate</span>
+              )}
+            </StatusCard>
           )}
 
           {wadium && (
-            <StatusCard
-              icon={AlertCircle}
-              title="Wadium"
-              value={wadium}
-              type="warning"
-            />
+            <StatusCard icon={AlertCircle} title="Wadium" type="warning">
+              {wadium}
+            </StatusCard>
           )}
 
           {completionDate && (
-            <StatusCard
-              icon={Clock}
-              title="Completion Date"
-              value={completionDate}
-              type="neutral"
-            />
+            <StatusCard icon={Clock} title="Completion Date" type="neutral">
+              {completionDate}
+            </StatusCard>
           )}
         </div>
       </SectionContent>

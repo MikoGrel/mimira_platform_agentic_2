@@ -18,7 +18,7 @@ export default function EmailSentMessage({
         <div className="w-16 h-16 bg-success/10 rounded-full flex flex-center">
           <MailCheck className="w-8 h-8 text-success" />
         </div>
-        <h1 className="font-heading text-4xl font-medium">Check Your Email</h1>
+        <h1 className="font-heading text-4xl font-medium">Check Your Email:</h1>
         <h2 className="text-muted-foreground">
           We&apos;ve sent a password reset link to{" "}
           <span className="font-medium text-foreground">{resetEmail}</span>

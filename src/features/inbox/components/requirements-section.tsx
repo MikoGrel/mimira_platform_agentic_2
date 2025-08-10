@@ -1,7 +1,9 @@
 "use client";
 
-import { Section, SectionTitle, SectionContent } from "./ui-components";
+import { Section } from "./section";
 import { RequirementsList } from "./requirements-list";
+import { SectionContent } from "./section-content";
+import { SectionTitle } from "./section-title";
 
 interface RequirementsSectionProps {
   met_requirements: string[];
