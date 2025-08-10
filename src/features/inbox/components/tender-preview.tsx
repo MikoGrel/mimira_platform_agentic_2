@@ -14,6 +14,7 @@ import dynamic from "next/dynamic";
 
 import { OverviewSection } from "./overview-section";
 import { isEmpty } from "lodash";
+import { useRejectTender } from "../api/use-reject-tender";
 
 const TenderPartsCarousel = dynamic(
   () =>
@@ -46,6 +47,7 @@ export function TenderPreview({ tender }: TenderPreviewProps) {
   const [approvedPartIds, setApprovedPartIds] = useState<Set<string>>(
     new Set()
   );
+  const { mutate: rejectTender } = useRejectTender();
 
   const isPartSelected = !!selectedPart && selectedPart !== "overview";
 
@@ -79,9 +81,10 @@ export function TenderPreview({ tender }: TenderPreviewProps) {
     setApprovedPartIds((prev) => new Set(prev).add(selectedPart));
   }
 
-  function handleFinishApply() {
+  function handleApply(partIds?: string[]) {
     // Placeholder for finalization action
     // Could trigger navigation, API call, or toast in future iteration
+    console.log("apply", partIds);
   }
 
   function handleUnselectAll() {
@@ -98,7 +101,7 @@ export function TenderPreview({ tender }: TenderPreviewProps) {
   }
 
   function handleReject() {
-    // Placeholder for reject action
+    rejectTender(tender.id);
   }
 
   return (
@@ -109,10 +112,7 @@ export function TenderPreview({ tender }: TenderPreviewProps) {
           isHeaderCollapsed={isHeaderCollapsed}
           setCommentsOpened={setCommentsOpened}
           onApprovePart={handleApprovePart}
-          onFinishApply={handleFinishApply}
-          canApprovePart={Boolean(selectedPart && selectedPart !== "overview")}
-          canFinishApply={approvedPartIds.size > 0}
-          hasAnyApprovedParts={approvedPartIds.size > 0}
+          approvedPartIds={approvedPartIds}
           currentPart={{
             item: isTenderPart(resolvedItem) ? resolvedItem : null,
             isApproved: Boolean(
@@ -121,7 +121,7 @@ export function TenderPreview({ tender }: TenderPreviewProps) {
           }}
           onUnselectAll={handleUnselectAll}
           onRemoveCurrentPart={handleRemoveCurrentPart}
-          onApplySelectedParts={handleFinishApply}
+          onApply={handleApply}
           onReject={handleReject}
         />
 
@@ -139,14 +139,8 @@ export function TenderPreview({ tender }: TenderPreviewProps) {
             <div className="flex-1 overflow-y-auto" ref={scrollRef}>
               <div className="px-6 py-6 space-y-8 max-w-5xl">
                 <OverviewSection
-                  extra={
-                    isTenderPart(resolvedItem) ? (
-                      <span className="font-normal text-gray-500">
-                        — {resolvedItem.part_name}
-                      </span>
-                    ) : (
-                      ""
-                    )
+                  title={
+                    isTenderPart(resolvedItem) ? resolvedItem.part_name : null
                   }
                   canParticipate={Boolean(
                     resolvedItem && resolvedItem.can_participate

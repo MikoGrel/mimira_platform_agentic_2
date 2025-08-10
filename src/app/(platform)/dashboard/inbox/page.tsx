@@ -28,7 +28,7 @@ const TenderPreview = dynamic(
 const PAGE_SIZE = 10;
 
 export default function InboxPage() {
-  const { filterQuery } = useFilterForm();
+  const { filterQuery, addFilter } = useFilterForm();
   const [showFilterForm, setShowFilterForm] = useState(false);
 
   const [search, setSearch] = useQueryState(
@@ -71,8 +71,11 @@ export default function InboxPage() {
   function handleTenderSelect(tender: Tables<"tenders">) {
     updateSeenAt(tender.id);
     setSelectedId(tender.id);
-    // part state handled in TenderPreview
     markAsSeen(tender.id);
+  }
+
+  function handleArchiveButtonPress() {
+    addFilter("showRejected", !filterQuery.showRejected);
   }
 
   return (
@@ -80,7 +83,11 @@ export default function InboxPage() {
       <aside className="border-r border-sidebar-border flex flex-col h-full relative">
         <div className="py-4 border-b border-sidebar-border flex-shrink-0">
           <div className="flex items-center justify-between gap-2 px-2 overflow-y-hidden">
-            <Button variant="light" isIconOnly>
+            <Button
+              variant={filterQuery.showRejected ? "flat" : "light"}
+              isIconOnly
+              onPress={handleArchiveButtonPress}
+            >
               <Archive className="w-5 h-5" />
             </Button>
             <Input

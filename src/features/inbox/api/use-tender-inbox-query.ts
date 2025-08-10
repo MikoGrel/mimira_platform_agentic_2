@@ -24,6 +24,7 @@ interface UseTenderInboxQueryParams {
     publishedAtTo: CalendarDate | null;
     voivodeship: Set<Voivodeship> | null;
     sortBy: Set<SortDirection> | null;
+    showRejected: boolean | null;
   };
 }
 
@@ -41,6 +42,7 @@ export default function useTenderInboxQuery({
     publishedAtTo: null,
     voivodeship: null,
     sortBy: null,
+    showRejected: null,
   };
 
   const queryKey = [
@@ -51,6 +53,7 @@ export default function useTenderInboxQuery({
       filters.publishedAtTo?.toString,
       filters.offersDeadlineFrom?.toString(),
       filters.offersDeadlineTo?.toString(),
+      filters.showRejected,
       JSON.stringify(Array.from(filters.sortBy || [])),
       JSON.stringify(Array.from(filters.voivodeship || [])),
     ],
@@ -91,6 +94,12 @@ export default function useTenderInboxQuery({
           { count: "exact" }
         )
         .eq("company", user!.profile!.customer!);
+
+      if (filters.showRejected === false) {
+        query = query.neq("status", "rejected");
+      } else if (filters.showRejected === true) {
+        query = query.eq("status", "rejected");
+      }
 
       query = query.eq("can_participate", true);
 

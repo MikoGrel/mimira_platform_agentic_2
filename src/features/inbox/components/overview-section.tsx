@@ -11,21 +11,21 @@ import {
 import { ReactNode } from "react";
 
 interface OverviewSectionProps {
-  extra: ReactNode;
+  title?: ReactNode;
   canParticipate: boolean;
   wadium: string;
   completionDate: string;
 }
 
 export function OverviewSection({
+  title,
   canParticipate,
   wadium,
   completionDate,
-  extra,
 }: OverviewSectionProps) {
   return (
     <Section id="at-glance" data-section>
-      <SectionTitle>Overview {extra}</SectionTitle>
+      <SectionTitle>{title || <>Overview</>}</SectionTitle>
       <SectionContent>
         {/* <TenderSummary tender={tender} /> */}
 

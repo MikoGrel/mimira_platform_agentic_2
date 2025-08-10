@@ -1,29 +1,27 @@
 "use client";
 
-import { Button } from "@heroui/react";
+import { Button, Chip } from "@heroui/react";
 import { Calendar, House, MessageSquareText } from "lucide-react";
 import { motion, AnimatePresence } from "motion/react";
 import { useEffect, useState } from "react";
 import { Tables } from "$/types/supabase";
 import { useCommentsCount } from "$/features/tenders/api/use-comments-count";
 import { TenderPartType } from "./tender-preview";
+import { useRestoreRejectedTender } from "../api/use-restore-rejected-tender";
 
 interface TenderHeaderProps {
   tender: Tables<"tenders">;
   isHeaderCollapsed: boolean;
   setCommentsOpened: (value: boolean) => void;
   onApprovePart?: () => void;
-  onFinishApply?: () => void;
-  canApprovePart?: boolean;
-  canFinishApply?: boolean;
-  hasAnyApprovedParts?: boolean;
+  approvedPartIds: Set<string>;
   currentPart?: {
     item: TenderPartType | null;
     isApproved: boolean;
   };
   onUnselectAll?: () => void;
   onRemoveCurrentPart?: () => void;
-  onApplySelectedParts?: () => void;
+  onApply: (partIds?: string[]) => void;
   onReject?: () => void;
 }
 
@@ -32,18 +30,19 @@ export function TenderHeader({
   isHeaderCollapsed,
   setCommentsOpened,
   onApprovePart,
-  canApprovePart = true,
-  hasAnyApprovedParts = false,
+  approvedPartIds,
   currentPart,
   onUnselectAll,
   onRemoveCurrentPart,
-  onApplySelectedParts,
+  onApply,
   onReject,
 }: TenderHeaderProps) {
   const [hasRendered, setHasRendered] = useState(false);
   const { count } = useCommentsCount({
     tenderId: tender.id,
   });
+  const { mutate: restoreTender } = useRestoreRejectedTender();
+  const isRejected = tender.status === "rejected";
 
   useEffect(() => {
     setHasRendered(true);
@@ -51,6 +50,12 @@ export function TenderHeader({
 
   return (
     <div className="border-b border-gray-200 bg-white overflow-hidden px-6 py-4">
+      {isRejected && (
+        <Chip color="danger" size="sm" className="mb-2" variant="flat">
+          Rejected
+        </Chip>
+      )}
+
       <motion.h1
         className="font-semibold text-gray-900 w-2/3"
         animate={{
@@ -91,61 +96,66 @@ export function TenderHeader({
                 {tender.submittingoffersdate}
               </span>
             </div>
-            <div className="flex gap-2">
-              {!hasAnyApprovedParts && !currentPart?.item && (
-                <>
-                  <Button color="primary" data-lingo-override-pl="Aplikuj">
-                    Apply
-                  </Button>
-                  <Button variant="flat" onPress={onReject}>
-                    Reject
-                  </Button>
-                </>
-              )}
-
-              {currentPart?.item && (
-                <>
-                  {currentPart?.isApproved ? (
-                    <Button color="danger" onPress={onRemoveCurrentPart}>
-                      Remove
+            {isRejected && (
+              <div className="flex gap-2">
+                <Button variant="flat" onPress={() => restoreTender(tender.id)}>
+                  Restore
+                </Button>
+              </div>
+            )}
+            {!isRejected && (
+              <div className="flex gap-2">
+                {!approvedPartIds.size && !currentPart?.item && (
+                  <>
+                    <Button color="primary" data-lingo-override-pl="Aplikuj">
+                      Apply
                     </Button>
-                  ) : (
+                    <Button variant="flat" onPress={onReject}>
+                      Reject
+                    </Button>
+                  </>
+                )}
+
+                {currentPart?.item && (
+                  <>
+                    {currentPart?.isApproved ? (
+                      <Button color="danger" onPress={onRemoveCurrentPart}>
+                        Unselect
+                      </Button>
+                    ) : (
+                      <Button color="primary" onPress={onApprovePart}>
+                        Approve
+                      </Button>
+                    )}
+                  </>
+                )}
+
+                {approvedPartIds.size > 0 && (
+                  <>
                     <Button
                       color="primary"
-                      onPress={onApprovePart}
-                      isDisabled={!canApprovePart}
+                      onPress={() => onApply(Array.from(approvedPartIds))}
+                      data-lingo-override-pl="Aplikuj na wybrane części"
                     >
-                      Approve
+                      Apply to selected parts
                     </Button>
-                  )}
-                </>
-              )}
+                    <Button variant="flat" onPress={onUnselectAll}>
+                      Unselect all
+                    </Button>
+                  </>
+                )}
 
-              {hasAnyApprovedParts && (
-                <>
-                  <Button
-                    color="primary"
-                    onPress={onApplySelectedParts}
-                    data-lingo-override-pl="Aplikuj na wybrane części"
-                  >
-                    Apply to selected parts
-                  </Button>
-                  <Button variant="flat" onPress={onUnselectAll}>
-                    Unselect all
-                  </Button>
-                </>
-              )}
-
-              <Button
-                variant="ghost"
-                onPress={() => setCommentsOpened(true)}
-                className="!min-w-10"
-                isIconOnly={!count}
-              >
-                <MessageSquareText className="w-5 h-5 stroke-[1.5]" />
-                {!!count && count}
-              </Button>
-            </div>
+                <Button
+                  variant="ghost"
+                  onPress={() => setCommentsOpened(true)}
+                  className="!min-w-10"
+                  isIconOnly={!count}
+                >
+                  <MessageSquareText className="w-5 h-5 stroke-[1.5]" />
+                  {!!count && count}
+                </Button>
+              </div>
+            )}
           </motion.div>
         )}
       </AnimatePresence>
@@ -167,72 +177,82 @@ export function TenderHeader({
               {tender.submittingoffersdate}
             </span>
           </div>
-          <div className="flex gap-2">
-            {!hasAnyApprovedParts && !currentPart?.item && (
-              <>
-                <Button
-                  size="sm"
-                  color="primary"
-                  data-lingo-override-pl="Aplikuj"
-                >
-                  Apply
-                </Button>
-                <Button size="sm" variant="flat" onPress={onReject}>
-                  Reject
-                </Button>
-              </>
-            )}
 
-            {currentPart?.item && (
-              <>
-                {currentPart?.isApproved ? (
-                  <Button
-                    size="sm"
-                    color="danger"
-                    onPress={onRemoveCurrentPart}
-                  >
-                    Remove
-                  </Button>
-                ) : (
+          {isRejected && (
+            <div className="flex gap-2">
+              <Button
+                size="sm"
+                variant="flat"
+                onPress={() => restoreTender(tender.id)}
+              >
+                Restore
+              </Button>
+            </div>
+          )}
+
+          {!isRejected && (
+            <div className="flex gap-2">
+              {!approvedPartIds.size && !currentPart?.item && (
+                <>
                   <Button
                     size="sm"
                     color="primary"
-                    onPress={onApprovePart}
-                    isDisabled={!canApprovePart}
+                    data-lingo-override-pl="Aplikuj"
                   >
-                    Approve
+                    Apply
                   </Button>
-                )}
-              </>
-            )}
+                  <Button size="sm" variant="flat" onPress={onReject}>
+                    Reject
+                  </Button>
+                </>
+              )}
 
-            {hasAnyApprovedParts && (
-              <>
-                <Button
-                  size="sm"
-                  color="primary"
-                  onPress={onApplySelectedParts}
-                  data-lingo-override-pl="Aplikuj na wybrane części"
-                >
-                  Apply to selected parts
-                </Button>
-                <Button size="sm" variant="flat" onPress={onUnselectAll}>
-                  Unselect all
-                </Button>
-              </>
-            )}
+              {currentPart?.item && (
+                <>
+                  {currentPart?.isApproved ? (
+                    <Button
+                      size="sm"
+                      color="danger"
+                      onPress={onRemoveCurrentPart}
+                    >
+                      Unselect
+                    </Button>
+                  ) : (
+                    <Button size="sm" color="primary" onPress={onApprovePart}>
+                      Approve
+                    </Button>
+                  )}
+                </>
+              )}
 
-            <Button
-              size="sm"
-              variant="ghost"
-              onPress={() => setCommentsOpened(true)}
-              className="!min-w-10"
-              isIconOnly={!count}
-            >
-              <MessageSquareText className="w-5 h-5 stroke-[1.5]" />
-              {!!count && count}
-            </Button>
-          </div>
+              {approvedPartIds.size > 0 && (
+                <>
+                  <Button
+                    size="sm"
+                    color="primary"
+                    onPress={() => onApply(Array.from(approvedPartIds))}
+                    data-lingo-override-pl="Aplikuj na wybrane części"
+                  >
+                    Apply to selected parts
+                  </Button>
+                  <Button size="sm" variant="flat" onPress={onUnselectAll}>
+                    Unselect all
+                  </Button>
+                </>
+              )}
+
+              <Button
+                size="sm"
+                variant="ghost"
+                onPress={() => setCommentsOpened(true)}
+                className="!min-w-10"
+                isIconOnly={!count}
+              >
+                <MessageSquareText className="w-5 h-5 stroke-[1.5]" />
+                {!!count && count}
+              </Button>
+            </div>
+          )}
         </motion.div>
       )}
     </div>

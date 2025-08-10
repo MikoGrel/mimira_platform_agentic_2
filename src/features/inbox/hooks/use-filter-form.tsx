@@ -2,7 +2,7 @@
 
 import { useForm } from "react-hook-form";
 import { RangeValue } from "@heroui/react";
-import { useQueryStates } from "nuqs";
+import { useQueryStates, parseAsBoolean } from "nuqs";
 import {
   Voivodeship,
   PolishVoivodeships,
@@ -32,6 +32,7 @@ export interface FilterForm {
   offersDeadline: RangeValue<CalendarDate> | null;
   voivodeship: Set<Voivodeship> | null;
   sortBy: Set<SortDirection> | null;
+  showRejected: boolean | null;
 }
 
 export interface ActiveFilter {
@@ -62,6 +63,7 @@ export function useFilterForm({ onFiltered }: FilterFormOptions = {}) {
     },
     voivodeship: parseAsSet<Voivodeship>(),
     sortBy: parseAsSet<SortDirection>(),
+    showRejected: parseAsBoolean.withDefault(false),
   });
 
   const { control, handleSubmit, register } = useForm<FilterForm>({
@@ -202,6 +204,16 @@ export function useFilterForm({ onFiltered }: FilterFormOptions = {}) {
     }
   };
 
+  const addFilter = <T extends keyof FilterForm>(
+    key: T,
+    value: FilterForm[T]
+  ) => {
+    setFilterQuery({
+      ...filterQuery,
+      [key]: value,
+    });
+  };
+
   return {
     control,
     register,
@@ -209,5 +221,6 @@ export function useFilterForm({ onFiltered }: FilterFormOptions = {}) {
     filterQuery,
     activeFilters,
     removeFilter,
+    addFilter,
   };
 }

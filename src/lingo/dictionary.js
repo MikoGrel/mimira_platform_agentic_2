@@ -80,6 +80,69 @@ export default {
           },
           hash: "26b80ae8a680de73667e096098aa69d8",
         },
+        "16/declaration/body/11/argument/1/1/1/3-placeholder": {
+          content: {
+            en: "Search",
+            pl: "Szukaj",
+          },
+          hash: "49dd6c21604b5e8d4153ff1aff2177e1",
+        },
+        "16/declaration/body/11/argument/1/5/1/3": {
+          content: {
+            en: "Ask Mimir",
+            pl: "Zapytaj Mimira",
+          },
+          hash: "c516ed1af9463ccd6bdcb19a1f13e4ac",
+        },
+        "16/declaration/body/11/argument/1/5/1/5": {
+          content: {
+            en: "Coming soon",
+            pl: "Wkrótce dostępne",
+          },
+          hash: "05a8fc9f6d826fd88a809d98684edcad",
+        },
+        "16/declaration/body/11/argument/3/expression/right/1/1": {
+          content: {
+            en: "Select a tender to view details",
+            pl: "Wybierz przetarg, aby zobaczyć szczegóły",
+          },
+          hash: "067789b01a081458db2f872f10a37c3f",
+        },
+        "16/declaration/body/12/argument/1/1/1/3-placeholder": {
+          content: {
+            en: "Search",
+            pl: "Szukaj",
+          },
+          hash: "49dd6c21604b5e8d4153ff1aff2177e1",
+        },
+        "16/declaration/body/12/argument/1/5/1/3": {
+          content: {
+            en: "Ask Mimir",
+            pl: "Zapytaj Mimira",
+          },
+          hash: "c516ed1af9463ccd6bdcb19a1f13e4ac",
+        },
+        "16/declaration/body/12/argument/1/5/1/5": {
+          content: {
+            en: "Coming soon",
+            pl: "Wkrótce dostępne",
+          },
+          hash: "05a8fc9f6d826fd88a809d98684edcad",
+        },
+        "16/declaration/body/12/argument/3/expression/right/1/1": {
+          content: {
+            en: "Select a tender to view details",
+            pl: "Wybierz przetarg, aby zobaczyć szczegóły",
+          },
+          hash: "067789b01a081458db2f872f10a37c3f",
+        },
+        "17/body/0/argument/1/expression/0/body/3/3": {
+          content: {
+            en: "·",
+            pl: "·",
+          },
+          hash: "26b80ae8a680de73667e096098aa69d8",
+        },
       },
     },
     "app/(platform)/dashboard/layout.tsx": {
@@ -498,10 +561,17 @@ export default {
       entries: {
         "4/declaration/body/0/argument/1": {
           content: {
-            en: "Overview {extra}",
-            pl: "Przegląd {extra}",
+            en: "Tender overview {extra}",
+            pl: "Przegląd ofert {extra}",
           },
-          hash: "b226126b4ac76629b52abbac69e4b114",
+          hash: "f6ee8f77ba6ef152e9f88b80a4317461",
+        },
+        "4/declaration/body/0/argument/1/0/expression/right": {
+          content: {
+            en: "Overview",
+            pl: "Przegląd",
+          },
+          hash: "30c54e4dc4ce599b87d94be34a8617f5",
         },
         "4/declaration/body/0/argument/3/3/1/expression/right-title": {
           content: {
@@ -668,9 +738,10 @@ export default {
         "7/declaration/body/3/argument/3/1/expression/right/3/11/expression/right":
           {
             content: {
-              en: "Apply to selected parts",
+              en: "Unselect",
+              pl: "Odznacz",
             },
-            hash: "81c5fc1980975113a7b3c0bfdcf0d27a",
+            hash: "95abf29177d2693c76f5278cad6e3102",
           },
         "7/declaration/body/3/argument/3/1/expression/right/3/13/expression/right":
           {
@@ -687,6 +758,20 @@ export default {
           },
           hash: "447bdd205a7407328c84f618e3bf1d40",
         },
+        "7/declaration/body/3/argument/3/1/expression/right/3/3/expression/right":
+          {
+            content: {
+              en: "Apply to selected parts",
+            },
+            hash: "81c5fc1980975113a7b3c0bfdcf0d27a",
+          },
+        "7/declaration/body/3/argument/3/1/expression/right/3/3/expression/right/1":
+          {
+            content: {
+              en: "Apply to selected parts",
+            },
+            hash: "72bd9abcd377cb9268a5bbb3f7efb0da",
+          },
         "7/declaration/body/3/argument/3/1/expression/right/3/3/expression/right/1/expression/alternate":
           {
             content: {
@@ -703,6 +788,14 @@ export default {
             },
             hash: "feb15e75efc81c54cb85538c42a7a5c9",
           },
+        "7/declaration/body/3/argument/3/1/expression/right/3/3/expression/right/3":
+          {
+            content: {
+              en: "Unselect all",
+              pl: "Odznacz wszystko",
+            },
+            hash: "40e4856fce1723ab765f7af6042f348c",
+          },
         "7/declaration/body/3/argument/3/1/expression/right/3/3/expression/right/3/expression/right":
           {
             content: {
@@ -718,20 +811,52 @@ export default {
             },
             hash: "25e032c7b038b333cf98ee01fd16b586",
           },
-        "7/declaration/body/3/argument/3/1/expression/right/3/5/expression/right":
+        "7/declaration/body/3/argument/3/1/expression/right/3/5/expression/alternate":
           {
             content: {
-              en: "Apply to selected parts",
+              en: "Approve",
+              pl: "Zatwierdź",
             },
-            hash: "81c5fc1980975113a7b3c0bfdcf0d27a",
+            hash: "98478f5f36910f14c852971dcf58decd",
           },
-        "7/declaration/body/3/argument/3/1/expression/right/3/7/expression/right":
+        "7/declaration/body/3/argument/3/1/expression/right/3/5/expression/consequent":
+          {
+            content: {
+              en: "Remove",
+              pl: "Usuń",
+            },
+            hash: "01dea4f6d9333a21546086b8df252084",
+          },
+        "7/declaration/body/3/argument/3/1/expression/right/3/5/expression/right":
           {
             content: {
               en: "Unselect all",
               pl: "Odznacz wszystko",
             },
             hash: "4a2428c143421800cac10cbe285209ae",
+          },
+        "7/declaration/body/3/argument/3/1/expression/right/3/7/expression/alternate":
+          {
+            content: {
+              en: "Approve",
+              pl: "Zatwierdź",
+            },
+            hash: "98478f5f36910f14c852971dcf58decd",
+          },
+        "7/declaration/body/3/argument/3/1/expression/right/3/7/expression/consequent":
+          {
+            content: {
+              en: "Remove",
+              pl: "Usuń",
+            },
+            hash: "01dea4f6d9333a21546086b8df252084",
+          },
+        "7/declaration/body/3/argument/3/1/expression/right/3/7/expression/right":
+          {
+            content: {
+              en: "Apply to selected parts",
+            },
+            hash: "81c5fc1980975113a7b3c0bfdcf0d27a",
           },
         "7/declaration/body/3/argument/3/1/expression/right/3/9/expression/alternate":
           {
@@ -748,6 +873,14 @@ export default {
               pl: "Usuń",
             },
             hash: "01dea4f6d9333a21546086b8df252084",
+          },
+        "7/declaration/body/3/argument/3/1/expression/right/3/9/expression/right":
+          {
+            content: {
+              en: "Unselect",
+              pl: "Odznacz",
+            },
+            hash: "95abf29177d2693c76f5278cad6e3102",
           },
         "7/declaration/body/3/argument/3/1/expression/right/3/9/expression/right/1/expression/alternate":
           {
@@ -841,6 +974,584 @@ export default {
               pl: "Odznacz",
             },
             hash: "4782b38d6775071a11f9fe044ff3f865",
+          },
+        "8/declaration/body/3/argument/3/1/expression/right/3/1/expression/right/1":
+          {
+            content: {
+              en: "Apply",
+            },
+            hash: "3c759ab832d6ab75ae050da5cb1b826c",
+          },
+        "8/declaration/body/3/argument/3/1/expression/right/3/1/expression/right/3":
+          {
+            content: {
+              en: "Reject",
+              pl: "Odrzuć",
+            },
+            hash: "93f700a2adda13be3723040c587ab812",
+          },
+        "8/declaration/body/3/argument/3/1/expression/right/3/3/expression/right/1":
+          {
+            content: {
+              en: "Apply to selected parts",
+            },
+            hash: "72bd9abcd377cb9268a5bbb3f7efb0da",
+          },
+        "8/declaration/body/3/argument/3/1/expression/right/3/3/expression/right/1/expression/alternate":
+          {
+            content: {
+              en: "Approve",
+              pl: "Zatwierdź",
+            },
+            hash: "1d6b7baeeb99dac3833b170dd47c6171",
+          },
+        "8/declaration/body/3/argument/3/1/expression/right/3/3/expression/right/1/expression/consequent":
+          {
+            content: {
+              en: "Unselect",
+              pl: "Odznacz",
+            },
+            hash: "25e032c7b038b333cf98ee01fd16b586",
+          },
+        "8/declaration/body/3/argument/3/1/expression/right/3/3/expression/right/3":
+          {
+            content: {
+              en: "Unselect all",
+              pl: "Odznacz wszystko",
+            },
+            hash: "40e4856fce1723ab765f7af6042f348c",
+          },
+        "8/declaration/body/3/argument/3/1/expression/right/3/5/expression/alternate":
+          {
+            content: {
+              en: "Approve",
+              pl: "Zatwierdź",
+            },
+            hash: "98478f5f36910f14c852971dcf58decd",
+          },
+        "8/declaration/body/3/argument/3/1/expression/right/3/5/expression/consequent":
+          {
+            content: {
+              en: "Remove",
+              pl: "Usuń",
+            },
+            hash: "01dea4f6d9333a21546086b8df252084",
+          },
+        "8/declaration/body/3/argument/3/1/expression/right/3/5/expression/right/1":
+          {
+            content: {
+              en: "Apply to selected parts",
+            },
+            hash: "72bd9abcd377cb9268a5bbb3f7efb0da",
+          },
+        "8/declaration/body/3/argument/3/1/expression/right/3/5/expression/right/1/expression/alternate":
+          {
+            content: {
+              en: "Approve",
+              pl: "Zatwierdź",
+            },
+            hash: "1d6b7baeeb99dac3833b170dd47c6171",
+          },
+        "8/declaration/body/3/argument/3/1/expression/right/3/5/expression/right/1/expression/consequent":
+          {
+            content: {
+              en: "Remove",
+              pl: "Usuń",
+            },
+            hash: "feb15e75efc81c54cb85538c42a7a5c9",
+          },
+        "8/declaration/body/3/argument/3/1/expression/right/3/5/expression/right/3":
+          {
+            content: {
+              en: "Unselect all",
+              pl: "Odznacz wszystko",
+            },
+            hash: "40e4856fce1723ab765f7af6042f348c",
+          },
+        "8/declaration/body/3/argument/5/expression/right/3/1/expression/right/1":
+          {
+            content: {
+              en: "Apply",
+              pl: "Zastosuj",
+            },
+            hash: "564f71b8fe2a63142499b340b1872989",
+          },
+        "8/declaration/body/3/argument/5/expression/right/3/1/expression/right/3":
+          {
+            content: {
+              en: "Reject",
+              pl: "Odrzuć",
+            },
+            hash: "2c1f1ee6b00186ee3a5adc2d86d00511",
+          },
+        "8/declaration/body/3/argument/5/expression/right/3/1/expression/right/5/expression/right":
+          {
+            content: {
+              en: "Apply to selected parts",
+            },
+            hash: "72bd9abcd377cb9268a5bbb3f7efb0da",
+          },
+        "8/declaration/body/3/argument/5/expression/right/3/1/expression/right/7/expression/right":
+          {
+            content: {
+              en: "Unselect all",
+              pl: "Odznacz wszystko",
+            },
+            hash: "40e4856fce1723ab765f7af6042f348c",
+          },
+        "8/declaration/body/3/argument/5/expression/right/3/3/expression/right/1/expression/alternate":
+          {
+            content: {
+              en: "Approve",
+              pl: "Zatwierdź",
+            },
+            hash: "733cc12e565c02c26c068ed26e8cbbb2",
+          },
+        "8/declaration/body/3/argument/5/expression/right/3/3/expression/right/1/expression/consequent":
+          {
+            content: {
+              en: "Unselect",
+              pl: "Odznacz",
+            },
+            hash: "4782b38d6775071a11f9fe044ff3f865",
+          },
+        "8/declaration/body/3/argument/5/expression/right/3/3/expression/right/3/expression/right":
+          {
+            content: {
+              en: "Apply to selected parts",
+            },
+            hash: "72bd9abcd377cb9268a5bbb3f7efb0da",
+          },
+        "8/declaration/body/3/argument/5/expression/right/3/3/expression/right/5/expression/right":
+          {
+            content: {
+              en: "Unselect",
+              pl: "Odznacz",
+            },
+            hash: "4782b38d6775071a11f9fe044ff3f865",
+          },
+        "8/declaration/body/3/argument/5/expression/right/3/5/expression/right/1":
+          {
+            content: {
+              en: "Apply to selected parts",
+            },
+            hash: "81c5fc1980975113a7b3c0bfdcf0d27a",
+          },
+        "8/declaration/body/3/argument/5/expression/right/3/5/expression/right/3":
+          {
+            content: {
+              en: "Unselect all",
+              pl: "Odznacz wszystko",
+            },
+            hash: "4a2428c143421800cac10cbe285209ae",
+          },
+        "9/declaration/body/5/argument/1/expression/right": {
+          content: {
+            en: "Rejected",
+            pl: "Odrzucono",
+          },
+          hash: "fce70517f1edc1f1054823ec6ea3d4f3",
+        },
+        "9/declaration/body/5/argument/3/1/expression/right/3/1/expression/right/1":
+          {
+            content: {
+              en: "Apply",
+            },
+            hash: "3c759ab832d6ab75ae050da5cb1b826c",
+          },
+        "9/declaration/body/5/argument/3/1/expression/right/3/1/expression/right/3":
+          {
+            content: {
+              en: "Reject",
+              pl: "Odrzuć",
+            },
+            hash: "93f700a2adda13be3723040c587ab812",
+          },
+        "9/declaration/body/5/argument/3/1/expression/right/3/3/expression/right/1/expression/alternate":
+          {
+            content: {
+              en: "Approve",
+              pl: "Zatwierdź",
+            },
+            hash: "1d6b7baeeb99dac3833b170dd47c6171",
+          },
+        "9/declaration/body/5/argument/3/1/expression/right/3/3/expression/right/1/expression/consequent":
+          {
+            content: {
+              en: "Unselect",
+              pl: "Odznacz",
+            },
+            hash: "25e032c7b038b333cf98ee01fd16b586",
+          },
+        "9/declaration/body/5/argument/3/1/expression/right/3/5/expression/right/1":
+          {
+            content: {
+              en: "Apply to selected parts",
+            },
+            hash: "72bd9abcd377cb9268a5bbb3f7efb0da",
+          },
+        "9/declaration/body/5/argument/3/1/expression/right/3/5/expression/right/3":
+          {
+            content: {
+              en: "Unselect all",
+              pl: "Odznacz wszystko",
+            },
+            hash: "40e4856fce1723ab765f7af6042f348c",
+          },
+        "9/declaration/body/5/argument/3/1/expression/right/3/expression/right/1":
+          {
+            content: {
+              en: "Restore",
+              pl: "Przywróć",
+            },
+            hash: "ec219bedbdb1c917a22029501148caeb",
+          },
+        "9/declaration/body/5/argument/3/1/expression/right/3/expression/right/1/expression/right/1":
+          {
+            content: {
+              en: "Apply",
+            },
+            hash: "dd3ebfeca53ad9f644db87630d1dd7bb",
+          },
+        "9/declaration/body/5/argument/3/1/expression/right/3/expression/right/1/expression/right/3":
+          {
+            content: {
+              en: "Reject",
+              pl: "Odrzuć",
+            },
+            hash: "94363fc1a1ab2ce680c3b6141d6fc97b",
+          },
+        "9/declaration/body/5/argument/3/1/expression/right/3/expression/right/3/expression/right/1/expression/alternate":
+          {
+            content: {
+              en: "Approve",
+              pl: "Zatwierdź",
+            },
+            hash: "b9a806cc209d1e51f41979964198539b",
+          },
+        "9/declaration/body/5/argument/3/1/expression/right/3/expression/right/3/expression/right/1/expression/consequent":
+          {
+            content: {
+              en: "Unselect",
+              pl: "Odznacz",
+            },
+            hash: "16bf6ff7e1d27f9a607164e90d515b81",
+          },
+        "9/declaration/body/5/argument/3/1/expression/right/3/expression/right/5/expression/right/1":
+          {
+            content: {
+              en: "Apply to selected parts",
+            },
+            hash: "13b87825c2d8d3b3fe07a09ad8f0ce42",
+          },
+        "9/declaration/body/5/argument/3/1/expression/right/3/expression/right/5/expression/right/3":
+          {
+            content: {
+              en: "Unselect all",
+              pl: "Odznacz wszystko",
+            },
+            hash: "89c0a44bb05b3ec6af54419a8c425a5e",
+          },
+        "9/declaration/body/5/argument/3/1/expression/right/5/expression/right/1/expression/right/1":
+          {
+            content: {
+              en: "Apply",
+            },
+            hash: "dd3ebfeca53ad9f644db87630d1dd7bb",
+          },
+        "9/declaration/body/5/argument/3/1/expression/right/5/expression/right/1/expression/right/3":
+          {
+            content: {
+              en: "Reject",
+              pl: "Odrzuć",
+            },
+            hash: "94363fc1a1ab2ce680c3b6141d6fc97b",
+          },
+        "9/declaration/body/5/argument/3/1/expression/right/5/expression/right/3/expression/right/1/expression/alternate":
+          {
+            content: {
+              en: "Approve",
+              pl: "Zatwierdź",
+            },
+            hash: "b9a806cc209d1e51f41979964198539b",
+          },
+        "9/declaration/body/5/argument/3/1/expression/right/5/expression/right/3/expression/right/1/expression/consequent":
+          {
+            content: {
+              en: "Unselect",
+              pl: "Odznacz",
+            },
+            hash: "16bf6ff7e1d27f9a607164e90d515b81",
+          },
+        "9/declaration/body/5/argument/3/1/expression/right/5/expression/right/5/expression/right/1":
+          {
+            content: {
+              en: "Apply to selected parts",
+            },
+            hash: "13b87825c2d8d3b3fe07a09ad8f0ce42",
+          },
+        "9/declaration/body/5/argument/3/1/expression/right/5/expression/right/5/expression/right/3":
+          {
+            content: {
+              en: "Unselect all",
+              pl: "Odznacz wszystko",
+            },
+            hash: "89c0a44bb05b3ec6af54419a8c425a5e",
+          },
+        "9/declaration/body/5/argument/5/1/expression/right/3/expression/right/1":
+          {
+            content: {
+              en: "Restore",
+              pl: "Przywróć",
+            },
+            hash: "ec219bedbdb1c917a22029501148caeb",
+          },
+        "9/declaration/body/5/argument/5/1/expression/right/5/expression/right/1/expression/right/1":
+          {
+            content: {
+              en: "Apply",
+            },
+            hash: "dd3ebfeca53ad9f644db87630d1dd7bb",
+          },
+        "9/declaration/body/5/argument/5/1/expression/right/5/expression/right/1/expression/right/3":
+          {
+            content: {
+              en: "Reject",
+              pl: "Odrzuć",
+            },
+            hash: "94363fc1a1ab2ce680c3b6141d6fc97b",
+          },
+        "9/declaration/body/5/argument/5/1/expression/right/5/expression/right/3/expression/right/1/expression/alternate":
+          {
+            content: {
+              en: "Approve",
+              pl: "Zatwierdź",
+            },
+            hash: "b9a806cc209d1e51f41979964198539b",
+          },
+        "9/declaration/body/5/argument/5/1/expression/right/5/expression/right/3/expression/right/1/expression/consequent":
+          {
+            content: {
+              en: "Unselect",
+              pl: "Odznacz",
+            },
+            hash: "16bf6ff7e1d27f9a607164e90d515b81",
+          },
+        "9/declaration/body/5/argument/5/1/expression/right/5/expression/right/5/expression/right/1":
+          {
+            content: {
+              en: "Apply to selected parts",
+            },
+            hash: "13b87825c2d8d3b3fe07a09ad8f0ce42",
+          },
+        "9/declaration/body/5/argument/5/1/expression/right/5/expression/right/5/expression/right/3":
+          {
+            content: {
+              en: "Unselect all",
+              pl: "Odznacz wszystko",
+            },
+            hash: "89c0a44bb05b3ec6af54419a8c425a5e",
+          },
+        "9/declaration/body/5/argument/5/expression/right/3/1/expression/right/1":
+          {
+            content: {
+              en: "Apply",
+              pl: "Zastosuj",
+            },
+            hash: "564f71b8fe2a63142499b340b1872989",
+          },
+        "9/declaration/body/5/argument/5/expression/right/3/1/expression/right/3":
+          {
+            content: {
+              en: "Reject",
+              pl: "Odrzuć",
+            },
+            hash: "2c1f1ee6b00186ee3a5adc2d86d00511",
+          },
+        "9/declaration/body/5/argument/5/expression/right/3/3/expression/right/1/expression/alternate":
+          {
+            content: {
+              en: "Approve",
+              pl: "Zatwierdź",
+            },
+            hash: "733cc12e565c02c26c068ed26e8cbbb2",
+          },
+        "9/declaration/body/5/argument/5/expression/right/3/3/expression/right/1/expression/consequent":
+          {
+            content: {
+              en: "Unselect",
+              pl: "Odznacz",
+            },
+            hash: "4782b38d6775071a11f9fe044ff3f865",
+          },
+        "9/declaration/body/5/argument/5/expression/right/3/5/expression/right/1":
+          {
+            content: {
+              en: "Apply to selected parts",
+            },
+            hash: "81c5fc1980975113a7b3c0bfdcf0d27a",
+          },
+        "9/declaration/body/5/argument/5/expression/right/3/5/expression/right/3":
+          {
+            content: {
+              en: "Unselect all",
+              pl: "Odznacz wszystko",
+            },
+            hash: "4a2428c143421800cac10cbe285209ae",
+          },
+        "9/declaration/body/5/argument/5/expression/right/3/expression/right/1":
+          {
+            content: {
+              en: "Restore",
+              pl: "Przywróć",
+            },
+            hash: "9bdc81c2c478926c820a71d55bd0d6f5",
+          },
+        "9/declaration/body/5/argument/5/expression/right/3/expression/right/1/expression/right/1":
+          {
+            content: {
+              en: "Apply",
+            },
+            hash: "3c759ab832d6ab75ae050da5cb1b826c",
+          },
+        "9/declaration/body/5/argument/5/expression/right/3/expression/right/1/expression/right/3":
+          {
+            content: {
+              en: "Reject",
+              pl: "Odrzuć",
+            },
+            hash: "93f700a2adda13be3723040c587ab812",
+          },
+        "9/declaration/body/5/argument/5/expression/right/3/expression/right/3/expression/right/1/expression/alternate":
+          {
+            content: {
+              en: "Approve",
+              pl: "Zatwierdź",
+            },
+            hash: "1d6b7baeeb99dac3833b170dd47c6171",
+          },
+        "9/declaration/body/5/argument/5/expression/right/3/expression/right/3/expression/right/1/expression/consequent":
+          {
+            content: {
+              en: "Unselect",
+              pl: "Odznacz",
+            },
+            hash: "25e032c7b038b333cf98ee01fd16b586",
+          },
+        "9/declaration/body/5/argument/5/expression/right/3/expression/right/5/expression/right/1":
+          {
+            content: {
+              en: "Apply to selected parts",
+            },
+            hash: "72bd9abcd377cb9268a5bbb3f7efb0da",
+          },
+        "9/declaration/body/5/argument/5/expression/right/3/expression/right/5/expression/right/3":
+          {
+            content: {
+              en: "Unselect all",
+              pl: "Odznacz wszystko",
+            },
+            hash: "40e4856fce1723ab765f7af6042f348c",
+          },
+        "9/declaration/body/5/argument/5/expression/right/5/expression/right/1/expression/right/1":
+          {
+            content: {
+              en: "Apply",
+            },
+            hash: "3c759ab832d6ab75ae050da5cb1b826c",
+          },
+        "9/declaration/body/5/argument/5/expression/right/5/expression/right/1/expression/right/3":
+          {
+            content: {
+              en: "Reject",
+              pl: "Odrzuć",
+            },
+            hash: "93f700a2adda13be3723040c587ab812",
+          },
+        "9/declaration/body/5/argument/5/expression/right/5/expression/right/3/expression/right/1/expression/alternate":
+          {
+            content: {
+              en: "Approve",
+              pl: "Zatwierdź",
+            },
+            hash: "1d6b7baeeb99dac3833b170dd47c6171",
+          },
+        "9/declaration/body/5/argument/5/expression/right/5/expression/right/3/expression/right/1/expression/consequent":
+          {
+            content: {
+              en: "Unselect",
+              pl: "Odznacz",
+            },
+            hash: "25e032c7b038b333cf98ee01fd16b586",
+          },
+        "9/declaration/body/5/argument/5/expression/right/5/expression/right/5/expression/right/1":
+          {
+            content: {
+              en: "Apply to selected parts",
+            },
+            hash: "72bd9abcd377cb9268a5bbb3f7efb0da",
+          },
+        "9/declaration/body/5/argument/5/expression/right/5/expression/right/5/expression/right/3":
+          {
+            content: {
+              en: "Unselect all",
+              pl: "Odznacz wszystko",
+            },
+            hash: "40e4856fce1723ab765f7af6042f348c",
+          },
+        "9/declaration/body/5/argument/7/expression/right/3/expression/right/1":
+          {
+            content: {
+              en: "Restore",
+              pl: "Przywróć",
+            },
+            hash: "9bdc81c2c478926c820a71d55bd0d6f5",
+          },
+        "9/declaration/body/5/argument/7/expression/right/5/expression/right/1/expression/right/1":
+          {
+            content: {
+              en: "Apply",
+            },
+            hash: "3c759ab832d6ab75ae050da5cb1b826c",
+          },
+        "9/declaration/body/5/argument/7/expression/right/5/expression/right/1/expression/right/3":
+          {
+            content: {
+              en: "Reject",
+              pl: "Odrzuć",
+            },
+            hash: "93f700a2adda13be3723040c587ab812",
+          },
+        "9/declaration/body/5/argument/7/expression/right/5/expression/right/3/expression/right/1/expression/alternate":
+          {
+            content: {
+              en: "Approve",
+              pl: "Zatwierdź",
+            },
+            hash: "1d6b7baeeb99dac3833b170dd47c6171",
+          },
+        "9/declaration/body/5/argument/7/expression/right/5/expression/right/3/expression/right/1/expression/consequent":
+          {
+            content: {
+              en: "Unselect",
+              pl: "Odznacz",
+            },
+            hash: "25e032c7b038b333cf98ee01fd16b586",
+          },
+        "9/declaration/body/5/argument/7/expression/right/5/expression/right/5/expression/right/1":
+          {
+            content: {
+              en: "Apply to selected parts",
+            },
+            hash: "72bd9abcd377cb9268a5bbb3f7efb0da",
+          },
+        "9/declaration/body/5/argument/7/expression/right/5/expression/right/5/expression/right/3":
+          {
+            content: {
+              en: "Unselect all",
+              pl: "Odznacz wszystko",
+            },
+            hash: "40e4856fce1723ab765f7af6042f348c",
           },
       },
     },
@@ -1436,6 +2147,21 @@ export default {
             },
             hash: "12dd9d83b84a8ba126ee327d8140d5dc",
           },
+        "17/declaration/body/14/consequent/0/argument/1/1": {
+          content: {
+            en: "Select a tender to view details",
+            pl: "Wybierz przetarg, aby zobaczyć szczegóły",
+          },
+          hash: "067789b01a081458db2f872f10a37c3f",
+        },
+        "17/declaration/body/15/argument/1/3/1/3/1/1/openingElement/0/value/expression/consequent":
+          {
+            content: {
+              en: "— {resolvedItem.part_name}",
+              pl: "— {selectedPartName}",
+            },
+            hash: "4cd331bfdf0d5cfa9a598af8510d55b7",
+          },
         "17/declaration/body/19/consequent/0/argument/1/1": {
           content: {
             en: "Select a tender to view details",
@@ -1466,6 +2192,29 @@ export default {
               pl: "— {selectedPartName}",
             },
             hash: "12dd9d83b84a8ba126ee327d8140d5dc",
+          },
+        "18/declaration/body/14/argument/1/3/1/3/1/1/openingElement/0/value/expression/consequent":
+          {
+            content: {
+              en: "— {resolvedItem.part_name}",
+              pl: "— {selectedPartName}",
+            },
+            hash: "4cd331bfdf0d5cfa9a598af8510d55b7",
+          },
+        "18/declaration/body/14/consequent/0/argument/1/1": {
+          content: {
+            en: "Select a tender to view details",
+            pl: "Wybierz przetarg, aby zobaczyć szczegóły",
+          },
+          hash: "067789b01a081458db2f872f10a37c3f",
+        },
+        "18/declaration/body/15/argument/1/3/1/3/1/1/openingElement/0/value/expression/consequent":
+          {
+            content: {
+              en: "— {resolvedItem.part_name}",
+              pl: "— {selectedPartName}",
+            },
+            hash: "4cd331bfdf0d5cfa9a598af8510d55b7",
           },
         "18/declaration/body/19/consequent/0/argument/1/1": {
           content: {
