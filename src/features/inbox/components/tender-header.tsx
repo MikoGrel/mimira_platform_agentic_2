@@ -48,6 +48,21 @@ export function TenderHeader({
     setHasRendered(true);
   }, []);
 
+  const h1Variants = {
+    collapsedNoPart: {
+      scale: 1,
+    },
+    expandedNoPart: {
+      scale: 1,
+    },
+    collapsedWithPart: {
+      scale: 0.8,
+    },
+    expandedWithPart: {
+      scale: 0.8,
+    },
+  };
+
   return (
     <div className="border-b border-gray-200 bg-white overflow-hidden px-6 py-4">
       {isRejected && (
@@ -57,21 +72,63 @@ export function TenderHeader({
       )}
 
       <motion.h1
-        className="font-semibold text-gray-900 w-2/3"
-        animate={{
-          fontSize: isHeaderCollapsed ? "14px" : "18px",
-          lineHeight: isHeaderCollapsed ? "20px" : "28px",
-          marginBottom: isHeaderCollapsed ? "4px" : "0px",
+        className={`font-semibold w-2/3 text-2xl origin-top-left will-change-transform ${
+          currentPart?.item ? "text-muted-foreground" : "text-gray-900"
+        }`}
+        style={{
+          backfaceVisibility: "hidden",
+          WebkitFontSmoothing: "antialiased",
+          MozOsxFontSmoothing: "grayscale",
+          translateZ: 0,
         }}
-        transition={{ duration: 0.25, ease: [0.4, 0.0, 0.2, 1] }}
-        initial={{
-          fontSize: "18px",
-          lineHeight: "28px",
-          marginBottom: "0px",
-        }}
+        variants={h1Variants}
+        animate={
+          isHeaderCollapsed
+            ? currentPart?.item
+              ? "collapsedWithPart"
+              : "collapsedNoPart"
+            : currentPart?.item
+              ? "expandedWithPart"
+              : "expandedNoPart"
+        }
+        transition={{ duration: 0.3, ease: "easeInOut" }}
       >
         {tender.orderobject}
       </motion.h1>
+
+      <AnimatePresence>
+        {currentPart?.item && (
+          <motion.h2
+            className="font-semibold text-gray-700 max-w-3xl text-lg leading-snug "
+            initial={{
+              opacity: 0,
+              height: 0,
+              marginTop: 0,
+              marginBottom: "4px",
+              fontSize: isHeaderCollapsed ? "14px" : "16px",
+              lineHeight: isHeaderCollapsed ? "20px" : "24px",
+            }}
+            animate={{
+              opacity: 1,
+              marginBottom: "4px",
+              fontSize: isHeaderCollapsed ? "14px" : "16px",
+              lineHeight: isHeaderCollapsed ? "20px" : "24px",
+              height: "auto",
+            }}
+            exit={{
+              opacity: 0,
+              height: 0,
+              marginTop: 0,
+              marginBottom: "4px",
+              fontSize: isHeaderCollapsed ? "14px" : "16px",
+              lineHeight: isHeaderCollapsed ? "20px" : "24px",
+            }}
+            transition={{ duration: 0.3, ease: "easeInOut" }}
+          >
+            {currentPart.item.part_name}
+          </motion.h2>
+        )}
+      </AnimatePresence>
 
       <AnimatePresence>
         {!isHeaderCollapsed && (
