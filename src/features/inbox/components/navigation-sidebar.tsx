@@ -3,6 +3,7 @@
 import { cn } from "$/lib/utils";
 import { ChevronLeft, ChevronRight, Hash } from "lucide-react";
 import { useEffect, useState } from "react";
+import { useLocalStorage } from "react-use";
 
 interface NavigationSidebarProps {
   scrollRef: React.RefObject<HTMLDivElement | null>;
@@ -10,7 +11,10 @@ interface NavigationSidebarProps {
 
 export function NavigationSidebar({ scrollRef }: NavigationSidebarProps) {
   const [activeSection, setActiveSection] = useState<string>("");
-  const [collapsed, setCollapsed] = useState(false);
+  const [collapsed, setCollapsed] = useLocalStorage<boolean>(
+    "navigation-sidebar-collapsed",
+    false
+  );
 
   const sections = [
     { id: "at-glance", label: <span>Overview</span> },

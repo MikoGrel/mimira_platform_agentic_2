@@ -688,8 +688,460 @@ export default {
           },
       },
     },
+    "features/inbox/components/tender-parts-carousel.tsx": {
+      entries: {
+        "8/declaration/body/8/argument/1/1/1": {
+          content: {
+            en: "Tender Parts ({tenderParts.length})",
+            pl: "Części przetargu ({tenderParts.length})",
+          },
+          hash: "148be08ea18ef8622d626970fa612f3a",
+        },
+        "8/declaration/body/8/argument/1/1/1/1": {
+          content: {
+            en: "Tender Parts ({tenderParts.length})",
+            pl: "Części przetargu ({tenderParts.length})",
+          },
+          hash: "c3fedcbc76eb469cff51935bf57af34e",
+        },
+        "8/declaration/body/8/argument/1/1/3/1/1/1/1/1/1": {
+          content: {
+            en: "Overview",
+            pl: "Przegląd",
+          },
+          hash: "30c54e4dc4ce599b87d94be34a8617f5",
+        },
+        "8/declaration/body/8/argument/1/1/3/1/1/1/3/1": {
+          content: {
+            en: "General information about this tender",
+            pl: "Ogólne informacje o tym przetargu",
+          },
+          hash: "0f9d23cc765542b37eca23e742ebb37f",
+        },
+        "8/declaration/body/8/argument/1/1/3/1/3/1/1/1/1": {
+          content: {
+            en: "Overview",
+            pl: "Przegląd",
+          },
+          hash: "30c54e4dc4ce599b87d94be34a8617f5",
+        },
+        "8/declaration/body/8/argument/1/1/3/1/3/1/3/1": {
+          content: {
+            en: "General information about this tender",
+            pl: "Ogólne informacje o tym przetargu",
+          },
+          hash: "0f9d23cc765542b37eca23e742ebb37f",
+        },
+        "8/declaration/body/8/argument/1/1/3/1/3/expression/0/body/1/1/1/1/3": {
+          content: {
+            en: "Part #<expression/>",
+            pl: "Część nr <expression/>",
+          },
+          hash: "c081b0ad6c5ade48dc86c5a2f409e75f",
+        },
+        "8/declaration/body/8/argument/1/1/3/1/3/expression/0/body/1/3/1/1": {
+          content: {
+            en: "Requirements:",
+            pl: "Wymagania:",
+          },
+          hash: "f27235edc5c81fa9d3422b1bb9bf98c0",
+        },
+        "8/declaration/body/8/argument/1/1/3/1/3/expression/0/body/1/3/1/3/3": {
+          content: {
+            en: "/",
+            pl: "/",
+          },
+          hash: "d727054cb65d0e95c79cfb34bc3e3f28",
+        },
+        "8/declaration/body/8/argument/1/1/3/1/3/expression/0/body/1/3/3/expression/right/1":
+          {
+            content: {
+              en: "Wadium: ",
+              pl: "Wadium: ",
+            },
+            hash: "a7908a3166c9eccd9acd413e39b72c11",
+          },
+        "8/declaration/body/8/argument/1/1/3/1/3/expression/0/body/1/3/5/expression/right/1":
+          {
+            content: {
+              en: "Completion: ",
+              pl: "Zakończenie: ",
+            },
+            hash: "02db4c377c520adfab6b28ad89dcc12a",
+          },
+        "8/declaration/body/8/argument/1/1/3/1/7/expression/0/body/1/1/1/1/3": {
+          content: {
+            en: "Part #<expression/>",
+            pl: "Część nr <expression/>",
+          },
+          hash: "af4ff4ff20476b214a2f5bec01649ea9",
+        },
+        "8/declaration/body/8/argument/1/1/3/1/7/expression/0/body/1/3/1/1": {
+          content: {
+            en: "Requirements:",
+            pl: "Wymagania:",
+          },
+          hash: "f27235edc5c81fa9d3422b1bb9bf98c0",
+        },
+        "8/declaration/body/8/argument/1/1/3/1/7/expression/0/body/1/3/1/3/3": {
+          content: {
+            en: "/",
+            pl: "/",
+          },
+          hash: "d727054cb65d0e95c79cfb34bc3e3f28",
+        },
+        "8/declaration/body/8/argument/1/1/3/1/7/expression/0/body/1/3/3/expression/right/1":
+          {
+            content: {
+              en: "Wadium: ",
+              pl: "Wadium: ",
+            },
+            hash: "a7908a3166c9eccd9acd413e39b72c11",
+          },
+        "8/declaration/body/8/argument/1/1/3/1/7/expression/0/body/1/3/5/expression/right/1":
+          {
+            content: {
+              en: "Completion: ",
+              pl: "Zakończenie: ",
+            },
+            hash: "02db4c377c520adfab6b28ad89dcc12a",
+          },
+        "8/declaration/body/8/argument/1/3/1/1/1/1/1/1": {
+          content: {
+            en: "Overview",
+            pl: "Przegląd",
+          },
+          hash: "30c54e4dc4ce599b87d94be34a8617f5",
+        },
+        "8/declaration/body/8/argument/1/3/1/1/1/1/1/1/1": {
+          content: {
+            en: "Overview",
+            pl: "Przegląd",
+          },
+          hash: "30c54e4dc4ce599b87d94be34a8617f5",
+        },
+        "8/declaration/body/8/argument/1/3/1/1/1/1/3/1": {
+          content: {
+            en: "General information about this tender",
+            pl: "Ogólne informacje o tym przetargu",
+          },
+          hash: "0f9d23cc765542b37eca23e742ebb37f",
+        },
+        "8/declaration/body/8/argument/1/3/1/1/1/3/1": {
+          content: {
+            en: "General information about this tender",
+            pl: "Ogólne informacje o tym przetargu",
+          },
+          hash: "29e36d5f0df7b9896ccc2a2f84def29e",
+        },
+        "8/declaration/body/8/argument/1/3/1/1/3/expression/0/body/1/1/1/1/3": {
+          content: {
+            en: "Part #<expression/>",
+            pl: "Część nr <expression/>",
+          },
+          hash: "c081b0ad6c5ade48dc86c5a2f409e75f",
+        },
+        "8/declaration/body/8/argument/1/3/1/1/3/expression/0/body/1/3/1/1": {
+          content: {
+            en: "Requirements:",
+            pl: "Wymagania:",
+          },
+          hash: "f27235edc5c81fa9d3422b1bb9bf98c0",
+        },
+        "8/declaration/body/8/argument/1/3/1/1/3/expression/0/body/1/3/1/3/3": {
+          content: {
+            en: "/",
+            pl: "/",
+          },
+          hash: "d727054cb65d0e95c79cfb34bc3e3f28",
+        },
+        "8/declaration/body/8/argument/1/3/1/1/3/expression/0/body/1/3/3/1/expression/right/1":
+          {
+            content: {
+              en: "Wadium: ",
+              pl: "Wadium: ",
+            },
+            hash: "a7908a3166c9eccd9acd413e39b72c11",
+          },
+        "8/declaration/body/8/argument/1/3/1/1/3/expression/0/body/1/3/3/3/expression/right/1":
+          {
+            content: {
+              en: "Completion: ",
+              pl: "Zakończenie: ",
+            },
+            hash: "02db4c377c520adfab6b28ad89dcc12a",
+          },
+        "8/declaration/body/8/argument/1/3/1/1/3/expression/0/body/1/3/3/expression/right/1":
+          {
+            content: {
+              en: "Wadium: ",
+              pl: "Wadium: ",
+            },
+            hash: "a7908a3166c9eccd9acd413e39b72c11",
+          },
+        "8/declaration/body/8/argument/1/3/1/1/3/expression/0/body/1/3/5/expression/right/1":
+          {
+            content: {
+              en: "Wadium: ",
+              pl: "Wadium: ",
+            },
+            hash: "a7908a3166c9eccd9acd413e39b72c11",
+          },
+        "8/declaration/body/8/argument/1/3/1/1/3/expression/0/body/1/3/7/expression/right/1":
+          {
+            content: {
+              en: "Completion: ",
+              pl: "Zakończenie: ",
+            },
+            hash: "02db4c377c520adfab6b28ad89dcc12a",
+          },
+        "8/declaration/body/8/argument/1/3/1/3/1/1/1/1": {
+          content: {
+            en: "Overview",
+            pl: "Przegląd",
+          },
+          hash: "30c54e4dc4ce599b87d94be34a8617f5",
+        },
+        "8/declaration/body/8/argument/1/3/1/3/1/3/1": {
+          content: {
+            en: "General information about this tender",
+            pl: "Ogólne informacje o tym przetargu",
+          },
+          hash: "29e36d5f0df7b9896ccc2a2f84def29e",
+        },
+        "8/declaration/body/8/argument/1/3/1/3/expression/0/body/1/1/1/1/3": {
+          content: {
+            en: "Part #<expression/>",
+            pl: "Część #<expression/>",
+          },
+          hash: "83ddccf64c20d84d40983fabccaacb6e",
+        },
+        "8/declaration/body/8/argument/1/3/1/3/expression/0/body/1/3/1/1": {
+          content: {
+            en: "Requirements:",
+            pl: "Wymagania:",
+          },
+          hash: "f27235edc5c81fa9d3422b1bb9bf98c0",
+        },
+        "8/declaration/body/8/argument/1/3/1/3/expression/0/body/1/3/1/3/3": {
+          content: {
+            en: "/",
+            pl: "/",
+          },
+          hash: "d727054cb65d0e95c79cfb34bc3e3f28",
+        },
+        "8/declaration/body/8/argument/1/3/1/3/expression/0/body/1/3/3/expression/right/1":
+          {
+            content: {
+              en: "Wadium: ",
+              pl: "Wadium: ",
+            },
+            hash: "a7908a3166c9eccd9acd413e39b72c11",
+          },
+        "8/declaration/body/8/argument/1/3/1/3/expression/0/body/1/3/5/expression/right/1":
+          {
+            content: {
+              en: "Completion: ",
+              pl: "Zakończenie: ",
+            },
+            hash: "02db4c377c520adfab6b28ad89dcc12a",
+          },
+        "8/declaration/body/8/argument/1/3/1/7/expression/0/body/1/1/1/1/3": {
+          content: {
+            en: "Part #<expression/>",
+            pl: "Część #<expression/>",
+          },
+          hash: "83ddccf64c20d84d40983fabccaacb6e",
+        },
+        "8/declaration/body/8/argument/1/3/1/7/expression/0/body/1/3/1/1": {
+          content: {
+            en: "Requirements:",
+            pl: "Wymagania:",
+          },
+          hash: "f27235edc5c81fa9d3422b1bb9bf98c0",
+        },
+        "8/declaration/body/8/argument/1/3/1/7/expression/0/body/1/3/1/3/3": {
+          content: {
+            en: "/",
+            pl: "/",
+          },
+          hash: "d727054cb65d0e95c79cfb34bc3e3f28",
+        },
+        "8/declaration/body/8/argument/1/3/1/7/expression/0/body/1/3/3/expression/right/1":
+          {
+            content: {
+              en: "Wadium: ",
+              pl: "Wadium: ",
+            },
+            hash: "a7908a3166c9eccd9acd413e39b72c11",
+          },
+        "8/declaration/body/8/argument/1/3/1/7/expression/0/body/1/3/5/expression/right/1":
+          {
+            content: {
+              en: "Completion: ",
+              pl: "Zakończenie: ",
+            },
+            hash: "02db4c377c520adfab6b28ad89dcc12a",
+          },
+        "9/declaration/body/8/argument/1/1/1": {
+          content: {
+            en: "Tender Parts ({tenderParts.length})",
+            pl: "Części przetargu ({tenderParts.length})",
+          },
+          hash: "148be08ea18ef8622d626970fa612f3a",
+        },
+        "9/declaration/body/8/argument/1/1/expression/right/1": {
+          content: {
+            en: "Tender Parts ({tenderParts.length})",
+            pl: "Części przetargu ({tenderParts.length})",
+          },
+          hash: "c3fedcbc76eb469cff51935bf57af34e",
+        },
+        "9/declaration/body/8/argument/1/3/1/1/1/1/1/1/1": {
+          content: {
+            en: "Overview",
+            pl: "Przegląd",
+          },
+          hash: "30c54e4dc4ce599b87d94be34a8617f5",
+        },
+        "9/declaration/body/8/argument/1/3/1/1/1/1/3/1": {
+          content: {
+            en: "General information about this tender",
+            pl: "Ogólne informacje o tym przetargu",
+          },
+          hash: "0f9d23cc765542b37eca23e742ebb37f",
+        },
+        "9/declaration/body/8/argument/1/3/1/1/3/expression/0/body/1/1/1/1/3": {
+          content: {
+            en: "Part #<expression/>",
+            pl: "Część nr <expression/>",
+          },
+          hash: "c081b0ad6c5ade48dc86c5a2f409e75f",
+        },
+        "9/declaration/body/8/argument/1/3/1/1/3/expression/0/body/1/3/1/1": {
+          content: {
+            en: "Requirements:",
+            pl: "Wymagania:",
+          },
+          hash: "f27235edc5c81fa9d3422b1bb9bf98c0",
+        },
+        "9/declaration/body/8/argument/1/3/1/1/3/expression/0/body/1/3/1/3/3": {
+          content: {
+            en: "/",
+            pl: "/",
+          },
+          hash: "d727054cb65d0e95c79cfb34bc3e3f28",
+        },
+        "9/declaration/body/8/argument/1/3/1/1/3/expression/0/body/1/3/3/1/expression/right/1":
+          {
+            content: {
+              en: "Wadium: ",
+              pl: "Wadium: ",
+            },
+            hash: "a7908a3166c9eccd9acd413e39b72c11",
+          },
+        "9/declaration/body/8/argument/1/3/1/1/3/expression/0/body/1/3/3/3/expression/right/1":
+          {
+            content: {
+              en: "Completion: ",
+              pl: "Zakończenie: ",
+            },
+            hash: "02db4c377c520adfab6b28ad89dcc12a",
+          },
+        "9/declaration/body/8/argument/1/5/1/1/1/1/1/1/1": {
+          content: {
+            en: "Overview",
+            pl: "Przegląd",
+          },
+          hash: "30c54e4dc4ce599b87d94be34a8617f5",
+        },
+        "9/declaration/body/8/argument/1/5/1/1/1/1/3/1": {
+          content: {
+            en: "General information about this tender",
+            pl: "Ogólne informacje o tym przetargu",
+          },
+          hash: "0f9d23cc765542b37eca23e742ebb37f",
+        },
+        "9/declaration/body/8/argument/1/5/1/1/3/expression/0/body/1/1/1/1/3": {
+          content: {
+            en: "Part #<expression/>",
+            pl: "Część nr <expression/>",
+          },
+          hash: "c081b0ad6c5ade48dc86c5a2f409e75f",
+        },
+        "9/declaration/body/8/argument/1/5/1/1/3/expression/0/body/1/3/1/1": {
+          content: {
+            en: "Requirements:",
+            pl: "Wymagania:",
+          },
+          hash: "f27235edc5c81fa9d3422b1bb9bf98c0",
+        },
+        "9/declaration/body/8/argument/1/5/1/1/3/expression/0/body/1/3/1/3/3": {
+          content: {
+            en: "/",
+            pl: "/",
+          },
+          hash: "d727054cb65d0e95c79cfb34bc3e3f28",
+        },
+        "9/declaration/body/8/argument/1/5/1/1/3/expression/0/body/1/3/3/1/expression/right/1":
+          {
+            content: {
+              en: "Wadium: ",
+              pl: "Wadium: ",
+            },
+            hash: "a7908a3166c9eccd9acd413e39b72c11",
+          },
+        "9/declaration/body/8/argument/1/5/1/1/3/expression/0/body/1/3/3/3/expression/right/1":
+          {
+            content: {
+              en: "Completion: ",
+              pl: "Zakończenie: ",
+            },
+            hash: "02db4c377c520adfab6b28ad89dcc12a",
+          },
+      },
+    },
     "features/inbox/components/tender-preview.tsx": {
       entries: {
+        "15/declaration/body/19/consequent/0/argument/1/1": {
+          content: {
+            en: "Select a tender to view details",
+            pl: "Wybierz przetarg, aby zobaczyć szczegóły",
+          },
+          hash: "067789b01a081458db2f872f10a37c3f",
+        },
+        "15/declaration/body/20/argument/1/3/1/1/3/1/openingElement/0/value/expression/consequent":
+          {
+            content: {
+              en: "— {selectedPartName}",
+              pl: "— {selectedPartName}",
+            },
+            hash: "4cd331bfdf0d5cfa9a598af8510d55b7",
+          },
+        "15/declaration/body/20/argument/1/3/1/3/1/openingElement/0/value/expression/consequent":
+          {
+            content: {
+              en: "— {selectedPartName}",
+              pl: "— {selectedPartName}",
+            },
+            hash: "12dd9d83b84a8ba126ee327d8140d5dc",
+          },
+        "15/declaration/body/20/argument/1/3/3/1/1/openingElement/0/value/expression/consequent":
+          {
+            content: {
+              en: "— {selectedPartName}",
+              pl: "— {selectedPartName}",
+            },
+            hash: "12dd9d83b84a8ba126ee327d8140d5dc",
+          },
+        "15/declaration/body/20/argument/1/5/1/1/1/openingElement/0/value/expression/consequent":
+          {
+            content: {
+              en: "— {selectedPartName}",
+              pl: "— {selectedPartName}",
+            },
+            hash: "12dd9d83b84a8ba126ee327d8140d5dc",
+          },
         "16/declaration/body/19/consequent/0/argument/1/1": {
           content: {
             en: "Select a tender to view details",
@@ -776,6 +1228,100 @@ export default {
             hash: "d727054cb65d0e95c79cfb34bc3e3f28",
           },
         "17/declaration/body/20/argument/1/3/1/3/1/openingElement/0/value/expression/consequent":
+          {
+            content: {
+              en: "— {selectedPartName}",
+              pl: "— {selectedPartName}",
+            },
+            hash: "12dd9d83b84a8ba126ee327d8140d5dc",
+          },
+        "18/declaration/body/19/consequent/0/argument/1/1": {
+          content: {
+            en: "Select a tender to view details",
+            pl: "Wybierz przetarg, aby zobaczyć szczegóły",
+          },
+          hash: "067789b01a081458db2f872f10a37c3f",
+        },
+        "18/declaration/body/20/argument/1/3/1/1/expression/right/1/1/openingElement/2/value/expression":
+          {
+            content: {
+              en: "Overview",
+              pl: "Przegląd",
+            },
+            hash: "30c54e4dc4ce599b87d94be34a8617f5",
+          },
+        "18/declaration/body/20/argument/1/3/1/1/expression/right/1/3/expression/0/body/openingElement/2/value/expression/1/3":
+          {
+            content: {
+              en: "#<expression/>: ",
+              pl: "#<expression/>: ",
+            },
+            hash: "b97e7f1565e74a709db49d6fc2480646",
+          },
+        "18/declaration/body/20/argument/1/3/1/1/expression/right/1/3/expression/0/body/openingElement/2/value/expression/3/1/4":
+          {
+            content: {
+              en: "/",
+              pl: "/",
+            },
+            hash: "d727054cb65d0e95c79cfb34bc3e3f28",
+          },
+        "18/declaration/body/20/argument/1/3/1/1/expression/right/1/3/expression/0/body/openingElement/2/value/expression/3/1/9":
+          {
+            content: {
+              en: "Requirements",
+              pl: "Wymagania",
+            },
+            hash: "5efb5b93408440c5986476850cdec0c9",
+          },
+        "18/declaration/body/20/argument/1/3/1/3/1/openingElement/0/value/expression/consequent":
+          {
+            content: {
+              en: "— {selectedPartName}",
+              pl: "— {selectedPartName}",
+            },
+            hash: "12dd9d83b84a8ba126ee327d8140d5dc",
+          },
+        "19/declaration/body/19/consequent/0/argument/1/1": {
+          content: {
+            en: "Select a tender to view details",
+            pl: "Wybierz przetarg, aby zobaczyć szczegóły",
+          },
+          hash: "067789b01a081458db2f872f10a37c3f",
+        },
+        "19/declaration/body/20/argument/1/3/1/1/expression/right/1/1/openingElement/2/value/expression":
+          {
+            content: {
+              en: "Overview",
+              pl: "Przegląd",
+            },
+            hash: "30c54e4dc4ce599b87d94be34a8617f5",
+          },
+        "19/declaration/body/20/argument/1/3/1/1/expression/right/1/3/expression/0/body/openingElement/2/value/expression/1/3":
+          {
+            content: {
+              en: "#<expression/>: ",
+              pl: "#<expression/>: ",
+            },
+            hash: "b97e7f1565e74a709db49d6fc2480646",
+          },
+        "19/declaration/body/20/argument/1/3/1/1/expression/right/1/3/expression/0/body/openingElement/2/value/expression/3/1/4":
+          {
+            content: {
+              en: "/",
+              pl: "/",
+            },
+            hash: "d727054cb65d0e95c79cfb34bc3e3f28",
+          },
+        "19/declaration/body/20/argument/1/3/1/1/expression/right/1/3/expression/0/body/openingElement/2/value/expression/3/1/9":
+          {
+            content: {
+              en: "Requirements",
+              pl: "Wymagania",
+            },
+            hash: "5efb5b93408440c5986476850cdec0c9",
+          },
+        "19/declaration/body/20/argument/1/3/1/3/1/openingElement/0/value/expression/consequent":
           {
             content: {
               en: "— {selectedPartName}",
@@ -1067,6 +1613,38 @@ export default {
           },
           hash: "790b828714b22aadfbb086c9a7f9a1b6",
         },
+        "7/declaration/body/6/argument/1/3/5/expression/right/1/expression/right/3":
+          {
+            content: {
+              en: "Searching…",
+              pl: "Wyszukiwanie…",
+            },
+            hash: "790b828714b22aadfbb086c9a7f9a1b6",
+          },
+        "7/declaration/body/6/argument/1/3/5/expression/right/openingElement/0/value/expression":
+          {
+            content: {
+              en: "Tenders",
+              pl: "Przetargi",
+            },
+            hash: "ed189d7577d88989825ba289c3243a80",
+          },
+        "7/declaration/body/6/argument/1/3/5/expression/right/right/1/expression/right/3":
+          {
+            content: {
+              en: "Searching…",
+              pl: "Wyszukiwanie…",
+            },
+            hash: "790b828714b22aadfbb086c9a7f9a1b6",
+          },
+        "7/declaration/body/6/argument/1/3/5/expression/right/right/openingElement/0/value/expression":
+          {
+            content: {
+              en: "Tenders",
+              pl: "Przetargi",
+            },
+            hash: "ed189d7577d88989825ba289c3243a80",
+          },
         "7/declaration/body/6/argument/1/3/5/openingElement/0/value/expression":
           {
             content: {
