@@ -14,14 +14,10 @@ import { useRouter } from "next/navigation";
 import { useCommandSearch } from "../api/use-command-search";
 import { truncate } from "lodash";
 import { useDebouncedValue } from "$/hooks/use-debounced-value";
+import { useCommandStore } from "../store/use-command-store";
 
-export function DashboardCommand({
-  open,
-  setOpen,
-}: {
-  open: boolean;
-  setOpen: (open: boolean) => void;
-}) {
+export function DashboardCommand() {
+  const { commandOpen: open, setCommandOpen: setOpen } = useCommandStore();
   const router = useRouter();
   const [search, setSearch] = useState("");
   const debouncedSearch = useDebouncedValue(search, 250);

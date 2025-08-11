@@ -147,6 +147,76 @@ export default {
     },
     "app/(platform)/dashboard/layout.tsx": {
       entries: {
+        "10/declaration/body/2/argument/5/1/3/1/3-placeholder": {
+          content: {
+            en: "Search...",
+            pl: "Szukaj...",
+          },
+          hash: "fe877a75eac472fc5b188c135c78a558",
+        },
+        "10/declaration/body/2/argument/5/1/3/1/5": {
+          content: {
+            en: "J",
+            pl: "J",
+          },
+          hash: "1dcfe2bd5ca155b558530a4add45261a",
+        },
+        "10/declaration/body/3/argument/5/1/3/1/3-placeholder": {
+          content: {
+            en: "Search...",
+            pl: "Szukaj...",
+          },
+          hash: "fe877a75eac472fc5b188c135c78a558",
+        },
+        "10/declaration/body/3/argument/5/1/3/1/5": {
+          content: {
+            en: "J",
+            pl: "J",
+          },
+          hash: "1dcfe2bd5ca155b558530a4add45261a",
+        },
+        "11/declaration/body/1/argument/5/1/3/1/3-placeholder": {
+          content: {
+            en: "Search...",
+            pl: "Szukaj...",
+          },
+          hash: "fe877a75eac472fc5b188c135c78a558",
+        },
+        "11/declaration/body/1/argument/5/1/3/1/5": {
+          content: {
+            en: "J",
+            pl: "J",
+          },
+          hash: "1dcfe2bd5ca155b558530a4add45261a",
+        },
+        "11/declaration/body/2/argument/5/1/3/1/3-placeholder": {
+          content: {
+            en: "Search...",
+            pl: "Szukaj...",
+          },
+          hash: "fe877a75eac472fc5b188c135c78a558",
+        },
+        "11/declaration/body/2/argument/5/1/3/1/5": {
+          content: {
+            en: "J",
+            pl: "J",
+          },
+          hash: "1dcfe2bd5ca155b558530a4add45261a",
+        },
+        "11/declaration/body/3/argument/5/1/3/1/3-placeholder": {
+          content: {
+            en: "Search...",
+            pl: "Szukaj...",
+          },
+          hash: "fe877a75eac472fc5b188c135c78a558",
+        },
+        "11/declaration/body/3/argument/5/1/3/1/5": {
+          content: {
+            en: "J",
+            pl: "J",
+          },
+          hash: "1dcfe2bd5ca155b558530a4add45261a",
+        },
         "9/declaration/body/1/argument/5/1/3/1/3-placeholder": {
           content: {
             en: "Search...",
@@ -276,6 +346,20 @@ export default {
           },
           hash: "0ef91fcb33b04612eb8a202f673d7881",
         },
+        "23/body/2/consequent/0/argument/1/1/1": {
+          content: {
+            en: "Sidebar",
+            pl: "Pasek boczny",
+          },
+          hash: "85fcd93a6f051c26d057e4b30d392317",
+        },
+        "23/body/2/consequent/0/argument/1/1/3": {
+          content: {
+            en: "Displays the mobile sidebar.",
+            pl: "Wyświetla mobilny pasek boczny.",
+          },
+          hash: "51aa5f202c817560f38d3527a9a1366d",
+        },
         "24/body/1/argument-aria-label": {
           content: {
             en: "Toggle Sidebar",
@@ -284,6 +368,27 @@ export default {
           hash: "0ef91fcb33b04612eb8a202f673d7881",
         },
         "24/body/1/argument-title": {
+          content: {
+            en: "Toggle Sidebar",
+            pl: "Przełącz pasek boczny",
+          },
+          hash: "0ef91fcb33b04612eb8a202f673d7881",
+        },
+        "24/body/1/argument/3": {
+          content: {
+            en: "Toggle Sidebar",
+            pl: "Przełącz pasek boczny",
+          },
+          hash: "0ef91fcb33b04612eb8a202f673d7881",
+        },
+        "25/body/1/argument-aria-label": {
+          content: {
+            en: "Toggle Sidebar",
+            pl: "Przełącz pasek boczny",
+          },
+          hash: "0ef91fcb33b04612eb8a202f673d7881",
+        },
+        "25/body/1/argument-title": {
           content: {
             en: "Toggle Sidebar",
             pl: "Przełącz pasek boczny",
@@ -3664,6 +3769,24 @@ export default {
         },
       },
     },
+    "features/navigation/components/command-input.tsx": {
+      entries: {
+        "4/declaration/body/1/argument/3-placeholder": {
+          content: {
+            en: "Search...",
+            pl: "Szukaj...",
+          },
+          hash: "fe877a75eac472fc5b188c135c78a558",
+        },
+        "4/declaration/body/1/argument/5": {
+          content: {
+            en: "J",
+            pl: "J",
+          },
+          hash: "c345a5ea391526f8436ffaebfac14f09",
+        },
+      },
+    },
     "features/navigation/components/dashboard-command.tsx": {
       entries: {
         "4/declaration/body/3/argument/1/1-placeholder": {
@@ -3985,6 +4108,58 @@ export default {
             },
             hash: "ed189d7577d88989825ba289c3243a80",
           },
+        "8/declaration/body/7/argument/1/1-placeholder": {
+          content: {
+            en: "Search tenders, navigate, or run commands...",
+            pl: "Wyszukaj przetargi, nawiguj lub wykonaj polecenia...",
+          },
+          hash: "c9f9b1094baadc06057ca69704870898",
+        },
+        "8/declaration/body/7/argument/1/3/1": {
+          content: {
+            en: "No results found.",
+            pl: "Nie znaleziono wyników.",
+          },
+          hash: "8e37a23d37d7b4f501a20991a0d311ea",
+        },
+        "8/declaration/body/7/argument/1/3/3/1/3": {
+          content: {
+            en: "Go to Dashboard",
+            pl: "Przejdź do pulpitu",
+          },
+          hash: "a6efa97d25e36fedc0af794f6ba610f2",
+        },
+        "8/declaration/body/7/argument/1/3/3/3/3": {
+          content: {
+            en: "Discover New Tenders",
+            pl: "Odkryj nowe przetargi",
+          },
+          hash: "bff28bbb9a32e0ddf1aba571d27ea42e",
+        },
+        "8/declaration/body/7/argument/1/3/3/openingElement/0/value/expression":
+          {
+            content: {
+              en: "Navigation",
+              pl: "Nawigacja",
+            },
+            hash: "0373afd8238db1c49f4be4fa6cdf5cd3",
+          },
+        "8/declaration/body/7/argument/1/3/5/expression/right/1/expression/right/3":
+          {
+            content: {
+              en: "Searching…",
+              pl: "Wyszukiwanie…",
+            },
+            hash: "790b828714b22aadfbb086c9a7f9a1b6",
+          },
+        "8/declaration/body/7/argument/1/3/5/expression/right/openingElement/0/value/expression":
+          {
+            content: {
+              en: "Tenders",
+              pl: "Przetargi",
+            },
+            hash: "ed189d7577d88989825ba289c3243a80",
+          },
       },
     },
     "features/navigation/components/dashboard-sidebar.tsx": {
@@ -4017,7 +4192,56 @@ export default {
           },
           hash: "c3882fc98216636873ab9091f3453f0c",
         },
+        "8/0/init/0/0/value": {
+          content: {
+            en: "Home",
+            pl: "Strona główna",
+          },
+          hash: "104a3db3b671c04e167eafbe21e57881",
+        },
+        "8/0/init/1/0/value": {
+          content: {
+            en: "Discover new tenders",
+            pl: "Odkryj nowe przetargi",
+          },
+          hash: "a94c4eb8b9f76eedf17a5b47e0f12908",
+        },
+        "8/0/init/2/0/value": {
+          content: {
+            en: "Active tenders",
+            pl: "Aktywne przetargi",
+          },
+          hash: "bd9a5531afffb07a322a91ec689859ee",
+        },
+        "8/0/init/3/0/value": {
+          content: {
+            en: "Documents",
+            pl: "Dokumenty",
+          },
+          hash: "c3882fc98216636873ab9091f3453f0c",
+        },
         "8/declaration/body/1/argument/3/1/1": {
+          content: {
+            en: "Main Navigation",
+            pl: "Główna nawigacja",
+          },
+          hash: "9e8d5035217a4088af5d7de48c14283b",
+        },
+        "9/declaration/body/1/argument/3/1/1": {
+          content: {
+            en: "Main Navigation",
+            pl: "Główna nawigacja",
+          },
+          hash: "9e8d5035217a4088af5d7de48c14283b",
+        },
+        "9/declaration/body/2/argument/3/1/1": {
+          content: {
+            en: "Main Navigation",
+            pl: "Główna nawigacja",
+          },
+          hash: "9e8d5035217a4088af5d7de48c14283b",
+        },
+        "9/declaration/body/3/argument/3/1/1": {
           content: {
             en: "Main Navigation",
             pl: "Główna nawigacja",
