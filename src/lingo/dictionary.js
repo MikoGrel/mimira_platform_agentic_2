@@ -781,6 +781,13 @@ export default {
           },
           hash: "34d811d0d02e76753d176ae6b99fb933",
         },
+        "5/declaration/body/0/argument/3/1/9/expression/right-title": {
+          content: {
+            en: "Source URL",
+            pl: "Źródłowy URL",
+          },
+          hash: "dbf9149e47977b6caeccdf2cc8b57a44",
+        },
         "5/declaration/body/0/argument/3/1/9/expression/right/1": {
           content: {
             en: "Source URL",
@@ -3391,6 +3398,59 @@ export default {
     },
     "features/inbox/components/tender-parts-carousel.tsx": {
       entries: {
+        "10/declaration/body/9/argument/1/1/expression/right/1": {
+          content: {
+            en: "Tender Parts ({tenderParts.length})",
+            pl: "Części przetargu ({tenderParts.length})",
+          },
+          hash: "c3fedcbc76eb469cff51935bf57af34e",
+        },
+        "10/declaration/body/9/argument/1/5/1/1/1/1/1/1/1": {
+          content: {
+            en: "Overview",
+            pl: "Przegląd",
+          },
+          hash: "30c54e4dc4ce599b87d94be34a8617f5",
+        },
+        "10/declaration/body/9/argument/1/5/1/1/1/1/3/1": {
+          content: {
+            en: "General information about this tender",
+            pl: "Ogólne informacje o tym przetargu",
+          },
+          hash: "0f9d23cc765542b37eca23e742ebb37f",
+        },
+        "10/declaration/body/9/argument/1/5/1/1/3/expression/0/body/1/1/1/1/3":
+          {
+            content: {
+              en: "Part #<expression/>",
+              pl: "Część nr <expression/>",
+            },
+            hash: "c081b0ad6c5ade48dc86c5a2f409e75f",
+          },
+        "10/declaration/body/9/argument/1/5/1/1/3/expression/0/body/1/3/1/1/1":
+          {
+            content: {
+              en: "Requirements:",
+              pl: "Wymagania:",
+            },
+            hash: "f27235edc5c81fa9d3422b1bb9bf98c0",
+          },
+        "10/declaration/body/9/argument/1/5/1/1/3/expression/0/body/1/3/1/1/3/3":
+          {
+            content: {
+              en: "/",
+              pl: "/",
+            },
+            hash: "d727054cb65d0e95c79cfb34bc3e3f28",
+          },
+        "10/declaration/body/9/argument/1/5/1/1/3/expression/0/body/1/3/1/3/expression/right/1":
+          {
+            content: {
+              en: "Wadium: ",
+              pl: "Wadium: ",
+            },
+            hash: "a7908a3166c9eccd9acd413e39b72c11",
+          },
         "8/declaration/body/8/argument/1/1/1": {
           content: {
             en: "Tender Parts ({tenderParts.length})",
@@ -3684,6 +3744,13 @@ export default {
             },
             hash: "02db4c377c520adfab6b28ad89dcc12a",
           },
+        "9/body/0/argument/3": {
+          content: {
+            en: "/",
+            pl: "/",
+          },
+          hash: "d727054cb65d0e95c79cfb34bc3e3f28",
+        },
         "9/declaration/body/8/argument/1/1/1": {
           content: {
             en: "Tender Parts ({tenderParts.length})",
@@ -4881,6 +4948,14 @@ export default {
             },
             hash: "268ceaa14dbf255330885996c6172d23",
           },
+        "6/declaration/body/4/argument/1/3/expression/right/1/1/1/3/1/expression/right":
+          {
+            content: {
+              en: "Matching product",
+              pl: "Pasujący produkt",
+            },
+            hash: "1d9d96b752f70c6303175bbc6628b159",
+          },
         "6/declaration/body/4/argument/1/3/expression/right/1/1/1/3/expression/right":
           {
             content: {
@@ -4897,6 +4972,14 @@ export default {
             },
             hash: "cc5285a2caa6e26dfb6ea7c83f855682",
           },
+        "6/declaration/body/4/argument/1/3/expression/right/1/3/3/expression/right/1/1":
+          {
+            content: {
+              en: "Closest match",
+              pl: "Najbliższe dopasowanie",
+            },
+            hash: "b4e6d92090df7bca61e6df91ccd75edc",
+          },
         "6/declaration/body/4/argument/1/3/expression/right/1/3/3/expression/right/1/3":
           {
             content: {
@@ -4904,6 +4987,14 @@ export default {
               pl: "Najbliższe dopasowanie",
             },
             hash: "dc38da30818aed3a65242dbb5f8345d7",
+          },
+        "6/declaration/body/4/argument/1/3/expression/right/1/3/5/expression/right/1/1":
+          {
+            content: {
+              en: "Requirements to confirm",
+              pl: "Wymagania do potwierdzenia",
+            },
+            hash: "53cc6c9110ae6338416e67558687de0d",
           },
         "6/declaration/body/4/argument/1/3/expression/right/1/3/5/expression/right/1/3":
           {
@@ -4913,13 +5004,21 @@ export default {
             },
             hash: "53cc6c9110ae6338416e67558687de0d",
           },
-        "6/declaration/body/4/argument/1/3/expression/right/1/3/7/expression/right/1/3":
+        "6/declaration/body/4/argument/1/3/expression/right/1/3/7/expression/right/1/1":
           {
             content: {
               en: "Alternative products",
               pl: "Produkty alternatywne",
             },
             hash: "b3102bae97283e81ae9f523a753979c6",
+          },
+        "6/declaration/body/4/argument/1/3/expression/right/1/3/7/expression/right/1/3":
+          {
+            content: {
+              en: "Alternative products",
+              pl: "Produkty alternatywne",
+            },
+            hash: "317417f90dbcaa4f302701e4441eca04",
           },
         "7/declaration/body/4/argument/1/expression/right/1/expression/alternate/1/3/1/expression/right/1":
           {

@@ -17,7 +17,7 @@ export function DescriptionSection({
       <SectionTitle>Description</SectionTitle>
       <SectionContent>
         {description_long_llm ? (
-          <div className="prose prose-sm max-w-none text-foreground/70 leading-relaxed -pt-2">
+          <div className="prose prose-sm max-w-none text-foreground leading-relaxed -pt-2">
             <Markdown
               components={{
                 h1: ({ children }) => (
@@ -33,15 +33,15 @@ export function DescriptionSection({
                   <h4 className="text-base font-medium">{children}</h4>
                 ),
                 p: ({ children }) => (
-                  <p className="text-sm text-foreground/70 my-2">{children}</p>
+                  <p className="text-sm text-foreground my-2">{children}</p>
                 ),
                 ul: ({ children }) => (
-                  <ul className="list-disc list-inside text-sm text-foreground/70 space-y-1">
+                  <ul className="list-disc list-inside text-sm text-foreground/80 space-y-1">
                     {children}
                   </ul>
                 ),
                 ol: ({ children }) => (
-                  <ol className="list-decimal list-inside text-sm text-foreground/70 space-y-1">
+                  <ol className="list-decimal list-inside text-sm text-foreground/80 space-y-1">
                     {children}
                   </ol>
                 ),

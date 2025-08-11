@@ -2,7 +2,7 @@
 
 import { Tables } from "$/types/supabase";
 import { Card, CardBody, Chip } from "@heroui/react";
-import { ListChecks, Package, Shuffle, Tag } from "lucide-react";
+import { Package } from "lucide-react";
 import { cn } from "$/lib/utils";
 import {
   Accordion,
@@ -66,24 +66,26 @@ export function ProductCard({ product, className }: ProductCardProps) {
         {hasDetails && (
           <Accordion type="single" collapsible>
             <AccordionItem value="details">
-              <AccordionTrigger className="px-0 py-0 items-center">
-                <div className="flex w-full items-center justify-between gap-3">
+              <AccordionTrigger className="px-0 py-0 items-center hover:no-underline hover:cursor-pointer">
+                <div className="flex w-full items-center justify-between">
                   <p className="text-sm font-medium text-foreground flex items-center gap-2">
                     <span className="inline-flex items-center justify-center w-6 h-6 rounded-full bg-primary/5 text-primary border border-primary/20">
                       <Package className="w-3.5 h-3.5" />
                     </span>
                     {product.product_req_name || "Product"}
                   </p>
-                  {product.closest_match && (
-                    <Chip size="sm" variant="flat" color="success">
-                      Matching product
-                    </Chip>
-                  )}
-                  {product.product_req_quantity && (
-                    <Chip size="sm" variant="flat">
-                      {product.product_req_quantity}
-                    </Chip>
-                  )}
+                  <div className="flex items-center gap-2">
+                    {product.closest_match && (
+                      <Chip size="sm" variant="flat" color="success">
+                        Matching product
+                      </Chip>
+                    )}
+                    {product.product_req_quantity && (
+                      <Chip size="sm" variant="flat">
+                        {product.product_req_quantity}
+                      </Chip>
+                    )}
+                  </div>
                 </div>
               </AccordionTrigger>
               <AccordionContent className="px-0 pt-4 space-y-4">
@@ -101,15 +103,19 @@ export function ProductCard({ product, className }: ProductCardProps) {
                 {product.closest_match && (
                   <div className="text-sm space-y-1">
                     <div className="flex items-center gap-2">
-                      <span className="inline-flex items-center justify-center w-6 h-6 rounded-full bg-emerald-50 text-emerald-600 border border-emerald-200">
-                        <Tag className="w-3.5 h-3.5" />
+                      <span className="font-medium text-muted-foreground">
+                        Closest match
                       </span>
-                      <span className="font-medium">Closest match</span>
                     </div>
                     <div className="pt-2">
-                      <span className="inline-flex items-center rounded-md bg-subtle/50 border border-border p-2">
+                      <Chip
+                        color="success"
+                        variant="flat"
+                        className="font-medium"
+                        startContent={<Package className="w-3.5 h-3.5 ml-1" />}
+                      >
                         {product.closest_match}
-                      </span>
+                      </Chip>
                     </div>
                   </div>
                 )}
@@ -117,17 +123,17 @@ export function ProductCard({ product, className }: ProductCardProps) {
                 {requirementsList.length > 0 && (
                   <div className="text-sm space-y-1">
                     <div className="flex items-center gap-2 ">
-                      <span className="inline-flex items-center justify-center w-6 h-6 rounded-full bg-amber-50 text-amber-600 border border-amber-200">
-                        <ListChecks className="w-3.5 h-3.5" />
-                      </span>
-                      <span className="font-medium">
+                      <span className="font-medium text-muted-foreground">
                         Requirements to confirm
                       </span>
                     </div>
                     <ul className="space-y-1 pl-2 pt-2">
                       {requirementsList.map((line, i) => (
-                        <li key={i} className="flex items-start gap-2 ">
-                          <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-muted-foreground/30" />
+                        <li
+                          key={i}
+                          className="flex items-start gap-2 font-medium"
+                        >
+                          <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-muted-foreground/50" />
                           <span>{line}</span>
                         </li>
                       ))}
@@ -138,15 +144,17 @@ export function ProductCard({ product, className }: ProductCardProps) {
                 {alternativesList.length > 0 && (
                   <div className="text-sm space-y-1">
                     <div className="flex items-center gap-2">
-                      <span className="inline-flex items-center justify-center w-6 h-6 rounded-full bg-violet-50 text-violet-600 border border-violet-200">
-                        <Shuffle className="w-3.5 h-3.5" />
+                      <span className="font-medium text-muted-foreground">
+                        Alternative products
                       </span>
-                      <span className="font-medium">Alternative products</span>
                     </div>
                     <ul className="space-y-1 pl-2 pt-2">
                       {alternativesList.map((line, i) => (
-                        <li key={i} className="flex items-start gap-2">
-                          <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-muted" />
+                        <li
+                          key={i}
+                          className="flex items-start gap-2 font-medium"
+                        >
+                          <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-muted-foreground/50" />
                           <span>{line}</span>
                         </li>
                       ))}

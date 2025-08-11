@@ -45,19 +45,19 @@ export function AdditionalInfoSection({
           )}
 
           {url && (
-            <div className="p-4 bg-subtle border border-border rounded-lg">
-              <h4 className="text-sm font-medium text-foreground mb-2">
-                Source URL
-              </h4>
-              <a
-                href={url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-sm text-primary hover:text-primary/80 underline break-all"
-              >
-                {url}
-              </a>
-            </div>
+            <InfoCard
+              title="Source URL"
+              content={
+                <a
+                  href={url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm text-primary hover:text-primary/80 underline break-all"
+                >
+                  {url}
+                </a>
+              }
+            />
           )}
         </div>
       </SectionContent>

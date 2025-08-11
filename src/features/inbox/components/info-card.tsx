@@ -1,6 +1,7 @@
 "use client";
 
 import { cn } from "$/lib/utils";
+import { ReactNode } from "react";
 
 export function InfoCard({
   title,
@@ -8,7 +9,7 @@ export function InfoCard({
   variant = "default",
 }: {
   title: string;
-  content: string;
+  content: ReactNode;
   variant?: "default" | "highlight";
 }) {
   return (

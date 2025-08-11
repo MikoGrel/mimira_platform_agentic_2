@@ -150,7 +150,7 @@ export function TenderPartsCarousel({
                   className={cn(
                     "cursor-pointer transition-all duration-200 h-full",
                     selectedPart === "overview" ||
-                      (!selectedPart && "ring ring-primary")
+                      (!selectedPart && "ring ring-primary/70")
                   )}
                   onPress={() => onPartSelect("overview")}
                 >
@@ -175,7 +175,7 @@ export function TenderPartsCarousel({
                     shadow="sm"
                     className={cn(
                       "cursor-pointer transition-all duration-200 h-full",
-                      selectedPart === part.part_uuid && "ring ring-primary"
+                      selectedPart === part.part_uuid && "ring ring-primary/70"
                     )}
                     onPress={() => onPartSelect(part.part_uuid)}
                   >

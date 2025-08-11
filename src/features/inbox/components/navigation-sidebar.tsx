@@ -11,18 +11,24 @@ interface NavigationSidebarProps {
 
 export function NavigationSidebar({ scrollRef }: NavigationSidebarProps) {
   const [activeSection, setActiveSection] = useState<string>("");
+  const [visibleSections, setVisibleSections] = useState<string[]>([]);
   const [collapsed, setCollapsed] = useLocalStorage<boolean>(
     "navigation-sidebar-collapsed",
     false
   );
 
-  const sections = [
+  const allSections = [
     { id: "at-glance", label: <span>Overview</span> },
+    { id: "products", label: <span>Products</span> },
     { id: "requirements", label: <span>Requirements</span> },
     { id: "review-criteria", label: <span>Review Criteria</span> },
     { id: "description", label: <span>Description</span> },
     { id: "others", label: <span>Additional Info</span> },
   ];
+
+  const sections = allSections.filter((section) =>
+    visibleSections.includes(section.id)
+  );
 
   useEffect(() => {
     if (!scrollRef.current) return;
@@ -42,10 +48,12 @@ export function NavigationSidebar({ scrollRef }: NavigationSidebarProps) {
       }
     );
 
-    // Wait a bit for sections to be rendered
     const timeoutId = setTimeout(() => {
-      const sections = document.querySelectorAll("[data-section]");
-      sections.forEach((section) => observer.observe(section));
+      const sectionElements = document.querySelectorAll("[data-section]");
+      const foundSectionIds = Array.from(sectionElements).map((el) => el.id);
+      setVisibleSections(foundSectionIds);
+
+      sectionElements.forEach((section) => observer.observe(section));
     }, 100);
 
     return () => {
@@ -53,6 +61,18 @@ export function NavigationSidebar({ scrollRef }: NavigationSidebarProps) {
       observer.disconnect();
     };
   }, [scrollRef]);
+
+  useEffect(() => {
+    const recheckSections = () => {
+      const sectionElements = document.querySelectorAll("[data-section]");
+      const foundSectionIds = Array.from(sectionElements).map((el) => el.id);
+      setVisibleSections(foundSectionIds);
+    };
+
+    const timeoutId = setTimeout(recheckSections, 200);
+
+    return () => clearTimeout(timeoutId);
+  }, []);
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
