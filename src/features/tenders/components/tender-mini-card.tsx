@@ -32,7 +32,7 @@ export function TenderMiniCard(props: TenderMiniCardProps) {
     >
       <Link
         href={`/dashboard/inbox/?id=${id}`}
-        className="bg-white hover:bg-gray-50 transition-all group border p-4 flex justify-between rounded-xl"
+        className="bg-white hover:bg-subtle transition-all group border p-4 flex justify-between rounded-xl"
       >
         <div className="flex flex-col gap-2">
           <p className="text-sm font-medium">{title}</p>

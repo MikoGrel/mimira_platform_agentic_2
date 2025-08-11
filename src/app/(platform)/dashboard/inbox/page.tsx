@@ -203,7 +203,7 @@ export default function InboxPage() {
       </aside>
       {!selectedTender && (
         <section className="sticky top-0 flex items-center justify-center h-full">
-          <div className="text-center text-gray-500">
+          <div className="text-center text-muted-foreground">
             <p className="text-sm">Select a tender to view details</p>
           </div>
         </section>

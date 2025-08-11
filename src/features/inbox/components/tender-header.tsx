@@ -63,7 +63,7 @@ export function TenderHeader({
   };
 
   return (
-    <div className="border-b border-gray-200 bg-white overflow-hidden px-6 py-4">
+    <div className="border-b border-border bg-white overflow-hidden px-6 py-4">
       {isRejected && (
         <Chip color="danger" size="sm" className="mb-2" variant="flat">
           Rejected
@@ -100,7 +100,7 @@ export function TenderHeader({
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.25, ease: [0.4, 0.0, 0.2, 1] }}
           >
-            <div className="flex items-center gap-4 text-sm text-gray-600">
+            <div className="flex items-center gap-4 text-sm text-muted-foreground">
               <span className="flex items-center gap-2">
                 <House className="w-4 h-4" />
                 {tender.organizationname}
@@ -181,7 +181,7 @@ export function TenderHeader({
           animate={{ opacity: 1 }}
           transition={{ duration: 0.25, ease: [0.4, 0.0, 0.2, 1] }}
         >
-          <div className="flex items-center gap-4 text-sm text-gray-600">
+          <div className="flex items-center gap-4 text-sm text-muted-foreground">
             <span className="flex items-center gap-1">
               <House className="w-3 h-3" />
               {tender.organizationname}

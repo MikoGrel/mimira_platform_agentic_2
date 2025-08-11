@@ -81,7 +81,7 @@ export function NavigationSidebar({ scrollRef }: NavigationSidebarProps) {
       )}
     >
       <div className="sticky top-4">
-        <h3 className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-3">
+        <h3 className="text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-3">
           Contents
         </h3>
         <nav className="space-y-1">
@@ -90,10 +90,10 @@ export function NavigationSidebar({ scrollRef }: NavigationSidebarProps) {
               key={section.id}
               onClick={() => scrollToSection(section.id)}
               className={cn(
-                "flex items-center gap-2 w-full text-left px-3 py-2 text-sm rounded-lg transition-colors hover:bg-gray-100",
+                "flex items-center gap-2 w-full text-left px-3 py-2 text-sm rounded-lg transition-colors hover:bg-accent",
                 {
-                  "bg-gray-100 text-gray-900": activeSection === section.id,
-                  "text-gray-600": activeSection !== section.id,
+                  "bg-subtle text-foreground": activeSection === section.id,
+                  "text-muted-foreground": activeSection !== section.id,
                 }
               )}
             >

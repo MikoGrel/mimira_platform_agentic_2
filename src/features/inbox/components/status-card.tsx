@@ -16,33 +16,33 @@ export function StatusCard({
   type?: "success" | "warning" | "error" | "neutral";
 }) {
   const badgeColors = {
-    success: "bg-emerald-50 text-emerald-600 border-emerald-200",
-    warning: "bg-amber-50 text-amber-600 border-amber-200",
-    error: "bg-red-50 text-red-600 border-red-200",
-    neutral: "bg-gray-50 text-gray-600 border-gray-200",
+    success: "bg-green-50 text-green-700 border-green-200",
+    warning: "bg-amber-50 text-amber-700 border-amber-200",
+    error: "bg-red-50 text-red-700 border-red-200",
+    neutral: "bg-subtle text-foreground/70 border-border",
   } as const;
 
   return (
     <Card
       shadow="none"
-      className="border border-gray-200 rounded-lg hover:shadow-sm transition-shadow"
+      className="border border-border rounded-lg hover:shadow-sm transition-shadow"
     >
       <CardBody className="p-4 space-y-3">
         <div className="flex items-start justify-between gap-3">
-          <p className="text-sm font-medium text-gray-900 flex items-center gap-2">
+          <p className="text-sm font-medium text-foreground flex items-center gap-2">
             <span
               className={cn(
                 "inline-flex items-center justify-center w-6 h-6 rounded-full border flex-shrink-0",
                 badgeColors[type]
               )}
             >
-              <Icon className="w-3.5 h-3.5" />
+              <Icon className="w-4 h-4" />
             </span>
             {title}
           </p>
         </div>
         {children && (
-          <div className="text-[13px] text-gray-700 whitespace-pre-wrap leading-relaxed">
+          <div className="text-sm text-foreground/70 whitespace-pre-wrap leading-relaxed">
             {children}
           </div>
         )}

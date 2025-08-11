@@ -18,7 +18,9 @@ export function ProductsSection({ products }: ProductsSectionProps) {
     <Section id="products" data-section>
       <SectionTitle>
         Products{" "}
-        <span className="text-gray-400 font-normal">({products.length})</span>
+        <span className="text-subtle-foreground font-normal">
+          ({products.length})
+        </span>
       </SectionTitle>
       <SectionContent>
         <Masonry columns={{ base: 1, md: 2 }} columnGap="1rem">

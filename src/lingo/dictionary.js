@@ -5222,7 +5222,7 @@ export default {
               en: "Generating summary...",
               pl: "Generowanie podsumowania...",
             },
-            hash: "4c2912b717d358d5e0265fca7823eb9b",
+            hash: "b4fe61c9f4bcfb125cc1d4477686e840",
           },
       },
     },

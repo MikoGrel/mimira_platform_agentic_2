@@ -52,7 +52,7 @@ export function ReviewCriteria({
 
   if (reviewCriteria.length === 0) {
     return (
-      <div className="text-center text-gray-500 py-8">
+      <div className="text-center text-muted-foreground py-8">
         <p className="text-sm">No review criteria available</p>
       </div>
     );
@@ -85,7 +85,7 @@ export function ReviewCriteria({
                     <div className="rounded-lg border bg-background p-2 shadow-sm">
                       <div className="grid gap-2">
                         <div className="flex flex-col">
-                          <span className="text-[0.70rem] uppercase text-muted-foreground">
+                          <span className="text-xs uppercase text-muted-foreground">
                             {data.name}
                           </span>
                           <span className="font-bold text-muted-foreground">
@@ -124,7 +124,7 @@ export function ReviewCriteria({
             }
           >
             {criteria.opis && (
-              <p className="text-sm text-gray-600">{criteria.opis}</p>
+              <p className="text-sm text-muted-foreground">{criteria.opis}</p>
             )}
           </AccordionItem>
         ))}

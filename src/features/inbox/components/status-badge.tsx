@@ -11,11 +11,11 @@ export function StatusBadge({
   type: "success" | "warning" | "error" | "neutral";
   children: ReactNode;
 }) {
-  const styles = {
+  const badgeColors = {
     success: "bg-green-50 text-green-700 border-green-200",
     warning: "bg-amber-50 text-amber-700 border-amber-200",
     error: "bg-red-50 text-red-700 border-red-200",
-    neutral: "bg-gray-50 text-gray-700 border-gray-200",
+    neutral: "bg-subtle text-foreground/70 border-border",
   } as const;
 
   const icons = {
@@ -29,7 +29,14 @@ export function StatusBadge({
 
   return (
     <div className={cn("flex gap-2 px-3 py-2 rounded-lg text-sm")}>
-      <Icon className={cn("w-4 h-4 flex-shrink-0", styles[type])} />
+      <div
+        className={cn(
+          "flex items-center justify-center w-6 h-6 rounded-full border flex-shrink-0 -mt-0.5",
+          badgeColors[type]
+        )}
+      >
+        <Icon className={cn("w-4 h-4")} />
+      </div>
       {children}
     </div>
   );

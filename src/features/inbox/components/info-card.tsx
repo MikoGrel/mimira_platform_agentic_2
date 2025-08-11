@@ -16,12 +16,12 @@ export function InfoCard({
       className={cn(
         "p-4 rounded-lg border",
         variant === "highlight"
-          ? "bg-blue-50 border-blue-200"
-          : "bg-gray-50 border-gray-200"
+          ? "bg-primary/5 border-primary/20"
+          : "bg-subtle/30 border-border"
       )}
     >
-      <h4 className="text-sm font-medium text-gray-900 mb-2">{title}</h4>
-      <p className="text-sm text-gray-600 whitespace-pre-wrap leading-relaxed">
+      <h4 className="text-sm font-medium text-foreground mb-2">{title}</h4>
+      <p className="text-sm text-muted-foreground whitespace-pre-wrap leading-relaxed">
         {content}
       </p>
     </div>

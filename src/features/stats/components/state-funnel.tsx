@@ -67,9 +67,9 @@ export function FunnelItem({
         <p className="font-medium">{value}</p>
         <p className="text-muted-foreground">({percentage}%)</p>
       </div>
-      <div className="w-full h-2 bg-gray-200 rounded-full col-span-2">
+      <div className="w-full h-2 bg-muted rounded-full col-span-2">
         <div
-          className={cn("h-full bg-blue-500 rounded-full", className)}
+          className={cn("h-full bg-primary rounded-full", className)}
           style={{ width: `${percentage}%` }}
         ></div>
       </div>

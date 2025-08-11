@@ -7,7 +7,7 @@ import { Button } from "$/components/ui/button";
 import { cn } from "$/lib/utils";
 import useEmblaCarousel from "embla-carousel-react";
 import { useCallback, useEffect, useState } from "react";
-import { motion } from "motion/react";
+import { AnimatePresence, motion } from "motion/react";
 
 interface TenderPartsCarouselProps {
   tenderParts: Tables<"tender_parts">[];
@@ -15,6 +15,30 @@ interface TenderPartsCarouselProps {
   onPartSelect: (partId: string) => void;
   approvedPartIds: Set<string>;
   isCollapsed: boolean;
+}
+
+function RequirementsStatus({
+  met_requirements,
+  needs_confirmation_requirements,
+  not_met_requirements,
+}: {
+  met_requirements: Tables<"tender_parts">["met_requirements"];
+  needs_confirmation_requirements: Tables<"tender_parts">["needs_confirmation_requirements"];
+  not_met_requirements: Tables<"tender_parts">["not_met_requirements"];
+}) {
+  return (
+    <div className="gap-1 inline-flex ml-1">
+      <span className="text-success-600 font-medium">
+        {met_requirements?.length || 0}
+      </span>
+      <span className="text-subtle-foreground">/</span>
+      <span className="text-warning-600 font-medium">
+        {(met_requirements?.length || 0) +
+          (needs_confirmation_requirements?.length || 0) +
+          (not_met_requirements?.length || 0)}
+      </span>
+    </div>
+  );
 }
 
 export function TenderPartsCarousel({
@@ -136,7 +160,7 @@ export function TenderPartsCarousel({
                     </div>
                   </CardHeader>
                   <CardBody className="pt-0 px-3 pb-3">
-                    <p className="text-xs text-gray-600">
+                    <p className="text-xs text-muted-foreground">
                       General information about this tender
                     </p>
                   </CardBody>
@@ -159,7 +183,7 @@ export function TenderPartsCarousel({
                       <div className="flex items-center justify-between w-full">
                         <div className="flex items-center gap-1">
                           {approvedPartIds.has(part.part_uuid) && (
-                            <Check className="w-3 h-3 text-blue-600" />
+                            <Check className="w-3 h-3 text-primary" />
                           )}
                           <h3
                             className={cn("text-muted-foreground", {
@@ -169,6 +193,18 @@ export function TenderPartsCarousel({
                             Part #{index + 1}
                           </h3>
                         </div>
+                        <AnimatePresence>
+                          {isCollapsed && (
+                            <motion.div
+                              initial={{ opacity: 0, y: 10 }}
+                              animate={{ opacity: 1, y: 0 }}
+                              exit={{ opacity: 0, y: 10 }}
+                              transition={{ duration: 0.2 }}
+                            >
+                              <RequirementsStatus {...part} />
+                            </motion.div>
+                          )}
+                        </AnimatePresence>
                       </div>
                       <h4 className="text-left line-clamp-2 text-font-base font-semibold w-full">
                         {part.part_name?.trim()}
@@ -186,18 +222,7 @@ export function TenderPartsCarousel({
                       >
                         <div className="text-xs w-full">
                           <span className="inline">Requirements:</span>
-                          <div className="gap-1 inline-flex ml-1">
-                            <span className="text-green-600 font-medium">
-                              {part.met_requirements?.length || 0}
-                            </span>
-                            <span className="text-gray-400">/</span>
-                            <span className="text-warning-600 font-medium">
-                              {(part.met_requirements?.length || 0) +
-                                (part.needs_confirmation_requirements?.length ||
-                                  0) +
-                                (part.not_met_requirements?.length || 0)}
-                            </span>
-                          </div>
+                          <RequirementsStatus {...part} />
                         </div>
 
                         {part.wadium_llm && (

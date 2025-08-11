@@ -45,15 +45,15 @@ export function AdditionalInfoSection({
           )}
 
           {url && (
-            <div className="p-4 bg-gray-50 border border-gray-200 rounded-lg">
-              <h4 className="text-sm font-medium text-gray-900 mb-2">
+            <div className="p-4 bg-subtle border border-border rounded-lg">
+              <h4 className="text-sm font-medium text-foreground mb-2">
                 Source URL
               </h4>
               <a
                 href={url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-sm text-blue-600 hover:text-blue-800 underline break-all"
+                className="text-sm text-primary hover:text-primary/80 underline break-all"
               >
                 {url}
               </a>

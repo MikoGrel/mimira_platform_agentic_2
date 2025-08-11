@@ -3775,6 +3775,62 @@
     },
     "features/inbox/components/tender-parts-carousel.tsx": {
       "scopes": {
+        "10/declaration/body/9/argument/1/1/expression/right/1": {
+          "type": "element",
+          "hash": "c3fedcbc76eb469cff51935bf57af34e",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Tender Parts ({tenderParts.length})"
+        },
+        "10/declaration/body/9/argument/1/5/1/1/1/1/1/1/1": {
+          "type": "element",
+          "hash": "30c54e4dc4ce599b87d94be34a8617f5",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Overview"
+        },
+        "10/declaration/body/9/argument/1/5/1/1/1/1/3/1": {
+          "type": "element",
+          "hash": "0f9d23cc765542b37eca23e742ebb37f",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "General information about this tender"
+        },
+        "10/declaration/body/9/argument/1/5/1/1/3/expression/0/body/1/1/1/1/3": {
+          "type": "element",
+          "hash": "c081b0ad6c5ade48dc86c5a2f409e75f",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Part #<expression/>"
+        },
+        "10/declaration/body/9/argument/1/5/1/1/3/expression/0/body/1/3/1/1/1": {
+          "type": "element",
+          "hash": "f27235edc5c81fa9d3422b1bb9bf98c0",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Requirements:"
+        },
+        "10/declaration/body/9/argument/1/5/1/1/3/expression/0/body/1/3/1/1/3/3": {
+          "type": "element",
+          "hash": "d727054cb65d0e95c79cfb34bc3e3f28",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "/"
+        },
+        "10/declaration/body/9/argument/1/5/1/1/3/expression/0/body/1/3/1/3/expression/right/1": {
+          "type": "element",
+          "hash": "a7908a3166c9eccd9acd413e39b72c11",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Wadium: "
+        },
         "8/declaration/body/8/argument/1/1/1": {
           "type": "element",
           "hash": "148be08ea18ef8622d626970fa612f3a",
@@ -4094,6 +4150,14 @@
           "skip": false,
           "overrides": {},
           "content": "Completion: "
+        },
+        "9/body/0/argument/3": {
+          "type": "element",
+          "hash": "d727054cb65d0e95c79cfb34bc3e3f28",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "/"
         },
         "9/declaration/body/8/argument/1/1/1": {
           "type": "element",
@@ -5413,7 +5477,7 @@
         },
         "6/declaration/body/4/argument/1/3/expression/right/1/3/7/expression/right/1/3": {
           "type": "element",
-          "hash": "b3102bae97283e81ae9f523a753979c6",
+          "hash": "317417f90dbcaa4f302701e4441eca04",
           "context": "",
           "skip": false,
           "overrides": {},
@@ -5737,7 +5801,7 @@
         },
         "5/declaration/0/init/0/body/2/argument/3/expression/alternate/consequent/3": {
           "type": "element",
-          "hash": "4c2912b717d358d5e0265fca7823eb9b",
+          "hash": "b4fe61c9f4bcfb125cc1d4477686e840",
           "context": "",
           "skip": false,
           "overrides": {},

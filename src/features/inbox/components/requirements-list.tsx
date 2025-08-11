@@ -4,7 +4,6 @@ import { useState } from "react";
 import { ChevronDown, ChevronRight } from "lucide-react";
 import { StatusBadge } from "./status-badge";
 
-// Requirements List Component
 export function RequirementsList({
   title,
   items,
@@ -26,7 +25,7 @@ export function RequirementsList({
     <div className="space-y-2">
       <button
         onClick={toggleCollapsed}
-        className="flex items-center gap-2 text-sm font-medium text-gray-900 hover:text-gray-700 transition-colors"
+        className="flex items-center gap-2 text-sm font-medium text-foreground hover:text-foreground/70 transition-colors"
       >
         {isCollapsed ? (
           <ChevronRight className="h-4 w-4" />

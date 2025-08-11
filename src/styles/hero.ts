@@ -2,6 +2,7 @@
 import { heroui } from "@heroui/react";
 
 export default heroui({
+  addCommonColors: true,
   themes: {
     light: {
       layout: {
@@ -11,9 +12,6 @@ export default heroui({
           large: "1px",
         },
       },
-    },
-    dark: {
-      colors: {},
     },
   },
 });
