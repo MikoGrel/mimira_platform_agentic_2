@@ -7,7 +7,6 @@ import { parseAsString, useQueryState } from "nuqs";
 import { useMemo, useState } from "react";
 import Symbol from "$/features/branding/components/Symbol";
 import { FilterForm, FilterChips, useFilterForm } from "$/features/inbox";
-import { useTenderInboxQuery, useMarkAsSeen } from "$/features/inbox/api";
 import { useInfiniteList } from "$/hooks/use-infinite-list";
 import { AnimatePresence, motion } from "motion/react";
 import { truncate } from "lodash";
@@ -15,6 +14,8 @@ import { cn } from "$/lib/utils";
 import { useIndividualTender } from "$/features/tenders/api";
 import dynamic from "next/dynamic";
 import { useDateFormat } from "$/features/i18n/hooks/use-date-format";
+import { useMarkAsSeen } from "$/features/inbox/api/use-mark-as-seen";
+import useTenderInboxQuery from "$/features/inbox/api/use-tender-inbox-query";
 
 const TenderPreview = dynamic(
   () =>

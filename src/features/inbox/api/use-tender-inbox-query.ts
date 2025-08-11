@@ -187,7 +187,10 @@ export default function useTenderInboxQuery({
     enabled: !!user,
   });
 
-  function updateSeenAt(id: string) {
+  function updateSeenAt(
+    id: string,
+    value: string | null = new Date().toISOString()
+  ) {
     queryClient.setQueryData(
       queryKey,
       (
@@ -206,9 +209,7 @@ export default function useTenderInboxQuery({
           pages: oldData.pages.map((page) => ({
             ...page,
             data: page.data.map((tender) =>
-              tender.id === id
-                ? { ...tender, seen_at: new Date().toISOString() }
-                : tender
+              tender.id === id ? { ...tender, seen_at: value } : tender
             ),
           })),
         };

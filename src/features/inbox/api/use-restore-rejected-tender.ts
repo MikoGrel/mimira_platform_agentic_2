@@ -1,7 +1,14 @@
 import { createClient } from "$/lib/supabase/client";
-import { useMutation, useQueryClient } from "@tanstack/react-query";
+import { PostgrestError } from "@supabase/supabase-js";
+import {
+  useMutation,
+  UseMutationOptions,
+  useQueryClient,
+} from "@tanstack/react-query";
 
-export function useRestoreRejectedTender() {
+export function useRestoreRejectedTender(
+  options?: Omit<UseMutationOptions<null, PostgrestError, string>, "mutationFn">
+) {
   const client = createClient();
   const queryClient = useQueryClient();
 
@@ -24,5 +31,6 @@ export function useRestoreRejectedTender() {
       queryClient.invalidateQueries({ queryKey: ["tenders"] });
       queryClient.invalidateQueries({ queryKey: ["tender", tenderId] });
     },
+    ...options,
   });
 }

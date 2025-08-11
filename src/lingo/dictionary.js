@@ -136,6 +136,34 @@ export default {
           },
           hash: "067789b01a081458db2f872f10a37c3f",
         },
+        "16/declaration/body/13/argument/1/1/1/3-placeholder": {
+          content: {
+            en: "Search",
+            pl: "Szukaj",
+          },
+          hash: "49dd6c21604b5e8d4153ff1aff2177e1",
+        },
+        "16/declaration/body/13/argument/1/5/1/3": {
+          content: {
+            en: "Ask Mimir",
+            pl: "Zapytaj Mimira",
+          },
+          hash: "c516ed1af9463ccd6bdcb19a1f13e4ac",
+        },
+        "16/declaration/body/13/argument/1/5/1/5": {
+          content: {
+            en: "Coming soon",
+            pl: "Wkrótce dostępne",
+          },
+          hash: "05a8fc9f6d826fd88a809d98684edcad",
+        },
+        "16/declaration/body/13/argument/3/expression/right/1/1": {
+          content: {
+            en: "Select a tender to view details",
+            pl: "Wybierz przetarg, aby zobaczyć szczegóły",
+          },
+          hash: "067789b01a081458db2f872f10a37c3f",
+        },
         "17/body/0/argument/1/expression/0/body/3/3": {
           content: {
             en: "·",
@@ -172,6 +200,41 @@ export default {
           hash: "067789b01a081458db2f872f10a37c3f",
         },
         "18/body/0/argument/1/expression/0/body/3/3": {
+          content: {
+            en: "·",
+            pl: "·",
+          },
+          hash: "26b80ae8a680de73667e096098aa69d8",
+        },
+        "18/declaration/body/13/argument/1/1/1/3-placeholder": {
+          content: {
+            en: "Search",
+            pl: "Szukaj",
+          },
+          hash: "49dd6c21604b5e8d4153ff1aff2177e1",
+        },
+        "18/declaration/body/13/argument/1/5/1/3": {
+          content: {
+            en: "Ask Mimir",
+            pl: "Zapytaj Mimira",
+          },
+          hash: "c516ed1af9463ccd6bdcb19a1f13e4ac",
+        },
+        "18/declaration/body/13/argument/1/5/1/5": {
+          content: {
+            en: "Coming soon",
+            pl: "Wkrótce dostępne",
+          },
+          hash: "05a8fc9f6d826fd88a809d98684edcad",
+        },
+        "18/declaration/body/13/argument/3/expression/right/1/1": {
+          content: {
+            en: "Select a tender to view details",
+            pl: "Wybierz przetarg, aby zobaczyć szczegóły",
+          },
+          hash: "067789b01a081458db2f872f10a37c3f",
+        },
+        "19/body/0/argument/1/expression/0/body/3/3": {
           content: {
             en: "·",
             pl: "·",
@@ -622,6 +685,20 @@ export default {
     },
     "features/hub/components/new-tenders-bento.tsx": {
       entries: {
+        "7/declaration/body/1/argument/openingElement/1/value/expression": {
+          content: {
+            en: "New tenders",
+            pl: "Nowe przetargi",
+          },
+          hash: "b6a405902627530cdf66b4c52e322ee3",
+        },
+        "7/declaration/body/1/argument/openingElement/2/value/expression": {
+          content: {
+            en: "Open full list",
+            pl: "Otwórz pełną listę",
+          },
+          hash: "31b50a6e655b9e4c34034afe38b5fa0f",
+        },
         "8/declaration/body/1/argument/openingElement/1/value/expression": {
           content: {
             en: "New tenders",
@@ -951,26 +1028,75 @@ export default {
         },
         "5/declaration/body/2/0/init/1/1/value": {
           content: {
+            en: "Products",
+            pl: "Produkty",
+          },
+          hash: "a003449ecbde6b7a73044f46ea6bbe75",
+        },
+        "5/declaration/body/2/0/init/2/1/value": {
+          content: {
             en: "Requirements",
             pl: "Wymagania",
           },
           hash: "e108e149e0fd5b65f5850b6f032ccabe",
         },
-        "5/declaration/body/2/0/init/2/1/value": {
+        "5/declaration/body/2/0/init/3/1/value": {
           content: {
             en: "Review Criteria",
             pl: "Kryteria oceny",
           },
           hash: "d524df30da3658fdbc1794408fcfdab4",
         },
-        "5/declaration/body/2/0/init/3/1/value": {
+        "5/declaration/body/2/0/init/4/1/value": {
           content: {
             en: "Description",
             pl: "Opis",
           },
           hash: "e17686a22ffad04cc7bb70524ed4478b",
         },
-        "5/declaration/body/2/0/init/4/1/value": {
+        "5/declaration/body/2/0/init/5/1/value": {
+          content: {
+            en: "Additional Info",
+            pl: "Dodatkowe informacje",
+          },
+          hash: "d5bf1e70991802fd4a801f3a79cf9e5d",
+        },
+        "5/declaration/body/3/0/init/0/1/value": {
+          content: {
+            en: "Overview",
+            pl: "Przegląd",
+          },
+          hash: "30c54e4dc4ce599b87d94be34a8617f5",
+        },
+        "5/declaration/body/3/0/init/1/1/value": {
+          content: {
+            en: "Products",
+            pl: "Produkty",
+          },
+          hash: "a003449ecbde6b7a73044f46ea6bbe75",
+        },
+        "5/declaration/body/3/0/init/2/1/value": {
+          content: {
+            en: "Requirements",
+            pl: "Wymagania",
+          },
+          hash: "e108e149e0fd5b65f5850b6f032ccabe",
+        },
+        "5/declaration/body/3/0/init/3/1/value": {
+          content: {
+            en: "Review Criteria",
+            pl: "Kryteria oceny",
+          },
+          hash: "d524df30da3658fdbc1794408fcfdab4",
+        },
+        "5/declaration/body/3/0/init/4/1/value": {
+          content: {
+            en: "Description",
+            pl: "Opis",
+          },
+          hash: "e17686a22ffad04cc7bb70524ed4478b",
+        },
+        "5/declaration/body/3/0/init/5/1/value": {
           content: {
             en: "Additional Info",
             pl: "Dodatkowe informacje",
@@ -978,6 +1104,20 @@ export default {
           hash: "d5bf1e70991802fd4a801f3a79cf9e5d",
         },
         "5/declaration/body/5/argument/1/1": {
+          content: {
+            en: "Contents",
+            pl: "Spis treści",
+          },
+          hash: "935785ca48ce760173b2096c2e8be8e6",
+        },
+        "5/declaration/body/7/argument/1/1": {
+          content: {
+            en: "Contents",
+            pl: "Spis treści",
+          },
+          hash: "935785ca48ce760173b2096c2e8be8e6",
+        },
+        "5/declaration/body/8/argument/1/1": {
           content: {
             en: "Contents",
             pl: "Spis treści",
@@ -1986,6 +2126,379 @@ export default {
             },
             hash: "40e4856fce1723ab765f7af6042f348c",
           },
+        "12/body/1/consequent/0/argument/1": {
+          content: {
+            en: "Restore",
+            pl: "Przywróć",
+          },
+          hash: "a1c119b367dc32fe4e2f1c8c4e6334ec",
+        },
+        "12/body/2/argument/1/expression/right/1": {
+          content: {
+            en: "Apply",
+          },
+          hash: "3aa50c8c45a0fae59af3d5eefb0aab07",
+        },
+        "12/body/2/argument/1/expression/right/3": {
+          content: {
+            en: "Reject",
+            pl: "Odrzuć",
+          },
+          hash: "da539d95f0b3d47a70a896ea3bc5b6af",
+        },
+        "12/body/2/argument/3/expression/right/1/expression/alternate": {
+          content: {
+            en: "Approve this part",
+            pl: "Zatwierdź tę część",
+          },
+          hash: "23967778be4ce133e4979a98c463f251",
+        },
+        "12/body/2/argument/3/expression/right/1/expression/consequent": {
+          content: {
+            en: "Unselect",
+            pl: "Odznacz",
+          },
+          hash: "2121747828cc34090474cc947650c01e",
+        },
+        "12/body/2/argument/5/expression/right/1": {
+          content: {
+            en: "Apply to selected parts",
+          },
+          hash: "e8d8326930ab87f2681b32bcbf16668e",
+        },
+        "12/body/2/argument/5/expression/right/3": {
+          content: {
+            en: "Unselect all",
+            pl: "Odznacz wszystko",
+          },
+          hash: "974a4fa7ef75fe6c4cbd039b1d78eedc",
+        },
+        "12/body/5/consequent/0/argument/1": {
+          content: {
+            en: "Restore",
+            pl: "Przywróć",
+          },
+          hash: "a1c119b367dc32fe4e2f1c8c4e6334ec",
+        },
+        "12/body/6/argument/1/expression/right/1": {
+          content: {
+            en: "Apply",
+          },
+          hash: "3aa50c8c45a0fae59af3d5eefb0aab07",
+        },
+        "12/body/6/argument/1/expression/right/3": {
+          content: {
+            en: "Reject",
+            pl: "Odrzuć",
+          },
+          hash: "da539d95f0b3d47a70a896ea3bc5b6af",
+        },
+        "12/body/6/argument/3/expression/right/1/expression/alternate": {
+          content: {
+            en: "Approve this part",
+            pl: "Zatwierdź tę część",
+          },
+          hash: "23967778be4ce133e4979a98c463f251",
+        },
+        "12/body/6/argument/3/expression/right/1/expression/consequent": {
+          content: {
+            en: "Unselect",
+            pl: "Odznacz",
+          },
+          hash: "2121747828cc34090474cc947650c01e",
+        },
+        "12/body/6/argument/5/expression/right/1": {
+          content: {
+            en: "Apply to selected parts",
+          },
+          hash: "e8d8326930ab87f2681b32bcbf16668e",
+        },
+        "12/body/6/argument/5/expression/right/3": {
+          content: {
+            en: "Unselect all",
+            pl: "Odznacz wszystko",
+          },
+          hash: "974a4fa7ef75fe6c4cbd039b1d78eedc",
+        },
+        "12/body/6/argument/9/3/1": {
+          content: {
+            en: "Mark as unseen",
+            pl: "Oznacz jako nieprzeczytane",
+          },
+          hash: "a6f772a6af99c8c1f32f897c91d8d06c",
+        },
+        "13/declaration/body/7/argument/1/expression/right": {
+          content: {
+            en: "Rejected",
+            pl: "Odrzucono",
+          },
+          hash: "fce70517f1edc1f1054823ec6ea3d4f3",
+        },
+        "13/declaration/body/7/argument/5/1/expression/right/3/expression/right/1":
+          {
+            content: {
+              en: "Restore",
+              pl: "Przywróć",
+            },
+            hash: "ec219bedbdb1c917a22029501148caeb",
+          },
+        "13/declaration/body/7/argument/5/1/expression/right/5/expression/right/1/expression/right/1":
+          {
+            content: {
+              en: "Apply",
+            },
+            hash: "dd3ebfeca53ad9f644db87630d1dd7bb",
+          },
+        "13/declaration/body/7/argument/5/1/expression/right/5/expression/right/1/expression/right/3":
+          {
+            content: {
+              en: "Reject",
+              pl: "Odrzuć",
+            },
+            hash: "94363fc1a1ab2ce680c3b6141d6fc97b",
+          },
+        "13/declaration/body/7/argument/5/1/expression/right/5/expression/right/3/expression/right/1/expression/alternate":
+          {
+            content: {
+              en: "Approve this part",
+              pl: "Zatwierdź tę część",
+            },
+            hash: "c5a81a7e04dd4d89eb1c5f38795f65a2",
+          },
+        "13/declaration/body/7/argument/5/1/expression/right/5/expression/right/3/expression/right/1/expression/consequent":
+          {
+            content: {
+              en: "Unselect",
+              pl: "Odznacz",
+            },
+            hash: "16bf6ff7e1d27f9a607164e90d515b81",
+          },
+        "13/declaration/body/7/argument/5/1/expression/right/5/expression/right/5/expression/right/1":
+          {
+            content: {
+              en: "Apply to selected parts",
+            },
+            hash: "13b87825c2d8d3b3fe07a09ad8f0ce42",
+          },
+        "13/declaration/body/7/argument/5/1/expression/right/5/expression/right/5/expression/right/3":
+          {
+            content: {
+              en: "Unselect all",
+              pl: "Odznacz wszystko",
+            },
+            hash: "89c0a44bb05b3ec6af54419a8c425a5e",
+          },
+        "13/declaration/body/7/argument/7/expression/right/3/expression/right/1":
+          {
+            content: {
+              en: "Restore",
+              pl: "Przywróć",
+            },
+            hash: "9bdc81c2c478926c820a71d55bd0d6f5",
+          },
+        "13/declaration/body/7/argument/7/expression/right/5/expression/right/1/expression/right/1":
+          {
+            content: {
+              en: "Apply",
+            },
+            hash: "3c759ab832d6ab75ae050da5cb1b826c",
+          },
+        "13/declaration/body/7/argument/7/expression/right/5/expression/right/1/expression/right/3":
+          {
+            content: {
+              en: "Reject",
+              pl: "Odrzuć",
+            },
+            hash: "93f700a2adda13be3723040c587ab812",
+          },
+        "13/declaration/body/7/argument/7/expression/right/5/expression/right/3/expression/right/1/expression/alternate":
+          {
+            content: {
+              en: "Approve this part",
+              pl: "Zatwierdź tę część",
+            },
+            hash: "cdef27e3f5adc867497e2c6331d8f0a3",
+          },
+        "13/declaration/body/7/argument/7/expression/right/5/expression/right/3/expression/right/1/expression/consequent":
+          {
+            content: {
+              en: "Unselect",
+              pl: "Odznacz",
+            },
+            hash: "25e032c7b038b333cf98ee01fd16b586",
+          },
+        "13/declaration/body/7/argument/7/expression/right/5/expression/right/5/expression/right/1":
+          {
+            content: {
+              en: "Apply to selected parts",
+            },
+            hash: "72bd9abcd377cb9268a5bbb3f7efb0da",
+          },
+        "13/declaration/body/7/argument/7/expression/right/5/expression/right/5/expression/right/3":
+          {
+            content: {
+              en: "Unselect all",
+              pl: "Odznacz wszystko",
+            },
+            hash: "40e4856fce1723ab765f7af6042f348c",
+          },
+        "13/declaration/body/8/argument/1/expression/right": {
+          content: {
+            en: "Rejected",
+            pl: "Odrzucono",
+          },
+          hash: "fce70517f1edc1f1054823ec6ea3d4f3",
+        },
+        "14/body/5/consequent/0/argument/1": {
+          content: {
+            en: "Restore",
+            pl: "Przywróć",
+          },
+          hash: "a1c119b367dc32fe4e2f1c8c4e6334ec",
+        },
+        "14/body/6/argument/1/expression/right/1": {
+          content: {
+            en: "Apply",
+          },
+          hash: "3aa50c8c45a0fae59af3d5eefb0aab07",
+        },
+        "14/body/6/argument/1/expression/right/3": {
+          content: {
+            en: "Reject",
+            pl: "Odrzuć",
+          },
+          hash: "da539d95f0b3d47a70a896ea3bc5b6af",
+        },
+        "14/body/6/argument/3/expression/right/1/expression/alternate": {
+          content: {
+            en: "Approve this part",
+            pl: "Zatwierdź tę część",
+          },
+          hash: "23967778be4ce133e4979a98c463f251",
+        },
+        "14/body/6/argument/3/expression/right/1/expression/consequent": {
+          content: {
+            en: "Unselect",
+            pl: "Odznacz",
+          },
+          hash: "2121747828cc34090474cc947650c01e",
+        },
+        "14/body/6/argument/5/expression/right/1": {
+          content: {
+            en: "Apply to selected parts",
+          },
+          hash: "e8d8326930ab87f2681b32bcbf16668e",
+        },
+        "14/body/6/argument/5/expression/right/3": {
+          content: {
+            en: "Unselect all",
+            pl: "Odznacz wszystko",
+          },
+          hash: "974a4fa7ef75fe6c4cbd039b1d78eedc",
+        },
+        "14/body/6/argument/9/3-aria-label": {
+          content: {
+            en: "Static Actions",
+            pl: "Akcje statyczne",
+          },
+          hash: "a5f2bb6c077fcfc5c79ab1df031330c3",
+        },
+        "14/body/6/argument/9/3/1": {
+          content: {
+            en: "New file",
+            pl: "Nowy plik",
+          },
+          hash: "087ba17bf26c92441a109f2d8b96c558",
+        },
+        "14/body/6/argument/9/3/1/1": {
+          content: {
+            en: "Mark as unseen",
+            pl: "Oznacz jako nieprzeczytane",
+          },
+          hash: "a6f772a6af99c8c1f32f897c91d8d06c",
+        },
+        "14/body/6/consequent/0/argument/1": {
+          content: {
+            en: "Restore",
+            pl: "Przywróć",
+          },
+          hash: "a1c119b367dc32fe4e2f1c8c4e6334ec",
+        },
+        "14/body/7/argument/1/expression/right/1": {
+          content: {
+            en: "Apply",
+          },
+          hash: "3aa50c8c45a0fae59af3d5eefb0aab07",
+        },
+        "14/body/7/argument/1/expression/right/3": {
+          content: {
+            en: "Reject",
+            pl: "Odrzuć",
+          },
+          hash: "da539d95f0b3d47a70a896ea3bc5b6af",
+        },
+        "14/body/7/argument/3/expression/right/1/expression/alternate": {
+          content: {
+            en: "Approve this part",
+            pl: "Zatwierdź tę część",
+          },
+          hash: "23967778be4ce133e4979a98c463f251",
+        },
+        "14/body/7/argument/3/expression/right/1/expression/consequent": {
+          content: {
+            en: "Unselect",
+            pl: "Odznacz",
+          },
+          hash: "2121747828cc34090474cc947650c01e",
+        },
+        "14/body/7/argument/5/expression/right/1": {
+          content: {
+            en: "Apply to selected parts",
+          },
+          hash: "e8d8326930ab87f2681b32bcbf16668e",
+        },
+        "14/body/7/argument/5/expression/right/3": {
+          content: {
+            en: "Unselect all",
+            pl: "Odznacz wszystko",
+          },
+          hash: "974a4fa7ef75fe6c4cbd039b1d78eedc",
+        },
+        "14/body/7/argument/9/3/1": {
+          content: {
+            en: "Mark as unseen",
+            pl: "Oznacz jako nieprzeczytane",
+          },
+          hash: "a6f772a6af99c8c1f32f897c91d8d06c",
+        },
+        "15/declaration/body/3/0/init/0/0/value/body/0/expression/0": {
+          content: {
+            en: "Tender restored",
+            pl: "Przetarg przywrócony",
+          },
+          hash: "067bc23c322ecd55a58584a5be9c0fd3",
+        },
+        "15/declaration/body/4/0/init/0/0/value/body/0/expression/0": {
+          content: {
+            en: "Tender marked as unseen",
+            pl: "Przetarg oznaczony jako nieprzeczytany",
+          },
+          hash: "d082de35118e9441eeac525bd06c9af3",
+        },
+        "15/declaration/body/8/argument/1/expression/right": {
+          content: {
+            en: "Rejected",
+            pl: "Odrzucono",
+          },
+          hash: "fce70517f1edc1f1054823ec6ea3d4f3",
+        },
+        "15/declaration/body/9/argument/1/expression/right": {
+          content: {
+            en: "Rejected",
+            pl: "Odrzucono",
+          },
+          hash: "fce70517f1edc1f1054823ec6ea3d4f3",
+        },
         "7/declaration/body/3/argument/3/1/expression/right/3/1": {
           content: {
             en: "Apply",

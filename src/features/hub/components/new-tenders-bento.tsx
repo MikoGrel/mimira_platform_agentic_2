@@ -4,9 +4,9 @@ import { Button } from "@heroui/react";
 import Link from "next/link";
 import { BentoCard } from "$/components/ui/bento-card";
 import { TenderMiniCard } from "$/features/tenders/components/tender-mini-card";
-import { useTenderInboxQuery } from "$/features/inbox/api";
 import { cn } from "$/lib/utils";
 import { AnimatePresence } from "motion/react";
+import useTenderInboxQuery from "$/features/inbox/api/use-tender-inbox-query";
 
 interface NewTendersBentoProps {
   className?: string;

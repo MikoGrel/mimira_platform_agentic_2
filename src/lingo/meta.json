@@ -155,6 +155,38 @@
           "overrides": {},
           "content": "Select a tender to view details"
         },
+        "16/declaration/body/13/argument/1/1/1/3-placeholder": {
+          "type": "attribute",
+          "hash": "49dd6c21604b5e8d4153ff1aff2177e1",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Search"
+        },
+        "16/declaration/body/13/argument/1/5/1/3": {
+          "type": "element",
+          "hash": "c516ed1af9463ccd6bdcb19a1f13e4ac",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Ask Mimir"
+        },
+        "16/declaration/body/13/argument/1/5/1/5": {
+          "type": "element",
+          "hash": "05a8fc9f6d826fd88a809d98684edcad",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Coming soon"
+        },
+        "16/declaration/body/13/argument/3/expression/right/1/1": {
+          "type": "element",
+          "hash": "067789b01a081458db2f872f10a37c3f",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Select a tender to view details"
+        },
         "17/body/0/argument/1/expression/0/body/3/3": {
           "type": "element",
           "hash": "26b80ae8a680de73667e096098aa69d8",
@@ -196,6 +228,46 @@
           "content": "Select a tender to view details"
         },
         "18/body/0/argument/1/expression/0/body/3/3": {
+          "type": "element",
+          "hash": "26b80ae8a680de73667e096098aa69d8",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "·"
+        },
+        "18/declaration/body/13/argument/1/1/1/3-placeholder": {
+          "type": "attribute",
+          "hash": "49dd6c21604b5e8d4153ff1aff2177e1",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Search"
+        },
+        "18/declaration/body/13/argument/1/5/1/3": {
+          "type": "element",
+          "hash": "c516ed1af9463ccd6bdcb19a1f13e4ac",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Ask Mimir"
+        },
+        "18/declaration/body/13/argument/1/5/1/5": {
+          "type": "element",
+          "hash": "05a8fc9f6d826fd88a809d98684edcad",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Coming soon"
+        },
+        "18/declaration/body/13/argument/3/expression/right/1/1": {
+          "type": "element",
+          "hash": "067789b01a081458db2f872f10a37c3f",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Select a tender to view details"
+        },
+        "19/body/0/argument/1/expression/0/body/3/3": {
           "type": "element",
           "hash": "26b80ae8a680de73667e096098aa69d8",
           "context": "",
@@ -703,6 +775,22 @@
     },
     "features/hub/components/new-tenders-bento.tsx": {
       "scopes": {
+        "7/declaration/body/1/argument/openingElement/1/value/expression": {
+          "type": "element",
+          "hash": "b6a405902627530cdf66b4c52e322ee3",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "New tenders"
+        },
+        "7/declaration/body/1/argument/openingElement/2/value/expression": {
+          "type": "element",
+          "hash": "31b50a6e655b9e4c34034afe38b5fa0f",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Open full list"
+        },
         "8/declaration/body/1/argument/openingElement/1/value/expression": {
           "type": "element",
           "hash": "b6a405902627530cdf66b4c52e322ee3",
@@ -2278,6 +2366,486 @@
           "skip": false,
           "overrides": {},
           "content": "Unselect all"
+        },
+        "12/body/1/consequent/0/argument/1": {
+          "type": "element",
+          "hash": "a1c119b367dc32fe4e2f1c8c4e6334ec",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Restore"
+        },
+        "12/body/2/argument/1/expression/right/1": {
+          "type": "element",
+          "hash": "3aa50c8c45a0fae59af3d5eefb0aab07",
+          "context": "",
+          "skip": false,
+          "overrides": {
+            "pl": "Aplikuj"
+          },
+          "content": "Apply"
+        },
+        "12/body/2/argument/1/expression/right/3": {
+          "type": "element",
+          "hash": "da539d95f0b3d47a70a896ea3bc5b6af",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Reject"
+        },
+        "12/body/2/argument/3/expression/right/1/expression/alternate": {
+          "type": "element",
+          "hash": "23967778be4ce133e4979a98c463f251",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Approve this part"
+        },
+        "12/body/2/argument/3/expression/right/1/expression/consequent": {
+          "type": "element",
+          "hash": "2121747828cc34090474cc947650c01e",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Unselect"
+        },
+        "12/body/2/argument/5/expression/right/1": {
+          "type": "element",
+          "hash": "e8d8326930ab87f2681b32bcbf16668e",
+          "context": "",
+          "skip": false,
+          "overrides": {
+            "pl": "Aplikuj na wybrane części"
+          },
+          "content": "Apply to selected parts"
+        },
+        "12/body/2/argument/5/expression/right/3": {
+          "type": "element",
+          "hash": "974a4fa7ef75fe6c4cbd039b1d78eedc",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Unselect all"
+        },
+        "12/body/5/consequent/0/argument/1": {
+          "type": "element",
+          "hash": "a1c119b367dc32fe4e2f1c8c4e6334ec",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Restore"
+        },
+        "12/body/6/argument/1/expression/right/1": {
+          "type": "element",
+          "hash": "3aa50c8c45a0fae59af3d5eefb0aab07",
+          "context": "",
+          "skip": false,
+          "overrides": {
+            "pl": "Aplikuj"
+          },
+          "content": "Apply"
+        },
+        "12/body/6/argument/1/expression/right/3": {
+          "type": "element",
+          "hash": "da539d95f0b3d47a70a896ea3bc5b6af",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Reject"
+        },
+        "12/body/6/argument/3/expression/right/1/expression/alternate": {
+          "type": "element",
+          "hash": "23967778be4ce133e4979a98c463f251",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Approve this part"
+        },
+        "12/body/6/argument/3/expression/right/1/expression/consequent": {
+          "type": "element",
+          "hash": "2121747828cc34090474cc947650c01e",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Unselect"
+        },
+        "12/body/6/argument/5/expression/right/1": {
+          "type": "element",
+          "hash": "e8d8326930ab87f2681b32bcbf16668e",
+          "context": "",
+          "skip": false,
+          "overrides": {
+            "pl": "Aplikuj na wybrane części"
+          },
+          "content": "Apply to selected parts"
+        },
+        "12/body/6/argument/5/expression/right/3": {
+          "type": "element",
+          "hash": "974a4fa7ef75fe6c4cbd039b1d78eedc",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Unselect all"
+        },
+        "12/body/6/argument/9/3/1": {
+          "type": "element",
+          "hash": "a6f772a6af99c8c1f32f897c91d8d06c",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Mark as unseen"
+        },
+        "13/declaration/body/7/argument/1/expression/right": {
+          "type": "element",
+          "hash": "fce70517f1edc1f1054823ec6ea3d4f3",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Rejected"
+        },
+        "13/declaration/body/7/argument/5/1/expression/right/3/expression/right/1": {
+          "type": "element",
+          "hash": "ec219bedbdb1c917a22029501148caeb",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Restore"
+        },
+        "13/declaration/body/7/argument/5/1/expression/right/5/expression/right/1/expression/right/1": {
+          "type": "element",
+          "hash": "dd3ebfeca53ad9f644db87630d1dd7bb",
+          "context": "",
+          "skip": false,
+          "overrides": {
+            "pl": "Aplikuj"
+          },
+          "content": "Apply"
+        },
+        "13/declaration/body/7/argument/5/1/expression/right/5/expression/right/1/expression/right/3": {
+          "type": "element",
+          "hash": "94363fc1a1ab2ce680c3b6141d6fc97b",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Reject"
+        },
+        "13/declaration/body/7/argument/5/1/expression/right/5/expression/right/3/expression/right/1/expression/alternate": {
+          "type": "element",
+          "hash": "c5a81a7e04dd4d89eb1c5f38795f65a2",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Approve this part"
+        },
+        "13/declaration/body/7/argument/5/1/expression/right/5/expression/right/3/expression/right/1/expression/consequent": {
+          "type": "element",
+          "hash": "16bf6ff7e1d27f9a607164e90d515b81",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Unselect"
+        },
+        "13/declaration/body/7/argument/5/1/expression/right/5/expression/right/5/expression/right/1": {
+          "type": "element",
+          "hash": "13b87825c2d8d3b3fe07a09ad8f0ce42",
+          "context": "",
+          "skip": false,
+          "overrides": {
+            "pl": "Aplikuj na wybrane części"
+          },
+          "content": "Apply to selected parts"
+        },
+        "13/declaration/body/7/argument/5/1/expression/right/5/expression/right/5/expression/right/3": {
+          "type": "element",
+          "hash": "89c0a44bb05b3ec6af54419a8c425a5e",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Unselect all"
+        },
+        "13/declaration/body/7/argument/7/expression/right/3/expression/right/1": {
+          "type": "element",
+          "hash": "9bdc81c2c478926c820a71d55bd0d6f5",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Restore"
+        },
+        "13/declaration/body/7/argument/7/expression/right/5/expression/right/1/expression/right/1": {
+          "type": "element",
+          "hash": "3c759ab832d6ab75ae050da5cb1b826c",
+          "context": "",
+          "skip": false,
+          "overrides": {
+            "pl": "Aplikuj"
+          },
+          "content": "Apply"
+        },
+        "13/declaration/body/7/argument/7/expression/right/5/expression/right/1/expression/right/3": {
+          "type": "element",
+          "hash": "93f700a2adda13be3723040c587ab812",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Reject"
+        },
+        "13/declaration/body/7/argument/7/expression/right/5/expression/right/3/expression/right/1/expression/alternate": {
+          "type": "element",
+          "hash": "cdef27e3f5adc867497e2c6331d8f0a3",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Approve this part"
+        },
+        "13/declaration/body/7/argument/7/expression/right/5/expression/right/3/expression/right/1/expression/consequent": {
+          "type": "element",
+          "hash": "25e032c7b038b333cf98ee01fd16b586",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Unselect"
+        },
+        "13/declaration/body/7/argument/7/expression/right/5/expression/right/5/expression/right/1": {
+          "type": "element",
+          "hash": "72bd9abcd377cb9268a5bbb3f7efb0da",
+          "context": "",
+          "skip": false,
+          "overrides": {
+            "pl": "Aplikuj na wybrane części"
+          },
+          "content": "Apply to selected parts"
+        },
+        "13/declaration/body/7/argument/7/expression/right/5/expression/right/5/expression/right/3": {
+          "type": "element",
+          "hash": "40e4856fce1723ab765f7af6042f348c",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Unselect all"
+        },
+        "13/declaration/body/8/argument/1/expression/right": {
+          "type": "element",
+          "hash": "fce70517f1edc1f1054823ec6ea3d4f3",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Rejected"
+        },
+        "14/body/5/consequent/0/argument/1": {
+          "type": "element",
+          "hash": "a1c119b367dc32fe4e2f1c8c4e6334ec",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Restore"
+        },
+        "14/body/6/argument/1/expression/right/1": {
+          "type": "element",
+          "hash": "3aa50c8c45a0fae59af3d5eefb0aab07",
+          "context": "",
+          "skip": false,
+          "overrides": {
+            "pl": "Aplikuj"
+          },
+          "content": "Apply"
+        },
+        "14/body/6/argument/1/expression/right/3": {
+          "type": "element",
+          "hash": "da539d95f0b3d47a70a896ea3bc5b6af",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Reject"
+        },
+        "14/body/6/argument/3/expression/right/1/expression/alternate": {
+          "type": "element",
+          "hash": "23967778be4ce133e4979a98c463f251",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Approve this part"
+        },
+        "14/body/6/argument/3/expression/right/1/expression/consequent": {
+          "type": "element",
+          "hash": "2121747828cc34090474cc947650c01e",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Unselect"
+        },
+        "14/body/6/argument/5/expression/right/1": {
+          "type": "element",
+          "hash": "e8d8326930ab87f2681b32bcbf16668e",
+          "context": "",
+          "skip": false,
+          "overrides": {
+            "pl": "Aplikuj na wybrane części"
+          },
+          "content": "Apply to selected parts"
+        },
+        "14/body/6/argument/5/expression/right/3": {
+          "type": "element",
+          "hash": "974a4fa7ef75fe6c4cbd039b1d78eedc",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Unselect all"
+        },
+        "14/body/6/argument/9/1/1": {
+          "type": "element",
+          "hash": "5a8642df53748bdfd4ee8a8eca47bf1b",
+          "context": "",
+          "skip": true,
+          "overrides": {},
+          "content": "Open Menu"
+        },
+        "14/body/6/argument/9/3-aria-label": {
+          "type": "attribute",
+          "hash": "a5f2bb6c077fcfc5c79ab1df031330c3",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Static Actions"
+        },
+        "14/body/6/argument/9/3/1": {
+          "type": "element",
+          "hash": "087ba17bf26c92441a109f2d8b96c558",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "New file"
+        },
+        "14/body/6/argument/9/3/1/1": {
+          "type": "element",
+          "hash": "a6f772a6af99c8c1f32f897c91d8d06c",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Mark as unseen"
+        },
+        "14/body/6/argument/9/3/3": {
+          "type": "element",
+          "hash": "1c8071d8ae599bda15f745ef7b3743a3",
+          "context": "",
+          "skip": true,
+          "overrides": {},
+          "content": "Copy link"
+        },
+        "14/body/6/argument/9/3/5": {
+          "type": "element",
+          "hash": "80c3e815378f505e555ab8771c1a6757",
+          "context": "",
+          "skip": true,
+          "overrides": {},
+          "content": "Edit file"
+        },
+        "14/body/6/argument/9/3/7": {
+          "type": "element",
+          "hash": "61605ee257fa7c4adabd53506ac15234",
+          "context": "",
+          "skip": true,
+          "overrides": {},
+          "content": "Delete file"
+        },
+        "14/body/6/consequent/0/argument/1": {
+          "type": "element",
+          "hash": "a1c119b367dc32fe4e2f1c8c4e6334ec",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Restore"
+        },
+        "14/body/7/argument/1/expression/right/1": {
+          "type": "element",
+          "hash": "3aa50c8c45a0fae59af3d5eefb0aab07",
+          "context": "",
+          "skip": false,
+          "overrides": {
+            "pl": "Aplikuj"
+          },
+          "content": "Apply"
+        },
+        "14/body/7/argument/1/expression/right/3": {
+          "type": "element",
+          "hash": "da539d95f0b3d47a70a896ea3bc5b6af",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Reject"
+        },
+        "14/body/7/argument/3/expression/right/1/expression/alternate": {
+          "type": "element",
+          "hash": "23967778be4ce133e4979a98c463f251",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Approve this part"
+        },
+        "14/body/7/argument/3/expression/right/1/expression/consequent": {
+          "type": "element",
+          "hash": "2121747828cc34090474cc947650c01e",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Unselect"
+        },
+        "14/body/7/argument/5/expression/right/1": {
+          "type": "element",
+          "hash": "e8d8326930ab87f2681b32bcbf16668e",
+          "context": "",
+          "skip": false,
+          "overrides": {
+            "pl": "Aplikuj na wybrane części"
+          },
+          "content": "Apply to selected parts"
+        },
+        "14/body/7/argument/5/expression/right/3": {
+          "type": "element",
+          "hash": "974a4fa7ef75fe6c4cbd039b1d78eedc",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Unselect all"
+        },
+        "14/body/7/argument/9/3/1": {
+          "type": "element",
+          "hash": "a6f772a6af99c8c1f32f897c91d8d06c",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Mark as unseen"
+        },
+        "15/declaration/body/3/0/init/0/0/value/body/0/expression/0": {
+          "type": "element",
+          "hash": "067bc23c322ecd55a58584a5be9c0fd3",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Tender restored"
+        },
+        "15/declaration/body/4/0/init/0/0/value/body/0/expression/0": {
+          "type": "element",
+          "hash": "d082de35118e9441eeac525bd06c9af3",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Tender marked as unseen"
+        },
+        "15/declaration/body/8/argument/1/expression/right": {
+          "type": "element",
+          "hash": "fce70517f1edc1f1054823ec6ea3d4f3",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Rejected"
+        },
+        "15/declaration/body/9/argument/1/expression/right": {
+          "type": "element",
+          "hash": "fce70517f1edc1f1054823ec6ea3d4f3",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Rejected"
         },
         "7/declaration/body/3/argument/3/1/expression/right/3/1": {
           "type": "element",

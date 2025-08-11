@@ -1,7 +1,20 @@
 "use client";
 
-import { Button, Chip, Tooltip } from "@heroui/react";
-import { CalendarClock, House, MessageSquareText } from "lucide-react";
+import {
+  Button,
+  Chip,
+  DropdownItem,
+  Dropdown,
+  DropdownMenu,
+  DropdownTrigger,
+  Tooltip,
+} from "@heroui/react";
+import {
+  CalendarClock,
+  EllipsisVertical,
+  House,
+  MessageSquareText,
+} from "lucide-react";
 import { motion, AnimatePresence } from "motion/react";
 import { useEffect, useState } from "react";
 import { Tables } from "$/types/supabase";
@@ -10,6 +23,8 @@ import { TenderPartType } from "./tender-preview";
 import { useRestoreRejectedTender } from "../api/use-restore-rejected-tender";
 import { truncate } from "lodash";
 import { useDateFormat } from "$/features/i18n/hooks/use-date-format";
+import { useUnseen } from "../api/use-unseen";
+import { toast } from "sonner";
 
 interface TenderHeaderProps {
   tender: NonNullable<Tables<"tenders">>;
@@ -27,23 +42,151 @@ interface TenderHeaderProps {
   onReject?: () => void;
 }
 
-export function TenderHeader({
-  tender,
-  isHeaderCollapsed,
-  setCommentsOpened,
-  onApprovePart,
+interface HeaderButtonsProps {
+  size?: "sm";
+  tender: NonNullable<Tables<"tenders">>;
+  approvedPartIds: Set<string>;
+  currentPart?: {
+    item: TenderPartType | null;
+    isApproved: boolean;
+  };
+  onApprovePart?: () => void;
+  onRemoveCurrentPart?: () => void;
+  onApply: (partIds?: string[]) => void;
+  onReject?: () => void;
+  onUnselectAll?: () => void;
+  setCommentsOpened: (value: boolean) => void;
+  commentCount?: number;
+  restoreTender: (id: string) => void;
+  onUnseen: (id: string) => void;
+}
+
+function HeaderButtons({
+  size,
+  tender: { id: tenderId, status },
   approvedPartIds,
   currentPart,
-  onUnselectAll,
+  onApprovePart,
   onRemoveCurrentPart,
   onApply,
   onReject,
-}: TenderHeaderProps) {
+  onUnselectAll,
+  setCommentsOpened,
+  commentCount,
+  restoreTender,
+  onUnseen,
+}: HeaderButtonsProps) {
+  const isRejected = status === "rejected";
+  const hasApprovedParts = approvedPartIds.size > 0;
+  const hasCurrentPart = !!currentPart?.item;
+  const isCurrentPartApproved = currentPart?.isApproved;
+  const hasNoSelection = !approvedPartIds.size && !hasCurrentPart;
+
+  if (isRejected) {
+    return (
+      <div className="flex gap-2">
+        <Button
+          size={size}
+          variant="flat"
+          onPress={() => restoreTender(tenderId)}
+        >
+          Restore
+        </Button>
+      </div>
+    );
+  }
+
+  return (
+    <div className="flex gap-2">
+      {hasNoSelection && (
+        <>
+          <Button size={size} color="primary" data-lingo-override-pl="Aplikuj">
+            Apply
+          </Button>
+          <Button size={size} variant="flat" onPress={onReject}>
+            Reject
+          </Button>
+        </>
+      )}
+
+      {hasCurrentPart && (
+        <>
+          {isCurrentPartApproved ? (
+            <Button size={size} color="danger" onPress={onRemoveCurrentPart}>
+              Unselect
+            </Button>
+          ) : (
+            <Button size={size} color="primary" onPress={onApprovePart}>
+              Approve this part
+            </Button>
+          )}
+        </>
+      )}
+
+      {hasApprovedParts && (
+        <>
+          <Button
+            size={size}
+            color="primary"
+            onPress={() => onApply(Array.from(approvedPartIds))}
+            data-lingo-override-pl="Aplikuj na wybrane części"
+          >
+            Apply to selected parts
+          </Button>
+          <Button size={size} variant="flat" onPress={onUnselectAll}>
+            Unselect all
+          </Button>
+        </>
+      )}
+
+      <Button
+        size={size}
+        variant="ghost"
+        onPress={() => setCommentsOpened(true)}
+        className="!min-w-10"
+        isIconOnly={!commentCount}
+      >
+        <MessageSquareText className="w-5 h-5 stroke-[1.5]" />
+        {!!commentCount && commentCount}
+      </Button>
+      <Dropdown>
+        <DropdownTrigger>
+          <Button size={size} variant="bordered" isIconOnly>
+            <EllipsisVertical className="w-4 h-4" />
+          </Button>
+        </DropdownTrigger>
+        <DropdownMenu
+          onAction={(key) => {
+            if (key === "unseen") {
+              onUnseen(tenderId);
+            }
+          }}
+        >
+          <DropdownItem key="unseen">
+            <span>Mark as unseen</span>
+          </DropdownItem>
+        </DropdownMenu>
+      </Dropdown>
+    </div>
+  );
+}
+
+export function TenderHeader(props: TenderHeaderProps) {
+  const { tender, isHeaderCollapsed } = props;
   const [hasRendered, setHasRendered] = useState(false);
   const { count } = useCommentsCount({
     tenderId: tender.id,
   });
-  const { mutate: restoreTender } = useRestoreRejectedTender();
+  const { mutate: restoreTender } = useRestoreRejectedTender({
+    onSuccess: () => {
+      toast.success(<span>Tender restored</span>);
+    },
+  });
+  const { mutate: onUnseen } = useUnseen({
+    onSuccess: () => {
+      toast.success(<span>Tender marked as unseen</span>);
+    },
+  });
   const { relativeToNow } = useDateFormat();
   const isRejected = tender.status === "rejected";
 
@@ -110,66 +253,12 @@ export function TenderHeader({
                 {relativeToNow(new Date(tender.submittingoffersdate!))}
               </span>
             </div>
-            {isRejected && (
-              <div className="flex gap-2">
-                <Button variant="flat" onPress={() => restoreTender(tender.id)}>
-                  Restore
-                </Button>
-              </div>
-            )}
-            {!isRejected && (
-              <div className="flex gap-2">
-                {!approvedPartIds.size && !currentPart?.item && (
-                  <>
-                    <Button color="primary" data-lingo-override-pl="Aplikuj">
-                      Apply
-                    </Button>
-                    <Button variant="flat" onPress={onReject}>
-                      Reject
-                    </Button>
-                  </>
-                )}
-
-                {currentPart?.item && (
-                  <>
-                    {currentPart?.isApproved ? (
-                      <Button color="danger" onPress={onRemoveCurrentPart}>
-                        Unselect
-                      </Button>
-                    ) : (
-                      <Button color="primary" onPress={onApprovePart}>
-                        Approve this part
-                      </Button>
-                    )}
-                  </>
-                )}
-
-                {approvedPartIds.size > 0 && (
-                  <>
-                    <Button
-                      color="primary"
-                      onPress={() => onApply(Array.from(approvedPartIds))}
-                      data-lingo-override-pl="Aplikuj na wybrane części"
-                    >
-                      Apply to selected parts
-                    </Button>
-                    <Button variant="flat" onPress={onUnselectAll}>
-                      Unselect all
-                    </Button>
-                  </>
-                )}
-
-                <Button
-                  variant="ghost"
-                  onPress={() => setCommentsOpened(true)}
-                  className="!min-w-10"
-                  isIconOnly={!count}
-                >
-                  <MessageSquareText className="w-5 h-5 stroke-[1.5]" />
-                  {!!count && count}
-                </Button>
-              </div>
-            )}
+            <HeaderButtons
+              {...props}
+              commentCount={count}
+              restoreTender={restoreTender}
+              onUnseen={onUnseen}
+            />
           </motion.div>
         )}
       </AnimatePresence>
@@ -192,81 +281,13 @@ export function TenderHeader({
             </span>
           </div>
 
-          {isRejected && (
-            <div className="flex gap-2">
-              <Button
-                size="sm"
-                variant="flat"
-                onPress={() => restoreTender(tender.id)}
-              >
-                Restore
-              </Button>
-            </div>
-          )}
-
-          {!isRejected && (
-            <div className="flex gap-2">
-              {!approvedPartIds.size && !currentPart?.item && (
-                <>
-                  <Button
-                    size="sm"
-                    color="primary"
-                    data-lingo-override-pl="Aplikuj"
-                  >
-                    Apply
-                  </Button>
-                  <Button size="sm" variant="flat" onPress={onReject}>
-                    Reject
-                  </Button>
-                </>
-              )}
-
-              {currentPart?.item && (
-                <>
-                  {currentPart?.isApproved ? (
-                    <Button
-                      size="sm"
-                      color="danger"
-                      onPress={onRemoveCurrentPart}
-                    >
-                      Unselect
-                    </Button>
-                  ) : (
-                    <Button size="sm" color="primary" onPress={onApprovePart}>
-                      Approve this part
-                    </Button>
-                  )}
-                </>
-              )}
-
-              {approvedPartIds.size > 0 && (
-                <>
-                  <Button
-                    size="sm"
-                    color="primary"
-                    onPress={() => onApply(Array.from(approvedPartIds))}
-                    data-lingo-override-pl="Aplikuj na wybrane części"
-                  >
-                    Apply to selected parts
-                  </Button>
-                  <Button size="sm" variant="flat" onPress={onUnselectAll}>
-                    Unselect all
-                  </Button>
-                </>
-              )}
-
-              <Button
-                size="sm"
-                variant="ghost"
-                onPress={() => setCommentsOpened(true)}
-                className="!min-w-10"
-                isIconOnly={!count}
-              >
-                <MessageSquareText className="w-5 h-5 stroke-[1.5]" />
-                {!!count && count}
-              </Button>
-            </div>
-          )}
+          <HeaderButtons
+            {...props}
+            commentCount={count}
+            restoreTender={restoreTender}
+            size="sm"
+            onUnseen={onUnseen}
+          />
         </motion.div>
       )}
     </div>
