@@ -2,7 +2,7 @@
 
 import { Tables } from "$/types/supabase";
 import { Button, Card, Chip, Input, Skeleton } from "@heroui/react";
-import { Archive, SlidersHorizontal } from "lucide-react";
+import { Archive, CalendarClock, SlidersHorizontal } from "lucide-react";
 import { parseAsString, useQueryState } from "nuqs";
 import { useMemo, useState } from "react";
 import Symbol from "$/features/branding/components/Symbol";
@@ -14,6 +14,7 @@ import { truncate } from "lodash";
 import { cn } from "$/lib/utils";
 import { useIndividualTender } from "$/features/tenders/api";
 import dynamic from "next/dynamic";
+import { useDateFormat } from "$/features/i18n/hooks/use-date-format";
 
 const TenderPreview = dynamic(
   () =>
@@ -30,6 +31,7 @@ const PAGE_SIZE = 10;
 export default function InboxPage() {
   const { filterQuery, addFilter } = useFilterForm();
   const [showFilterForm, setShowFilterForm] = useState(false);
+  const { relativeToNow } = useDateFormat();
 
   const [search, setSearch] = useQueryState(
     "search",
@@ -169,8 +171,14 @@ export default function InboxPage() {
                         )}
                       </p>
                       <div className="flex items-center gap-2 flex-wrap text-slate-500">
-                        <Chip size="sm" variant="flat">
-                          {t.submittingoffersdate}
+                        <Chip
+                          size="sm"
+                          variant="flat"
+                          startContent={
+                            <CalendarClock className="w-4 h-4 ml-1 mr-0.5" />
+                          }
+                        >
+                          {relativeToNow(new Date(t.submittingoffersdate!))}
                         </Chip>
                         <span className="text-sm">
                           {truncate(t.organizationname!, { length: 40 })}

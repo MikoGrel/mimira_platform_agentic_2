@@ -1,15 +1,18 @@
 "use client";
 
-import * as React from "react";
+import { useMemo, Children } from "react";
 import { cn } from "$/lib/utils";
-import { useMeasure } from "react-use";
 
 type Breakpoint = "base" | "sm" | "md" | "lg" | "xl" | "2xl";
 
 export interface MasonryProps extends React.HTMLAttributes<HTMLDivElement> {
+  /** The content to be displayed in the masonry layout */
   children: React.ReactNode;
+  /** Responsive column configuration for different breakpoints */
   columns?: Partial<Record<Breakpoint, number>>;
+  /** Gap between columns and rows */
   columnGap?: string;
+  /** Additional CSS classes for individual items */
   itemClassName?: string;
 }
 
@@ -22,22 +25,28 @@ const BREAKPOINT_PX: Record<Breakpoint, number> = {
   "2xl": 1536,
 };
 
-function getActiveColumns(
-  config: MasonryProps["columns"],
-  viewportWidth: number
-): number {
-  const resolved = { base: 1, ...(config ?? {}) } as Record<Breakpoint, number>;
-  let active = resolved.base ?? 1;
-  (Object.keys(BREAKPOINT_PX) as Breakpoint[]).forEach((bp) => {
-    const bpPx = BREAKPOINT_PX[bp];
-    const value = resolved[bp];
-    if (bp !== "base" && viewportWidth >= bpPx && typeof value === "number") {
-      active = value;
-    }
-  });
-  return Math.max(1, active);
-}
-
+/**
+ * A responsive masonry layout component that arranges items in columns
+ * without reflowing when item heights change.
+ *
+ * @example
+ * ```tsx
+ * <Masonry columns={{ base: 1, md: 2, lg: 3 }}>
+ *   <div>Item 1</div>
+ *   <div>Item 2</div>
+ *   <div>Item 3</div>
+ * </Masonry>
+ * ```
+ *
+ * @param props - The component props
+ * @param props.children - Content to display in masonry layout
+ * @param props.columns - Responsive column configuration
+ * @param props.columnGap - Gap between columns and rows
+ * @param props.itemClassName - Additional CSS classes for items
+ * @param props.className - Additional CSS classes for container
+ * @param props.style - Additional inline styles for container
+ * @returns A responsive masonry layout
+ */
 export function Masonry({
   children,
   className,
@@ -47,84 +56,41 @@ export function Masonry({
   style,
   ...props
 }: MasonryProps) {
-  const [containerRef, containerBounds] = useMeasure<HTMLDivElement>();
-  const containerWidth = containerBounds.width ?? 0;
-  const columnCount = React.useMemo(
-    () => getActiveColumns(columns, containerWidth),
-    [columns, containerWidth]
-  );
+  const childrenArray = useMemo(() => Children.toArray(children), [children]);
 
-  const childrenArray = React.useMemo(
-    () => React.Children.toArray(children),
-    [children]
-  );
+  // Get current column count based on viewport width
+  const columnCount = useMemo(() => {
+    if (typeof window === "undefined") return 1;
 
-  const heightsRef = React.useRef<Map<number, number>>(new Map());
-  const [distribution, setDistribution] = React.useState<number[][]>([]);
-  const scheduledRef = React.useRef<number | null>(null);
+    const resolved = { base: 1, ...(columns ?? {}) } as Record<
+      Breakpoint,
+      number
+    >;
+    let active = resolved.base ?? 1;
 
-  // Initial simple round-robin distribution for first paint
-  React.useEffect(() => {
-    const cols: number[][] = Array.from({ length: columnCount }, () => []);
-    childrenArray.forEach((_, i) => {
-      const col = i % columnCount;
-      cols[col].push(i);
-    });
-    setDistribution(cols);
-  }, [childrenArray, columnCount]);
-
-  // Recompute balanced distribution when all heights known or on column change
-  const recomputeBalanced = React.useCallback(() => {
-    const numCols = columnCount;
-    const cols: number[][] = Array.from({ length: numCols }, () => []);
-    const colHeights = new Array<number>(numCols).fill(0);
-
-    childrenArray.forEach((_, index) => {
-      const height = heightsRef.current.get(index) ?? 0;
-      let target = 0;
-      let min = colHeights[0];
-      for (let c = 1; c < numCols; c++) {
-        if (colHeights[c] < min) {
-          min = colHeights[c];
-          target = c;
+    Object.entries(BREAKPOINT_PX).forEach(([bp, px]) => {
+      if (bp !== "base" && window.innerWidth >= px) {
+        const value = resolved[bp as Breakpoint];
+        if (typeof value === "number") {
+          active = value;
         }
       }
-      cols[target].push(index);
-      colHeights[target] += height;
     });
-    setDistribution(cols);
+
+    return Math.max(1, active);
+  }, [columns]);
+
+  // Simple round-robin distribution - items stay in their assigned column
+  const distribution = useMemo(() => {
+    const cols: number[][] = Array.from({ length: columnCount }, () => []);
+    childrenArray.forEach((_, i) => {
+      cols[i % columnCount].push(i);
+    });
+    return cols;
   }, [childrenArray, columnCount]);
-
-  // Schedule recompute once after measurements settle
-  const scheduleRecompute = React.useCallback(() => {
-    if (scheduledRef.current != null) return;
-    scheduledRef.current = window.setTimeout(() => {
-      scheduledRef.current = null;
-      recomputeBalanced();
-    }, 0);
-  }, [recomputeBalanced]);
-
-  // Recompute on column change if we already have measurements
-  React.useEffect(() => {
-    if (heightsRef.current.size > 0) {
-      recomputeBalanced();
-    }
-  }, [recomputeBalanced]);
-
-  const onItemSize = React.useCallback(
-    (index: number, height: number) => {
-      const prev = heightsRef.current.get(index);
-      if (prev !== height) {
-        heightsRef.current.set(index, height);
-        scheduleRecompute();
-      }
-    },
-    [scheduleRecompute]
-  );
 
   return (
     <div
-      ref={containerRef}
       className={cn("grid", className)}
       style={{
         gridTemplateColumns: `repeat(${columnCount}, minmax(0, 1fr))`,
@@ -137,50 +103,15 @@ export function Masonry({
       {distribution.map((col, colIdx) => (
         <div key={colIdx} className="flex flex-col" style={{ gap: columnGap }}>
           {col.map((childIndex) => (
-            <MeasuredItem
+            <div
               key={childIndex}
-              index={childIndex}
-              onSize={onItemSize}
-              className={itemClassName}
+              className={cn("break-inside-avoid", itemClassName)}
             >
               {childrenArray[childIndex]}
-            </MeasuredItem>
+            </div>
           ))}
         </div>
       ))}
-    </div>
-  );
-}
-
-function MeasuredItem({
-  index,
-  onSize,
-  className,
-  children,
-}: {
-  index: number;
-  onSize: (index: number, height: number) => void;
-  className?: string;
-  children: React.ReactNode;
-}) {
-  const ref = React.useRef<HTMLDivElement | null>(null);
-
-  React.useLayoutEffect(() => {
-    const el = ref.current;
-    if (!el) return;
-    onSize(index, el.offsetHeight);
-    const ro = new ResizeObserver(() => {
-      onSize(index, el.offsetHeight);
-    });
-    ro.observe(el);
-    return () => {
-      ro.disconnect();
-    };
-  }, [index, onSize]);
-
-  return (
-    <div ref={ref} className={cn("break-inside-avoid", className)}>
-      {children}
     </div>
   );
 }

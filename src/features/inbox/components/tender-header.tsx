@@ -1,16 +1,18 @@
 "use client";
 
-import { Button, Chip } from "@heroui/react";
-import { Calendar, House, MessageSquareText } from "lucide-react";
+import { Button, Chip, Tooltip } from "@heroui/react";
+import { CalendarClock, House, MessageSquareText } from "lucide-react";
 import { motion, AnimatePresence } from "motion/react";
 import { useEffect, useState } from "react";
 import { Tables } from "$/types/supabase";
 import { useCommentsCount } from "$/features/tenders/api/use-comments-count";
 import { TenderPartType } from "./tender-preview";
 import { useRestoreRejectedTender } from "../api/use-restore-rejected-tender";
+import { truncate } from "lodash";
+import { useDateFormat } from "$/features/i18n/hooks/use-date-format";
 
 interface TenderHeaderProps {
-  tender: Tables<"tenders">;
+  tender: NonNullable<Tables<"tenders">>;
   isHeaderCollapsed: boolean;
   setCommentsOpened: (value: boolean) => void;
   onApprovePart?: () => void;
@@ -42,6 +44,7 @@ export function TenderHeader({
     tenderId: tender.id,
   });
   const { mutate: restoreTender } = useRestoreRejectedTender();
+  const { relativeToNow } = useDateFormat();
   const isRejected = tender.status === "rejected";
 
   useEffect(() => {
@@ -67,15 +70,22 @@ export function TenderHeader({
         </Chip>
       )}
 
-      <motion.h1
-        className="font-semibold w-2/3 mb-2"
-        variants={h1Variants}
-        initial="expanded"
-        animate={isHeaderCollapsed ? "collapsed" : "expanded"}
-        transition={{ duration: 0.3, ease: "easeInOut" }}
+      <Tooltip
+        placement="bottom-start"
+        content={tender.orderobject}
+        className="max-w-96"
+        isDisabled={(tender.orderobject?.length || 0) < 180}
       >
-        {tender.orderobject}
-      </motion.h1>
+        <motion.h1
+          className="font-semibold w-2/3 mb-2"
+          variants={h1Variants}
+          initial="expanded"
+          animate={isHeaderCollapsed ? "collapsed" : "expanded"}
+          transition={{ duration: 0.3, ease: "easeInOut" }}
+        >
+          {truncate(tender.orderobject!, { length: 150 })}
+        </motion.h1>
+      </Tooltip>
 
       <AnimatePresence>
         {!isHeaderCollapsed && (
@@ -96,8 +106,8 @@ export function TenderHeader({
                 {tender.organizationname}
               </span>
               <span className="flex items-center gap-2">
-                <Calendar className="w-4 h-4" />
-                {tender.submittingoffersdate}
+                <CalendarClock className="w-4 h-4" />
+                {relativeToNow(new Date(tender.submittingoffersdate!))}
               </span>
             </div>
             {isRejected && (
@@ -128,7 +138,7 @@ export function TenderHeader({
                       </Button>
                     ) : (
                       <Button color="primary" onPress={onApprovePart}>
-                        Approve
+                        Approve this part
                       </Button>
                     )}
                   </>
@@ -177,8 +187,8 @@ export function TenderHeader({
               {tender.organizationname}
             </span>
             <span className="flex items-center gap-1">
-              <Calendar className="w-3 h-3" />
-              {tender.submittingoffersdate}
+              <CalendarClock className="w-3 h-3" />
+              {relativeToNow(new Date(tender.submittingoffersdate!))}
             </span>
           </div>
 
@@ -223,7 +233,7 @@ export function TenderHeader({
                     </Button>
                   ) : (
                     <Button size="sm" color="primary" onPress={onApprovePart}>
-                      Approve
+                      Approve this part
                     </Button>
                   )}
                 </>
