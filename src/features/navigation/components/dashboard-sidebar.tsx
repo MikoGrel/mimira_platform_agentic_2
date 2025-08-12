@@ -36,13 +36,13 @@ const navigationItems = [
     title: <span>Active tenders</span>,
     icon: FolderOpen,
     tooltip: "Active tenders",
-    url: "/dashboard/projects",
+    url: "/dashboard/tenders",
   },
   {
     title: <span>Documents</span>,
     icon: FileCheck,
     tooltip: "Documents",
-    url: "/dashboard/team",
+    url: "/dashboard/documents",
   },
 ];
 

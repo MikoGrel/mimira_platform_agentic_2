@@ -349,6 +349,73 @@ export default {
         },
       },
     },
+    "app/(platform)/dashboard/tenders/page.tsx": {
+      entries: {
+        "0/declaration/body/0/argument": {
+          content: {
+            en: "TendersPage",
+            pl: "TendersPage",
+          },
+          hash: "d8fbbbe5398642167ab3c42ffda59c65",
+        },
+        "1/declaration/body/0/argument/1/1": {
+          content: {
+            en: "Tenders Kanban",
+            pl: "Kanban przetargów",
+          },
+          hash: "41fa7d76fd787cad6a2c5aacbe8c5e6b",
+        },
+        "1/declaration/body/0/argument/1/3": {
+          content: {
+            en: "Manage your tenders with drag-and-drop",
+            pl: "Zarządzaj swoimi przetargami za pomocą funkcji przeciągnij i upuść",
+          },
+          hash: "0787c6d5511e119cd9bfb5acd605982d",
+        },
+        "4/declaration/body/3/argument/1/1/1-placeholder": {
+          content: {
+            en: "Search tenders...",
+            pl: "Szukaj przetargów...",
+          },
+          hash: "0d45d906412d33be32db3d71b176f230",
+        },
+        "4/declaration/body/3/argument/1/1/1/1": {
+          content: {
+            en: "Tenders Kanban",
+            pl: "Kanban przetargów",
+          },
+          hash: "109562d6afd33efba4e472d7f2cb25ad",
+        },
+        "4/declaration/body/3/argument/1/1/1/3": {
+          content: {
+            en: "Manage your tenders with drag-and-drop",
+            pl: "Zarządzaj swoimi przetargami za pomocą funkcji przeciągnij i upuść",
+          },
+          hash: "3b9f7a600a65e222814d2b9b07e1127b",
+        },
+        "4/declaration/body/3/argument/1/1/3": {
+          content: {
+            en: "Filter",
+            pl: "Filtruj",
+          },
+          hash: "399e82e24cb7c84e1c04ef19e5ea3c06",
+        },
+        "4/declaration/body/3/argument/1/1/3/1-placeholder": {
+          content: {
+            en: "Search tenders...",
+            pl: "Szukaj przetargów...",
+          },
+          hash: "0d45d906412d33be32db3d71b176f230",
+        },
+        "4/declaration/body/3/argument/1/1/3/3": {
+          content: {
+            en: "Filter",
+            pl: "Filtruj",
+          },
+          hash: "fbb9d8bf54862f5e8f79dd69d4d4c6b8",
+        },
+      },
+    },
     "app/(platform)/login/page.tsx": {
       entries: {
         "11/declaration/body/0/expression/1": {
@@ -5756,6 +5823,59 @@ export default {
         },
       },
     },
+    "features/tenders/components/kanban-column.tsx": {
+      entries: {
+        "7/declaration/body/1/argument/1/1": {
+          content: {
+            en: "<element:h3>{title}</element:h3> ·<element:span>{tenders.length}</element:span>",
+            pl: "<element:h3>{title}</element:h3> ·<element:span>{tenders.length}</element:span>",
+          },
+          hash: "2af7ebedeb3062fff8d5dc58a5bd1474",
+        },
+        "7/declaration/body/1/argument/3/1/1/3/expression/right": {
+          content: {
+            en: "No tenders",
+            pl: "Brak przetargów",
+          },
+          hash: "b6a5fd187939bf3caa40fac98de7d9f0",
+        },
+        "8/declaration/body/1/argument/1/1": {
+          content: {
+            en: "<element:h3>{title}</element:h3> ·<element:span>{tenders.length}</element:span>",
+            pl: "<element:h3>{title}</element:h3> ·<element:span>{tenders.length}</element:span>",
+          },
+          hash: "2af7ebedeb3062fff8d5dc58a5bd1474",
+        },
+        "8/declaration/body/1/argument/1/3/1/1/3/expression/right": {
+          content: {
+            en: "No tenders",
+            pl: "Brak przetargów",
+          },
+          hash: "03966e3a00acfc99f27be4c6be523ac2",
+        },
+        "8/declaration/body/1/argument/3/1/1/3/expression/right": {
+          content: {
+            en: "No tenders",
+            pl: "Brak przetargów",
+          },
+          hash: "b6a5fd187939bf3caa40fac98de7d9f0",
+        },
+        "8/declaration/body/1/argument/3/1/3/expression/right": {
+          content: {
+            en: "No tenders",
+            pl: "Brak przetargów",
+          },
+          hash: "5ae0802a8f54f4a2e1147a5fd3449a00",
+        },
+        "9/declaration/body/1/argument/3/1/3/expression/right": {
+          content: {
+            en: "No tenders",
+            pl: "Brak przetargów",
+          },
+          hash: "5ae0802a8f54f4a2e1147a5fd3449a00",
+        },
+      },
+    },
     "features/tenders/components/mini-tender-calendar.tsx": {
       entries: {
         "5/declaration/body/5/argument/3/1/expression/alternate/1": {
@@ -5788,6 +5908,91 @@ export default {
             },
             hash: "0ba1a65084182188ac8229eacdd19007",
           },
+      },
+    },
+    "features/tenders/components/tender-card.tsx": {
+      entries: {
+        "10/declaration/body/2/argument/3/1/5/expression/right/3": {
+          content: {
+            en: "Due: <function:format/>",
+            pl: "Termin: <function:format/>",
+          },
+          hash: "0c5f1e43a981931b034250a768a71ddd",
+        },
+        "10/declaration/body/2/argument/3/3/expression/right/1": {
+          content: {
+            en: "{tender.tender_parts.length} part<expression/>",
+            pl: "{tender.tender_parts.length} część<expression/>",
+          },
+          hash: "3314bd8d7d9277a56475e8e2fae3a304",
+        },
+        "11/declaration/body/2/argument/3/1/5/expression/right/3": {
+          content: {
+            en: "Due: <function:format/>",
+            pl: "Termin: <function:format/>",
+          },
+          hash: "0c5f1e43a981931b034250a768a71ddd",
+        },
+        "11/declaration/body/2/argument/3/3/expression/right/1": {
+          content: {
+            en: "{tender.tender_parts.length} part<expression/>",
+            pl: "{tender.tender_parts.length} część<expression/>",
+          },
+          hash: "3314bd8d7d9277a56475e8e2fae3a304",
+        },
+        "9/declaration/body/2/argument/1/1/3/expression/right/1": {
+          content: {
+            en: "{tender.tender_parts.length} part <expression/> selected",
+            pl: "{tender.tender_parts.length} część <expression/> wybrana",
+          },
+          hash: "bc50a9c6544ed081e7b3cee9beefbe83",
+        },
+        "9/declaration/body/2/argument/3/1/5/expression/right/3": {
+          content: {
+            en: "Due: <function:format/>",
+            pl: "Termin: <function:format/>",
+          },
+          hash: "0c5f1e43a981931b034250a768a71ddd",
+        },
+        "9/declaration/body/2/argument/3/3/expression/right/1": {
+          content: {
+            en: "{tender.tender_parts.length} part<expression/>",
+            pl: "{tender.tender_parts.length} część<expression/>",
+          },
+          hash: "3314bd8d7d9277a56475e8e2fae3a304",
+        },
+      },
+    },
+    "features/tenders/components/tender-kanban.tsx": {
+      entries: {
+        "10/declaration/body/9/consequent/0/argument/1": {
+          content: {
+            en: "Loading tenders...",
+            pl: "Ładowanie przetargów...",
+          },
+          hash: "1c85ffc40c61e633c8219b81a3b5c03c",
+        },
+        "11/declaration/body/9/consequent/0/argument/1": {
+          content: {
+            en: "Loading tenders...",
+            pl: "Ładowanie przetargów...",
+          },
+          hash: "1c85ffc40c61e633c8219b81a3b5c03c",
+        },
+        "8/declaration/body/9/consequent/0/argument/1": {
+          content: {
+            en: "Loading tenders...",
+            pl: "Ładowanie przetargów...",
+          },
+          hash: "1c85ffc40c61e633c8219b81a3b5c03c",
+        },
+        "9/declaration/body/9/consequent/0/argument/1": {
+          content: {
+            en: "Loading tenders...",
+            pl: "Ładowanie przetargów...",
+          },
+          hash: "1c85ffc40c61e633c8219b81a3b5c03c",
+        },
       },
     },
     "features/tenders/components/tender-summary.tsx": {

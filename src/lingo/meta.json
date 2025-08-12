@@ -397,6 +397,82 @@
         }
       }
     },
+    "app/(platform)/dashboard/tenders/page.tsx": {
+      "scopes": {
+        "0/declaration/body/0/argument": {
+          "type": "element",
+          "hash": "d8fbbbe5398642167ab3c42ffda59c65",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "TendersPage"
+        },
+        "1/declaration/body/0/argument/1/1": {
+          "type": "element",
+          "hash": "41fa7d76fd787cad6a2c5aacbe8c5e6b",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Tenders Kanban"
+        },
+        "1/declaration/body/0/argument/1/3": {
+          "type": "element",
+          "hash": "0787c6d5511e119cd9bfb5acd605982d",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Manage your tenders with drag-and-drop"
+        },
+        "4/declaration/body/3/argument/1/1/1-placeholder": {
+          "type": "attribute",
+          "hash": "0d45d906412d33be32db3d71b176f230",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Search tenders..."
+        },
+        "4/declaration/body/3/argument/1/1/1/1": {
+          "type": "element",
+          "hash": "109562d6afd33efba4e472d7f2cb25ad",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Tenders Kanban"
+        },
+        "4/declaration/body/3/argument/1/1/1/3": {
+          "type": "element",
+          "hash": "3b9f7a600a65e222814d2b9b07e1127b",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Manage your tenders with drag-and-drop"
+        },
+        "4/declaration/body/3/argument/1/1/3": {
+          "type": "element",
+          "hash": "399e82e24cb7c84e1c04ef19e5ea3c06",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Filter"
+        },
+        "4/declaration/body/3/argument/1/1/3/1-placeholder": {
+          "type": "attribute",
+          "hash": "0d45d906412d33be32db3d71b176f230",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Search tenders..."
+        },
+        "4/declaration/body/3/argument/1/1/3/3": {
+          "type": "element",
+          "hash": "fbb9d8bf54862f5e8f79dd69d4d4c6b8",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Filter"
+        }
+      }
+    },
     "app/(platform)/login/page.tsx": {
       "scopes": {
         "11/declaration/body/0/expression/1": {
@@ -706,6 +782,42 @@
           "skip": false,
           "overrides": {},
           "content": "Forgot password?"
+        }
+      }
+    },
+    "features/branding/components/Partners.tsx": {
+      "scopes": {
+        "0/declaration/body/0/argument/1-alt": {
+          "type": "attribute",
+          "hash": "9b3d004c84df523535429ec29562569c",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Zarys"
+        },
+        "0/declaration/body/0/argument/3-alt": {
+          "type": "attribute",
+          "hash": "92f51f4458a34da1e694a242bab3e31c",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Bluebrain"
+        },
+        "0/declaration/body/0/argument/5-alt": {
+          "type": "attribute",
+          "hash": "37481d08ba871e03dc949580a4e300bc",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Forcepol"
+        },
+        "0/declaration/body/0/argument/7-alt": {
+          "type": "attribute",
+          "hash": "691b443da0fc99175fc9d12e9021bc50",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Seka"
         }
       }
     },
@@ -6401,6 +6513,122 @@
         }
       }
     },
+    "features/tenders/components/kanban-column.tsx": {
+      "scopes": {
+        "7/declaration/body/1/argument/1/1": {
+          "type": "element",
+          "hash": "2af7ebedeb3062fff8d5dc58a5bd1474",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "<element:h3>{title}</element:h3> ·<element:span>{tenders.length}</element:span>"
+        },
+        "7/declaration/body/1/argument/1/3/1/1/3/expression/right": {
+          "type": "element",
+          "hash": "03966e3a00acfc99f27be4c6be523ac2",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "No tenders"
+        },
+        "7/declaration/body/1/argument/1/3/1/3/expression/right": {
+          "type": "element",
+          "hash": "b6a5fd187939bf3caa40fac98de7d9f0",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "No tenders"
+        },
+        "7/declaration/body/1/argument/3/1/1/3/expression/right": {
+          "type": "element",
+          "hash": "b6a5fd187939bf3caa40fac98de7d9f0",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "No tenders"
+        },
+        "7/declaration/body/2/argument/1/3/1/1/3/expression/right": {
+          "type": "element",
+          "hash": "03966e3a00acfc99f27be4c6be523ac2",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "No tenders"
+        },
+        "7/declaration/body/2/argument/1/3/1/3/expression/right": {
+          "type": "element",
+          "hash": "b6a5fd187939bf3caa40fac98de7d9f0",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "No tenders"
+        },
+        "8/declaration/body/1/argument/1/1": {
+          "type": "element",
+          "hash": "2af7ebedeb3062fff8d5dc58a5bd1474",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "<element:h3>{title}</element:h3> ·<element:span>{tenders.length}</element:span>"
+        },
+        "8/declaration/body/1/argument/1/1/3/1/3/expression/right": {
+          "type": "element",
+          "hash": "03966e3a00acfc99f27be4c6be523ac2",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "No tenders"
+        },
+        "8/declaration/body/1/argument/1/3/1/1/3/expression/right": {
+          "type": "element",
+          "hash": "03966e3a00acfc99f27be4c6be523ac2",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "No tenders"
+        },
+        "8/declaration/body/1/argument/1/3/1/3/expression/right": {
+          "type": "element",
+          "hash": "b6a5fd187939bf3caa40fac98de7d9f0",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "No tenders"
+        },
+        "8/declaration/body/1/argument/3/1/1/3/expression/right": {
+          "type": "element",
+          "hash": "b6a5fd187939bf3caa40fac98de7d9f0",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "No tenders"
+        },
+        "8/declaration/body/1/argument/3/1/3/expression/right": {
+          "type": "element",
+          "hash": "5ae0802a8f54f4a2e1147a5fd3449a00",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "No tenders"
+        },
+        "8/declaration/body/2/argument/1/3/1/1/3/expression/right": {
+          "type": "element",
+          "hash": "03966e3a00acfc99f27be4c6be523ac2",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "No tenders"
+        },
+        "9/declaration/body/1/argument/3/1/3/expression/right": {
+          "type": "element",
+          "hash": "5ae0802a8f54f4a2e1147a5fd3449a00",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "No tenders"
+        }
+      }
+    },
     "features/tenders/components/mini-tender-calendar.tsx": {
       "scopes": {
         "5/declaration/body/5/argument/3/1/expression/alternate/1": {
@@ -6434,6 +6662,102 @@
           "skip": false,
           "overrides": {},
           "content": "Expiring Tenders:"
+        }
+      }
+    },
+    "features/tenders/components/tender-card.tsx": {
+      "scopes": {
+        "10/declaration/body/2/argument/3/1/5/expression/right/3": {
+          "type": "element",
+          "hash": "0c5f1e43a981931b034250a768a71ddd",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Due: <function:format/>"
+        },
+        "10/declaration/body/2/argument/3/3/expression/right/1": {
+          "type": "element",
+          "hash": "3314bd8d7d9277a56475e8e2fae3a304",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "{tender.tender_parts.length} part<expression/>"
+        },
+        "11/declaration/body/2/argument/3/1/5/expression/right/3": {
+          "type": "element",
+          "hash": "0c5f1e43a981931b034250a768a71ddd",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Due: <function:format/>"
+        },
+        "11/declaration/body/2/argument/3/3/expression/right/1": {
+          "type": "element",
+          "hash": "3314bd8d7d9277a56475e8e2fae3a304",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "{tender.tender_parts.length} part<expression/>"
+        },
+        "9/declaration/body/2/argument/1/1/3/expression/right/1": {
+          "type": "element",
+          "hash": "bc50a9c6544ed081e7b3cee9beefbe83",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "{tender.tender_parts.length} part <expression/> selected"
+        },
+        "9/declaration/body/2/argument/3/1/5/expression/right/3": {
+          "type": "element",
+          "hash": "0c5f1e43a981931b034250a768a71ddd",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Due: <function:format/>"
+        },
+        "9/declaration/body/2/argument/3/3/expression/right/1": {
+          "type": "element",
+          "hash": "3314bd8d7d9277a56475e8e2fae3a304",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "{tender.tender_parts.length} part<expression/>"
+        }
+      }
+    },
+    "features/tenders/components/tender-kanban.tsx": {
+      "scopes": {
+        "10/declaration/body/9/consequent/0/argument/1": {
+          "type": "element",
+          "hash": "1c85ffc40c61e633c8219b81a3b5c03c",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Loading tenders..."
+        },
+        "11/declaration/body/9/consequent/0/argument/1": {
+          "type": "element",
+          "hash": "1c85ffc40c61e633c8219b81a3b5c03c",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Loading tenders..."
+        },
+        "8/declaration/body/9/consequent/0/argument/1": {
+          "type": "element",
+          "hash": "1c85ffc40c61e633c8219b81a3b5c03c",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Loading tenders..."
+        },
+        "9/declaration/body/9/consequent/0/argument/1": {
+          "type": "element",
+          "hash": "1c85ffc40c61e633c8219b81a3b5c03c",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Loading tenders..."
         }
       }
     },
