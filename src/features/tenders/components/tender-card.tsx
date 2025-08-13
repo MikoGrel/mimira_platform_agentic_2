@@ -7,6 +7,7 @@ import { CalendarClock, Building2, MapPin, Package } from "lucide-react";
 import { Tables } from "$/types/supabase";
 import { format } from "date-fns";
 import { truncate } from "lodash";
+import { memo } from "react";
 
 type TenderWithParts = Tables<"tenders"> & {
   tender_parts: Tables<"tender_parts">[];
@@ -17,7 +18,7 @@ interface TenderCardProps {
   isDragging?: boolean;
 }
 
-export function TenderCard({ tender, isDragging = false }: TenderCardProps) {
+function InternalTenderCard({ tender, isDragging = false }: TenderCardProps) {
   const {
     attributes,
     listeners,
@@ -28,6 +29,10 @@ export function TenderCard({ tender, isDragging = false }: TenderCardProps) {
   } = useSortable({
     id: tender.id,
     disabled: isDragging,
+    data: {
+      type: "Task",
+      task: tender,
+    },
   });
 
   const style = {
@@ -95,3 +100,9 @@ export function TenderCard({ tender, isDragging = false }: TenderCardProps) {
     </Card>
   );
 }
+
+export const TenderCard = memo(InternalTenderCard, (prev, next) => {
+  return (
+    prev.tender.id === next.tender.id && prev.isDragging === next.isDragging
+  );
+});

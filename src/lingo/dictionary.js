@@ -2531,6 +2531,13 @@ export default {
         },
         "14/body/6/argument/5/expression/right/3": {
           content: {
+            en: "Apply to full tender",
+            pl: "Zastosuj do pełnego przetargu",
+          },
+          hash: "feaa830d05d889686993b36685c8eedc",
+        },
+        "14/body/6/argument/5/expression/right/5": {
+          content: {
             en: "Unselect all",
             pl: "Odznacz wszystko",
           },
@@ -6288,6 +6295,41 @@ export default {
             pl: "Ładowanie przetargów...",
           },
           hash: "1c85ffc40c61e633c8219b81a3b5c03c",
+        },
+        "7/0/init/expression/0/1/value": {
+          content: {
+            en: "Analysis",
+            pl: "Analiza",
+          },
+          hash: "409bac6215382c47e59f5039cc4cdcdd",
+        },
+        "7/0/init/expression/1/1/value": {
+          content: {
+            en: "Questions & Review",
+            pl: "Pytania i przegląd",
+          },
+          hash: "bd17707e3e924f958ec68060726f1068",
+        },
+        "7/0/init/expression/2/1/value": {
+          content: {
+            en: "Documents",
+            pl: "Dokumenty",
+          },
+          hash: "c3882fc98216636873ab9091f3453f0c",
+        },
+        "7/0/init/expression/3/1/value": {
+          content: {
+            en: "Decision",
+            pl: "Decyzja",
+          },
+          hash: "4757e269fee1aa76864469e762def497",
+        },
+        "7/0/init/expression/4/1/value": {
+          content: {
+            en: "Rejected",
+            pl: "Odrzucone",
+          },
+          hash: "30202c9a9a2093021b0e9a1c61717fe9",
         },
         "8/declaration/body/9/consequent/0/argument/1": {
           content: {

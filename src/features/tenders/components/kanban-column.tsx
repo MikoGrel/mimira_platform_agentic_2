@@ -1,5 +1,6 @@
 "use client";
 
+import React from "react";
 import { useDroppable } from "@dnd-kit/core";
 import { SortableContext, rectSortingStrategy } from "@dnd-kit/sortable";
 import { Card, CardBody, CardHeader } from "@heroui/react";
@@ -13,13 +14,13 @@ type TenderWithParts = Tables<"tenders"> & {
 
 interface KanbanColumnProps {
   id: string;
-  title: string;
+  title: React.ReactNode;
   tenders: TenderWithParts[];
   icon: LucideIcon;
   iconColor: string;
 }
 
-export function KanbanColumn({
+function InternalKanbanColumn({
   id,
   title,
   tenders,
@@ -28,11 +29,17 @@ export function KanbanColumn({
 }: KanbanColumnProps) {
   const { setNodeRef, isOver, active } = useDroppable({
     id,
+    data: {
+      type: "Column",
+      column: { id, title },
+    },
   });
+
+  const tenderIds = tenders.map((tender) => tender.id);
 
   return (
     <div ref={setNodeRef} className="h-full">
-      <SortableContext id={id} items={tenders} strategy={rectSortingStrategy}>
+      <SortableContext items={tenderIds} strategy={rectSortingStrategy}>
         <Card
           className={`h-full bg-sidebar ${isOver ? "ring-1 ring-primary/50" : ""}`}
           shadow="none"
@@ -66,3 +73,14 @@ export function KanbanColumn({
     </div>
   );
 }
+
+export const KanbanColumn = React.memo(InternalKanbanColumn, (prev, next) => {
+  const prevTenders = prev.tenders.map((tender) => tender.id).join(".");
+  const nextTenders = next.tenders.map((tender) => tender.id).join(".");
+
+  return (
+    prev.id === next.id &&
+    prev.title === next.title &&
+    prevTenders === nextTenders
+  );
+});

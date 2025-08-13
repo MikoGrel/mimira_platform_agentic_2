@@ -14,6 +14,7 @@ import {
   KeyboardSensor,
 } from "@dnd-kit/core";
 import { arrayMove, sortableKeyboardCoordinates } from "@dnd-kit/sortable";
+import { Active, DataRef, Over } from "@dnd-kit/core";
 
 import { Tables } from "$/types/supabase";
 import { TenderCard } from "./tender-card";
@@ -30,21 +31,21 @@ import {
 const COLUMNS = [
   {
     id: "analysis",
-    title: "Analysis",
+    title: <>Analysis</>,
     statuses: ["analysis"] as const,
     icon: Search,
     color: "text-amber-500",
   },
   {
     id: "questions",
-    title: "Questions & Review",
+    title: <>Questions & Review</>,
     statuses: ["questions_in_review_mimira", "questions"] as const,
     icon: MessageCircleQuestion,
     color: "text-purple-500",
   },
   {
     id: "documents",
-    title: "Documents",
+    title: <>Documents</>,
     statuses: [
       "documents_preparing",
       "documents_ready",
@@ -55,14 +56,14 @@ const COLUMNS = [
   },
   {
     id: "decision",
-    title: "Decision",
+    title: <>Decision</>,
     statuses: ["decision_made_applied", "decision_made_rejected"] as const,
     icon: CheckCircle,
     color: "text-green-500",
   },
   {
     id: "rejected",
-    title: "Rejected",
+    title: <>Rejected</>,
     statuses: ["rejected"] as const,
     icon: X,
     color: "text-red-500",
@@ -73,6 +74,36 @@ type ColumnId = (typeof COLUMNS)[number]["id"];
 type TenderWithParts = Tables<"tenders"> & {
   tender_parts: Tables<"tender_parts">[];
 };
+
+type ColumnDragData = {
+  type: "Column";
+  column: { id: string; title: string };
+};
+
+type TaskDragData = {
+  type: "Task";
+  task: TenderWithParts;
+};
+
+type DraggableData = ColumnDragData | TaskDragData;
+
+function hasDraggableData<T extends Active | Over>(
+  entry: T | null | undefined
+): entry is T & {
+  data: DataRef<DraggableData>;
+} {
+  if (!entry) {
+    return false;
+  }
+
+  const data = entry.data.current;
+
+  if (data?.type === "Column" || data?.type === "Task") {
+    return true;
+  }
+
+  return false;
+}
 
 // Mock data for development
 const mockTenders: TenderWithParts[] = [
@@ -520,84 +551,122 @@ export function TenderKanban() {
     })
   );
 
-  const findColumn = (unique: string | null) => {
-    if (!unique) {
-      return null;
-    }
-    // Check if over target is a column
-    if (COLUMNS.some((c) => c.id === unique)) {
-      return COLUMNS.find((c) => c.id === unique) ?? null;
-    }
-    // Find which column contains this tender
-    const id = String(unique);
-    const column = COLUMNS.find((col) =>
-      col.statuses.some((status) =>
-        allTenders.some(
-          (tender) => tender.id === id && tender.status === status
-        )
-      )
-    );
-    return column ?? null;
+  const getColumnForTender = (tender: TenderWithParts) => {
+    return (
+      COLUMNS.find((col) =>
+        (col.statuses as readonly string[]).includes(tender.status)
+      ) || COLUMNS[0]
+    ); // Default to first column
   };
 
   const handleDragStart = (event: DragStartEvent) => {
-    setActiveId(event.active.id as string);
+    if (!hasDraggableData(event.active)) return;
+    const data = event.active.data.current;
+
+    if (data?.type === "Task") {
+      setActiveId(event.active.id as string);
+    }
   };
 
   const handleDragOver = (event: DragOverEvent) => {
     const { active, over } = event;
-    const activeId = String(active.id);
-    const overId = over ? String(over.id) : null;
-    const activeColumn = findColumn(activeId);
-    const overColumn = findColumn(overId);
+    if (!over) return;
 
-    if (!activeColumn || !overColumn || activeColumn === overColumn) {
-      return null;
+    const activeId = active.id;
+    const overId = over.id;
+
+    if (activeId === overId) return;
+
+    if (!hasDraggableData(active) || !hasDraggableData(over)) return;
+
+    const activeData = active.data.current;
+    const overData = over.data.current;
+
+    const isActiveATask = activeData?.type === "Task";
+    const isOverATask = overData?.type === "Task";
+
+    if (!isActiveATask) return;
+
+    // Im dropping a Task over another Task
+    if (isActiveATask && isOverATask) {
+      setTenders((tasks) => {
+        const activeIndex = tasks.findIndex((t) => t.id === activeId);
+        const overIndex = tasks.findIndex((t) => t.id === overId);
+        const activeTask = tasks[activeIndex];
+        const overTask = tasks[overIndex];
+
+        if (activeTask && overTask) {
+          const activeColumn = getColumnForTender(activeTask);
+          const overColumn = getColumnForTender(overTask);
+
+          if (activeColumn.id !== overColumn.id) {
+            activeTask.status = overColumn.statuses[0];
+            return arrayMove(tasks, activeIndex, overIndex - 1);
+          }
+        }
+
+        return arrayMove(tasks, activeIndex, overIndex);
+      });
     }
 
-    setTenders((prevTenders) => {
-      const newStatus = overColumn.statuses[0]; // Use first status of target column
+    const isOverAColumn = overData?.type === "Column";
 
-      return prevTenders.map((tender) => {
-        if (tender.id === activeId) {
-          return { ...tender, status: newStatus };
+    // Im dropping a Task over a column
+    if (isActiveATask && isOverAColumn) {
+      setTenders((tasks) => {
+        const activeIndex = tasks.findIndex((t) => t.id === activeId);
+        const activeTask = tasks[activeIndex];
+
+        if (activeTask) {
+          const targetColumn = COLUMNS.find((col) => col.id === overId);
+          if (targetColumn) {
+            activeTask.status = targetColumn.statuses[0];
+            return arrayMove(tasks, activeIndex, activeIndex);
+          }
         }
-        return tender;
+        return tasks;
       });
-    });
+    }
   };
 
   const handleDragEnd = (event: DragEndEvent) => {
+    setActiveId(null);
+
     const { active, over } = event;
-    const activeId = String(active.id);
-    const overId = over ? String(over.id) : null;
-    const activeColumn = findColumn(activeId);
-    const overColumn = findColumn(overId);
+    if (!over) return;
 
-    if (!activeColumn || !overColumn || activeColumn !== overColumn) {
-      setActiveId(null);
-      return null;
-    }
+    const activeId = active.id;
+    const overId = over.id;
 
-    const activeItems = allTenders.filter((tender) =>
-      activeColumn.statuses.some((status) => status === tender.status)
-    );
+    if (!hasDraggableData(active)) return;
 
-    const activeIndex = activeItems.findIndex((i) => i.id === activeId);
-    const overIndex = activeItems.findIndex((i) => i.id === overId);
+    const activeData = active.data.current;
 
-    if (activeIndex !== overIndex) {
-      setTenders((prevTenders) => {
-        const reorderedItems = arrayMove(activeItems, activeIndex, overIndex);
-        const otherItems = prevTenders.filter(
-          (tender) =>
-            !activeColumn.statuses.some((status) => status === tender.status)
-        );
-        return [...otherItems, ...reorderedItems];
+    if (activeId === overId) return;
+
+    const isActiveATask = activeData?.type === "Task";
+    if (!isActiveATask) return;
+
+    // Handle reordering within the same column
+    if (hasDraggableData(over) && over.data.current?.type === "Task") {
+      setTenders((tasks) => {
+        const activeIndex = tasks.findIndex((t) => t.id === activeId);
+        const overIndex = tasks.findIndex((t) => t.id === overId);
+        const activeTask = tasks[activeIndex];
+        const overTask = tasks[overIndex];
+
+        if (activeTask && overTask) {
+          const activeColumn = getColumnForTender(activeTask);
+          const overColumn = getColumnForTender(overTask);
+
+          // Only reorder if in same column
+          if (activeColumn.id === overColumn.id) {
+            return arrayMove(tasks, activeIndex, overIndex);
+          }
+        }
+        return tasks;
       });
     }
-
-    setActiveId(null);
   };
 
   return (
@@ -620,7 +689,6 @@ export function TenderKanban() {
           />
         ))}
       </div>
-
       <DragOverlay dropAnimation={null}>
         {activeTender ? <TenderCard tender={activeTender} isDragging /> : null}
       </DragOverlay>
