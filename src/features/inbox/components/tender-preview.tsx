@@ -71,7 +71,8 @@ export function TenderPreview({ tender }: TenderPreviewProps) {
 
   const resolvedItem: TenderType | TenderPartType | undefined | null =
     useMemo(() => {
-      if (!selectedPart || selectedPart === "overview") return tender;
+      if (!selectedPart) return tender;
+
       return tender?.tender_parts.find(
         (part) => part.part_uuid === selectedPart
       );
@@ -84,9 +85,16 @@ export function TenderPreview({ tender }: TenderPreviewProps) {
   });
 
   useEffect(() => {
+    if (selectedPart) return;
+
     setApprovedPartIds(new Set());
-    setSelectedPart(null);
-  }, [tender?.id, setSelectedPart]);
+    // Select first part by default if tender has parts
+    if (tender?.tender_parts?.length > 0) {
+      setSelectedPart(tender.tender_parts[0].part_uuid);
+    } else {
+      setSelectedPart(null);
+    }
+  }, [tender?.id, setSelectedPart, tender?.tender_parts, selectedPart]);
 
   function handleApprovePart() {
     if (!isPartSelected || !selectedPart) return;

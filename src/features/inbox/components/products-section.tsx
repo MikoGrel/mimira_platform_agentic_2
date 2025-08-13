@@ -14,6 +14,16 @@ export interface ProductsSectionProps {
 export function ProductsSection({ products }: ProductsSectionProps) {
   if (!products || products.length === 0) return null;
 
+  function matchingFirst(
+    a: Tables<"tender_products">,
+    b: Tables<"tender_products">
+  ) {
+    if (a.closest_match && !b.closest_match) return -1;
+    if (!a.closest_match && b.closest_match) return 1;
+
+    return 0;
+  }
+
   return (
     <Section id="products" data-section>
       <SectionTitle>
@@ -24,7 +34,7 @@ export function ProductsSection({ products }: ProductsSectionProps) {
       </SectionTitle>
       <SectionContent>
         <Masonry columns={{ base: 1, md: 2 }} columnGap="1rem">
-          {products.map((product, idx) => (
+          {products.toSorted(matchingFirst).map((product, idx) => (
             <ProductCard
               key={`${product.part_uuid}-${idx}`}
               product={product}

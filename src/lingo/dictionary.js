@@ -693,6 +693,38 @@ export default {
         },
       },
     },
+    "features/branding/components/Partners.tsx": {
+      entries: {
+        "0/declaration/body/0/argument/1-alt": {
+          content: {
+            en: "Zarys",
+            pl: "Zarys",
+          },
+          hash: "9b3d004c84df523535429ec29562569c",
+        },
+        "0/declaration/body/0/argument/3-alt": {
+          content: {
+            en: "Bluebrain",
+            pl: "Bluebrain",
+          },
+          hash: "92f51f4458a34da1e694a242bab3e31c",
+        },
+        "0/declaration/body/0/argument/5-alt": {
+          content: {
+            en: "Forcepol",
+            pl: "Forcepol",
+          },
+          hash: "37481d08ba871e03dc949580a4e300bc",
+        },
+        "0/declaration/body/0/argument/7-alt": {
+          content: {
+            en: "Seka",
+            pl: "Seka",
+          },
+          hash: "691b443da0fc99175fc9d12e9021bc50",
+        },
+      },
+    },
     "features/hub/components/deadline-calendar-bento.tsx": {
       entries: {
         "10/declaration/body/5/argument/openingElement/1/value/expression": {
@@ -1545,6 +1577,13 @@ export default {
           hash: "b8638560dd4d00bd02c41fa219c182f2",
         },
         "7/declaration/body/1/argument/1": {
+          content: {
+            en: "Products <element:span>({products.length})</element:span>",
+            pl: "Produkty <element:span>({products.length})</element:span>",
+          },
+          hash: "b8638560dd4d00bd02c41fa219c182f2",
+        },
+        "7/declaration/body/2/argument/1": {
           content: {
             en: "Products <element:span>({products.length})</element:span>",
             pl: "Produkty <element:span>({products.length})</element:span>",
@@ -2436,6 +2475,13 @@ export default {
           },
           hash: "da539d95f0b3d47a70a896ea3bc5b6af",
         },
+        "14/body/6/argument/3/expression/right/1": {
+          content: {
+            en: "Apply to all parts",
+            pl: "Zastosuj do wszystkich części",
+          },
+          hash: "e2b16d520c2502477a3f6d7ca3c0a25e",
+        },
         "14/body/6/argument/3/expression/right/1/expression/alternate": {
           content: {
             en: "Approve this part",
@@ -2449,6 +2495,33 @@ export default {
             pl: "Odznacz",
           },
           hash: "2121747828cc34090474cc947650c01e",
+        },
+        "14/body/6/argument/3/expression/right/3": {
+          content: {
+            en: "Apply to full tender",
+            pl: "Zastosuj do pełnego przetargu",
+          },
+          hash: "feaa830d05d889686993b36685c8eedc",
+        },
+        "14/body/6/argument/3/expression/right/3/expression/alternate": {
+          content: {
+            en: "Approve this part",
+            pl: "Zatwierdź tę część",
+          },
+          hash: "23967778be4ce133e4979a98c463f251",
+        },
+        "14/body/6/argument/3/expression/right/3/expression/consequent": {
+          content: {
+            en: "Unselect",
+            pl: "Odznacz",
+          },
+          hash: "2121747828cc34090474cc947650c01e",
+        },
+        "14/body/6/argument/3/expression/right/3/expression/right": {
+          content: {
+            en: "Apply to full tender",
+          },
+          hash: "f99d1341be7560541accc7b906b09258",
         },
         "14/body/6/argument/5/expression/right/1": {
           content: {
@@ -3978,6 +4051,13 @@ export default {
     },
     "features/inbox/components/tender-parts-carousel.tsx": {
       entries: {
+        "10/body/0/argument/3": {
+          content: {
+            en: "/",
+            pl: "/",
+          },
+          hash: "d727054cb65d0e95c79cfb34bc3e3f28",
+        },
         "10/declaration/body/9/argument/1/1/expression/right/1": {
           content: {
             en: "Tender Parts ({tenderParts.length})",
@@ -3999,6 +4079,21 @@ export default {
           },
           hash: "0f9d23cc765542b37eca23e742ebb37f",
         },
+        "10/declaration/body/9/argument/1/5/1/1/1/expression/0/body/1/1/1/3": {
+          content: {
+            en: "#<expression/>",
+            pl: "#<expression/>",
+          },
+          hash: "806722202f676d2de3d4f40e1c491ccb",
+        },
+        "10/declaration/body/9/argument/1/5/1/1/1/expression/0/body/1/3/1/1/1":
+          {
+            content: {
+              en: "Requirements:",
+              pl: "Wymagania:",
+            },
+            hash: "f27235edc5c81fa9d3422b1bb9bf98c0",
+          },
         "10/declaration/body/9/argument/1/5/1/1/3/expression/0/body/1/1/1/1/3":
           {
             content: {
@@ -4007,6 +4102,34 @@ export default {
             },
             hash: "c081b0ad6c5ade48dc86c5a2f409e75f",
           },
+        "10/declaration/body/9/argument/1/5/1/1/3/expression/0/body/1/1/1/3": {
+          content: {
+            en: "#<expression/>",
+            pl: "#<expression/>",
+          },
+          hash: "806722202f676d2de3d4f40e1c491ccb",
+        },
+        "10/declaration/body/9/argument/1/5/1/1/3/expression/0/body/1/1/3": {
+          content: {
+            en: "#<expression/> <expression/>",
+            pl: "#<expression/> <expression/>",
+          },
+          hash: "5f35b4d8f1edb71c3ae77d1c37396007",
+        },
+        "10/declaration/body/9/argument/1/5/1/1/3/expression/0/body/1/1/3/1": {
+          content: {
+            en: "#<expression/>",
+            pl: "#<expression/>",
+          },
+          hash: "806722202f676d2de3d4f40e1c491ccb",
+        },
+        "10/declaration/body/9/argument/1/5/1/1/3/expression/0/body/1/1/3/3": {
+          content: {
+            en: "#<expression/>",
+            pl: "#<expression/>",
+          },
+          hash: "806722202f676d2de3d4f40e1c491ccb",
+        },
         "10/declaration/body/9/argument/1/5/1/1/3/expression/0/body/1/3/1/1/1":
           {
             content: {
@@ -4030,6 +4153,102 @@ export default {
               pl: "Wadium: ",
             },
             hash: "a7908a3166c9eccd9acd413e39b72c11",
+          },
+        "11/body/0/argument": {
+          content: {
+            en: "<element:span>{matchedProducts}</element:span> / <element:span>{totalProducts}</element:span>",
+            pl: "<element:span>{totalProducts}</element:span> / <element:span>{matchedProducts}</element:span>",
+          },
+          hash: "db2db4868677a01a863659ebd62217f1",
+        },
+        "11/body/0/argument/3": {
+          content: {
+            en: "/",
+            pl: "/",
+          },
+          hash: "d727054cb65d0e95c79cfb34bc3e3f28",
+        },
+        "11/declaration/body/10/argument/1/1/expression/right/1": {
+          content: {
+            en: "Tender Parts ({tenderParts.length})",
+            pl: "Części przetargu ({tenderParts.length})",
+          },
+          hash: "c3fedcbc76eb469cff51935bf57af34e",
+        },
+        "11/declaration/body/10/argument/1/5/1/1/1/expression/0/body/1/1/1/3": {
+          content: {
+            en: "#<expression/>",
+            pl: "#<expression/>",
+          },
+          hash: "806722202f676d2de3d4f40e1c491ccb",
+        },
+        "11/declaration/body/10/argument/1/5/1/1/1/expression/0/body/1/3/1/1/1":
+          {
+            content: {
+              en: "Requirements:",
+              pl: "Wymagania:",
+            },
+            hash: "f27235edc5c81fa9d3422b1bb9bf98c0",
+          },
+        "11/declaration/body/11/argument/1/1/expression/right/1": {
+          content: {
+            en: "Tender Parts ({tenderParts.length})",
+            pl: "Części przetargu ({tenderParts.length})",
+          },
+          hash: "c3fedcbc76eb469cff51935bf57af34e",
+        },
+        "11/declaration/body/11/argument/1/5/1/1/1/expression/0/body/1/1/1/3": {
+          content: {
+            en: "#<expression/>",
+            pl: "#<expression/>",
+          },
+          hash: "806722202f676d2de3d4f40e1c491ccb",
+        },
+        "11/declaration/body/11/argument/1/5/1/1/1/expression/0/body/1/3/1/1/1":
+          {
+            content: {
+              en: "Requirements:",
+              pl: "Wymagania:",
+            },
+            hash: "f27235edc5c81fa9d3422b1bb9bf98c0",
+          },
+        "11/declaration/body/11/argument/1/5/1/1/1/expression/0/body/1/3/1/3/1":
+          {
+            content: {
+              en: "Products:",
+              pl: "Produkty:",
+            },
+            hash: "5fde4eb14b844f2809fded6c09afef52",
+          },
+        "12/declaration/body/11/argument/1/1/expression/right/1": {
+          content: {
+            en: "Tender Parts ({tenderParts.length})",
+            pl: "Części przetargu ({tenderParts.length})",
+          },
+          hash: "c3fedcbc76eb469cff51935bf57af34e",
+        },
+        "12/declaration/body/11/argument/1/5/1/1/1/expression/0/body/1/1/1/3": {
+          content: {
+            en: "#<expression/>",
+            pl: "#<expression/>",
+          },
+          hash: "806722202f676d2de3d4f40e1c491ccb",
+        },
+        "12/declaration/body/11/argument/1/5/1/1/1/expression/0/body/1/3/1/1/1":
+          {
+            content: {
+              en: "Requirements:",
+              pl: "Wymagania:",
+            },
+            hash: "f27235edc5c81fa9d3422b1bb9bf98c0",
+          },
+        "12/declaration/body/11/argument/1/5/1/1/1/expression/0/body/1/3/1/3/1":
+          {
+            content: {
+              en: "Products:",
+              pl: "Produkty:",
+            },
+            hash: "5fde4eb14b844f2809fded6c09afef52",
           },
         "8/declaration/body/8/argument/1/1/1": {
           content: {
@@ -5512,6 +5731,48 @@ export default {
             },
             hash: "7dffb4129f834153e719b629dc7ecbbf",
           },
+        "6/declaration/body/4/argument/1/1/1/1/1/3/1/expression/right": {
+          content: {
+            en: "No matches",
+            pl: "Brak wyników",
+          },
+          hash: "de28a58a7b2d59c69c69eb914ae578bd",
+        },
+        "6/declaration/body/4/argument/1/1/1/1/1/3/3/expression/right": {
+          content: {
+            en: "Matching product",
+            pl: "Pasujący produkt",
+          },
+          hash: "254c96ad8a5dd95a90dedda21de9b355",
+        },
+        "6/declaration/body/4/argument/1/1/1/3/1/expression/right/1": {
+          content: {
+            en: "Specification",
+            pl: "Specyfikacja",
+          },
+          hash: "5f95ead578f1a9f4221b12436e81101c",
+        },
+        "6/declaration/body/4/argument/1/1/1/3/3/expression/right/1/1": {
+          content: {
+            en: "Closest match",
+            pl: "Najbliższe dopasowanie",
+          },
+          hash: "9c928bcbcd8decb0bbf9a8d70a4f603a",
+        },
+        "6/declaration/body/4/argument/1/1/1/3/5/expression/right/1/1": {
+          content: {
+            en: "Requirements to confirm",
+            pl: "Wymagania do potwierdzenia",
+          },
+          hash: "0a11a1a9f68f5869a302ce40ed55538e",
+        },
+        "6/declaration/body/4/argument/1/1/1/3/7/expression/right/1/1": {
+          content: {
+            en: "Alternative products",
+            pl: "Alternatywne produkty",
+          },
+          hash: "d191c14ac2830891cfcfccde92ff9114",
+        },
         "6/declaration/body/4/argument/1/1/expression/right/3/expression/right":
           {
             content: {
@@ -5832,7 +6093,35 @@ export default {
           },
           hash: "2af7ebedeb3062fff8d5dc58a5bd1474",
         },
+        "7/declaration/body/1/argument/1/3/1/1/3/expression/right": {
+          content: {
+            en: "No tenders",
+            pl: "Brak przetargów",
+          },
+          hash: "03966e3a00acfc99f27be4c6be523ac2",
+        },
+        "7/declaration/body/1/argument/1/3/1/3/expression/right": {
+          content: {
+            en: "No tenders",
+            pl: "Brak przetargów",
+          },
+          hash: "b6a5fd187939bf3caa40fac98de7d9f0",
+        },
         "7/declaration/body/1/argument/3/1/1/3/expression/right": {
+          content: {
+            en: "No tenders",
+            pl: "Brak przetargów",
+          },
+          hash: "b6a5fd187939bf3caa40fac98de7d9f0",
+        },
+        "7/declaration/body/2/argument/1/3/1/1/3/expression/right": {
+          content: {
+            en: "No tenders",
+            pl: "Brak przetargów",
+          },
+          hash: "03966e3a00acfc99f27be4c6be523ac2",
+        },
+        "7/declaration/body/2/argument/1/3/1/3/expression/right": {
           content: {
             en: "No tenders",
             pl: "Brak przetargów",
@@ -5846,12 +6135,26 @@ export default {
           },
           hash: "2af7ebedeb3062fff8d5dc58a5bd1474",
         },
+        "8/declaration/body/1/argument/1/1/3/1/3/expression/right": {
+          content: {
+            en: "No tenders",
+            pl: "Brak przetargów",
+          },
+          hash: "03966e3a00acfc99f27be4c6be523ac2",
+        },
         "8/declaration/body/1/argument/1/3/1/1/3/expression/right": {
           content: {
             en: "No tenders",
             pl: "Brak przetargów",
           },
           hash: "03966e3a00acfc99f27be4c6be523ac2",
+        },
+        "8/declaration/body/1/argument/1/3/1/3/expression/right": {
+          content: {
+            en: "No tenders",
+            pl: "Brak przetargów",
+          },
+          hash: "b6a5fd187939bf3caa40fac98de7d9f0",
         },
         "8/declaration/body/1/argument/3/1/1/3/expression/right": {
           content: {
@@ -5866,6 +6169,13 @@ export default {
             pl: "Brak przetargów",
           },
           hash: "5ae0802a8f54f4a2e1147a5fd3449a00",
+        },
+        "8/declaration/body/2/argument/1/3/1/1/3/expression/right": {
+          content: {
+            en: "No tenders",
+            pl: "Brak przetargów",
+          },
+          hash: "03966e3a00acfc99f27be4c6be523ac2",
         },
         "9/declaration/body/1/argument/3/1/3/expression/right": {
           content: {

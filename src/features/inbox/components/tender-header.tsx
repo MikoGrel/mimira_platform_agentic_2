@@ -120,6 +120,18 @@ function HeaderButtons({
               Approve this part
             </Button>
           )}
+
+          {!isCurrentPartApproved && (
+            <Button
+              size={size}
+              variant="flat"
+              onPress={() => onApply()}
+              color="primary"
+              data-lingo-override-pl="Aplikuj na cały przetarg"
+            >
+              Apply to full tender
+            </Button>
+          )}
         </>
       )}
 
@@ -133,6 +145,17 @@ function HeaderButtons({
           >
             Apply to selected parts
           </Button>
+
+          <Button
+            size={size}
+            variant="flat"
+            onPress={() => onApply()}
+            color="primary"
+            data-lingo-override-pl="Aplikuj na cały przetarg"
+          >
+            Apply to full tender
+          </Button>
+
           <Button size={size} variant="flat" onPress={onUnselectAll}>
             Unselect all
           </Button>
@@ -200,8 +223,8 @@ export function TenderHeader(props: TenderHeaderProps) {
       lineHeight: "20px",
     },
     expanded: {
-      fontSize: "20px",
-      lineHeight: "28px",
+      fontSize: "18px",
+      lineHeight: "24px",
     },
   };
 

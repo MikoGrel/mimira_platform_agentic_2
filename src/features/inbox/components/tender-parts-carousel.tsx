@@ -7,10 +7,14 @@ import { Button } from "$/components/ui/button";
 import { cn } from "$/lib/utils";
 import useEmblaCarousel from "embla-carousel-react";
 import { useCallback, useEffect, useState } from "react";
-import { AnimatePresence, motion } from "motion/react";
+import { motion } from "motion/react";
+
+type PartsWithProducts = Tables<"tender_parts"> & {
+  tender_products: Tables<"tender_products">[];
+};
 
 interface TenderPartsCarouselProps {
-  tenderParts: Tables<"tender_parts">[];
+  tenderParts: PartsWithProducts[];
   selectedPart: string | null;
   onPartSelect: (partId: string) => void;
   approvedPartIds: Set<string>;
@@ -37,6 +41,22 @@ function RequirementsStatus({
           (needs_confirmation_requirements?.length || 0) +
           (not_met_requirements?.length || 0)}
       </span>
+    </div>
+  );
+}
+
+function ProductStatus({
+  totalProducts,
+  matchedProducts,
+}: {
+  totalProducts: number;
+  matchedProducts: number;
+}) {
+  return (
+    <div className="gap-1 inline-flex ml-1">
+      <span className="text-success-600 font-medium">{matchedProducts}</span>
+      <span className="text-subtle-foreground">/</span>
+      <span className="text-warning-600 font-medium">{totalProducts}</span>
     </div>
   );
 }
@@ -80,6 +100,16 @@ export function TenderPartsCarousel({
 
   const isApproved = (part: Tables<"tender_parts">) =>
     approvedPartIds.has(part.part_uuid);
+
+  const totalProducts = (part: PartsWithProducts) => {
+    return part.tender_products.length || 0;
+  };
+
+  const matchedProducts = (part: PartsWithProducts) => {
+    return part.tender_products?.filter((product) =>
+      Boolean(product.closest_match)
+    ).length;
+  };
 
   if (!tenderParts?.length) return null;
 
@@ -142,31 +172,6 @@ export function TenderPartsCarousel({
         <div className="min-w-0">
           <div className="overflow-hidden" ref={emblaRef}>
             <div className="flex gap-3 py-2 pl-0.5 pr-0.5">
-              <div className="flex-[0_0_200px]">
-                <Card
-                  isPressable
-                  isHoverable
-                  shadow="sm"
-                  className={cn(
-                    "cursor-pointer transition-all duration-200 h-full",
-                    selectedPart === "overview" ||
-                      (!selectedPart && "ring ring-primary/70")
-                  )}
-                  onPress={() => onPartSelect("overview")}
-                >
-                  <CardHeader className="pb-1 px-3 pt-3">
-                    <div className="flex items-center justify-between w-full">
-                      <h3 className="font-medium text-sm">Overview</h3>
-                    </div>
-                  </CardHeader>
-                  <CardBody className="pt-0 px-3 pb-3">
-                    <p className="text-xs text-muted-foreground">
-                      General information about this tender
-                    </p>
-                  </CardBody>
-                </Card>
-              </div>
-
               {tenderParts.map((part, index) => (
                 <div key={part.part_uuid} className="flex-[0_0_240px]">
                   <Card
@@ -174,39 +179,17 @@ export function TenderPartsCarousel({
                     isHoverable
                     shadow="sm"
                     className={cn(
-                      "cursor-pointer transition-all duration-200 h-full",
+                      "cursor-pointer transition-all duration-200 h-full w-full",
                       selectedPart === part.part_uuid && "ring ring-primary/70"
                     )}
                     onPress={() => onPartSelect(part.part_uuid)}
                   >
                     <CardHeader className="pb-1 px-3 pt-3 flex flex-col gap-1 text-xs">
-                      <div className="flex items-center justify-between w-full">
-                        <div className="flex items-center gap-1">
-                          {approvedPartIds.has(part.part_uuid) && (
-                            <Check className="w-3 h-3 text-primary" />
-                          )}
-                          <h3
-                            className={cn("text-muted-foreground", {
-                              "text-primary": isApproved(part),
-                            })}
-                          >
-                            Part #{index + 1}
-                          </h3>
-                        </div>
-                        <AnimatePresence>
-                          {isCollapsed && (
-                            <motion.div
-                              initial={{ opacity: 0, y: 10 }}
-                              animate={{ opacity: 1, y: 0 }}
-                              exit={{ opacity: 0, y: 10 }}
-                              transition={{ duration: 0.2 }}
-                            >
-                              <RequirementsStatus {...part} />
-                            </motion.div>
-                          )}
-                        </AnimatePresence>
-                      </div>
-                      <h4 className="text-left line-clamp-2 text-font-base font-semibold w-full">
+                      <h4 className="text-left line-clamp-2 text-font-base w-full">
+                        {isApproved(part) && (
+                          <Check className="w-3 h-3 text-primary inline-block mr-1" />
+                        )}
+                        <span className="font-semibold">#{index + 1}</span>{" "}
                         {part.part_name?.trim()}
                       </h4>
                     </CardHeader>
@@ -224,15 +207,13 @@ export function TenderPartsCarousel({
                           <span className="inline">Requirements:</span>
                           <RequirementsStatus {...part} />
                         </div>
-
-                        {part.wadium_llm && (
-                          <div className="text-xs w-full">
-                            <span className="inline">Wadium: </span>
-                            <span className="font-medium text-left">
-                              {part.wadium_llm}
-                            </span>
-                          </div>
-                        )}
+                        <div className="text-xs w-full">
+                          <span className="inline">Products:</span>
+                          <ProductStatus
+                            matchedProducts={matchedProducts(part)}
+                            totalProducts={totalProducts(part)}
+                          />
+                        </div>
                       </motion.div>
                     </CardBody>
                   </Card>
