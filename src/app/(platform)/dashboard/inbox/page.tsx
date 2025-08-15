@@ -1,6 +1,5 @@
 "use client";
 
-import { Tables } from "$/types/supabase";
 import { Button, Card, Chip, Input, Skeleton } from "@heroui/react";
 import { Archive, CalendarClock, SlidersHorizontal } from "lucide-react";
 import { parseAsString, useQueryState } from "nuqs";
@@ -15,7 +14,9 @@ import { useIndividualTender } from "$/features/tenders/api";
 import dynamic from "next/dynamic";
 import { useDateFormat } from "$/features/i18n/hooks/use-date-format";
 import { useMarkAsSeen } from "$/features/inbox/api/use-mark-as-seen";
-import useTenderInboxQuery from "$/features/inbox/api/use-tender-inbox-query";
+import useTenderInboxQuery, {
+  InboxTender,
+} from "$/features/inbox/api/use-tender-inbox-query";
 
 const TenderPreview = dynamic(
   () =>
@@ -39,6 +40,7 @@ export default function InboxPage() {
     parseAsString.withDefault("")
   );
   const [selectedId, setSelectedId] = useQueryState("id", parseAsString);
+  const [selectedPart, setSelectedPart] = useQueryState("part", parseAsString);
 
   const {
     tenders,
@@ -71,9 +73,16 @@ export default function InboxPage() {
     pageSize: PAGE_SIZE,
   });
 
-  function handleTenderSelect(tender: Tables<"tenders">) {
+  function handleTenderSelect(tender: InboxTender) {
     updateSeenAt(tender.id);
     setSelectedId(tender.id);
+
+    if (tender.tender_parts.length > 0) {
+      setSelectedPart(tender.tender_parts[0].part_uuid);
+    } else {
+      setSelectedPart(null);
+    }
+
     markAsSeen(tender.id);
   }
 
@@ -209,7 +218,19 @@ export default function InboxPage() {
           </div>
         </section>
       )}
-      {selectedTender && <TenderPreview tender={selectedTender} />}
+      {selectedTender && (
+        <TenderPreview
+          tender={selectedTender}
+          selectedPart={selectedPart}
+          setSelectedPart={setSelectedPart}
+          showNextTender={() => {
+            const idx = tenders.findIndex((t) => t.id === selectedId);
+            if (idx < tenders.length - 1) {
+              setSelectedId(tenders[idx + 1].id);
+            }
+          }}
+        />
+      )}
     </main>
   );
 }

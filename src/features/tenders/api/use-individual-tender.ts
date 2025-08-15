@@ -34,6 +34,11 @@ export function useIndividualTender({
             alternative_products,
             closest_match
            ),
+          tender_requirements (
+            requirement_text,
+            reason,
+            status
+          ),
           tender_parts (
            part_uuid,
            part_id,
@@ -56,7 +61,12 @@ export function useIndividualTender({
             requirements_to_confirm,
             alternative_products,
             closest_match
-           )
+           ),
+           tender_requirements (
+            requirement_text,
+            reason,
+            status
+          )
           )`
         )
         .eq("id", tenderId)

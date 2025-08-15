@@ -11,10 +11,10 @@ import { CalendarDate } from "@heroui/react";
 import { getLocalTimeZone } from "@internationalized/date";
 import { format } from "date-fns";
 import { Voivodeship } from "$/features/i18n/config/poland-config";
-import { SortDirection } from "../hooks/use-filter-form";
+import { SortDirection } from "$/features/inbox/hooks/use-filter-form";
 import { Tables } from "$/types/supabase";
 
-interface UseTenderInboxQueryParams {
+interface UseTendersListParams {
   pageSize?: number;
   search?: string;
   filterQuery?: {
@@ -28,14 +28,14 @@ interface UseTenderInboxQueryParams {
   };
 }
 
-export default function useTenderInboxQuery({
-  pageSize,
+export function useTendersList({
+  pageSize = 20,
   search,
   filterQuery,
-}: UseTenderInboxQueryParams) {
+}: UseTendersListParams = {}) {
   const { user } = useCurrentUser();
   const queryClient = useQueryClient();
-  const filters: UseTenderInboxQueryParams["filterQuery"] = filterQuery || {
+  const filters: UseTendersListParams["filterQuery"] = filterQuery || {
     offersDeadlineFrom: null,
     offersDeadlineTo: null,
     publishedAtFrom: null,
@@ -46,11 +46,11 @@ export default function useTenderInboxQuery({
   };
 
   const queryKey = [
-    "tenders",
+    "tenders-list",
     search,
     [
       filters.publishedAtFrom?.toString(),
-      filters.publishedAtTo?.toString,
+      filters.publishedAtTo?.toString(),
       filters.offersDeadlineFrom?.toString(),
       filters.offersDeadlineTo?.toString(),
       filters.showRejected,
@@ -75,20 +75,6 @@ export default function useTenderInboxQuery({
         .select(
           `
           *,
-          tender_products (
-            part_uuid,
-            product_req_name,
-            product_req_quantity,
-            product_req_spec,
-            requirements_to_confirm,
-            alternative_products,
-            closest_match
-          ),
-          tender_requirements (
-            requirement_text,
-            reason,
-            status
-          ),
           tender_parts (
            part_uuid,
            part_id,
@@ -103,20 +89,7 @@ export default function useTenderInboxQuery({
            not_met_requirements,
            status,
            can_participate,
-          tender_products (
-            part_uuid,
-            product_req_name,
-            product_req_quantity,
-            product_req_spec,
-            requirements_to_confirm,
-            alternative_products,
-            closest_match
-          ),
-          tender_requirements (
-            requirement_text,
-            reason,
-            status
-          )
+           created_at
           )
           `,
           { count: "exact" }
@@ -124,7 +97,7 @@ export default function useTenderInboxQuery({
         .eq("company", user!.profile!.customer!);
 
       if (filters.showRejected === false) {
-        query = query.eq("status", "default");
+        query = query.neq("status", "rejected");
       } else if (filters.showRejected === true) {
         query = query.eq("status", "rejected");
       }
@@ -197,9 +170,9 @@ export default function useTenderInboxQuery({
     enabled: !!user,
   });
 
-  function updateSeenAt(
+  function updateTenderStatus(
     id: string,
-    value: string | null = new Date().toISOString()
+    status: Tables<"tenders">["status"]
   ) {
     queryClient.setQueryData(
       queryKey,
@@ -219,7 +192,7 @@ export default function useTenderInboxQuery({
           pages: oldData.pages.map((page) => ({
             ...page,
             data: page.data.map((tender) =>
-              tender.id === id ? { ...tender, seen_at: value } : tender
+              tender.id === id ? { ...tender, status } : tender
             ),
           })),
         };
@@ -240,14 +213,10 @@ export default function useTenderInboxQuery({
     fetchNextPage,
     hasNextPage,
     isFetchingNextPage,
-    updateSeenAt,
+    updateTenderStatus,
   };
 }
 
-export type InboxTender = Awaited<
-  ReturnType<typeof useTenderInboxQuery>
+export type TenderWithParts = Awaited<
+  ReturnType<typeof useTendersList>
 >["tenders"][number];
-
-export type InboxTenderPart = InboxTender["tender_parts"][number];
-
-export type InboxTenderProduct = InboxTenderPart["tender_products"][number];

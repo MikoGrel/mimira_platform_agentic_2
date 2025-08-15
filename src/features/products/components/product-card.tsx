@@ -1,6 +1,5 @@
 "use client";
 
-import { Tables } from "$/types/supabase";
 import { Card, CardBody, Chip } from "@heroui/react";
 import { Package, Tag } from "lucide-react";
 import { cn } from "$/lib/utils";
@@ -10,9 +9,10 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "$/components/ui/accordion";
+import { InboxTenderProduct } from "$/features/inbox/api/use-tender-inbox-query";
 
 interface ProductCardProps {
-  product: Tables<"tender_products">;
+  product: InboxTenderProduct;
   className?: string;
 }
 

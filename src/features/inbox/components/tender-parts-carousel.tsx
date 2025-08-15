@@ -1,6 +1,5 @@
 "use client";
 
-import { Tables } from "$/types/supabase";
 import { Card, CardBody, CardHeader } from "@heroui/react";
 import { Check, ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "$/components/ui/button";
@@ -8,10 +7,10 @@ import { cn } from "$/lib/utils";
 import useEmblaCarousel from "embla-carousel-react";
 import { useCallback, useEffect, useState } from "react";
 import { motion } from "motion/react";
-import { PartsWithProducts } from "$/features/tenders/types/parts";
+import { InboxTenderPart } from "../api/use-tender-inbox-query";
 
 interface TenderPartsCarouselProps {
-  tenderParts: PartsWithProducts[];
+  tenderParts: InboxTenderPart[];
   selectedPart: string | null;
   onPartSelect: (partId: string) => void;
   approvedPartIds: Set<string>;
@@ -23,9 +22,9 @@ function RequirementsStatus({
   needs_confirmation_requirements,
   not_met_requirements,
 }: {
-  met_requirements: Tables<"tender_parts">["met_requirements"];
-  needs_confirmation_requirements: Tables<"tender_parts">["needs_confirmation_requirements"];
-  not_met_requirements: Tables<"tender_parts">["not_met_requirements"];
+  met_requirements: InboxTenderPart["met_requirements"];
+  needs_confirmation_requirements: InboxTenderPart["needs_confirmation_requirements"];
+  not_met_requirements: InboxTenderPart["not_met_requirements"];
 }) {
   return (
     <div className="gap-1 inline-flex ml-1">
@@ -95,14 +94,14 @@ export function TenderPartsCarousel({
     emblaApi.on("reInit", onSelect);
   }, [emblaApi, onSelect]);
 
-  const isApproved = (part: Tables<"tender_parts">) =>
+  const isApproved = (part: InboxTenderPart) =>
     approvedPartIds.has(part.part_uuid);
 
-  const totalProducts = (part: PartsWithProducts) => {
+  const totalProducts = (part: InboxTenderPart) => {
     return part.tender_products.length || 0;
   };
 
-  const matchedProducts = (part: PartsWithProducts) => {
+  const matchedProducts = (part: InboxTenderPart) => {
     return part.tender_products?.filter((product) =>
       Boolean(product.closest_match)
     ).length;

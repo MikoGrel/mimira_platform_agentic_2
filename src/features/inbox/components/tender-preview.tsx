@@ -1,8 +1,6 @@
 "use client";
 
-import { Tables } from "$/types/supabase";
-import { useEffect, useMemo, useRef, useState } from "react";
-import { parseAsString, useQueryState } from "nuqs";
+import { useMemo, useRef, useState } from "react";
 import { useScrollTrigger } from "$/hooks/use-scroll-trigger";
 import { AdditionalInfoSection } from "./additional-info-section";
 import { DescriptionSection } from "./description-section";
@@ -14,7 +12,10 @@ import { OverviewSection } from "./overview-section";
 import { ProductsSection } from "./products-section";
 import { isEmpty } from "lodash";
 import { useRejectTender } from "../api/use-reject-tender";
-import { PartsWithProducts } from "$/features/tenders/types/parts";
+import { getRequirements } from "../utils/compat";
+import { InboxTender, InboxTenderPart } from "../api/use-tender-inbox-query";
+import { useUpdateTenderStatus } from "$/features/tenders/api/use-update-tender-status";
+import { toast } from "sonner";
 
 const TenderPartsCarousel = dynamic(
   () =>
@@ -43,41 +44,39 @@ const ReviewCriteriaSection = dynamic(
 );
 
 interface TenderPreviewProps {
-  tender: Tables<"tenders"> & { tender_parts: PartsWithProducts[] };
+  tender: InboxTender;
+  showNextTender?: () => void;
+  selectedPart: string | null;
+  setSelectedPart: (part: string | null) => void;
 }
 
-export type TenderType = Tables<"tenders"> & {
-  tender_parts: Tables<"tender_parts">[];
-};
-export type TenderPartType = Tables<"tender_parts"> & {
-  tender_products?: Tables<"tender_products">[];
-};
-
-export function TenderPreview({ tender }: TenderPreviewProps) {
+export function TenderPreview({
+  tender,
+  selectedPart,
+  setSelectedPart,
+  showNextTender,
+}: TenderPreviewProps) {
   const [commentsOpened, setCommentsOpened] = useState(false);
-  const [selectedPart, setSelectedPart] = useQueryState("part", parseAsString);
   const [approvedPartIds, setApprovedPartIds] = useState<Set<string>>(
     new Set()
   );
   const { mutate: rejectTender } = useRejectTender();
+  const { mutate: updateTenderStatus } = useUpdateTenderStatus();
 
   const isPartSelected = !!selectedPart && selectedPart !== "overview";
   const hasParts = tender.tender_parts.length > 0;
 
   function isTenderPart(
-    x: TenderType | TenderPartType | null | undefined
-  ): x is TenderPartType {
+    x: InboxTender | InboxTenderPart | null | undefined
+  ): x is InboxTenderPart {
     return x !== null && x !== undefined && "part_uuid" in x;
   }
 
-  const resolvedItem: TenderType | TenderPartType | undefined | null =
-    useMemo(() => {
-      if (!selectedPart) return tender;
+  const resolvedItem = useMemo(() => {
+    if (!selectedPart) return tender;
 
-      return tender?.tender_parts.find(
-        (part) => part.part_uuid === selectedPart
-      );
-    }, [selectedPart, tender]);
+    return tender?.tender_parts.find((part) => part.part_uuid === selectedPart);
+  }, [selectedPart, tender]);
 
   const scrollRef = useRef<HTMLDivElement>(null);
   const isHeaderCollapsed = useScrollTrigger({
@@ -85,27 +84,28 @@ export function TenderPreview({ tender }: TenderPreviewProps) {
     containerRef: scrollRef,
   });
 
-  useEffect(() => {
-    if (selectedPart) return;
-
-    setApprovedPartIds(new Set());
-    // Select first part by default if tender has parts
-    if (tender?.tender_parts?.length > 0) {
-      setSelectedPart(tender.tender_parts[0].part_uuid);
-    } else {
-      setSelectedPart(null);
-    }
-  }, [tender?.id, setSelectedPart, tender?.tender_parts, selectedPart]);
-
   function handleApprovePart() {
     if (!isPartSelected || !selectedPart) return;
     setApprovedPartIds((prev) => new Set(prev).add(selectedPart));
   }
 
   function handleApply(partIds?: string[]) {
-    // Placeholder for finalization action
-    // Could trigger navigation, API call, or toast in future iteration
-    console.log("apply", partIds);
+    console.log("applied?");
+
+    updateTenderStatus({
+      status: "analysis",
+      tenderId: tender.id,
+      partIds,
+    });
+
+    toast.success(
+      <span>
+        Tender was moved to analysis successfully, go to active tenders to see
+        it
+      </span>
+    );
+
+    showNextTender?.();
   }
 
   function handleUnselectAll() {
@@ -123,12 +123,17 @@ export function TenderPreview({ tender }: TenderPreviewProps) {
 
   function handleReject() {
     rejectTender(tender.id);
+
+    toast.success(
+      <span>Tender was rejected successfully, go to archive tab to see it</span>
+    );
+
+    showNextTender?.();
   }
 
   const tenderSections = useMemo(() => {
     return [
       { id: "overview", label: <span>Overview</span> },
-      { id: "products", label: <span>Products</span> },
       { id: "requirements", label: <span>Requirements</span> },
       { id: "review-criteria", label: <span>Review Criteria</span> },
       { id: "description", label: <span>Description</span> },
@@ -201,16 +206,15 @@ export function TenderPreview({ tender }: TenderPreviewProps) {
                     <ProductsSection products={resolvedItem.tender_products} />
                   )}
                 <RequirementsSection
-                  met_requirements={
-                    (resolvedItem?.met_requirements || []) as string[]
-                  }
-                  needs_confirmation_requirements={
-                    (resolvedItem?.needs_confirmation_requirements ||
-                      []) as string[]
-                  }
-                  not_met_requirements={
-                    (resolvedItem?.not_met_requirements || []) as string[]
-                  }
+                  met_requirements={getRequirements("met", resolvedItem)}
+                  needs_confirmation_requirements={getRequirements(
+                    "needs_confirmation",
+                    resolvedItem
+                  )}
+                  not_met_requirements={getRequirements(
+                    "not_met",
+                    resolvedItem
+                  )}
                 />
                 {!isTenderPart(resolvedItem) && (
                   <ReviewCriteriaSection

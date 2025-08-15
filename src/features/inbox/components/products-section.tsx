@@ -1,23 +1,20 @@
 "use client";
 
-import { Tables } from "$/types/supabase";
 import { ProductCard } from "$/features/products/components/product-card";
 import { Section } from "./section";
 import { SectionContent } from "./section-content";
 import { SectionTitle } from "./section-title";
 import { Masonry } from "$/components/ui/masonry";
+import { InboxTenderProduct } from "../api/use-tender-inbox-query";
 
 export interface ProductsSectionProps {
-  products: Tables<"tender_products">[];
+  products: InboxTenderProduct[];
 }
 
 export function ProductsSection({ products }: ProductsSectionProps) {
   if (!products || products.length === 0) return null;
 
-  function matchingFirst(
-    a: Tables<"tender_products">,
-    b: Tables<"tender_products">
-  ) {
+  function matchingFirst(a: InboxTenderProduct, b: InboxTenderProduct) {
     if (a.closest_match && !b.closest_match) return -1;
     if (!a.closest_match && b.closest_match) return 1;
 

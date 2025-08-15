@@ -5,16 +5,18 @@ import { Controller } from "react-hook-form";
 import { PolishVoivodeships } from "$/features/i18n/config/poland-config";
 import { sortingOptions, useFilterForm } from "../hooks/use-filter-form";
 import { FilterFormType } from "..";
+import { cn } from "$/lib/utils";
 
 interface FilterFormProps {
   onFiltered?: (filters: FilterFormType) => void;
+  className?: string;
 }
 
-export function FilterForm({ onFiltered }: FilterFormProps) {
+export function FilterForm({ onFiltered, className }: FilterFormProps) {
   const { control, onFilter } = useFilterForm({ onFiltered });
 
   return (
-    <form onSubmit={onFilter} className="flex flex-col gap-4">
+    <form onSubmit={onFilter} className={cn("flex flex-col gap-4", className)}>
       <Controller
         control={control}
         name="publishedAt"

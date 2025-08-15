@@ -7,13 +7,54 @@ export type Json =
   | Json[]
 
 export type Database = {
-  // Allows to automatically instanciate createClient with right options
+  // Allows to automatically instantiate createClient with right options
   // instead of createClient<Database, { PostgrestVersion: 'XX' }>(URL, KEY)
   __InternalSupabase: {
     PostgrestVersion: "12.2.3 (519615d)"
   }
   public: {
     Tables: {
+      catalogue_products: {
+        Row: {
+          company_id: string | null
+          created_at: string | null
+          description: string | null
+          id: string
+          legacy_id: number | null
+          name: string | null
+          specifications: string | null
+          updated_at: string | null
+        }
+        Insert: {
+          company_id?: string | null
+          created_at?: string | null
+          description?: string | null
+          id: string
+          legacy_id?: number | null
+          name?: string | null
+          specifications?: string | null
+          updated_at?: string | null
+        }
+        Update: {
+          company_id?: string | null
+          created_at?: string | null
+          description?: string | null
+          id?: string
+          legacy_id?: number | null
+          name?: string | null
+          specifications?: string | null
+          updated_at?: string | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "catalogue_products_company_id_fkey"
+            columns: ["company_id"]
+            isOneToOne: false
+            referencedRelation: "companies_catalogues"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
       comments: {
         Row: {
           created_at: string | null
@@ -43,6 +84,47 @@ export type Database = {
             isOneToOne: false
             referencedRelation: "tenders"
             referencedColumns: ["id"]
+          },
+        ]
+      }
+      companies_catalogues: {
+        Row: {
+          created_at: string | null
+          custom_rules: string | null
+          customer_email: string | null
+          general_information: Json | null
+          id: string
+          name: string | null
+          type: string | null
+          updated_at: string | null
+        }
+        Insert: {
+          created_at?: string | null
+          custom_rules?: string | null
+          customer_email?: string | null
+          general_information?: Json | null
+          id: string
+          name?: string | null
+          type?: string | null
+          updated_at?: string | null
+        }
+        Update: {
+          created_at?: string | null
+          custom_rules?: string | null
+          customer_email?: string | null
+          general_information?: Json | null
+          id?: string
+          name?: string | null
+          type?: string | null
+          updated_at?: string | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "companies_catalogues_customer_email_fkey"
+            columns: ["customer_email"]
+            isOneToOne: false
+            referencedRelation: "customers"
+            referencedColumns: ["company_email"]
           },
         ]
       }
@@ -176,6 +258,38 @@ export type Database = {
           },
         ]
       }
+      product_catalogues_categories: {
+        Row: {
+          company_id: string | null
+          created_at: string | null
+          description: string | null
+          id: string
+          name: string | null
+        }
+        Insert: {
+          company_id?: string | null
+          created_at?: string | null
+          description?: string | null
+          id: string
+          name?: string | null
+        }
+        Update: {
+          company_id?: string | null
+          created_at?: string | null
+          description?: string | null
+          id?: string
+          name?: string | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "product_catalogues_categories_company_id_fkey"
+            columns: ["company_id"]
+            isOneToOne: false
+            referencedRelation: "companies_catalogues"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
       product_catalogues_customers: {
         Row: {
           created_at: string
@@ -190,6 +304,71 @@ export type Database = {
           id?: number
         }
         Relationships: []
+      }
+      product_catalogues_subcategories: {
+        Row: {
+          category_id: string | null
+          created_at: string | null
+          id: string
+          name: string | null
+        }
+        Insert: {
+          category_id?: string | null
+          created_at?: string | null
+          id: string
+          name?: string | null
+        }
+        Update: {
+          category_id?: string | null
+          created_at?: string | null
+          id?: string
+          name?: string | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "product_catalogues_subcategories_category_id_fkey"
+            columns: ["category_id"]
+            isOneToOne: false
+            referencedRelation: "product_catalogues_categories"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      product_subcategory_mappings: {
+        Row: {
+          created_at: string | null
+          id: string
+          product_id: string | null
+          subcategory_id: string | null
+        }
+        Insert: {
+          created_at?: string | null
+          id: string
+          product_id?: string | null
+          subcategory_id?: string | null
+        }
+        Update: {
+          created_at?: string | null
+          id?: string
+          product_id?: string | null
+          subcategory_id?: string | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "product_subcategory_mappings_product_id_fkey"
+            columns: ["product_id"]
+            isOneToOne: false
+            referencedRelation: "catalogue_products"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "product_subcategory_mappings_subcategory_id_fkey"
+            columns: ["subcategory_id"]
+            isOneToOne: false
+            referencedRelation: "product_catalogues_subcategories"
+            referencedColumns: ["id"]
+          },
+        ]
       }
       profiles: {
         Row: {
@@ -226,6 +405,7 @@ export type Database = {
       tender_parts: {
         Row: {
           can_participate: boolean | null
+          created_at: string
           description_part_long_llm: string | null
           met_requirements: Json[] | null
           needs_confirmation_requirements: Json[] | null
@@ -241,6 +421,7 @@ export type Database = {
         }
         Insert: {
           can_participate?: boolean | null
+          created_at?: string
           description_part_long_llm?: string | null
           met_requirements?: Json[] | null
           needs_confirmation_requirements?: Json[] | null
@@ -256,6 +437,7 @@ export type Database = {
         }
         Update: {
           can_participate?: boolean | null
+          created_at?: string
           description_part_long_llm?: string | null
           met_requirements?: Json[] | null
           needs_confirmation_requirements?: Json[] | null
@@ -283,6 +465,8 @@ export type Database = {
         Row: {
           alternative_products: string | null
           closest_match: string | null
+          created_at: string
+          id: number
           part_uuid: string
           product_req_name: string | null
           product_req_quantity: string | null
@@ -293,6 +477,8 @@ export type Database = {
         Insert: {
           alternative_products?: string | null
           closest_match?: string | null
+          created_at?: string
+          id?: number
           part_uuid: string
           product_req_name?: string | null
           product_req_quantity?: string | null
@@ -303,6 +489,8 @@ export type Database = {
         Update: {
           alternative_products?: string | null
           closest_match?: string | null
+          created_at?: string
+          id?: number
           part_uuid?: string
           product_req_name?: string | null
           product_req_quantity?: string | null
@@ -357,6 +545,13 @@ export type Database = {
         }
         Relationships: [
           {
+            foreignKeyName: "tender_requirements_part_uuid_fkey"
+            columns: ["part_uuid"]
+            isOneToOne: false
+            referencedRelation: "tender_parts"
+            referencedColumns: ["part_uuid"]
+          },
+          {
             foreignKeyName: "tender_requirements_tender_id_fkey"
             columns: ["tender_id"]
             isOneToOne: false
@@ -371,6 +566,7 @@ export type Database = {
           can_participate: boolean | null
           company: string
           contract_penalties_llm: string | null
+          created_at: string | null
           deposit_llm: string | null
           description_long_llm: string | null
           has_parts: boolean | null
@@ -398,6 +594,7 @@ export type Database = {
           can_participate?: boolean | null
           company: string
           contract_penalties_llm?: string | null
+          created_at?: string | null
           deposit_llm?: string | null
           description_long_llm?: string | null
           has_parts?: boolean | null
@@ -425,6 +622,7 @@ export type Database = {
           can_participate?: boolean | null
           company?: string
           contract_penalties_llm?: string | null
+          created_at?: string | null
           deposit_llm?: string | null
           description_long_llm?: string | null
           has_parts?: boolean | null
@@ -454,6 +652,10 @@ export type Database = {
       [_ in never]: never
     }
     Functions: {
+      fill_tender_id_for_products: {
+        Args: Record<PropertyKey, never>
+        Returns: undefined
+      }
       generate_uuid: {
         Args: Record<PropertyKey, never>
         Returns: string

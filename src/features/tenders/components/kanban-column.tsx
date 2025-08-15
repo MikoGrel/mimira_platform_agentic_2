@@ -18,6 +18,7 @@ interface KanbanColumnProps {
   tenders: TenderWithParts[];
   icon: LucideIcon;
   iconColor: string;
+  isLoading?: boolean;
 }
 
 function InternalKanbanColumn({
@@ -26,6 +27,7 @@ function InternalKanbanColumn({
   tenders,
   icon: Icon,
   iconColor,
+  isLoading = false,
 }: KanbanColumnProps) {
   const { setNodeRef, isOver, active } = useDroppable({
     id,
@@ -55,16 +57,24 @@ function InternalKanbanColumn({
             </div>
           </CardHeader>
           <CardBody
-            className={`pt-1 ${active ? "overflow-hidden" : "overflow-y-auto"}`}
+            className={`pt-1 ${active ? "overflow-hidden" : "overflow-y-auto"} max-h-[calc(100vh-200px)]`}
           >
-            <div className="min-h-[400px] space-y-3">
-              {tenders.map((tender) => (
-                <TenderCard key={tender.id} tender={tender} />
-              ))}
-              {tenders.length === 0 && (
+            <div className="space-y-3">
+              {isLoading ? (
                 <div className="flex items-center justify-center h-32 text-muted-foreground text-sm">
-                  No tenders
+                  <span>Loading...</span>
                 </div>
+              ) : (
+                <>
+                  {tenders.map((tender) => (
+                    <TenderCard key={tender.id} tender={tender} />
+                  ))}
+                  {tenders.length === 0 && (
+                    <div className="flex items-center justify-center h-32 text-muted-foreground text-sm">
+                      <span>No tenders</span>
+                    </div>
+                  )}
+                </>
               )}
             </div>
           </CardBody>
@@ -81,6 +91,7 @@ export const KanbanColumn = React.memo(InternalKanbanColumn, (prev, next) => {
   return (
     prev.id === next.id &&
     prev.title === next.title &&
+    prev.isLoading === next.isLoading &&
     prevTenders === nextTenders
   );
 });

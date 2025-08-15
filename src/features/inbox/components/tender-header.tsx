@@ -19,12 +19,12 @@ import { motion, AnimatePresence } from "motion/react";
 import { useEffect, useState } from "react";
 import { Tables } from "$/types/supabase";
 import { useCommentsCount } from "$/features/tenders/api/use-comments-count";
-import { TenderPartType } from "./tender-preview";
 import { useRestoreRejectedTender } from "../api/use-restore-rejected-tender";
 import { truncate } from "lodash";
 import { useDateFormat } from "$/features/i18n/hooks/use-date-format";
 import { useUnseen } from "../api/use-unseen";
 import { toast } from "sonner";
+import { InboxTenderPart } from "../api/use-tender-inbox-query";
 
 interface TenderHeaderProps {
   tender: NonNullable<Tables<"tenders">>;
@@ -33,7 +33,7 @@ interface TenderHeaderProps {
   onApprovePart?: () => void;
   approvedPartIds: Set<string>;
   currentPart?: {
-    item: TenderPartType | null;
+    item: InboxTenderPart | null;
     isApproved: boolean;
   };
   onUnselectAll?: () => void;
@@ -47,7 +47,7 @@ interface HeaderButtonsProps {
   tender: NonNullable<Tables<"tenders">>;
   approvedPartIds: Set<string>;
   currentPart?: {
-    item: TenderPartType | null;
+    item: InboxTenderPart | null;
     isApproved: boolean;
   };
   onApprovePart?: () => void;
@@ -100,10 +100,15 @@ function HeaderButtons({
     <div className="flex gap-2">
       {hasNoSelection && (
         <>
-          <Button size={size} color="primary" data-lingo-override-pl="Aplikuj">
+          <Button
+            size={size}
+            onPress={() => onApply()}
+            color="primary"
+            data-lingo-override-pl="Aplikuj"
+          >
             Apply
           </Button>
-          <Button size={size} variant="flat" onPress={onReject}>
+          <Button onPress={() => onReject?.()} size={size} variant="flat">
             Reject
           </Button>
         </>
@@ -121,7 +126,12 @@ function HeaderButtons({
               Unselect
             </Button>
           ) : (
-            <Button size={size} variant="flat" onPress={onApprovePart}>
+            <Button
+              size={size}
+              color="primary"
+              variant="flat"
+              onPress={onApprovePart}
+            >
               Approve this part
             </Button>
           )}
@@ -303,6 +313,7 @@ export function TenderHeader(props: TenderHeaderProps) {
             restoreTender={restoreTender}
             size="sm"
             onUnseen={onUnseen}
+            onApply={props.onApply}
           />
         </motion.div>
       )}

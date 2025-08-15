@@ -1,27 +1,36 @@
 "use client";
 
 import { useState } from "react";
-import { Input, Button } from "@heroui/react";
+import {
+  Input,
+  Button,
+  Popover,
+  PopoverTrigger,
+  PopoverContent,
+} from "@heroui/react";
 import { Search, SlidersHorizontal } from "lucide-react";
 import { TenderKanban } from "$/features/tenders/components";
+import { useFilterForm } from "$/features/inbox/hooks/use-filter-form";
+import { FilterForm, FilterChips } from "$/features/inbox/components";
 
 export default function TendersPage() {
   const [searchQuery, setSearchQuery] = useState("");
+  const [isFiltersOpen, setIsFiltersOpen] = useState(false);
+
+  const { filterQuery, activeFilters } = useFilterForm();
 
   const handleSearch = (value: string) => {
     setSearchQuery(value);
-    // TODO: Implement search functionality
   };
 
-  const handleFilter = () => {
-    // TODO: Implement filter modal/dropdown
-    console.log("Filter clicked");
+  const handleFilterApplied = () => {
+    setIsFiltersOpen(false);
   };
 
   return (
     <div className="h-full flex flex-col">
       <div className="w-full border-b border-border bg-background px-6 py-4">
-        <div className="flex items-center justify-start gap-2">
+        <div className="flex items-center justify-start gap-2 mb-4">
           <Input
             value={searchQuery}
             onValueChange={handleSearch}
@@ -31,18 +40,38 @@ export default function TendersPage() {
             size="sm"
             variant="bordered"
           />
-          <Button
-            onPress={handleFilter}
-            variant="bordered"
-            size="sm"
-            startContent={<SlidersHorizontal className="w-4 h-4" />}
+
+          <Popover
+            isOpen={isFiltersOpen}
+            onOpenChange={setIsFiltersOpen}
+            placement="bottom-end"
+            showArrow
           >
-            Filter
-          </Button>
+            <PopoverTrigger>
+              <Button
+                variant={activeFilters.length > 0 ? "solid" : "bordered"}
+                size="sm"
+                startContent={<SlidersHorizontal className="w-4 h-4" />}
+              >
+                <span>Filter</span>
+                {activeFilters.length > 0 && (
+                  <span className="ml-1 bg-white text-primary rounded-full px-2 py-0.5 text-xs">
+                    {activeFilters.length}
+                  </span>
+                )}
+              </Button>
+            </PopoverTrigger>
+            <PopoverContent className="p-4">
+              <FilterForm onFiltered={handleFilterApplied} className="w-96" />
+            </PopoverContent>
+          </Popover>
         </div>
+
+        <FilterChips />
       </div>
+
       <div className="flex-1 p-6">
-        <TenderKanban />
+        <TenderKanban searchQuery={searchQuery} filterQuery={filterQuery} />
       </div>
     </div>
   );
