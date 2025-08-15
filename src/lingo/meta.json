@@ -6803,6 +6803,62 @@
           "overrides": {},
           "content": "Descending"
         },
+        "14/declaration/body/3/0/init/0/body/1/consequent/0/expression/0/1/value": {
+          "type": "element",
+          "hash": "7be26b49e50e1024e4f87ef8fdd26b69",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Deadline From"
+        },
+        "14/declaration/body/3/0/init/0/body/2/consequent/0/expression/0/1/value": {
+          "type": "element",
+          "hash": "649366f5c0be691c1c9c680fd4dfc39f",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Deadline To"
+        },
+        "14/declaration/body/3/0/init/0/body/3/consequent/0/expression/0/1/value": {
+          "type": "element",
+          "hash": "d2d522ccc07c7b89150dbd523a487648",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Published from"
+        },
+        "14/declaration/body/3/0/init/0/body/4/consequent/0/expression/0/1/value": {
+          "type": "element",
+          "hash": "910b98f4908369f90381b014984f67a3",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Published to"
+        },
+        "14/declaration/body/3/0/init/0/body/6/consequent/1/expression/0/1/value": {
+          "type": "element",
+          "hash": "e0789487e9da7425c6ac6f0fedafb03c",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Sort by Offers Date"
+        },
+        "14/declaration/body/3/0/init/0/body/6/consequent/1/expression/0/2/value/1/expression/right": {
+          "type": "element",
+          "hash": "d8d7ee5f9fba1e29a313e7f7d012830a",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Ascending"
+        },
+        "14/declaration/body/3/0/init/0/body/6/consequent/1/expression/0/2/value/3/expression/right": {
+          "type": "element",
+          "hash": "04dc77f3df63ba7700a697a9cac8f8cc",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Descending"
+        },
         "9/declaration/0/init/0/2/value": {
           "type": "element",
           "hash": "d8d7ee5f9fba1e29a313e7f7d012830a",
@@ -8087,6 +8143,14 @@
           "overrides": {},
           "content": "Due: <function:format/>"
         },
+        "10/body/3/argument/3/1/5/expression/right/3": {
+          "type": "element",
+          "hash": "ef0a8cf183acee31a7cb4488842f0298",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Due: <function:relativeToNow/>"
+        },
         "10/declaration/0/init/0/body/2/argument/3/1/5/expression/right/3": {
           "type": "element",
           "hash": "0c5f1e43a981931b034250a768a71ddd",
@@ -8110,6 +8174,14 @@
           "skip": false,
           "overrides": {},
           "content": "{tender.tender_parts.length} part<expression/>"
+        },
+        "11/body/3/argument/3/1/5/expression/right/3": {
+          "type": "element",
+          "hash": "ef0a8cf183acee31a7cb4488842f0298",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Due: <function:relativeToNow/>"
         },
         "11/declaration/body/2/argument/3/1/5/expression/right/3": {
           "type": "element",
@@ -8163,6 +8235,46 @@
     },
     "features/tenders/components/tender-kanban.tsx": {
       "scopes": {
+        "10/0/init/expression/0/1/value": {
+          "type": "element",
+          "hash": "409bac6215382c47e59f5039cc4cdcdd",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Analysis"
+        },
+        "10/0/init/expression/1/1/value": {
+          "type": "element",
+          "hash": "bd17707e3e924f958ec68060726f1068",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Questions & Review"
+        },
+        "10/0/init/expression/2/1/value": {
+          "type": "element",
+          "hash": "c3882fc98216636873ab9091f3453f0c",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Documents"
+        },
+        "10/0/init/expression/3/1/value": {
+          "type": "element",
+          "hash": "4757e269fee1aa76864469e762def497",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Decision"
+        },
+        "10/0/init/expression/4/1/value": {
+          "type": "element",
+          "hash": "30202c9a9a2093021b0e9a1c61717fe9",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Rejected"
+        },
         "10/declaration/body/9/consequent/0/argument/1": {
           "type": "element",
           "hash": "1c85ffc40c61e633c8219b81a3b5c03c",

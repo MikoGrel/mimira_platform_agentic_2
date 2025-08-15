@@ -7,25 +7,15 @@ import {
 } from "@tanstack/react-query";
 import { createClient } from "$/lib/supabase/client";
 import useCurrentUser from "$/features/auth/api/use-current-user";
-import { CalendarDate } from "@heroui/react";
 import { getLocalTimeZone } from "@internationalized/date";
 import { format } from "date-fns";
-import { Voivodeship } from "$/features/i18n/config/poland-config";
-import { SortDirection } from "$/features/inbox/hooks/use-filter-form";
+import { FilterQuery } from "$/features/inbox/hooks/use-filter-form";
 import { Tables } from "$/types/supabase";
 
 interface UseTendersListParams {
   pageSize?: number;
   search?: string;
-  filterQuery?: {
-    offersDeadlineFrom: CalendarDate | null;
-    offersDeadlineTo: CalendarDate | null;
-    publishedAtFrom: CalendarDate | null;
-    publishedAtTo: CalendarDate | null;
-    voivodeship: Set<Voivodeship> | null;
-    sortBy: Set<SortDirection> | null;
-    showRejected: boolean | null;
-  };
+  filterQuery?: FilterQuery;
 }
 
 export function useTendersList({
@@ -42,7 +32,7 @@ export function useTendersList({
     publishedAtTo: null,
     voivodeship: null,
     sortBy: null,
-    showRejected: null,
+    showRejected: true,
   };
 
   const queryKey = [
@@ -53,7 +43,6 @@ export function useTendersList({
       filters.publishedAtTo?.toString(),
       filters.offersDeadlineFrom?.toString(),
       filters.offersDeadlineTo?.toString(),
-      filters.showRejected,
       JSON.stringify(Array.from(filters.sortBy || [])),
       JSON.stringify(Array.from(filters.voivodeship || [])),
     ],
@@ -95,12 +84,6 @@ export function useTendersList({
           { count: "exact" }
         )
         .eq("company", user!.profile!.customer!);
-
-      if (filters.showRejected === false) {
-        query = query.neq("status", "rejected");
-      } else if (filters.showRejected === true) {
-        query = query.eq("status", "rejected");
-      }
 
       query = query.eq("can_participate", true);
 
@@ -152,6 +135,7 @@ export function useTendersList({
       const shouldSort = filters.sortBy !== null;
 
       const result = await query
+        .order("updated_at", { ascending: false })
         .order("submittingoffersdate", {
           ascending: shouldSort ? sortAscending : false,
         })
@@ -170,10 +154,7 @@ export function useTendersList({
     enabled: !!user,
   });
 
-  function updateTenderStatus(
-    id: string,
-    status: Tables<"tenders">["status"]
-  ) {
+  function updateTenderStatus(id: string, status: Tables<"tenders">["status"]) {
     queryClient.setQueryData(
       queryKey,
       (

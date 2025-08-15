@@ -30,7 +30,7 @@ export default function TendersPage() {
   return (
     <div className="h-full flex flex-col">
       <div className="w-full border-b border-border bg-background px-6 py-4">
-        <div className="flex items-center justify-start gap-2 mb-4">
+        <div className="flex items-center justify-start gap-1">
           <Input
             value={searchQuery}
             onValueChange={handleSearch}
@@ -66,7 +66,6 @@ export default function TendersPage() {
             </PopoverContent>
           </Popover>
         </div>
-
         <FilterChips />
       </div>
 

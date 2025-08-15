@@ -6057,6 +6057,62 @@ export default {
             },
             hash: "04dc77f3df63ba7700a697a9cac8f8cc",
           },
+        "14/declaration/body/3/0/init/0/body/1/consequent/0/expression/0/1/value":
+          {
+            content: {
+              en: "Deadline From",
+              pl: "Termin od",
+            },
+            hash: "7be26b49e50e1024e4f87ef8fdd26b69",
+          },
+        "14/declaration/body/3/0/init/0/body/2/consequent/0/expression/0/1/value":
+          {
+            content: {
+              en: "Deadline To",
+              pl: "Termin do",
+            },
+            hash: "649366f5c0be691c1c9c680fd4dfc39f",
+          },
+        "14/declaration/body/3/0/init/0/body/3/consequent/0/expression/0/1/value":
+          {
+            content: {
+              en: "Published from",
+              pl: "Opublikowano od",
+            },
+            hash: "d2d522ccc07c7b89150dbd523a487648",
+          },
+        "14/declaration/body/3/0/init/0/body/4/consequent/0/expression/0/1/value":
+          {
+            content: {
+              en: "Published to",
+              pl: "Opublikowano do",
+            },
+            hash: "910b98f4908369f90381b014984f67a3",
+          },
+        "14/declaration/body/3/0/init/0/body/6/consequent/1/expression/0/1/value":
+          {
+            content: {
+              en: "Sort by Offers Date",
+              pl: "Sortuj według daty ofert",
+            },
+            hash: "e0789487e9da7425c6ac6f0fedafb03c",
+          },
+        "14/declaration/body/3/0/init/0/body/6/consequent/1/expression/0/2/value/1/expression/right":
+          {
+            content: {
+              en: "Ascending",
+              pl: "Rosnąco",
+            },
+            hash: "d8d7ee5f9fba1e29a313e7f7d012830a",
+          },
+        "14/declaration/body/3/0/init/0/body/6/consequent/1/expression/0/2/value/3/expression/right":
+          {
+            content: {
+              en: "Descending",
+              pl: "Malejąco",
+            },
+            hash: "04dc77f3df63ba7700a697a9cac8f8cc",
+          },
         "9/declaration/0/init/0/2/value": {
           content: {
             en: "Ascending",
@@ -7239,6 +7295,13 @@ export default {
           },
           hash: "0c5f1e43a981931b034250a768a71ddd",
         },
+        "10/body/3/argument/3/1/5/expression/right/3": {
+          content: {
+            en: "Due: <function:relativeToNow/>",
+            pl: "Termin: <function:relativeToNow/>",
+          },
+          hash: "ef0a8cf183acee31a7cb4488842f0298",
+        },
         "10/declaration/0/init/0/body/2/argument/3/1/5/expression/right/3": {
           content: {
             en: "Due: <function:format/>",
@@ -7259,6 +7322,13 @@ export default {
             pl: "{tender.tender_parts.length} część<expression/>",
           },
           hash: "3314bd8d7d9277a56475e8e2fae3a304",
+        },
+        "11/body/3/argument/3/1/5/expression/right/3": {
+          content: {
+            en: "Due: <function:relativeToNow/>",
+            pl: "Termin: <function:relativeToNow/>",
+          },
+          hash: "ef0a8cf183acee31a7cb4488842f0298",
         },
         "11/declaration/body/2/argument/3/1/5/expression/right/3": {
           content: {
@@ -7306,6 +7376,41 @@ export default {
     },
     "features/tenders/components/tender-kanban.tsx": {
       entries: {
+        "10/0/init/expression/0/1/value": {
+          content: {
+            en: "Analysis",
+            pl: "Analiza",
+          },
+          hash: "409bac6215382c47e59f5039cc4cdcdd",
+        },
+        "10/0/init/expression/1/1/value": {
+          content: {
+            en: "Questions & Review",
+            pl: "Pytania i przegląd",
+          },
+          hash: "bd17707e3e924f958ec68060726f1068",
+        },
+        "10/0/init/expression/2/1/value": {
+          content: {
+            en: "Documents",
+            pl: "Dokumenty",
+          },
+          hash: "c3882fc98216636873ab9091f3453f0c",
+        },
+        "10/0/init/expression/3/1/value": {
+          content: {
+            en: "Decision",
+            pl: "Decyzja",
+          },
+          hash: "4757e269fee1aa76864469e762def497",
+        },
+        "10/0/init/expression/4/1/value": {
+          content: {
+            en: "Rejected",
+            pl: "Odrzucone",
+          },
+          hash: "30202c9a9a2093021b0e9a1c61717fe9",
+        },
         "10/declaration/body/9/consequent/0/argument/1": {
           content: {
             en: "Loading tenders...",

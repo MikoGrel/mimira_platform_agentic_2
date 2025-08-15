@@ -11,7 +11,7 @@ export function FilterChips() {
   }
 
   return (
-    <div className="flex flex-wrap gap-2 p-2 pb-0 mt-2">
+    <div className="flex flex-wrap gap-2 p-2 pl-0 pb-0 mt-2">
       {activeFilters.map(({ key, label, value }) => (
         <Chip
           key={key}

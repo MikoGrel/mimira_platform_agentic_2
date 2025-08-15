@@ -584,6 +584,7 @@ export type Database = {
           seen_at: string | null
           status: string
           submittingoffersdate: string | null
+          updated_at: string | null
           url: string | null
           url_user: string | null
           voivodship: string | null
@@ -612,6 +613,7 @@ export type Database = {
           seen_at?: string | null
           status: string
           submittingoffersdate?: string | null
+          updated_at?: string | null
           url?: string | null
           url_user?: string | null
           voivodship?: string | null
@@ -640,6 +642,7 @@ export type Database = {
           seen_at?: string | null
           status?: string
           submittingoffersdate?: string | null
+          updated_at?: string | null
           url?: string | null
           url_user?: string | null
           voivodship?: string | null

@@ -24,6 +24,7 @@ export function useUpdateTenderStatus() {
         .from("tenders")
         .update({
           status,
+          updated_at: new Date().toISOString(),
         })
         .eq("id", tenderId);
 

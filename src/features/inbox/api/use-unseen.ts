@@ -22,6 +22,7 @@ export function useUnseen(
         .from("tenders")
         .update({
           seen_at: null,
+          updated_at: new Date().toISOString(),
         })
         .eq("id", id);
 

@@ -11,7 +11,9 @@ export function useMarkAsSeen(
     mutationFn: async (id: string) => {
       const { error } = await client
         .from("tenders")
-        .update({ seen_at: new Date().toISOString() })
+        .update({
+          seen_at: new Date().toISOString(),
+        })
         .eq("id", id);
 
       if (error) {
@@ -20,4 +22,4 @@ export function useMarkAsSeen(
     },
     ...options,
   });
-} 
+}

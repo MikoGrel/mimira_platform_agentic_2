@@ -26,11 +26,8 @@ import {
 } from "lucide-react";
 import { useTendersList, useUpdateTenderStatus } from "../api";
 import type { TenderWithParts } from "../api/use-tenders-list";
-import { CalendarDate } from "@heroui/react";
-import { Voivodeship } from "$/features/i18n/config/poland-config";
-import { SortDirection } from "$/features/inbox/hooks/use-filter-form";
+import { FilterQuery } from "$/features/inbox/hooks/use-filter-form";
 
-// Define the kanban columns based on tender status
 const COLUMNS = [
   {
     id: "analysis",
@@ -107,15 +104,7 @@ function hasDraggableData<T extends Active | Over>(
 
 interface TenderKanbanProps {
   searchQuery?: string;
-  filterQuery?: {
-    offersDeadlineFrom: CalendarDate | null;
-    offersDeadlineTo: CalendarDate | null;
-    publishedAtFrom: CalendarDate | null;
-    publishedAtTo: CalendarDate | null;
-    voivodeship: Set<Voivodeship> | null;
-    sortBy: Set<SortDirection> | null;
-    showRejected: boolean | null;
-  };
+  filterQuery?: FilterQuery;
 }
 
 export function TenderKanban({ searchQuery, filterQuery }: TenderKanbanProps) {
@@ -249,8 +238,6 @@ export function TenderKanban({ searchQuery, filterQuery }: TenderKanbanProps) {
 
   const handleDragEnd = () => {
     setActiveId(null);
-
-    // No-op for same column sorting (removed)
   };
 
   const isLoading = isPending && fetchedTenders.length === 0;

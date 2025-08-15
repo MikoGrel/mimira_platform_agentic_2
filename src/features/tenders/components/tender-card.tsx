@@ -5,9 +5,9 @@ import { CSS } from "@dnd-kit/utilities";
 import { Card, CardBody, CardHeader, Chip } from "@heroui/react";
 import { CalendarClock, Building2, MapPin, Package } from "lucide-react";
 import { Tables } from "$/types/supabase";
-import { format } from "date-fns";
 import { truncate } from "lodash";
 import { memo } from "react";
+import { useDateFormat } from "$/features/i18n/hooks/use-date-format";
 
 type TenderWithParts = Tables<"tenders"> & {
   tender_parts: Tables<"tender_parts">[];
@@ -19,6 +19,8 @@ interface TenderCardProps {
 }
 
 function InternalTenderCard({ tender, isDragging = false }: TenderCardProps) {
+  const { relativeToNow } = useDateFormat();
+
   const {
     attributes,
     listeners,
@@ -90,8 +92,7 @@ function InternalTenderCard({ tender, isDragging = false }: TenderCardProps) {
             <div className="flex items-center gap-1">
               <CalendarClock className="w-3 h-3" />
               <span className="text-left">
-                Due:{" "}
-                {format(new Date(tender.submittingoffersdate), "MMM dd, yyyy")}
+                {relativeToNow(new Date(tender.submittingoffersdate))}
               </span>
             </div>
           )}

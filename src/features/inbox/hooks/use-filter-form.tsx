@@ -43,6 +43,16 @@ export interface ActiveFilter {
   icon?: string;
 }
 
+export interface FilterQuery {
+  publishedAtFrom: CalendarDate | null;
+  publishedAtTo: CalendarDate | null;
+  offersDeadlineFrom: CalendarDate | null;
+  offersDeadlineTo: CalendarDate | null;
+  voivodeship: Set<Voivodeship> | null;
+  sortBy: Set<SortDirection> | null;
+  showRejected: boolean | null;
+}
+
 export function useFilterForm({ onFiltered }: FilterFormOptions = {}) {
   const [filterQuery, setFilterQuery] = useQueryStates({
     publishedAtFrom: {

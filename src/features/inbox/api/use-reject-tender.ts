@@ -13,6 +13,7 @@ export function useRejectTender() {
         .from("tenders")
         .update({
           status: "rejected",
+          updated_at: new Date().toISOString(),
         })
         .eq("id", tenderId);
 
