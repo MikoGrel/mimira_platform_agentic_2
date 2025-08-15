@@ -8,10 +8,7 @@ import { cn } from "$/lib/utils";
 import useEmblaCarousel from "embla-carousel-react";
 import { useCallback, useEffect, useState } from "react";
 import { motion } from "motion/react";
-
-type PartsWithProducts = Tables<"tender_parts"> & {
-  tender_products: Tables<"tender_products">[];
-};
+import { PartsWithProducts } from "$/features/tenders/types/parts";
 
 interface TenderPartsCarouselProps {
   tenderParts: PartsWithProducts[];

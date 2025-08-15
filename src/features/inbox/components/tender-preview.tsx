@@ -14,6 +14,7 @@ import { OverviewSection } from "./overview-section";
 import { ProductsSection } from "./products-section";
 import { isEmpty } from "lodash";
 import { useRejectTender } from "../api/use-reject-tender";
+import { PartsWithProducts } from "$/features/tenders/types/parts";
 
 const TenderPartsCarousel = dynamic(
   () =>
@@ -42,7 +43,7 @@ const ReviewCriteriaSection = dynamic(
 );
 
 interface TenderPreviewProps {
-  tender: Tables<"tenders"> & { tender_parts: Tables<"tender_parts">[] };
+  tender: Tables<"tenders"> & { tender_parts: PartsWithProducts[] };
 }
 
 export type TenderType = Tables<"tenders"> & {
@@ -123,6 +124,26 @@ export function TenderPreview({ tender }: TenderPreviewProps) {
   function handleReject() {
     rejectTender(tender.id);
   }
+
+  const tenderSections = useMemo(() => {
+    return [
+      { id: "overview", label: <span>Overview</span> },
+      { id: "products", label: <span>Products</span> },
+      { id: "requirements", label: <span>Requirements</span> },
+      { id: "review-criteria", label: <span>Review Criteria</span> },
+      { id: "description", label: <span>Description</span> },
+      { id: "others", label: <span>Additional Info</span> },
+    ];
+  }, []);
+
+  const partSections = useMemo(() => {
+    return [
+      { id: "products", label: <span>Products</span> },
+      { id: "requirements", label: <span>Requirements</span> },
+      { id: "description", label: <span>Description</span> },
+      { id: "others", label: <span>Additional Info</span> },
+    ];
+  }, []);
 
   return (
     <section className="h-full w-full">
@@ -215,7 +236,12 @@ export function TenderPreview({ tender }: TenderPreviewProps) {
             </div>
           </div>
 
-          <NavigationSidebar scrollRef={scrollRef} />
+          <NavigationSidebar
+            scrollRef={scrollRef}
+            sections={
+              isTenderPart(resolvedItem) ? partSections : tenderSections
+            }
+          />
 
           <CommentsDrawer
             open={commentsOpened}

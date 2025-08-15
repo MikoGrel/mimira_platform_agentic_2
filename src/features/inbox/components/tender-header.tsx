@@ -112,24 +112,17 @@ function HeaderButtons({
       {hasCurrentPart && (
         <>
           {isCurrentPartApproved ? (
-            <Button size={size} color="danger" onPress={onRemoveCurrentPart}>
+            <Button
+              size={size}
+              color="danger"
+              variant="flat"
+              onPress={onRemoveCurrentPart}
+            >
               Unselect
             </Button>
           ) : (
-            <Button size={size} color="primary" onPress={onApprovePart}>
+            <Button size={size} variant="flat" onPress={onApprovePart}>
               Approve this part
-            </Button>
-          )}
-
-          {!isCurrentPartApproved && (
-            <Button
-              size={size}
-              variant="flat"
-              onPress={() => onApply()}
-              color="primary"
-              data-lingo-override-pl="Aplikuj na cały przetarg"
-            >
-              Apply to full tender
             </Button>
           )}
         </>
@@ -139,6 +132,7 @@ function HeaderButtons({
         <>
           <Button
             size={size}
+            variant="flat"
             color="primary"
             onPress={() => onApply(Array.from(approvedPartIds))}
             data-lingo-override-pl="Aplikuj na wybrane części"
@@ -150,7 +144,6 @@ function HeaderButtons({
             size={size}
             variant="flat"
             onPress={() => onApply()}
-            color="primary"
             data-lingo-override-pl="Aplikuj na cały przetarg"
           >
             Apply to full tender

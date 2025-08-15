@@ -5,33 +5,28 @@ import { ChevronLeft, ChevronRight, Hash } from "lucide-react";
 import { useEffect, useState } from "react";
 import { useLocalStorage } from "react-use";
 
-interface NavigationSidebarProps {
-  scrollRef: React.RefObject<HTMLDivElement | null>;
+interface Section {
+  id: string;
+  label: React.ReactNode;
 }
 
-export function NavigationSidebar({ scrollRef }: NavigationSidebarProps) {
+interface NavigationSidebarProps {
+  scrollRef: React.RefObject<HTMLDivElement | null>;
+  sections: Section[];
+}
+
+export function NavigationSidebar({
+  scrollRef,
+  sections,
+}: NavigationSidebarProps) {
   const [activeSection, setActiveSection] = useState<string>("");
-  const [visibleSections, setVisibleSections] = useState<string[]>([]);
   const [collapsed, setCollapsed] = useLocalStorage<boolean>(
     "navigation-sidebar-collapsed",
     false
   );
 
-  const allSections = [
-    { id: "at-glance", label: <span>Overview</span> },
-    { id: "products", label: <span>Products</span> },
-    { id: "requirements", label: <span>Requirements</span> },
-    { id: "review-criteria", label: <span>Review Criteria</span> },
-    { id: "description", label: <span>Description</span> },
-    { id: "others", label: <span>Additional Info</span> },
-  ];
-
-  const sections = allSections.filter((section) =>
-    visibleSections.includes(section.id)
-  );
-
   useEffect(() => {
-    if (!scrollRef.current) return;
+    if (!scrollRef.current || sections.length === 0) return;
 
     const observer = new IntersectionObserver(
       (entries) => {
@@ -49,30 +44,19 @@ export function NavigationSidebar({ scrollRef }: NavigationSidebarProps) {
     );
 
     const timeoutId = setTimeout(() => {
-      const sectionElements = document.querySelectorAll("[data-section]");
-      const foundSectionIds = Array.from(sectionElements).map((el) => el.id);
-      setVisibleSections(foundSectionIds);
-
-      sectionElements.forEach((section) => observer.observe(section));
+      sections.forEach((section) => {
+        const element = document.getElementById(section.id);
+        if (element) {
+          observer.observe(element);
+        }
+      });
     }, 100);
 
     return () => {
       clearTimeout(timeoutId);
       observer.disconnect();
     };
-  }, [scrollRef]);
-
-  useEffect(() => {
-    const recheckSections = () => {
-      const sectionElements = document.querySelectorAll("[data-section]");
-      const foundSectionIds = Array.from(sectionElements).map((el) => el.id);
-      setVisibleSections(foundSectionIds);
-    };
-
-    const timeoutId = setTimeout(recheckSections, 200);
-
-    return () => clearTimeout(timeoutId);
-  }, []);
+  }, [scrollRef, sections]);
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
