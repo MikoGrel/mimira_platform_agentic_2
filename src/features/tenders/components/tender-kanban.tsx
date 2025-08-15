@@ -138,8 +138,6 @@ export function TenderKanban({ searchQuery, filterQuery }: TenderKanbanProps) {
       );
       if (column) {
         grouped[column.id].push(tender);
-      } else {
-        grouped.analysis.push(tender);
       }
     });
 
@@ -250,7 +248,7 @@ export function TenderKanban({ searchQuery, filterQuery }: TenderKanbanProps) {
       onDragOver={handleDragOver}
       onDragEnd={handleDragEnd}
     >
-      <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-4 h-full">
+      <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 h-full">
         {COLUMNS.map((column) => (
           <KanbanColumn
             key={column.id}

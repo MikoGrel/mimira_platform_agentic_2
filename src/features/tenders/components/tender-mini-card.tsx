@@ -5,6 +5,7 @@ import { Chip } from "@heroui/react";
 import { ArrowUpRight, CalendarClock } from "lucide-react";
 import Link from "next/link";
 import { motion } from "motion/react";
+import { truncate } from "lodash";
 
 interface TenderMiniCardProps {
   title: string;
@@ -35,7 +36,9 @@ export function TenderMiniCard(props: TenderMiniCardProps) {
         className="bg-white hover:bg-subtle transition-all group border p-4 flex justify-between rounded-xl"
       >
         <div className="flex flex-col gap-2">
-          <p className="text-sm font-medium">{title}</p>
+          <p className="text-sm font-medium">
+            {truncate(title, { length: 150 })}
+          </p>
           <div className="text-sm flex items-center gap-2">
             <Chip
               variant="flat"

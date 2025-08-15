@@ -3,7 +3,7 @@
 import React from "react";
 import { useDroppable } from "@dnd-kit/core";
 import { SortableContext, rectSortingStrategy } from "@dnd-kit/sortable";
-import { Card, CardBody, CardHeader } from "@heroui/react";
+import { Card, CardBody, CardHeader, Spinner } from "@heroui/react";
 import { Tables } from "$/types/supabase";
 import { TenderCard } from "./tender-card";
 import { LucideIcon } from "lucide-react";
@@ -40,7 +40,7 @@ function InternalKanbanColumn({
   const tenderIds = tenders.map((tender) => tender.id);
 
   return (
-    <div ref={setNodeRef} className="h-full">
+    <div ref={setNodeRef} className="h-full min-w-[200px]">
       <SortableContext items={tenderIds} strategy={rectSortingStrategy}>
         <Card
           className={`h-full bg-sidebar ${isOver ? "ring-1 ring-primary/50" : ""}`}
@@ -51,20 +51,19 @@ function InternalKanbanColumn({
             <div className="flex items-center gap-2 w-full text-sm text-muted-foreground font-medium">
               <Icon className={`w-4 h-4 ${iconColor}`} />
               <h3 className="text-foreground font-medium">{title}</h3>
-              <span className="text-xs text-muted-foreground ml-auto">
-                {tenders.length}
-              </span>
+              <div className="ml-auto flex items-center gap-2">
+                {isLoading && <Spinner color="default" size="sm" />}
+                <span className="text-xs text-muted-foreground">
+                  {tenders.length}
+                </span>
+              </div>
             </div>
           </CardHeader>
           <CardBody
             className={`pt-1 ${active ? "overflow-hidden" : "overflow-y-auto"} max-h-[calc(100vh-200px)]`}
           >
             <div className="space-y-3">
-              {isLoading ? (
-                <div className="flex items-center justify-center h-32 text-muted-foreground text-sm">
-                  <span>Loading...</span>
-                </div>
-              ) : (
+              {!isLoading && (
                 <>
                   {tenders.map((tender) => (
                     <TenderCard key={tender.id} tender={tender} />

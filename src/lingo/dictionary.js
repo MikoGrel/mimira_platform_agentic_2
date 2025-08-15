@@ -391,12 +391,26 @@ export default {
       entries: {
         "4/declaration/body/1/argument/1/1/1": {
           content: {
-            en: "<element:Symbol></element:Symbol> Hello, <element:AnimatePresence><expression/></element:AnimatePresence>",
-            pl: "<element:Symbol></element:Symbol> Witaj, <element:AnimatePresence><expression/></element:AnimatePresence>",
+            en: "<element:AnimatedSymbol></element:AnimatedSymbol> Hello, <element:AnimatePresence><expression/></element:AnimatePresence>",
+            pl: "<element:AnimatedSymbol></element:AnimatedSymbol> Cześć, <element:AnimatePresence><expression/></element:AnimatePresence>",
           },
-          hash: "6e2b8f592ac6d73d1a78d11becbf2798",
+          hash: "1aa126290e5fd1127e8cb85fe06e3d0a",
         },
         "4/declaration/body/1/argument/1/3": {
+          content: {
+            en: "Today's briefing: Since yesterday we've managed to find you 5 new tenders, 3 require your attention.",
+            pl: "Dzisiejszy briefing: Od wczoraj udało nam się znaleźć dla Ciebie 5 nowych przetargów, 3 wymagają Twojej uwagi.",
+          },
+          hash: "bb23bee9cbd51ec0a4c3678877f28602",
+        },
+        "5/declaration/body/1/argument/1/1/1": {
+          content: {
+            en: "<element:AnimatedSymbol></element:AnimatedSymbol> Hello, <element:AnimatePresence><expression/></element:AnimatePresence>",
+            pl: "<element:AnimatedSymbol></element:AnimatedSymbol> Cześć, <element:AnimatePresence><expression/></element:AnimatePresence>",
+          },
+          hash: "1aa126290e5fd1127e8cb85fe06e3d0a",
+        },
+        "5/declaration/body/1/argument/1/3": {
           content: {
             en: "Today's briefing: Since yesterday we've managed to find you 5 new tenders, 3 require your attention.",
             pl: "Dzisiejszy briefing: Od wczoraj udało nam się znaleźć dla Ciebie 5 nowych przetargów, 3 wymagają Twojej uwagi.",
@@ -7199,6 +7213,13 @@ export default {
           },
           hash: "82b4ea7ed1439094d7c4be13aaba9a66",
         },
+        "9/body/2/argument/1/1/3/1/1/expression/right/3/expression/right/1": {
+          content: {
+            en: "No tenders",
+            pl: "Brak przetargów",
+          },
+          hash: "32f13e40da30102f390ffd5e61260b68",
+        },
         "9/body/2/argument/1/1/3/1/3/expression/right": {
           content: {
             en: "No tenders",
@@ -7323,6 +7344,13 @@ export default {
           },
           hash: "3314bd8d7d9277a56475e8e2fae3a304",
         },
+        "11/body/3/argument/3/1/1": {
+          content: {
+            en: "Restore to inbox",
+            pl: "Przywróć do skrzynki odbiorczej",
+          },
+          hash: "951351c2250fd5ecd5968b20cde28723",
+        },
         "11/body/3/argument/3/1/5/expression/right/3": {
           content: {
             en: "Due: <function:relativeToNow/>",
@@ -7343,6 +7371,42 @@ export default {
             pl: "{tender.tender_parts.length} część<expression/>",
           },
           hash: "3314bd8d7d9277a56475e8e2fae3a304",
+        },
+        "12/body/4/argument/3/1/1": {
+          content: {
+            en: "Restore to inbox",
+            pl: "Przywróć do skrzynki odbiorczej",
+          },
+          hash: "951351c2250fd5ecd5968b20cde28723",
+        },
+        "13/body/4/argument/3/1/1": {
+          content: {
+            en: "Restore to inbox",
+            pl: "Przywróć do skrzynki odbiorczej",
+          },
+          hash: "951351c2250fd5ecd5968b20cde28723",
+        },
+        "13/body/4/argument/3/1/openingElement/0/value/expression/body/1/0/value/body/0/expression/0":
+          {
+            content: {
+              en: "Tender restored to inbox",
+              pl: "Przetarg przywrócony do skrzynki odbiorczej",
+            },
+            hash: "9fa090b63ef800c860a8c2beb55db264",
+          },
+        "13/body/4/body/0/expression/1/0/value/body/0": {
+          content: {
+            en: "Tender restored to inbox",
+            pl: "Przetarg przywrócony do skrzynki odbiorczej",
+          },
+          hash: "9fa090b63ef800c860a8c2beb55db264",
+        },
+        "13/body/5/argument/3/1/1": {
+          content: {
+            en: "Restore to inbox",
+            pl: "Przywróć do skrzynki odbiorczej",
+          },
+          hash: "951351c2250fd5ecd5968b20cde28723",
         },
         "9/body/2/argument/3/1/5/expression/right/3": {
           content: {
@@ -7411,12 +7475,54 @@ export default {
           },
           hash: "30202c9a9a2093021b0e9a1c61717fe9",
         },
+        "10/0/init/expression/5/1/value": {
+          content: {
+            en: "Rejected",
+            pl: "Odrzucone",
+          },
+          hash: "30202c9a9a2093021b0e9a1c61717fe9",
+        },
         "10/declaration/body/9/consequent/0/argument/1": {
           content: {
             en: "Loading tenders...",
             pl: "Ładowanie przetargów...",
           },
           hash: "1c85ffc40c61e633c8219b81a3b5c03c",
+        },
+        "11/0/init/expression/0/1/value": {
+          content: {
+            en: "Analysis",
+            pl: "Analiza",
+          },
+          hash: "409bac6215382c47e59f5039cc4cdcdd",
+        },
+        "11/0/init/expression/1/1/value": {
+          content: {
+            en: "Questions & Review",
+            pl: "Pytania i przegląd",
+          },
+          hash: "bd17707e3e924f958ec68060726f1068",
+        },
+        "11/0/init/expression/2/1/value": {
+          content: {
+            en: "Documents",
+            pl: "Dokumenty",
+          },
+          hash: "c3882fc98216636873ab9091f3453f0c",
+        },
+        "11/0/init/expression/3/1/value": {
+          content: {
+            en: "Decision",
+            pl: "Decyzja",
+          },
+          hash: "4757e269fee1aa76864469e762def497",
+        },
+        "11/0/init/expression/4/1/value": {
+          content: {
+            en: "Rejected",
+            pl: "Odrzucone",
+          },
+          hash: "30202c9a9a2093021b0e9a1c61717fe9",
         },
         "11/declaration/body/9/consequent/0/argument/1": {
           content: {
@@ -7494,6 +7600,13 @@ export default {
             pl: "Odrzucone",
           },
           hash: "30202c9a9a2093021b0e9a1c61717fe9",
+        },
+        "18/declaration/body/12/argument/3/1/1": {
+          content: {
+            en: "Restore to inbox",
+            pl: "Przywróć do skrzynki odbiorczej",
+          },
+          hash: "951351c2250fd5ecd5968b20cde28723",
         },
         "7/0/init/expression/0/1/value": {
           content: {

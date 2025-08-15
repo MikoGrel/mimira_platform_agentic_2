@@ -59,7 +59,7 @@ export function DashboardCommand() {
               <span>Discover New Tenders</span>
             </CommandItem>
           </CommandGroup>
-          {(isFetching || tenders?.length || 0 > 0) && (
+          {(isFetching || (tenders && tenders.length > 0)) && (
             <CommandGroup heading={<span>Tenders</span>}>
               {isFetching && (
                 <CommandItem disabled>
@@ -71,7 +71,15 @@ export function DashboardCommand() {
                 <CommandItem
                   key={tender.id}
                   value={tender.id}
-                  onSelect={() => goToPage(`/dashboard/inbox?id=${tender.id}`)}
+                  onSelect={(id: string) => {
+                    const tender = tenders.find((t) => t.id === id);
+
+                    if (tender?.status === "default") {
+                      goToPage("/dashboard/inbox?id=" + id);
+                    } else {
+                      goToPage("/dashboard/tenders?id=" + id);
+                    }
+                  }}
                 >
                   <Scroll />
                   <span>

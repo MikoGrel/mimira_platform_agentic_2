@@ -1,7 +1,7 @@
 "use client";
 
 import { useCurrentUser } from "$/features/auth/api";
-import Symbol from "$/features/branding/components/Symbol";
+import { AnimatedSymbol } from "$/features/branding/components";
 import {
   NewTendersBento,
   StatsBento,
@@ -11,14 +11,18 @@ import {
 import { AnimatePresence, motion } from "motion/react";
 
 export default function DashboardPage() {
-  const { user } = useCurrentUser();
+  const { user, isLoading } = useCurrentUser();
 
   return (
     <main className="max-w-5xl mx-auto flex flex-col gap-6 p-4 lg:pt-12">
       <header className="flex flex-col gap-4">
         <div className="flex flex-col-reverse lg:flex-row lg:items-center justify-between gap-4">
           <h1 className="text-3xl font-semibold font-heading flex items-center gap-2 overflow-hidden">
-            <Symbol className="w-8 h-8 text-primary" /> Hello,{" "}
+            <AnimatedSymbol
+              isLoading={isLoading}
+              className="w-8 h-8 text-primary"
+            />{" "}
+            Hello,{" "}
             <AnimatePresence>
               {user?.profile?.first_name && (
                 <motion.span

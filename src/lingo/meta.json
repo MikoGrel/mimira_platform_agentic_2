@@ -445,13 +445,29 @@
       "scopes": {
         "4/declaration/body/1/argument/1/1/1": {
           "type": "element",
-          "hash": "6e2b8f592ac6d73d1a78d11becbf2798",
+          "hash": "1aa126290e5fd1127e8cb85fe06e3d0a",
           "context": "",
           "skip": false,
           "overrides": {},
-          "content": "<element:Symbol></element:Symbol> Hello, <element:AnimatePresence><expression/></element:AnimatePresence>"
+          "content": "<element:AnimatedSymbol></element:AnimatedSymbol> Hello, <element:AnimatePresence><expression/></element:AnimatePresence>"
         },
         "4/declaration/body/1/argument/1/3": {
+          "type": "element",
+          "hash": "bb23bee9cbd51ec0a4c3678877f28602",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Today's briefing: Since yesterday we've managed to find you 5 new tenders, 3 require your attention."
+        },
+        "5/declaration/body/1/argument/1/1/1": {
+          "type": "element",
+          "hash": "1aa126290e5fd1127e8cb85fe06e3d0a",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "<element:AnimatedSymbol></element:AnimatedSymbol> Hello, <element:AnimatePresence><expression/></element:AnimatePresence>"
+        },
+        "5/declaration/body/1/argument/1/3": {
           "type": "element",
           "hash": "bb23bee9cbd51ec0a4c3678877f28602",
           "context": "",
@@ -8039,6 +8055,14 @@
           "overrides": {},
           "content": "Loading..."
         },
+        "9/body/2/argument/1/1/3/1/1/expression/right/3/expression/right/1": {
+          "type": "element",
+          "hash": "32f13e40da30102f390ffd5e61260b68",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "No tenders"
+        },
         "9/body/2/argument/1/1/3/1/3/expression/right": {
           "type": "element",
           "hash": "03966e3a00acfc99f27be4c6be523ac2",
@@ -8175,6 +8199,14 @@
           "overrides": {},
           "content": "{tender.tender_parts.length} part<expression/>"
         },
+        "11/body/3/argument/3/1/1": {
+          "type": "element",
+          "hash": "951351c2250fd5ecd5968b20cde28723",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Restore to inbox"
+        },
         "11/body/3/argument/3/1/5/expression/right/3": {
           "type": "element",
           "hash": "ef0a8cf183acee31a7cb4488842f0298",
@@ -8198,6 +8230,46 @@
           "skip": false,
           "overrides": {},
           "content": "{tender.tender_parts.length} part<expression/>"
+        },
+        "12/body/4/argument/3/1/1": {
+          "type": "element",
+          "hash": "951351c2250fd5ecd5968b20cde28723",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Restore to inbox"
+        },
+        "13/body/4/argument/3/1/1": {
+          "type": "element",
+          "hash": "951351c2250fd5ecd5968b20cde28723",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Restore to inbox"
+        },
+        "13/body/4/argument/3/1/openingElement/0/value/expression/body/1/0/value/body/0/expression/0": {
+          "type": "element",
+          "hash": "9fa090b63ef800c860a8c2beb55db264",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Tender restored to inbox"
+        },
+        "13/body/4/body/0/expression/1/0/value/body/0": {
+          "type": "element",
+          "hash": "9fa090b63ef800c860a8c2beb55db264",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Tender restored to inbox"
+        },
+        "13/body/5/argument/3/1/1": {
+          "type": "element",
+          "hash": "951351c2250fd5ecd5968b20cde28723",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Restore to inbox"
         },
         "9/body/2/argument/3/1/5/expression/right/3": {
           "type": "element",
@@ -8275,6 +8347,14 @@
           "overrides": {},
           "content": "Rejected"
         },
+        "10/0/init/expression/5/1/value": {
+          "type": "element",
+          "hash": "30202c9a9a2093021b0e9a1c61717fe9",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Rejected"
+        },
         "10/declaration/body/9/consequent/0/argument/1": {
           "type": "element",
           "hash": "1c85ffc40c61e633c8219b81a3b5c03c",
@@ -8282,6 +8362,46 @@
           "skip": false,
           "overrides": {},
           "content": "Loading tenders..."
+        },
+        "11/0/init/expression/0/1/value": {
+          "type": "element",
+          "hash": "409bac6215382c47e59f5039cc4cdcdd",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Analysis"
+        },
+        "11/0/init/expression/1/1/value": {
+          "type": "element",
+          "hash": "bd17707e3e924f958ec68060726f1068",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Questions & Review"
+        },
+        "11/0/init/expression/2/1/value": {
+          "type": "element",
+          "hash": "c3882fc98216636873ab9091f3453f0c",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Documents"
+        },
+        "11/0/init/expression/3/1/value": {
+          "type": "element",
+          "hash": "4757e269fee1aa76864469e762def497",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Decision"
+        },
+        "11/0/init/expression/4/1/value": {
+          "type": "element",
+          "hash": "30202c9a9a2093021b0e9a1c61717fe9",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Rejected"
         },
         "11/declaration/body/9/consequent/0/argument/1": {
           "type": "element",
@@ -8370,6 +8490,14 @@
           "skip": false,
           "overrides": {},
           "content": "Rejected"
+        },
+        "18/declaration/body/12/argument/3/1/1": {
+          "type": "element",
+          "hash": "951351c2250fd5ecd5968b20cde28723",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Restore to inbox"
         },
         "7/0/init/expression/0/1/value": {
           "type": "element",
