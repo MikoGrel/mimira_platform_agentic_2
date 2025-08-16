@@ -3,14 +3,13 @@
 import { useMemo, useRef, useState } from "react";
 import { useScrollTrigger } from "$/hooks/use-scroll-trigger";
 import { AdditionalInfoSection } from "./additional-info-section";
-import { DescriptionSection } from "./description-section";
 import { NavigationSidebar } from "./navigation-sidebar";
 import { RequirementsSection } from "./requirements-section";
 import { TenderHeader } from "./tender-header";
 import dynamic from "next/dynamic";
 import { OverviewSection } from "./overview-section";
 import { ProductsSection } from "./products-section";
-import { isEmpty } from "lodash";
+import { isEmpty } from "lodash-es";
 import { useRejectTender } from "../api/use-reject-tender";
 import { getRequirements } from "../utils/compat";
 import { InboxTender, InboxTenderPart } from "../api/use-tender-inbox-query";
@@ -38,6 +37,13 @@ const ReviewCriteriaSection = dynamic(
     import("./review-criteria-section").then(
       (mod) => mod.ReviewCriteriaSection
     ),
+  {
+    ssr: false,
+  }
+);
+
+const DescriptionSection = dynamic(
+  () => import("./description-section").then((mod) => mod.DescriptionSection),
   {
     ssr: false,
   }
@@ -83,6 +89,16 @@ export function TenderPreview({
     threshold: hasParts ? 5 : 60,
     containerRef: scrollRef,
   });
+
+  const showDescription = useMemo(() => {
+    if (!isTenderPart(resolvedItem)) return true;
+    return resolvedItem.description_part_long_llm !== "";
+  }, [resolvedItem]);
+
+  const showReviewCriteria = useMemo(() => {
+    if (!isTenderPart(resolvedItem)) return true;
+    return resolvedItem.review_criteria_llm !== "";
+  }, [resolvedItem]);
 
   function handleApprovePart() {
     if (!isPartSelected || !selectedPart) return;
@@ -216,18 +232,26 @@ export function TenderPreview({
                     resolvedItem
                   )}
                 />
-                {!isTenderPart(resolvedItem) && (
+                {showReviewCriteria && (
                   <ReviewCriteriaSection
                     review_criteria_llm={resolvedItem?.review_criteria_llm}
                   />
                 )}
-                <DescriptionSection
-                  description_long_llm={
-                    isTenderPart(resolvedItem)
-                      ? resolvedItem.description_part_long_llm || ""
-                      : resolvedItem?.description_long_llm || ""
-                  }
-                />
+
+                {showDescription && (
+                  <DescriptionSection
+                    description_long_llm={
+                      isTenderPart(resolvedItem)
+                        ? resolvedItem.description_part_long_llm || ""
+                        : resolvedItem?.description_long_llm || ""
+                    }
+                  />
+                )}
+                {!showDescription && (
+                  <p className="text-sm text-muted-foreground italic">
+                    No description available
+                  </p>
+                )}
 
                 <AdditionalInfoSection
                   application_form_llm={tender.application_form_llm || ""}

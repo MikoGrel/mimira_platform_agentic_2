@@ -1137,12 +1137,26 @@ export default {
           },
           hash: "e17686a22ffad04cc7bb70524ed4478b",
         },
+        "5/declaration/body/0/argument/3": {
+          content: {
+            en: "<element:div><element:Markdown>{description_long_llm}</element:Markdown></element:div> ) : (<element:p>No detailed description available</element:p> )}",
+            pl: "<element:div><element:Markdown>{description_long_llm}</element:Markdown></element:div> ) : (<element:p>Brak szczegółowego opisu</element:p> )}",
+          },
+          hash: "fb2f6716914e2a0b7ea9b3851282624a",
+        },
         "5/declaration/body/0/argument/3/1/expression/alternate": {
           content: {
             en: "No detailed description available",
             pl: "Brak szczegółowego opisu",
           },
           hash: "5a678e8cb008d9e16b7555a27eac9dfc",
+        },
+        "5/declaration/body/0/argument/3/3": {
+          content: {
+            en: "No detailed description available",
+            pl: "Szczegółowy opis niedostępny",
+          },
+          hash: "33eb6b2072fd1b6046f5fdbedc2b687a",
         },
       },
     },
@@ -5682,6 +5696,13 @@ export default {
           },
           hash: "78efde626dafcc52e22f7f6b702998a0",
         },
+        "20/declaration/body/13/body/2/expression/0": {
+          content: {
+            en: "Tender was moved to analysis successfully, go to active tenders to see it",
+            pl: "Przetarg został pomyślnie przeniesiony do analizy, przejdź do aktywnych przetargów, aby go zobaczyć",
+          },
+          hash: "78efde626dafcc52e22f7f6b702998a0",
+        },
         "20/declaration/body/14/body/1/expression/0": {
           content: {
             en: "Tender was rejected successfully, go to archive tab to see it",
@@ -5766,12 +5787,19 @@ export default {
           },
           hash: "d5bf1e70991802fd4a801f3a79cf9e5d",
         },
+        "20/declaration/body/16/body/1/expression/0": {
+          content: {
+            en: "Tender was rejected successfully, go to archive tab to see it",
+            pl: "Przetarg został pomyślnie odrzucony, przejdź do zakładki archiwum, aby go zobaczyć",
+          },
+          hash: "60696b80d10dffc59336ef7184f915c1",
+        },
         "20/declaration/body/17/0/init/0/body/0/argument/0/1/value": {
           content: {
-            en: "Products",
-            pl: "Produkty",
+            en: "Overview",
+            pl: "Przegląd",
           },
-          hash: "a003449ecbde6b7a73044f46ea6bbe75",
+          hash: "30c54e4dc4ce599b87d94be34a8617f5",
         },
         "20/declaration/body/17/0/init/0/body/0/argument/1/1/value": {
           content: {
@@ -5782,17 +5810,59 @@ export default {
         },
         "20/declaration/body/17/0/init/0/body/0/argument/2/1/value": {
           content: {
+            en: "Review Criteria",
+            pl: "Kryteria oceny",
+          },
+          hash: "d524df30da3658fdbc1794408fcfdab4",
+        },
+        "20/declaration/body/17/0/init/0/body/0/argument/3/1/value": {
+          content: {
             en: "Description",
             pl: "Opis",
           },
           hash: "e17686a22ffad04cc7bb70524ed4478b",
         },
-        "20/declaration/body/17/0/init/0/body/0/argument/3/1/value": {
+        "20/declaration/body/17/0/init/0/body/0/argument/4/1/value": {
           content: {
             en: "Additional Info",
             pl: "Dodatkowe informacje",
           },
           hash: "d5bf1e70991802fd4a801f3a79cf9e5d",
+        },
+        "20/declaration/body/18/0/init/0/body/0/argument/0/1/value": {
+          content: {
+            en: "Products",
+            pl: "Produkty",
+          },
+          hash: "a003449ecbde6b7a73044f46ea6bbe75",
+        },
+        "20/declaration/body/18/0/init/0/body/0/argument/1/1/value": {
+          content: {
+            en: "Requirements",
+            pl: "Wymagania",
+          },
+          hash: "e108e149e0fd5b65f5850b6f032ccabe",
+        },
+        "20/declaration/body/18/0/init/0/body/0/argument/2/1/value": {
+          content: {
+            en: "Description",
+            pl: "Opis",
+          },
+          hash: "e17686a22ffad04cc7bb70524ed4478b",
+        },
+        "20/declaration/body/18/0/init/0/body/0/argument/3/1/value": {
+          content: {
+            en: "Additional Info",
+            pl: "Dodatkowe informacje",
+          },
+          hash: "d5bf1e70991802fd4a801f3a79cf9e5d",
+        },
+        "20/declaration/body/19/argument/1/3/1/3/1/11/expression/right": {
+          content: {
+            en: "No description available",
+            pl: "Brak dostępnego opisu",
+          },
+          hash: "eb1063a1577c1e8e5b62cc9b00c7f850",
         },
         "21/declaration/body/16/0/init/0/body/0/argument/0/1/value": {
           content: {

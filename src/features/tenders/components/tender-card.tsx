@@ -5,7 +5,7 @@ import { CSS } from "@dnd-kit/utilities";
 import { Card, CardBody, CardHeader, Chip } from "@heroui/react";
 import { CalendarClock, Building2, MapPin, Package } from "lucide-react";
 import { Tables } from "$/types/supabase";
-import { truncate } from "lodash";
+import { truncate } from "lodash-es";
 import { memo } from "react";
 import { useDateFormat } from "$/features/i18n/hooks/use-date-format";
 import {

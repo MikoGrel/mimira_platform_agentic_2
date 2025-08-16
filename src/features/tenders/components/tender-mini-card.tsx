@@ -5,7 +5,7 @@ import { Chip } from "@heroui/react";
 import { ArrowUpRight, CalendarClock } from "lucide-react";
 import Link from "next/link";
 import { motion } from "motion/react";
-import { truncate } from "lodash";
+import { truncate } from "lodash-es";
 
 interface TenderMiniCardProps {
   title: string;

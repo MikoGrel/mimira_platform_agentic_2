@@ -20,7 +20,7 @@ import { useEffect, useState } from "react";
 import { Tables } from "$/types/supabase";
 import { useCommentsCount } from "$/features/tenders/api/use-comments-count";
 import { useRestoreRejectedTender } from "../api/use-restore-rejected-tender";
-import { truncate } from "lodash";
+import { truncate } from "lodash-es";
 import { useDateFormat } from "$/features/i18n/hooks/use-date-format";
 import { useUnseen } from "../api/use-unseen";
 import { toast } from "sonner";

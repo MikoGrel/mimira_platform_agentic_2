@@ -2,7 +2,7 @@
 
 import { createClient } from "$/lib/supabase/client";
 import { useQuery } from "@tanstack/react-query";
-import omit from "lodash/omit";
+import omit from "lodash-es/omit";
 import posthog from "posthog-js";
 import { useEffect } from "react";
 

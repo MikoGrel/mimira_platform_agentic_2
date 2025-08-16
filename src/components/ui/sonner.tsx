@@ -1,10 +1,12 @@
-"use client"
+"use client";
 
-import { useTheme } from "next-themes"
-import { Toaster as Sonner, ToasterProps } from "sonner"
+import { useMedia } from "react-use";
+import { Toaster as Sonner, ToasterProps } from "sonner";
 
 const Toaster = ({ ...props }: ToasterProps) => {
-  const { theme = "system" } = useTheme()
+  // Use react-use's useMedia to detect system theme preference
+  const isDark = useMedia("(prefers-color-scheme: dark)");
+  const theme = isDark ? "dark" : "light";
 
   return (
     <Sonner
@@ -19,7 +21,7 @@ const Toaster = ({ ...props }: ToasterProps) => {
       }
       {...props}
     />
-  )
-}
+  );
+};
 
-export { Toaster }
+export { Toaster };

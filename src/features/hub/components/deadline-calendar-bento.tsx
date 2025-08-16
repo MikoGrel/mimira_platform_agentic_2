@@ -8,7 +8,7 @@ import { addMonths, endOfMonth, startOfMonth, subMonths } from "date-fns";
 import { Button, ButtonGroup } from "@heroui/react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { useDateFormat } from "$/features/i18n/hooks/use-date-format";
-import { truncate } from "lodash";
+import { truncate } from "lodash-es";
 
 interface DeadlineCalendarBentoProps {
   className?: string;

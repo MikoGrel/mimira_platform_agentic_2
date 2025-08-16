@@ -12,7 +12,7 @@ import {
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { useCommandSearch } from "../api/use-command-search";
-import { truncate } from "lodash";
+import { truncate } from "lodash-es";
 import { useDebouncedValue } from "$/hooks/use-debounced-value";
 import { useCommandStore } from "../store/use-command-store";
 

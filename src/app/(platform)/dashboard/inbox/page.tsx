@@ -8,7 +8,7 @@ import Symbol from "$/features/branding/components/Symbol";
 import { FilterForm, FilterChips, useFilterForm } from "$/features/inbox";
 import { useInfiniteList } from "$/hooks/use-infinite-list";
 import { AnimatePresence, motion } from "motion/react";
-import { truncate } from "lodash";
+import { truncate } from "lodash-es";
 import { cn } from "$/lib/utils";
 import { useIndividualTender } from "$/features/tenders/api";
 import dynamic from "next/dynamic";
