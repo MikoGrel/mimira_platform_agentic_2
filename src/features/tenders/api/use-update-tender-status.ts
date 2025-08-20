@@ -13,13 +13,13 @@ export function useUpdateTenderStatus() {
       tenderId,
       status,
       partIds,
+      partsStatus,
     }: {
       tenderId: string;
       status: Tables<"tenders">["status"];
       partIds?: string[];
+      partsStatus?: Tables<"tender_parts">["status"];
     }) => {
-      console.log("partIds", partIds);
-
       const { data, error } = await client
         .from("tenders")
         .update({
@@ -30,6 +30,20 @@ export function useUpdateTenderStatus() {
 
       if (error) {
         throw error;
+      }
+
+      if (partIds) {
+        const { error: partsError } = await client
+          .from("tender_parts")
+          .update({
+            status: partsStatus,
+            updated_at: new Date().toISOString(),
+          })
+          .in("id", partIds);
+
+        if (partsError) {
+          throw partsError;
+        }
       }
 
       return data;

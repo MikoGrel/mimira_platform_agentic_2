@@ -3,7 +3,7 @@
 import { useDateFormat } from "$/features/i18n/hooks/use-date-format";
 import { Chip } from "@heroui/react";
 import { ArrowUpRight, CalendarClock } from "lucide-react";
-import Link from "next/link";
+import Link from "$/components/ui/link";
 import { motion } from "motion/react";
 import { truncate } from "lodash-es";
 

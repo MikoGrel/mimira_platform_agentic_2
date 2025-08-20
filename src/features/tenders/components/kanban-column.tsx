@@ -43,7 +43,7 @@ function InternalKanbanColumn({
     <div ref={setNodeRef} className="h-full min-w-[200px]">
       <SortableContext items={tenderIds} strategy={rectSortingStrategy}>
         <Card
-          className={`h-full bg-sidebar ${isOver ? "ring-1 ring-primary/50" : ""}`}
+          className={`h-full bg-accent/50 ${isOver ? "ring-1 ring-primary/50" : ""}`}
           shadow="none"
           radius="sm"
         >

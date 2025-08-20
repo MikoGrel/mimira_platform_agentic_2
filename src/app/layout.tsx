@@ -34,7 +34,8 @@ export default async function RootLayout({
   children: React.ReactNode;
 }>) {
   const cookieStore = await cookies();
-  const locale = (cookieStore.get("lingo-locale")?.value as "pl" | "en") || "en";
+  const locale =
+    (cookieStore.get("lingo-locale")?.value as "pl" | "en") || "en";
 
   return (
     <LingoProvider loadDictionary={(locale) => loadDictionary(locale)}>
@@ -44,7 +45,7 @@ export default async function RootLayout({
           <link rel="icon" href="/symbol-dark.svg" id="dark-scheme-icon" />
         </head>
         <body
-          className={`${geistSans.variable} ${geistMono.variable} ${spaceGrotesk.variable} antialiased light font-body bg-background text-font-base`}
+          className={`${geistSans.variable} ${geistMono.variable} ${spaceGrotesk.variable} antialiased light font-body text-font-base`}
         >
           <LocaleProvider locale={locale}>
             <QueryProvider>

@@ -16,6 +16,8 @@ import {
 } from "$/components/ui/context-menu";
 import { useUpdateTenderStatus } from "../api";
 import { toast } from "sonner";
+import Link from "$/components/ui/link";
+import { getApprovedParts } from "../utils/parts";
 
 type TenderWithParts = Tables<"tenders"> & {
   tender_parts: Tables<"tender_parts">[];
@@ -63,28 +65,33 @@ function InternalTenderCard({ tender, isDragging = false }: TenderCardProps) {
     );
   }
 
+  // @ts-expect-error: tender_parts may not match expected type exactly
+  const approvedParts = getApprovedParts(tender);
+
   return (
     <ContextMenu>
       <Card
+        as={Link}
+        href={`/dashboard/tenders/${tender.id}`}
         ref={setNodeRef}
         style={style}
         {...attributes}
         {...listeners}
-        className={`cursor-grab active:cursor-grabbing border border-border/70 w-full transition-none`}
+        className={`cursor-grab active:cursor-grabbing hover:cursor-pointer border border-border/70 w-full transition-colors hover:bg-muted/50`}
         shadow="none"
         radius="sm"
       >
         <ContextMenuTrigger>
           <CardHeader className="pb-2">
             <div className="flex flex-col gap-1">
-              {tender.tender_parts.length > 0 && (
+              {approvedParts.length > 0 && (
                 <Chip
                   color="primary"
                   size="sm"
                   variant="flat"
                   startContent={<Package className="w-3 h-3 ml-1 mr-0.5" />}
                 >
-                  {tender.tender_parts.length}
+                  {approvedParts.length}
                 </Chip>
               )}
               <h4 className="text-sm font-medium line-clamp-2 text-left">

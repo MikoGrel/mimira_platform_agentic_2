@@ -1,7 +1,7 @@
 "use client";
 
 import { Button } from "@heroui/react";
-import Link from "next/link";
+import Link from "$/components/ui/link";
 import { BentoCard } from "$/components/ui/bento-card";
 import { TenderMiniCard } from "$/features/tenders/components/tender-mini-card";
 import { cn } from "$/lib/utils";

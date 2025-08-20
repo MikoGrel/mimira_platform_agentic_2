@@ -85,6 +85,7 @@ export default function useTenderInboxQuery({
             closest_match
           ),
           tender_requirements (
+            req_id,
             requirement_text,
             reason,
             status
@@ -113,6 +114,7 @@ export default function useTenderInboxQuery({
             closest_match
           ),
           tender_requirements (
+            req_id,
             requirement_text,
             reason,
             status

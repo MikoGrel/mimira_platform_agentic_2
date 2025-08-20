@@ -14,7 +14,7 @@ import {
 } from "$/components/ui/sidebar";
 import { Home, FolderOpen, SparklesIcon, FileCheck } from "lucide-react";
 import SidebarLogo from "./sidebar-logo";
-import Link from "next/link";
+import Link from "$/components/ui/link";
 import { SidebarLogOutButton } from "./sidebar-logout-button";
 import { usePathname } from "next/navigation";
 import { cn } from "$/lib/utils";

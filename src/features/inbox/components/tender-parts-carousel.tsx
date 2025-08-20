@@ -10,6 +10,7 @@ import { motion } from "motion/react";
 import { InboxTenderPart } from "../api/use-tender-inbox-query";
 
 interface TenderPartsCarouselProps {
+  title?: string;
   tenderParts: InboxTenderPart[];
   selectedPart: string | null;
   onPartSelect: (partId: string) => void;
@@ -58,6 +59,7 @@ function ProductStatus({
 }
 
 export function TenderPartsCarousel({
+  title,
   tenderParts,
   selectedPart,
   onPartSelect,
@@ -110,46 +112,21 @@ export function TenderPartsCarousel({
   if (!tenderParts?.length) return null;
 
   return (
-    <div className="border-b sticky top-0 z-30 bg-white">
-      <div
-        className={`grid grid-cols-1 gap-0 px-6 ${isCollapsed ? "py-2" : "py-4"} ${isCollapsed ? "relative" : ""}`}
-      >
-        {!isCollapsed && (
-          <div className="flex items-center justify-between mb-2">
-            <h2 className="text-sm font-medium text-muted-foreground">
-              Tender Parts ({tenderParts.length})
-            </h2>
-            <div className="flex gap-2">
-              <Button
-                variant="outline"
-                size="sm"
-                onClick={scrollPrev}
-                disabled={!canScrollPrev}
-                className="h-6 w-6 p-0"
-              >
-                <ChevronLeft className="h-4 w-4" />
-              </Button>
-              <Button
-                variant="outline"
-                size="sm"
-                onClick={scrollNext}
-                disabled={!canScrollNext}
-                className="h-6 w-6 p-0"
-              >
-                <ChevronRight className="h-4 w-4" />
-              </Button>
-            </div>
-          </div>
-        )}
-
-        {isCollapsed && (
-          <>
+    <div
+      className={`grid grid-cols-1 gap-0 ${isCollapsed ? "py-2" : "py-4"} ${isCollapsed ? "relative" : ""}`}
+    >
+      {!isCollapsed && (
+        <div className="flex items-center justify-between mb-2">
+          <h2 className="text-sm font-medium text-muted-foreground">
+            {title ? <>{title}</> : <>Tender Parts ({tenderParts.length})</>}
+          </h2>
+          <div className="flex gap-2">
             <Button
               variant="outline"
               size="sm"
               onClick={scrollPrev}
               disabled={!canScrollPrev}
-              className="absolute left-2 top-1/2 -translate-y-1/2 h-8 w-8 p-0 z-10 bg-white backdrop-blur-sm shadow-md hover:bg-white"
+              className="h-6 w-6 p-0"
             >
               <ChevronLeft className="h-4 w-4" />
             </Button>
@@ -158,64 +135,87 @@ export function TenderPartsCarousel({
               size="sm"
               onClick={scrollNext}
               disabled={!canScrollNext}
-              className="absolute right-2 top-1/2 -translate-y-1/2 h-8 w-8 p-0 z-10 bg-white backdrop-blur-sm shadow-md hover:bg-white"
+              className="h-6 w-6 p-0"
             >
               <ChevronRight className="h-4 w-4" />
             </Button>
-          </>
-        )}
+          </div>
+        </div>
+      )}
 
-        <div className="min-w-0">
-          <div className="overflow-hidden" ref={emblaRef}>
-            <div className="flex gap-3 py-2 pl-0.5 pr-0.5">
-              {tenderParts.map((part, index) => (
-                <div key={part.part_uuid} className="flex-[0_0_240px]">
-                  <Card
-                    isPressable
-                    isHoverable
-                    shadow="sm"
-                    className={cn(
-                      "cursor-pointer transition-all duration-200 h-full w-full",
-                      selectedPart === part.part_uuid && "ring ring-primary/70"
-                    )}
-                    onPress={() => onPartSelect(part.part_uuid)}
-                  >
-                    <CardHeader className="pb-1 px-3 pt-3 flex flex-col gap-1 text-xs">
-                      <h4 className="text-left line-clamp-2 text-font-base w-full">
-                        {isApproved(part) && (
-                          <Check className="w-3 h-3 text-primary inline-block mr-1" />
-                        )}
-                        <span className="font-semibold">#{index + 1}</span>{" "}
-                        {part.part_name?.trim()}
-                      </h4>
-                    </CardHeader>
-                    <CardBody className="pt-0 px-3 pb-3 text-muted-foreground">
-                      <motion.div
-                        className="overflow-hidden"
-                        animate={{
-                          height: isCollapsed ? "0px" : "auto",
-                        }}
-                        transition={{
-                          duration: 0.2,
-                        }}
-                      >
-                        <div className="text-xs w-full">
-                          <span className="inline">Requirements:</span>
-                          <RequirementsStatus {...part} />
-                        </div>
-                        <div className="text-xs w-full">
-                          <span className="inline">Products:</span>
-                          <ProductStatus
-                            matchedProducts={matchedProducts(part)}
-                            totalProducts={totalProducts(part)}
-                          />
-                        </div>
-                      </motion.div>
-                    </CardBody>
-                  </Card>
-                </div>
-              ))}
-            </div>
+      {isCollapsed && (
+        <>
+          <Button
+            variant="outline"
+            size="sm"
+            onClick={scrollPrev}
+            disabled={!canScrollPrev}
+            className="absolute left-2 top-1/2 -translate-y-1/2 h-8 w-8 p-0 z-10 bg-white backdrop-blur-sm shadow-md hover:bg-white"
+          >
+            <ChevronLeft className="h-4 w-4" />
+          </Button>
+          <Button
+            variant="outline"
+            size="sm"
+            onClick={scrollNext}
+            disabled={!canScrollNext}
+            className="absolute right-2 top-1/2 -translate-y-1/2 h-8 w-8 p-0 z-10 bg-white backdrop-blur-sm shadow-md hover:bg-white"
+          >
+            <ChevronRight className="h-4 w-4" />
+          </Button>
+        </>
+      )}
+
+      <div className="min-w-0">
+        <div className="overflow-hidden" ref={emblaRef}>
+          <div className="flex gap-3 py-2 pl-0.5 pr-0.5">
+            {tenderParts.map((part, index) => (
+              <div key={part.part_uuid} className="flex-[0_0_240px]">
+                <Card
+                  isPressable
+                  isHoverable
+                  shadow="sm"
+                  className={cn(
+                    "cursor-pointer transition-all duration-200 h-full w-full",
+                    selectedPart === part.part_uuid && "ring ring-primary/70"
+                  )}
+                  onPress={() => onPartSelect(part.part_uuid)}
+                >
+                  <CardHeader className="pb-1 px-3 pt-3 flex flex-col gap-1 text-xs">
+                    <h4 className="text-left line-clamp-2 text-font-base w-full">
+                      {isApproved(part) && (
+                        <Check className="w-3 h-3 text-primary inline-block mr-1" />
+                      )}
+                      <span className="font-semibold">#{index + 1}</span>{" "}
+                      {part.part_name?.trim()}
+                    </h4>
+                  </CardHeader>
+                  <CardBody className="pt-0 px-3 pb-3 text-muted-foreground">
+                    <motion.div
+                      className="overflow-hidden"
+                      animate={{
+                        height: isCollapsed ? "0px" : "auto",
+                      }}
+                      transition={{
+                        duration: 0.2,
+                      }}
+                    >
+                      <div className="text-xs w-full">
+                        <span className="inline">Requirements:</span>
+                        <RequirementsStatus {...part} />
+                      </div>
+                      <div className="text-xs w-full">
+                        <span className="inline">Products:</span>
+                        <ProductStatus
+                          matchedProducts={matchedProducts(part)}
+                          totalProducts={totalProducts(part)}
+                        />
+                      </div>
+                    </motion.div>
+                  </CardBody>
+                </Card>
+              </div>
+            ))}
           </div>
         </div>
       </div>

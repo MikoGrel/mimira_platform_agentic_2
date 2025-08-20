@@ -1,7 +1,7 @@
 "use client";
 
 import Logo from "$/features/branding/components/Logo";
-import Link from "next/link";
+import Link from "$/components/ui/link";
 import { useQueryState, parseAsString } from "nuqs";
 import { useEffect } from "react";
 import {
@@ -116,7 +116,6 @@ export default function LoginPage() {
           You don&apos;t have an account?
           <Link
             href="https://cal.com/mikolaj-grelewicz-kke2et/mimira"
-            target="_blank"
             className="text-primary inline-block"
           >
             Contact us

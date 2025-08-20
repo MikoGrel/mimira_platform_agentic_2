@@ -15,12 +15,14 @@ import { getRequirements } from "../utils/compat";
 import { InboxTender, InboxTenderPart } from "../api/use-tender-inbox-query";
 import { useUpdateTenderStatus } from "$/features/tenders/api/use-update-tender-status";
 import { toast } from "sonner";
+import { TenderPartsCarouselSkeleton } from "./tender-parts-carousel-skeleton";
 
 const TenderPartsCarousel = dynamic(
   () =>
     import("./tender-parts-carousel").then((mod) => mod.TenderPartsCarousel),
   {
     ssr: false,
+    loading: () => <TenderPartsCarouselSkeleton />,
   }
 );
 
@@ -106,12 +108,11 @@ export function TenderPreview({
   }
 
   function handleApply(partIds?: string[]) {
-    console.log("applied?");
-
     updateTenderStatus({
       status: "analysis",
       tenderId: tender.id,
       partIds,
+      partsStatus: "approved",
     });
 
     toast.success(
@@ -190,13 +191,15 @@ export function TenderPreview({
         <div className="flex overflow-hidden h-full flex-[1_0_0]">
           <div className="flex-1 flex flex-col">
             {!isEmpty(tender.tender_parts) && (
-              <TenderPartsCarousel
-                isCollapsed={isHeaderCollapsed}
-                tenderParts={tender.tender_parts}
-                selectedPart={selectedPart}
-                onPartSelect={setSelectedPart}
-                approvedPartIds={approvedPartIds}
-              />
+              <div className="border-b sticky top-0 z-30 bg-white px-6">
+                <TenderPartsCarousel
+                  isCollapsed={isHeaderCollapsed}
+                  tenderParts={tender.tender_parts}
+                  selectedPart={selectedPart}
+                  onPartSelect={setSelectedPart}
+                  approvedPartIds={approvedPartIds}
+                />
+              </div>
             )}
             <div className="flex-1 overflow-y-auto" ref={scrollRef}>
               <div className="px-6 py-6 grid grid-cols-1 gap-6 w-full">

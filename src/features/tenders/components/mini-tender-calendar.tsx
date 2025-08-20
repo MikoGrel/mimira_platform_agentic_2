@@ -2,7 +2,7 @@
 
 import { useState, useMemo } from "react";
 import { Calendar } from "$/components/ui/calendar";
-import Link from "next/link";
+import Link from "$/components/ui/link";
 
 type ExpiringTender = {
   id: string;

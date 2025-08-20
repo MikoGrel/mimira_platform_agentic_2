@@ -35,6 +35,7 @@ export function useIndividualTender({
             closest_match
            ),
           tender_requirements (
+            req_id,
             requirement_text,
             reason,
             status
@@ -63,6 +64,7 @@ export function useIndividualTender({
             closest_match
            ),
            tender_requirements (
+            req_id,
             requirement_text,
             reason,
             status
@@ -84,3 +86,8 @@ export function useIndividualTender({
     enabled: enabled && !!tenderId && !!user,
   });
 }
+
+export type IndividualTender = NonNullable<
+  Awaited<ReturnType<typeof useIndividualTender>>["data"]
+>;
+export type IndividualTenderPart = IndividualTender["tender_parts"][number];

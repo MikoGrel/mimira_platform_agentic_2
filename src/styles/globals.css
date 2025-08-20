@@ -104,3 +104,7 @@
   font-family: var(--font-heading);
   letter-spacing: -0.02em;
 }
+
+@utility bg-primary-gradient {
+  @apply bg-gradient-to-b from-primary/5 to-background;
+}
