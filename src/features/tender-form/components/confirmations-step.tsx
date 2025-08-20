@@ -7,6 +7,29 @@ import {
 } from "$/features/tenders/api/use-individual-tender";
 import React, { useEffect, useState } from "react";
 
+/**
+ * Determines if the next button should be enabled based on confirmation state
+ */
+const shouldEnableNextButton = (
+  item: IndividualTender | IndividualTenderPart | null | undefined,
+  confirmedProducts: Set<string>,
+  isPartItem: boolean
+): boolean => {
+  // If not a part item (no products to confirm), enable next button
+  if (!isPartItem) {
+    return true;
+  }
+
+  // For part items, check if all products are confirmed
+  if (isPartItem && item && "tender_products" in item && item.tender_products) {
+    const totalProducts = item.tender_products.length;
+    return totalProducts > 0 && confirmedProducts.size >= totalProducts;
+  }
+
+  // Default to false if conditions are not met
+  return false;
+};
+
 interface ConfirmationsStepProps {
   item: IndividualTender | IndividualTenderPart | null | undefined;
   onConfirmationChange?: (confirmedProducts: Set<string>) => void;
@@ -29,16 +52,15 @@ export function ConfirmationsStep({
 
   const isPartItem = isTenderPart(item);
 
-  // Check if all products are confirmed and update next button state
+  // Update next button state based on confirmation status
   useEffect(() => {
-    if (setNextEnabled && isPartItem && item.tender_products) {
-      const totalProducts = item.tender_products.length;
-      const allConfirmed =
-        totalProducts > 0 && confirmedProducts.size >= totalProducts;
-      setNextEnabled(allConfirmed);
-    } else if (setNextEnabled && !isPartItem) {
-      // If not a part item (no products to confirm), enable next button
-      setNextEnabled(true);
+    if (setNextEnabled) {
+      const enabled = shouldEnableNextButton(
+        item,
+        confirmedProducts,
+        isPartItem
+      );
+      setNextEnabled(enabled);
     }
   }, [confirmedProducts, item, isPartItem, setNextEnabled]);
 
