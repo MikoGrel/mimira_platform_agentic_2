@@ -4,7 +4,6 @@ import { useSortable } from "@dnd-kit/sortable";
 import { CSS } from "@dnd-kit/utilities";
 import { Card, CardBody, CardHeader, Chip } from "@heroui/react";
 import { CalendarClock, Building2, MapPin, Package } from "lucide-react";
-import { Tables } from "$/types/supabase";
 import { truncate } from "lodash-es";
 import { memo } from "react";
 import { useDateFormat } from "$/features/i18n/hooks/use-date-format";
@@ -17,18 +16,14 @@ import {
 import { useUpdateTenderStatus } from "../api";
 import { toast } from "sonner";
 import Link from "$/components/ui/link";
-import { getApprovedParts } from "../utils/parts";
-
-type TenderWithParts = Tables<"tenders"> & {
-  tender_parts: Tables<"tender_parts">[];
-};
+import { IndividualTenderMapping } from "../api/use-individual-tender";
 
 interface TenderCardProps {
-  tender: TenderWithParts;
+  mapping: IndividualTenderMapping;
   isDragging?: boolean;
 }
 
-function InternalTenderCard({ tender, isDragging = false }: TenderCardProps) {
+function InternalTenderCard({ mapping, isDragging = false }: TenderCardProps) {
   const { relativeToNow } = useDateFormat();
   const { mutate: updateTenderStatus } = useUpdateTenderStatus();
 
@@ -40,11 +35,11 @@ function InternalTenderCard({ tender, isDragging = false }: TenderCardProps) {
     transition,
     isDragging: isSortableDragging,
   } = useSortable({
-    id: tender.id,
+    id: mapping.id,
     disabled: isDragging,
     data: {
       type: "Task",
-      task: tender,
+      task: mapping,
     },
   });
 
@@ -58,21 +53,20 @@ function InternalTenderCard({ tender, isDragging = false }: TenderCardProps) {
 
   function handleRestoreToInbox() {
     updateTenderStatus(
-      { tenderId: tender.id, status: "default" },
+      { mappingId: mapping.id, status: "default" },
       {
         onSuccess: () => toast.success(<span>Tender restored to inbox</span>),
       }
     );
   }
 
-  // @ts-expect-error: tender_parts may not match expected type exactly
-  const approvedParts = getApprovedParts(tender);
+  const parts = mapping.tender_parts.filter((p) => p.status !== "default");
 
   return (
     <ContextMenu>
       <Card
         as={Link}
-        href={`/dashboard/tenders/${tender.id}`}
+        href={`/dashboard/tenders/${mapping.id}`}
         ref={setNodeRef}
         style={style}
         {...attributes}
@@ -84,18 +78,18 @@ function InternalTenderCard({ tender, isDragging = false }: TenderCardProps) {
         <ContextMenuTrigger>
           <CardHeader className="pb-2">
             <div className="flex flex-col gap-1">
-              {approvedParts.length > 0 && (
+              {parts.length > 0 && (
                 <Chip
                   color="primary"
                   size="sm"
                   variant="flat"
                   startContent={<Package className="w-3 h-3 ml-1 mr-0.5" />}
                 >
-                  {approvedParts.length}
+                  {parts.length}
                 </Chip>
               )}
               <h4 className="text-sm font-medium line-clamp-2 text-left">
-                {truncate(tender.orderobject || "Untitled Tender", {
+                {truncate(mapping.tenders?.order_object || "Untitled Tender", {
                   length: 60,
                 })}
               </h4>
@@ -106,22 +100,26 @@ function InternalTenderCard({ tender, isDragging = false }: TenderCardProps) {
               <div className="flex items-center gap-1">
                 <Building2 className="w-3 h-3" />
                 <span className="line-clamp-1 text-left">
-                  {tender.organizationname || "Unknown Organization"}
+                  {mapping.tenders?.organization_name || "Unknown Organization"}
                 </span>
               </div>
 
-              {tender.organizationcity && (
+              {mapping.tenders?.organization_city && (
                 <div className="flex items-center gap-1">
                   <MapPin className="w-3 h-3" />
-                  <span className="text-left">{tender.organizationcity}</span>
+                  <span className="text-left">
+                    {mapping.tenders?.organization_city}
+                  </span>
                 </div>
               )}
 
-              {tender.submittingoffersdate && (
+              {mapping.tenders?.submitting_offers_date && (
                 <div className="flex items-center gap-1">
                   <CalendarClock className="w-3 h-3" />
                   <span className="text-left">
-                    {relativeToNow(new Date(tender.submittingoffersdate))}
+                    {relativeToNow(
+                      new Date(mapping.tenders?.submitting_offers_date)
+                    )}
                   </span>
                 </div>
               )}
@@ -140,6 +138,6 @@ function InternalTenderCard({ tender, isDragging = false }: TenderCardProps) {
 
 export const TenderCard = memo(InternalTenderCard, (prev, next) => {
   return (
-    prev.tender.id === next.tender.id && prev.isDragging === next.isDragging
+    prev.mapping.id === next.mapping.id && prev.isDragging === next.isDragging
   );
 });

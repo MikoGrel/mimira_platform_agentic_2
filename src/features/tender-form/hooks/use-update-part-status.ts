@@ -4,7 +4,7 @@ import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { createClient } from "$/lib/supabase/client";
 
 interface UpdatePartStatusParams {
-  partUuid: string;
+  id: string;
   status: string;
 }
 
@@ -13,11 +13,11 @@ export function useUpdatePartStatus() {
   const client = createClient();
 
   return useMutation({
-    mutationFn: async ({ partUuid, status }: UpdatePartStatusParams) => {
+    mutationFn: async ({ id, status }: UpdatePartStatusParams) => {
       const { data, error } = await client
         .from("tender_parts")
         .update({ status })
-        .eq("part_uuid", partUuid)
+        .eq("id", id)
         .select()
         .single();
 

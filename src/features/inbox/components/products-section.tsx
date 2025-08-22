@@ -32,10 +32,7 @@ export function ProductsSection({ products }: ProductsSectionProps) {
       <SectionContent>
         <Masonry columns={{ base: 1, md: 2 }} columnGap="1rem">
           {products.toSorted(matchingFirst).map((product, idx) => (
-            <ProductCard
-              key={`${product.part_uuid}-${idx}`}
-              product={product}
-            />
+            <ProductCard key={`${product.id}-${idx}`} product={product} />
           ))}
         </Masonry>
       </SectionContent>

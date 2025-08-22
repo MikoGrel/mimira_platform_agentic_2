@@ -18,25 +18,17 @@ interface TenderPartsCarouselProps {
   isCollapsed: boolean;
 }
 
-function RequirementsStatus({
-  met_requirements,
-  needs_confirmation_requirements,
-  not_met_requirements,
-}: {
-  met_requirements: InboxTenderPart["met_requirements"];
-  needs_confirmation_requirements: InboxTenderPart["needs_confirmation_requirements"];
-  not_met_requirements: InboxTenderPart["not_met_requirements"];
+function RequirementsStatus(props: {
+  default: number;
+  reject: number;
+  approve: number;
 }) {
   return (
     <div className="gap-1 inline-flex ml-1">
-      <span className="text-success-600 font-medium">
-        {met_requirements?.length || 0}
-      </span>
+      <span className="text-success-600 font-medium">{props.default}</span>
       <span className="text-subtle-foreground">/</span>
       <span className="text-warning-600 font-medium">
-        {(met_requirements?.length || 0) +
-          (needs_confirmation_requirements?.length || 0) +
-          (not_met_requirements?.length || 0)}
+        {props.default || 0 + props.reject || 0 + props.approve || 0}
       </span>
     </div>
   );
@@ -96,11 +88,10 @@ export function TenderPartsCarousel({
     emblaApi.on("reInit", onSelect);
   }, [emblaApi, onSelect]);
 
-  const isApproved = (part: InboxTenderPart) =>
-    approvedPartIds.has(part.part_uuid);
+  const isApproved = (part: InboxTenderPart) => approvedPartIds.has(part.id);
 
   const totalProducts = (part: InboxTenderPart) => {
-    return part.tender_products.length || 0;
+    return part.tender_products?.length || 0;
   };
 
   const matchedProducts = (part: InboxTenderPart) => {
@@ -110,6 +101,20 @@ export function TenderPartsCarousel({
   };
 
   if (!tenderParts?.length) return null;
+
+  const groupedRequirements = (part: InboxTenderPart) => {
+    return part.tender_requirements?.reduce(
+      (acc, requirement) => {
+        const status = requirement.status as "default" | "reject" | "approve";
+        if (!acc[status]) {
+          acc[status] = 0;
+        }
+        acc[status]++;
+        return acc;
+      },
+      {} as Record<"default" | "reject" | "approve", number>
+    );
+  };
 
   return (
     <div
@@ -150,7 +155,7 @@ export function TenderPartsCarousel({
             size="sm"
             onClick={scrollPrev}
             disabled={!canScrollPrev}
-            className="absolute left-2 top-1/2 -translate-y-1/2 h-8 w-8 p-0 z-10 bg-white backdrop-blur-sm shadow-md hover:bg-white"
+            className="absolute left-2 top-1/2 -translate-y-1/2 h-8 w-8 p-0 z-10 bg-background backdrop-blur-sm shadow-md hover:bg-background"
           >
             <ChevronLeft className="h-4 w-4" />
           </Button>
@@ -159,7 +164,7 @@ export function TenderPartsCarousel({
             size="sm"
             onClick={scrollNext}
             disabled={!canScrollNext}
-            className="absolute right-2 top-1/2 -translate-y-1/2 h-8 w-8 p-0 z-10 bg-white backdrop-blur-sm shadow-md hover:bg-white"
+            className="absolute right-2 top-1/2 -translate-y-1/2 h-8 w-8 p-0 z-10 bg-background backdrop-blur-sm shadow-md hover:bg-background"
           >
             <ChevronRight className="h-4 w-4" />
           </Button>
@@ -170,16 +175,16 @@ export function TenderPartsCarousel({
         <div className="overflow-hidden" ref={emblaRef}>
           <div className="flex gap-3 py-2 pl-0.5 pr-0.5">
             {tenderParts.map((part, index) => (
-              <div key={part.part_uuid} className="flex-[0_0_240px]">
+              <div key={part.id} className="flex-[0_0_240px]">
                 <Card
                   isPressable
                   isHoverable
                   shadow="sm"
                   className={cn(
                     "cursor-pointer transition-all duration-200 h-full w-full",
-                    selectedPart === part.part_uuid && "ring ring-primary/70"
+                    selectedPart === part.id && "ring ring-primary/70"
                   )}
-                  onPress={() => onPartSelect(part.part_uuid)}
+                  onPress={() => onPartSelect(part.id)}
                 >
                   <CardHeader className="pb-1 px-3 pt-3 flex flex-col gap-1 text-xs">
                     <h4 className="text-left line-clamp-2 text-font-base w-full">
@@ -202,7 +207,7 @@ export function TenderPartsCarousel({
                     >
                       <div className="text-xs w-full">
                         <span className="inline">Requirements:</span>
-                        <RequirementsStatus {...part} />
+                        <RequirementsStatus {...groupedRequirements(part)} />
                       </div>
                       <div className="text-xs w-full">
                         <span className="inline">Products:</span>

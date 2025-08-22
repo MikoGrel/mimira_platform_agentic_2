@@ -3,18 +3,16 @@
 import { useState, useEffect, useCallback } from "react";
 import React from "react";
 import {
-  IndividualTender,
-  IndividualTenderPart,
-} from "$/features/tenders/api/use-individual-tender";
-import {
   useDocumentQuestions,
   useSubmitDocumentAnswers,
 } from "$/features/tender-form/hooks";
 import { toast } from "sonner";
 import { Alert } from "@heroui/react";
+import { InboxTenderMapping } from "$/features/inbox/api/use-tender-inbox-query";
+import { InboxTenderPart } from "$/features/inbox/api/use-tender-inbox-query";
 
 interface DataStepProps {
-  item: IndividualTender | IndividualTenderPart | null | undefined;
+  item: InboxTenderMapping | InboxTenderPart | null | undefined;
   onNext?: () => void;
   setNextEnabled?: (enabled: boolean) => void;
   onNextHandler?: React.MutableRefObject<(() => Promise<void>) | null>;
@@ -26,27 +24,13 @@ export function DataStep({
   setNextEnabled,
   onNextHandler,
 }: DataStepProps) {
-  const [answers, setAnswers] = useState<Record<number, string>>({});
+  const [answers, setAnswers] = useState<Record<string, string>>({});
 
-  function isTenderPart(
-    x: IndividualTender | IndividualTenderPart | null | undefined
-  ): x is IndividualTenderPart {
-    return x !== null && x !== undefined && "part_uuid" in x;
-  }
-
-  const isPart = isTenderPart(item);
-
-  const tenderId = item
-    ? isPart
-      ? item.tender_id || undefined
-      : item.id || undefined
-    : undefined;
-
-  const { data: questions, isLoading, error } = useDocumentQuestions(tenderId);
+  const { data: questions, isLoading, error } = useDocumentQuestions(item?.id);
 
   const submitAnswers = useSubmitDocumentAnswers();
 
-  const handleAnswerChange = (questionId: number, answer: string) => {
+  const handleAnswerChange = (questionId: string, answer: string) => {
     setAnswers((prev) => ({
       ...prev,
       [questionId]: answer,
@@ -63,7 +47,10 @@ export function DataStep({
         question: question.question,
       }));
 
-      await submitAnswers.mutateAsync({ answers: answersToSubmit });
+      await submitAnswers.mutateAsync({
+        mappingId: item!.id!,
+        answers: answersToSubmit,
+      });
 
       toast.success("Document answers saved successfully!");
 
@@ -73,13 +60,13 @@ export function DataStep({
       }
     } catch (error) {
       toast.error("Failed to save answers. Please try again.");
-      console.error("Error submitting answers:", error);
+      console.error("Error submitting  answers:", error);
     }
-  }, [questions, answers, submitAnswers, onNext]);
+  }, [questions, submitAnswers, item, onNext, answers]);
 
   useEffect(() => {
     if (questions) {
-      const initialAnswers: Record<number, string> = {};
+      const initialAnswers: Record<string, string> = {};
       questions.forEach((question) => {
         if (question.answer) {
           initialAnswers[question.id] = question.answer;

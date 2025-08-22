@@ -21,7 +21,7 @@ export function DashboardCommand() {
   const router = useRouter();
   const [search, setSearch] = useState("");
   const debouncedSearch = useDebouncedValue(search, 250);
-  const { data: tenders, isFetching } = useCommandSearch(debouncedSearch);
+  const { data: mappings, isFetching } = useCommandSearch(debouncedSearch);
   useEffect(() => {
     const down = (e: KeyboardEvent) => {
       if (e.key === "j" && (e.metaKey || e.ctrlKey)) {
@@ -59,7 +59,7 @@ export function DashboardCommand() {
               <span>Discover New Tenders</span>
             </CommandItem>
           </CommandGroup>
-          {(isFetching || (tenders && tenders.length > 0)) && (
+          {(isFetching || (mappings && mappings.length > 0)) && (
             <CommandGroup heading={<span>Tenders</span>}>
               {isFetching && (
                 <CommandItem disabled>
@@ -67,14 +67,14 @@ export function DashboardCommand() {
                   <span>Searching…</span>
                 </CommandItem>
               )}
-              {tenders?.map((tender) => (
+              {mappings?.map((mapping) => (
                 <CommandItem
-                  key={tender.id}
-                  value={tender.id}
+                  key={mapping.id}
+                  value={mapping.id}
                   onSelect={(id: string) => {
-                    const tender = tenders.find((t) => t.id === id);
+                    const mapping = mappings.find((m) => m.id === id);
 
-                    if (tender?.status === "default") {
+                    if (mapping?.status === "default") {
                       goToPage("/dashboard/inbox?id=" + id);
                     } else {
                       goToPage("/dashboard/tenders?id=" + id);
@@ -83,7 +83,9 @@ export function DashboardCommand() {
                 >
                   <Scroll />
                   <span>
-                    {truncate(tender.orderobject ?? "", { length: 60 })}
+                    {truncate(mapping.tenders?.order_object ?? "", {
+                      length: 60,
+                    })}
                   </span>
                 </CommandItem>
               ))}

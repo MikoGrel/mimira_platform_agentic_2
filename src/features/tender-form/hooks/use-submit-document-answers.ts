@@ -4,8 +4,9 @@ import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { createClient } from "$/lib/supabase/client";
 
 interface SubmitAnswersParams {
+  mappingId: string;
   answers: Array<{
-    id: number;
+    id: string;
     answer: string;
     question: string;
   }>;
@@ -16,11 +17,12 @@ export function useSubmitDocumentAnswers() {
   const client = createClient();
 
   return useMutation({
-    mutationFn: async ({ answers }: SubmitAnswersParams) => {
+    mutationFn: async ({ mappingId, answers }: SubmitAnswersParams) => {
       const updates = answers.map(({ id, answer, question }) => ({
         id,
         answer,
         question,
+        company_mapping_id: mappingId,
       }));
 
       const { data, error } = await client
@@ -34,15 +36,12 @@ export function useSubmitDocumentAnswers() {
 
       return data;
     },
-    onSuccess: (data) => {
+    onSuccess: (_, { mappingId }) => {
       // Invalidate relevant queries to refresh the data
-      if (data && data.length > 0) {
-        const tenderId = data[0].tender_id;
-        queryClient.invalidateQueries({
-          queryKey: ["document-questions", tenderId],
-        });
-        queryClient.invalidateQueries({ queryKey: ["tender", tenderId] });
-      }
+      queryClient.invalidateQueries({
+        queryKey: ["document-questions", mappingId],
+      });
+      queryClient.invalidateQueries({ queryKey: ["tender", mappingId] });
     },
   });
 }

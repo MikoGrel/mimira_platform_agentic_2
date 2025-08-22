@@ -25,26 +25,17 @@ import {
   AccordionTrigger,
 } from "$/components/ui/accordion";
 import { cn } from "$/lib/utils";
-
-// Product type from tender API
-type TenderProduct = {
-  part_uuid: string;
-  product_req_name: string | null;
-  product_req_quantity: string | null;
-  product_req_spec: string | null;
-  requirements_to_confirm: string | null;
-  alternative_products: string | null;
-  closest_match: string | null;
-};
+import { InboxTenderProduct } from "$/features/inbox/api/use-tender-inbox-query";
+import { useProducts } from "$/features/products/api/use-alternative-products";
 
 interface ProductConfirmationProps {
-  products: TenderProduct[];
+  products: InboxTenderProduct[];
   partName?: string;
   partId?: number;
 }
 
 interface ProductItemProps {
-  product: TenderProduct;
+  product: InboxTenderProduct;
   isConfirmed: boolean;
   onToggleConfirm: () => void;
   selectedAlternative: string | null;
@@ -62,20 +53,13 @@ function ProductItem({
   onApproveClosestMatch,
   isClosestMatchApproved,
 }: ProductItemProps) {
-  const hasAlternatives = product.alternative_products;
-  const alternatives = hasAlternatives
-    ? product
-        .alternative_products!.split(",")
-        .map((alt) => alt.trim())
-        .filter(Boolean)
-    : [];
+  const { data: alternativeProducts } = useProducts({
+    ids: Array.isArray(product.alternative_products)
+      ? (product.alternative_products as string[])
+      : [],
+  });
 
-  const requirements = product.requirements_to_confirm
-    ? product.requirements_to_confirm
-        .split(",")
-        .map((req) => req.trim())
-        .filter(Boolean)
-    : [];
+  const requirements = product.requirements_to_confirm;
 
   const displayName = product.product_req_name || "Unnamed Product";
   const hasSpecs = product.product_req_spec && product.product_req_spec.trim();
@@ -177,40 +161,40 @@ function ProductItem({
           )}
 
           {/* Alternative Products */}
-          {alternatives.length > 0 && (
+          {alternativeProducts && (
             <div>
               <h4 className="text-sm font-semibold text-foreground mb-3">
                 Alternative Products
               </h4>
               <div className="space-y-2">
-                {alternatives.map((alternative, index) => (
+                {alternativeProducts.map((alternative) => (
                   <div
-                    key={index}
+                    key={alternative.id}
                     className={cn(
                       "border rounded-lg p-3 cursor-pointer transition-all hover:shadow-sm",
-                      selectedAlternative === alternative
+                      selectedAlternative === alternative.id
                         ? "border-primary bg-primary/5"
                         : "border-border hover:border-border/80"
                     )}
                     onClick={() => {
-                      if (selectedAlternative === alternative) {
+                      if (selectedAlternative === alternative.id) {
                         onSelectAlternative(null);
                       } else {
-                        onSelectAlternative(alternative);
+                        onSelectAlternative(alternative.id);
                       }
                     }}
                   >
                     <div className="flex items-center gap-3">
                       <Checkbox
-                        isSelected={selectedAlternative === alternative}
+                        isSelected={selectedAlternative === alternative.id}
                         size="sm"
                         readOnly
                         color="primary"
                       />
                       <span className="text-sm font-medium flex-1">
-                        {alternative}
+                        {alternative.product_req_name}
                       </span>
-                      {selectedAlternative === alternative && (
+                      {selectedAlternative === alternative.id && (
                         <Chip size="sm" color="primary" variant="flat">
                           Selected
                         </Chip>
@@ -223,22 +207,13 @@ function ProductItem({
           )}
 
           {/* Requirements to Confirm */}
-          {requirements.length > 0 && (
+          {requirements && (
             <div>
               <h4 className="text-sm font-semibold text-foreground mb-3">
                 Requirements for Confirmation
               </h4>
               <div className="bg-warning/5 border border-warning/20 rounded-lg p-3">
-                <ul className="space-y-2">
-                  {requirements.map((req, index) => (
-                    <li key={index} className="flex items-start gap-2">
-                      <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-warning flex-shrink-0" />
-                      <span className="text-sm text-muted-foreground">
-                        {req}
-                      </span>
-                    </li>
-                  ))}
-                </ul>
+                {requirements}
               </div>
             </div>
           )}

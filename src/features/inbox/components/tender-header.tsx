@@ -17,7 +17,6 @@ import {
 } from "lucide-react";
 import { motion, AnimatePresence } from "motion/react";
 import { useEffect, useState } from "react";
-import { Tables } from "$/types/supabase";
 import { useCommentsCount } from "$/features/tenders/api/use-comments-count";
 import { useRestoreRejectedTender } from "../api/use-restore-rejected-tender";
 import { truncate } from "lodash-es";
@@ -25,9 +24,10 @@ import { useDateFormat } from "$/features/i18n/hooks/use-date-format";
 import { useUnseen } from "../api/use-unseen";
 import { toast } from "sonner";
 import { InboxTenderPart } from "../api/use-tender-inbox-query";
+import { IndividualTenderMapping } from "$/features/tenders/api/use-individual-tender";
 
 interface TenderHeaderProps {
-  tender: NonNullable<Tables<"tenders">>;
+  mapping: IndividualTenderMapping;
   isHeaderCollapsed: boolean;
   setCommentsOpened: (value: boolean) => void;
   onApprovePart?: () => void;
@@ -40,11 +40,12 @@ interface TenderHeaderProps {
   onRemoveCurrentPart?: () => void;
   onApply: (partIds?: string[]) => void;
   onReject?: () => void;
+  hasMultipleParts: boolean;
 }
 
 interface HeaderButtonsProps {
   size?: "sm";
-  tender: NonNullable<Tables<"tenders">>;
+  mapping: IndividualTenderMapping;
   approvedPartIds: Set<string>;
   currentPart?: {
     item: InboxTenderPart | null;
@@ -59,11 +60,12 @@ interface HeaderButtonsProps {
   commentCount?: number;
   restoreTender: (id: string) => void;
   onUnseen: (id: string) => void;
+  hasMultipleParts: boolean;
 }
 
 function HeaderButtons({
+  mapping,
   size,
-  tender: { id: tenderId, status },
   approvedPartIds,
   currentPart,
   onApprovePart,
@@ -75,6 +77,7 @@ function HeaderButtons({
   commentCount,
   restoreTender,
   onUnseen,
+  hasMultipleParts,
 }: HeaderButtonsProps) {
   const isRejected = status === "rejected";
   const hasApprovedParts = approvedPartIds.size > 0;
@@ -88,7 +91,7 @@ function HeaderButtons({
         <Button
           size={size}
           variant="flat"
-          onPress={() => restoreTender(tenderId)}
+          onPress={() => restoreTender(mapping.id)}
         >
           Restore
         </Button>
@@ -98,7 +101,77 @@ function HeaderButtons({
 
   return (
     <div className="flex gap-2">
-      {hasNoSelection && (
+      {hasMultipleParts ? (
+        <>
+          {hasNoSelection && (
+            <>
+              <Button
+                size={size}
+                onPress={() => onApply()}
+                color="primary"
+                data-lingo-override-pl="Aplikuj"
+              >
+                Apply
+              </Button>
+              <Button onPress={() => onReject?.()} size={size} variant="flat">
+                Reject
+              </Button>
+            </>
+          )}
+
+          {hasCurrentPart && (
+            <>
+              {isCurrentPartApproved ? (
+                <Button
+                  size={size}
+                  color="danger"
+                  variant="flat"
+                  onPress={onRemoveCurrentPart}
+                >
+                  Unselect
+                </Button>
+              ) : (
+                <Button
+                  size={size}
+                  color="primary"
+                  variant="flat"
+                  onPress={onApprovePart}
+                >
+                  Approve this part
+                </Button>
+              )}
+            </>
+          )}
+
+          {hasApprovedParts && (
+            <>
+              <Button
+                size={size}
+                variant="flat"
+                color="primary"
+                onPress={() => onApply(Array.from(approvedPartIds))}
+                data-lingo-override-pl="Aplikuj na wybrane części"
+              >
+                Apply to selected parts
+              </Button>
+
+              <Button
+                size={size}
+                variant="flat"
+                onPress={() => onApply()}
+                data-lingo-override-pl="Aplikuj na cały przetarg"
+              >
+                Apply to full tender
+              </Button>
+
+              <Button size={size} variant="flat" onPress={onUnselectAll}>
+                Unselect all
+              </Button>
+            </>
+          )}
+        </>
+      ) : (
+        // Single part or no parts - show only apply/reject buttons
         <>
           <Button
             size={size}
@@ -110,57 +183,6 @@ function HeaderButtons({
           </Button>
           <Button onPress={() => onReject?.()} size={size} variant="flat">
             Reject
-          </Button>
-        </>
-      )}
-
-      {hasCurrentPart && (
-        <>
-          {isCurrentPartApproved ? (
-            <Button
-              size={size}
-              color="danger"
-              variant="flat"
-              onPress={onRemoveCurrentPart}
-            >
-              Unselect
-            </Button>
-          ) : (
-            <Button
-              size={size}
-              color="primary"
-              variant="flat"
-              onPress={onApprovePart}
-            >
-              Approve this part
-            </Button>
-          )}
-        </>
-      )}
-
-      {hasApprovedParts && (
-        <>
-          <Button
-            size={size}
-            variant="flat"
-            color="primary"
-            onPress={() => onApply(Array.from(approvedPartIds))}
-            data-lingo-override-pl="Aplikuj na wybrane części"
-          >
-            Apply to selected parts
-          </Button>
-
-          <Button
-            size={size}
-            variant="flat"
-            onPress={() => onApply()}
-            data-lingo-override-pl="Aplikuj na cały przetarg"
-          >
-            Apply to full tender
-          </Button>
-
-          <Button size={size} variant="flat" onPress={onUnselectAll}>
-            Unselect all
           </Button>
         </>
       )}
@@ -184,7 +206,7 @@ function HeaderButtons({
         <DropdownMenu
           onAction={(key) => {
             if (key === "unseen") {
-              onUnseen(tenderId);
+              onUnseen(mapping.id);
             }
           }}
         >
@@ -198,10 +220,10 @@ function HeaderButtons({
 }
 
 export function TenderHeader(props: TenderHeaderProps) {
-  const { tender, isHeaderCollapsed } = props;
+  const { mapping, isHeaderCollapsed } = props;
   const [hasRendered, setHasRendered] = useState(false);
   const { count } = useCommentsCount({
-    tenderId: tender.id,
+    mappingId: mapping.id,
   });
   const { mutate: restoreTender } = useRestoreRejectedTender({
     onSuccess: () => {
@@ -214,7 +236,7 @@ export function TenderHeader(props: TenderHeaderProps) {
     },
   });
   const { relativeToNow } = useDateFormat();
-  const isRejected = tender.status === "rejected";
+  const isRejected = mapping.status === "rejected";
 
   useEffect(() => {
     setHasRendered(true);
@@ -232,7 +254,7 @@ export function TenderHeader(props: TenderHeaderProps) {
   };
 
   return (
-    <div className="border-b border-border bg-white overflow-hidden px-6 py-4">
+    <div className="border-b border-border bg-background overflow-hidden px-6 py-4">
       {isRejected && (
         <Chip color="danger" size="sm" className="mb-2" variant="flat">
           Rejected
@@ -241,9 +263,9 @@ export function TenderHeader(props: TenderHeaderProps) {
 
       <Tooltip
         placement="bottom-start"
-        content={tender.orderobject}
+        content={mapping.tenders?.order_object}
         className="max-w-96"
-        isDisabled={(tender.orderobject?.length || 0) < 180}
+        isDisabled={(mapping.tenders?.order_object?.length || 0) < 180}
       >
         <motion.h1
           className="font-semibold w-2/3 mb-2"
@@ -252,7 +274,7 @@ export function TenderHeader(props: TenderHeaderProps) {
           animate={isHeaderCollapsed ? "collapsed" : "expanded"}
           transition={{ duration: 0.3, ease: "easeInOut" }}
         >
-          {truncate(tender.orderobject!, { length: 150 })}
+          {truncate(mapping.tenders?.order_object || "", { length: 150 })}
         </motion.h1>
       </Tooltip>
 
@@ -272,18 +294,23 @@ export function TenderHeader(props: TenderHeaderProps) {
             <div className="flex items-center gap-4 text-sm text-muted-foreground">
               <span className="flex items-center gap-2">
                 <House className="w-4 h-4" />
-                {tender.organizationname}
+                {mapping.tenders?.organization_name}
               </span>
-              <span className="flex items-center gap-2">
-                <CalendarClock className="w-4 h-4" />
-                {relativeToNow(new Date(tender.submittingoffersdate!))}
-              </span>
+              {mapping.tenders.submitting_offers_date && (
+                <span className="flex items-center gap-2">
+                  <CalendarClock className="w-4 h-4" />
+                  {relativeToNow(
+                    new Date(mapping.tenders.submitting_offers_date)
+                  )}
+                </span>
+              )}
             </div>
             <HeaderButtons
               {...props}
               commentCount={count}
               restoreTender={restoreTender}
               onUnseen={onUnseen}
+              hasMultipleParts={props.hasMultipleParts}
             />
           </motion.div>
         )}
@@ -299,12 +326,16 @@ export function TenderHeader(props: TenderHeaderProps) {
           <div className="flex items-center gap-4 text-sm text-muted-foreground">
             <span className="flex items-center gap-1">
               <House className="w-3 h-3" />
-              {tender.organizationname}
+              {mapping.tenders?.organization_name}
             </span>
-            <span className="flex items-center gap-1">
-              <CalendarClock className="w-3 h-3" />
-              {relativeToNow(new Date(tender.submittingoffersdate!))}
-            </span>
+            {mapping.tenders.submitting_offers_date && (
+              <span className="flex items-center gap-1">
+                <CalendarClock className="w-3 h-3" />
+                {relativeToNow(
+                  new Date(mapping.tenders.submitting_offers_date)
+                )}
+              </span>
+            )}
           </div>
 
           <HeaderButtons
@@ -314,6 +345,7 @@ export function TenderHeader(props: TenderHeaderProps) {
             size="sm"
             onUnseen={onUnseen}
             onApply={props.onApply}
+            hasMultipleParts={props.hasMultipleParts}
           />
         </motion.div>
       )}

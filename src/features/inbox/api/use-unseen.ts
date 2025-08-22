@@ -17,17 +17,17 @@ export function useUnseen(
   });
 
   return useMutation({
-    mutationFn: async (id: string) => {
+    mutationFn: async (mappingId: string) => {
       const { error } = await client
-        .from("tenders")
+        .from("companies_tenders_mappings")
         .update({
           seen_at: null,
           updated_at: new Date().toISOString(),
         })
-        .eq("id", id);
+        .eq("id", mappingId);
 
       if (error) throw error;
-      updateSeenAt(id, null);
+      updateSeenAt(mappingId, null);
     },
     ...options,
   });

@@ -16,79 +16,160 @@ export type Database = {
     Tables: {
       catalogue_products: {
         Row: {
-          company_id: string | null
+          catalogue_id: string | null
           created_at: string | null
           description: string | null
           id: string
           legacy_id: number | null
           name: string | null
           specifications: string | null
+          subcategory_id: string | null
           updated_at: string | null
         }
         Insert: {
-          company_id?: string | null
-          created_at?: string | null
-          description?: string | null
-          id: string
-          legacy_id?: number | null
-          name?: string | null
-          specifications?: string | null
-          updated_at?: string | null
-        }
-        Update: {
-          company_id?: string | null
+          catalogue_id?: string | null
           created_at?: string | null
           description?: string | null
           id?: string
           legacy_id?: number | null
           name?: string | null
           specifications?: string | null
+          subcategory_id?: string | null
+          updated_at?: string | null
+        }
+        Update: {
+          catalogue_id?: string | null
+          created_at?: string | null
+          description?: string | null
+          id?: string
+          legacy_id?: number | null
+          name?: string | null
+          specifications?: string | null
+          subcategory_id?: string | null
           updated_at?: string | null
         }
         Relationships: [
           {
-            foreignKeyName: "catalogue_products_company_id_fkey"
-            columns: ["company_id"]
+            foreignKeyName: "catalogue_products_catalogue_id_fkey"
+            columns: ["catalogue_id"]
             isOneToOne: false
             referencedRelation: "companies_catalogues"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "catalogue_products_subcategory_id_fkey"
+            columns: ["subcategory_id"]
+            isOneToOne: false
+            referencedRelation: "product_catalogues_subcategories"
             referencedColumns: ["id"]
           },
         ]
       }
       comments: {
         Row: {
+          company_mapping_id: string | null
           created_at: string | null
           id: string
-          tender_id: string | null
           text: string | null
           user_id: string | null
         }
         Insert: {
+          company_mapping_id?: string | null
           created_at?: string | null
           id?: string
-          tender_id?: string | null
           text?: string | null
           user_id?: string | null
         }
         Update: {
+          company_mapping_id?: string | null
           created_at?: string | null
           id?: string
-          tender_id?: string | null
           text?: string | null
           user_id?: string | null
         }
         Relationships: [
           {
-            foreignKeyName: "comments_tender_id_fkey"
-            columns: ["tender_id"]
+            foreignKeyName: "comments_company_mapping_id_fkey"
+            columns: ["company_mapping_id"]
             isOneToOne: false
-            referencedRelation: "tenders"
+            referencedRelation: "companies_tenders_mappings"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "comments_user_id_fkey"
+            columns: ["user_id"]
+            isOneToOne: false
+            referencedRelation: "profiles"
             referencedColumns: ["id"]
           },
         ]
       }
+      companies: {
+        Row: {
+          company_bank: string | null
+          company_city: string | null
+          company_name: string | null
+          company_postcode: string | null
+          company_representative_name: string | null
+          company_representative_phone: string | null
+          company_size: string | null
+          company_street: string | null
+          company_type_law: string | null
+          company_voivodship: string | null
+          first_time_login: boolean
+          id: string
+          krs: number | null
+          nip: number | null
+          offer_rejection_feedback: string | null
+          profile_feedback: string | null
+          regon: number | null
+          web: string | null
+        }
+        Insert: {
+          company_bank?: string | null
+          company_city?: string | null
+          company_name?: string | null
+          company_postcode?: string | null
+          company_representative_name?: string | null
+          company_representative_phone?: string | null
+          company_size?: string | null
+          company_street?: string | null
+          company_type_law?: string | null
+          company_voivodship?: string | null
+          first_time_login?: boolean
+          id?: string
+          krs?: number | null
+          nip?: number | null
+          offer_rejection_feedback?: string | null
+          profile_feedback?: string | null
+          regon?: number | null
+          web?: string | null
+        }
+        Update: {
+          company_bank?: string | null
+          company_city?: string | null
+          company_name?: string | null
+          company_postcode?: string | null
+          company_representative_name?: string | null
+          company_representative_phone?: string | null
+          company_size?: string | null
+          company_street?: string | null
+          company_type_law?: string | null
+          company_voivodship?: string | null
+          first_time_login?: boolean
+          id?: string
+          krs?: number | null
+          nip?: number | null
+          offer_rejection_feedback?: string | null
+          profile_feedback?: string | null
+          regon?: number | null
+          web?: string | null
+        }
+        Relationships: []
+      }
       companies_catalogues: {
         Row: {
+          company_id: string | null
           created_at: string | null
           custom_rules: string | null
           customer_email: string | null
@@ -99,16 +180,18 @@ export type Database = {
           updated_at: string | null
         }
         Insert: {
+          company_id?: string | null
           created_at?: string | null
           custom_rules?: string | null
           customer_email?: string | null
           general_information?: Json | null
-          id: string
+          id?: string
           name?: string | null
           type?: string | null
           updated_at?: string | null
         }
         Update: {
+          company_id?: string | null
           created_at?: string | null
           custom_rules?: string | null
           customer_email?: string | null
@@ -120,102 +203,52 @@ export type Database = {
         }
         Relationships: [
           {
-            foreignKeyName: "companies_catalogues_customer_email_fkey"
-            columns: ["customer_email"]
+            foreignKeyName: "companies_catalogues_company_id_fkey"
+            columns: ["company_id"]
             isOneToOne: false
-            referencedRelation: "customers"
-            referencedColumns: ["company_email"]
+            referencedRelation: "companies"
+            referencedColumns: ["id"]
           },
         ]
       }
-      customers: {
+      companies_tenders_mappings: {
         Row: {
-          catalogue: Json | null
-          company: string | null
-          company_bank: string | null
-          company_city: string | null
-          company_email: string
-          company_postcode: string | null
-          company_representative_name: string | null
-          company_representative_phone: string | null
-          company_size: string | null
-          company_street: string | null
-          company_type_law: string | null
-          company_voivodship: string | null
-          first_time_login: boolean
-          krs: number | null
-          nip: number | null
-          offer_rejection_feedback: string | null
-          profile_feedback: string | null
-          regon: number | null
-          web: string | null
-        }
-        Insert: {
-          catalogue?: Json | null
-          company?: string | null
-          company_bank?: string | null
-          company_city?: string | null
-          company_email: string
-          company_postcode?: string | null
-          company_representative_name?: string | null
-          company_representative_phone?: string | null
-          company_size?: string | null
-          company_street?: string | null
-          company_type_law?: string | null
-          company_voivodship?: string | null
-          first_time_login?: boolean
-          krs?: number | null
-          nip?: number | null
-          offer_rejection_feedback?: string | null
-          profile_feedback?: string | null
-          regon?: number | null
-          web?: string | null
-        }
-        Update: {
-          catalogue?: Json | null
-          company?: string | null
-          company_bank?: string | null
-          company_city?: string | null
-          company_email?: string
-          company_postcode?: string | null
-          company_representative_name?: string | null
-          company_representative_phone?: string | null
-          company_size?: string | null
-          company_street?: string | null
-          company_type_law?: string | null
-          company_voivodship?: string | null
-          first_time_login?: boolean
-          krs?: number | null
-          nip?: number | null
-          offer_rejection_feedback?: string | null
-          profile_feedback?: string | null
-          regon?: number | null
-          web?: string | null
-        }
-        Relationships: []
-      }
-      document_questions: {
-        Row: {
-          answer: string | null
-          id: number
-          question: string
+          can_participate: boolean | null
+          company_id: string | null
+          created_at: string
+          id: string
+          seen_at: string | null
+          status: string | null
           tender_id: string | null
         }
         Insert: {
-          answer?: string | null
-          id?: number
-          question: string
+          can_participate?: boolean | null
+          company_id?: string | null
+          created_at?: string
+          id?: string
+          seen_at?: string | null
+          status?: string | null
           tender_id?: string | null
         }
         Update: {
-          answer?: string | null
-          id?: number
-          question?: string
+          can_participate?: boolean | null
+          company_id?: string | null
+          created_at?: string
+          id?: string
+          seen_at?: string | null
+          status?: string | null
           tender_id?: string | null
         }
         Relationships: [
           {
-            foreignKeyName: "document_questions_tender_id_fkey"
+            foreignKeyName: "companies_tenders_mappings_company_id_fkey"
+            columns: ["company_id"]
+            isOneToOne: false
+            referencedRelation: "companies"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "companies_tenders_mappings_tender_id_fkey"
             columns: ["tender_id"]
             isOneToOne: false
             referencedRelation: "tenders"
@@ -223,58 +256,52 @@ export type Database = {
           },
         ]
       }
-      documents: {
+      document_questions: {
         Row: {
-          created_at: string
-          fillable: boolean | null
-          id: number
-          info: string | null
-          s3_path: string | null
-          tender_id: string | null
+          answer: string | null
+          company_mapping_id: string | null
+          id: string
+          question: string
         }
         Insert: {
-          created_at: string
-          fillable?: boolean | null
-          id?: number
-          info?: string | null
-          s3_path?: string | null
-          tender_id?: string | null
+          answer?: string | null
+          company_mapping_id?: string | null
+          id?: string
+          question: string
         }
         Update: {
-          created_at?: string
-          fillable?: boolean | null
-          id?: number
-          info?: string | null
-          s3_path?: string | null
-          tender_id?: string | null
+          answer?: string | null
+          company_mapping_id?: string | null
+          id?: string
+          question?: string
         }
         Relationships: [
           {
-            foreignKeyName: "documents_tender_id_fkey"
-            columns: ["tender_id"]
+            foreignKeyName: "document_questions_company_mapping_id_fkey"
+            columns: ["company_mapping_id"]
             isOneToOne: false
-            referencedRelation: "tenders"
+            referencedRelation: "companies_tenders_mappings"
             referencedColumns: ["id"]
           },
         ]
       }
       product_catalogues_categories: {
         Row: {
-          company_id: string | null
+          catalogue_id: string | null
           created_at: string | null
           description: string | null
           id: string
           name: string | null
         }
         Insert: {
-          company_id?: string | null
+          catalogue_id?: string | null
           created_at?: string | null
           description?: string | null
-          id: string
+          id?: string
           name?: string | null
         }
         Update: {
-          company_id?: string | null
+          catalogue_id?: string | null
           created_at?: string | null
           description?: string | null
           id?: string
@@ -282,28 +309,13 @@ export type Database = {
         }
         Relationships: [
           {
-            foreignKeyName: "product_catalogues_categories_company_id_fkey"
-            columns: ["company_id"]
+            foreignKeyName: "product_catalogues_categories_catalogue_id_fkey"
+            columns: ["catalogue_id"]
             isOneToOne: false
             referencedRelation: "companies_catalogues"
             referencedColumns: ["id"]
           },
         ]
-      }
-      product_catalogues_customers: {
-        Row: {
-          created_at: string
-          id: number
-        }
-        Insert: {
-          created_at?: string
-          id?: number
-        }
-        Update: {
-          created_at?: string
-          id?: number
-        }
-        Relationships: []
       }
       product_catalogues_subcategories: {
         Row: {
@@ -315,7 +327,7 @@ export type Database = {
         Insert: {
           category_id?: string | null
           created_at?: string | null
-          id: string
+          id?: string
           name?: string | null
         }
         Update: {
@@ -334,44 +346,9 @@ export type Database = {
           },
         ]
       }
-      product_subcategory_mappings: {
-        Row: {
-          created_at: string | null
-          id: string
-          product_id: string | null
-          subcategory_id: string | null
-        }
-        Insert: {
-          created_at?: string | null
-          id: string
-          product_id?: string | null
-          subcategory_id?: string | null
-        }
-        Update: {
-          created_at?: string | null
-          id?: string
-          product_id?: string | null
-          subcategory_id?: string | null
-        }
-        Relationships: [
-          {
-            foreignKeyName: "product_subcategory_mappings_product_id_fkey"
-            columns: ["product_id"]
-            isOneToOne: false
-            referencedRelation: "catalogue_products"
-            referencedColumns: ["id"]
-          },
-          {
-            foreignKeyName: "product_subcategory_mappings_subcategory_id_fkey"
-            columns: ["subcategory_id"]
-            isOneToOne: false
-            referencedRelation: "product_catalogues_subcategories"
-            referencedColumns: ["id"]
-          },
-        ]
-      }
       profiles: {
         Row: {
+          company_id: string | null
           customer: string | null
           first_name: string | null
           id: string
@@ -379,6 +356,7 @@ export type Database = {
           preferred_locale: string | null
         }
         Insert: {
+          company_id?: string | null
           customer?: string | null
           first_name?: string | null
           id: string
@@ -386,6 +364,7 @@ export type Database = {
           preferred_locale?: string | null
         }
         Update: {
+          company_id?: string | null
           customer?: string | null
           first_name?: string | null
           id?: string
@@ -394,123 +373,152 @@ export type Database = {
         }
         Relationships: [
           {
-            foreignKeyName: "fk_profiles_customer"
-            columns: ["customer"]
+            foreignKeyName: "profiles_company_id_fkey"
+            columns: ["company_id"]
             isOneToOne: false
-            referencedRelation: "customers"
-            referencedColumns: ["company"]
+            referencedRelation: "companies"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      tender_company_file: {
+        Row: {
+          comment: string | null
+          company_tender_mapping_id: string | null
+          created_at: string
+          file_type: string | null
+          id: string
+          s3path: string | null
+          signable: boolean
+          signature_type: string[] | null
+        }
+        Insert: {
+          comment?: string | null
+          company_tender_mapping_id?: string | null
+          created_at?: string
+          file_type?: string | null
+          id?: string
+          s3path?: string | null
+          signable?: boolean
+          signature_type?: string[] | null
+        }
+        Update: {
+          comment?: string | null
+          company_tender_mapping_id?: string | null
+          created_at?: string
+          file_type?: string | null
+          id?: string
+          s3path?: string | null
+          signable?: boolean
+          signature_type?: string[] | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "tender_company_file_company_tender_mapping_id_fkey"
+            columns: ["company_tender_mapping_id"]
+            isOneToOne: false
+            referencedRelation: "companies_tenders_mappings"
+            referencedColumns: ["id"]
           },
         ]
       }
       tender_parts: {
         Row: {
           can_participate: boolean | null
+          company_mapping_id: string | null
           created_at: string
           description_part_long_llm: string | null
-          met_requirements: Json[] | null
-          needs_confirmation_requirements: Json[] | null
-          not_met_requirements: Json[] | null
+          id: string
+          order_number: number | null
           ordercompletiondate_llm: string | null
-          part_id: number | null
           part_name: string | null
-          part_uuid: string
           review_criteria_llm: string | null
           status: string
-          tender_id: string | null
           wadium_llm: string | null
         }
         Insert: {
           can_participate?: boolean | null
+          company_mapping_id?: string | null
           created_at?: string
           description_part_long_llm?: string | null
-          met_requirements?: Json[] | null
-          needs_confirmation_requirements?: Json[] | null
-          not_met_requirements?: Json[] | null
+          id?: string
+          order_number?: number | null
           ordercompletiondate_llm?: string | null
-          part_id?: number | null
           part_name?: string | null
-          part_uuid?: string
           review_criteria_llm?: string | null
           status: string
-          tender_id?: string | null
           wadium_llm?: string | null
         }
         Update: {
           can_participate?: boolean | null
+          company_mapping_id?: string | null
           created_at?: string
           description_part_long_llm?: string | null
-          met_requirements?: Json[] | null
-          needs_confirmation_requirements?: Json[] | null
-          not_met_requirements?: Json[] | null
+          id?: string
+          order_number?: number | null
           ordercompletiondate_llm?: string | null
-          part_id?: number | null
           part_name?: string | null
-          part_uuid?: string
           review_criteria_llm?: string | null
           status?: string
-          tender_id?: string | null
           wadium_llm?: string | null
         }
         Relationships: [
           {
-            foreignKeyName: "tender_parts_tender_id_fkey"
-            columns: ["tender_id"]
+            foreignKeyName: "tender_parts_company_mapping_id_fkey"
+            columns: ["company_mapping_id"]
             isOneToOne: false
-            referencedRelation: "tenders"
+            referencedRelation: "companies_tenders_mappings"
             referencedColumns: ["id"]
           },
         ]
       }
       tender_products: {
         Row: {
-          alternative_products: string | null
+          alternative_products: Json | null
           closest_match: string | null
           created_at: string
-          id: number
-          part_uuid: string
+          id: string
+          part_id: string
           product_req_name: string | null
           product_req_quantity: string | null
           product_req_spec: string | null
           requirements_to_confirm: string | null
-          tender_id: string | null
         }
         Insert: {
-          alternative_products?: string | null
+          alternative_products?: Json | null
           closest_match?: string | null
           created_at?: string
-          id?: number
-          part_uuid: string
+          id?: string
+          part_id: string
           product_req_name?: string | null
           product_req_quantity?: string | null
           product_req_spec?: string | null
           requirements_to_confirm?: string | null
-          tender_id?: string | null
         }
         Update: {
-          alternative_products?: string | null
+          alternative_products?: Json | null
           closest_match?: string | null
           created_at?: string
-          id?: number
-          part_uuid?: string
+          id?: string
+          part_id?: string
           product_req_name?: string | null
           product_req_quantity?: string | null
           product_req_spec?: string | null
           requirements_to_confirm?: string | null
-          tender_id?: string | null
         }
         Relationships: [
           {
-            foreignKeyName: "fk_tender_products_tender_parts"
-            columns: ["part_uuid"]
+            foreignKeyName: "tender_products_closest_match_fkey"
+            columns: ["closest_match"]
             isOneToOne: false
-            referencedRelation: "tender_parts"
-            referencedColumns: ["part_uuid"]
+            referencedRelation: "catalogue_products"
+            referencedColumns: ["id"]
           },
           {
-            foreignKeyName: "fk_tenders_tender_producs"
-            columns: ["tender_id"]
+            foreignKeyName: "tender_products_part_id_fkey"
+            columns: ["part_id"]
             isOneToOne: false
-            referencedRelation: "tenders"
+            referencedRelation: "tender_parts"
             referencedColumns: ["id"]
           },
         ]
@@ -518,44 +526,44 @@ export type Database = {
       tender_requirements: {
         Row: {
           created_at: string
-          part_uuid: string | null
+          id: string
+          part_id: string | null
           reason: string | null
-          req_id: number
           requirement_text: string
           status: string
-          tender_id: string | null
+          tender_product_id: string | null
         }
         Insert: {
           created_at?: string
-          part_uuid?: string | null
+          id?: string
+          part_id?: string | null
           reason?: string | null
-          req_id?: number
           requirement_text: string
           status?: string
-          tender_id?: string | null
+          tender_product_id?: string | null
         }
         Update: {
           created_at?: string
-          part_uuid?: string | null
+          id?: string
+          part_id?: string | null
           reason?: string | null
-          req_id?: number
           requirement_text?: string
           status?: string
-          tender_id?: string | null
+          tender_product_id?: string | null
         }
         Relationships: [
           {
-            foreignKeyName: "tender_requirements_part_uuid_fkey"
-            columns: ["part_uuid"]
+            foreignKeyName: "tender_requirements_part_id_fkey"
+            columns: ["part_id"]
             isOneToOne: false
             referencedRelation: "tender_parts"
-            referencedColumns: ["part_uuid"]
+            referencedColumns: ["id"]
           },
           {
-            foreignKeyName: "tender_requirements_tender_id_fkey"
-            columns: ["tender_id"]
+            foreignKeyName: "tender_requirements_tender_product_id_fkey"
+            columns: ["tender_product_id"]
             isOneToOne: false
-            referencedRelation: "tenders"
+            referencedRelation: "tender_products"
             referencedColumns: ["id"]
           },
         ]
@@ -563,27 +571,20 @@ export type Database = {
       tenders: {
         Row: {
           application_form_llm: string | null
-          can_participate: boolean | null
           company: string
           contract_penalties_llm: string | null
           created_at: string | null
           deposit_llm: string | null
           description_long_llm: string | null
-          has_parts: boolean | null
           id: string
-          met_requirements: Json[] | null
-          needs_confirmation_requirements: Json[] | null
-          not_met_requirements: Json[] | null
-          ordercompletiondate_llm: string | null
-          orderobject: string | null
-          organizationcity: string | null
-          organizationname: string | null
+          order_completion_date_llm: string | null
+          order_object: string | null
+          organization_city: string | null
+          organization_name: string | null
           payment_terms_llm: string | null
-          publicationdate: string | null
+          publication_date: string | null
           review_criteria_llm: string | null
-          seen_at: string | null
-          status: string
-          submittingoffersdate: string | null
+          submitting_offers_date: string | null
           updated_at: string | null
           url: string | null
           url_user: string | null
@@ -592,27 +593,20 @@ export type Database = {
         }
         Insert: {
           application_form_llm?: string | null
-          can_participate?: boolean | null
           company: string
           contract_penalties_llm?: string | null
           created_at?: string | null
           deposit_llm?: string | null
           description_long_llm?: string | null
-          has_parts?: boolean | null
           id?: string
-          met_requirements?: Json[] | null
-          needs_confirmation_requirements?: Json[] | null
-          not_met_requirements?: Json[] | null
-          ordercompletiondate_llm?: string | null
-          orderobject?: string | null
-          organizationcity?: string | null
-          organizationname?: string | null
+          order_completion_date_llm?: string | null
+          order_object?: string | null
+          organization_city?: string | null
+          organization_name?: string | null
           payment_terms_llm?: string | null
-          publicationdate?: string | null
+          publication_date?: string | null
           review_criteria_llm?: string | null
-          seen_at?: string | null
-          status: string
-          submittingoffersdate?: string | null
+          submitting_offers_date?: string | null
           updated_at?: string | null
           url?: string | null
           url_user?: string | null
@@ -621,27 +615,20 @@ export type Database = {
         }
         Update: {
           application_form_llm?: string | null
-          can_participate?: boolean | null
           company?: string
           contract_penalties_llm?: string | null
           created_at?: string | null
           deposit_llm?: string | null
           description_long_llm?: string | null
-          has_parts?: boolean | null
           id?: string
-          met_requirements?: Json[] | null
-          needs_confirmation_requirements?: Json[] | null
-          not_met_requirements?: Json[] | null
-          ordercompletiondate_llm?: string | null
-          orderobject?: string | null
-          organizationcity?: string | null
-          organizationname?: string | null
+          order_completion_date_llm?: string | null
+          order_object?: string | null
+          organization_city?: string | null
+          organization_name?: string | null
           payment_terms_llm?: string | null
-          publicationdate?: string | null
+          publication_date?: string | null
           review_criteria_llm?: string | null
-          seen_at?: string | null
-          status?: string
-          submittingoffersdate?: string | null
+          submitting_offers_date?: string | null
           updated_at?: string | null
           url?: string | null
           url_user?: string | null
@@ -663,12 +650,25 @@ export type Database = {
         Args: Record<PropertyKey, never>
         Returns: string
       }
+      get_tenders_summary: {
+        Args: { p_company_id: string }
+        Returns: Database["public"]["CompositeTypes"]["tenders_summary_type"]
+      }
+      get_weekly_tenders_by_company: {
+        Args: { p_company?: string; p_no_of_weeks?: number }
+        Returns: {
+          json_response: Json
+        }[]
+      }
     }
     Enums: {
       [_ in never]: never
     }
     CompositeTypes: {
-      [_ in never]: never
+      tenders_summary_type: {
+        found_today: number | null
+        expiring_this_week: number | null
+      }
     }
   }
 }

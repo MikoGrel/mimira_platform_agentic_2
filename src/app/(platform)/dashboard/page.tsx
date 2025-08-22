@@ -8,10 +8,12 @@ import {
   LastTenderBento,
   DeadlineCalendarBento,
 } from "$/features/hub";
+import { useDailySummary } from "$/features/stats/api/use-daily-summary";
 import { AnimatePresence, motion } from "motion/react";
 
 export default function DashboardPage() {
   const { user, isLoading } = useCurrentUser();
+  const { data: dailySummary } = useDailySummary();
 
   return (
     <main className="w-full bg-gradient-to-b from-primary/5 to-transparent">
@@ -42,7 +44,8 @@ export default function DashboardPage() {
           </div>
           <p className="max-w-[75%] text-muted-foreground">
             Today&apos;s briefing: Since yesterday we&apos;ve managed to find
-            you 5 new tenders, 3 require your attention.
+            you {dailySummary?.found_today ?? "..."} new tenders,{" "}
+            {dailySummary?.expiring_this_week ?? "..."} require your attention.
           </p>
         </header>
 

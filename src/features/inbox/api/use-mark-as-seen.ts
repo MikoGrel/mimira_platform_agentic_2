@@ -10,7 +10,7 @@ export function useMarkAsSeen(
   return useMutation({
     mutationFn: async (id: string) => {
       const { error } = await client
-        .from("tenders")
+        .from("companies_tenders_mappings")
         .update({
           seen_at: new Date().toISOString(),
         })

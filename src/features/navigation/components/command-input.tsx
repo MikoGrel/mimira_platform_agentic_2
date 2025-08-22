@@ -14,7 +14,7 @@ export function CommandInput() {
       <Input
         onFocus={() => setCommandOpen(true)}
         placeholder="Search..."
-        className="w-64 pl-8 bg-white border-sidebar-border text-sidebar-foreground placeholder:text-sidebar-foreground/70"
+        className="w-64 pl-8 bg-background border-sidebar-border text-sidebar-foreground placeholder:text-sidebar-foreground/70"
       />
       <Kbd
         keys={["command"]}

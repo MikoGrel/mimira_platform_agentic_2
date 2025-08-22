@@ -10,15 +10,15 @@ export function useCommandSearch(search: string) {
     queryFn: async () => {
       const trimmed = search.trim();
       const { data, error } = await client
-        .from("tenders")
-        .select("id, orderobject, status")
-        .textSearch("orderobject", trimmed, { type: "phrase" })
-        .eq("company", user!.profile!.customer!)
+        .from("companies_tenders_mappings")
+        .select("id, tenders(order_object), status")
+        .textSearch("tenders.order_object", trimmed, { type: "phrase" })
+        .eq("company_id", user!.profile!.company_id!)
         .eq("can_participate", true)
         .limit(20);
       if (error) throw error;
       return data;
     },
-    enabled: search.trim().length > 3 && !!user?.profile?.customer,
+    enabled: search.trim().length > 3 && !!user?.profile?.company_id,
   });
 }

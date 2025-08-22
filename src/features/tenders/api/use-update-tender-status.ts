@@ -2,7 +2,10 @@
 
 import { createClient } from "$/lib/supabase/client";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
-import { Tables } from "$/types/supabase";
+import {
+  IndividualTenderMapping,
+  IndividualTenderPart,
+} from "./use-individual-tender";
 
 export function useUpdateTenderStatus() {
   const client = createClient();
@@ -10,23 +13,23 @@ export function useUpdateTenderStatus() {
 
   return useMutation({
     mutationFn: async ({
-      tenderId,
+      mappingId,
       status,
       partIds,
       partsStatus,
     }: {
-      tenderId: string;
-      status: Tables<"tenders">["status"];
+      mappingId: string;
+      status: IndividualTenderMapping["status"];
       partIds?: string[];
-      partsStatus?: Tables<"tender_parts">["status"];
+      partsStatus?: IndividualTenderPart["status"];
     }) => {
       const { data, error } = await client
-        .from("tenders")
+        .from("companies_tenders_mappings")
         .update({
           status,
           updated_at: new Date().toISOString(),
         })
-        .eq("id", tenderId);
+        .eq("id", mappingId);
 
       if (error) {
         throw error;
@@ -48,10 +51,10 @@ export function useUpdateTenderStatus() {
 
       return data;
     },
-    onSuccess: (_, { tenderId }) => {
+    onSuccess: (_, { mappingId }) => {
       queryClient.invalidateQueries({ queryKey: ["tenders"] });
       queryClient.invalidateQueries({ queryKey: ["tenders-list"] });
-      queryClient.invalidateQueries({ queryKey: ["tender", tenderId] });
+      queryClient.invalidateQueries({ queryKey: ["tender", mappingId] });
     },
   });
 }

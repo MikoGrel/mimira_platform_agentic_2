@@ -25,8 +25,8 @@ import {
   X,
 } from "lucide-react";
 import { useTendersList, useUpdateTenderStatus } from "../api";
-import type { TenderWithParts } from "../api/use-tenders-list";
 import { FilterQuery } from "$/features/inbox/hooks/use-filter-form";
+import { IndividualTenderMapping } from "../api/use-individual-tender";
 
 const COLUMNS = [
   {
@@ -79,7 +79,7 @@ type ColumnDragData = {
 
 type TaskDragData = {
   type: "Task";
-  task: TenderWithParts;
+  task: IndividualTenderMapping;
 };
 
 type DraggableData = ColumnDragData | TaskDragData;
@@ -123,8 +123,8 @@ export function TenderKanban({ searchQuery, filterQuery }: TenderKanbanProps) {
   // Use server-backed list directly so optimistic updates reflect immediately
   const allTenders = useMemo(() => fetchedTenders, [fetchedTenders]);
 
-  const tendersByColumn = useMemo(() => {
-    const grouped: Record<ColumnId, TenderWithParts[]> = {
+  const mappingsByColumn = useMemo(() => {
+    const grouped: Record<ColumnId, IndividualTenderMapping[]> = {
       analysis: [],
       questions: [],
       documents: [],
@@ -132,21 +132,21 @@ export function TenderKanban({ searchQuery, filterQuery }: TenderKanbanProps) {
       rejected: [],
     };
 
-    allTenders.forEach((tender) => {
+    allTenders.forEach((mapping) => {
       const column = COLUMNS.find((col) =>
-        col.statuses.some((status) => status === tender.status)
+        col.statuses.some((status) => status === mapping.status)
       );
       if (column) {
-        grouped[column.id].push(tender);
+        grouped[column.id].push(mapping);
       }
     });
 
     return grouped;
   }, [allTenders]);
 
-  const activeTender = useMemo(() => {
+  const activeMapping = useMemo(() => {
     if (!activeId) return null;
-    return allTenders.find((tender) => tender.id === activeId) || null;
+    return allTenders.find((mapping) => mapping.id === activeId) || null;
   }, [activeId, allTenders]);
 
   const sensors = useSensors(
@@ -160,10 +160,12 @@ export function TenderKanban({ searchQuery, filterQuery }: TenderKanbanProps) {
     })
   );
 
-  const getColumnForTender = (tender: TenderWithParts) => {
+  const getColumnForTender = (mapping: IndividualTenderMapping) => {
     return (
       COLUMNS.find((col) =>
-        (col.statuses as readonly string[]).includes(tender.status)
+        (col.statuses as readonly string[]).includes(
+          mapping.status ?? "default"
+        )
       ) || COLUMNS[0]
     ); // Default to first column
   };
@@ -198,8 +200,8 @@ export function TenderKanban({ searchQuery, filterQuery }: TenderKanbanProps) {
 
     // Im dropping a Task over another Task
     if (isActiveATask && isOverATask) {
-      const activeTask = allTenders.find((t) => t.id === activeId);
-      const overTask = allTenders.find((t) => t.id === overId);
+      const activeTask = allTenders.find((m) => m.id === activeId);
+      const overTask = allTenders.find((m) => m.id === overId);
 
       if (activeTask && overTask) {
         const activeColumn = getColumnForTender(activeTask);
@@ -209,7 +211,7 @@ export function TenderKanban({ searchQuery, filterQuery }: TenderKanbanProps) {
           const newStatus = overColumn.statuses[0];
           optimisticUpdate(activeId as string, newStatus);
           updateTenderStatus.mutate({
-            tenderId: activeId as string,
+            mappingId: activeId as string,
             status: newStatus,
           });
         } else {
@@ -222,7 +224,7 @@ export function TenderKanban({ searchQuery, filterQuery }: TenderKanbanProps) {
 
     // Im dropping a Task over a column
     if (isActiveATask && isOverAColumn) {
-      const activeTask = allTenders.find((t) => t.id === activeId);
+      const activeTask = allTenders.find((m) => m.id === activeId);
 
       if (activeTask) {
         const targetColumn = COLUMNS.find((col) => col.id === overId);
@@ -230,7 +232,7 @@ export function TenderKanban({ searchQuery, filterQuery }: TenderKanbanProps) {
           const newStatus = targetColumn.statuses[0];
           optimisticUpdate(activeId as string, newStatus);
           updateTenderStatus.mutate({
-            tenderId: activeId as string,
+            mappingId: activeId as string,
             status: newStatus,
           });
         }
@@ -258,7 +260,7 @@ export function TenderKanban({ searchQuery, filterQuery }: TenderKanbanProps) {
             key={column.id}
             id={column.id}
             title={column.title}
-            tenders={tendersByColumn[column.id]}
+            mappings={mappingsByColumn[column.id]}
             icon={column.icon}
             iconColor={column.color}
             isLoading={isLoading}
@@ -266,7 +268,9 @@ export function TenderKanban({ searchQuery, filterQuery }: TenderKanbanProps) {
         ))}
       </div>
       <DragOverlay dropAnimation={null}>
-        {activeTender ? <TenderCard tender={activeTender} isDragging /> : null}
+        {activeMapping ? (
+          <TenderCard mapping={activeMapping} isDragging />
+        ) : null}
       </DragOverlay>
     </DndContext>
   );

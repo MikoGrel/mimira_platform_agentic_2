@@ -1,17 +1,15 @@
 "use client";
 
 import { ProductConfirmation } from "./product-confirmation";
-import {
-  IndividualTender,
-  IndividualTenderPart,
-} from "$/features/tenders/api/use-individual-tender";
 import React, { useEffect, useState } from "react";
+import { InboxTenderMapping } from "$/features/inbox/api/use-tender-inbox-query";
+import { InboxTenderPart } from "$/features/inbox/api/use-tender-inbox-query";
 
 /**
  * Determines if the next button should be enabled based on confirmation state
  */
 const shouldEnableNextButton = (
-  item: IndividualTender | IndividualTenderPart | null | undefined,
+  item: InboxTenderMapping | InboxTenderPart | null | undefined,
   confirmedProducts: Set<string>,
   isPartItem: boolean
 ): boolean => {
@@ -31,7 +29,7 @@ const shouldEnableNextButton = (
 };
 
 interface ConfirmationsStepProps {
-  item: IndividualTender | IndividualTenderPart | null | undefined;
+  item: InboxTenderMapping | InboxTenderPart | null | undefined;
   onConfirmationChange?: (confirmedProducts: Set<string>) => void;
   setNextEnabled?: (enabled: boolean) => void;
   onNextHandler?: React.MutableRefObject<(() => Promise<void>) | null>;
@@ -47,8 +45,8 @@ export function ConfirmationsStep({
     new Set()
   );
 
-  const isTenderPart = (x: typeof item): x is IndividualTenderPart =>
-    x !== null && x !== undefined && "part_uuid" in x;
+  const isTenderPart = (x: typeof item): x is InboxTenderPart =>
+    x !== null && x !== undefined && "part_id" in x;
 
   const isPartItem = isTenderPart(item);
 

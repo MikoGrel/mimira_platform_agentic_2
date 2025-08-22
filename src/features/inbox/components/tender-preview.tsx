@@ -9,13 +9,17 @@ import { TenderHeader } from "./tender-header";
 import dynamic from "next/dynamic";
 import { OverviewSection } from "./overview-section";
 import { ProductsSection } from "./products-section";
-import { isEmpty } from "lodash-es";
+
 import { useRejectTender } from "../api/use-reject-tender";
 import { getRequirements } from "../utils/compat";
-import { InboxTender, InboxTenderPart } from "../api/use-tender-inbox-query";
+import {
+  InboxTenderMapping,
+  InboxTenderPart,
+} from "../api/use-tender-inbox-query";
 import { useUpdateTenderStatus } from "$/features/tenders/api/use-update-tender-status";
 import { toast } from "sonner";
 import { TenderPartsCarouselSkeleton } from "./tender-parts-carousel-skeleton";
+import { Section } from "./navigation-sidebar";
 
 const TenderPartsCarousel = dynamic(
   () =>
@@ -52,14 +56,14 @@ const DescriptionSection = dynamic(
 );
 
 interface TenderPreviewProps {
-  tender: InboxTender;
+  mapping: InboxTenderMapping;
   showNextTender?: () => void;
-  selectedPart: string | null;
+  selectedPart: InboxTenderPart;
   setSelectedPart: (part: string | null) => void;
 }
 
 export function TenderPreview({
-  tender,
+  mapping,
   selectedPart,
   setSelectedPart,
   showNextTender,
@@ -71,48 +75,36 @@ export function TenderPreview({
   const { mutate: rejectTender } = useRejectTender();
   const { mutate: updateTenderStatus } = useUpdateTenderStatus();
 
-  const isPartSelected = !!selectedPart && selectedPart !== "overview";
-  const hasParts = tender.tender_parts.length > 0;
-
-  function isTenderPart(
-    x: InboxTender | InboxTenderPart | null | undefined
-  ): x is InboxTenderPart {
-    return x !== null && x !== undefined && "part_uuid" in x;
-  }
-
-  const resolvedItem = useMemo(() => {
-    if (!selectedPart) return tender;
-
-    return tender?.tender_parts.find((part) => part.part_uuid === selectedPart);
-  }, [selectedPart, tender]);
+  const hasMultipleParts = mapping.tender_parts.length > 1;
 
   const scrollRef = useRef<HTMLDivElement>(null);
   const isHeaderCollapsed = useScrollTrigger({
-    threshold: hasParts ? 5 : 60,
+    threshold: hasMultipleParts ? 5 : 60,
     containerRef: scrollRef,
   });
 
-  const showDescription = useMemo(() => {
-    if (!isTenderPart(resolvedItem)) return true;
-    return resolvedItem.description_part_long_llm !== "";
-  }, [resolvedItem]);
-
-  const showReviewCriteria = useMemo(() => {
-    if (!isTenderPart(resolvedItem)) return true;
-    return resolvedItem.review_criteria_llm !== "";
-  }, [resolvedItem]);
-
   function handleApprovePart() {
-    if (!isPartSelected || !selectedPart) return;
-    setApprovedPartIds((prev) => new Set(prev).add(selectedPart));
+    setApprovedPartIds((prev) => new Set(prev).add(selectedPart.id));
+  }
+
+  /**
+   * If any part has products, return "analysis"
+   * Otherwise, return "approve"
+   */
+  function getPartsApprovalStatus(parts: InboxTenderPart[]) {
+    return parts.some((p) => p.tender_products.length > 0)
+      ? "analysis"
+      : "approve";
   }
 
   function handleApply(partIds?: string[]) {
     updateTenderStatus({
       status: "analysis",
-      tenderId: tender.id,
+      mappingId: mapping.id,
       partIds,
-      partsStatus: "approved",
+      partsStatus: getPartsApprovalStatus(
+        mapping.tender_parts.filter((p) => partIds?.includes(p.id))
+      ),
     });
 
     toast.success(
@@ -130,16 +122,15 @@ export function TenderPreview({
   }
 
   function handleRemoveCurrentPart() {
-    if (!selectedPart) return;
     setApprovedPartIds((prev) => {
       const next = new Set(prev);
-      next.delete(selectedPart);
+      next.delete(selectedPart.id);
       return next;
     });
   }
 
   function handleReject() {
-    rejectTender(tender.id);
+    rejectTender(mapping.id);
 
     toast.success(
       <span>Tender was rejected successfully, go to archive tab to see it</span>
@@ -148,54 +139,49 @@ export function TenderPreview({
     showNextTender?.();
   }
 
-  const tenderSections = useMemo(() => {
-    return [
-      { id: "overview", label: <span>Overview</span> },
-      { id: "requirements", label: <span>Requirements</span> },
-      { id: "review-criteria", label: <span>Review Criteria</span> },
-      { id: "description", label: <span>Description</span> },
-      { id: "others", label: <span>Additional Info</span> },
-    ];
-  }, []);
-
-  const partSections = useMemo(() => {
+  const sections = useMemo(() => {
     return [
       { id: "products", label: <span>Products</span> },
       { id: "requirements", label: <span>Requirements</span> },
+      mapping.tenders?.review_criteria_llm
+        ? {
+            id: "review-criteria",
+            label: <span>Review Criteria</span>,
+          }
+        : null,
       { id: "description", label: <span>Description</span> },
       { id: "others", label: <span>Additional Info</span> },
-    ];
-  }, []);
+    ].filter(Boolean) as Section[];
+  }, [mapping.tenders?.review_criteria_llm]);
 
   return (
     <section className="h-full w-full">
       <div className="h-full w-full flex flex-col">
         <TenderHeader
-          tender={tender}
+          mapping={mapping}
           isHeaderCollapsed={isHeaderCollapsed}
           setCommentsOpened={setCommentsOpened}
           onApprovePart={handleApprovePart}
           approvedPartIds={approvedPartIds}
           currentPart={{
-            item: isTenderPart(resolvedItem) ? resolvedItem : null,
-            isApproved: Boolean(
-              selectedPart && approvedPartIds.has(selectedPart)
-            ),
+            item: selectedPart,
+            isApproved: approvedPartIds.has(selectedPart.id),
           }}
           onUnselectAll={handleUnselectAll}
           onRemoveCurrentPart={handleRemoveCurrentPart}
           onApply={handleApply}
           onReject={handleReject}
+          hasMultipleParts={hasMultipleParts}
         />
 
         <div className="flex overflow-hidden h-full flex-[1_0_0]">
           <div className="flex-1 flex flex-col">
-            {!isEmpty(tender.tender_parts) && (
-              <div className="border-b sticky top-0 z-30 bg-white px-6">
+            {hasMultipleParts && (
+              <div className="border-b sticky top-0 z-30 bg-background px-6">
                 <TenderPartsCarousel
                   isCollapsed={isHeaderCollapsed}
-                  tenderParts={tender.tender_parts}
-                  selectedPart={selectedPart}
+                  tenderParts={mapping.tender_parts}
+                  selectedPart={selectedPart.id}
                   onPartSelect={setSelectedPart}
                   approvedPartIds={approvedPartIds}
                 />
@@ -203,81 +189,60 @@ export function TenderPreview({
             )}
             <div className="flex-1 overflow-y-auto" ref={scrollRef}>
               <div className="px-6 py-6 grid grid-cols-1 gap-6 w-full">
-                {!isTenderPart(resolvedItem) && (
-                  <OverviewSection
-                    title={
-                      isTenderPart(resolvedItem) ? resolvedItem.part_name : null
-                    }
-                    canParticipate={Boolean(
-                      resolvedItem && resolvedItem.can_participate
-                    )}
-                    wadium={(resolvedItem && resolvedItem.wadium_llm) || ""}
-                    completionDate={
-                      (resolvedItem && resolvedItem.ordercompletiondate_llm) ||
-                      ""
-                    }
-                  />
-                )}
+                <OverviewSection
+                  title={selectedPart.part_name || mapping.tenders.order_object}
+                  canParticipate={Boolean(selectedPart.can_participate)}
+                  wadium={selectedPart.wadium_llm || ""}
+                  completionDate={selectedPart.ordercompletiondate_llm || ""}
+                />
 
-                {isTenderPart(resolvedItem) &&
-                  resolvedItem.tender_products &&
-                  resolvedItem.tender_products.length > 0 && (
-                    <ProductsSection products={resolvedItem.tender_products} />
-                  )}
+                {selectedPart.tender_products && (
+                  <ProductsSection products={selectedPart.tender_products} />
+                )}
                 <RequirementsSection
-                  met_requirements={getRequirements("met", resolvedItem)}
+                  met_requirements={getRequirements("met", selectedPart)}
                   needs_confirmation_requirements={getRequirements(
                     "needs_confirmation",
-                    resolvedItem
+                    selectedPart
                   )}
                   not_met_requirements={getRequirements(
                     "not_met",
-                    resolvedItem
+                    selectedPart
                   )}
                 />
-                {showReviewCriteria && (
-                  <ReviewCriteriaSection
-                    review_criteria_llm={resolvedItem?.review_criteria_llm}
-                  />
-                )}
+                <ReviewCriteriaSection
+                  review_criteria_llm={selectedPart.review_criteria_llm}
+                />
 
-                {showDescription && (
-                  <DescriptionSection
-                    description_long_llm={
-                      isTenderPart(resolvedItem)
-                        ? resolvedItem.description_part_long_llm || ""
-                        : resolvedItem?.description_long_llm || ""
-                    }
-                  />
-                )}
-                {!showDescription && (
-                  <p className="text-sm text-muted-foreground italic">
-                    No description available
-                  </p>
-                )}
+                <DescriptionSection
+                  description_long_llm={
+                    selectedPart.description_part_long_llm ||
+                    mapping.tenders?.description_long_llm ||
+                    ""
+                  }
+                />
 
                 <AdditionalInfoSection
-                  application_form_llm={tender.application_form_llm || ""}
-                  payment_terms_llm={tender.payment_terms_llm || ""}
-                  contract_penalties_llm={tender.contract_penalties_llm || ""}
-                  deposit_llm={tender.deposit_llm || ""}
-                  url={tender.url || ""}
+                  application_form_llm={
+                    mapping.tenders?.application_form_llm || ""
+                  }
+                  payment_terms_llm={mapping.tenders?.payment_terms_llm || ""}
+                  contract_penalties_llm={
+                    mapping.tenders?.contract_penalties_llm || ""
+                  }
+                  deposit_llm={mapping.tenders?.deposit_llm || ""}
+                  url={mapping.tenders?.url || ""}
                 />
               </div>
             </div>
           </div>
 
-          <NavigationSidebar
-            scrollRef={scrollRef}
-            sections={
-              isTenderPart(resolvedItem) ? partSections : tenderSections
-            }
-          />
+          <NavigationSidebar scrollRef={scrollRef} sections={sections} />
 
           <CommentsDrawer
             open={commentsOpened}
             setOpen={setCommentsOpened}
-            tender={tender}
+            mapping={mapping}
           />
         </div>
       </div>

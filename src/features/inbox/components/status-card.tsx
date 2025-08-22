@@ -42,7 +42,7 @@ export function StatusCard({
           </p>
         </div>
         {children && (
-          <div className="text-sm text-foreground/70 whitespace-pre-wrap leading-relaxed">
+          <div className="text-xs text-foreground/70 whitespace-pre-wrap leading-relaxed">
             {children}
           </div>
         )}

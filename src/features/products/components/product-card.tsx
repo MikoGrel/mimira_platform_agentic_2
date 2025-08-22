@@ -10,6 +10,7 @@ import {
   AccordionTrigger,
 } from "$/components/ui/accordion";
 import { InboxTenderProduct } from "$/features/inbox/api/use-tender-inbox-query";
+import { useProducts } from "../api/use-alternative-products";
 
 interface ProductCardProps {
   product: InboxTenderProduct;
@@ -17,20 +18,17 @@ interface ProductCardProps {
 }
 
 export function ProductCard({ product, className }: ProductCardProps) {
-  function splitToList(text?: string | null): string[] {
-    if (!text) return [];
-    return text
-      .split(/\n|;|•|-\s/)
-      .map((t) => t.trim())
-      .filter(Boolean);
-  }
-  const requirementsList = splitToList(product.requirements_to_confirm);
-  const alternativesList = splitToList(product.alternative_products);
+  const { data: alternativeProducts } = useProducts({
+    ids: Array.isArray(product.alternative_products)
+      ? (product.alternative_products as string[])
+      : [],
+  });
+
   const hasDetails = Boolean(
     product.product_req_spec ||
       product.closest_match ||
-      requirementsList.length > 0 ||
-      alternativesList.length > 0
+      product.requirements_to_confirm ||
+      product.alternative_products
   );
 
   return (
@@ -99,7 +97,7 @@ export function ProductCard({ product, className }: ProductCardProps) {
                 </div>
               )}
 
-              {requirementsList.length > 0 && (
+              {product.requirements_to_confirm && (
                 <div className="text-sm space-y-1">
                   <div className="flex items-center gap-2 ">
                     <span className="font-medium text-muted-foreground">
@@ -107,20 +105,12 @@ export function ProductCard({ product, className }: ProductCardProps) {
                     </span>
                   </div>
                   <ul className="space-y-1 pl-2 pt-2">
-                    {requirementsList.map((line, i) => (
-                      <li
-                        key={i}
-                        className="flex items-start gap-2 font-medium"
-                      >
-                        <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-muted-foreground/50" />
-                        <span>{line}</span>
-                      </li>
-                    ))}
+                    {product.requirements_to_confirm}
                   </ul>
                 </div>
               )}
 
-              {alternativesList.length > 0 && (
+              {product.alternative_products && (
                 <div className="text-sm space-y-1">
                   <div className="flex items-center gap-2">
                     <span className="font-medium text-muted-foreground">
@@ -128,13 +118,13 @@ export function ProductCard({ product, className }: ProductCardProps) {
                     </span>
                   </div>
                   <ul className="space-y-1 pl-2 pt-2">
-                    {alternativesList.map((line, i) => (
+                    {alternativeProducts?.map((p) => (
                       <li
-                        key={i}
+                        key={p.id}
                         className="flex items-start gap-2 font-medium"
                       >
                         <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-muted-foreground/50" />
-                        <span>{line}</span>
+                        <span>{p.product_req_name}</span>
                       </li>
                     ))}
                   </ul>

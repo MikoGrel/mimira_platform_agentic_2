@@ -2,8 +2,9 @@
 
 import { Chip } from "@heroui/react";
 import { useFilterForm } from "../hooks/use-filter-form";
+import { cn } from "$/lib/utils";
 
-export function FilterChips() {
+export function FilterChips({ className }: { className?: string }) {
   const { activeFilters, removeFilter } = useFilterForm();
 
   if (activeFilters.length === 0) {
@@ -11,7 +12,7 @@ export function FilterChips() {
   }
 
   return (
-    <div className="flex flex-wrap gap-2 p-2 pl-0 pb-0 mt-2">
+    <div className={cn("flex flex-wrap gap-2 p-2 pl-0 pb-0 mt-2", className)}>
       {activeFilters.map(({ key, label, value }) => (
         <Chip
           key={key}

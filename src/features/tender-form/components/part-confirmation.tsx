@@ -16,7 +16,7 @@ export function PartConfirmation({ part }: PartConfirmationProps) {
   const handleConfirmPart = async () => {
     try {
       await updatePartStatus.mutateAsync({
-        partUuid: part.part_uuid,
+        id: part.id,
         status: "confirmed",
       });
     } catch (error) {
@@ -27,7 +27,7 @@ export function PartConfirmation({ part }: PartConfirmationProps) {
   const handleRejectPart = async () => {
     try {
       await updatePartStatus.mutateAsync({
-        partUuid: part.part_uuid,
+        id: part.id,
         status: "rejected",
       });
     } catch (error) {
@@ -55,7 +55,7 @@ export function PartConfirmation({ part }: PartConfirmationProps) {
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-3">
             <span className="text-base font-medium">
-              {part.part_name || `Part ${part.part_id}`}
+              {part.part_name || `Part ${part.id}`}
             </span>
             <Chip
               size="sm"

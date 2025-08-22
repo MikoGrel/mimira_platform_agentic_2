@@ -5,7 +5,7 @@ import { ChevronLeft, ChevronRight, Hash } from "lucide-react";
 import { useEffect, useState } from "react";
 import { useLocalStorage } from "react-use";
 
-interface Section {
+export interface Section {
   id: string;
   label: React.ReactNode;
 }
@@ -108,7 +108,7 @@ export function NavigationSidebar({
         </nav>
       </div>
       <button
-        className="cursor-pointer absolute top-1/2 -translate-y-1/2 -left-[26px] rounded-r-none py-2 p-1 bg-white rounded-lg border border-sidebar-border"
+        className="cursor-pointer absolute top-1/2 -translate-y-1/2 -left-[26px] rounded-r-none py-2 p-1 bg-background rounded-lg border border-sidebar-border"
         onClick={() => setCollapsed(!collapsed)}
       >
         {collapsed ? (

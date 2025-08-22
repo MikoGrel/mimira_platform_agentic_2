@@ -1,14 +1,12 @@
 "use client";
 
 import { Card, CardContent, CardHeader, CardTitle } from "$/components/ui/card";
-import {
-  IndividualTender,
-  IndividualTenderPart,
-} from "$/features/tenders/api/use-individual-tender";
+import { InboxTenderMapping } from "$/features/inbox/api/use-tender-inbox-query";
+import { InboxTenderPart } from "$/features/inbox/api/use-tender-inbox-query";
 import React from "react";
 
 interface DecisionStepProps {
-  item: IndividualTender | IndividualTenderPart | null | undefined;
+  item: InboxTenderMapping | InboxTenderPart | null | undefined;
   setNextEnabled?: (enabled: boolean) => void;
   onNextHandler?: React.MutableRefObject<(() => Promise<void>) | null>;
 }
@@ -28,9 +26,9 @@ export function DecisionStep({
 
   // Check if item is a tender part
   function isTenderPart(
-    x: IndividualTender | IndividualTenderPart | null | undefined
-  ): x is IndividualTenderPart {
-    return x !== null && x !== undefined && "part_uuid" in x;
+    x: InboxTenderMapping | InboxTenderPart | null | undefined
+  ): x is InboxTenderPart {
+    return x !== null && x !== undefined && "part_id" in x;
   }
 
   const isPart = isTenderPart(item);
@@ -39,7 +37,7 @@ export function DecisionStep({
       <CardHeader>
         <CardTitle>
           {isPart
-            ? `Decision for ${item.part_name || `Part ${item.part_id}`}`
+            ? `Decision for ${item.part_name || `Part ${item.id}`}`
             : "Final Decision"}
         </CardTitle>
       </CardHeader>

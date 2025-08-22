@@ -6,10 +6,7 @@ import Link from "$/components/ui/link";
 import { useParams } from "next/navigation";
 import { useState, useEffect, useMemo, useRef } from "react";
 import { defineStepper } from "$/components/stepper";
-import {
-  IndividualTender,
-  IndividualTenderPart,
-} from "$/features/tenders/api/use-individual-tender";
+import { IndividualTenderPart } from "$/features/tenders/api/use-individual-tender";
 import {
   ConfirmationsStep,
   DataStep,
@@ -17,13 +14,14 @@ import {
   DecisionStep,
   PartsSidebar,
 } from "$/features/tender-form/components";
-import { getApprovedParts } from "$/features/tenders/utils/parts";
 import { hasProductsToConfirm } from "$/features/tenders/utils/confirmation";
+import { getPendingParts } from "$/features/tenders/utils/parts";
 import { Button } from "@heroui/react";
 import React from "react";
 import { useDateFormat } from "$/features/i18n/hooks/use-date-format";
+import { InboxTenderMapping } from "$/features/inbox/api/use-tender-inbox-query";
+import { InboxTenderPart } from "$/features/inbox/api/use-tender-inbox-query";
 
-// Define the stepper with the four steps (removing overview)
 const { Stepper, useStepper } = defineStepper(
   {
     id: "confirmations",
@@ -44,27 +42,25 @@ const { Stepper, useStepper } = defineStepper(
 );
 
 function StepperContent({
-  tender,
+  mapping,
   selectedPart,
   setNextEnabled,
   nextHandlerRef,
 }: {
-  tender?: IndividualTender | null;
-  selectedPart?: IndividualTenderPart | null;
+  mapping?: InboxTenderMapping | null;
+  selectedPart?: InboxTenderPart | null;
   setNextEnabled: (enabled: boolean) => void;
   nextHandlerRef: React.MutableRefObject<(() => Promise<void>) | null>;
 }) {
   const { current, next } = useStepper();
 
   const resolvedItem = useMemo(() => {
-    if (!tender) return null;
-    if (!selectedPart) return tender;
-    return tender?.tender_parts?.find(
-      (part) => part.part_uuid === selectedPart.part_uuid
-    );
-  }, [selectedPart, tender]);
+    if (!mapping) return null;
+    if (!selectedPart) return mapping;
+    return mapping?.tender_parts?.find((part) => part.id === selectedPart.id);
+  }, [selectedPart, mapping]);
 
-  if (!tender) return null;
+  if (!mapping) return null;
 
   const renderStepContent = () => {
     switch (current.id) {
@@ -129,8 +125,8 @@ export default function TenderPage() {
   const [nextEnabled, setNextEnabled] = useState(true);
   const nextHandlerRef = useRef<(() => Promise<void>) | null>(null);
 
-  const { data: tender } = useIndividualTender({
-    tenderId: params.id as string,
+  const { data: mapping } = useIndividualTender({
+    mappingId: params.id as string,
     enabled: true,
   });
 
@@ -142,12 +138,14 @@ export default function TenderPage() {
       ) => void;
     }
   ) => {
-    if (!tender) return;
-    const approvedParts = getApprovedParts(tender);
-    if (!approvedParts) return;
+    if (!mapping) return;
+    const pendingParts = getPendingParts(mapping);
+    if (!pendingParts) return;
 
-    const part = approvedParts.find((p) => p.part_uuid === partId);
+    const part = pendingParts.find((p) => p.id === partId);
     setSelectedPart(part || null);
+
+    if (!part) return;
 
     if (stepperMethods) {
       const newInitialStep = hasProductsToConfirm(part)
@@ -161,15 +159,15 @@ export default function TenderPage() {
   const getStepButtonText = (stepId: string) => {
     switch (stepId) {
       case "confirmations":
-        return "Confirm and continue";
+        return <>Confirm and continue</>;
       case "data":
-        return "Save answers and continue";
+        return <>Save answers and continue</>;
       case "documentation":
-        return "Upload documents and continue";
+        return <>Upload documents and continue</>;
       case "decision":
-        return "Submit decision";
+        return <>Submit decision</>;
       default:
-        return "Next step";
+        return <>Next step</>;
     }
   };
 
@@ -185,10 +183,10 @@ export default function TenderPage() {
   } | null>(null);
 
   useEffect(() => {
-    if (tender && !selectedPart) {
-      const approvedParts = getApprovedParts(tender);
-      if (approvedParts && approvedParts.length > 0) {
-        const firstPart = approvedParts[0];
+    if (mapping && !selectedPart) {
+      const pendingParts = getPendingParts(mapping);
+      if (pendingParts && pendingParts.length > 0) {
+        const firstPart = pendingParts[0];
         setSelectedPart(firstPart);
 
         if (stepperMethodsRef.current) {
@@ -199,7 +197,7 @@ export default function TenderPage() {
         }
       }
     }
-  }, [tender, selectedPart]);
+  }, [mapping, selectedPart]);
 
   useEffect(() => {
     if (selectedPart && stepperMethodsRef.current) {
@@ -248,7 +246,11 @@ export default function TenderPage() {
               </nav>
               <section className="flex">
                 <PartsSidebar
-                  parts={getApprovedParts(tender!) || []}
+                  parts={
+                    mapping?.tender_parts.filter(
+                      (p) => p.status !== "default"
+                    ) || []
+                  }
                   selectedPart={selectedPart}
                   onPartSelect={(partId) => handlePartSelect(partId, methods)}
                 />
@@ -256,24 +258,26 @@ export default function TenderPage() {
                 <div className="flex-1 flex flex-col">
                   <div className="bg-background border-b border-gray-200 p-4 flex flex-col gap-2">
                     <h1 className="text-sm font-medium">
-                      {tender?.orderobject}
+                      {mapping?.tenders?.order_object}
                     </h1>
                     <div className="flex items-center gap-4 text-sm text-muted-foreground ">
                       <span className="flex items-center gap-2">
                         <House className="w-4 h-4" />
-                        {tender?.organizationname}
+                        {mapping?.tenders?.organization_name}
                       </span>
                       <span className="flex items-center gap-2">
                         <CalendarClock className="w-4 h-4" />
-                        {tender?.submittingoffersdate &&
-                          relativeToNow(new Date(tender?.submittingoffersdate))}
+                        {mapping?.tenders?.submitting_offers_date &&
+                          relativeToNow(
+                            new Date(mapping?.tenders?.submitting_offers_date)
+                          )}
                       </span>
                     </div>
                   </div>
 
                   <div className="flex-1 bg-background p-4 overflow-y-auto">
                     <StepperContent
-                      tender={tender}
+                      mapping={mapping}
                       selectedPart={selectedPart}
                       setNextEnabled={setNextEnabled}
                       nextHandlerRef={nextHandlerRef}
@@ -295,6 +299,7 @@ export default function TenderPage() {
                       <div className="flex gap-2">
                         {!methods.isLast && (
                           <Button
+                            color="primary"
                             onPress={async () => {
                               if (nextHandlerRef.current) {
                                 await nextHandlerRef.current();

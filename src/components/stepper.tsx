@@ -1,7 +1,18 @@
 import { Slot } from "@radix-ui/react-slot";
 import * as Stepperize from "@stepperize/react";
 import { type VariantProps, cva } from "class-variance-authority";
-import { createContext, useContext, useMemo, isValidElement, Children, type ReactNode, type ComponentProps, type ElementType, type ReactElement, type KeyboardEvent } from "react";
+import {
+  createContext,
+  useContext,
+  useMemo,
+  isValidElement,
+  Children,
+  type ReactNode,
+  type ComponentProps,
+  type ElementType,
+  type ReactElement,
+  type KeyboardEvent,
+} from "react";
 
 import { cn } from "$/lib/utils";
 import { Button } from "$/components/ui/button";
@@ -33,9 +44,7 @@ export type DefineProps<Steps extends Stepperize.Step[]> = Omit<
         ConfigProps & {
           children:
             | ReactNode
-            | ((props: {
-                methods: Stepperize.Stepper<Steps>;
-              }) => ReactNode);
+            | ((props: { methods: Stepperize.Stepper<Steps> }) => ReactNode);
         }
     ) => ReactElement;
     Navigation: (props: ComponentProps<"nav">) => ReactElement;
@@ -107,10 +116,7 @@ const defineStepper = <const Steps extends Stepperize.Step[]>(
           <StepperContext.Provider
             value={{ variant, labelOrientation, tracking }}
           >
-            <Scoped
-              initialStep={initialStep}
-              initialMetadata={initialMetadata}
-            >
+            <Scoped initialStep={initialStep} initialMetadata={initialMetadata}>
               <StepperContainer className={className} {...props}>
                 {children}
               </StepperContainer>
@@ -265,7 +271,7 @@ const defineStepper = <const Steps extends Stepperize.Step[]>(
                     />
                   </div>
                 )}
-                <div className="my-3 flex-1 ps-4">{panel}</div>
+                {panel && <div className="my-3 flex-1 ps-4">{panel}</div>}
               </div>
             )}
           </>

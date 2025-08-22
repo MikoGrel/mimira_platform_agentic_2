@@ -3,6 +3,7 @@
 import { Card, CardBody, CardHeader, Chip } from "@heroui/react";
 import { IndividualTenderPart } from "$/features/tenders/api/use-individual-tender";
 import { cn } from "$/lib/utils";
+import { truncate } from "lodash-es";
 
 interface PartsSidebarProps {
   parts: IndividualTenderPart[];
@@ -26,37 +27,32 @@ export function PartsSidebar({
       <div className="p-4 border-b border-sidebar-border">
         <h3 className="text-sm font-semibold mb-1">Tender Parts</h3>
         <p className="text-xs text-muted-foreground">
-          {parts.length} approved parts
+          {parts.length} pending parts
         </p>
       </div>
 
       <div className="overflow-y-auto">
-        {!parts.length && (
-          <div className="flex items-center justify-center h-full py-6">
-            <p className="text-xs text-muted-foreground">
-              This tender has no parts
-            </p>
-          </div>
-        )}
         {parts.map((part) => (
           <Card
-            key={part.part_uuid}
+            key={part.id}
             isPressable
             isHoverable
             shadow="sm"
             radius="none"
             className={cn(
-              "cursor-pointer transition-all duration-200 border-b border-sidebar-border",
+              "cursor-pointer w-full transition-all duration-200 border-b border-sidebar-border",
               {
                 "border-l border-l-primary font-medium":
-                  selectedPart?.part_uuid === part.part_uuid,
+                  selectedPart?.id === part.id,
               }
             )}
-            onPress={() => onPartSelect(part.part_uuid)}
+            onPress={() => onPartSelect(part.id)}
           >
             <CardHeader className="pb-1 px-3 pt-3 flex flex-col gap-1">
               <h4 className="text-left line-clamp-2 text-font-base w-full text-sm">
-                {part.part_name?.trim() || `Part ${part.part_id}`}
+                {part.part_name
+                  ? truncate(part.part_name, { length: 60 })
+                  : `Part ${part.order_number}`}
               </h4>
             </CardHeader>
             <CardBody className="pt-0 px-3 pb-3 text-muted-foreground">

@@ -35,7 +35,7 @@ export default async function DashboardLayout({
 
           <div className="flex items-center gap-4 justify-end">
             <LocaleSwitcher locales={["pl", "en"]} />
-            <div className="flex items-center gap-2 px-3 py-2 bg-white rounded-full border">
+            <div className="flex items-center gap-2 px-3 py-2 bg-background rounded-full border">
               <User className="w-5 h-5" />
               <UserName />
             </div>

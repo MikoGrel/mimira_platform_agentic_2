@@ -12,11 +12,11 @@ export function useExpiringTenders({ from, to }: { from: Date; to: Date }) {
     queryKey: ["expiring-tenders", from, to],
     queryFn: async () => {
       const { data, error } = await client
-        .from("tenders")
-        .select("id, submittingoffersdate, orderobject")
-        .gte("submittingoffersdate", from.toISOString())
-        .lte("submittingoffersdate", to.toISOString())
-        .eq("company", user!.profile!.customer!)
+        .from("companies_tenders_mappings")
+        .select("id, tenders!inner (order_object, submitting_offers_date)")
+        .gte("tenders.submitting_offers_date", from.toISOString())
+        .lte("tenders.submitting_offers_date", to.toISOString())
+        .eq("company_id", user!.profile!.company_id!)
         .eq("can_participate", true);
 
       if (error) {

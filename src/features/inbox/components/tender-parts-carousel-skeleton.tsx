@@ -14,7 +14,7 @@ export function TenderPartsCarouselSkeleton({
   partsCount = 3,
 }: TenderPartsCarouselSkeletonProps) {
   return (
-    <div className="border-b sticky top-0 z-30 bg-white">
+    <div className="border-b sticky top-0 z-30 bg-background">
       <div
         className={cn(
           "grid grid-cols-1 gap-0 px-6",

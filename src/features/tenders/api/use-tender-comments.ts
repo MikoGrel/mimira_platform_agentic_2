@@ -4,7 +4,7 @@ import { createClient } from "$/lib/supabase/client";
 import { TablesInsert } from "$/types/supabase";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 
-export default function useTenderComments(tenderId: string | null) {
+export default function useTenderComments(mappingId: string | null) {
   const client = createClient();
   const queryClient = useQueryClient();
 
@@ -13,14 +13,14 @@ export default function useTenderComments(tenderId: string | null) {
     isLoading,
     error,
   } = useQuery({
-    queryKey: ["tender-comments", tenderId],
+    queryKey: ["tender-comments", mappingId],
     queryFn: async () => {
-      if (!tenderId) return [];
+      if (!mappingId) return [];
 
       const { data: commentsData, error: commentsError } = await client
         .from("comments")
         .select("id, text, created_at, user_id")
-        .eq("tender_id", tenderId)
+        .eq("company_mapping_id", mappingId)
         .order("id");
 
       if (commentsError) throw commentsError;
@@ -53,12 +53,12 @@ export default function useTenderComments(tenderId: string | null) {
 
       return commentsWithProfiles;
     },
-    enabled: !!tenderId,
+    enabled: !!mappingId,
   });
 
   const addCommentMutation = useMutation({
     mutationFn: async (commentData: TablesInsert<"comments">) => {
-      if (!tenderId) throw new Error("No tender ID provided");
+      if (!mappingId) throw new Error("No tender ID provided");
 
       const { data, error } = await client
         .from("comments")
@@ -71,7 +71,7 @@ export default function useTenderComments(tenderId: string | null) {
     },
     onSuccess: () => {
       queryClient.invalidateQueries({
-        queryKey: ["tender-comments", tenderId],
+        queryKey: ["tender-comments", mappingId],
       });
     },
   });
@@ -87,7 +87,7 @@ export default function useTenderComments(tenderId: string | null) {
     },
     onSuccess: () => {
       queryClient.invalidateQueries({
-        queryKey: ["tender-comments", tenderId],
+        queryKey: ["tender-comments", mappingId],
       });
     },
   });
@@ -102,4 +102,4 @@ export default function useTenderComments(tenderId: string | null) {
     deleteComment: deleteCommentMutation.mutate,
     isDeletingComment: deleteCommentMutation.isPending,
   };
-} 
+}

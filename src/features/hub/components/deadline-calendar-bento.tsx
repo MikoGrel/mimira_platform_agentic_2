@@ -43,7 +43,7 @@ export function DeadlineCalendarBento({
             isIconOnly
             onPress={handlePreviousMonth}
             variant="shadow"
-            className="bg-white border border-r-0 px-2"
+            className="bg-background border border-r-0 px-2"
             fullWidth
           >
             <ChevronLeft />
@@ -52,7 +52,7 @@ export function DeadlineCalendarBento({
             isIconOnly
             onPress={handleNextMonth}
             variant="shadow"
-            className="bg-white border px-2"
+            className="bg-background border px-2"
           >
             <ChevronRight />
           </Button>
@@ -66,8 +66,8 @@ export function DeadlineCalendarBento({
         onMonthChange={setMonth}
         expiringTenders={tenders?.map((tender) => ({
           id: tender.id,
-          expiresAt: new Date(tender.submittingoffersdate!),
-          title: truncate(tender.orderobject!, { length: 40 }),
+          expiresAt: new Date(tender.tenders.submitting_offers_date!),
+          title: truncate(tender.tenders.order_object!, { length: 40 }),
         }))}
       />
     </BentoCard>

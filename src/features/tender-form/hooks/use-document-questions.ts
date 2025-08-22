@@ -4,26 +4,26 @@ import { useQuery } from "@tanstack/react-query";
 import { createClient } from "$/lib/supabase/client";
 
 interface DocumentQuestion {
-  id: number;
+  id: string;
   question: string;
   answer: string | null;
-  tender_id: string | null;
+  company_mapping_id: string | null;
 }
 
-export function useDocumentQuestions(tenderId?: string) {
+export function useDocumentQuestions(mappingId?: string) {
   const client = createClient();
 
   return useQuery({
-    queryKey: ["document-questions", tenderId],
+    queryKey: ["document-questions", mappingId],
     queryFn: async () => {
-      if (!tenderId) {
-        throw new Error("Tender ID is required");
+      if (!mappingId) {
+        throw new Error("Mapping ID is required");
       }
 
       const { data, error } = await client
         .from("document_questions")
         .select("*")
-        .eq("tender_id", tenderId)
+        .eq("company_mapping_id", mappingId)
         .order("id", { ascending: true });
 
       if (error) {
@@ -32,6 +32,6 @@ export function useDocumentQuestions(tenderId?: string) {
 
       return data as DocumentQuestion[];
     },
-    enabled: !!tenderId,
+    enabled: !!mappingId,
   });
 }

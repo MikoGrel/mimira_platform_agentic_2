@@ -13,14 +13,14 @@ export function useRestoreRejectedTender(
   const queryClient = useQueryClient();
 
   return useMutation({
-    mutationFn: async (tenderId: string) => {
+    mutationFn: async (mappingId: string) => {
       const { data, error } = await client
-        .from("tenders")
+        .from("companies_tenders_mappings")
         .update({
           status: "default",
           updated_at: new Date().toISOString(),
         })
-        .eq("id", tenderId);
+        .eq("id", mappingId);
 
       if (error) {
         throw error;
@@ -28,9 +28,9 @@ export function useRestoreRejectedTender(
 
       return data;
     },
-    onSuccess: (_, tenderId) => {
+    onSuccess: (_, mappingId) => {
       queryClient.invalidateQueries({ queryKey: ["tenders"] });
-      queryClient.invalidateQueries({ queryKey: ["tender", tenderId] });
+      queryClient.invalidateQueries({ queryKey: ["tender", mappingId] });
     },
     ...options,
   });

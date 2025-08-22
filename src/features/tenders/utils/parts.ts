@@ -11,10 +11,17 @@ export type PartsWithProducts = Tables<"tender_parts"> & {
   tender_products: Tables<"tender_products">[];
 };
 
-export function getApprovedParts<T extends AnythingWithParts>(
-  tender: T
+export function getAnalysisParts<T extends AnythingWithParts>(
+  mapping: T
 ): NonNullable<T["tender_parts"]> {
-  return (tender?.tender_parts?.filter((p) => p.status === "approve") ??
+  return (mapping?.tender_parts?.filter((p) => p.status === "analysis") ??
+    []) as NonNullable<T["tender_parts"]>;
+}
+
+export function getApprovedParts<T extends AnythingWithParts>(
+  mapping: T
+): NonNullable<T["tender_parts"]> {
+  return (mapping?.tender_parts?.filter((p) => p.status === "approve") ??
     []) as NonNullable<T["tender_parts"]>;
 }
 

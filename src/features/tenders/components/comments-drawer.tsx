@@ -1,6 +1,5 @@
 "use client";
 
-import { Tables } from "$/types/supabase";
 import { useCurrentUser } from "$/features/auth/api";
 import { useTenderComments } from "../api";
 import {
@@ -14,14 +13,19 @@ import {
 } from "@heroui/react";
 import { useState } from "react";
 import { MessageCircle, Send, Trash2, User } from "lucide-react";
+import { InboxTenderMapping } from "$/features/inbox/api/use-tender-inbox-query";
 
 interface CommentsDrawerProps {
   open?: boolean;
   setOpen?: (open: boolean) => void;
-  tender?: Tables<"tenders"> | null;
+  mapping?: InboxTenderMapping | null;
 }
 
-export function CommentsDrawer({ open, setOpen, tender }: CommentsDrawerProps) {
+export function CommentsDrawer({
+  open,
+  setOpen,
+  mapping,
+}: CommentsDrawerProps) {
   const { user } = useCurrentUser();
   const [newCommentText, setNewCommentText] = useState("");
 
@@ -33,7 +37,7 @@ export function CommentsDrawer({ open, setOpen, tender }: CommentsDrawerProps) {
     addCommentError,
     deleteComment,
     isDeletingComment,
-  } = useTenderComments(tender?.id || null);
+  } = useTenderComments(mapping?.id || null);
 
   const handleAddComment = () => {
     if (!user || !newCommentText.trim()) return;
@@ -42,7 +46,7 @@ export function CommentsDrawer({ open, setOpen, tender }: CommentsDrawerProps) {
       text: newCommentText.trim(),
       user_id: user.id,
       created_at: new Date().toISOString(),
-      tender_id: tender?.id || null,
+      company_mapping_id: mapping?.id || null,
     });
     setNewCommentText("");
   };
@@ -59,9 +63,9 @@ export function CommentsDrawer({ open, setOpen, tender }: CommentsDrawerProps) {
                   ({comments.length})
                 </span>
               </div>
-              {tender?.orderobject && (
+              {mapping?.tenders?.order_object && (
                 <p className="text-sm text-muted-foreground truncate">
-                  {tender.orderobject}
+                  {mapping.tenders.order_object}
                 </p>
               )}
             </DrawerHeader>

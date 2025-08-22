@@ -5,57 +5,42 @@ import { createClient } from "$/lib/supabase/client";
 import useCurrentUser from "$/features/auth/api/use-current-user";
 
 interface UseIndividualTenderParams {
-  tenderId: string | null;
+  mappingId: string | null;
   enabled?: boolean;
 }
 
 export function useIndividualTender({
-  tenderId,
+  mappingId,
   enabled = true,
 }: UseIndividualTenderParams) {
   const { user } = useCurrentUser();
 
   return useQuery({
-    queryKey: ["tender", tenderId],
+    queryKey: ["tender", mappingId],
     queryFn: async () => {
-      if (!tenderId) return null;
+      if (!mappingId) return null;
 
       const client = createClient();
       const { data, error } = await client
-        .from("tenders")
+        .from("companies_tenders_mappings")
         .select(
           `*,
-          tender_products (
-            part_uuid,
-            product_req_name,
-            product_req_quantity,
-            product_req_spec,
-            requirements_to_confirm,
-            alternative_products,
-            closest_match
-           ),
-          tender_requirements (
-            req_id,
-            requirement_text,
-            reason,
-            status
+          tenders!inner (
+            *
           ),
           tender_parts (
-           part_uuid,
-           part_id,
-           tender_id,
+           id,
            part_name,
            ordercompletiondate_llm,
            wadium_llm,
            review_criteria_llm,
            description_part_long_llm,
-           met_requirements,
-           needs_confirmation_requirements,
-           not_met_requirements,
+           order_number,
            status,
            can_participate,
            tender_products (
-            part_uuid,
+            id,
+            part_id,
             product_req_name,
             product_req_quantity,
             product_req_spec,
@@ -64,15 +49,17 @@ export function useIndividualTender({
             closest_match
            ),
            tender_requirements (
-            req_id,
+            id,
+            part_id,
             requirement_text,
             reason,
-            status
+            status,
+            tender_product_id
           )
           )`
         )
-        .eq("id", tenderId)
-        .eq("company", user!.profile!.customer!)
+        .eq("id", mappingId)
+        .eq("company_id", user!.profile!.company_id!)
         .eq("can_participate", true)
         .single();
 
@@ -83,11 +70,14 @@ export function useIndividualTender({
 
       return data;
     },
-    enabled: enabled && !!tenderId && !!user,
+    enabled: enabled && !!mappingId && !!user,
   });
 }
 
-export type IndividualTender = NonNullable<
+export type IndividualTenderMapping = NonNullable<
   Awaited<ReturnType<typeof useIndividualTender>>["data"]
 >;
-export type IndividualTenderPart = IndividualTender["tender_parts"][number];
+export type IndividualTenderPart =
+  IndividualTenderMapping["tender_parts"][number];
+
+export type IndividualTender = IndividualTenderMapping["tenders"];

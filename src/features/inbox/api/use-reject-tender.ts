@@ -8,14 +8,14 @@ export function useRejectTender() {
   const queryClient = useQueryClient();
 
   return useMutation({
-    mutationFn: async (tenderId: string) => {
+    mutationFn: async (mappingId: string) => {
       const { data, error } = await client
-        .from("tenders")
+        .from("companies_tenders_mappings")
         .update({
           status: "rejected",
           updated_at: new Date().toISOString(),
         })
-        .eq("id", tenderId);
+        .eq("id", mappingId);
 
       if (error) {
         throw error;

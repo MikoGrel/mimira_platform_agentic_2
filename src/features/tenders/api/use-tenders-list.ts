@@ -32,7 +32,7 @@ export function useTendersList({
     publishedAtTo: null,
     voivodeship: null,
     sortBy: null,
-    showRejected: true,
+    showRejected: null,
   };
 
   const queryKey = [
@@ -43,6 +43,7 @@ export function useTendersList({
       filters.publishedAtTo?.toString(),
       filters.offersDeadlineFrom?.toString(),
       filters.offersDeadlineTo?.toString(),
+      filters.showRejected,
       JSON.stringify(Array.from(filters.sortBy || [])),
       JSON.stringify(Array.from(filters.voivodeship || [])),
     ],
@@ -60,40 +61,57 @@ export function useTendersList({
     queryFn: async ({ pageParam = 0 }) => {
       const client = createClient();
       let query = client
-        .from("tenders")
+        .from("companies_tenders_mappings")
         .select(
           `
           *,
+          tenders!inner (
+            *
+          ),
           tender_parts (
-           part_uuid,
-           part_id,
-           tender_id,
-           part_name,
-           ordercompletiondate_llm,
-           wadium_llm,
-           review_criteria_llm,
-           description_part_long_llm,
-           met_requirements,
-           needs_confirmation_requirements,
-           not_met_requirements,
-           status,
-           can_participate,
-           created_at
+            id,
+            part_name,
+            ordercompletiondate_llm,
+            wadium_llm,
+            review_criteria_llm,
+            description_part_long_llm,
+            order_number,
+            status,
+            can_participate,
+            tender_products (
+              id,
+              part_id,
+              product_req_name,
+              product_req_quantity,
+              product_req_spec,
+              requirements_to_confirm,
+              alternative_products,
+              closest_match
+            ),
+            tender_requirements (
+              id,
+              part_id,
+              requirement_text,
+              reason,
+              status,
+              tender_product_id
+            )
           )
           `,
           { count: "exact" }
         )
-        .eq("company", user!.profile!.customer!);
+        .eq("company_id", user!.profile!.company_id!);
 
+      query = query.neq("status", "default");
       query = query.eq("can_participate", true);
 
       if (search) {
-        query = query.textSearch("orderobject", search);
+        query = query.ilike("tenders.order_object", `%${search}%`);
       }
 
       if (filters.publishedAtFrom) {
         query = query.gte(
-          "publicationdate",
+          "tenders.publication_date",
           format(
             filters.publishedAtFrom.toDate(getLocalTimeZone()),
             "yyyy-MM-dd"
@@ -102,14 +120,14 @@ export function useTendersList({
       }
       if (filters.publishedAtTo) {
         query = query.lte(
-          "publicationdate",
+          "tenders.publication_date",
           format(filters.publishedAtTo.toDate(getLocalTimeZone()), "yyyy-MM-dd")
         );
       }
 
       if (filters.offersDeadlineFrom) {
         query = query.gte(
-          "submittingoffersdate",
+          "tenders.submitting_offers_date",
           format(
             filters.offersDeadlineFrom.toDate(getLocalTimeZone()),
             "yyyy-MM-dd"
@@ -118,7 +136,7 @@ export function useTendersList({
       }
       if (filters.offersDeadlineTo) {
         query = query.lte(
-          "submittingoffersdate",
+          "tenders.submitting_offers_date",
           format(
             filters.offersDeadlineTo.toDate(getLocalTimeZone()),
             "yyyy-MM-dd"
@@ -127,19 +145,19 @@ export function useTendersList({
       }
 
       if (filters.voivodeship) {
-        query = query.in("voivodship", Array.from(filters.voivodeship));
+        query = query.in("tenders.voivodship", Array.from(filters.voivodeship));
       }
 
-      const sortAscending =
-        Array.from(filters.sortBy || new Set())[0] === "asc";
-      const shouldSort = filters.sortBy !== null;
+      if (filters.sortBy) {
+        query = query.order("tenders.submitting_offers_date", {
+          ascending: Array.from(filters.sortBy)[0] === "asc",
+          nullsFirst: false,
+        });
+      }
 
       const result = await query
-        .order("updated_at", { ascending: false })
-        .order("submittingoffersdate", {
-          ascending: shouldSort ? sortAscending : false,
-        })
-        .order("id", { ascending: false })
+        .order("updated_at", { ascending: false, nullsFirst: false })
+        .order("id", { ascending: false, nullsFirst: false })
         .range(pageParam * pageSize!, pageParam * pageSize! + pageSize! - 1);
 
       return {
@@ -154,13 +172,22 @@ export function useTendersList({
     enabled: !!user,
   });
 
-  function updateTenderStatus(id: string, status: Tables<"tenders">["status"]) {
+  function updateTenderStatus(id: string, status: string) {
     queryClient.setQueryData(
       queryKey,
       (
         oldData:
           | InfiniteData<{
-              data: Tables<"tenders">[];
+              data: Array<{
+                id: string;
+                status: string | null;
+                can_participate: boolean | null;
+                seen_at: string | null;
+                created_at: string;
+                company_id: string | null;
+                tender_id: string | null;
+                tenders: Tables<"tenders">;
+              }>;
               count: number | null;
               nextPage: number | null;
             }>
@@ -172,8 +199,8 @@ export function useTendersList({
           ...oldData,
           pages: oldData.pages.map((page) => ({
             ...page,
-            data: page.data.map((tender) =>
-              tender.id === id ? { ...tender, status } : tender
+            data: page.data.map((mapping) =>
+              mapping.id === id ? { ...mapping, status } : mapping
             ),
           })),
         };
@@ -182,13 +209,14 @@ export function useTendersList({
   }
 
   // Flatten the pages data and remove duplicates based on id
-  const tenders = tendersData?.pages.flatMap((page) => page.data) || [];
-  const uniqueTenders = tenders.filter(
-    (tender, index, self) => index === self.findIndex((t) => t.id === tender.id)
+  const mappings = tendersData?.pages.flatMap((page) => page.data) || [];
+  const uniqueMappings = mappings.filter(
+    (mapping, index, self) =>
+      index === self.findIndex((m) => m.id === mapping.id)
   );
 
   return {
-    tenders: uniqueTenders,
+    tenders: uniqueMappings,
     loading,
     isPending,
     fetchNextPage,
@@ -198,6 +226,6 @@ export function useTendersList({
   };
 }
 
-export type TenderWithParts = Awaited<
+export type TenderListItem = Awaited<
   ReturnType<typeof useTendersList>
 >["tenders"][number];

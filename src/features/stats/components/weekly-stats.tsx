@@ -5,15 +5,11 @@ import {
   ChartContainer,
   ChartTooltip,
 } from "$/components/ui/chart";
+import { useWeeklyTendersCount } from "$/features/stats/api/use-weekly-tenders-count";
 import { CartesianGrid, XAxis, Line, LabelList, LineChart } from "recharts";
 
 export const description = "A line chart with a label";
-const chartData = [
-  { week: "01/06", value: 30 },
-  { week: "08/06", value: 50 },
-  { week: "15/06", value: 80 },
-  { week: "22/06", value: 70 },
-];
+
 const chartConfig = {
   value: {
     label: "Value",
@@ -22,6 +18,16 @@ const chartConfig = {
 } satisfies ChartConfig;
 
 export function WeeklyStats() {
+  const { data: weeklyStats } = useWeeklyTendersCount();
+
+  const total = weeklyStats?.weeks.reduce(
+    (acc, week) => acc + week.tenders_count,
+    0
+  );
+  const average = Math.ceil(
+    total ? total / (weeklyStats?.weeks.length ?? 0) : 0
+  );
+
   return (
     <div className="flex flex-col h-full justify-between gap-4 overflow-x-hidden">
       <p className="text-muted-foreground font-semibold text-sm">
@@ -29,7 +35,7 @@ export function WeeklyStats() {
       </p>
       <ChartContainer config={chartConfig}>
         <LineChart
-          data={chartData}
+          data={weeklyStats?.weeks ?? []}
           margin={{
             top: 20,
             left: 25,
@@ -39,14 +45,14 @@ export function WeeklyStats() {
           <ChartTooltip cursor={false} />
           <CartesianGrid vertical={false} />
           <XAxis
-            dataKey="week"
+            dataKey="week_start"
             tickLine={false}
             axisLine={false}
             interval={0}
             tickMargin={8}
           />
           <Line
-            dataKey="value"
+            dataKey="tenders_count"
             type="natural"
             stroke="var(--color-primary)"
             strokeWidth={2}
@@ -68,10 +74,11 @@ export function WeeklyStats() {
       </ChartContainer>
       <div className="mt-1.5 text-sm text-muted-foreground">
         <p className="flex justify-between">
-          <span className="font-medium">Total:</span> 50
+          <span className="font-medium">Total:</span> {total ?? "..."}
         </p>
         <p className="flex justify-between">
-          <span className="font-medium">Weekly average:</span> 10
+          <span className="font-medium">Weekly average:</span>{" "}
+          {average ?? "..."}
         </p>
       </div>
     </div>

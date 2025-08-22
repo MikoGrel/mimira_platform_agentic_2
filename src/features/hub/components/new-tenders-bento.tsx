@@ -28,15 +28,17 @@ export function NewTendersBento({ className }: NewTendersBentoProps) {
       bodyClassName="lg:pb-0"
     >
       <AnimatePresence>
-        <div className="h-full overflow-y-auto space-y-4 scrollbar-hide pr-2 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
+        <div className="h-full overflow-y-auto space-y-4 scrollbar-hide pr-2">
           {tenders?.map((tender, index) => (
             <TenderMiniCard
               key={tender.id}
               index={index}
               id={tender.id}
-              title={tender.orderobject!}
-              organization={tender.organizationname!}
-              expirationDate={new Date(tender.submittingoffersdate!)}
+              title={tender.tenders?.order_object ?? ""}
+              organization={tender.tenders?.organization_name ?? ""}
+              expirationDate={
+                new Date(tender.tenders?.submitting_offers_date ?? "")
+              }
             />
           ))}
         </div>

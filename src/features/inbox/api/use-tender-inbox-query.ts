@@ -71,59 +71,46 @@ export default function useTenderInboxQuery({
     queryFn: async ({ pageParam = 0 }) => {
       const client = createClient();
       let query = client
-        .from("tenders")
+        .from("companies_tenders_mappings")
         .select(
           `
           *,
-          tender_products (
-            part_uuid,
-            product_req_name,
-            product_req_quantity,
-            product_req_spec,
-            requirements_to_confirm,
-            alternative_products,
-            closest_match
-          ),
-          tender_requirements (
-            req_id,
-            requirement_text,
-            reason,
-            status
+          tenders!inner (
+            *
           ),
           tender_parts (
-           part_uuid,
-           part_id,
-           tender_id,
-           part_name,
-           ordercompletiondate_llm,
-           wadium_llm,
-           review_criteria_llm,
-           description_part_long_llm,
-           met_requirements,
-           needs_confirmation_requirements,
-           not_met_requirements,
-           status,
-           can_participate,
-          tender_products (
-            part_uuid,
-            product_req_name,
-            product_req_quantity,
-            product_req_spec,
-            requirements_to_confirm,
-            alternative_products,
-            closest_match
-          ),
-          tender_requirements (
-            req_id,
-            requirement_text,
-            reason,
-            status
-          )
+            id,
+            part_name,
+            ordercompletiondate_llm,
+            wadium_llm,
+            review_criteria_llm,
+            description_part_long_llm,
+            order_number,
+            status,
+            can_participate,
+            tender_products (
+              id,
+              part_id,
+              product_req_name,
+              product_req_quantity,
+              product_req_spec,
+              requirements_to_confirm,
+              alternative_products,
+              closest_match
+            ),
+            tender_requirements (
+              id,
+              part_id,
+              requirement_text,
+              reason,
+              status,
+              tender_product_id
+            )
           )
           `,
           { count: "exact" }
         )
-        .eq("company", user!.profile!.customer!);
+        .eq("company_id", user!.profile!.company_id!);
 
       if (filters.showRejected === false) {
         query = query.eq("status", "default");
@@ -134,12 +121,12 @@ export default function useTenderInboxQuery({
       query = query.eq("can_participate", true);
 
       if (search) {
-        query = query.textSearch("orderobject", search);
+        query = query.ilike("tenders.order_object", `%${search}%`);
       }
 
       if (filters.publishedAtFrom) {
         query = query.gte(
-          "publicationdate",
+          "tenders.publication_date",
           format(
             filters.publishedAtFrom.toDate(getLocalTimeZone()),
             "yyyy-MM-dd"
@@ -148,14 +135,14 @@ export default function useTenderInboxQuery({
       }
       if (filters.publishedAtTo) {
         query = query.lte(
-          "publicationdate",
+          "tenders.publication_date",
           format(filters.publishedAtTo.toDate(getLocalTimeZone()), "yyyy-MM-dd")
         );
       }
 
       if (filters.offersDeadlineFrom) {
         query = query.gte(
-          "submittingoffersdate",
+          "tenders.submitting_offers_date",
           format(
             filters.offersDeadlineFrom.toDate(getLocalTimeZone()),
             "yyyy-MM-dd"
@@ -164,7 +151,7 @@ export default function useTenderInboxQuery({
       }
       if (filters.offersDeadlineTo) {
         query = query.lte(
-          "submittingoffersdate",
+          "tenders.submitting_offers_date",
           format(
             filters.offersDeadlineTo.toDate(getLocalTimeZone()),
             "yyyy-MM-dd"
@@ -173,18 +160,18 @@ export default function useTenderInboxQuery({
       }
 
       if (filters.voivodeship) {
-        query = query.in("voivodship", Array.from(filters.voivodeship));
+        query = query.in("tenders.voivodship", Array.from(filters.voivodeship));
       }
 
-      const sortAscending =
-        Array.from(filters.sortBy || new Set())[0] === "asc";
-      const shouldSort = filters.sortBy !== null;
+      if (filters.sortBy) {
+        query = query.order("tenders.submitting_offers_date", {
+          ascending: Array.from(filters.sortBy)[0] === "asc",
+          nullsFirst: false,
+        });
+      }
 
       const result = await query
-        .order("submittingoffersdate", {
-          ascending: shouldSort ? sortAscending : false,
-        })
-        .order("id", { ascending: false })
+        .order("id", { ascending: false, nullsFirst: false })
         .range(pageParam * pageSize!, pageParam * pageSize! + pageSize! - 1);
 
       return {
@@ -208,7 +195,7 @@ export default function useTenderInboxQuery({
       (
         oldData:
           | InfiniteData<{
-              data: Tables<"tenders">[];
+              data: Tables<"companies_tenders_mappings">[];
               count: number | null;
               nextPage: number | null;
             }>
@@ -220,8 +207,8 @@ export default function useTenderInboxQuery({
           ...oldData,
           pages: oldData.pages.map((page) => ({
             ...page,
-            data: page.data.map((tender) =>
-              tender.id === id ? { ...tender, seen_at: value } : tender
+            data: page.data.map((mapping) =>
+              mapping.id === id ? { ...mapping, seen_at: value } : mapping
             ),
           })),
         };
@@ -246,10 +233,12 @@ export default function useTenderInboxQuery({
   };
 }
 
-export type InboxTender = Awaited<
+export type InboxTenderMapping = Awaited<
   ReturnType<typeof useTenderInboxQuery>
 >["tenders"][number];
 
-export type InboxTenderPart = InboxTender["tender_parts"][number];
+export type InboxTender = InboxTenderMapping["tenders"];
+
+export type InboxTenderPart = InboxTenderMapping["tender_parts"][number];
 
 export type InboxTenderProduct = InboxTenderPart["tender_products"][number];

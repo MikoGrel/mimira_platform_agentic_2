@@ -15,8 +15,9 @@ import dynamic from "next/dynamic";
 import { useDateFormat } from "$/features/i18n/hooks/use-date-format";
 import { useMarkAsSeen } from "$/features/inbox/api/use-mark-as-seen";
 import useTenderInboxQuery, {
-  InboxTender,
+  InboxTenderMapping,
 } from "$/features/inbox/api/use-tender-inbox-query";
+import { useLocalStorage } from "react-use";
 
 const TenderPreview = dynamic(
   () =>
@@ -41,6 +42,10 @@ export default function InboxPage() {
   );
   const [selectedId, setSelectedId] = useQueryState("id", parseAsString);
   const [selectedPart, setSelectedPart] = useQueryState("part", parseAsString);
+  const [, setLastTender] = useLocalStorage<string | undefined>(
+    "last-tender",
+    undefined
+  );
 
   const {
     tenders,
@@ -52,17 +57,17 @@ export default function InboxPage() {
   } = useTenderInboxQuery({ search, filterQuery, pageSize: PAGE_SIZE });
   const { mutate: markAsSeen } = useMarkAsSeen();
 
-  const selectedTenderFromList = useMemo(
+  const selectedMappingFromList = useMemo(
     () => tenders.find((t) => t.id === selectedId),
     [tenders, selectedId]
   );
 
-  const { data: individualTender } = useIndividualTender({
-    tenderId: selectedId,
-    enabled: selectedId !== null && !selectedTenderFromList,
+  const { data: individualMapping } = useIndividualTender({
+    mappingId: selectedId,
+    enabled: selectedId !== null && !selectedMappingFromList,
   });
 
-  const selectedTender = selectedTenderFromList || individualTender;
+  const selectedMapping = selectedMappingFromList || individualMapping;
 
   const { getRef } = useInfiniteList({
     onIntersect: () => {
@@ -73,17 +78,15 @@ export default function InboxPage() {
     pageSize: PAGE_SIZE,
   });
 
-  function handleTenderSelect(tender: InboxTender) {
+  function handleTenderSelect(tender: InboxTenderMapping) {
     updateSeenAt(tender.id);
     setSelectedId(tender.id);
 
-    if (tender.tender_parts.length > 0) {
-      setSelectedPart(tender.tender_parts[0].part_uuid);
-    } else {
-      setSelectedPart(null);
-    }
+    // Always select the first part since there's always at least one part
+    setSelectedPart(tender.tender_parts[0].id);
 
     markAsSeen(tender.id);
+    setLastTender(tender.id);
   }
 
   function handleArchiveButtonPress() {
@@ -116,7 +119,7 @@ export default function InboxPage() {
               <SlidersHorizontal className="w-5 h-5" />
             </Button>
           </div>
-          <FilterChips />
+          <FilterChips className="px-4" />
           <AnimatePresence>
             {showFilterForm && (
               <motion.div
@@ -171,7 +174,7 @@ export default function InboxPage() {
                   >
                     <div className="p-4 px-6 flex flex-col gap-2 hover:bg-muted">
                       <p className="text-sm relative">
-                        {truncate(t.orderobject!, {
+                        {truncate(t.tenders?.order_object || "", {
                           length: 100,
                           omission: "...",
                         })}
@@ -181,17 +184,23 @@ export default function InboxPage() {
                         )}
                       </p>
                       <div className="flex items-center gap-2 flex-wrap text-slate-500">
-                        <Chip
-                          size="sm"
-                          variant="flat"
-                          startContent={
-                            <CalendarClock className="w-4 h-4 ml-1 mr-0.5" />
-                          }
-                        >
-                          {relativeToNow(new Date(t.submittingoffersdate!))}
-                        </Chip>
+                        {t.tenders?.submitting_offers_date && (
+                          <Chip
+                            size="sm"
+                            variant="flat"
+                            startContent={
+                              <CalendarClock className="w-4 h-4 ml-1 mr-0.5" />
+                            }
+                          >
+                            {relativeToNow(
+                              new Date(t.tenders?.submitting_offers_date)
+                            )}
+                          </Chip>
+                        )}
                         <span className="text-sm">
-                          {truncate(t.organizationname!, { length: 40 })}
+                          {truncate(t.tenders?.organization_name || "", {
+                            length: 30,
+                          })}
                         </span>
                       </div>
                     </div>
@@ -201,7 +210,7 @@ export default function InboxPage() {
             </ul>
           </div>
         </div>
-        <div className="absolute bottom-0 left-0 right-0 p-3 px-4 text-sm bg-white border-t border-border">
+        <div className="absolute bottom-0 left-0 right-0 p-3 px-4 text-sm bg-background border-t border-border">
           <div className="flex items-center justify-start gap-2">
             <Symbol className="w-6 h-6" />
             <p className="font-medium">Ask Mimir</p>
@@ -211,17 +220,21 @@ export default function InboxPage() {
           </div>
         </div>
       </aside>
-      {!selectedTender && (
+      {!selectedMapping && (
         <section className="sticky top-0 flex items-center justify-center h-full">
           <div className="text-center text-muted-foreground">
             <p className="text-sm">Select a tender to view details</p>
           </div>
         </section>
       )}
-      {selectedTender && (
+      {selectedMapping && (
         <TenderPreview
-          tender={selectedTender}
-          selectedPart={selectedPart}
+          mapping={selectedMapping}
+          selectedPart={
+            selectedMapping.tender_parts.find(
+              (part) => part.id === selectedPart
+            ) || selectedMapping.tender_parts[0]
+          }
           setSelectedPart={setSelectedPart}
           showNextTender={() => {
             const idx = tenders.findIndex((t) => t.id === selectedId);

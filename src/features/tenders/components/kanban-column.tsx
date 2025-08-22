@@ -4,18 +4,14 @@ import React from "react";
 import { useDroppable } from "@dnd-kit/core";
 import { SortableContext, rectSortingStrategy } from "@dnd-kit/sortable";
 import { Card, CardBody, CardHeader, Spinner } from "@heroui/react";
-import { Tables } from "$/types/supabase";
 import { TenderCard } from "./tender-card";
 import { LucideIcon } from "lucide-react";
-
-type TenderWithParts = Tables<"tenders"> & {
-  tender_parts: Tables<"tender_parts">[];
-};
+import { IndividualTenderMapping } from "../api/use-individual-tender";
 
 interface KanbanColumnProps {
   id: string;
   title: React.ReactNode;
-  tenders: TenderWithParts[];
+  mappings: IndividualTenderMapping[];
   icon: LucideIcon;
   iconColor: string;
   isLoading?: boolean;
@@ -24,7 +20,7 @@ interface KanbanColumnProps {
 function InternalKanbanColumn({
   id,
   title,
-  tenders,
+  mappings,
   icon: Icon,
   iconColor,
   isLoading = false,
@@ -37,7 +33,7 @@ function InternalKanbanColumn({
     },
   });
 
-  const tenderIds = tenders.map((tender) => tender.id);
+  const tenderIds = mappings.map((mapping) => mapping.id);
 
   return (
     <div ref={setNodeRef} className="h-full min-w-[200px]">
@@ -54,7 +50,7 @@ function InternalKanbanColumn({
               <div className="ml-auto flex items-center gap-2">
                 {isLoading && <Spinner color="default" size="sm" />}
                 <span className="text-xs text-muted-foreground">
-                  {tenders.length}
+                  {mappings.length}
                 </span>
               </div>
             </div>
@@ -65,10 +61,10 @@ function InternalKanbanColumn({
             <div className="space-y-3">
               {!isLoading && (
                 <>
-                  {tenders.map((tender) => (
-                    <TenderCard key={tender.id} tender={tender} />
+                  {mappings.map((mapping) => (
+                    <TenderCard key={mapping.id} mapping={mapping} />
                   ))}
-                  {tenders.length === 0 && (
+                  {mappings.length === 0 && (
                     <div className="flex items-center justify-center h-32 text-muted-foreground text-sm">
                       <span>No tenders</span>
                     </div>
@@ -84,13 +80,13 @@ function InternalKanbanColumn({
 }
 
 export const KanbanColumn = React.memo(InternalKanbanColumn, (prev, next) => {
-  const prevTenders = prev.tenders.map((tender) => tender.id).join(".");
-  const nextTenders = next.tenders.map((tender) => tender.id).join(".");
+  const prevMappings = prev.mappings.map((mapping) => mapping.id).join(".");
+  const nextMappings = next.mappings.map((mapping) => mapping.id).join(".");
 
   return (
     prev.id === next.id &&
     prev.title === next.title &&
     prev.isLoading === next.isLoading &&
-    prevTenders === nextTenders
+    prevMappings === nextMappings
   );
 });

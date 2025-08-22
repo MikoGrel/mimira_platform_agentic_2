@@ -44,7 +44,7 @@ export function LocaleSwitcher({ locales }: LocaleSwitcherProps) {
       variant="bordered"
       className="w-28"
       classNames={{
-        trigger: "bg-white",
+        trigger: "bg-background",
       }}
     >
       {locales.map((locale) => (

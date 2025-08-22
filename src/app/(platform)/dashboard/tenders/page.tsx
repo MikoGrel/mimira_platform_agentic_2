@@ -60,7 +60,7 @@ export default function TendersPage() {
                 >
                   <span>Filter</span>
                   {activeFilters.length > 0 && (
-                    <span className="ml-1 bg-white text-primary rounded-full px-2 py-0.5 text-xs">
+                    <span className="ml-1 bg-background text-primary rounded-full px-2 py-0.5 text-xs">
                       {activeFilters.length}
                     </span>
                   )}
