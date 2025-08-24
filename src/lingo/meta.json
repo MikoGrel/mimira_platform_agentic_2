@@ -10303,6 +10303,78 @@
           "overrides": {},
           "content": "Tender was moved to analysis successfully, go to active tenders to see it"
         },
+        "22/declaration/body/10/body/0/expression/0/1/value": {
+          "type": "element",
+          "hash": "db19ec4f7ea5522f60443270198a75af",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Tender was moved to analysis successfully, go to active tenders to see it"
+        },
+        "22/declaration/body/10/body/1/expression/0": {
+          "type": "element",
+          "hash": "78efde626dafcc52e22f7f6b702998a0",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Tender was moved to analysis successfully, go to active tenders to see it"
+        },
+        "22/declaration/body/10/body/2/expression/0/1/value": {
+          "type": "element",
+          "hash": "db19ec4f7ea5522f60443270198a75af",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Tender was moved to analysis successfully, go to active tenders to see it"
+        },
+        "22/declaration/body/13/body/1/expression/0": {
+          "type": "element",
+          "hash": "60696b80d10dffc59336ef7184f915c1",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Tender was rejected successfully, go to archive tab to see it"
+        },
+        "22/declaration/body/14/0/init/0/body/0/argument/expression/callee/object/0/1/value": {
+          "type": "element",
+          "hash": "a003449ecbde6b7a73044f46ea6bbe75",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Products"
+        },
+        "22/declaration/body/14/0/init/0/body/0/argument/expression/callee/object/1/1/value": {
+          "type": "element",
+          "hash": "e108e149e0fd5b65f5850b6f032ccabe",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Requirements"
+        },
+        "22/declaration/body/14/0/init/0/body/0/argument/expression/callee/object/2/consequent/1/value": {
+          "type": "element",
+          "hash": "d524df30da3658fdbc1794408fcfdab4",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Review Criteria"
+        },
+        "22/declaration/body/14/0/init/0/body/0/argument/expression/callee/object/3/1/value": {
+          "type": "element",
+          "hash": "e17686a22ffad04cc7bb70524ed4478b",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Description"
+        },
+        "22/declaration/body/14/0/init/0/body/0/argument/expression/callee/object/4/1/value": {
+          "type": "element",
+          "hash": "d5bf1e70991802fd4a801f3a79cf9e5d",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Additional Info"
+        },
         "22/declaration/body/16/0/init/0/body/0/argument/0/1/value": {
           "type": "element",
           "hash": "30c54e4dc4ce599b87d94be34a8617f5",
@@ -11031,6 +11103,14 @@
     },
     "features/navigation/components/dashboard-sidebar.tsx": {
       "scopes": {
+        "11/declaration/body/2/argument/3/1/1": {
+          "type": "element",
+          "hash": "9e8d5035217a4088af5d7de48c14283b",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Main Navigation"
+        },
         "7/0/init/0/0/value": {
           "type": "element",
           "hash": "104a3db3b671c04e167eafbe21e57881",
@@ -11102,6 +11182,38 @@
           "skip": false,
           "overrides": {},
           "content": "Main Navigation"
+        },
+        "9/0/init/expression/0/1/value": {
+          "type": "element",
+          "hash": "104a3db3b671c04e167eafbe21e57881",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Home"
+        },
+        "9/0/init/expression/1/1/value": {
+          "type": "element",
+          "hash": "a94c4eb8b9f76eedf17a5b47e0f12908",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Discover new tenders"
+        },
+        "9/0/init/expression/2/1/value": {
+          "type": "element",
+          "hash": "bd9a5531afffb07a322a91ec689859ee",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Active tenders"
+        },
+        "9/0/init/expression/3/1/value": {
+          "type": "element",
+          "hash": "c3882fc98216636873ab9091f3453f0c",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Documents"
         },
         "9/declaration/body/1/argument/3/1/1": {
           "type": "element",

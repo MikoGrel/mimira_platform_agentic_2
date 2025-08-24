@@ -18,35 +18,48 @@ import Link from "$/components/ui/link";
 import { SidebarLogOutButton } from "./sidebar-logout-button";
 import { usePathname } from "next/navigation";
 import { cn } from "$/lib/utils";
+import { useSidebarPopupStore } from "../store/use-sidebar-popup-store";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipTrigger,
+} from "$/components/ui/tooltip";
 
 const navigationItems = [
   {
+    id: "home",
     title: <span>Home</span>,
     icon: Home,
     tooltip: "Home",
     url: "/dashboard",
   },
   {
+    id: "new-tenders",
     title: <span>Discover new tenders</span>,
     icon: SparklesIcon,
     tooltip: "Discover new tenders",
     url: "/dashboard/inbox",
   },
   {
+    id: "active-tenders",
     title: <span>Active tenders</span>,
     icon: FolderOpen,
     tooltip: "Active tenders",
     url: "/dashboard/tenders",
   },
   {
+    id: "documents",
     title: <span>Documents</span>,
     icon: FileCheck,
     tooltip: "Documents",
     url: "/dashboard/documents",
   },
-];
+] as const;
+
+export type SidebarItemId = (typeof navigationItems)[number]["id"];
 
 export default function DashboardSidebar() {
+  const { sidebarPopups } = useSidebarPopupStore();
   const pathname = usePathname();
 
   return (
@@ -63,20 +76,36 @@ export default function DashboardSidebar() {
           <SidebarGroupContent>
             <SidebarMenu>
               {navigationItems.map((item) => {
-                const isActive = pathname.endsWith(item.url);
+                const popup = sidebarPopups.find((p) => p.id === item.id);
+                const isActive = pathname.endsWith(item.url) || Boolean(popup);
 
                 return (
-                  <SidebarMenuItem key={item.url}>
-                    <SidebarMenuButton
-                      asChild
-                      tooltip={item.tooltip}
-                      isActive={isActive}
-                    >
-                      <Link href={item.url}>
-                        <item.icon className={cn(isActive && "text-primary")} />
-                        <span>{item.title}</span>
-                      </Link>
-                    </SidebarMenuButton>
+                  <SidebarMenuItem key={item.url} className="relative">
+                    <Tooltip open={Boolean(popup)}>
+                      <TooltipTrigger asChild>
+                        <SidebarMenuButton
+                          asChild
+                          tooltip={item.tooltip}
+                          isActive={isActive}
+                        >
+                          <Link href={item.url}>
+                            <item.icon
+                              className={cn(isActive && "text-primary")}
+                            />
+                            <span>{item.title}</span>
+                          </Link>
+                        </SidebarMenuButton>
+                      </TooltipTrigger>
+                      {popup?.content && (
+                        <TooltipContent
+                          side="right"
+                          align="start"
+                          className="max-w-xs"
+                        >
+                          <div className="text-sm">{popup?.content}</div>
+                        </TooltipContent>
+                      )}
+                    </Tooltip>
                   </SidebarMenuItem>
                 );
               })}

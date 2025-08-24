@@ -26,7 +26,7 @@ import {
 } from "$/components/ui/accordion";
 import { cn } from "$/lib/utils";
 import { InboxTenderProduct } from "$/features/inbox/api/use-tender-inbox-query";
-import { useProducts } from "$/features/products/api/use-alternative-products";
+import { useProducts } from "$/features/products/api/use-products";
 
 interface ProductConfirmationProps {
   products: InboxTenderProduct[];
@@ -53,11 +53,11 @@ function ProductItem({
   onApproveClosestMatch,
   isClosestMatchApproved,
 }: ProductItemProps) {
-  const { data: alternativeProducts } = useProducts({
-    ids: Array.isArray(product.alternative_products)
+  const { data: alternativeProducts } = useProducts(
+    Array.isArray(product.alternative_products)
       ? (product.alternative_products as string[])
-      : [],
-  });
+      : []
+  );
 
   const requirements = product.requirements_to_confirm;
 

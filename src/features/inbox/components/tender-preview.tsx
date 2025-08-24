@@ -20,6 +20,7 @@ import { useUpdateTenderStatus } from "$/features/tenders/api/use-update-tender-
 import { toast } from "sonner";
 import { TenderPartsCarouselSkeleton } from "./tender-parts-carousel-skeleton";
 import { Section } from "./navigation-sidebar";
+import { useSidebarPopupStore } from "$/features/navigation/store/use-sidebar-popup-store";
 
 const TenderPartsCarousel = dynamic(
   () =>
@@ -74,6 +75,7 @@ export function TenderPreview({
   );
   const { mutate: rejectTender } = useRejectTender();
   const { mutate: updateTenderStatus } = useUpdateTenderStatus();
+  const { showSidebarPopup } = useSidebarPopupStore();
 
   const hasMultipleParts = mapping.tender_parts.length > 1;
 
@@ -113,6 +115,17 @@ export function TenderPreview({
         it
       </span>
     );
+
+    showSidebarPopup({
+      id: "active-tenders",
+      content: (
+        <span>
+          Tender was moved to analysis successfully, go to active tenders to see
+          it
+        </span>
+      ),
+      duration: 3000,
+    });
 
     showNextTender?.();
   }

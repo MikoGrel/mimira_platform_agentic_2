@@ -25,10 +25,12 @@ function RequirementsStatus(props: {
 }) {
   return (
     <div className="gap-1 inline-flex ml-1">
-      <span className="text-success-600 font-medium">{props.default}</span>
+      <span className="text-success-600 font-medium">{props.approve}</span>
       <span className="text-subtle-foreground">/</span>
       <span className="text-warning-600 font-medium">
-        {props.default || 0 + props.reject || 0 + props.approve || 0}
+        {[props.default, props.approve, props.reject]
+          .filter(Boolean)
+          .reduce((acc, curr) => acc + curr, 0)}
       </span>
     </div>
   );

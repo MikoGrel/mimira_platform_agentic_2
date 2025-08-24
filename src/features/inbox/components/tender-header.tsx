@@ -294,7 +294,9 @@ export function TenderHeader(props: TenderHeaderProps) {
             <div className="flex items-center gap-4 text-sm text-muted-foreground">
               <span className="flex items-center gap-2">
                 <House className="w-4 h-4" />
-                {mapping.tenders?.organization_name}
+                {truncate(mapping.tenders?.organization_name || "", {
+                  length: 80,
+                })}
               </span>
               {mapping.tenders.submitting_offers_date && (
                 <span className="flex items-center gap-2">

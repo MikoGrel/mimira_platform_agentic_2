@@ -10,7 +10,7 @@ import {
   AccordionTrigger,
 } from "$/components/ui/accordion";
 import { InboxTenderProduct } from "$/features/inbox/api/use-tender-inbox-query";
-import { useProducts } from "../api/use-alternative-products";
+import { useProducts } from "../api/use-products";
 
 interface ProductCardProps {
   product: InboxTenderProduct;
@@ -18,11 +18,11 @@ interface ProductCardProps {
 }
 
 export function ProductCard({ product, className }: ProductCardProps) {
-  const { data: alternativeProducts } = useProducts({
-    ids: Array.isArray(product.alternative_products)
+  const { data: alternativeProducts } = useProducts(
+    Array.isArray(product.alternative_products)
       ? (product.alternative_products as string[])
-      : [],
-  });
+      : []
+  );
 
   const hasDetails = Boolean(
     product.product_req_spec ||

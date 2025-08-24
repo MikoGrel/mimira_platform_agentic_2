@@ -3,12 +3,12 @@
 import { createClient } from "$/lib/supabase/client";
 import { useQuery } from "@tanstack/react-query";
 
-export function useProducts({ ids }: { ids: string[] }) {
-  const client = createClient();
-
+export function useProducts(ids: string[]) {
   return useQuery({
     queryKey: ["products", ids],
     queryFn: async () => {
+      const client = createClient();
+
       const { data, error } = await client
         .from("tender_products")
         .select("*")
@@ -20,6 +20,5 @@ export function useProducts({ ids }: { ids: string[] }) {
 
       return data;
     },
-    enabled: ids.length > 0,
   });
 }
