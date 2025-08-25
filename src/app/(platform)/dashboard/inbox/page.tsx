@@ -240,6 +240,8 @@ export default function InboxPage() {
             const idx = tenders.findIndex((t) => t.id === selectedId);
             if (idx < tenders.length - 1) {
               setSelectedId(tenders[idx + 1].id);
+            } else {
+              setSelectedId(null);
             }
           }}
         />

@@ -25,7 +25,7 @@ function RequirementsStatus(props: {
 }) {
   return (
     <div className="gap-1 inline-flex ml-1">
-      <span className="text-success-600 font-medium">{props.approve}</span>
+      <span className="text-success-600 font-medium">{props.approve || 0}</span>
       <span className="text-subtle-foreground">/</span>
       <span className="text-warning-600 font-medium">
         {[props.default, props.approve, props.reject]
@@ -105,6 +105,8 @@ export function TenderPartsCarousel({
   if (!tenderParts?.length) return null;
 
   const groupedRequirements = (part: InboxTenderPart) => {
+    console.log(part.tender_requirements);
+
     return part.tender_requirements?.reduce(
       (acc, requirement) => {
         const status = requirement.status as "default" | "reject" | "approve";

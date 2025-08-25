@@ -10,20 +10,21 @@ import {
   AccordionTrigger,
 } from "$/components/ui/accordion";
 import { InboxTenderProduct } from "$/features/inbox/api/use-tender-inbox-query";
-import { useProducts } from "../api/use-products";
+import { CatalogProduct } from "../api/use-catalog-products";
 
 interface ProductCardProps {
   product: InboxTenderProduct;
+  alternatives: CatalogProduct[];
+  closestMatch: CatalogProduct | null;
   className?: string;
 }
 
-export function ProductCard({ product, className }: ProductCardProps) {
-  const { data: alternativeProducts } = useProducts(
-    Array.isArray(product.alternative_products)
-      ? (product.alternative_products as string[])
-      : []
-  );
-
+export function ProductCard({
+  product,
+  closestMatch,
+  alternatives,
+  className,
+}: ProductCardProps) {
   const hasDetails = Boolean(
     product.product_req_spec ||
       product.closest_match ||
@@ -92,7 +93,7 @@ export function ProductCard({ product, className }: ProductCardProps) {
                     <Chip color="success" variant="flat" size="sm">
                       <Tag className="w-3.5 h-3.5" />
                     </Chip>
-                    {product.closest_match}
+                    {closestMatch?.name}
                   </div>
                 </div>
               )}
@@ -110,7 +111,7 @@ export function ProductCard({ product, className }: ProductCardProps) {
                 </div>
               )}
 
-              {product.alternative_products && (
+              {alternatives.length > 0 && (
                 <div className="text-sm space-y-1">
                   <div className="flex items-center gap-2">
                     <span className="font-medium text-muted-foreground">
@@ -118,13 +119,13 @@ export function ProductCard({ product, className }: ProductCardProps) {
                     </span>
                   </div>
                   <ul className="space-y-1 pl-2 pt-2">
-                    {alternativeProducts?.map((p) => (
+                    {alternatives.map((p) => (
                       <li
                         key={p.id}
                         className="flex items-start gap-2 font-medium"
                       >
                         <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-muted-foreground/50" />
-                        <span>{p.product_req_name}</span>
+                        <span>{p.name}</span>
                       </li>
                     ))}
                   </ul>

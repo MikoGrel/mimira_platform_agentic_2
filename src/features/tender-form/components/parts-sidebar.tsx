@@ -13,7 +13,7 @@ interface PartsSidebarProps {
 
 const statusMap = {
   approve: <>Approved</>,
-  pending: <>Pending</>,
+  analysis: <>Analysis</>,
   rejected: <>Rejected</>,
 };
 

@@ -217,7 +217,6 @@ export default function TenderPage() {
     <main className="w-full h-full bg-primary-gradient">
       <Stepper.Provider initialStep={initialStep} className="h-full">
         {({ methods }) => {
-          // Store methods in ref for use in useEffect
           stepperMethodsRef.current = methods;
 
           return (

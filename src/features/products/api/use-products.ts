@@ -3,7 +3,10 @@
 import { createClient } from "$/lib/supabase/client";
 import { useQuery } from "@tanstack/react-query";
 
-export function useProducts(ids: string[]) {
+export function useProducts(
+  ids: string[],
+  { enabled = true }: { enabled?: boolean } = {}
+) {
   return useQuery({
     queryKey: ["products", ids],
     queryFn: async () => {
@@ -20,5 +23,6 @@ export function useProducts(ids: string[]) {
 
       return data;
     },
+    enabled,
   });
 }

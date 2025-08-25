@@ -220,6 +220,7 @@ export type Database = {
           seen_at: string | null
           status: string | null
           tender_id: string | null
+          updated_at: string | null
         }
         Insert: {
           can_participate?: boolean | null
@@ -229,6 +230,7 @@ export type Database = {
           seen_at?: string | null
           status?: string | null
           tender_id?: string | null
+          updated_at?: string | null
         }
         Update: {
           can_participate?: boolean | null
@@ -238,6 +240,7 @@ export type Database = {
           seen_at?: string | null
           status?: string | null
           tender_id?: string | null
+          updated_at?: string | null
         }
         Relationships: [
           {
@@ -434,6 +437,7 @@ export type Database = {
           part_name: string | null
           review_criteria_llm: string | null
           status: string
+          updated_at: string | null
           wadium_llm: string | null
         }
         Insert: {
@@ -447,6 +451,7 @@ export type Database = {
           part_name?: string | null
           review_criteria_llm?: string | null
           status: string
+          updated_at?: string | null
           wadium_llm?: string | null
         }
         Update: {
@@ -460,6 +465,7 @@ export type Database = {
           part_name?: string | null
           review_criteria_llm?: string | null
           status?: string
+          updated_at?: string | null
           wadium_llm?: string | null
         }
         Relationships: [
@@ -649,6 +655,17 @@ export type Database = {
       generate_uuid: {
         Args: Record<PropertyKey, never>
         Returns: string
+      }
+      get_categories_with_products: {
+        Args: { p_company_uuid: string; p_search?: string }
+        Returns: {
+          catalogue_id: string
+          created_at: string
+          description: string
+          id: string
+          name: string
+          product_count: number
+        }[]
       }
       get_tenders_summary: {
         Args: { p_company_id: string }

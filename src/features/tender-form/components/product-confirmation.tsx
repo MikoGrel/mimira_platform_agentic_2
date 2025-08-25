@@ -1,21 +1,13 @@
 "use client";
 
 import { useState } from "react";
-import {
-  Button,
-  Chip,
-  Card,
-  CardBody,
-  CardHeader,
-  Checkbox,
-} from "@heroui/react";
+import { Button, Chip, Card, CardBody, CardHeader } from "@heroui/react";
 import {
   Package,
   CheckCircle2,
   Circle,
   Search,
   Plus,
-  Star,
   FileText,
 } from "lucide-react";
 import {
@@ -24,9 +16,9 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "$/components/ui/accordion";
-import { cn } from "$/lib/utils";
 import { InboxTenderProduct } from "$/features/inbox/api/use-tender-inbox-query";
-import { useProducts } from "$/features/products/api/use-products";
+import { ProductSearchResult } from "$/features/products/api/use-products-search";
+import { CatalogDialog } from "$/features/products/components/catalog-dialog";
 
 interface ProductConfirmationProps {
   products: InboxTenderProduct[];
@@ -37,30 +29,21 @@ interface ProductConfirmationProps {
 interface ProductItemProps {
   product: InboxTenderProduct;
   isConfirmed: boolean;
+  selectedProduct: ProductSearchResult | null;
   onToggleConfirm: () => void;
-  selectedAlternative: string | null;
-  onSelectAlternative: (alternative: string | null) => void;
-  onApproveClosestMatch: () => void;
-  isClosestMatchApproved: boolean;
+  onOpenCatalog: () => void;
+  onRemoveProduct: () => void;
 }
 
 function ProductItem({
   product,
   isConfirmed,
+  selectedProduct,
   onToggleConfirm,
-  selectedAlternative,
-  onSelectAlternative,
-  onApproveClosestMatch,
-  isClosestMatchApproved,
+  onOpenCatalog,
+  onRemoveProduct,
 }: ProductItemProps) {
-  const { data: alternativeProducts } = useProducts(
-    Array.isArray(product.alternative_products)
-      ? (product.alternative_products as string[])
-      : []
-  );
-
   const requirements = product.requirements_to_confirm;
-
   const displayName = product.product_req_name || "Unnamed Product";
   const hasSpecs = product.product_req_spec && product.product_req_spec.trim();
 
@@ -114,6 +97,7 @@ function ProductItem({
               variant="light"
               startContent={<Search className="w-4 h-4" />}
               className="text-xs"
+              onPress={onOpenCatalog}
             >
               Catalogue
             </Button>
@@ -130,82 +114,9 @@ function ProductItem({
         </div>
       </CardHeader>
 
-      {!isClosestMatchApproved && !selectedAlternative && (
+      {/* Show requirements and specs when no product is selected */}
+      {!selectedProduct && (
         <CardBody className="pt-0 space-y-4">
-          {/* Closest Match - First and most important */}
-          {product.closest_match && (
-            <div className="bg-success/5 border border-success/20 rounded-lg p-4">
-              <div className="flex items-center justify-between mb-3">
-                <div className="flex items-center gap-2">
-                  <span className="inline-flex items-center justify-center w-6 h-6 rounded-full bg-success/10 text-success">
-                    <Star className="w-3.5 h-3.5" />
-                  </span>
-                  <h4 className="text-sm font-semibold text-success-700">
-                    Recommended Match
-                  </h4>
-                </div>
-                <Button
-                  size="sm"
-                  color="default"
-                  variant="bordered"
-                  onPress={onApproveClosestMatch}
-                  startContent={<Star className="w-4 h-4" />}
-                >
-                  Approve
-                </Button>
-              </div>
-              <p className="text-sm text-success-700 font-medium">
-                {product.closest_match}
-              </p>
-            </div>
-          )}
-
-          {/* Alternative Products */}
-          {alternativeProducts && (
-            <div>
-              <h4 className="text-sm font-semibold text-foreground mb-3">
-                Alternative Products
-              </h4>
-              <div className="space-y-2">
-                {alternativeProducts.map((alternative) => (
-                  <div
-                    key={alternative.id}
-                    className={cn(
-                      "border rounded-lg p-3 cursor-pointer transition-all hover:shadow-sm",
-                      selectedAlternative === alternative.id
-                        ? "border-primary bg-primary/5"
-                        : "border-border hover:border-border/80"
-                    )}
-                    onClick={() => {
-                      if (selectedAlternative === alternative.id) {
-                        onSelectAlternative(null);
-                      } else {
-                        onSelectAlternative(alternative.id);
-                      }
-                    }}
-                  >
-                    <div className="flex items-center gap-3">
-                      <Checkbox
-                        isSelected={selectedAlternative === alternative.id}
-                        size="sm"
-                        readOnly
-                        color="primary"
-                      />
-                      <span className="text-sm font-medium flex-1">
-                        {alternative.product_req_name}
-                      </span>
-                      {selectedAlternative === alternative.id && (
-                        <Chip size="sm" color="primary" variant="flat">
-                          Selected
-                        </Chip>
-                      )}
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          )}
-
           {/* Requirements to Confirm */}
           {requirements && (
             <div>
@@ -248,8 +159,8 @@ function ProductItem({
         </CardBody>
       )}
 
-      {/* Approved state - show primary-colored approved section */}
-      {isClosestMatchApproved && product.closest_match && (
+      {/* Selected Product state - unified display */}
+      {selectedProduct && (
         <CardBody className="pt-0">
           <div className="bg-primary/5 border border-primary/20 rounded-lg p-4">
             <div className="flex items-center justify-between">
@@ -258,52 +169,27 @@ function ProductItem({
                   <CheckCircle2 className="w-3.5 h-3.5" />
                 </span>
                 <h4 className="text-sm font-semibold text-primary-700">
-                  Approved Match
+                  Selected Product
                 </h4>
               </div>
               <Button
                 size="sm"
-                color="primary"
-                variant="solid"
-                onPress={onApproveClosestMatch}
-                startContent={<CheckCircle2 className="w-4 h-4" />}
+                color="danger"
+                variant="light"
+                onPress={onRemoveProduct}
+                startContent={<Circle className="w-4 h-4" />}
               >
-                Approved
+                Remove
               </Button>
             </div>
             <p className="text-sm text-primary-700 font-medium mt-2">
-              {product.closest_match}
+              {selectedProduct.name}
             </p>
-          </div>
-        </CardBody>
-      )}
-
-      {/* Selected Alternative state - show primary-colored selected section */}
-      {selectedAlternative && !isClosestMatchApproved && (
-        <CardBody className="pt-0">
-          <div className="bg-primary/5 border border-primary/20 rounded-lg p-4">
-            <div className="flex items-center justify-between">
-              <div className="flex items-center gap-2">
-                <span className="inline-flex items-center justify-center w-6 h-6 rounded-full bg-primary/10 text-primary">
-                  <CheckCircle2 className="w-3.5 h-3.5" />
-                </span>
-                <h4 className="text-sm font-semibold text-primary-700">
-                  Selected Alternative
-                </h4>
-              </div>
-              <Button
-                size="sm"
-                color="primary"
-                variant="solid"
-                onPress={() => onSelectAlternative(null)}
-                startContent={<CheckCircle2 className="w-4 h-4" />}
-              >
-                Selected
-              </Button>
-            </div>
-            <p className="text-sm text-primary-700 font-medium mt-2">
-              {selectedAlternative}
-            </p>
+            {selectedProduct.subcategory?.name && (
+              <p className="text-xs text-primary-600 mt-1">
+                {selectedProduct.subcategory.name}
+              </p>
+            )}
           </div>
         </CardBody>
       )}
@@ -320,28 +206,18 @@ export function ProductConfirmation({
   const [confirmedProducts, setConfirmedProducts] = useState<Set<string>>(
     new Set()
   );
-  const [selectedAlternatives, setSelectedAlternatives] = useState<
-    Record<string, string>
+  const [selectedProducts, setSelectedProducts] = useState<
+    Record<string, ProductSearchResult>
   >({});
-  const [approvedClosestMatches, setApprovedClosestMatches] = useState<
-    Set<string>
-  >(new Set());
+  const [catalogDialogOpen, setCatalogDialogOpen] = useState(false);
+  const [editingProductKey, setEditingProductKey] = useState<string | null>(
+    null
+  );
 
   const toggleConfirmed = (productKey: string) => {
     const newConfirmed = new Set(confirmedProducts);
     if (newConfirmed.has(productKey)) {
-      // Unconfirming - reset to expanded state
       newConfirmed.delete(productKey);
-
-      // Clear approved closest match state
-      const newApproved = new Set(approvedClosestMatches);
-      newApproved.delete(productKey);
-      setApprovedClosestMatches(newApproved);
-
-      // Clear selected alternative state
-      const newAlternatives = { ...selectedAlternatives };
-      delete newAlternatives[productKey];
-      setSelectedAlternatives(newAlternatives);
     } else {
       newConfirmed.add(productKey);
     }
@@ -349,42 +225,37 @@ export function ProductConfirmation({
     onConfirmationChange?.(newConfirmed);
   };
 
-  const handleSelectAlternative = (
-    productKey: string,
-    alternative: string | null
-  ) => {
-    const newAlternatives = { ...selectedAlternatives };
+  const handleOpenCatalog = (productKey: string) => {
+    setEditingProductKey(productKey);
+    setCatalogDialogOpen(true);
+  };
+
+  const handleProductSelected = (product: ProductSearchResult) => {
+    if (!editingProductKey) return;
+
+    const newSelectedProducts = { ...selectedProducts };
+    newSelectedProducts[editingProductKey] = product;
+
+    // Auto-confirm when selecting a product
     const newConfirmed = new Set(confirmedProducts);
+    newConfirmed.add(editingProductKey);
 
-    if (alternative === null) {
-      delete newAlternatives[productKey];
-      // Don't remove from confirmed when deselecting alternative
-    } else {
-      newAlternatives[productKey] = alternative;
-      // Auto-confirm when selecting an alternative
-      newConfirmed.add(productKey);
-    }
-
-    setSelectedAlternatives(newAlternatives);
+    setSelectedProducts(newSelectedProducts);
     setConfirmedProducts(newConfirmed);
+    setCatalogDialogOpen(false);
+    setEditingProductKey(null);
     onConfirmationChange?.(newConfirmed);
   };
 
-  const handleApproveClosestMatch = (productKey: string) => {
-    const newApproved = new Set(approvedClosestMatches);
+  const handleRemoveProduct = (productKey: string) => {
+    const newSelectedProducts = { ...selectedProducts };
+    delete newSelectedProducts[productKey];
+
+    // Remove from confirmed when removing product
     const newConfirmed = new Set(confirmedProducts);
+    newConfirmed.delete(productKey);
 
-    if (newApproved.has(productKey)) {
-      // Un-approve: remove from approved and confirmed
-      newApproved.delete(productKey);
-      newConfirmed.delete(productKey);
-    } else {
-      // Approve: add to both approved and confirmed
-      newApproved.add(productKey);
-      newConfirmed.add(productKey);
-    }
-
-    setApprovedClosestMatches(newApproved);
+    setSelectedProducts(newSelectedProducts);
     setConfirmedProducts(newConfirmed);
     onConfirmationChange?.(newConfirmed);
   };
@@ -399,8 +270,7 @@ export function ProductConfirmation({
   const handleClearAll = () => {
     const newConfirmed = new Set<string>();
     setConfirmedProducts(newConfirmed);
-    setSelectedAlternatives({});
-    setApprovedClosestMatches(new Set());
+    setSelectedProducts({});
     onConfirmationChange?.(newConfirmed);
   };
 
@@ -473,20 +343,21 @@ export function ProductConfirmation({
                 key={productKey}
                 product={product}
                 isConfirmed={confirmedProducts.has(productKey)}
+                selectedProduct={selectedProducts[productKey] || null}
                 onToggleConfirm={() => toggleConfirmed(productKey)}
-                selectedAlternative={selectedAlternatives[productKey] || null}
-                onSelectAlternative={(alternative) =>
-                  handleSelectAlternative(productKey, alternative)
-                }
-                onApproveClosestMatch={() =>
-                  handleApproveClosestMatch(productKey)
-                }
-                isClosestMatchApproved={approvedClosestMatches.has(productKey)}
+                onOpenCatalog={() => handleOpenCatalog(productKey)}
+                onRemoveProduct={() => handleRemoveProduct(productKey)}
               />
             );
           })}
         </div>
       </div>
+
+      <CatalogDialog
+        open={catalogDialogOpen}
+        onOpenChange={setCatalogDialogOpen}
+        onFinish={handleProductSelected}
+      />
     </div>
   );
 }

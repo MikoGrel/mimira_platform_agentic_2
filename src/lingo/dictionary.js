@@ -353,6 +353,41 @@ export default {
           },
           hash: "26b80ae8a680de73667e096098aa69d8",
         },
+        "19/declaration/body/15/argument/3/1/1/3-placeholder": {
+          content: {
+            en: "Search",
+            pl: "Szukaj",
+          },
+          hash: "49dd6c21604b5e8d4153ff1aff2177e1",
+        },
+        "19/declaration/body/15/argument/3/5/1/3": {
+          content: {
+            en: "Ask Mimir",
+            pl: "Zapytaj Mimira",
+          },
+          hash: "c516ed1af9463ccd6bdcb19a1f13e4ac",
+        },
+        "19/declaration/body/15/argument/3/5/1/5": {
+          content: {
+            en: "Coming soon",
+            pl: "Wkrótce dostępne",
+          },
+          hash: "05a8fc9f6d826fd88a809d98684edcad",
+        },
+        "19/declaration/body/15/argument/5/expression/right/1/1": {
+          content: {
+            en: "Select a tender to view details",
+            pl: "Wybierz przetarg, aby zobaczyć szczegóły",
+          },
+          hash: "067789b01a081458db2f872f10a37c3f",
+        },
+        "20/body/0/argument/1/expression/0/body/3/3": {
+          content: {
+            en: "·",
+            pl: "·",
+          },
+          hash: "26b80ae8a680de73667e096098aa69d8",
+        },
       },
     },
     "app/(platform)/dashboard/layout.tsx": {
@@ -4374,6 +4409,13 @@ export default {
           hash: "b8638560dd4d00bd02c41fa219c182f2",
         },
         "7/declaration/body/2/argument/1": {
+          content: {
+            en: "Products <element:span>({products.length})</element:span>",
+            pl: "Produkty <element:span>({products.length})</element:span>",
+          },
+          hash: "b8638560dd4d00bd02c41fa219c182f2",
+        },
+        "8/declaration/body/3/argument/1": {
           content: {
             en: "Products <element:span>({products.length})</element:span>",
             pl: "Produkty <element:span>({products.length})</element:span>",
@@ -9236,6 +9278,13 @@ export default {
           },
           hash: "78efde626dafcc52e22f7f6b702998a0",
         },
+        "22/declaration/body/10/body/0/expression/0/1/value": {
+          content: {
+            en: "Tender was moved to analysis successfully, go to active tenders to see it",
+            pl: "Przetarg został pomyślnie przeniesiony do analizy, przejdź do aktywnych przetargów, aby go zobaczyć",
+          },
+          hash: "db19ec4f7ea5522f60443270198a75af",
+        },
         "22/declaration/body/10/body/1/expression/0": {
           content: {
             en: "Tender was moved to analysis successfully, go to active tenders to see it",
@@ -10096,6 +10145,494 @@ export default {
         },
       },
     },
+    "features/products/components/catalog-dialog.tsx": {
+      entries: {
+        "4/declaration/body/0/argument/1": {
+          content: {
+            en: "Product catalog explorer",
+            pl: "Eksplorator katalogu produktów",
+          },
+          hash: "9808bdd2a8496944c46f8b86e3b35dc8",
+        },
+        "4/declaration/body/0/argument/1/1/1": {
+          content: {
+            en: "Product catalog explorer",
+            pl: "Eksplorator katalogu produktów",
+          },
+          hash: "744d43fc50105390c5548ee0841202e3",
+        },
+        "5/declaration/body/0/argument/1/1/1": {
+          content: {
+            en: "<element:span><element:Package></element:Package></element:span> Product catalog explorer",
+            pl: "<element:span><element:Package></element:Package></element:span> Eksplorator katalogu produktów",
+          },
+          hash: "03bd5faa9d24993f54a6529cb13ce4b7",
+        },
+        "6/declaration/body/0/argument/1/1/1": {
+          content: {
+            en: "<element:span><element:Package></element:Package></element:span> Product catalog explorer",
+            pl: "<element:span><element:Package></element:Package></element:span> Eksplorator katalogu produktów",
+          },
+          hash: "03bd5faa9d24993f54a6529cb13ce4b7",
+        },
+        "7/declaration/body/1/argument/1/1/1": {
+          content: {
+            en: "<element:span><element:Package></element:Package></element:span> Product catalog explorer",
+            pl: "<element:span><element:Package></element:Package></element:span> Eksplorator katalogu produktów",
+          },
+          hash: "03bd5faa9d24993f54a6529cb13ce4b7",
+        },
+        "7/declaration/body/1/argument/1/1/3": {
+          content: {
+            en: "Select product and close",
+            pl: "Wybierz produkt i zamknij",
+          },
+          hash: "321060c84c082f18f312383917280efb",
+        },
+      },
+    },
+    "features/products/components/catalog-explorer.tsx": {
+      entries: {
+        "1/declaration/body/0/argument/1/1": {
+          content: {
+            en: "catalog explorer",
+            pl: "eksplorator katalogu",
+          },
+          hash: "ed076a1a55aa7a36e650140ad9b767f0",
+        },
+        "1/declaration/body/0/argument/5": {
+          content: {
+            en: "test",
+            pl: "test",
+          },
+          hash: "a39e9dc2362a143f4bf667baad88f49d",
+        },
+        "10/declaration/body/3/argument/1/1/1-placeholder": {
+          content: {
+            en: "Search for a product",
+            pl: "Wyszukaj produkt",
+          },
+          hash: "4096af8ab87433c5df52388c4281ae0d",
+        },
+        "11/declaration/body/3/argument/1/1/1-placeholder": {
+          content: {
+            en: "Search for a product",
+            pl: "Wyszukaj produkt",
+          },
+          hash: "4096af8ab87433c5df52388c4281ae0d",
+        },
+        "3/declaration/body/2/argument/1/1": {
+          content: {
+            en: "catalog explorer",
+            pl: "eksplorator katalogu",
+          },
+          hash: "ed076a1a55aa7a36e650140ad9b767f0",
+        },
+        "3/declaration/body/2/argument/5": {
+          content: {
+            en: "test",
+            pl: "test",
+          },
+          hash: "a39e9dc2362a143f4bf667baad88f49d",
+        },
+        "4/declaration/body/2/argument/1/1": {
+          content: {
+            en: "catalog explorer",
+            pl: "eksplorator katalogu",
+          },
+          hash: "ed076a1a55aa7a36e650140ad9b767f0",
+        },
+        "5/declaration/body/2/argument/1/1": {
+          content: {
+            en: "catalog explorer",
+            pl: "eksplorator katalogu",
+          },
+          hash: "ed076a1a55aa7a36e650140ad9b767f0",
+        },
+        "6/declaration/body/3/argument/1/1/1-placeholder": {
+          content: {
+            en: "Search for a product",
+            pl: "Wyszukaj produkt",
+          },
+          hash: "4096af8ab87433c5df52388c4281ae0d",
+        },
+        "7/declaration/body/3/argument/1/1/1-placeholder": {
+          content: {
+            en: "Search for a product",
+            pl: "Wyszukaj produkt",
+          },
+          hash: "4096af8ab87433c5df52388c4281ae0d",
+        },
+        "8/declaration/body/3/argument/1/1/1-placeholder": {
+          content: {
+            en: "Search for a product",
+            pl: "Wyszukaj produkt",
+          },
+          hash: "4096af8ab87433c5df52388c4281ae0d",
+        },
+        "8/declaration/body/4/argument/1/1/1-placeholder": {
+          content: {
+            en: "Search for a product",
+            pl: "Wyszukaj produkt",
+          },
+          hash: "4096af8ab87433c5df52388c4281ae0d",
+        },
+        "8/declaration/body/4/argument/1/1/3-label": {
+          content: {
+            en: "Categories",
+            pl: "Kategorie",
+          },
+          hash: "fd4e44f3b1b2bba9ca45f3aef963d042",
+        },
+        "8/declaration/body/4/argument/1/1/3/1-label": {
+          content: {
+            en: "Categories",
+            pl: "Kategorie",
+          },
+          hash: "fd4e44f3b1b2bba9ca45f3aef963d042",
+        },
+        "8/declaration/body/4/argument/1/1/3/1/1-label": {
+          content: {
+            en: "Categories",
+            pl: "Kategorie",
+          },
+          hash: "fd4e44f3b1b2bba9ca45f3aef963d042",
+        },
+        "9/declaration/body/3/argument/1/1/1-placeholder": {
+          content: {
+            en: "Search for a product",
+            pl: "Wyszukaj produkt",
+          },
+          hash: "4096af8ab87433c5df52388c4281ae0d",
+        },
+        "9/declaration/body/4/argument/1/1/1-placeholder": {
+          content: {
+            en: "Search for a product",
+            pl: "Wyszukaj produkt",
+          },
+          hash: "4096af8ab87433c5df52388c4281ae0d",
+        },
+      },
+    },
+    "features/products/components/categories-list.tsx": {
+      entries: {
+        "10/declaration/0/init/body/2/argument/1-placeholder": {
+          content: {
+            en: "Search categories",
+            pl: "Szukaj kategorii",
+          },
+          hash: "92239aa891319862c8f5c09f2d482319",
+        },
+        "10/declaration/0/init/body/2/argument/1/1": {
+          content: {
+            en: "Categories",
+            pl: "Kategorie",
+          },
+          hash: "454a44a1be5e0fe88330856df1fb8380",
+        },
+        "10/declaration/0/init/body/2/argument/1/1-placeholder": {
+          content: {
+            en: "Search categories",
+            pl: "Szukaj kategorii",
+          },
+          hash: "92239aa891319862c8f5c09f2d482319",
+        },
+        "10/declaration/0/init/body/2/argument/1/3/expression/right-label": {
+          content: {
+            en: "Loading categories...",
+            pl: "Ładowanie kategorii...",
+          },
+          hash: "1d80d219a9502bccff26360f8ccabce0",
+        },
+        "10/declaration/0/init/body/2/argument/3/1/expression/right-label": {
+          content: {
+            en: "Loading categories...",
+            pl: "Ładowanie kategorii...",
+          },
+          hash: "1d80d219a9502bccff26360f8ccabce0",
+        },
+        "10/declaration/0/init/body/3/argument/1/1": {
+          content: {
+            en: "Categories",
+            pl: "Kategorie",
+          },
+          hash: "454a44a1be5e0fe88330856df1fb8380",
+        },
+        "10/declaration/0/init/body/3/argument/1/3/expression/right-label": {
+          content: {
+            en: "Loading categories...",
+            pl: "Ładowanie kategorii...",
+          },
+          hash: "1d80d219a9502bccff26360f8ccabce0",
+        },
+        "10/declaration/0/init/body/4/argument/1/1": {
+          content: {
+            en: "Categories",
+            pl: "Kategorie",
+          },
+          hash: "454a44a1be5e0fe88330856df1fb8380",
+        },
+        "10/declaration/0/init/body/4/argument/1/3/expression/right-label": {
+          content: {
+            en: "Loading categories...",
+            pl: "Ładowanie kategorii...",
+          },
+          hash: "1d80d219a9502bccff26360f8ccabce0",
+        },
+        "10/declaration/0/init/body/5/argument/1/1": {
+          content: {
+            en: "Categories",
+            pl: "Kategorie",
+          },
+          hash: "454a44a1be5e0fe88330856df1fb8380",
+        },
+        "10/declaration/0/init/body/5/argument/1/3/expression/right-label": {
+          content: {
+            en: "Loading categories...",
+            pl: "Ładowanie kategorii...",
+          },
+          hash: "1d80d219a9502bccff26360f8ccabce0",
+        },
+        "10/declaration/0/init/body/6/argument/1/1": {
+          content: {
+            en: "Categories",
+            pl: "Kategorie",
+          },
+          hash: "454a44a1be5e0fe88330856df1fb8380",
+        },
+        "10/declaration/0/init/body/6/argument/1/3/expression/right-label": {
+          content: {
+            en: "Loading categories...",
+            pl: "Ładowanie kategorii...",
+          },
+          hash: "1d80d219a9502bccff26360f8ccabce0",
+        },
+        "10/declaration/0/init/body/7/argument/1/1": {
+          content: {
+            en: "Categories",
+            pl: "Kategorie",
+          },
+          hash: "454a44a1be5e0fe88330856df1fb8380",
+        },
+        "10/declaration/0/init/body/7/argument/1/3/expression/right-label": {
+          content: {
+            en: "Loading categories...",
+            pl: "Ładowanie kategorii...",
+          },
+          hash: "1d80d219a9502bccff26360f8ccabce0",
+        },
+        "11/declaration/0/init/0/body/1/argument/1/1": {
+          content: {
+            en: "Categories",
+            pl: "Kategorie",
+          },
+          hash: "fd4e44f3b1b2bba9ca45f3aef963d042",
+        },
+        "11/declaration/0/init/0/body/1/argument/1/3/expression/right-label": {
+          content: {
+            en: "Loading categories...",
+            pl: "Ładowanie kategorii...",
+          },
+          hash: "1d80d219a9502bccff26360f8ccabce0",
+        },
+        "11/declaration/0/init/0/body/2/argument/1/1": {
+          content: {
+            en: "Categories",
+            pl: "Kategorie",
+          },
+          hash: "fd4e44f3b1b2bba9ca45f3aef963d042",
+        },
+        "11/declaration/0/init/0/body/2/argument/1/3/expression/right-label": {
+          content: {
+            en: "Loading categories...",
+            pl: "Ładowanie kategorii...",
+          },
+          hash: "1d80d219a9502bccff26360f8ccabce0",
+        },
+        "11/declaration/0/init/body/5/argument/1/1": {
+          content: {
+            en: "Categories",
+            pl: "Kategorie",
+          },
+          hash: "454a44a1be5e0fe88330856df1fb8380",
+        },
+        "11/declaration/0/init/body/5/argument/1/3/expression/right-label": {
+          content: {
+            en: "Loading categories...",
+            pl: "Ładowanie kategorii...",
+          },
+          hash: "1d80d219a9502bccff26360f8ccabce0",
+        },
+        "11/declaration/0/init/body/6/argument/1/1": {
+          content: {
+            en: "Categories",
+            pl: "Kategorie",
+          },
+          hash: "454a44a1be5e0fe88330856df1fb8380",
+        },
+        "11/declaration/0/init/body/6/argument/1/3/expression/right-label": {
+          content: {
+            en: "Loading categories...",
+            pl: "Ładowanie kategorii...",
+          },
+          hash: "1d80d219a9502bccff26360f8ccabce0",
+        },
+        "11/declaration/0/init/body/7/argument/1/1": {
+          content: {
+            en: "Categories",
+            pl: "Kategorie",
+          },
+          hash: "454a44a1be5e0fe88330856df1fb8380",
+        },
+        "11/declaration/0/init/body/7/argument/1/3/expression/right-label": {
+          content: {
+            en: "Loading categories...",
+            pl: "Ładowanie kategorii...",
+          },
+          hash: "1d80d219a9502bccff26360f8ccabce0",
+        },
+        "6/declaration/0/init/0/body/1/argument/1/1": {
+          content: {
+            en: "Categories",
+            pl: "Kategorie",
+          },
+          hash: "fd4e44f3b1b2bba9ca45f3aef963d042",
+        },
+        "7/declaration/0/init/0/body/1/argument/1/1": {
+          content: {
+            en: "Categories",
+            pl: "Kategorie",
+          },
+          hash: "fd4e44f3b1b2bba9ca45f3aef963d042",
+        },
+        "7/declaration/0/init/0/body/1/argument/1/3-label": {
+          content: {
+            en: "Loading categories...",
+            pl: "Ładowanie kategorii...",
+          },
+          hash: "1d80d219a9502bccff26360f8ccabce0",
+        },
+        "7/declaration/0/init/0/body/1/argument/1/3/expression/right-label": {
+          content: {
+            en: "Loading categories...",
+            pl: "Ładowanie kategorii...",
+          },
+          hash: "1d80d219a9502bccff26360f8ccabce0",
+        },
+        "9/declaration/0/init/0/body/1/argument/1/1": {
+          content: {
+            en: "Categories",
+            pl: "Kategorie",
+          },
+          hash: "454a44a1be5e0fe88330856df1fb8380",
+        },
+        "9/declaration/0/init/0/body/1/argument/1/3/expression/right-label": {
+          content: {
+            en: "Loading categories...",
+            pl: "Ładowanie kategorii...",
+          },
+          hash: "1d80d219a9502bccff26360f8ccabce0",
+        },
+        "9/declaration/0/init/body/1/argument/1/1": {
+          content: {
+            en: "Categories",
+            pl: "Kategorie",
+          },
+          hash: "454a44a1be5e0fe88330856df1fb8380",
+        },
+        "9/declaration/0/init/body/1/argument/1/3/expression/right-label": {
+          content: {
+            en: "Loading categories...",
+            pl: "Ładowanie kategorii...",
+          },
+          hash: "1d80d219a9502bccff26360f8ccabce0",
+        },
+        "9/declaration/0/init/body/2/argument/1/1": {
+          content: {
+            en: "Categories",
+            pl: "Kategorie",
+          },
+          hash: "454a44a1be5e0fe88330856df1fb8380",
+        },
+        "9/declaration/0/init/body/2/argument/1/1-placeholder": {
+          content: {
+            en: "Search categories",
+            pl: "Szukaj kategorii",
+          },
+          hash: "92239aa891319862c8f5c09f2d482319",
+        },
+        "9/declaration/0/init/body/2/argument/1/3/expression/right-label": {
+          content: {
+            en: "Loading categories...",
+            pl: "Ładowanie kategorii...",
+          },
+          hash: "1d80d219a9502bccff26360f8ccabce0",
+        },
+        "9/declaration/0/init/body/3/argument/1/1": {
+          content: {
+            en: "Categories",
+            pl: "Kategorie",
+          },
+          hash: "454a44a1be5e0fe88330856df1fb8380",
+        },
+        "9/declaration/0/init/body/3/argument/1/1/1": {
+          content: {
+            en: "Categories",
+            pl: "Kategorie",
+          },
+          hash: "6f11eae790d055a98a45639d12c8d98c",
+        },
+        "9/declaration/0/init/body/3/argument/1/3/expression/right-label": {
+          content: {
+            en: "Loading categories...",
+            pl: "Ładowanie kategorii...",
+          },
+          hash: "1d80d219a9502bccff26360f8ccabce0",
+        },
+        "9/declaration/0/init/body/4/argument/1/1": {
+          content: {
+            en: '<element:Label>Categories</element:Label><element:Input></element:Input> placeholder="Search categories" className="w-full" value={search} onChange=<expression/> />',
+            pl: '<element:Label>Kategorie</element:Label><element:Input></element:Input> placeholder="Szukaj w kategoriach" className="w-full" value={search} onChange=<expression/> />',
+          },
+          hash: "92301baf9d17f3b980c628822f19f295",
+        },
+        "9/declaration/0/init/body/4/argument/1/1/1": {
+          content: {
+            en: "Categories",
+            pl: "Kategorie",
+          },
+          hash: "6f11eae790d055a98a45639d12c8d98c",
+        },
+        "9/declaration/0/init/body/4/argument/1/1/3-placeholder": {
+          content: {
+            en: "Search categories",
+            pl: "Szukaj kategorii",
+          },
+          hash: "92239aa891319862c8f5c09f2d482319",
+        },
+        "9/declaration/0/init/body/4/argument/1/3/expression/right-label": {
+          content: {
+            en: "Loading categories...",
+            pl: "Ładowanie kategorii...",
+          },
+          hash: "1d80d219a9502bccff26360f8ccabce0",
+        },
+        "9/declaration/0/init/body/5/argument/1/1": {
+          content: {
+            en: "Categories",
+            pl: "Kategorie",
+          },
+          hash: "454a44a1be5e0fe88330856df1fb8380",
+        },
+        "9/declaration/0/init/body/5/argument/1/3/expression/right-label": {
+          content: {
+            en: "Loading categories...",
+            pl: "Ładowanie kategorii...",
+          },
+          hash: "1d80d219a9502bccff26360f8ccabce0",
+        },
+      },
+    },
     "features/products/components/product-card.tsx": {
       entries: {
         "5/declaration/body/1/argument/1/3/expression/right/1": {
@@ -10370,6 +10907,48 @@ export default {
           },
           hash: "d191c14ac2830891cfcfccde92ff9114",
         },
+        "7/declaration/body/1/argument/1/1/1/1/1/3/1/expression/right": {
+          content: {
+            en: "No matches",
+            pl: "Brak wyników",
+          },
+          hash: "de28a58a7b2d59c69c69eb914ae578bd",
+        },
+        "7/declaration/body/1/argument/1/1/1/1/1/3/3/expression/right": {
+          content: {
+            en: "Matching product",
+            pl: "Pasujący produkt",
+          },
+          hash: "254c96ad8a5dd95a90dedda21de9b355",
+        },
+        "7/declaration/body/1/argument/1/1/1/3/1/expression/right/1": {
+          content: {
+            en: "Specification",
+            pl: "Specyfikacja",
+          },
+          hash: "5f95ead578f1a9f4221b12436e81101c",
+        },
+        "7/declaration/body/1/argument/1/1/1/3/3/expression/right/1/1": {
+          content: {
+            en: "Closest match",
+            pl: "Najbliższe dopasowanie",
+          },
+          hash: "9c928bcbcd8decb0bbf9a8d70a4f603a",
+        },
+        "7/declaration/body/1/argument/1/1/1/3/5/expression/right/1/1": {
+          content: {
+            en: "Requirements to confirm",
+            pl: "Wymagania do potwierdzenia",
+          },
+          hash: "0a11a1a9f68f5869a302ce40ed55538e",
+        },
+        "7/declaration/body/1/argument/1/1/1/3/7/expression/right/1/1": {
+          content: {
+            en: "Alternative products",
+            pl: "Alternatywne produkty",
+          },
+          hash: "d191c14ac2830891cfcfccde92ff9114",
+        },
         "7/declaration/body/2/argument/1/1/1/1/1/3/1/expression/right": {
           content: {
             en: "No matches",
@@ -10406,6 +10985,90 @@ export default {
           hash: "0a11a1a9f68f5869a302ce40ed55538e",
         },
         "7/declaration/body/2/argument/1/1/1/3/7/expression/right/1/1": {
+          content: {
+            en: "Alternative products",
+            pl: "Alternatywne produkty",
+          },
+          hash: "d191c14ac2830891cfcfccde92ff9114",
+        },
+        "7/declaration/body/3/argument/1/1/1/1/1/3/1/expression/right": {
+          content: {
+            en: "No matches",
+            pl: "Brak wyników",
+          },
+          hash: "de28a58a7b2d59c69c69eb914ae578bd",
+        },
+        "7/declaration/body/3/argument/1/1/1/1/1/3/3/expression/right": {
+          content: {
+            en: "Matching product",
+            pl: "Pasujący produkt",
+          },
+          hash: "254c96ad8a5dd95a90dedda21de9b355",
+        },
+        "7/declaration/body/3/argument/1/1/1/3/1/expression/right/1": {
+          content: {
+            en: "Specification",
+            pl: "Specyfikacja",
+          },
+          hash: "5f95ead578f1a9f4221b12436e81101c",
+        },
+        "7/declaration/body/3/argument/1/1/1/3/3/expression/right/1/1": {
+          content: {
+            en: "Closest match",
+            pl: "Najbliższe dopasowanie",
+          },
+          hash: "9c928bcbcd8decb0bbf9a8d70a4f603a",
+        },
+        "7/declaration/body/3/argument/1/1/1/3/5/expression/right/1/1": {
+          content: {
+            en: "Requirements to confirm",
+            pl: "Wymagania do potwierdzenia",
+          },
+          hash: "0a11a1a9f68f5869a302ce40ed55538e",
+        },
+        "7/declaration/body/3/argument/1/1/1/3/7/expression/right/1/1": {
+          content: {
+            en: "Alternative products",
+            pl: "Alternatywne produkty",
+          },
+          hash: "d191c14ac2830891cfcfccde92ff9114",
+        },
+        "7/declaration/body/4/argument/1/1/1/1/1/3/1/expression/right": {
+          content: {
+            en: "No matches",
+            pl: "Brak wyników",
+          },
+          hash: "de28a58a7b2d59c69c69eb914ae578bd",
+        },
+        "7/declaration/body/4/argument/1/1/1/1/1/3/3/expression/right": {
+          content: {
+            en: "Matching product",
+            pl: "Pasujący produkt",
+          },
+          hash: "254c96ad8a5dd95a90dedda21de9b355",
+        },
+        "7/declaration/body/4/argument/1/1/1/3/1/expression/right/1": {
+          content: {
+            en: "Specification",
+            pl: "Specyfikacja",
+          },
+          hash: "5f95ead578f1a9f4221b12436e81101c",
+        },
+        "7/declaration/body/4/argument/1/1/1/3/3/expression/right/1/1": {
+          content: {
+            en: "Closest match",
+            pl: "Najbliższe dopasowanie",
+          },
+          hash: "9c928bcbcd8decb0bbf9a8d70a4f603a",
+        },
+        "7/declaration/body/4/argument/1/1/1/3/5/expression/right/1/1": {
+          content: {
+            en: "Requirements to confirm",
+            pl: "Wymagania do potwierdzenia",
+          },
+          hash: "0a11a1a9f68f5869a302ce40ed55538e",
+        },
+        "7/declaration/body/4/argument/1/1/1/3/7/expression/right/1/1": {
           content: {
             en: "Alternative products",
             pl: "Alternatywne produkty",
@@ -10476,6 +11139,90 @@ export default {
             },
             hash: "317417f90dbcaa4f302701e4441eca04",
           },
+        "8/declaration/body/1/argument/1/1/1/1/1/3/1/expression/right": {
+          content: {
+            en: "No matches",
+            pl: "Brak wyników",
+          },
+          hash: "de28a58a7b2d59c69c69eb914ae578bd",
+        },
+        "8/declaration/body/1/argument/1/1/1/1/1/3/3/expression/right": {
+          content: {
+            en: "Matching product",
+            pl: "Pasujący produkt",
+          },
+          hash: "254c96ad8a5dd95a90dedda21de9b355",
+        },
+        "8/declaration/body/1/argument/1/1/1/3/1/expression/right/1": {
+          content: {
+            en: "Specification",
+            pl: "Specyfikacja",
+          },
+          hash: "5f95ead578f1a9f4221b12436e81101c",
+        },
+        "8/declaration/body/1/argument/1/1/1/3/3/expression/right/1/1": {
+          content: {
+            en: "Closest match",
+            pl: "Najbliższe dopasowanie",
+          },
+          hash: "9c928bcbcd8decb0bbf9a8d70a4f603a",
+        },
+        "8/declaration/body/1/argument/1/1/1/3/5/expression/right/1/1": {
+          content: {
+            en: "Requirements to confirm",
+            pl: "Wymagania do potwierdzenia",
+          },
+          hash: "0a11a1a9f68f5869a302ce40ed55538e",
+        },
+        "8/declaration/body/1/argument/1/1/1/3/7/expression/right/1/1": {
+          content: {
+            en: "Alternative products",
+            pl: "Alternatywne produkty",
+          },
+          hash: "d191c14ac2830891cfcfccde92ff9114",
+        },
+        "8/declaration/body/2/argument/1/1/1/1/1/3/1/expression/right": {
+          content: {
+            en: "No matches",
+            pl: "Brak wyników",
+          },
+          hash: "de28a58a7b2d59c69c69eb914ae578bd",
+        },
+        "8/declaration/body/2/argument/1/1/1/1/1/3/3/expression/right": {
+          content: {
+            en: "Matching product",
+            pl: "Pasujący produkt",
+          },
+          hash: "254c96ad8a5dd95a90dedda21de9b355",
+        },
+        "8/declaration/body/2/argument/1/1/1/3/1/expression/right/1": {
+          content: {
+            en: "Specification",
+            pl: "Specyfikacja",
+          },
+          hash: "5f95ead578f1a9f4221b12436e81101c",
+        },
+        "8/declaration/body/2/argument/1/1/1/3/3/expression/right/1/1": {
+          content: {
+            en: "Closest match",
+            pl: "Najbliższe dopasowanie",
+          },
+          hash: "9c928bcbcd8decb0bbf9a8d70a4f603a",
+        },
+        "8/declaration/body/2/argument/1/1/1/3/5/expression/right/1/1": {
+          content: {
+            en: "Requirements to confirm",
+            pl: "Wymagania do potwierdzenia",
+          },
+          hash: "0a11a1a9f68f5869a302ce40ed55538e",
+        },
+        "8/declaration/body/2/argument/1/1/1/3/7/expression/right/1/1": {
+          content: {
+            en: "Alternative products",
+            pl: "Alternatywne produkty",
+          },
+          hash: "d191c14ac2830891cfcfccde92ff9114",
+        },
       },
     },
     "features/stats/components/state-funnel.tsx": {
@@ -12130,10 +12877,10 @@ export default {
         },
         "6/0/init/1/value": {
           content: {
-            en: "Pending",
-            pl: "Oczekujący",
+            en: "Analysis",
+            pl: "Analiza",
           },
-          hash: "030a6f3395d5d4efddd3cc67d6009039",
+          hash: "409bac6215382c47e59f5039cc4cdcdd",
         },
         "6/0/init/2/value": {
           content: {
@@ -12171,6 +12918,20 @@ export default {
           hash: "f514c1cf3b3e15b207a1608eb408dbc2",
         },
         "7/declaration/body/0/argument/1/3": {
+          content: {
+            en: "{parts.length} pending parts",
+            pl: "{parts.length} oczekujące części",
+          },
+          hash: "e2d205460739619e4c27dcaf290b6e2e",
+        },
+        "7/declaration/body/1/argument/1/1": {
+          content: {
+            en: "Tender Parts",
+            pl: "Części przetargu",
+          },
+          hash: "f514c1cf3b3e15b207a1608eb408dbc2",
+        },
+        "7/declaration/body/1/argument/1/3": {
           content: {
             en: "{parts.length} pending parts",
             pl: "{parts.length} oczekujące części",
@@ -12944,6 +13705,112 @@ export default {
           hash: "07c223f4812e7996df8b4e0f135862b3",
         },
         "9/body/4/argument/7/expression/right/1/1/3": {
+          content: {
+            en: "Approved",
+            pl: "Zatwierdzone",
+          },
+          hash: "e135897ab9d3c08fb5875fb1f25b476c",
+        },
+        "9/body/6/argument/1/1/1/5/1/3/expression/alternate": {
+          content: {
+            en: "Pending",
+            pl: "Oczekujące",
+          },
+          hash: "103ba0aa7490c53ecda36903debb5b2d",
+        },
+        "9/body/6/argument/1/1/1/5/1/3/expression/consequent": {
+          content: {
+            en: "✓ Confirmed",
+            pl: "✓ Potwierdzone",
+          },
+          hash: "41424aa118029ec6138c8075c9eb71d1",
+        },
+        "9/body/6/argument/1/1/1/5/3/expression/right": {
+          content: {
+            en: "Quantity: {product.product_req_quantity}",
+            pl: "Ilość: {product.product_req_quantity}",
+          },
+          hash: "31a525a4b4d911d182aaa7032eaed55c",
+        },
+        "9/body/6/argument/1/1/3/1": {
+          content: {
+            en: "Catalogue",
+            pl: "Katalog",
+          },
+          hash: "beed60c5684a26ca19a7819cdd874e5e",
+        },
+        "9/body/6/argument/1/1/3/3": {
+          content: {
+            en: "Add Manually",
+            pl: "Dodaj ręcznie",
+          },
+          hash: "f9d50eec30e73fd076d8f1eeef2c565b",
+        },
+        "9/body/6/argument/11/expression/right/1/1/1/3": {
+          content: {
+            en: "Selected Alternative",
+            pl: "Wybrana alternatywa",
+          },
+          hash: "18a1d29f5fbd0a7df21b5f373494f0db",
+        },
+        "9/body/6/argument/11/expression/right/1/1/3": {
+          content: {
+            en: "Selected",
+            pl: "Wybrano",
+          },
+          hash: "35af8e0dadad30f7f92e25d431a14fd8",
+        },
+        "9/body/6/argument/3/expression/right/11/expression/right/1": {
+          content: {
+            en: "Requirements for Confirmation",
+            pl: "Wymagania dotyczące potwierdzenia",
+          },
+          hash: "c5a3bdb7325dab8d3d92a9634db65949",
+        },
+        "9/body/6/argument/3/expression/right/15/expression/right/1/1/1/3": {
+          content: {
+            en: "Technical Specifications",
+            pl: "Specyfikacja techniczna",
+          },
+          hash: "edeccae2077d0b5c1bb725cdbbe6afb2",
+        },
+        "9/body/6/argument/3/expression/right/3/expression/right/1/1/3": {
+          content: {
+            en: "Recommended Match",
+            pl: "Zalecane dopasowanie",
+          },
+          hash: "a4046aa36d897343e99a27247be903d9",
+        },
+        "9/body/6/argument/3/expression/right/3/expression/right/1/3": {
+          content: {
+            en: "Approve",
+            pl: "Zatwierdź",
+          },
+          hash: "98478f5f36910f14c852971dcf58decd",
+        },
+        "9/body/6/argument/3/expression/right/7/expression/right/1": {
+          content: {
+            en: "Alternative Products",
+            pl: "Produkty alternatywne",
+          },
+          hash: "7383f64a050da5e12e35126ba1b87420",
+        },
+        "9/body/6/argument/3/expression/right/7/expression/right/3/1/expression/0/body/1/5/expression/right":
+          {
+            content: {
+              en: "Selected",
+              pl: "Wybrano",
+            },
+            hash: "7de55fcd245305d0dbb6a6400e8cfa1b",
+          },
+        "9/body/6/argument/7/expression/right/1/1/1/3": {
+          content: {
+            en: "Approved Match",
+            pl: "Zatwierdzone dopasowanie",
+          },
+          hash: "07c223f4812e7996df8b4e0f135862b3",
+        },
+        "9/body/6/argument/7/expression/right/1/1/3": {
           content: {
             en: "Approved",
             pl: "Zatwierdzone",
