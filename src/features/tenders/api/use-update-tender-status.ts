@@ -17,36 +17,46 @@ export function useUpdateTenderStatus() {
       status,
       partIds,
       partsStatus,
+      requirementStatus,
     }: {
       mappingId: string;
       status: IndividualTenderMapping["status"];
       partIds?: string[];
       partsStatus?: IndividualTenderPart["status"];
+      requirementStatus?: {
+        from: string;
+        to: string;
+      };
     }) => {
-      const { data, error } = await client
+      const { data } = await client
         .from("companies_tenders_mappings")
         .update({
           status,
           updated_at: new Date().toISOString(),
         })
-        .eq("id", mappingId);
-
-      if (error) {
-        throw error;
-      }
+        .eq("id", mappingId)
+        .throwOnError();
 
       if (partIds) {
-        const { error: partsError } = await client
+        await client
           .from("tender_parts")
           .update({
             status: partsStatus,
             updated_at: new Date().toISOString(),
           })
-          .in("id", partIds);
+          .in("id", partIds)
+          .throwOnError();
+      }
 
-        if (partsError) {
-          throw partsError;
-        }
+      if (requirementStatus) {
+        await client
+          .from("tender_requirements")
+          .update({
+            status: requirementStatus.to,
+          })
+          .in("part_id", partIds ?? [])
+          .eq("status", requirementStatus.from)
+          .throwOnError();
       }
 
       return data;

@@ -90,11 +90,14 @@ export function TenderPreview({
   }
 
   /**
-   * If any part has products, return "analysis"
+   * If any part has requirements that are not met, return "analysis"
    * Otherwise, return "approve"
    */
   function getPartsApprovalStatus(parts: InboxTenderPart[]) {
-    return parts.some((p) => p.tender_products.length > 0)
+    return parts.some(
+      (p) =>
+        p.tender_requirements.filter((r) => r.status === "default").length > 0
+    )
       ? "analysis"
       : "approve";
   }

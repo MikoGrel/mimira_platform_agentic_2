@@ -61,6 +61,10 @@ function InternalTenderCard({ mapping, isDragging = false }: TenderCardProps) {
         status: "default",
         partsStatus: "default",
         partIds: parts.map((p) => p.id),
+        requirementStatus: {
+          from: "approve",
+          to: "default",
+        },
       },
       {
         onSuccess: () => toast.success(<span>Tender restored to inbox</span>),

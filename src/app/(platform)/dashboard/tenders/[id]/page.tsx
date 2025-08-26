@@ -4,7 +4,7 @@ import { useIndividualTender } from "$/features/tenders";
 import { CalendarClock, House, MoveLeft } from "lucide-react";
 import Link from "$/components/ui/link";
 import { useParams } from "next/navigation";
-import { useState, useEffect, useMemo, useRef } from "react";
+import { useState, useEffect, useMemo, useRef, useCallback } from "react";
 import { defineStepper } from "$/components/stepper";
 import {
   ConfirmationsStep,
@@ -162,9 +162,8 @@ export default function TenderPage() {
   const { data: mapping, isLoading } = useIndividualTender({
     mappingId: params.id as string,
     enabled: true,
+    skipCache: true,
   });
-
-  console.log(mapping);
 
   const updateRequirementState = useUpdateRequirementState();
   const updatePartStatus = useUpdatePartStatus();
@@ -228,6 +227,13 @@ export default function TenderPage() {
     );
   };
 
+  const areAllPartsExceptCurrentConfirmed = useCallback(() => {
+    if (!selectedPart) return false;
+    return partsNeedingConfirmation
+      .filter((part) => part.id !== selectedPart.id)
+      .every((part) => confirmedParts.has(part.id));
+  }, [selectedPart, confirmedParts, partsNeedingConfirmation]);
+
   const getNextPartToConfirm = () => {
     return partsNeedingConfirmation.find(
       (part) => !confirmedParts.has(part.id)
@@ -245,7 +251,13 @@ export default function TenderPage() {
   const getStepButtonText = (stepId: string) => {
     switch (stepId) {
       case "confirmations":
-        return areAllPartsConfirmed() ? <>Save and continue</> : <>Next part</>;
+        if (areAllPartsConfirmed()) {
+          return <>Save and continue</>;
+        } else if (areAllPartsExceptCurrentConfirmed()) {
+          return <>Save and continue</>;
+        } else {
+          return <>Next part</>;
+        }
       case "data":
         return <>Save answers and continue</>;
       case "documentation":
@@ -266,15 +278,27 @@ export default function TenderPage() {
           partsNeedingConfirmation.some((p) => p.id === selectedPart.id);
         const isCurrentPartConfirmed =
           selectedPart && confirmedParts.has(selectedPart.id);
+
+        // Enable next if current part doesn't need confirmation OR is already confirmed
+        // OR if all parts except current are confirmed (so we can save and continue)
         setNextEnabled(
-          Boolean(!currentPartNeedsConfirmation || isCurrentPartConfirmed)
+          Boolean(
+            !currentPartNeedsConfirmation ||
+              isCurrentPartConfirmed ||
+              areAllPartsExceptCurrentConfirmed()
+          )
         );
       } else {
         setNextEnabled(true);
       }
     }
     nextHandlerRef.current = null;
-  }, [selectedPart, confirmedParts, partsNeedingConfirmation]);
+  }, [
+    selectedPart,
+    confirmedParts,
+    partsNeedingConfirmation,
+    areAllPartsExceptCurrentConfirmed,
+  ]);
 
   const stepperMethodsRef = useRef<{
     goTo: (
@@ -294,10 +318,11 @@ export default function TenderPage() {
   }, [mapping, selectedPart]);
 
   const initialStep = useMemo(() => {
-    if (!mapping) return;
+    if (isLoading || !mapping) return;
     const needsConfirmation = hasRequirementsToConfirmInbox(mapping);
+
     return needsConfirmation ? "confirmations" : "data";
-  }, [mapping]);
+  }, [isLoading, mapping]);
 
   useEffect(() => {
     if (mapping && initialStep === "confirmations") {
@@ -310,7 +335,7 @@ export default function TenderPage() {
     }
   }, [mapping, initialStep, partsNeedingConfirmation, confirmedParts]);
 
-  if (isLoading) return null;
+  if (isLoading || !mapping) return null;
 
   const partSteps = ["overview", "confirmations"];
 
@@ -407,7 +432,10 @@ export default function TenderPage() {
                                   await handleConfirmCurrentPart();
                                 }
 
-                                if (areAllPartsConfirmed()) {
+                                if (
+                                  areAllPartsConfirmed() ||
+                                  areAllPartsExceptCurrentConfirmed()
+                                ) {
                                   methods.next();
                                 } else {
                                   const nextPart = getNextPartToConfirm();

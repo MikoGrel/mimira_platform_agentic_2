@@ -7,11 +7,13 @@ import useCurrentUser from "$/features/auth/api/use-current-user";
 interface UseIndividualTenderParams {
   mappingId: string | null;
   enabled?: boolean;
+  skipCache?: boolean;
 }
 
 export function useIndividualTender({
   mappingId,
   enabled = true,
+  skipCache = false,
 }: UseIndividualTenderParams) {
   const { user } = useCurrentUser();
 
@@ -71,6 +73,12 @@ export function useIndividualTender({
       return data;
     },
     enabled: enabled && !!mappingId && !!user,
+    ...(skipCache && {
+      staleTime: 0,
+      cacheTime: 0,
+      refetchOnMount: "always",
+      refetchOnWindowFocus: true,
+    }),
   });
 }
 

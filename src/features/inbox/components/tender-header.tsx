@@ -79,7 +79,7 @@ function HeaderButtons({
   onUnseen,
   hasMultipleParts,
 }: HeaderButtonsProps) {
-  const isRejected = status === "rejected";
+  const isRejected = mapping.status === "rejected";
   const hasApprovedParts = approvedPartIds.size > 0;
   const hasCurrentPart = !!currentPart?.item;
   const isCurrentPartApproved = currentPart?.isApproved;
@@ -175,7 +175,9 @@ function HeaderButtons({
         <>
           <Button
             size={size}
-            onPress={() => onApply()}
+            onPress={() =>
+              currentPart?.item?.id ? onApply([currentPart.item.id]) : onApply()
+            }
             color="primary"
             data-lingo-override-pl="Aplikuj"
           >

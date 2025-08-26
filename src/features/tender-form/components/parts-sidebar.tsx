@@ -34,15 +34,15 @@ export function PartsSidebar({
       </div>
 
       <div className="overflow-y-auto relative min-h-[300px]">
-        {parts.length === 0 && (
-          <div className="absolute top-0 left-0 w-full h-full bg-background/80 z-10 flex flex-center">
+        {parts.length <= 1 && (
+          <div className="absolute top-0 left-0 w-full h-full bg-background/80 z-20 flex flex-center">
             <Chip variant="flat" color="primary">
               This tender has only one part
             </Chip>
           </div>
         )}
         {fullTenderStep && parts.length > 1 && (
-          <div className="absolute top-0 left-0 w-full h-full bg-background/80 z-10 flex flex-center">
+          <div className="absolute top-0 left-0 w-full h-full bg-background/80 z-20 flex flex-center">
             <Chip variant="flat" color="primary">
               This step regards full tender
             </Chip>

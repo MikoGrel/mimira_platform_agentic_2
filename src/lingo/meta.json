@@ -3047,6 +3047,22 @@
           "overrides": {},
           "content": "Next part"
         },
+        "17/declaration/body/17/0/init/body/0/0/0/alternate/alternate/0/argument": {
+          "type": "element",
+          "hash": "3bebbe9909ebc2ae788c9038831ddb6e",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Next part"
+        },
+        "17/declaration/body/17/0/init/body/0/0/0/alternate/consequent/0/argument": {
+          "type": "element",
+          "hash": "fa60853b0e075c7c134e4bb3c7c59d82",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Save and continue"
+        },
         "17/declaration/body/17/0/init/body/0/0/0/argument/alternate": {
           "type": "element",
           "hash": "3bebbe9909ebc2ae788c9038831ddb6e",
