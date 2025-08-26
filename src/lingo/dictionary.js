@@ -2773,6 +2773,22 @@ export default {
           },
           hash: "3bebbe9909ebc2ae788c9038831ddb6e",
         },
+        "17/declaration/body/17/0/init/body/0/0/0/alternate/alternate/0/argument":
+          {
+            content: {
+              en: "Next part",
+              pl: "Następna część",
+            },
+            hash: "3bebbe9909ebc2ae788c9038831ddb6e",
+          },
+        "17/declaration/body/17/0/init/body/0/0/0/alternate/consequent/0/argument":
+          {
+            content: {
+              en: "Save and continue",
+              pl: "Zapisz i kontynuuj",
+            },
+            hash: "fa60853b0e075c7c134e4bb3c7c59d82",
+          },
         "17/declaration/body/17/0/init/body/0/0/0/argument/alternate": {
           content: {
             en: "Next part",
@@ -3227,6 +3243,57 @@ export default {
             },
             hash: "da9587ba0b6ea8ef30c5757770facff9",
           },
+        "18/declaration/body/17/0/init/body/0/0/0/alternate/alternate/0/argument":
+          {
+            content: {
+              en: "Next part",
+              pl: "Następna część",
+            },
+            hash: "3bebbe9909ebc2ae788c9038831ddb6e",
+          },
+        "18/declaration/body/17/0/init/body/0/0/0/alternate/consequent/0/argument":
+          {
+            content: {
+              en: "Save and continue",
+              pl: "Zapisz i kontynuuj",
+            },
+            hash: "fa60853b0e075c7c134e4bb3c7c59d82",
+          },
+        "18/declaration/body/17/0/init/body/0/0/0/consequent/0/argument": {
+          content: {
+            en: "Save and continue",
+            pl: "Zapisz i kontynuuj",
+          },
+          hash: "fa60853b0e075c7c134e4bb3c7c59d82",
+        },
+        "18/declaration/body/17/0/init/body/0/1/0/argument": {
+          content: {
+            en: "Save answers and continue",
+            pl: "Zapisz odpowiedzi i kontynuuj",
+          },
+          hash: "88f8c2a27083267af9d5b574332ac836",
+        },
+        "18/declaration/body/17/0/init/body/0/2/0/argument": {
+          content: {
+            en: "Upload documents and continue",
+            pl: "Prześlij dokumenty i kontynuuj",
+          },
+          hash: "db50aad354a83c0dc4788ddc4da3c3a4",
+        },
+        "18/declaration/body/17/0/init/body/0/3/0/argument": {
+          content: {
+            en: "Submit decision",
+            pl: "Zatwierdź decyzję",
+          },
+          hash: "0ecb8520d3ff84380f16ac46a864b24a",
+        },
+        "18/declaration/body/17/0/init/body/0/4/0/argument": {
+          content: {
+            en: "Next step",
+            pl: "Następny krok",
+          },
+          hash: "712c63650b5180cbc14d6246b5d558c2",
+        },
         "18/declaration/body/17/argument/1/1/expression/body/1/argument/1/1": {
           content: {
             en: "<element:MoveLeft></element:MoveLeft> Return",
@@ -3266,6 +3333,52 @@ export default {
             hash: "054a50e59feb6c034f1368261fbfa015",
           },
         "18/declaration/body/18/argument/1/1/expression/body/1/argument/3/3/5/1/3/3/expression/right":
+          {
+            content: {
+              en: "Reset",
+              pl: "Resetuj",
+            },
+            hash: "da9587ba0b6ea8ef30c5757770facff9",
+          },
+        "18/declaration/body/25/argument/1/1/expression/body/1/argument/1/1": {
+          content: {
+            en: "<element:MoveLeft></element:MoveLeft> Return",
+            pl: "<element:MoveLeft></element:MoveLeft> Powrót",
+          },
+          hash: "1e2ea95a1cc35caf5407cb56609d471b",
+        },
+        "18/declaration/body/25/argument/1/1/expression/body/1/argument/3/3/5/1/1":
+          {
+            content: {
+              en: "Previous step",
+              pl: "Poprzedni krok",
+            },
+            hash: "054a50e59feb6c034f1368261fbfa015",
+          },
+        "18/declaration/body/25/argument/1/1/expression/body/1/argument/3/3/5/1/3/3/expression/right":
+          {
+            content: {
+              en: "Reset",
+              pl: "Resetuj",
+            },
+            hash: "da9587ba0b6ea8ef30c5757770facff9",
+          },
+        "18/declaration/body/25/argument/3/1/expression/body/1/argument/1/1": {
+          content: {
+            en: "<element:MoveLeft></element:MoveLeft> Return",
+            pl: "<element:MoveLeft></element:MoveLeft> Powrót",
+          },
+          hash: "1e2ea95a1cc35caf5407cb56609d471b",
+        },
+        "18/declaration/body/25/argument/3/1/expression/body/1/argument/3/3/5/1/1":
+          {
+            content: {
+              en: "Previous step",
+              pl: "Poprzedni krok",
+            },
+            hash: "054a50e59feb6c034f1368261fbfa015",
+          },
+        "18/declaration/body/25/argument/3/1/expression/body/1/argument/3/3/5/1/3/3/expression/right":
           {
             content: {
               en: "Reset",
@@ -12130,6 +12243,13 @@ export default {
           },
           hash: "6dd57ee0d55bba3637ed03cf8de47bb3",
         },
+        "4/body/1/argument/3/3": {
+          content: {
+            en: "({percentage}%)",
+            pl: "({percentage}%)",
+          },
+          hash: "941a386f0a1da9f7ea122244021229ea",
+        },
         "4/declaration/body/1/argument/3/3": {
           content: {
             en: "({percentage}%)",
@@ -12141,6 +12261,27 @@ export default {
     },
     "features/stats/components/weekly-stats.tsx": {
       entries: {
+        "4/declaration/body/3/argument/1": {
+          content: {
+            en: "Last 4 weeks",
+            pl: "Ostatnie 4 tygodnie",
+          },
+          hash: "ff82774f1a7e6b68ac287b90b33d35a7",
+        },
+        "4/declaration/body/3/argument/5/1/1": {
+          content: {
+            en: "Total:",
+            pl: "Razem:",
+          },
+          hash: "f88aa2f74615d4c75984e36154b9a6e9",
+        },
+        "4/declaration/body/3/argument/5/3/1": {
+          content: {
+            en: "Weekly average:",
+            pl: "Średnia tygodniowa:",
+          },
+          hash: "6eb200581a6da498ee6bc585c33dfae0",
+        },
         "5/declaration/body/0/argument/1": {
           content: {
             en: "Last 4 weeks",
@@ -13583,6 +13724,646 @@ export default {
           },
           hash: "3f2b5ba4364de20a8856ed2055272a86",
         },
+        "12/0/init/0/value": {
+          content: {
+            en: "Completed by us",
+            pl: "Wypełnione przez nas",
+          },
+          hash: "9f4a2b3bc99052f6ce1587dfcae08fc6",
+        },
+        "12/0/init/1/value": {
+          content: {
+            en: "Requires manual fill",
+            pl: "Wymaga ręcznego wypełnienia",
+          },
+          hash: "030e160bf50c084716488dc452429db2",
+        },
+        "12/0/init/2/value": {
+          content: {
+            en: "Other attachments",
+            pl: "Inne załączniki",
+          },
+          hash: "f187e342b6ff30e7d4d96d9395dea305",
+        },
+        "13/0/init/0/value": {
+          content: {
+            en: "Completed by us",
+            pl: "Wypełnione przez nas",
+          },
+          hash: "9f4a2b3bc99052f6ce1587dfcae08fc6",
+        },
+        "13/0/init/1/value": {
+          content: {
+            en: "Intentionally not filled",
+            pl: "Celowo niewypełnione",
+          },
+          hash: "6edcb328dda0ad640abc11d73ba9c464",
+        },
+        "13/0/init/2/value": {
+          content: {
+            en: "Other attachments",
+            pl: "Inne załączniki",
+          },
+          hash: "f187e342b6ff30e7d4d96d9395dea305",
+        },
+        "13/declaration/body/10/argument/1": {
+          content: {
+            en: "Przejrzyj dostępne dokumenty. Możesz pobrać pliki w każdej kategorii.",
+            pl: "Przejrzyj dostępne dokumenty. Możesz pobrać pliki w każdej kategorii.",
+          },
+          hash: "7292eefb011ff64f7ec95b422d3a8801",
+        },
+        "13/declaration/body/5/0/init/body/0/consequent/0/argument/3/1/1": {
+          content: {
+            en: "Brak plików w tej kategorii",
+            pl: "Brak plików w tej kategorii",
+          },
+          hash: "bf594f7ee94b01c09c4cef20d5250a26",
+        },
+        "13/declaration/body/5/0/init/body/1/argument/3/1/1/expression/0/body/1/5/expression/right":
+          {
+            content: {
+              en: "Wymaga podpisu",
+              pl: "Wymaga podpisu",
+            },
+            hash: "e643b0c2efc02a59d5e45983d582e1ca",
+          },
+        "13/declaration/body/5/0/init/body/1/argument/3/1/1/expression/0/body/3":
+          {
+            content: {
+              en: "Pobierz",
+              pl: "Pobierz",
+            },
+            hash: "ed58dbee176ae6a0914ff2ff0ee3c5ce",
+          },
+        "13/declaration/body/6/consequent/0/argument/1": {
+          content: {
+            en: "Ładowanie dokumentów...",
+            pl: "Ładowanie dokumentów...",
+          },
+          hash: "b5a514a710ec9dc87d2a891b86bea281",
+        },
+        "13/declaration/body/7/consequent/0/argument/1": {
+          content: {
+            en: "Nie udało się załadować dokumentów. Spróbuj ponownie.",
+            pl: "Nie udało się załadować dokumentów. Spróbuj ponownie.",
+          },
+          hash: "1bac7dd599e9e09028872c2eaee93592",
+        },
+        "13/declaration/body/9/consequent/0/argument/1": {
+          content: {
+            en: "Brak dokumentów do wyświetlenia. Możesz przejść do następnego kroku.",
+            pl: "Brak dokumentów do wyświetlenia. Możesz przejść do następnego kroku.",
+          },
+          hash: "68d3a7ccf14319317421bba3ebc5d86b",
+        },
+        "13/declaration/body/9/consequent/0/argument/3/1": {
+          content: {
+            en: "Nie znaleziono żadnych dokumentów dla tego przetargu.",
+            pl: "Nie znaleziono żadnych dokumentów dla tego przetargu.",
+          },
+          hash: "fbeb193faa8de9619c5c5d09988f511f",
+        },
+        "14/declaration/body/10/argument/1": {
+          content: {
+            en: "Przejrzyj dostępne dokumenty. Możesz pobrać pliki w każdej kategorii.",
+            pl: "Przejrzyj dostępne dokumenty. Możesz pobrać pliki w każdej kategorii.",
+          },
+          hash: "7292eefb011ff64f7ec95b422d3a8801",
+        },
+        "14/declaration/body/10/consequent/0/argument/1": {
+          content: {
+            en: "Nie udało się załadować dokumentów. Spróbuj ponownie.",
+            pl: "Nie udało się załadować dokumentów. Spróbuj ponownie.",
+          },
+          hash: "1bac7dd599e9e09028872c2eaee93592",
+        },
+        "14/declaration/body/10/consequent/0/argument/1/1": {
+          content: {
+            en: "Loading documents...",
+            pl: "Ładowanie dokumentów...",
+          },
+          hash: "b795b22e2d0abd430c2ff0b28fb26e5a",
+        },
+        "14/declaration/body/11/consequent/0/argument/1/1": {
+          content: {
+            en: "Failed to load documents. Please try again.",
+            pl: "Nie udało się załadować dokumentów. Proszę spróbować ponownie.",
+          },
+          hash: "1f3bb71b519b18f32ba0f1a5a360afb0",
+        },
+        "14/declaration/body/12/consequent/0/argument/1": {
+          content: {
+            en: "Brak dokumentów do wyświetlenia. Możesz przejść do następnego kroku.",
+            pl: "Brak dokumentów do wyświetlenia. Możesz przejść do następnego kroku.",
+          },
+          hash: "68d3a7ccf14319317421bba3ebc5d86b",
+        },
+        "14/declaration/body/12/consequent/0/argument/3/1": {
+          content: {
+            en: "Nie znaleziono żadnych dokumentów dla tego przetargu.",
+            pl: "Nie znaleziono żadnych dokumentów dla tego przetargu.",
+          },
+          hash: "fbeb193faa8de9619c5c5d09988f511f",
+        },
+        "14/declaration/body/13/argument/1": {
+          content: {
+            en: "Przejrzyj dostępne dokumenty. Możesz pobrać pliki w każdej kategorii.",
+            pl: "Przejrzyj dostępne dokumenty. Możesz pobrać pliki w każdej kategorii.",
+          },
+          hash: "7292eefb011ff64f7ec95b422d3a8801",
+        },
+        "14/declaration/body/13/consequent/0/argument/1": {
+          content: {
+            en: "No documents to display. You can proceed to the next step.",
+            pl: "Brak dokumentów do wyświetlenia. Możesz przejść do następnego kroku.",
+          },
+          hash: "2199cc5f0c63d0fd443f80ecc41d3550",
+        },
+        "14/declaration/body/13/consequent/0/argument/3/1": {
+          content: {
+            en: "No documents found for this tender.",
+            pl: "Nie znaleziono dokumentów dla tego przetargu.",
+          },
+          hash: "0aae5563123e8e15391ddd9126389668",
+        },
+        "14/declaration/body/5/0/init/body/0/consequent/0/argument/3/1/1": {
+          content: {
+            en: "Brak plików w tej kategorii",
+            pl: "Brak plików w tej kategorii",
+          },
+          hash: "bf594f7ee94b01c09c4cef20d5250a26",
+        },
+        "14/declaration/body/5/0/init/body/1/argument/3/1/1/expression/0/body/1/5/expression/right":
+          {
+            content: {
+              en: "Wymaga podpisu",
+              pl: "Wymaga podpisu",
+            },
+            hash: "e643b0c2efc02a59d5e45983d582e1ca",
+          },
+        "14/declaration/body/5/0/init/body/1/argument/3/1/1/expression/0/body/3":
+          {
+            content: {
+              en: "Pobierz",
+              pl: "Pobierz",
+            },
+            hash: "ed58dbee176ae6a0914ff2ff0ee3c5ce",
+          },
+        "14/declaration/body/6/consequent/0/argument/1": {
+          content: {
+            en: "Ładowanie dokumentów...",
+            pl: "Ładowanie dokumentów...",
+          },
+          hash: "b5a514a710ec9dc87d2a891b86bea281",
+        },
+        "14/declaration/body/7/0/init/0/body/0/consequent/0/expression/0": {
+          content: {
+            en: "File path not available",
+            pl: "Ścieżka pliku niedostępna",
+          },
+          hash: "c2eef71aec7de7aa3a3ca84750c752dc",
+        },
+        "14/declaration/body/7/0/init/0/body/1/block/11/expression/0": {
+          content: {
+            en: "File downloaded successfully",
+            pl: "Plik pobrano pomyślnie",
+          },
+          hash: "27f8e780c40b91032c1cc9cccc6befd4",
+        },
+        "14/declaration/body/7/0/init/0/body/1/handler/body/1/expression/0": {
+          content: {
+            en: "Failed to download file",
+            pl: "Nie udało się pobrać pliku",
+          },
+          hash: "a8bad5861f2eef6c95c9684f82f1b61b",
+        },
+        "14/declaration/body/7/consequent/0/argument/1": {
+          content: {
+            en: "Nie udało się załadować dokumentów. Spróbuj ponownie.",
+            pl: "Nie udało się załadować dokumentów. Spróbuj ponownie.",
+          },
+          hash: "1bac7dd599e9e09028872c2eaee93592",
+        },
+        "14/declaration/body/8/0/init/0/body/1/consequent/0/expression/0": {
+          content: {
+            en: "No files to download",
+            pl: "Brak plików do pobrania",
+          },
+          hash: "f89e1437c35abdfcee9a280eeac09ceb",
+        },
+        "14/declaration/body/8/0/init/0/body/2/block/1/expression/0": {
+          content: {
+            en: "Downloading {refilledFiles.length} files...",
+            pl: "Pobieranie {refilledFiles.length} plików...",
+          },
+          hash: "0374c6e661c408fd6122f4768d95e5de",
+        },
+        "14/declaration/body/8/0/init/0/body/2/block/3/expression/0": {
+          content: {
+            en: "All files have been downloaded",
+            pl: "Wszystkie pliki zostały pobrane",
+          },
+          hash: "3597a096cfb7f0d8d8c7ac558c2d2076",
+        },
+        "14/declaration/body/8/0/init/0/body/2/handler/body/1/expression/0": {
+          content: {
+            en: "Error during file download",
+            pl: "Błąd podczas pobierania pliku",
+          },
+          hash: "e8a47d5c1ea53927c7bcaf013a60c21f",
+        },
+        "14/declaration/body/8/0/init/body/0/consequent/0/argument/3/1": {
+          content: {
+            en: "Brak plików w tej kategorii",
+            pl: "Brak plików w tej kategorii",
+          },
+          hash: "bf594f7ee94b01c09c4cef20d5250a26",
+        },
+        "14/declaration/body/8/0/init/body/1/argument/3/1/expression/0/body/1/5/expression/right":
+          {
+            content: {
+              en: "Wymaga podpisu",
+              pl: "Wymaga podpisu",
+            },
+            hash: "e643b0c2efc02a59d5e45983d582e1ca",
+          },
+        "14/declaration/body/8/0/init/body/1/argument/3/1/expression/0/body/3":
+          {
+            content: {
+              en: "Pobierz",
+              pl: "Download",
+            },
+            hash: "3230cb7511f56267436a48b145e46dba",
+          },
+        "14/declaration/body/9/0/init/body/0/consequent/0/argument/3/1": {
+          content: {
+            en: "No files in this category",
+            pl: "Brak plików w tej kategorii",
+          },
+          hash: "21105bfd07013fa07e2fb64cc974ddc5",
+        },
+        "14/declaration/body/9/0/init/body/1/argument/1/3/expression/right/3": {
+          content: {
+            en: "Download all",
+            pl: "Pobierz wszystko",
+          },
+          hash: "385e77c5c419ee4328a4b98098a5fd49",
+        },
+        "14/declaration/body/9/0/init/body/1/argument/1/3/expression/right/5": {
+          content: {
+            en: "All",
+            pl: "Wszystko",
+          },
+          hash: "5e2e93f8e2a5f315b6fecdd0a0e6f55f",
+        },
+        "14/declaration/body/9/0/init/body/1/argument/3/1/expression/0/body/1/1/1/3/3/expression/right/3":
+          {
+            content: {
+              en: "Requires signature (<expression/>)",
+              pl: "Wymaga podpisu (<expression/>)",
+            },
+            hash: "8fe90b93e687c56ab78af72490b8ecdb",
+          },
+        "14/declaration/body/9/0/init/body/1/argument/3/1/expression/0/body/1/1/3/3":
+          {
+            content: {
+              en: "Download",
+              pl: "Pobierz",
+            },
+            hash: "56b7d0834952b39ee394b44bd8179178",
+          },
+        "14/declaration/body/9/consequent/0/argument/1": {
+          content: {
+            en: "Ładowanie dokumentów...",
+            pl: "Ładowanie dokumentów...",
+          },
+          hash: "b5a514a710ec9dc87d2a891b86bea281",
+        },
+        "14/declaration/body/9/consequent/0/argument/3/1": {
+          content: {
+            en: "Nie znaleziono żadnych dokumentów dla tego przetargu.",
+            pl: "Nie znaleziono żadnych dokumentów dla tego przetargu.",
+          },
+          hash: "fbeb193faa8de9619c5c5d09988f511f",
+        },
+        "15/declaration/body/10/argument/1": {
+          content: {
+            en: "Przejrzyj dostępne dokumenty. Możesz pobrać pliki w każdej kategorii.",
+            pl: "Przejrzyj dostępne dokumenty. Możesz pobrać pliki w każdej kategorii.",
+          },
+          hash: "7292eefb011ff64f7ec95b422d3a8801",
+        },
+        "15/declaration/body/10/consequent/0/argument/1": {
+          content: {
+            en: "Ładowanie dokumentów...",
+            pl: "Ładowanie dokumentów...",
+          },
+          hash: "b5a514a710ec9dc87d2a891b86bea281",
+        },
+        "15/declaration/body/10/consequent/0/argument/1/0": {
+          content: {
+            en: "Ładowanie dokumentów...",
+            pl: "Ładowanie dokumentów...",
+          },
+          hash: "b5a514a710ec9dc87d2a891b86bea281",
+        },
+        "15/declaration/body/10/consequent/0/argument/1/1": {
+          content: {
+            en: "Loading documents...",
+            pl: "Ładowanie dokumentów...",
+          },
+          hash: "b795b22e2d0abd430c2ff0b28fb26e5a",
+        },
+        "15/declaration/body/11/consequent/0/argument/1": {
+          content: {
+            en: "Nie udało się załadować dokumentów. Spróbuj ponownie.",
+            pl: "Nie udało się załadować dokumentów. Spróbuj ponownie.",
+          },
+          hash: "1bac7dd599e9e09028872c2eaee93592",
+        },
+        "15/declaration/body/11/consequent/0/argument/1/1": {
+          content: {
+            en: "Failed to load documents. Please try again.",
+            pl: "Nie udało się załadować dokumentów. Proszę spróbować ponownie.",
+          },
+          hash: "1f3bb71b519b18f32ba0f1a5a360afb0",
+        },
+        "15/declaration/body/11/consequent/0/argument/3/1": {
+          content: {
+            en: "Nie znaleziono żadnych dokumentów dla tego przetargu.",
+            pl: "Nie znaleziono żadnych dokumentów dla tego przetargu.",
+          },
+          hash: "fbeb193faa8de9619c5c5d09988f511f",
+        },
+        "15/declaration/body/12/argument/1": {
+          content: {
+            en: "Przejrzyj dostępne dokumenty. Możesz pobrać pliki w każdej kategorii.",
+            pl: "Przejrzyj dostępne dokumenty. Możesz pobrać pliki w każdej kategorii.",
+          },
+          hash: "7292eefb011ff64f7ec95b422d3a8801",
+        },
+        "15/declaration/body/12/consequent/0/argument/1": {
+          content: {
+            en: "Brak dokumentów do wyświetlenia. Możesz przejść do następnego kroku.",
+            pl: "Brak dokumentów do wyświetlenia. Możesz przejść do następnego kroku.",
+          },
+          hash: "68d3a7ccf14319317421bba3ebc5d86b",
+        },
+        "15/declaration/body/12/consequent/0/argument/3/1": {
+          content: {
+            en: "Nie znaleziono żadnych dokumentów dla tego przetargu.",
+            pl: "Nie znaleziono żadnych dokumentów dla tego przetargu.",
+          },
+          hash: "fbeb193faa8de9619c5c5d09988f511f",
+        },
+        "15/declaration/body/13/argument/1": {
+          content: {
+            en: "Przejrzyj dostępne dokumenty. Możesz pobrać pliki w każdej kategorii.",
+            pl: "Przejrzyj dostępne dokumenty. Możesz pobrać pliki w każdej kategorii.",
+          },
+          hash: "7292eefb011ff64f7ec95b422d3a8801",
+        },
+        "15/declaration/body/13/consequent/0/argument/1": {
+          content: {
+            en: "No documents to display. You can proceed to the next step.",
+            pl: "Brak dokumentów do wyświetlenia. Możesz przejść do następnego kroku.",
+          },
+          hash: "2199cc5f0c63d0fd443f80ecc41d3550",
+        },
+        "15/declaration/body/13/consequent/0/argument/3/1": {
+          content: {
+            en: "No documents found for this tender.",
+            pl: "Nie znaleziono dokumentów dla tego przetargu.",
+          },
+          hash: "0aae5563123e8e15391ddd9126389668",
+        },
+        "15/declaration/body/14/argument/1": {
+          content: {
+            en: "Przejrzyj dostępne dokumenty. Możesz pobrać pliki w każdej kategorii.",
+            pl: "Przejrzyj dostępne dokumenty. Możesz pobrać pliki w każdej kategorii.",
+          },
+          hash: "7292eefb011ff64f7ec95b422d3a8801",
+        },
+        "15/declaration/body/5/0/init/body/0/consequent/0/argument/3/1/1": {
+          content: {
+            en: "Brak plików w tej kategorii",
+            pl: "Brak plików w tej kategorii",
+          },
+          hash: "bf594f7ee94b01c09c4cef20d5250a26",
+        },
+        "15/declaration/body/5/0/init/body/1/argument/3/1/1/expression/0/body/1/5/expression/right":
+          {
+            content: {
+              en: "Wymaga podpisu",
+              pl: "Wymaga podpisu",
+            },
+            hash: "e643b0c2efc02a59d5e45983d582e1ca",
+          },
+        "15/declaration/body/5/0/init/body/1/argument/3/1/1/expression/0/body/3":
+          {
+            content: {
+              en: "Pobierz",
+              pl: "Pobierz",
+            },
+            hash: "ed58dbee176ae6a0914ff2ff0ee3c5ce",
+          },
+        "15/declaration/body/6/consequent/0/argument/1": {
+          content: {
+            en: "Ładowanie dokumentów...",
+            pl: "Ładowanie dokumentów...",
+          },
+          hash: "b5a514a710ec9dc87d2a891b86bea281",
+        },
+        "15/declaration/body/7/0/init/body/0/consequent/0/argument/3/1/1": {
+          content: {
+            en: "Brak plików w tej kategorii",
+            pl: "Brak plików w tej kategorii",
+          },
+          hash: "bf594f7ee94b01c09c4cef20d5250a26",
+        },
+        "15/declaration/body/7/0/init/body/1/argument/3/1/1/expression/0/body/1/5/expression/right":
+          {
+            content: {
+              en: "Wymaga podpisu",
+              pl: "Wymaga podpisu",
+            },
+            hash: "e643b0c2efc02a59d5e45983d582e1ca",
+          },
+        "15/declaration/body/7/0/init/body/1/argument/3/1/1/expression/0/body/3":
+          {
+            content: {
+              en: "Pobierz",
+              pl: "Pobierz",
+            },
+            hash: "ed58dbee176ae6a0914ff2ff0ee3c5ce",
+          },
+        "15/declaration/body/7/consequent/0/argument/1": {
+          content: {
+            en: "Nie udało się załadować dokumentów. Spróbuj ponownie.",
+            pl: "Nie udało się załadować dokumentów. Spróbuj ponownie.",
+          },
+          hash: "1bac7dd599e9e09028872c2eaee93592",
+        },
+        "15/declaration/body/8/0/init/body/0/consequent/0/argument/3/1": {
+          content: {
+            en: "Brak plików w tej kategorii",
+            pl: "Brak plików w tej kategorii",
+          },
+          hash: "bf594f7ee94b01c09c4cef20d5250a26",
+        },
+        "15/declaration/body/8/0/init/body/0/consequent/0/argument/3/1/1": {
+          content: {
+            en: "Brak plików w tej kategorii",
+            pl: "Brak plików w tej kategorii",
+          },
+          hash: "bf594f7ee94b01c09c4cef20d5250a26",
+        },
+        "15/declaration/body/8/0/init/body/1/argument/3/1/1/expression/0/body/1/5/expression/right":
+          {
+            content: {
+              en: "Wymaga podpisu",
+              pl: "Wymaga podpisu",
+            },
+            hash: "e643b0c2efc02a59d5e45983d582e1ca",
+          },
+        "15/declaration/body/8/0/init/body/1/argument/3/1/1/expression/0/body/3":
+          {
+            content: {
+              en: "Pobierz",
+              pl: "Pobierz",
+            },
+            hash: "ed58dbee176ae6a0914ff2ff0ee3c5ce",
+          },
+        "15/declaration/body/8/0/init/body/1/argument/3/1/expression/0/body/1/5/expression/right":
+          {
+            content: {
+              en: "Wymaga podpisu",
+              pl: "Wymaga podpisu",
+            },
+            hash: "e643b0c2efc02a59d5e45983d582e1ca",
+          },
+        "15/declaration/body/8/0/init/body/1/argument/3/1/expression/0/body/3":
+          {
+            content: {
+              en: "Pobierz",
+              pl: "Download",
+            },
+            hash: "3230cb7511f56267436a48b145e46dba",
+          },
+        "15/declaration/body/8/consequent/0/argument/1": {
+          content: {
+            en: "Ładowanie dokumentów...",
+            pl: "Ładowanie dokumentów...",
+          },
+          hash: "b5a514a710ec9dc87d2a891b86bea281",
+        },
+        "15/declaration/body/9/0/init/body/0/consequent/0/argument/3/1": {
+          content: {
+            en: "No files in this category",
+            pl: "Brak plików w tej kategorii",
+          },
+          hash: "21105bfd07013fa07e2fb64cc974ddc5",
+        },
+        "15/declaration/body/9/0/init/body/1/argument/1/3/expression/right": {
+          content: {
+            en: "<element:FileDown></element:FileDown> Pobierz wszystkie",
+            pl: "<element:FileDown></element:FileDown> Pobierz wszystkie",
+          },
+          hash: "8d1a867d91f9a1dcfcc966f0f9e4f797",
+        },
+        "15/declaration/body/9/0/init/body/1/argument/1/3/expression/right/3": {
+          content: {
+            en: "Download all",
+            pl: "Pobierz wszystko",
+          },
+          hash: "385e77c5c419ee4328a4b98098a5fd49",
+        },
+        "15/declaration/body/9/0/init/body/1/argument/1/3/expression/right/5": {
+          content: {
+            en: "All",
+            pl: "Wszystko",
+          },
+          hash: "5e2e93f8e2a5f315b6fecdd0a0e6f55f",
+        },
+        "15/declaration/body/9/0/init/body/1/argument/3/1/expression/0/body/1/1/1/1/expression/right":
+          {
+            content: {
+              en: "No name",
+              pl: "Brak nazwy",
+            },
+            hash: "ace6b34a8e589f004055e11e9dd771ce",
+          },
+        "15/declaration/body/9/0/init/body/1/argument/3/1/expression/0/body/1/1/1/3/3/expression/right/3":
+          {
+            content: {
+              en: "Requires signature (<expression/>)",
+              pl: "Wymaga podpisu (<expression/>)",
+            },
+            hash: "8fe90b93e687c56ab78af72490b8ecdb",
+          },
+        "15/declaration/body/9/0/init/body/1/argument/3/1/expression/0/body/1/1/1/expression/right":
+          {
+            content: {
+              en: "No name",
+              pl: "Brak nazwy",
+            },
+            hash: "ace6b34a8e589f004055e11e9dd771ce",
+          },
+        "15/declaration/body/9/0/init/body/1/argument/3/1/expression/0/body/1/1/3":
+          {
+            content: {
+              en: "<element:Download></element:Download> Pobierz",
+              pl: "<element:Download></element:Download> Pobierz",
+            },
+            hash: "f742507380a5991e1fc72c1609862e7e",
+          },
+        "15/declaration/body/9/0/init/body/1/argument/3/1/expression/0/body/1/1/3/3":
+          {
+            content: {
+              en: "Download",
+              pl: "Pobierz",
+            },
+            hash: "56b7d0834952b39ee394b44bd8179178",
+          },
+        "15/declaration/body/9/0/init/body/1/argument/3/1/expression/0/body/1/5/expression/right":
+          {
+            content: {
+              en: "Requires signature",
+              pl: "Wymaga podpisu",
+            },
+            hash: "15543941f2710e1fa41be3e1f435823f",
+          },
+        "15/declaration/body/9/0/init/body/1/argument/3/1/expression/0/body/3":
+          {
+            content: {
+              en: "<element:Download></element:Download> Pobierz",
+              pl: "<element:Download></element:Download> Pobierz",
+            },
+            hash: "de2fd8bee16d75d6b0e30199a5142459",
+          },
+        "15/declaration/body/9/0/init/body/1/argument/3/1/expression/0/body/3/1/3/expression/right":
+          {
+            content: {
+              en: "Requires signature",
+              pl: "Wymaga podpisu",
+            },
+            hash: "15543941f2710e1fa41be3e1f435823f",
+          },
+        "15/declaration/body/9/consequent/0/argument/1": {
+          content: {
+            en: "Ładowanie dokumentów...",
+            pl: "Ładowanie dokumentów...",
+          },
+          hash: "b5a514a710ec9dc87d2a891b86bea281",
+        },
+        "15/declaration/body/9/consequent/0/argument/3/1": {
+          content: {
+            en: "Nie znaleziono żadnych dokumentów dla tego przetargu.",
+            pl: "Nie znaleziono żadnych dokumentów dla tego przetargu.",
+          },
+          hash: "fbeb193faa8de9619c5c5d09988f511f",
+        },
         "3/declaration/body/0/consequent/0/argument/1": {
           content: {
             en: "No item selected",
@@ -13618,12 +14399,54 @@ export default {
           },
           hash: "3f2b5ba4364de20a8856ed2055272a86",
         },
+        "4/declaration/body/0/argument/3/1/1/1": {
+          content: {
+            en: "Company Profile",
+            pl: "Profil firmy",
+          },
+          hash: "5218b842cb95a3647e9125b94e5951ea",
+        },
+        "4/declaration/body/0/argument/3/1/3/1": {
+          content: {
+            en: "Technical Proposal",
+            pl: "Propozycja techniczna",
+          },
+          hash: "a682483d623ea770688eaa93890630e4",
+        },
+        "4/declaration/body/0/argument/3/1/5/1": {
+          content: {
+            en: "Financial Proposal",
+            pl: "Propozycja finansowa",
+          },
+          hash: "3f2b5ba4364de20a8856ed2055272a86",
+        },
         "4/declaration/body/0/consequent/0/argument/1": {
           content: {
             en: "No item selected",
             pl: "Nie wybrano żadnego elementu",
           },
           hash: "7025b650153f3d62cf2cd01acdc5c8d7",
+        },
+        "4/declaration/body/1/argument/3/1/1/1": {
+          content: {
+            en: "Company Profile",
+            pl: "Profil firmy",
+          },
+          hash: "5218b842cb95a3647e9125b94e5951ea",
+        },
+        "4/declaration/body/1/argument/3/1/3/1": {
+          content: {
+            en: "Technical Proposal",
+            pl: "Propozycja techniczna",
+          },
+          hash: "a682483d623ea770688eaa93890630e4",
+        },
+        "4/declaration/body/1/argument/3/1/5/1": {
+          content: {
+            en: "Financial Proposal",
+            pl: "Propozycja finansowa",
+          },
+          hash: "3f2b5ba4364de20a8856ed2055272a86",
         },
         "4/declaration/body/3/argument/3/1/1/1": {
           content: {
@@ -13640,6 +14463,90 @@ export default {
           hash: "a682483d623ea770688eaa93890630e4",
         },
         "4/declaration/body/3/argument/3/1/5/1": {
+          content: {
+            en: "Financial Proposal",
+            pl: "Propozycja finansowa",
+          },
+          hash: "3f2b5ba4364de20a8856ed2055272a86",
+        },
+        "5/declaration/body/1/argument/3/1/1/1": {
+          content: {
+            en: "Company Profile",
+            pl: "Profil firmy",
+          },
+          hash: "5218b842cb95a3647e9125b94e5951ea",
+        },
+        "5/declaration/body/1/argument/3/1/3/1": {
+          content: {
+            en: "Technical Proposal",
+            pl: "Propozycja techniczna",
+          },
+          hash: "a682483d623ea770688eaa93890630e4",
+        },
+        "5/declaration/body/1/argument/3/1/5/1": {
+          content: {
+            en: "Financial Proposal",
+            pl: "Propozycja finansowa",
+          },
+          hash: "3f2b5ba4364de20a8856ed2055272a86",
+        },
+        "5/declaration/body/2/argument/1/1": {
+          content: {
+            en: "Company Profile",
+            pl: "Profil firmy",
+          },
+          hash: "5218b842cb95a3647e9125b94e5951ea",
+        },
+        "5/declaration/body/2/argument/1/1/1/1": {
+          content: {
+            en: "Company Profile",
+            pl: "Profil firmy",
+          },
+          hash: "5218b842cb95a3647e9125b94e5951ea",
+        },
+        "5/declaration/body/2/argument/1/1/3/1": {
+          content: {
+            en: "Technical Proposal",
+            pl: "Propozycja techniczna",
+          },
+          hash: "a682483d623ea770688eaa93890630e4",
+        },
+        "5/declaration/body/2/argument/1/1/5/1": {
+          content: {
+            en: "Financial Proposal",
+            pl: "Propozycja finansowa",
+          },
+          hash: "3f2b5ba4364de20a8856ed2055272a86",
+        },
+        "5/declaration/body/2/argument/3/1": {
+          content: {
+            en: "Technical Proposal",
+            pl: "Propozycja techniczna",
+          },
+          hash: "a682483d623ea770688eaa93890630e4",
+        },
+        "5/declaration/body/2/argument/3/1/1/1": {
+          content: {
+            en: "Company Profile",
+            pl: "Profil firmy",
+          },
+          hash: "5218b842cb95a3647e9125b94e5951ea",
+        },
+        "5/declaration/body/2/argument/3/1/3/1": {
+          content: {
+            en: "Technical Proposal",
+            pl: "Propozycja techniczna",
+          },
+          hash: "a682483d623ea770688eaa93890630e4",
+        },
+        "5/declaration/body/2/argument/3/1/5/1": {
+          content: {
+            en: "Financial Proposal",
+            pl: "Propozycja finansowa",
+          },
+          hash: "3f2b5ba4364de20a8856ed2055272a86",
+        },
+        "5/declaration/body/2/argument/5/1": {
           content: {
             en: "Financial Proposal",
             pl: "Propozycja finansowa",
@@ -15273,6 +16180,14 @@ export default {
           },
           hash: "c5a3bdb7325dab8d3d92a9634db65949",
         },
+        "11/body/3/argument/3/expression/right/1/expression/right/3/1/1/expression/consequent/0/body":
+          {
+            content: {
+              en: "• {req}",
+              pl: "• {req}",
+            },
+            hash: "49be1a0b2620892487a489beaeba93a0",
+          },
         "11/body/3/argument/3/expression/right/3/expression/right/1/1/1/3": {
           content: {
             en: "Technical Specifications",
@@ -15345,10 +16260,10 @@ export default {
         },
         "12/declaration/body/13/consequent/0/argument/3": {
           content: {
-            en: "No requirements found",
-            pl: "Nie znaleziono wymagań",
+            en: "All requirements were confirmed, go to the next step!",
+            pl: "Wszystkie wymagania zostały potwierdzone, przejdź do następnego kroku!",
           },
-          hash: "9ea481e9671284cf563f7dfa7d516052",
+          hash: "1e8bba060b349e8a000cda194252d06c",
         },
         "12/declaration/body/14/argument/1/1/1": {
           content: {
@@ -15471,7 +16386,7 @@ export default {
         },
         "12/declaration/body/14/argument/7/expression/right/1": {
           content: {
-            en: "Product Requirements ({products.length})",
+            en: "Product Requirements ({productRequirements.length})",
             pl: "Wymagania dotyczące produktu ({products.length})",
           },
           hash: "47bba8de401c5e8c3155a8828895f12e",
@@ -15545,6 +16460,13 @@ export default {
             pl: "Wymagania dotyczące produktu ({products.length})",
           },
           hash: "47bba8de401c5e8c3155a8828895f12e",
+        },
+        "9/body/0/argument": {
+          content: {
+            en: "w<element:CardHeader><element:div><element:div><expression/></element:div><element:span><element:Wrench></element:Wrench></element:span><element:div><element:div><element:span>{requirement.requirement_text}</element:span><expression/></element:div></element:div></element:div></element:CardHeader>",
+            pl: "w<element:CardHeader><element:div><element:div><expression/></element:div><element:span><element:Wrench></element:Wrench></element:span><element:div><element:div><element:span>{requirement.requirement_text}</element:span><expression/></element:div></element:div></element:div></element:CardHeader>",
+          },
+          hash: "7f1feed873257b031e9a3afbef8a0cbc",
         },
         "9/body/0/argument/1/1/5/1/1": {
           content: {

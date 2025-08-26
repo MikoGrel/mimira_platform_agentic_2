@@ -108,13 +108,7 @@ function StepperContent({
           />
         );
       case "documentation":
-        return (
-          <DocumentationStep
-            item={resolvedItem}
-            setNextEnabled={setNextEnabled}
-            onNextHandler={nextHandlerRef}
-          />
-        );
+        return <DocumentationStep item={mapping} />;
       case "decision":
         return (
           <DecisionStep
@@ -195,7 +189,6 @@ export default function TenderPage() {
       );
 
       if (defaultRequirements.length === 0) {
-        console.log("Part already confirmed, skipping database save");
         return;
       }
 
@@ -279,8 +272,6 @@ export default function TenderPage() {
         const isCurrentPartConfirmed =
           selectedPart && confirmedParts.has(selectedPart.id);
 
-        // Enable next if current part doesn't need confirmation OR is already confirmed
-        // OR if all parts except current are confirmed (so we can save and continue)
         setNextEnabled(
           Boolean(
             !currentPartNeedsConfirmation ||
