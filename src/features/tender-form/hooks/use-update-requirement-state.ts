@@ -4,7 +4,7 @@ import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { createClient } from "$/lib/supabase/client";
 
 interface UpdateRequirementStateParams {
-  reqId: number;
+  id: string;
   status: "approve" | "reject" | "default";
   reason?: string;
 }
@@ -15,14 +15,14 @@ export function useUpdateRequirementState() {
 
   return useMutation({
     mutationFn: async ({
-      reqId,
+      id,
       status,
       reason,
     }: UpdateRequirementStateParams) => {
       const { data, error } = await client
         .from("tender_requirements")
         .update({ status, reason })
-        .eq("req_id", reqId)
+        .eq("id", id)
         .select()
         .single();
 

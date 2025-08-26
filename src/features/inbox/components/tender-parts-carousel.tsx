@@ -16,6 +16,7 @@ interface TenderPartsCarouselProps {
   onPartSelect: (partId: string) => void;
   approvedPartIds: Set<string>;
   isCollapsed: boolean;
+  className?: string;
 }
 
 function RequirementsStatus(props: {
@@ -59,6 +60,7 @@ export function TenderPartsCarousel({
   onPartSelect,
   approvedPartIds,
   isCollapsed,
+  className,
 }: TenderPartsCarouselProps) {
   const [emblaRef, emblaApi] = useEmblaCarousel({
     align: "start",
@@ -105,8 +107,6 @@ export function TenderPartsCarousel({
   if (!tenderParts?.length) return null;
 
   const groupedRequirements = (part: InboxTenderPart) => {
-    console.log(part.tender_requirements);
-
     return part.tender_requirements?.reduce(
       (acc, requirement) => {
         const status = requirement.status as "default" | "reject" | "approve";
@@ -122,7 +122,12 @@ export function TenderPartsCarousel({
 
   return (
     <div
-      className={`grid grid-cols-1 gap-0 ${isCollapsed ? "py-2" : "py-4"} ${isCollapsed ? "relative" : ""}`}
+      className={cn(
+        "grid grid-cols-1 gap-0",
+        isCollapsed ? "py-2" : "py-4",
+        isCollapsed ? "relative" : "",
+        className
+      )}
     >
       {!isCollapsed && (
         <div className="flex items-center justify-between mb-2">
@@ -213,13 +218,15 @@ export function TenderPartsCarousel({
                         <span className="inline">Requirements:</span>
                         <RequirementsStatus {...groupedRequirements(part)} />
                       </div>
-                      <div className="text-xs w-full">
-                        <span className="inline">Products:</span>
-                        <ProductStatus
-                          matchedProducts={matchedProducts(part)}
-                          totalProducts={totalProducts(part)}
-                        />
-                      </div>
+                      {totalProducts(part) > 0 && (
+                        <div className="text-xs w-full">
+                          <span className="inline">Products:</span>
+                          <ProductStatus
+                            matchedProducts={matchedProducts(part)}
+                            totalProducts={totalProducts(part)}
+                          />
+                        </div>
+                      )}
                     </motion.div>
                   </CardBody>
                 </Card>

@@ -6,23 +6,31 @@ import Link from "$/components/ui/link";
 import { useParams } from "next/navigation";
 import { useState, useEffect, useMemo, useRef } from "react";
 import { defineStepper } from "$/components/stepper";
-import { IndividualTenderPart } from "$/features/tenders/api/use-individual-tender";
 import {
   ConfirmationsStep,
   DataStep,
   DocumentationStep,
   DecisionStep,
   PartsSidebar,
+  OverviewStep,
 } from "$/features/tender-form/components";
-import { hasProductsToConfirm } from "$/features/tenders/utils/confirmation";
-import { getPendingParts } from "$/features/tenders/utils/parts";
+import { hasRequirementsToConfirmInbox } from "$/features/tenders/utils/confirmation";
+import { getOverviewParts } from "$/features/tenders/utils/parts";
 import { Button } from "@heroui/react";
 import React from "react";
 import { useDateFormat } from "$/features/i18n/hooks/use-date-format";
 import { InboxTenderMapping } from "$/features/inbox/api/use-tender-inbox-query";
 import { InboxTenderPart } from "$/features/inbox/api/use-tender-inbox-query";
+import {
+  useUpdateRequirementState,
+  useUpdatePartStatus,
+} from "$/features/tender-form/hooks";
 
 const { Stepper, useStepper } = defineStepper(
+  {
+    id: "overview",
+    title: <span>Overview</span>,
+  },
   {
     id: "confirmations",
     title: <span>Confirmations</span>,
@@ -46,30 +54,48 @@ function StepperContent({
   selectedPart,
   setNextEnabled,
   nextHandlerRef,
+  confirmedParts,
 }: {
   mapping?: InboxTenderMapping | null;
   selectedPart?: InboxTenderPart | null;
   setNextEnabled: (enabled: boolean) => void;
   nextHandlerRef: React.MutableRefObject<(() => Promise<void>) | null>;
+  confirmedParts: Set<string>;
 }) {
   const { current, next } = useStepper();
 
-  const resolvedItem = useMemo(() => {
-    if (!mapping) return null;
-    if (!selectedPart) return mapping;
-    return mapping?.tender_parts?.find((part) => part.id === selectedPart.id);
-  }, [selectedPart, mapping]);
+  const resolvedItem: InboxTenderMapping | InboxTenderPart | null =
+    useMemo(() => {
+      if (!mapping) return null;
+      if (selectedPart) {
+        const foundPart = mapping.tender_parts?.find(
+          (part) => part.id === selectedPart.id
+        );
+        return (foundPart as InboxTenderPart) || null;
+      }
+      return mapping as InboxTenderMapping;
+    }, [selectedPart, mapping]);
 
   if (!mapping) return null;
 
   const renderStepContent = () => {
     switch (current.id) {
+      case "overview":
+        return (
+          <OverviewStep
+            mapping={mapping}
+            selectedPart={selectedPart}
+            setNextEnabled={setNextEnabled}
+          />
+        );
       case "confirmations":
         return (
           <ConfirmationsStep
-            item={resolvedItem}
+            item={resolvedItem as InboxTenderPart}
             setNextEnabled={setNextEnabled}
-            onNextHandler={nextHandlerRef}
+            isConfirmed={
+              selectedPart ? confirmedParts.has(selectedPart.id) : false
+            }
           />
         );
       case "data":
@@ -100,9 +126,8 @@ function StepperContent({
       default:
         return (
           <ConfirmationsStep
-            item={resolvedItem}
+            item={resolvedItem as InboxTenderPart}
             setNextEnabled={setNextEnabled}
-            onNextHandler={nextHandlerRef}
           />
         );
     }
@@ -110,56 +135,117 @@ function StepperContent({
 
   return (
     <>
-      <Stepper.Panel>{renderStepContent()}</Stepper.Panel>
+      <Stepper.Panel className="h-full w-full">
+        <div className="w-full max-w-full">{renderStepContent()}</div>
+      </Stepper.Panel>
     </>
   );
 }
 
 export default function TenderPage() {
   const params = useParams();
-  const [selectedPart, setSelectedPart] = useState<IndividualTenderPart | null>(
+  const [selectedPart, setSelectedPart] = useState<InboxTenderPart | null>(
     null
   );
   const { relativeToNow } = useDateFormat();
 
   const [nextEnabled, setNextEnabled] = useState(true);
+  const [isProcessingConfirmation, setIsProcessingConfirmation] =
+    useState(false);
   const nextHandlerRef = useRef<(() => Promise<void>) | null>(null);
 
-  const { data: mapping } = useIndividualTender({
+  const [partsNeedingConfirmation, setPartsNeedingConfirmation] = useState<
+    InboxTenderPart[]
+  >([]);
+  const [confirmedParts, setConfirmedParts] = useState<Set<string>>(new Set());
+
+  const { data: mapping, isLoading } = useIndividualTender({
     mappingId: params.id as string,
     enabled: true,
   });
 
-  const handlePartSelect = (
-    partId: string,
-    stepperMethods?: {
-      goTo: (
-        step: "confirmations" | "data" | "documentation" | "decision"
-      ) => void;
+  console.log(mapping);
+
+  const updateRequirementState = useUpdateRequirementState();
+  const updatePartStatus = useUpdatePartStatus();
+
+  useEffect(() => {
+    if (mapping?.tender_parts) {
+      const partsNeedingConfirm = mapping.tender_parts.filter((part) =>
+        part.tender_requirements.some((req) => req.status === "default")
+      );
+      setPartsNeedingConfirmation(partsNeedingConfirm);
+
+      if (partsNeedingConfirm.length > 0) {
+        setSelectedPart(partsNeedingConfirm[0]);
+      } else if (mapping.tender_parts.length > 0) {
+        setSelectedPart(mapping.tender_parts[0]);
+      }
     }
-  ) => {
-    if (!mapping) return;
-    const pendingParts = getPendingParts(mapping);
-    if (!pendingParts) return;
+  }, [mapping]);
 
-    const part = pendingParts.find((p) => p.id === partId);
-    setSelectedPart(part || null);
+  const handleConfirmCurrentPart = async (): Promise<void> => {
+    if (!selectedPart) return;
 
-    if (!part) return;
+    setIsProcessingConfirmation(true);
 
-    if (stepperMethods) {
-      const newInitialStep = hasProductsToConfirm(part)
-        ? "confirmations"
-        : "data";
-      stepperMethods.goTo(newInitialStep);
+    try {
+      const requirements = selectedPart.tender_requirements || [];
+      const defaultRequirements = requirements.filter(
+        (req) => req.status === "default"
+      );
+
+      if (defaultRequirements.length === 0) {
+        console.log("Part already confirmed, skipping database save");
+        return;
+      }
+
+      const requirementPromises = defaultRequirements.map((req) =>
+        updateRequirementState.mutateAsync({
+          id: req.id,
+          status: "approve",
+        })
+      );
+
+      const partPromise = updatePartStatus.mutateAsync({
+        id: selectedPart.id,
+        status: "approve",
+      });
+
+      await Promise.all([...requirementPromises, partPromise]);
+      setConfirmedParts((prev) => new Set(prev).add(selectedPart.id));
+    } catch (error) {
+      console.error("Failed to confirm requirements:", error);
+      throw error;
+    } finally {
+      setIsProcessingConfirmation(false);
     }
   };
 
-  // Helper function to get step-specific button text
+  const areAllPartsConfirmed = () => {
+    return partsNeedingConfirmation.every((part) =>
+      confirmedParts.has(part.id)
+    );
+  };
+
+  const getNextPartToConfirm = () => {
+    return partsNeedingConfirmation.find(
+      (part) => !confirmedParts.has(part.id)
+    );
+  };
+
+  const handlePartSelect = (partId: string) => {
+    if (!mapping) return;
+    const overviewParts = getOverviewParts(mapping);
+    const part = overviewParts.find((p) => p.id === partId);
+    if (!part) return;
+    setSelectedPart(part);
+  };
+
   const getStepButtonText = (stepId: string) => {
     switch (stepId) {
       case "confirmations":
-        return <>Confirm and continue</>;
+        return areAllPartsConfirmed() ? <>Save and continue</> : <>Next part</>;
       case "data":
         return <>Save answers and continue</>;
       case "documentation":
@@ -172,46 +258,61 @@ export default function TenderPage() {
   };
 
   useEffect(() => {
-    setNextEnabled(true);
+    if (stepperMethodsRef.current) {
+      const currentStepId = stepperMethodsRef.current.current.id;
+      if (currentStepId === "confirmations") {
+        const currentPartNeedsConfirmation =
+          selectedPart &&
+          partsNeedingConfirmation.some((p) => p.id === selectedPart.id);
+        const isCurrentPartConfirmed =
+          selectedPart && confirmedParts.has(selectedPart.id);
+        setNextEnabled(
+          Boolean(!currentPartNeedsConfirmation || isCurrentPartConfirmed)
+        );
+      } else {
+        setNextEnabled(true);
+      }
+    }
     nextHandlerRef.current = null;
-  }, [selectedPart]);
+  }, [selectedPart, confirmedParts, partsNeedingConfirmation]);
 
   const stepperMethodsRef = useRef<{
     goTo: (
-      step: "confirmations" | "data" | "documentation" | "decision"
+      step: "overview" | "confirmations" | "data" | "documentation" | "decision"
     ) => void;
+    current: { id: string };
   } | null>(null);
 
   useEffect(() => {
     if (mapping && !selectedPart) {
-      const pendingParts = getPendingParts(mapping);
-      if (pendingParts && pendingParts.length > 0) {
-        const firstPart = pendingParts[0];
+      const overviewParts = getOverviewParts(mapping);
+      if (overviewParts && overviewParts.length > 0) {
+        const firstPart = overviewParts[0];
         setSelectedPart(firstPart);
-
-        if (stepperMethodsRef.current) {
-          const newInitialStep = hasProductsToConfirm(firstPart)
-            ? "confirmations"
-            : "data";
-          stepperMethodsRef.current.goTo(newInitialStep);
-        }
       }
     }
   }, [mapping, selectedPart]);
 
-  useEffect(() => {
-    if (selectedPart && stepperMethodsRef.current) {
-      const newStep = hasProductsToConfirm(selectedPart)
-        ? "confirmations"
-        : "data";
-      stepperMethodsRef.current.goTo(newStep);
-    }
-  }, [selectedPart]);
-
   const initialStep = useMemo(() => {
-    if (!selectedPart) return "data";
-    return hasProductsToConfirm(selectedPart) ? "confirmations" : "data";
-  }, [selectedPart]);
+    if (!mapping) return;
+    const needsConfirmation = hasRequirementsToConfirmInbox(mapping);
+    return needsConfirmation ? "confirmations" : "data";
+  }, [mapping]);
+
+  useEffect(() => {
+    if (mapping && initialStep === "confirmations") {
+      const firstPartNeedsConfirmation =
+        partsNeedingConfirmation.length > 0 &&
+        !confirmedParts.has(partsNeedingConfirmation[0].id);
+      setNextEnabled(!firstPartNeedsConfirmation);
+    } else {
+      setNextEnabled(true);
+    }
+  }, [mapping, initialStep, partsNeedingConfirmation, confirmedParts]);
+
+  if (isLoading) return null;
+
+  const partSteps = ["overview", "confirmations"];
 
   return (
     <main className="w-full h-full bg-primary-gradient">
@@ -245,13 +346,10 @@ export default function TenderPage() {
               </nav>
               <section className="flex">
                 <PartsSidebar
-                  parts={
-                    mapping?.tender_parts.filter(
-                      (p) => p.status !== "default"
-                    ) || []
-                  }
+                  parts={mapping ? getOverviewParts(mapping) : []}
                   selectedPart={selectedPart}
-                  onPartSelect={(partId) => handlePartSelect(partId, methods)}
+                  onPartSelect={handlePartSelect}
+                  fullTenderStep={!partSteps.includes(methods.current.id)}
                 />
 
                 <div className="flex-1 flex flex-col">
@@ -274,12 +372,13 @@ export default function TenderPage() {
                     </div>
                   </div>
 
-                  <div className="flex-1 bg-background p-4 overflow-y-auto">
+                  <div className="flex-1 bg-background p-4 overflow-y-auto min-w-0">
                     <StepperContent
                       mapping={mapping}
                       selectedPart={selectedPart}
                       setNextEnabled={setNextEnabled}
                       nextHandlerRef={nextHandlerRef}
+                      confirmedParts={confirmedParts}
                     />
                   </div>
 
@@ -300,16 +399,39 @@ export default function TenderPage() {
                           <Button
                             color="primary"
                             onPress={async () => {
+                              if (methods.current.id === "confirmations") {
+                                if (
+                                  selectedPart &&
+                                  !confirmedParts.has(selectedPart.id)
+                                ) {
+                                  await handleConfirmCurrentPart();
+                                }
+
+                                if (areAllPartsConfirmed()) {
+                                  methods.next();
+                                } else {
+                                  const nextPart = getNextPartToConfirm();
+                                  if (nextPart) {
+                                    setSelectedPart(nextPart);
+                                  }
+                                }
+                                return;
+                              }
+
                               if (nextHandlerRef.current) {
                                 await nextHandlerRef.current();
                                 methods.next();
+                              } else {
+                                methods.next();
                               }
-
-                              methods.next();
                             }}
-                            disabled={!nextEnabled}
+                            isDisabled={
+                              !nextEnabled || isProcessingConfirmation
+                            }
                           >
-                            {getStepButtonText(methods.current.id)}
+                            {isProcessingConfirmation
+                              ? "Processing..."
+                              : getStepButtonText(methods.current.id)}
                           </Button>
                         )}
                         {methods.isLast && (

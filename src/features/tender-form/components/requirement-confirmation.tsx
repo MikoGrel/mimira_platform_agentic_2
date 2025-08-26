@@ -9,6 +9,7 @@ import {
   Search,
   Plus,
   FileText,
+  Wrench,
 } from "lucide-react";
 import {
   Accordion,
@@ -20,10 +21,72 @@ import { InboxTenderProduct } from "$/features/inbox/api/use-tender-inbox-query"
 import { ProductSearchResult } from "$/features/products/api/use-products-search";
 import { CatalogDialog } from "$/features/products/components/catalog-dialog";
 
-interface ProductConfirmationProps {
-  products: InboxTenderProduct[];
-  partName?: string;
-  partId?: number;
+interface RequirementConfirmationProps {
+  products?: InboxTenderProduct[];
+  serviceRequirements?: Array<{
+    id: string | number;
+    requirement_text: string;
+  }>;
+  onConfirmationChange?: (confirmedItems: Set<string>) => void;
+}
+
+interface ServiceRequirementItemProps {
+  requirement: {
+    id: string | number;
+    requirement_text: string;
+  };
+  isConfirmed: boolean;
+  onToggleConfirm: () => void;
+}
+
+function ServiceRequirementItem({
+  requirement,
+  isConfirmed,
+  onToggleConfirm,
+}: ServiceRequirementItemProps) {
+  return (
+    <Card
+      className={`mb-4 w-full max-w-full border transition-all duration-200 ${
+        isConfirmed ? "border-green-200 bg-green-50/30" : "border-border"
+      }`}
+      shadow="none"
+      isPressable
+      onPress={onToggleConfirm}
+    >
+      <CardHeader className="pb-3">
+        <div className="flex items-center gap-3 w-full">
+          <div className="flex items-center gap-2 cursor-pointer">
+            {isConfirmed ? (
+              <CheckCircle2 className="w-5 h-5 text-success" />
+            ) : (
+              <Circle className="w-5 h-5 text-default-400" />
+            )}
+          </div>
+
+          <span className="inline-flex items-center shrink-0 justify-center w-8 h-8 rounded-full bg-blue-100 text-blue-600 border border-blue-200">
+            <Wrench className="w-4 h-4" />
+          </span>
+
+          <div className="flex flex-col min-w-0 flex-1">
+            <div className="flex items-center gap-2">
+              <span className="text-sm font-semibold text-foreground truncate">
+                {requirement.requirement_text}
+              </span>
+              {isConfirmed ? (
+                <Chip size="sm" color="success" variant="flat">
+                  ✓ Confirmed
+                </Chip>
+              ) : (
+                <Chip size="sm" variant="flat">
+                  Pending
+                </Chip>
+              )}
+            </div>
+          </div>
+        </div>
+      </CardHeader>
+    </Card>
+  );
 }
 
 interface ProductItemProps {
@@ -48,14 +111,18 @@ function ProductItem({
   const hasSpecs = product.product_req_spec && product.product_req_spec.trim();
 
   return (
-    <Card className="mb-4 w-full max-w-full border border-border" shadow="none">
+    <Card
+      className={`mb-4 w-full max-w-full border transition-all duration-200 ${
+        isConfirmed ? "border-green-200 bg-green-50/30" : "border-border"
+      }`}
+      shadow="none"
+      isPressable
+      onPress={onToggleConfirm}
+    >
       <CardHeader className="pb-3">
         <div className="flex items-center justify-between w-full">
           <div className="flex items-center gap-3">
-            <div
-              className="flex items-center gap-2 cursor-pointer"
-              onClick={onToggleConfirm}
-            >
+            <div className="flex items-center gap-2 cursor-pointer">
               {isConfirmed ? (
                 <CheckCircle2 className="w-5 h-5 text-success" />
               ) : (
@@ -114,10 +181,8 @@ function ProductItem({
         </div>
       </CardHeader>
 
-      {/* Show requirements and specs when no product is selected */}
       {!selectedProduct && (
         <CardBody className="pt-0 space-y-4">
-          {/* Requirements to Confirm */}
           {requirements && (
             <div>
               <h4 className="text-sm font-semibold text-foreground mb-3">
@@ -129,7 +194,6 @@ function ProductItem({
             </div>
           )}
 
-          {/* Product Specifications - Collapsed by default */}
           {hasSpecs && (
             <Accordion type="single" collapsible>
               <AccordionItem
@@ -159,7 +223,6 @@ function ProductItem({
         </CardBody>
       )}
 
-      {/* Selected Product state - unified display */}
       {selectedProduct && (
         <CardBody className="pt-0">
           <div className="bg-primary/5 border border-primary/20 rounded-lg p-4">
@@ -197,15 +260,12 @@ function ProductItem({
   );
 }
 
-export function ProductConfirmation({
-  products,
+export function RequirementConfirmation({
+  products = [],
+  serviceRequirements = [],
   onConfirmationChange,
-}: ProductConfirmationProps & {
-  onConfirmationChange?: (confirmedProducts: Set<string>) => void;
-}) {
-  const [confirmedProducts, setConfirmedProducts] = useState<Set<string>>(
-    new Set()
-  );
+}: RequirementConfirmationProps) {
+  const [confirmedItems, setConfirmedItems] = useState<Set<string>>(new Set());
   const [selectedProducts, setSelectedProducts] = useState<
     Record<string, ProductSearchResult>
   >({});
@@ -214,14 +274,16 @@ export function ProductConfirmation({
     null
   );
 
-  const toggleConfirmed = (productKey: string) => {
-    const newConfirmed = new Set(confirmedProducts);
-    if (newConfirmed.has(productKey)) {
-      newConfirmed.delete(productKey);
+  console.log(confirmedItems);
+
+  const toggleItemConfirmed = (itemKey: string) => {
+    const newConfirmed = new Set(confirmedItems);
+    if (newConfirmed.has(itemKey)) {
+      newConfirmed.delete(itemKey);
     } else {
-      newConfirmed.add(productKey);
+      newConfirmed.add(itemKey);
     }
-    setConfirmedProducts(newConfirmed);
+    setConfirmedItems(newConfirmed);
     onConfirmationChange?.(newConfirmed);
   };
 
@@ -237,11 +299,11 @@ export function ProductConfirmation({
     newSelectedProducts[editingProductKey] = product;
 
     // Auto-confirm when selecting a product
-    const newConfirmed = new Set(confirmedProducts);
+    const newConfirmed = new Set(confirmedItems);
     newConfirmed.add(editingProductKey);
 
     setSelectedProducts(newSelectedProducts);
-    setConfirmedProducts(newConfirmed);
+    setConfirmedItems(newConfirmed);
     setCatalogDialogOpen(false);
     setEditingProductKey(null);
     onConfirmationChange?.(newConfirmed);
@@ -251,107 +313,144 @@ export function ProductConfirmation({
     const newSelectedProducts = { ...selectedProducts };
     delete newSelectedProducts[productKey];
 
-    // Remove from confirmed when removing product
-    const newConfirmed = new Set(confirmedProducts);
+    const newConfirmed = new Set(confirmedItems);
     newConfirmed.delete(productKey);
 
     setSelectedProducts(newSelectedProducts);
-    setConfirmedProducts(newConfirmed);
+    setConfirmedItems(newConfirmed);
     onConfirmationChange?.(newConfirmed);
   };
 
   const handleConfirmAll = () => {
-    const allProductKeys = products.map((_, index) => `product-${index}`);
-    const newConfirmed = new Set(allProductKeys);
-    setConfirmedProducts(newConfirmed);
+    const allKeys = [
+      ...products.map((_, index) => `product-${index}`),
+      ...serviceRequirements.map((req) => `service-${req.id}`),
+    ];
+    const newConfirmed = new Set(allKeys);
+    setConfirmedItems(newConfirmed);
     onConfirmationChange?.(newConfirmed);
   };
 
   const handleClearAll = () => {
     const newConfirmed = new Set<string>();
-    setConfirmedProducts(newConfirmed);
+    setConfirmedItems(newConfirmed);
     setSelectedProducts({});
     onConfirmationChange?.(newConfirmed);
   };
 
-  const confirmedCount = confirmedProducts.size;
-  const totalCount = products.length;
+  const totalCount = products.length + serviceRequirements.length;
+  const confirmedCount = confirmedItems.size;
   const progressPercentage =
     totalCount > 0 ? Math.round((confirmedCount / totalCount) * 100) : 0;
 
-  if (products.length === 0) {
+  if (totalCount === 0) {
     return (
-      <div className="text-center py-6 text-default-500">
-        <Package className="w-8 h-8 mx-auto mb-2 text-default-300" />
-        <p className="text-sm">No products found for this part</p>
+      <div className="text-center py-6 text-primary">
+        <Package className="w-8 h-8 mx-auto mb-2 text-primary" />
+        <p className="text-sm">
+          All requirements were confirmed, go to the next step!
+        </p>
       </div>
     );
   }
 
   return (
-    <div className="space-y-6 w-full max-w-full">
-      <div className="space-y-4 w-full">
-        <div className="flex items-center justify-between">
-          <div>
-            <h3 className="text-sm font-medium text-gray-600">
-              Products ({totalCount})
-            </h3>
-            <p className="text-xs text-default-500 mt-1">
-              {confirmedCount} of {totalCount} confirmed
-            </p>
-          </div>
-
-          <div className="flex items-center gap-2">
-            <Button
-              size="sm"
-              variant="flat"
-              onPress={handleClearAll}
-              isDisabled={confirmedCount === 0}
-            >
-              Clear All
-            </Button>
-            <Button
-              size="sm"
-              color="primary"
-              onPress={handleConfirmAll}
-              isDisabled={confirmedCount === totalCount}
-            >
-              Confirm All
-            </Button>
-          </div>
+    <div className="space-y-6 w-full max-w-full overflow-hidden">
+      <div className="flex items-center justify-between min-w-0">
+        <div className="min-w-0 flex-1">
+          <h3 className="text-lg font-semibold">Requirements to Confirm</h3>
+          <p className="text-sm text-gray-500 mt-1">
+            {confirmedCount} of {totalCount} confirmed
+          </p>
         </div>
 
-        <div className="space-y-1">
-          <div className="w-full bg-default-200 rounded-full h-2">
-            <div
-              className="bg-primary h-2 rounded-full transition-all duration-300"
-              style={{ width: `${progressPercentage}%` }}
-            />
-          </div>
-          <div className="text-right">
-            <span className="text-xs text-default-500">
-              {progressPercentage}% Complete
-            </span>
-          </div>
+        <div className="flex items-center gap-2 flex-shrink-0">
+          <Button
+            size="sm"
+            variant="flat"
+            onPress={handleClearAll}
+            isDisabled={confirmedCount === 0}
+          >
+            Clear All
+          </Button>
+          <Button
+            size="sm"
+            color="primary"
+            onPress={handleConfirmAll}
+            isDisabled={confirmedCount === totalCount}
+          >
+            Confirm All
+          </Button>
         </div>
+      </div>
 
-        <div className="space-y-3 w-full max-w-full">
+      <div className="space-y-1">
+        <div className="w-full bg-default-200 rounded-full h-2">
+          <div
+            className="bg-primary h-2 rounded-full transition-all duration-300"
+            style={{ width: `${progressPercentage}%` }}
+          />
+        </div>
+        <div className="text-right">
+          <span className="text-xs text-default-500">
+            {progressPercentage}% Complete
+          </span>
+        </div>
+      </div>
+
+      {/* Product Requirements */}
+      {products.length > 0 && (
+        <div className="space-y-3 w-full">
+          <h4 className="text-sm font-medium text-gray-600">
+            Product Requirements ({products.length})
+          </h4>
           {products.map((product, index) => {
             const productKey = `product-${index}`;
             return (
               <ProductItem
                 key={productKey}
                 product={product}
-                isConfirmed={confirmedProducts.has(productKey)}
+                isConfirmed={confirmedItems.has(productKey)}
                 selectedProduct={selectedProducts[productKey] || null}
-                onToggleConfirm={() => toggleConfirmed(productKey)}
+                onToggleConfirm={() => toggleItemConfirmed(productKey)}
                 onOpenCatalog={() => handleOpenCatalog(productKey)}
                 onRemoveProduct={() => handleRemoveProduct(productKey)}
               />
             );
           })}
         </div>
-      </div>
+      )}
+
+      {/* Service Requirements */}
+      {serviceRequirements.length > 0 && (
+        <div className="space-y-3 w-full">
+          <h4 className="text-sm font-medium text-gray-600">
+            Service Requirements ({serviceRequirements.length})
+          </h4>
+          {serviceRequirements.map((requirement) => {
+            const serviceKey = `service-${requirement.id}`;
+            return (
+              <ServiceRequirementItem
+                key={serviceKey}
+                requirement={requirement}
+                isConfirmed={confirmedItems.has(serviceKey)}
+                onToggleConfirm={() => toggleItemConfirmed(serviceKey)}
+              />
+            );
+          })}
+        </div>
+      )}
+
+      {confirmedCount === totalCount && (
+        <div className="text-center py-4">
+          <div className="inline-flex items-center gap-2 text-green-600">
+            <CheckCircle2 className="w-5 h-5" />
+            <span className="text-sm font-medium">
+              All requirements confirmed
+            </span>
+          </div>
+        </div>
+      )}
 
       <CatalogDialog
         open={catalogDialogOpen}

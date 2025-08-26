@@ -52,8 +52,6 @@ export function DataStep({
         answers: answersToSubmit,
       });
 
-      toast.success("Document answers saved successfully!");
-
       // Redirect to next step or call onNext if provided
       if (onNext) {
         onNext();

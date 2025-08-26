@@ -9,6 +9,7 @@ interface PartsSidebarProps {
   parts: IndividualTenderPart[];
   selectedPart: IndividualTenderPart | null;
   onPartSelect: (partId: string) => void;
+  fullTenderStep?: boolean;
 }
 
 const statusMap = {
@@ -21,19 +22,35 @@ export function PartsSidebar({
   parts,
   selectedPart,
   onPartSelect,
+  fullTenderStep = false,
 }: PartsSidebarProps) {
   return (
     <aside className="border-r border-sidebar-border w-[450px] h-full bg-background">
       <div className="p-4 border-b border-sidebar-border">
         <h3 className="text-sm font-semibold mb-1">Tender Parts</h3>
         <p className="text-xs text-muted-foreground">
-          {parts.length} pending parts
+          {parts.length} parts in analysis
         </p>
       </div>
 
-      <div className="overflow-y-auto">
+      <div className="overflow-y-auto relative min-h-[300px]">
+        {parts.length === 0 && (
+          <div className="absolute top-0 left-0 w-full h-full bg-background/80 z-10 flex flex-center">
+            <Chip variant="flat" color="primary">
+              This tender has only one part
+            </Chip>
+          </div>
+        )}
+        {fullTenderStep && parts.length > 1 && (
+          <div className="absolute top-0 left-0 w-full h-full bg-background/80 z-10 flex flex-center">
+            <Chip variant="flat" color="primary">
+              This step regards full tender
+            </Chip>
+          </div>
+        )}
         {parts.map((part) => (
           <Card
+            isDisabled={fullTenderStep}
             key={part.id}
             isPressable
             isHoverable

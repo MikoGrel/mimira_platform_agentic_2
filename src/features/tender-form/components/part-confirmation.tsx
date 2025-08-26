@@ -59,10 +59,10 @@ export function PartConfirmation({ part }: PartConfirmationProps) {
             </span>
             <Chip
               size="sm"
-              color={getStatusColor(part.status || "pending")}
+              color={getStatusColor(part.status || "analysis")}
               variant="flat"
             >
-              {part.status || "pending"}
+              {part.status || "analysis"}
             </Chip>
           </div>
           <span className="text-lg text-gray-500">

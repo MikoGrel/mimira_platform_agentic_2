@@ -17,6 +17,7 @@ import { useUpdateTenderStatus } from "../api";
 import { toast } from "sonner";
 import Link from "$/components/ui/link";
 import { IndividualTenderMapping } from "../api/use-individual-tender";
+import { getOverviewParts } from "../utils/parts";
 
 interface TenderCardProps {
   mapping: IndividualTenderMapping;
@@ -51,16 +52,21 @@ function InternalTenderCard({ mapping, isDragging = false }: TenderCardProps) {
     willChange: "transform",
   };
 
+  const parts = getOverviewParts(mapping);
+
   function handleRestoreToInbox() {
     updateTenderStatus(
-      { mappingId: mapping.id, status: "default" },
+      {
+        mappingId: mapping.id,
+        status: "default",
+        partsStatus: "default",
+        partIds: parts.map((p) => p.id),
+      },
       {
         onSuccess: () => toast.success(<span>Tender restored to inbox</span>),
       }
     );
   }
-
-  const parts = mapping.tender_parts.filter((p) => p.status !== "default");
 
   return (
     <ContextMenu>

@@ -229,3 +229,5 @@ export function useTendersList({
 export type TenderListItem = Awaited<
   ReturnType<typeof useTendersList>
 >["tenders"][number];
+
+export type TenderListItemPart = TenderListItem["tender_parts"][number];

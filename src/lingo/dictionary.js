@@ -353,6 +353,27 @@ export default {
           },
           hash: "26b80ae8a680de73667e096098aa69d8",
         },
+        "19/declaration/body/15/argument/1/1/1/3-placeholder": {
+          content: {
+            en: "Search",
+            pl: "Szukaj",
+          },
+          hash: "49dd6c21604b5e8d4153ff1aff2177e1",
+        },
+        "19/declaration/body/15/argument/1/5/1/3": {
+          content: {
+            en: "Ask Mimir",
+            pl: "Zapytaj Mimira",
+          },
+          hash: "c516ed1af9463ccd6bdcb19a1f13e4ac",
+        },
+        "19/declaration/body/15/argument/1/5/1/5": {
+          content: {
+            en: "Coming soon",
+            pl: "Wkrótce dostępne",
+          },
+          hash: "05a8fc9f6d826fd88a809d98684edcad",
+        },
         "19/declaration/body/15/argument/3/1/1/3-placeholder": {
           content: {
             en: "Search",
@@ -373,6 +394,13 @@ export default {
             pl: "Wkrótce dostępne",
           },
           hash: "05a8fc9f6d826fd88a809d98684edcad",
+        },
+        "19/declaration/body/15/argument/3/expression/right/1/1": {
+          content: {
+            en: "Select a tender to view details",
+            pl: "Wybierz przetarg, aby zobaczyć szczegóły",
+          },
+          hash: "067789b01a081458db2f872f10a37c3f",
         },
         "19/declaration/body/15/argument/5/expression/right/1/1": {
           content: {
@@ -1501,6 +1529,41 @@ export default {
             },
             hash: "c636f04b7c6ce77d89d79096165d9df6",
           },
+        "14/0/init/0/1/value": {
+          content: {
+            en: "Overview",
+            pl: "Przegląd",
+          },
+          hash: "30c54e4dc4ce599b87d94be34a8617f5",
+        },
+        "14/0/init/1/1/value": {
+          content: {
+            en: "Confirmations",
+            pl: "Potwierdzenia",
+          },
+          hash: "d6bd835d0f69b13150c90fe117eea0a9",
+        },
+        "14/0/init/2/1/value": {
+          content: {
+            en: "Data",
+            pl: "Dane",
+          },
+          hash: "b7b46ab6ce9606032c8f81f6f6afbb9b",
+        },
+        "14/0/init/3/1/value": {
+          content: {
+            en: "Documentation",
+            pl: "Dokumentacja",
+          },
+          hash: "1563fcb5ddb5037b0709ccd3dd384a92",
+        },
+        "14/0/init/4/1/value": {
+          content: {
+            en: "Decision",
+            pl: "Decyzja",
+          },
+          hash: "4757e269fee1aa76864469e762def497",
+        },
         "14/body/0/argument/1/1": {
           content: {
             en: "Final Decision",
@@ -1965,26 +2028,33 @@ export default {
           },
         "15/0/init/0/1/value": {
           content: {
+            en: "Overview",
+            pl: "Przegląd",
+          },
+          hash: "30c54e4dc4ce599b87d94be34a8617f5",
+        },
+        "15/0/init/1/1/value": {
+          content: {
             en: "Confirmations",
             pl: "Potwierdzenia",
           },
           hash: "d6bd835d0f69b13150c90fe117eea0a9",
         },
-        "15/0/init/1/1/value": {
+        "15/0/init/2/1/value": {
           content: {
             en: "Data",
             pl: "Dane",
           },
           hash: "b7b46ab6ce9606032c8f81f6f6afbb9b",
         },
-        "15/0/init/2/1/value": {
+        "15/0/init/3/1/value": {
           content: {
             en: "Documentation",
             pl: "Dokumentacja",
           },
           hash: "1563fcb5ddb5037b0709ccd3dd384a92",
         },
-        "15/0/init/3/1/value": {
+        "15/0/init/4/1/value": {
           content: {
             en: "Decision",
             pl: "Decyzja",
@@ -2190,6 +2260,41 @@ export default {
             },
             hash: "2c6a8353f778f0984fda6fc2293a60c7",
           },
+        "16/0/init/0/1/value": {
+          content: {
+            en: "Overview",
+            pl: "Przegląd",
+          },
+          hash: "30c54e4dc4ce599b87d94be34a8617f5",
+        },
+        "16/0/init/1/1/value": {
+          content: {
+            en: "Confirmations",
+            pl: "Potwierdzenia",
+          },
+          hash: "d6bd835d0f69b13150c90fe117eea0a9",
+        },
+        "16/0/init/2/1/value": {
+          content: {
+            en: "Data",
+            pl: "Dane",
+          },
+          hash: "b7b46ab6ce9606032c8f81f6f6afbb9b",
+        },
+        "16/0/init/3/1/value": {
+          content: {
+            en: "Documentation",
+            pl: "Dokumentacja",
+          },
+          hash: "1563fcb5ddb5037b0709ccd3dd384a92",
+        },
+        "16/0/init/4/1/value": {
+          content: {
+            en: "Decision",
+            pl: "Decyzja",
+          },
+          hash: "4757e269fee1aa76864469e762def497",
+        },
         "16/body/0/argument/1/1/expression/body/2/argument/5/1": {
           content: {
             en: "Previous",
@@ -2276,6 +2381,29 @@ export default {
           },
           hash: "e751191e31ec26360c57b45f54fb2ea5",
         },
+        "16/declaration/body/14/argument/1/1/expression/body/1/argument/1/1": {
+          content: {
+            en: "<element:MoveLeft></element:MoveLeft> Return",
+            pl: "<element:MoveLeft></element:MoveLeft> Powrót",
+          },
+          hash: "1e2ea95a1cc35caf5407cb56609d471b",
+        },
+        "16/declaration/body/14/argument/1/1/expression/body/1/argument/3/3/5/1/1":
+          {
+            content: {
+              en: "Previous step",
+              pl: "Poprzedni krok",
+            },
+            hash: "054a50e59feb6c034f1368261fbfa015",
+          },
+        "16/declaration/body/14/argument/1/1/expression/body/1/argument/3/3/5/1/3/3/expression/right":
+          {
+            content: {
+              en: "Reset",
+              pl: "Resetuj",
+            },
+            hash: "da9587ba0b6ea8ef30c5757770facff9",
+          },
         "16/declaration/body/2/argument/1/1": {
           content: {
             en: "<element:MoveLeft></element:MoveLeft> Return to tender list",
@@ -2366,6 +2494,134 @@ export default {
             },
             hash: "e751191e31ec26360c57b45f54fb2ea5",
           },
+        "16/declaration/body/7/0/init/body/0/0/0/argument": {
+          content: {
+            en: "Confirm and continue",
+            pl: "Potwierdź i kontynuuj",
+          },
+          hash: "cf9769910b0a62b4a349954de4652cbc",
+        },
+        "16/declaration/body/7/0/init/body/0/1/0/argument": {
+          content: {
+            en: "Save answers and continue",
+            pl: "Zapisz odpowiedzi i kontynuuj",
+          },
+          hash: "88f8c2a27083267af9d5b574332ac836",
+        },
+        "16/declaration/body/7/0/init/body/0/2/0/argument": {
+          content: {
+            en: "Upload documents and continue",
+            pl: "Prześlij dokumenty i kontynuuj",
+          },
+          hash: "db50aad354a83c0dc4788ddc4da3c3a4",
+        },
+        "16/declaration/body/7/0/init/body/0/3/0/argument": {
+          content: {
+            en: "Submit decision",
+            pl: "Zatwierdź decyzję",
+          },
+          hash: "0ecb8520d3ff84380f16ac46a864b24a",
+        },
+        "16/declaration/body/7/0/init/body/0/4/0/argument": {
+          content: {
+            en: "Next step",
+            pl: "Następny krok",
+          },
+          hash: "712c63650b5180cbc14d6246b5d558c2",
+        },
+        "17/declaration/body/11/0/init/body/0/0/0/argument": {
+          content: {
+            en: "Confirm and continue",
+            pl: "Potwierdź i kontynuuj",
+          },
+          hash: "cf9769910b0a62b4a349954de4652cbc",
+        },
+        "17/declaration/body/11/0/init/body/0/1/0/argument": {
+          content: {
+            en: "Save answers and continue",
+            pl: "Zapisz odpowiedzi i kontynuuj",
+          },
+          hash: "88f8c2a27083267af9d5b574332ac836",
+        },
+        "17/declaration/body/11/0/init/body/0/2/0/argument": {
+          content: {
+            en: "Upload documents and continue",
+            pl: "Prześlij dokumenty i kontynuuj",
+          },
+          hash: "db50aad354a83c0dc4788ddc4da3c3a4",
+        },
+        "17/declaration/body/11/0/init/body/0/3/0/argument": {
+          content: {
+            en: "Submit decision",
+            pl: "Zatwierdź decyzję",
+          },
+          hash: "0ecb8520d3ff84380f16ac46a864b24a",
+        },
+        "17/declaration/body/11/0/init/body/0/4/0/argument": {
+          content: {
+            en: "Next step",
+            pl: "Następny krok",
+          },
+          hash: "712c63650b5180cbc14d6246b5d558c2",
+        },
+        "17/declaration/body/12/0/init/body/0/0/0/argument": {
+          content: {
+            en: "Confirm and continue",
+            pl: "Potwierdź i kontynuuj",
+          },
+          hash: "cf9769910b0a62b4a349954de4652cbc",
+        },
+        "17/declaration/body/12/0/init/body/0/1/0/argument": {
+          content: {
+            en: "Save answers and continue",
+            pl: "Zapisz odpowiedzi i kontynuuj",
+          },
+          hash: "88f8c2a27083267af9d5b574332ac836",
+        },
+        "17/declaration/body/12/0/init/body/0/2/0/argument": {
+          content: {
+            en: "Upload documents and continue",
+            pl: "Prześlij dokumenty i kontynuuj",
+          },
+          hash: "db50aad354a83c0dc4788ddc4da3c3a4",
+        },
+        "17/declaration/body/12/0/init/body/0/3/0/argument": {
+          content: {
+            en: "Submit decision",
+            pl: "Zatwierdź decyzję",
+          },
+          hash: "0ecb8520d3ff84380f16ac46a864b24a",
+        },
+        "17/declaration/body/12/0/init/body/0/4/0/argument": {
+          content: {
+            en: "Next step",
+            pl: "Następny krok",
+          },
+          hash: "712c63650b5180cbc14d6246b5d558c2",
+        },
+        "17/declaration/body/12/argument/1/1/expression/body/1/argument/1/1": {
+          content: {
+            en: "<element:MoveLeft></element:MoveLeft> Return",
+            pl: "<element:MoveLeft></element:MoveLeft> Powrót",
+          },
+          hash: "1e2ea95a1cc35caf5407cb56609d471b",
+        },
+        "17/declaration/body/12/argument/1/1/expression/body/1/argument/3/3/5/1/1":
+          {
+            content: {
+              en: "Previous step",
+              pl: "Poprzedni krok",
+            },
+            hash: "054a50e59feb6c034f1368261fbfa015",
+          },
+        "17/declaration/body/12/argument/1/1/expression/body/1/argument/3/3/5/1/3/3/expression/right":
+          {
+            content: {
+              en: "Reset",
+              pl: "Resetuj",
+            },
+            hash: "da9587ba0b6ea8ef30c5757770facff9",
+          },
         "17/declaration/body/13/argument/1/1/expression/body/1/argument/1/1": {
           content: {
             en: "<element:MoveLeft></element:MoveLeft> Return",
@@ -2382,6 +2638,278 @@ export default {
             hash: "054a50e59feb6c034f1368261fbfa015",
           },
         "17/declaration/body/13/argument/1/1/expression/body/1/argument/3/3/5/1/3/3/expression/right":
+          {
+            content: {
+              en: "Reset",
+              pl: "Resetuj",
+            },
+            hash: "da9587ba0b6ea8ef30c5757770facff9",
+          },
+        "17/declaration/body/14/argument/1/1/expression/body/1/argument/1/1": {
+          content: {
+            en: "<element:MoveLeft></element:MoveLeft> Return",
+            pl: "<element:MoveLeft></element:MoveLeft> Powrót",
+          },
+          hash: "1e2ea95a1cc35caf5407cb56609d471b",
+        },
+        "17/declaration/body/14/argument/1/1/expression/body/1/argument/3/3/5/1/1":
+          {
+            content: {
+              en: "Previous step",
+              pl: "Poprzedni krok",
+            },
+            hash: "054a50e59feb6c034f1368261fbfa015",
+          },
+        "17/declaration/body/14/argument/1/1/expression/body/1/argument/3/3/5/1/3/3/expression/right":
+          {
+            content: {
+              en: "Reset",
+              pl: "Resetuj",
+            },
+            hash: "da9587ba0b6ea8ef30c5757770facff9",
+          },
+        "17/declaration/body/15/0/init/body/0/0/0/argument": {
+          content: {
+            en: "Confirm and continue",
+            pl: "Potwierdź i kontynuuj",
+          },
+          hash: "cf9769910b0a62b4a349954de4652cbc",
+        },
+        "17/declaration/body/15/0/init/body/0/1/0/argument": {
+          content: {
+            en: "Save answers and continue",
+            pl: "Zapisz odpowiedzi i kontynuuj",
+          },
+          hash: "88f8c2a27083267af9d5b574332ac836",
+        },
+        "17/declaration/body/15/0/init/body/0/2/0/argument": {
+          content: {
+            en: "Upload documents and continue",
+            pl: "Prześlij dokumenty i kontynuuj",
+          },
+          hash: "db50aad354a83c0dc4788ddc4da3c3a4",
+        },
+        "17/declaration/body/15/0/init/body/0/3/0/argument": {
+          content: {
+            en: "Submit decision",
+            pl: "Zatwierdź decyzję",
+          },
+          hash: "0ecb8520d3ff84380f16ac46a864b24a",
+        },
+        "17/declaration/body/15/0/init/body/0/4/0/argument": {
+          content: {
+            en: "Next step",
+            pl: "Następny krok",
+          },
+          hash: "712c63650b5180cbc14d6246b5d558c2",
+        },
+        "17/declaration/body/16/0/init/body/0/0/0/alternate/0/argument": {
+          content: {
+            en: "Next part",
+            pl: "Następna część",
+          },
+          hash: "3bebbe9909ebc2ae788c9038831ddb6e",
+        },
+        "17/declaration/body/16/0/init/body/0/0/0/argument": {
+          content: {
+            en: "Confirm and continue",
+            pl: "Potwierdź i kontynuuj",
+          },
+          hash: "cf9769910b0a62b4a349954de4652cbc",
+        },
+        "17/declaration/body/16/0/init/body/0/0/0/argument/alternate": {
+          content: {
+            en: "Next part",
+            pl: "Następna część",
+          },
+          hash: "3bebbe9909ebc2ae788c9038831ddb6e",
+        },
+        "17/declaration/body/16/0/init/body/0/0/0/argument/consequent": {
+          content: {
+            en: "Save and continue",
+            pl: "Zapisz i kontynuuj",
+          },
+          hash: "fa60853b0e075c7c134e4bb3c7c59d82",
+        },
+        "17/declaration/body/16/0/init/body/0/0/0/consequent/0/argument": {
+          content: {
+            en: "Save and continue",
+            pl: "Zapisz i kontynuuj",
+          },
+          hash: "fa60853b0e075c7c134e4bb3c7c59d82",
+        },
+        "17/declaration/body/16/0/init/body/0/1/0/argument": {
+          content: {
+            en: "Save answers and continue",
+            pl: "Zapisz odpowiedzi i kontynuuj",
+          },
+          hash: "88f8c2a27083267af9d5b574332ac836",
+        },
+        "17/declaration/body/16/0/init/body/0/2/0/argument": {
+          content: {
+            en: "Upload documents and continue",
+            pl: "Prześlij dokumenty i kontynuuj",
+          },
+          hash: "db50aad354a83c0dc4788ddc4da3c3a4",
+        },
+        "17/declaration/body/16/0/init/body/0/3/0/argument": {
+          content: {
+            en: "Submit decision",
+            pl: "Zatwierdź decyzję",
+          },
+          hash: "0ecb8520d3ff84380f16ac46a864b24a",
+        },
+        "17/declaration/body/16/0/init/body/0/4/0/argument": {
+          content: {
+            en: "Next step",
+            pl: "Następny krok",
+          },
+          hash: "712c63650b5180cbc14d6246b5d558c2",
+        },
+        "17/declaration/body/17/0/init/body/0/0/0/alternate/0/argument": {
+          content: {
+            en: "Next part",
+            pl: "Następna część",
+          },
+          hash: "3bebbe9909ebc2ae788c9038831ddb6e",
+        },
+        "17/declaration/body/17/0/init/body/0/0/0/argument/alternate": {
+          content: {
+            en: "Next part",
+            pl: "Następna część",
+          },
+          hash: "3bebbe9909ebc2ae788c9038831ddb6e",
+        },
+        "17/declaration/body/17/0/init/body/0/0/0/argument/consequent": {
+          content: {
+            en: "Save and continue",
+            pl: "Zapisz i kontynuuj",
+          },
+          hash: "fa60853b0e075c7c134e4bb3c7c59d82",
+        },
+        "17/declaration/body/17/0/init/body/0/0/0/consequent/0/argument": {
+          content: {
+            en: "Save and continue",
+            pl: "Zapisz i kontynuuj",
+          },
+          hash: "fa60853b0e075c7c134e4bb3c7c59d82",
+        },
+        "17/declaration/body/17/0/init/body/0/1/0/argument": {
+          content: {
+            en: "Save answers and continue",
+            pl: "Zapisz odpowiedzi i kontynuuj",
+          },
+          hash: "88f8c2a27083267af9d5b574332ac836",
+        },
+        "17/declaration/body/17/0/init/body/0/2/0/argument": {
+          content: {
+            en: "Upload documents and continue",
+            pl: "Prześlij dokumenty i kontynuuj",
+          },
+          hash: "db50aad354a83c0dc4788ddc4da3c3a4",
+        },
+        "17/declaration/body/17/0/init/body/0/3/0/argument": {
+          content: {
+            en: "Submit decision",
+            pl: "Zatwierdź decyzję",
+          },
+          hash: "0ecb8520d3ff84380f16ac46a864b24a",
+        },
+        "17/declaration/body/17/0/init/body/0/4/0/argument": {
+          content: {
+            en: "Next step",
+            pl: "Następny krok",
+          },
+          hash: "712c63650b5180cbc14d6246b5d558c2",
+        },
+        "17/declaration/body/18/0/init/body/0/0/0/alternate/0/argument": {
+          content: {
+            en: "Next part",
+            pl: "Następna część",
+          },
+          hash: "3bebbe9909ebc2ae788c9038831ddb6e",
+        },
+        "17/declaration/body/18/0/init/body/0/0/0/argument": {
+          content: {
+            en: "Confirm and continue",
+            pl: "Potwierdź i kontynuuj",
+          },
+          hash: "cf9769910b0a62b4a349954de4652cbc",
+        },
+        "17/declaration/body/18/0/init/body/0/0/0/consequent/0/argument": {
+          content: {
+            en: "Save and continue",
+            pl: "Zapisz i kontynuuj",
+          },
+          hash: "fa60853b0e075c7c134e4bb3c7c59d82",
+        },
+        "17/declaration/body/18/0/init/body/0/1/0/argument": {
+          content: {
+            en: "Save answers and continue",
+            pl: "Zapisz odpowiedzi i kontynuuj",
+          },
+          hash: "88f8c2a27083267af9d5b574332ac836",
+        },
+        "17/declaration/body/18/0/init/body/0/2/0/argument": {
+          content: {
+            en: "Upload documents and continue",
+            pl: "Prześlij dokumenty i kontynuuj",
+          },
+          hash: "db50aad354a83c0dc4788ddc4da3c3a4",
+        },
+        "17/declaration/body/18/0/init/body/0/3/0/argument": {
+          content: {
+            en: "Submit decision",
+            pl: "Zatwierdź decyzję",
+          },
+          hash: "0ecb8520d3ff84380f16ac46a864b24a",
+        },
+        "17/declaration/body/18/0/init/body/0/4/0/argument": {
+          content: {
+            en: "Next step",
+            pl: "Następny krok",
+          },
+          hash: "712c63650b5180cbc14d6246b5d558c2",
+        },
+        "17/declaration/body/18/argument/1/1/expression/body/1/argument/1/1": {
+          content: {
+            en: "<element:MoveLeft></element:MoveLeft> Return",
+            pl: "<element:MoveLeft></element:MoveLeft> Powrót",
+          },
+          hash: "1e2ea95a1cc35caf5407cb56609d471b",
+        },
+        "17/declaration/body/18/argument/1/1/expression/body/1/argument/3/3/5/1/1":
+          {
+            content: {
+              en: "Previous step",
+              pl: "Poprzedni krok",
+            },
+            hash: "054a50e59feb6c034f1368261fbfa015",
+          },
+        "17/declaration/body/18/argument/1/1/expression/body/1/argument/3/3/5/1/3/3/expression/right":
+          {
+            content: {
+              en: "Reset",
+              pl: "Resetuj",
+            },
+            hash: "da9587ba0b6ea8ef30c5757770facff9",
+          },
+        "17/declaration/body/19/argument/1/1/expression/body/1/argument/1/1": {
+          content: {
+            en: "<element:MoveLeft></element:MoveLeft> Return",
+            pl: "<element:MoveLeft></element:MoveLeft> Powrót",
+          },
+          hash: "1e2ea95a1cc35caf5407cb56609d471b",
+        },
+        "17/declaration/body/19/argument/1/1/expression/body/1/argument/3/3/5/1/1":
+          {
+            content: {
+              en: "Previous step",
+              pl: "Poprzedni krok",
+            },
+            hash: "054a50e59feb6c034f1368261fbfa015",
+          },
+        "17/declaration/body/19/argument/1/1/expression/body/1/argument/3/3/5/1/3/3/expression/right":
           {
             content: {
               en: "Reset",
@@ -2456,6 +2984,121 @@ export default {
             },
             hash: "2c6a8353f778f0984fda6fc2293a60c7",
           },
+        "17/declaration/body/20/argument/1/1/expression/body/1/argument/1/1": {
+          content: {
+            en: "<element:MoveLeft></element:MoveLeft> Return",
+            pl: "<element:MoveLeft></element:MoveLeft> Powrót",
+          },
+          hash: "1e2ea95a1cc35caf5407cb56609d471b",
+        },
+        "17/declaration/body/20/argument/1/1/expression/body/1/argument/3/3/5/1/1":
+          {
+            content: {
+              en: "Previous step",
+              pl: "Poprzedni krok",
+            },
+            hash: "054a50e59feb6c034f1368261fbfa015",
+          },
+        "17/declaration/body/20/argument/1/1/expression/body/1/argument/3/3/5/1/3/3/expression/right":
+          {
+            content: {
+              en: "Reset",
+              pl: "Resetuj",
+            },
+            hash: "da9587ba0b6ea8ef30c5757770facff9",
+          },
+        "17/declaration/body/23/argument/1/1/expression/body/1/argument/1/1": {
+          content: {
+            en: "<element:MoveLeft></element:MoveLeft> Return",
+            pl: "<element:MoveLeft></element:MoveLeft> Powrót",
+          },
+          hash: "1e2ea95a1cc35caf5407cb56609d471b",
+        },
+        "17/declaration/body/23/argument/1/1/expression/body/1/argument/3/3/5/1/1":
+          {
+            content: {
+              en: "Previous step",
+              pl: "Poprzedni krok",
+            },
+            hash: "054a50e59feb6c034f1368261fbfa015",
+          },
+        "17/declaration/body/23/argument/1/1/expression/body/1/argument/3/3/5/1/3/3/expression/right":
+          {
+            content: {
+              en: "Reset",
+              pl: "Resetuj",
+            },
+            hash: "da9587ba0b6ea8ef30c5757770facff9",
+          },
+        "17/declaration/body/24/argument/1/1/expression/body/1/argument/1/1": {
+          content: {
+            en: "<element:MoveLeft></element:MoveLeft> Return",
+            pl: "<element:MoveLeft></element:MoveLeft> Powrót",
+          },
+          hash: "1e2ea95a1cc35caf5407cb56609d471b",
+        },
+        "17/declaration/body/24/argument/1/1/expression/body/1/argument/3/3/5/1/1":
+          {
+            content: {
+              en: "Previous step",
+              pl: "Poprzedni krok",
+            },
+            hash: "054a50e59feb6c034f1368261fbfa015",
+          },
+        "17/declaration/body/24/argument/1/1/expression/body/1/argument/3/3/5/1/3/3/expression/right":
+          {
+            content: {
+              en: "Reset",
+              pl: "Resetuj",
+            },
+            hash: "da9587ba0b6ea8ef30c5757770facff9",
+          },
+        "17/declaration/body/25/argument/1/1/expression/body/1/argument/1/1": {
+          content: {
+            en: "<element:MoveLeft></element:MoveLeft> Return",
+            pl: "<element:MoveLeft></element:MoveLeft> Powrót",
+          },
+          hash: "1e2ea95a1cc35caf5407cb56609d471b",
+        },
+        "17/declaration/body/25/argument/1/1/expression/body/1/argument/3/3/5/1/1":
+          {
+            content: {
+              en: "Previous step",
+              pl: "Poprzedni krok",
+            },
+            hash: "054a50e59feb6c034f1368261fbfa015",
+          },
+        "17/declaration/body/25/argument/1/1/expression/body/1/argument/3/3/5/1/3/3/expression/right":
+          {
+            content: {
+              en: "Reset",
+              pl: "Resetuj",
+            },
+            hash: "da9587ba0b6ea8ef30c5757770facff9",
+          },
+        "17/declaration/body/26/argument/1/1/expression/body/1/argument/1/1": {
+          content: {
+            en: "<element:MoveLeft></element:MoveLeft> Return",
+            pl: "<element:MoveLeft></element:MoveLeft> Powrót",
+          },
+          hash: "1e2ea95a1cc35caf5407cb56609d471b",
+        },
+        "17/declaration/body/26/argument/1/1/expression/body/1/argument/3/3/5/1/1":
+          {
+            content: {
+              en: "Previous step",
+              pl: "Poprzedni krok",
+            },
+            hash: "054a50e59feb6c034f1368261fbfa015",
+          },
+        "17/declaration/body/26/argument/1/1/expression/body/1/argument/3/3/5/1/3/3/expression/right":
+          {
+            content: {
+              en: "Reset",
+              pl: "Resetuj",
+            },
+            hash: "da9587ba0b6ea8ef30c5757770facff9",
+          },
         "17/declaration/body/7/0/init/body/0/0/0/argument": {
           content: {
             en: "Confirm and continue",
@@ -2485,6 +3128,180 @@ export default {
           hash: "0ecb8520d3ff84380f16ac46a864b24a",
         },
         "17/declaration/body/7/0/init/body/0/4/0/argument": {
+          content: {
+            en: "Next step",
+            pl: "Następny krok",
+          },
+          hash: "712c63650b5180cbc14d6246b5d558c2",
+        },
+        "18/declaration/body/10/0/init/body/0/0/0/argument": {
+          content: {
+            en: "Confirm and continue",
+            pl: "Potwierdź i kontynuuj",
+          },
+          hash: "cf9769910b0a62b4a349954de4652cbc",
+        },
+        "18/declaration/body/10/0/init/body/0/1/0/argument": {
+          content: {
+            en: "Save answers and continue",
+            pl: "Zapisz odpowiedzi i kontynuuj",
+          },
+          hash: "88f8c2a27083267af9d5b574332ac836",
+        },
+        "18/declaration/body/10/0/init/body/0/2/0/argument": {
+          content: {
+            en: "Upload documents and continue",
+            pl: "Prześlij dokumenty i kontynuuj",
+          },
+          hash: "db50aad354a83c0dc4788ddc4da3c3a4",
+        },
+        "18/declaration/body/10/0/init/body/0/3/0/argument": {
+          content: {
+            en: "Submit decision",
+            pl: "Zatwierdź decyzję",
+          },
+          hash: "0ecb8520d3ff84380f16ac46a864b24a",
+        },
+        "18/declaration/body/10/0/init/body/0/4/0/argument": {
+          content: {
+            en: "Next step",
+            pl: "Następny krok",
+          },
+          hash: "712c63650b5180cbc14d6246b5d558c2",
+        },
+        "18/declaration/body/11/0/init/body/0/0/0/argument": {
+          content: {
+            en: "Confirm and continue",
+            pl: "Potwierdź i kontynuuj",
+          },
+          hash: "cf9769910b0a62b4a349954de4652cbc",
+        },
+        "18/declaration/body/11/0/init/body/0/1/0/argument": {
+          content: {
+            en: "Save answers and continue",
+            pl: "Zapisz odpowiedzi i kontynuuj",
+          },
+          hash: "88f8c2a27083267af9d5b574332ac836",
+        },
+        "18/declaration/body/11/0/init/body/0/2/0/argument": {
+          content: {
+            en: "Upload documents and continue",
+            pl: "Prześlij dokumenty i kontynuuj",
+          },
+          hash: "db50aad354a83c0dc4788ddc4da3c3a4",
+        },
+        "18/declaration/body/11/0/init/body/0/3/0/argument": {
+          content: {
+            en: "Submit decision",
+            pl: "Zatwierdź decyzję",
+          },
+          hash: "0ecb8520d3ff84380f16ac46a864b24a",
+        },
+        "18/declaration/body/11/0/init/body/0/4/0/argument": {
+          content: {
+            en: "Next step",
+            pl: "Następny krok",
+          },
+          hash: "712c63650b5180cbc14d6246b5d558c2",
+        },
+        "18/declaration/body/14/argument/1/1/expression/body/1/argument/1/1": {
+          content: {
+            en: "<element:MoveLeft></element:MoveLeft> Return",
+            pl: "<element:MoveLeft></element:MoveLeft> Powrót",
+          },
+          hash: "1e2ea95a1cc35caf5407cb56609d471b",
+        },
+        "18/declaration/body/14/argument/1/1/expression/body/1/argument/3/3/5/1/1":
+          {
+            content: {
+              en: "Previous step",
+              pl: "Poprzedni krok",
+            },
+            hash: "054a50e59feb6c034f1368261fbfa015",
+          },
+        "18/declaration/body/14/argument/1/1/expression/body/1/argument/3/3/5/1/3/3/expression/right":
+          {
+            content: {
+              en: "Reset",
+              pl: "Resetuj",
+            },
+            hash: "da9587ba0b6ea8ef30c5757770facff9",
+          },
+        "18/declaration/body/17/argument/1/1/expression/body/1/argument/1/1": {
+          content: {
+            en: "<element:MoveLeft></element:MoveLeft> Return",
+            pl: "<element:MoveLeft></element:MoveLeft> Powrót",
+          },
+          hash: "1e2ea95a1cc35caf5407cb56609d471b",
+        },
+        "18/declaration/body/17/argument/1/1/expression/body/1/argument/3/3/5/1/1":
+          {
+            content: {
+              en: "Previous step",
+              pl: "Poprzedni krok",
+            },
+            hash: "054a50e59feb6c034f1368261fbfa015",
+          },
+        "18/declaration/body/17/argument/1/1/expression/body/1/argument/3/3/5/1/3/3/expression/right":
+          {
+            content: {
+              en: "Reset",
+              pl: "Resetuj",
+            },
+            hash: "da9587ba0b6ea8ef30c5757770facff9",
+          },
+        "18/declaration/body/18/argument/1/1/expression/body/1/argument/1/1": {
+          content: {
+            en: "<element:MoveLeft></element:MoveLeft> Return",
+            pl: "<element:MoveLeft></element:MoveLeft> Powrót",
+          },
+          hash: "1e2ea95a1cc35caf5407cb56609d471b",
+        },
+        "18/declaration/body/18/argument/1/1/expression/body/1/argument/3/3/5/1/1":
+          {
+            content: {
+              en: "Previous step",
+              pl: "Poprzedni krok",
+            },
+            hash: "054a50e59feb6c034f1368261fbfa015",
+          },
+        "18/declaration/body/18/argument/1/1/expression/body/1/argument/3/3/5/1/3/3/expression/right":
+          {
+            content: {
+              en: "Reset",
+              pl: "Resetuj",
+            },
+            hash: "da9587ba0b6ea8ef30c5757770facff9",
+          },
+        "18/declaration/body/7/0/init/body/0/0/0/argument": {
+          content: {
+            en: "Confirm and continue",
+            pl: "Potwierdź i kontynuuj",
+          },
+          hash: "cf9769910b0a62b4a349954de4652cbc",
+        },
+        "18/declaration/body/7/0/init/body/0/1/0/argument": {
+          content: {
+            en: "Save answers and continue",
+            pl: "Zapisz odpowiedzi i kontynuuj",
+          },
+          hash: "88f8c2a27083267af9d5b574332ac836",
+        },
+        "18/declaration/body/7/0/init/body/0/2/0/argument": {
+          content: {
+            en: "Upload documents and continue",
+            pl: "Prześlij dokumenty i kontynuuj",
+          },
+          hash: "db50aad354a83c0dc4788ddc4da3c3a4",
+        },
+        "18/declaration/body/7/0/init/body/0/3/0/argument": {
+          content: {
+            en: "Submit decision",
+            pl: "Zatwierdź decyzję",
+          },
+          hash: "0ecb8520d3ff84380f16ac46a864b24a",
+        },
+        "18/declaration/body/7/0/init/body/0/4/0/argument": {
           content: {
             en: "Next step",
             pl: "Następny krok",
@@ -7399,6 +8216,14 @@ export default {
           },
           hash: "5fde4eb14b844f2809fded6c09afef52",
         },
+        "11/declaration/body/12/argument/5/1/1/1/expression/0/body/1/3/1/3/expression/right/1":
+          {
+            content: {
+              en: "Products:",
+              pl: "Produkty:",
+            },
+            hash: "5fde4eb14b844f2809fded6c09afef52",
+          },
         "11/declaration/body/13/argument/1/expression/right/1/1/expression/alternate":
           {
             content: {
@@ -7496,6 +8321,35 @@ export default {
             },
             hash: "5fde4eb14b844f2809fded6c09afef52",
           },
+        "12/declaration/body/12/argument/1/expression/right/1/1/expression/alternate":
+          {
+            content: {
+              en: "Tender Parts ({tenderParts.length})",
+              pl: "Części przetargu ({tenderParts.length})",
+            },
+            hash: "9661e246a3d3ede3d0144c0b178cd7c3",
+          },
+        "12/declaration/body/12/argument/5/1/1/1/expression/0/body/1/1/1/3": {
+          content: {
+            en: "#<expression/>",
+            pl: "#<expression/>",
+          },
+          hash: "806722202f676d2de3d4f40e1c491ccb",
+        },
+        "12/declaration/body/12/argument/5/1/1/1/expression/0/body/1/3/1/1/1": {
+          content: {
+            en: "Requirements:",
+            pl: "Wymagania:",
+          },
+          hash: "f27235edc5c81fa9d3422b1bb9bf98c0",
+        },
+        "12/declaration/body/12/argument/5/1/1/1/expression/0/body/1/3/1/3/1": {
+          content: {
+            en: "Products:",
+            pl: "Produkty:",
+          },
+          hash: "5fde4eb14b844f2809fded6c09afef52",
+        },
         "12/declaration/body/13/argument/1/expression/right/1/1/expression/alternate":
           {
             content: {
@@ -11787,6 +12641,148 @@ export default {
           },
           hash: "f514c1cf3b3e15b207a1608eb408dbc2",
         },
+        "6/declaration/body/5/consequent/0/argument/1": {
+          content: {
+            en: "No requirements need confirmation",
+            pl: "Nie ma wymagań do potwierdzenia",
+          },
+          hash: "61596fc5d5fdfbec41a997df52641f63",
+        },
+        "6/declaration/body/6/argument/1/1": {
+          content: {
+            en: "Requirements to Confirm ({defaultRequirements.length})",
+            pl: "Wymagania do potwierdzenia ({defaultRequirements.length})",
+          },
+          hash: "8a91c78510031abf37ed561d08ee67ad",
+        },
+        "6/declaration/body/6/argument/1/3": {
+          content: {
+            en: "{confirmedRequirements.size} of {defaultRequirements.length} confirmed",
+            pl: "{confirmedRequirements.size} z {defaultRequirements.length} potwierdzonych",
+          },
+          hash: "bf6f01287562ed4c63cf77f13f8dbe85",
+        },
+        "6/declaration/body/6/argument/3/1/expression/0/body/3/1": {
+          content: {
+            en: "Requirement",
+            pl: "Wymaganie",
+          },
+          hash: "1b100476fadaaf654b6bc37090de8ee3",
+        },
+        "6/declaration/body/6/argument/3/1/expression/0/body/3/5/expression/right/1":
+          {
+            content: {
+              en: "Reason:",
+              pl: "Powód:",
+            },
+            hash: "ee08112aed59c39038fe78db79db6e82",
+          },
+        "6/declaration/body/6/argument/3/expression/right/1": {
+          content: {
+            en: "No products found for this part",
+            pl: "Nie znaleziono produktów dla tej części",
+          },
+          hash: "44d6eb70807cc2e4f75927595c637aec",
+        },
+        "6/declaration/body/6/argument/5/expression/right/1/3": {
+          content: {
+            en: "All requirements confirmed",
+            pl: "Wszystkie wymagania potwierdzone",
+          },
+          hash: "2fb883f0fc542bd3582266c3aade7fd4",
+        },
+        "6/declaration/body/7/argument/1/1": {
+          content: {
+            en: "Confirm Tender Requirements",
+            pl: "Potwierdź wymagania przetargowe",
+          },
+          hash: "84cfd4121dee0ab16acb021a89b6d010",
+        },
+        "6/declaration/body/7/argument/1/1/1/1/1": {
+          content: {
+            en: "Confirm Tender Requirements",
+            pl: "Potwierdź wymagania przetargowe",
+          },
+          hash: "4ab89ff7fff24be5b3a00d088a25355e",
+        },
+        "6/declaration/body/7/consequent/0/argument/1": {
+          content: {
+            en: "No requirements need confirmation",
+            pl: "Nie ma wymagań do potwierdzenia",
+          },
+          hash: "61596fc5d5fdfbec41a997df52641f63",
+        },
+        "6/declaration/body/8/argument/1/1": {
+          content: {
+            en: "Confirm Tender Requirements",
+            pl: "Potwierdź wymagania przetargowe",
+          },
+          hash: "84cfd4121dee0ab16acb021a89b6d010",
+        },
+        "7/declaration/body/5/consequent/0/argument/1": {
+          content: {
+            en: "No requirements need confirmation",
+            pl: "Nie ma wymagań do potwierdzenia",
+          },
+          hash: "61596fc5d5fdfbec41a997df52641f63",
+        },
+        "7/declaration/body/6/argument/1/1": {
+          content: {
+            en: "Requirements to Confirm ({defaultRequirements.length})",
+            pl: "Wymagania do potwierdzenia ({defaultRequirements.length})",
+          },
+          hash: "8a91c78510031abf37ed561d08ee67ad",
+        },
+        "7/declaration/body/6/argument/1/3": {
+          content: {
+            en: "{confirmedRequirements.size} of {defaultRequirements.length} confirmed",
+            pl: "{confirmedRequirements.size} z {defaultRequirements.length} potwierdzonych",
+          },
+          hash: "bf6f01287562ed4c63cf77f13f8dbe85",
+        },
+        "7/declaration/body/6/argument/3/1/expression/0/body/3/1": {
+          content: {
+            en: "Requirement",
+            pl: "Wymaganie",
+          },
+          hash: "1b100476fadaaf654b6bc37090de8ee3",
+        },
+        "7/declaration/body/6/argument/3/1/expression/0/body/3/5/expression/right/1":
+          {
+            content: {
+              en: "Reason:",
+              pl: "Powód:",
+            },
+            hash: "ee08112aed59c39038fe78db79db6e82",
+          },
+        "7/declaration/body/6/argument/3/expression/right/1": {
+          content: {
+            en: "No products found for this part",
+            pl: "Nie znaleziono produktów dla tej części",
+          },
+          hash: "44d6eb70807cc2e4f75927595c637aec",
+        },
+        "7/declaration/body/6/argument/5/expression/right/1/3": {
+          content: {
+            en: "All requirements confirmed",
+            pl: "Wszystkie wymagania potwierdzone",
+          },
+          hash: "be2ff9e2a6558e49845cef458be96107",
+        },
+        "8/declaration/body/10/argument/1/1": {
+          content: {
+            en: "Confirm Tender Requirements",
+            pl: "Potwierdź wymagania przetargowe",
+          },
+          hash: "84cfd4121dee0ab16acb021a89b6d010",
+        },
+        "8/declaration/body/11/argument/1/1": {
+          content: {
+            en: "Confirm Tender Requirements",
+            pl: "Potwierdź wymagania przetargowe",
+          },
+          hash: "84cfd4121dee0ab16acb021a89b6d010",
+        },
         "8/declaration/body/3/consequent/0/argument/1/1": {
           content: {
             en: "Confirm Part Requirements",
@@ -11864,6 +12860,13 @@ export default {
             pl: "Części przetargu",
           },
           hash: "f514c1cf3b3e15b207a1608eb408dbc2",
+        },
+        "8/declaration/body/7/argument/1/1": {
+          content: {
+            en: "Confirm Tender Requirements",
+            pl: "Potwierdź wymagania przetargowe",
+          },
+          hash: "84cfd4121dee0ab16acb021a89b6d010",
         },
         "9/declaration/body/3/consequent/0/argument/1/1": {
           content: {
@@ -12647,6 +13650,168 @@ export default {
     },
     "features/tender-form/components/overview-step.tsx": {
       entries: {
+        "11/declaration/body/1/consequent/0/argument/1": {
+          content: {
+            en: "No tender data available",
+            pl: "Brak dostępnych danych przetargowych",
+          },
+          hash: "62311abe07a2ea32b3058e97a4c55a9c",
+        },
+        "11/declaration/body/2/consequent/0/argument/1": {
+          content: {
+            en: "No parts available for overview",
+            pl: "Brak dostępnych części do przeglądu",
+          },
+          hash: "c79ad61b147ecd3c2950ae872e53579e",
+        },
+        "14/declaration/body/6/0/init/0/body/1/0/init/0/1/value": {
+          content: {
+            en: "Products",
+            pl: "Produkty",
+          },
+          hash: "a003449ecbde6b7a73044f46ea6bbe75",
+        },
+        "14/declaration/body/6/0/init/0/body/1/0/init/1/1/value": {
+          content: {
+            en: "Requirements",
+            pl: "Wymagania",
+          },
+          hash: "e108e149e0fd5b65f5850b6f032ccabe",
+        },
+        "14/declaration/body/6/0/init/0/body/1/0/init/2/1/value": {
+          content: {
+            en: "Description",
+            pl: "Opis",
+          },
+          hash: "e17686a22ffad04cc7bb70524ed4478b",
+        },
+        "14/declaration/body/6/0/init/0/body/1/0/init/3/1/value": {
+          content: {
+            en: "Additional Info",
+            pl: "Dodatkowe informacje",
+          },
+          hash: "d5bf1e70991802fd4a801f3a79cf9e5d",
+        },
+        "14/declaration/body/6/0/init/0/body/2/consequent/0/expression/2/1/value":
+          {
+            content: {
+              en: "Review Criteria",
+              pl: "Kryteria oceny",
+            },
+            hash: "d524df30da3658fdbc1794408fcfdab4",
+          },
+        "14/declaration/body/7/0/init/0/body/1/0/init/0/1/value": {
+          content: {
+            en: "Products",
+            pl: "Produkty",
+          },
+          hash: "a003449ecbde6b7a73044f46ea6bbe75",
+        },
+        "14/declaration/body/7/0/init/0/body/1/0/init/1/1/value": {
+          content: {
+            en: "Requirements",
+            pl: "Wymagania",
+          },
+          hash: "e108e149e0fd5b65f5850b6f032ccabe",
+        },
+        "14/declaration/body/7/0/init/0/body/1/0/init/2/1/value": {
+          content: {
+            en: "Description",
+            pl: "Opis",
+          },
+          hash: "e17686a22ffad04cc7bb70524ed4478b",
+        },
+        "14/declaration/body/7/0/init/0/body/1/0/init/3/1/value": {
+          content: {
+            en: "Additional Info",
+            pl: "Dodatkowe informacje",
+          },
+          hash: "d5bf1e70991802fd4a801f3a79cf9e5d",
+        },
+        "14/declaration/body/7/0/init/0/body/2/consequent/0/expression/2/1/value":
+          {
+            content: {
+              en: "Review Criteria",
+              pl: "Kryteria oceny",
+            },
+            hash: "d524df30da3658fdbc1794408fcfdab4",
+          },
+        "15/declaration/body/7/0/init/0/body/1/0/init/0/1/value": {
+          content: {
+            en: "Products",
+            pl: "Produkty",
+          },
+          hash: "a003449ecbde6b7a73044f46ea6bbe75",
+        },
+        "15/declaration/body/7/0/init/0/body/1/0/init/1/1/value": {
+          content: {
+            en: "Requirements",
+            pl: "Wymagania",
+          },
+          hash: "e108e149e0fd5b65f5850b6f032ccabe",
+        },
+        "15/declaration/body/7/0/init/0/body/1/0/init/2/1/value": {
+          content: {
+            en: "Description",
+            pl: "Opis",
+          },
+          hash: "e17686a22ffad04cc7bb70524ed4478b",
+        },
+        "15/declaration/body/7/0/init/0/body/1/0/init/3/1/value": {
+          content: {
+            en: "Additional Info",
+            pl: "Dodatkowe informacje",
+          },
+          hash: "d5bf1e70991802fd4a801f3a79cf9e5d",
+        },
+        "15/declaration/body/7/0/init/0/body/1/argument/expression/callee/object/0/1/value":
+          {
+            content: {
+              en: "Products",
+              pl: "Produkty",
+            },
+            hash: "a003449ecbde6b7a73044f46ea6bbe75",
+          },
+        "15/declaration/body/7/0/init/0/body/1/argument/expression/callee/object/1/1/value":
+          {
+            content: {
+              en: "Requirements",
+              pl: "Wymagania",
+            },
+            hash: "e108e149e0fd5b65f5850b6f032ccabe",
+          },
+        "15/declaration/body/7/0/init/0/body/1/argument/expression/callee/object/2/consequent/1/value":
+          {
+            content: {
+              en: "Review Criteria",
+              pl: "Kryteria oceny",
+            },
+            hash: "d524df30da3658fdbc1794408fcfdab4",
+          },
+        "15/declaration/body/7/0/init/0/body/1/argument/expression/callee/object/3/1/value":
+          {
+            content: {
+              en: "Description",
+              pl: "Opis",
+            },
+            hash: "e17686a22ffad04cc7bb70524ed4478b",
+          },
+        "15/declaration/body/7/0/init/0/body/1/argument/expression/callee/object/4/1/value":
+          {
+            content: {
+              en: "Additional Info",
+              pl: "Dodatkowe informacje",
+            },
+            hash: "d5bf1e70991802fd4a801f3a79cf9e5d",
+          },
+        "15/declaration/body/7/0/init/0/body/2/consequent/0/expression/2/1/value":
+          {
+            content: {
+              en: "Review Criteria",
+              pl: "Kryteria oceny",
+            },
+            hash: "d524df30da3658fdbc1794408fcfdab4",
+          },
         "3/declaration/body/0/argument/1/1": {
           content: {
             en: "Tender Overview",
@@ -12898,7 +14063,7 @@ export default {
         },
         "6/declaration/body/0/argument/1/3": {
           content: {
-            en: "{parts.length} pending parts",
+            en: "{parts.length} parts in analysis",
             pl: "{parts.length} oczekujące części",
           },
           hash: "e2d205460739619e4c27dcaf290b6e2e",
@@ -12919,10 +14084,52 @@ export default {
         },
         "7/declaration/body/0/argument/1/3": {
           content: {
-            en: "{parts.length} pending parts",
-            pl: "{parts.length} oczekujące części",
+            en: "{parts.length} parts in analysis",
+            pl: "{parts.length} części w analizie",
           },
-          hash: "e2d205460739619e4c27dcaf290b6e2e",
+          hash: "5e1854030211725a73125fba09d80f68",
+        },
+        "7/declaration/body/0/argument/3/1/1": {
+          content: {
+            en: "This step regards full tender",
+            pl: "Ten krok dotyczy pełnego przetargu",
+          },
+          hash: "e1a735337e679a3c7b9c9b65f2b41641",
+        },
+        "7/declaration/body/0/argument/3/1/1/1": {
+          content: {
+            en: "This step regards full tender",
+            pl: "Ten krok dotyczy pełnego przetargu",
+          },
+          hash: "e1a735337e679a3c7b9c9b65f2b41641",
+        },
+        "7/declaration/body/0/argument/3/1/expression/right/1": {
+          content: {
+            en: "This tender has only one part",
+            pl: "Ten przetarg ma tylko jedną część",
+          },
+          hash: "e1afda2e49c9a6e810e6225ee7e69c2f",
+        },
+        "7/declaration/body/0/argument/3/3/expression/right/1": {
+          content: {
+            en: "This step regards full tender",
+            pl: "Ten krok dotyczy pełnego przetargu",
+          },
+          hash: "ccfbc9b0f487fe3e6d1145354eeff0ee",
+        },
+        "7/declaration/body/0/argument/3/expression/right/1": {
+          content: {
+            en: "This tender has only one part",
+            pl: "Ten przetarg ma tylko jedną część",
+          },
+          hash: "61507435a025a4fd05f809ac2aea695d",
+        },
+        "7/declaration/body/0/argument/5/1/expression/right/1": {
+          content: {
+            en: "This step regards full tender",
+            pl: "Ten krok dotyczy pełnego przetargu",
+          },
+          hash: "ccfbc9b0f487fe3e6d1145354eeff0ee",
         },
         "7/declaration/body/1/argument/1/1": {
           content: {
@@ -12933,10 +14140,24 @@ export default {
         },
         "7/declaration/body/1/argument/1/3": {
           content: {
-            en: "{parts.length} pending parts",
-            pl: "{parts.length} oczekujące części",
+            en: "{parts.length} parts in analysis",
+            pl: "{parts.length} części w analizie",
           },
-          hash: "e2d205460739619e4c27dcaf290b6e2e",
+          hash: "5e1854030211725a73125fba09d80f68",
+        },
+        "7/declaration/body/1/argument/3/1/expression/right/1": {
+          content: {
+            en: "This tender has only one part",
+            pl: "Ten przetarg ma tylko jedną część",
+          },
+          hash: "e1afda2e49c9a6e810e6225ee7e69c2f",
+        },
+        "7/declaration/body/1/argument/3/3/expression/right/1": {
+          content: {
+            en: "This step regards full tender",
+            pl: "Ten krok dotyczy pełnego przetargu",
+          },
+          hash: "ccfbc9b0f487fe3e6d1145354eeff0ee",
         },
       },
     },
@@ -12978,6 +14199,48 @@ export default {
           hash: "ede47ca8072d934ed259ef21c865344a",
         },
         "10/declaration/body/12/argument/1/3/3/1": {
+          content: {
+            en: "{progressPercentage}% Complete",
+            pl: "{progressPercentage}% ukończono",
+          },
+          hash: "a9f9fe6ed1c90371c0be6362d87e1fcf",
+        },
+        "10/declaration/body/13/consequent/0/argument/3": {
+          content: {
+            en: "No products found for this part",
+            pl: "Nie znaleziono produktów dla tej części",
+          },
+          hash: "44d6eb70807cc2e4f75927595c637aec",
+        },
+        "10/declaration/body/14/argument/1/1/1/1": {
+          content: {
+            en: "Products ({totalCount})",
+            pl: "Produkty ({totalCount})",
+          },
+          hash: "2aaf80f3e8e340ed6ca1398ad190e490",
+        },
+        "10/declaration/body/14/argument/1/1/1/3": {
+          content: {
+            en: "{confirmedCount} of {totalCount} confirmed",
+            pl: "{confirmedCount} z {totalCount} potwierdzonych",
+          },
+          hash: "a0c1c67f6cf96e7c91f188b24b5587d4",
+        },
+        "10/declaration/body/14/argument/1/1/3/1": {
+          content: {
+            en: "Clear All",
+            pl: "Wyczyść wszystko",
+          },
+          hash: "0c2f925ed6fb403c5fe28ba4fdd109cd",
+        },
+        "10/declaration/body/14/argument/1/1/3/3": {
+          content: {
+            en: "Confirm All",
+            pl: "Potwierdź wszystko",
+          },
+          hash: "ede47ca8072d934ed259ef21c865344a",
+        },
+        "10/declaration/body/14/argument/1/3/3/1": {
           content: {
             en: "{progressPercentage}% Complete",
             pl: "{progressPercentage}% ukończono",
@@ -13605,6 +14868,69 @@ export default {
           },
           hash: "246043766f42ef27e41f3421ef74fc5c",
         },
+        "9/body/3/argument/1/1/1/5/1/3/expression/alternate": {
+          content: {
+            en: "Pending",
+            pl: "Oczekujące",
+          },
+          hash: "103ba0aa7490c53ecda36903debb5b2d",
+        },
+        "9/body/3/argument/1/1/1/5/1/3/expression/consequent": {
+          content: {
+            en: "✓ Confirmed",
+            pl: "✓ Potwierdzone",
+          },
+          hash: "41424aa118029ec6138c8075c9eb71d1",
+        },
+        "9/body/3/argument/1/1/1/5/3/expression/right": {
+          content: {
+            en: "Quantity: {product.product_req_quantity}",
+            pl: "Ilość: {product.product_req_quantity}",
+          },
+          hash: "31a525a4b4d911d182aaa7032eaed55c",
+        },
+        "9/body/3/argument/1/1/3/1": {
+          content: {
+            en: "Catalogue",
+            pl: "Katalog",
+          },
+          hash: "beed60c5684a26ca19a7819cdd874e5e",
+        },
+        "9/body/3/argument/1/1/3/3": {
+          content: {
+            en: "Add Manually",
+            pl: "Dodaj ręcznie",
+          },
+          hash: "f9d50eec30e73fd076d8f1eeef2c565b",
+        },
+        "9/body/3/argument/5/expression/right/3/expression/right/1": {
+          content: {
+            en: "Requirements for Confirmation",
+            pl: "Wymagania dotyczące potwierdzenia",
+          },
+          hash: "c5a3bdb7325dab8d3d92a9634db65949",
+        },
+        "9/body/3/argument/5/expression/right/7/expression/right/1/1/1/3": {
+          content: {
+            en: "Technical Specifications",
+            pl: "Specyfikacja techniczna",
+          },
+          hash: "edeccae2077d0b5c1bb725cdbbe6afb2",
+        },
+        "9/body/3/argument/9/expression/right/1/1/1/3": {
+          content: {
+            en: "Selected Product",
+            pl: "Wybrany produkt",
+          },
+          hash: "84a81f9e3c41d52d03b88f46bd9235cf",
+        },
+        "9/body/3/argument/9/expression/right/1/1/3": {
+          content: {
+            en: "Remove",
+            pl: "Usuń",
+          },
+          hash: "173cb2e7e032c809529b871b065f46d5",
+        },
         "9/body/4/argument/1/1/1/5/1/3/expression/alternate": {
           content: {
             en: "Pending",
@@ -13900,6 +15226,374 @@ export default {
             pl: "{progressPercentage}% ukończono",
           },
           hash: "a9f9fe6ed1c90371c0be6362d87e1fcf",
+        },
+      },
+    },
+    "features/tender-form/components/requirement-confirmation.tsx": {
+      entries: {
+        "11/body/3/argument/1/1/1/5/1/3/expression/alternate": {
+          content: {
+            en: "Pending",
+            pl: "Oczekujące",
+          },
+          hash: "103ba0aa7490c53ecda36903debb5b2d",
+        },
+        "11/body/3/argument/1/1/1/5/1/3/expression/consequent": {
+          content: {
+            en: "✓ Confirmed",
+            pl: "✓ Potwierdzone",
+          },
+          hash: "41424aa118029ec6138c8075c9eb71d1",
+        },
+        "11/body/3/argument/1/1/1/5/3/expression/right": {
+          content: {
+            en: "Quantity: {product.product_req_quantity}",
+            pl: "Ilość: {product.product_req_quantity}",
+          },
+          hash: "31a525a4b4d911d182aaa7032eaed55c",
+        },
+        "11/body/3/argument/1/1/3/1": {
+          content: {
+            en: "Catalogue",
+            pl: "Katalog",
+          },
+          hash: "beed60c5684a26ca19a7819cdd874e5e",
+        },
+        "11/body/3/argument/1/1/3/3": {
+          content: {
+            en: "Add Manually",
+            pl: "Dodaj ręcznie",
+          },
+          hash: "f9d50eec30e73fd076d8f1eeef2c565b",
+        },
+        "11/body/3/argument/3/expression/right/1/expression/right/1": {
+          content: {
+            en: "Requirements for Confirmation",
+            pl: "Wymagania dotyczące potwierdzenia",
+          },
+          hash: "c5a3bdb7325dab8d3d92a9634db65949",
+        },
+        "11/body/3/argument/3/expression/right/3/expression/right/1/1/1/3": {
+          content: {
+            en: "Technical Specifications",
+            pl: "Specyfikacja techniczna",
+          },
+          hash: "edeccae2077d0b5c1bb725cdbbe6afb2",
+        },
+        "11/body/3/argument/3/expression/right/5/expression/right/1/1/1/3": {
+          content: {
+            en: "Technical Specifications",
+            pl: "Specyfikacja techniczna",
+          },
+          hash: "edeccae2077d0b5c1bb725cdbbe6afb2",
+        },
+        "11/body/3/argument/5/expression/right/1/1/1/3": {
+          content: {
+            en: "Selected Product",
+            pl: "Wybrany produkt",
+          },
+          hash: "84a81f9e3c41d52d03b88f46bd9235cf",
+        },
+        "11/body/3/argument/5/expression/right/1/1/3": {
+          content: {
+            en: "Remove",
+            pl: "Usuń",
+          },
+          hash: "173cb2e7e032c809529b871b065f46d5",
+        },
+        "11/body/3/argument/5/expression/right/3/expression/right/1": {
+          content: {
+            en: "Requirements for Confirmation",
+            pl: "Wymagania dotyczące potwierdzenia",
+          },
+          hash: "c5a3bdb7325dab8d3d92a9634db65949",
+        },
+        "11/body/3/argument/5/expression/right/7/expression/right/1/1/1/3": {
+          content: {
+            en: "Technical Specifications",
+            pl: "Specyfikacja techniczna",
+          },
+          hash: "edeccae2077d0b5c1bb725cdbbe6afb2",
+        },
+        "11/body/3/argument/7/expression/right/1/1/1/3": {
+          content: {
+            en: "Selected Product",
+            pl: "Wybrany produkt",
+          },
+          hash: "84a81f9e3c41d52d03b88f46bd9235cf",
+        },
+        "11/body/3/argument/7/expression/right/1/1/3": {
+          content: {
+            en: "Remove",
+            pl: "Usuń",
+          },
+          hash: "173cb2e7e032c809529b871b065f46d5",
+        },
+        "11/body/3/argument/9/expression/right/1/1/1/3": {
+          content: {
+            en: "Selected Product",
+            pl: "Wybrany produkt",
+          },
+          hash: "84a81f9e3c41d52d03b88f46bd9235cf",
+        },
+        "11/body/3/argument/9/expression/right/1/1/3": {
+          content: {
+            en: "Remove",
+            pl: "Usuń",
+          },
+          hash: "173cb2e7e032c809529b871b065f46d5",
+        },
+        "12/declaration/body/13/consequent/0/argument/3": {
+          content: {
+            en: "No requirements found",
+            pl: "Nie znaleziono wymagań",
+          },
+          hash: "9ea481e9671284cf563f7dfa7d516052",
+        },
+        "12/declaration/body/14/argument/1/1/1": {
+          content: {
+            en: "Requirements to Confirm",
+            pl: "Wymagania do potwierdzenia",
+          },
+          hash: "73e9ad48918c1ed1b958fdb4d17ab500",
+        },
+        "12/declaration/body/14/argument/1/1/3": {
+          content: {
+            en: "{confirmedCount} of {totalCount} confirmed",
+            pl: "{confirmedCount} z {totalCount} potwierdzonych",
+          },
+          hash: "b428553edc4bc871b131f92969409c27",
+        },
+        "12/declaration/body/14/argument/1/3/1": {
+          content: {
+            en: "Clear All",
+            pl: "Wyczyść wszystko",
+          },
+          hash: "906315f9d7868f2d3eaab9364bf661c5",
+        },
+        "12/declaration/body/14/argument/1/3/3": {
+          content: {
+            en: "Confirm All",
+            pl: "Potwierdź wszystko",
+          },
+          hash: "bd5a93e4d0455862385c9e6c714d0b32",
+        },
+        "12/declaration/body/14/argument/11/expression/right/1": {
+          content: {
+            en: "Service Requirements ({serviceRequirements.length})",
+            pl: "Wymagania dotyczące usługi ({serviceRequirements.length})",
+          },
+          hash: "8ae98328c0c0a76bd07975ef1c9968f0",
+        },
+        "12/declaration/body/14/argument/13/expression/right/1": {
+          content: {
+            en: "Service Requirements ({serviceRequirements.length})",
+            pl: "Wymagania dotyczące usługi ({serviceRequirements.length})",
+          },
+          hash: "8ae98328c0c0a76bd07975ef1c9968f0",
+        },
+        "12/declaration/body/14/argument/13/expression/right/1/3": {
+          content: {
+            en: "All requirements confirmed",
+            pl: "Wszystkie wymagania potwierdzone",
+          },
+          hash: "2fb883f0fc542bd3582266c3aade7fd4",
+        },
+        "12/declaration/body/14/argument/15/expression/right/1": {
+          content: {
+            en: "Service Requirements ({serviceRequirements.length})",
+            pl: "Wymagania dotyczące usługi ({serviceRequirements.length})",
+          },
+          hash: "8ae98328c0c0a76bd07975ef1c9968f0",
+        },
+        "12/declaration/body/14/argument/15/expression/right/1/3": {
+          content: {
+            en: "All requirements confirmed",
+            pl: "Wszystkie wymagania potwierdzone",
+          },
+          hash: "2fb883f0fc542bd3582266c3aade7fd4",
+        },
+        "12/declaration/body/14/argument/17/expression/right/1/3": {
+          content: {
+            en: "All requirements confirmed",
+            pl: "Wszystkie wymagania potwierdzone",
+          },
+          hash: "2fb883f0fc542bd3582266c3aade7fd4",
+        },
+        "12/declaration/body/14/argument/19/expression/right/1/3": {
+          content: {
+            en: "All requirements confirmed",
+            pl: "Wszystkie wymagania potwierdzone",
+          },
+          hash: "2fb883f0fc542bd3582266c3aade7fd4",
+        },
+        "12/declaration/body/14/argument/3/1/1": {
+          content: {
+            en: "Requirements to Confirm",
+            pl: "Wymagania do potwierdzenia",
+          },
+          hash: "73e9ad48918c1ed1b958fdb4d17ab500",
+        },
+        "12/declaration/body/14/argument/3/1/3": {
+          content: {
+            en: "{confirmedCount} of {totalCount} confirmed",
+            pl: "{confirmedCount} z {totalCount} potwierdzonych",
+          },
+          hash: "b428553edc4bc871b131f92969409c27",
+        },
+        "12/declaration/body/14/argument/3/3/1": {
+          content: {
+            en: "{progressPercentage}% Complete",
+            pl: "{progressPercentage}% ukończono",
+          },
+          hash: "08ea4ddb6da2a0ec308cefba149ac7b6",
+        },
+        "12/declaration/body/14/argument/3/3/3": {
+          content: {
+            en: "Confirm All",
+            pl: "Potwierdź wszystko",
+          },
+          hash: "bd5a93e4d0455862385c9e6c714d0b32",
+        },
+        "12/declaration/body/14/argument/5/3/1": {
+          content: {
+            en: "{progressPercentage}% Complete",
+            pl: "{progressPercentage}% ukończono",
+          },
+          hash: "08ea4ddb6da2a0ec308cefba149ac7b6",
+        },
+        "12/declaration/body/14/argument/7/3/1": {
+          content: {
+            en: "{progressPercentage}% Complete",
+            pl: "{progressPercentage}% ukończono",
+          },
+          hash: "08ea4ddb6da2a0ec308cefba149ac7b6",
+        },
+        "12/declaration/body/14/argument/7/expression/right/1": {
+          content: {
+            en: "Product Requirements ({products.length})",
+            pl: "Wymagania dotyczące produktu ({products.length})",
+          },
+          hash: "47bba8de401c5e8c3155a8828895f12e",
+        },
+        "12/declaration/body/14/argument/9/expression/right/1": {
+          content: {
+            en: "Product Requirements ({products.length})",
+            pl: "Wymagania dotyczące produktu ({products.length})",
+          },
+          hash: "47bba8de401c5e8c3155a8828895f12e",
+        },
+        "12/declaration/body/14/consequent/0/argument/3": {
+          content: {
+            en: "All requirements were confirmed, go to the next step!",
+            pl: "Wszystkie wymagania zostały potwierdzone, przejdź do następnego kroku!",
+          },
+          hash: "1e8bba060b349e8a000cda194252d06c",
+        },
+        "12/declaration/body/15/argument/1/1/1": {
+          content: {
+            en: "Requirements to Confirm",
+            pl: "Wymagania do potwierdzenia",
+          },
+          hash: "73e9ad48918c1ed1b958fdb4d17ab500",
+        },
+        "12/declaration/body/15/argument/1/1/3": {
+          content: {
+            en: "{confirmedCount} of {totalCount} confirmed",
+            pl: "{confirmedCount} z {totalCount} potwierdzonych",
+          },
+          hash: "b428553edc4bc871b131f92969409c27",
+        },
+        "12/declaration/body/15/argument/1/3/1": {
+          content: {
+            en: "Clear All",
+            pl: "Wyczyść wszystko",
+          },
+          hash: "906315f9d7868f2d3eaab9364bf661c5",
+        },
+        "12/declaration/body/15/argument/1/3/3": {
+          content: {
+            en: "Confirm All",
+            pl: "Potwierdź wszystko",
+          },
+          hash: "bd5a93e4d0455862385c9e6c714d0b32",
+        },
+        "12/declaration/body/15/argument/11/expression/right/1": {
+          content: {
+            en: "Service Requirements ({serviceRequirements.length})",
+            pl: "Wymagania dotyczące usługi ({serviceRequirements.length})",
+          },
+          hash: "8ae98328c0c0a76bd07975ef1c9968f0",
+        },
+        "12/declaration/body/15/argument/13/expression/right/1/3": {
+          content: {
+            en: "All requirements confirmed",
+            pl: "Wszystkie wymagania potwierdzone",
+          },
+          hash: "2fb883f0fc542bd3582266c3aade7fd4",
+        },
+        "12/declaration/body/15/argument/3/3/1": {
+          content: {
+            en: "{progressPercentage}% Complete",
+            pl: "{progressPercentage}% ukończono",
+          },
+          hash: "08ea4ddb6da2a0ec308cefba149ac7b6",
+        },
+        "12/declaration/body/15/argument/7/expression/right/1": {
+          content: {
+            en: "Product Requirements ({products.length})",
+            pl: "Wymagania dotyczące produktu ({products.length})",
+          },
+          hash: "47bba8de401c5e8c3155a8828895f12e",
+        },
+        "9/body/0/argument/1/1/5/1/1": {
+          content: {
+            en: "Service Requirement",
+            pl: "Wymaganie dotyczące usługi",
+          },
+          hash: "8aa2accd046e275ca33bbfbddcecdacd",
+        },
+        "9/body/0/argument/1/1/5/1/1/expression/alternate": {
+          content: {
+            en: "Pending",
+            pl: "Oczekujące",
+          },
+          hash: "79d1d0e7e781e305aa4b30a0b6fc6f9d",
+        },
+        "9/body/0/argument/1/1/5/1/1/expression/consequent": {
+          content: {
+            en: "✓ Confirmed",
+            pl: "✓ Potwierdzone",
+          },
+          hash: "50be425fa98ecc175102d12a49835888",
+        },
+        "9/body/0/argument/1/1/5/1/3/expression/alternate": {
+          content: {
+            en: "Pending",
+            pl: "Oczekujące",
+          },
+          hash: "79d1d0e7e781e305aa4b30a0b6fc6f9d",
+        },
+        "9/body/0/argument/1/1/5/1/3/expression/consequent": {
+          content: {
+            en: "✓ Confirmed",
+            pl: "✓ Potwierdzone",
+          },
+          hash: "50be425fa98ecc175102d12a49835888",
+        },
+        "9/body/0/argument/1/1/5/3/expression/right/1": {
+          content: {
+            en: "Reason:",
+            pl: "Powód:",
+          },
+          hash: "ee08112aed59c39038fe78db79db6e82",
+        },
+        "9/body/0/argument/1/1/5/5/expression/right/1": {
+          content: {
+            en: "Reason:",
+            pl: "Powód:",
+          },
+          hash: "ee08112aed59c39038fe78db79db6e82",
         },
       },
     },
@@ -15021,6 +16715,13 @@ export default {
           },
           hash: "951351c2250fd5ecd5968b20cde28723",
         },
+        "13/body/5/body/0/expression/1/0/value/body/0": {
+          content: {
+            en: "Tender restored to inbox",
+            pl: "Przetarg przywrócony do skrzynki odbiorczej",
+          },
+          hash: "9fa090b63ef800c860a8c2beb55db264",
+        },
         "13/body/6/argument/3/1/1": {
           content: {
             en: "Restore to inbox",
@@ -15055,6 +16756,13 @@ export default {
             pl: "Przywróć do skrzynki odbiorczej",
           },
           hash: "951351c2250fd5ecd5968b20cde28723",
+        },
+        "14/body/5/body/0/expression/1/0/value/body/0": {
+          content: {
+            en: "Tender restored to inbox",
+            pl: "Przetarg przywrócony do skrzynki odbiorczej",
+          },
+          hash: "9fa090b63ef800c860a8c2beb55db264",
         },
         "14/body/6/argument/3/1/1": {
           content: {

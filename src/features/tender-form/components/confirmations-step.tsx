@@ -1,86 +1,103 @@
 "use client";
 
-import { ProductConfirmation } from "./product-confirmation";
 import React, { useEffect, useState } from "react";
 import { InboxTenderMapping } from "$/features/inbox/api/use-tender-inbox-query";
 import { InboxTenderPart } from "$/features/inbox/api/use-tender-inbox-query";
+import { RequirementConfirmation } from "./requirement-confirmation";
 
 /**
  * Determines if the next button should be enabled based on confirmation state
  */
 const shouldEnableNextButton = (
   item: InboxTenderMapping | InboxTenderPart | null | undefined,
-  confirmedProducts: Set<string>,
-  isPartItem: boolean
+  confirmedItems: Set<string>
 ): boolean => {
-  // If not a part item (no products to confirm), enable next button
-  if (!isPartItem) {
-    return true;
-  }
+  if (!item) return true;
 
-  // For part items, check if all products are confirmed
-  if (isPartItem && item && "tender_products" in item && item.tender_products) {
-    const totalProducts = item.tender_products.length;
-    return totalProducts > 0 && confirmedProducts.size >= totalProducts;
-  }
+  // Get requirements with status "default"
+  const requirements =
+    "tender_requirements" in item ? item.tender_requirements : [];
+  const defaultRequirements = requirements.filter(
+    (req) => req.status === "default"
+  );
 
-  // Default to false if conditions are not met
-  return false;
+  // Get product requirements
+  const productRequirements =
+    "tender_products" in item ? item.tender_products : [];
+
+  // Get service requirements (those without tender_product_id)
+  const serviceRequirements = defaultRequirements.filter(
+    (req) => !req.tender_product_id
+  );
+
+  // Calculate total items that need confirmation
+  const totalItemsToConfirm =
+    productRequirements.length + serviceRequirements.length;
+
+  // If no items to confirm, enable next button
+  if (totalItemsToConfirm === 0) return true;
+
+  // All items must be confirmed
+  return confirmedItems.size >= totalItemsToConfirm;
 };
 
 interface ConfirmationsStepProps {
-  item: InboxTenderMapping | InboxTenderPart | null | undefined;
-  onConfirmationChange?: (confirmedProducts: Set<string>) => void;
-  setNextEnabled?: (enabled: boolean) => void;
-  onNextHandler?: React.MutableRefObject<(() => Promise<void>) | null>;
+  item: InboxTenderPart | null | undefined;
+  setNextEnabled: (enabled: boolean) => void;
+  isConfirmed?: boolean;
 }
 
 export function ConfirmationsStep({
   item,
-  onConfirmationChange,
   setNextEnabled,
-  onNextHandler: _onNextHandler, // eslint-disable-line @typescript-eslint/no-unused-vars
+  isConfirmed = false,
 }: ConfirmationsStepProps) {
-  const [confirmedProducts, setConfirmedProducts] = useState<Set<string>>(
-    new Set()
+  const [confirmedItems, setConfirmedItems] = useState<Set<string>>(new Set());
+
+  const requirements = item?.tender_requirements || [];
+  const defaultRequirements = requirements.filter(
+    (req) => req.status === "default"
   );
 
-  const isTenderPart = (x: typeof item): x is InboxTenderPart =>
-    x !== null && x !== undefined && "part_id" in x;
+  const productRequirements = item?.tender_products || [];
+  const serviceRequirements = defaultRequirements
+    .filter((req) => !req.tender_product_id)
+    .map((req) => ({
+      id: req.id.toString(),
+      requirement_text: req.requirement_text,
+      reason: req.reason || undefined,
+    }));
 
-  const isPartItem = isTenderPart(item);
-
-  // Update next button state based on confirmation status
   useEffect(() => {
     if (setNextEnabled) {
-      const enabled = shouldEnableNextButton(
-        item,
-        confirmedProducts,
-        isPartItem
-      );
+      // If the part is already confirmed globally, enable the next button
+      if (isConfirmed) {
+        setNextEnabled(true);
+        return;
+      }
+
+      // Otherwise, check local confirmation state
+      const enabled = shouldEnableNextButton(item, confirmedItems);
       setNextEnabled(enabled);
     }
-  }, [confirmedProducts, item, isPartItem, setNextEnabled]);
+  }, [confirmedItems, item, setNextEnabled, isConfirmed]);
 
-  const handleConfirmationChange = (newConfirmedProducts: Set<string>) => {
-    setConfirmedProducts(newConfirmedProducts);
-    onConfirmationChange?.(newConfirmedProducts);
+  const handleConfirmationChange = (newConfirmedItems: Set<string>) => {
+    setConfirmedItems(newConfirmedItems);
   };
 
   return (
-    <div className="space-y-8">
-      {isPartItem && item.tender_products?.length > 0 && (
-        <ProductConfirmation
-          products={item.tender_products}
-          onConfirmationChange={handleConfirmationChange}
-        />
-      )}
-      {isPartItem &&
-        (!item.tender_products || item.tender_products.length === 0) && (
-          <div className="text-center py-6 text-gray-500">
-            <p className="text-sm">No products found for this part</p>
-          </div>
-        )}
-    </div>
+    <section className="h-full w-full">
+      <div className="h-full w-full flex flex-col">
+        <div className="grid grid-cols-1 gap-6">
+          <RequirementConfirmation
+            key={item?.id}
+            products={productRequirements}
+            serviceRequirements={serviceRequirements}
+            onConfirmationChange={handleConfirmationChange}
+          />
+        </div>
+      </div>
+    </section>
   );
 }
