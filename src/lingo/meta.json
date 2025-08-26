@@ -13519,6 +13519,14 @@
           "overrides": {},
           "content": "<element:span>Conversion rate:</element:span> 10%"
         },
+        "4/body/1/argument/3/3": {
+          "type": "element",
+          "hash": "941a386f0a1da9f7ea122244021229ea",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "({percentage}%)"
+        },
         "4/declaration/body/1/argument/3/3": {
           "type": "element",
           "hash": "941a386f0a1da9f7ea122244021229ea",
@@ -13531,6 +13539,30 @@
     },
     "features/stats/components/weekly-stats.tsx": {
       "scopes": {
+        "4/declaration/body/3/argument/1": {
+          "type": "element",
+          "hash": "ff82774f1a7e6b68ac287b90b33d35a7",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Last 4 weeks"
+        },
+        "4/declaration/body/3/argument/5/1/1": {
+          "type": "element",
+          "hash": "f88aa2f74615d4c75984e36154b9a6e9",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Total:"
+        },
+        "4/declaration/body/3/argument/5/3/1": {
+          "type": "element",
+          "hash": "6eb200581a6da498ee6bc585c33dfae0",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Weekly average:"
+        },
         "5/declaration/body/0/argument/1": {
           "type": "element",
           "hash": "ff82774f1a7e6b68ac287b90b33d35a7",

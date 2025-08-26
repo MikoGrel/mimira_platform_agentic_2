@@ -52,12 +52,7 @@ interface FunnelItemProps {
   className?: string;
 }
 
-export function FunnelItem({
-  title,
-  value,
-  maxValue,
-  className,
-}: FunnelItemProps) {
+function FunnelItem({ title, value, maxValue, className }: FunnelItemProps) {
   const percentage = (value / maxValue) * 100;
 
   return (

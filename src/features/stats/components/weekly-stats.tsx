@@ -8,8 +8,6 @@ import {
 import { useWeeklyTendersCount } from "$/features/stats/api/use-weekly-tenders-count";
 import { CartesianGrid, XAxis, Line, LabelList, LineChart } from "recharts";
 
-export const description = "A line chart with a label";
-
 const chartConfig = {
   value: {
     label: "Value",
