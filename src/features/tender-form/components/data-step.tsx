@@ -9,10 +9,9 @@ import {
 import { toast } from "sonner";
 import { Alert } from "@heroui/react";
 import { InboxTenderMapping } from "$/features/inbox/api/use-tender-inbox-query";
-import { InboxTenderPart } from "$/features/inbox/api/use-tender-inbox-query";
 
 interface DataStepProps {
-  item: InboxTenderMapping | InboxTenderPart | null | undefined;
+  item: InboxTenderMapping;
   onNext?: () => void;
   setNextEnabled?: (enabled: boolean) => void;
   onNextHandler?: React.MutableRefObject<(() => Promise<void>) | null>;
@@ -52,7 +51,6 @@ export function DataStep({
         answers: answersToSubmit,
       });
 
-      // Redirect to next step or call onNext if provided
       if (onNext) {
         onNext();
       }

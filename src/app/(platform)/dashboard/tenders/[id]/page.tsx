@@ -101,7 +101,7 @@ function StepperContent({
       case "data":
         return (
           <DataStep
-            item={resolvedItem}
+            item={mapping}
             onNext={next}
             setNextEnabled={setNextEnabled}
             onNextHandler={nextHandlerRef}

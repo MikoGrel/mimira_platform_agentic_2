@@ -14919,6 +14919,30 @@
           "overrides": {},
           "content": "Loading questions..."
         },
+        "7/declaration/body/10/consequent/0/argument/1": {
+          "type": "element",
+          "hash": "1e1305d04d58872df999b3d38a202469",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "No questions available for this tender."
+        },
+        "7/declaration/body/11/argument/1": {
+          "type": "element",
+          "hash": "fda9ff14c0726917b5e705d3f5038e8a",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Fill in the answers to the questions below to proceed to the next step."
+        },
+        "7/declaration/body/11/argument/3/expression/0/body/3-placeholder": {
+          "type": "attribute",
+          "hash": "90ccf10b499b50632cd92ae8d9eb3015",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Enter your answer..."
+        },
         "7/declaration/body/11/consequent/0/argument/1": {
           "type": "element",
           "hash": "ec0580990ba4ade064b028a680c34f44",
@@ -14966,6 +14990,22 @@
           "skip": false,
           "overrides": {},
           "content": "No item selected"
+        },
+        "7/declaration/body/8/consequent/0/argument/1": {
+          "type": "element",
+          "hash": "ec0580990ba4ade064b028a680c34f44",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Loading questions..."
+        },
+        "7/declaration/body/9/consequent/0/argument/1": {
+          "type": "element",
+          "hash": "77a4c660ecb1fcb5c6ddbbd35287e087",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Failed to load questions. Please try again."
         },
         "8/declaration/body/10/consequent/0/argument/1": {
           "type": "element",
