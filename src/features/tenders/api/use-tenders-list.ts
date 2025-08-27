@@ -11,6 +11,7 @@ import { getLocalTimeZone } from "@internationalized/date";
 import { format } from "date-fns";
 import { FilterQuery } from "$/features/inbox/hooks/use-filter-form";
 import { Tables } from "$/types/supabase";
+import { baseTenderQuery } from "$/features/inbox/api/base-tender-query";
 
 interface UseTendersListParams {
   pageSize?: number;
@@ -60,52 +61,10 @@ export function useTendersList({
     queryKey,
     queryFn: async ({ pageParam = 0 }) => {
       const client = createClient();
-      let query = client
-        .from("companies_tenders_mappings")
-        .select(
-          `
-          *,
-          tenders!inner (
-            *
-          ),
-          tender_parts (
-            id,
-            part_name,
-            ordercompletiondate_llm,
-            wadium_llm,
-            review_criteria_llm,
-            description_part_long_llm,
-            order_number,
-            status,
-            can_participate,
-            tender_products (
-              id,
-              part_id,
-              product_req_name,
-              product_req_quantity,
-              product_req_spec,
-              requirements_to_confirm,
-              alternative_products,
-              closest_match
-            ),
-            tender_requirements (
-              id,
-              part_id,
-              requirement_text,
-              reason,
-              status,
-              tender_product_id,
-              tender_products (
-                id,
-                product_req_name,
-                product_req_quantity
-              )
-            )
-          )
-          `,
-          { count: "exact" }
-        )
-        .eq("company_id", user!.profile!.company_id!);
+      let query = baseTenderQuery(client).eq(
+        "company_id",
+        user!.profile!.company_id!
+      );
 
       query = query.neq("status", "default");
       query = query.eq("can_participate", true);
