@@ -183,55 +183,57 @@ export function TenderPartsCarousel({
       <div className="min-w-0">
         <div className="overflow-hidden" ref={emblaRef}>
           <div className="flex gap-3 py-2 pl-0.5 pr-0.5">
-            {tenderParts.map((part, index) => (
-              <div key={part.id} className="flex-[0_0_240px]">
-                <Card
-                  isPressable
-                  isHoverable
-                  shadow="sm"
-                  className={cn(
-                    "cursor-pointer transition-all duration-200 h-full w-full",
-                    selectedPart === part.id && "ring ring-primary/70"
-                  )}
-                  onPress={() => onPartSelect(part.id)}
-                >
-                  <CardHeader className="pb-1 px-3 pt-3 flex flex-col gap-1 text-xs">
-                    <h4 className="text-left line-clamp-2 text-font-base w-full">
-                      {isApproved(part) && (
-                        <Check className="w-3 h-3 text-primary inline-block mr-1" />
-                      )}
-                      <span className="font-semibold">#{index + 1}</span>{" "}
-                      {part.part_name?.trim()}
-                    </h4>
-                  </CardHeader>
-                  <CardBody className="pt-0 px-3 pb-3 text-muted-foreground">
-                    <motion.div
-                      className="overflow-hidden"
-                      animate={{
-                        height: isCollapsed ? "0px" : "auto",
-                      }}
-                      transition={{
-                        duration: 0.2,
-                      }}
-                    >
-                      <div className="text-xs w-full">
-                        <span className="inline">Requirements:</span>
-                        <RequirementsStatus {...groupedRequirements(part)} />
-                      </div>
-                      {totalProducts(part) > 0 && (
+            {tenderParts
+              .toSorted((a, b) => (a.order_number ?? 0) - (b.order_number ?? 0))
+              .map((part, index) => (
+                <div key={part.id} className="flex-[0_0_240px]">
+                  <Card
+                    isPressable
+                    isHoverable
+                    shadow="sm"
+                    className={cn(
+                      "cursor-pointer transition-all duration-200 h-full w-full",
+                      selectedPart === part.id && "ring ring-primary/70"
+                    )}
+                    onPress={() => onPartSelect(part.id)}
+                  >
+                    <CardHeader className="pb-1 px-3 pt-3 flex flex-col gap-1 text-xs">
+                      <h4 className="text-left line-clamp-2 text-font-base w-full">
+                        {isApproved(part) && (
+                          <Check className="w-3 h-3 text-primary inline-block mr-1" />
+                        )}
+                        <span className="font-semibold">#{index + 1}</span>{" "}
+                        {part.part_name?.trim()}
+                      </h4>
+                    </CardHeader>
+                    <CardBody className="pt-0 px-3 pb-3 text-muted-foreground">
+                      <motion.div
+                        className="overflow-hidden"
+                        animate={{
+                          height: isCollapsed ? "0px" : "auto",
+                        }}
+                        transition={{
+                          duration: 0.2,
+                        }}
+                      >
                         <div className="text-xs w-full">
-                          <span className="inline">Products:</span>
-                          <ProductStatus
-                            matchedProducts={matchedProducts(part)}
-                            totalProducts={totalProducts(part)}
-                          />
+                          <span className="inline">Requirements:</span>
+                          <RequirementsStatus {...groupedRequirements(part)} />
                         </div>
-                      )}
-                    </motion.div>
-                  </CardBody>
-                </Card>
-              </div>
-            ))}
+                        {totalProducts(part) > 0 && (
+                          <div className="text-xs w-full">
+                            <span className="inline">Products:</span>
+                            <ProductStatus
+                              matchedProducts={matchedProducts(part)}
+                              totalProducts={totalProducts(part)}
+                            />
+                          </div>
+                        )}
+                      </motion.div>
+                    </CardBody>
+                  </Card>
+                </div>
+              ))}
           </div>
         </div>
       </div>

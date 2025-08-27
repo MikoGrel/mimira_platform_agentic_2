@@ -48,46 +48,48 @@ export function PartsSidebar({
             </Chip>
           </div>
         )}
-        {parts.map((part) => (
-          <Card
-            isDisabled={fullTenderStep}
-            key={part.id}
-            isPressable
-            isHoverable
-            shadow="none"
-            radius="none"
-            className={cn(
-              "cursor-pointer w-full transition-all duration-200 border-b border-sidebar-border",
-              {
-                "border-l border-l-primary font-medium":
-                  selectedPart?.id === part.id,
-              }
-            )}
-            onPress={() => onPartSelect(part.id)}
-          >
-            <CardHeader className="pb-1 px-3 pt-3 flex flex-col gap-1">
-              <h4 className="text-left line-clamp-2 text-font-base w-full text-sm">
-                {part.part_name
-                  ? truncate(part.part_name, { length: 60 })
-                  : `Part ${part.order_number}`}
-              </h4>
-            </CardHeader>
-            <CardBody className="pt-0 px-3 pb-3 text-muted-foreground">
-              <div className="space-y-2">
-                <div className="flex items-center justify-between mt-1">
-                  <Chip
-                    size="sm"
-                    variant="flat"
-                    color="success"
-                    className="text-xs"
-                  >
-                    {statusMap[part.status as keyof typeof statusMap]}
-                  </Chip>
+        {parts
+          .toSorted((a, b) => (a.order_number ?? 0) - (b.order_number ?? 0))
+          .map((part) => (
+            <Card
+              isDisabled={fullTenderStep}
+              key={part.id}
+              isPressable
+              isHoverable
+              shadow="none"
+              radius="none"
+              className={cn(
+                "cursor-pointer w-full transition-all duration-200 border-b border-sidebar-border",
+                {
+                  "border-l border-l-primary font-medium":
+                    selectedPart?.id === part.id,
+                }
+              )}
+              onPress={() => onPartSelect(part.id)}
+            >
+              <CardHeader className="pb-1 px-3 pt-3 flex flex-col gap-1">
+                <h4 className="text-left line-clamp-2 text-font-base w-full text-sm">
+                  {part.part_name
+                    ? truncate(part.part_name, { length: 60 })
+                    : `Part ${part.order_number}`}
+                </h4>
+              </CardHeader>
+              <CardBody className="pt-0 px-3 pb-3 text-muted-foreground">
+                <div className="space-y-2">
+                  <div className="flex items-center justify-between mt-1">
+                    <Chip
+                      size="sm"
+                      variant="flat"
+                      color="success"
+                      className="text-xs"
+                    >
+                      {statusMap[part.status as keyof typeof statusMap]}
+                    </Chip>
+                  </div>
                 </div>
-              </div>
-            </CardBody>
-          </Card>
-        ))}
+              </CardBody>
+            </Card>
+          ))}
       </div>
     </aside>
   );
