@@ -83,42 +83,40 @@ export function ProductCard({
               )}
 
               {product.closest_match && (
-                <div className="text-sm space-y-1">
+                <div className="text-sm flex flex-col gap-2">
                   <div className="flex items-center gap-2">
                     <span className="font-medium text-muted-foreground">
                       Closest match
                     </span>
                   </div>
-                  <div className="pt-2 flex flex-wrap gap-2 items-center">
-                    <Chip color="success" variant="flat" size="sm">
-                      <Tag className="w-3.5 h-3.5" />
-                    </Chip>
+                  <div>
+                    <Tag className="w-4 4 text-success inline mr-1" />
                     {closestMatch?.name}
                   </div>
                 </div>
               )}
 
               {product.requirements_to_confirm && (
-                <div className="text-sm space-y-1">
+                <div className="text-sm flex flex-col gap-2">
                   <div className="flex items-center gap-2 ">
                     <span className="font-medium text-muted-foreground">
                       Requirements to confirm
                     </span>
                   </div>
-                  <ul className="space-y-1 pl-2 pt-2">
+                  <ul className="space-y-1 pl-2">
                     {product.requirements_to_confirm}
                   </ul>
                 </div>
               )}
 
               {alternatives.length > 0 && (
-                <div className="text-sm space-y-1">
+                <div className="text-sm flex flex-col gap-2">
                   <div className="flex items-center gap-2">
                     <span className="font-medium text-muted-foreground">
                       Alternative products
                     </span>
                   </div>
-                  <ul className="space-y-1 pl-2 pt-2">
+                  <ul className="space-y-1 pl-2">
                     {alternatives.map((p) => (
                       <li
                         key={p.id}

@@ -24,7 +24,7 @@ import { InboxTenderPart } from "$/features/inbox/api/use-tender-inbox-query";
 import { usePartsManagement } from "$/features/tender-form/hooks";
 import { useUpdateTenderStatus } from "$/features/tenders/api/use-update-tender-status";
 
-const { Stepper, useStepper } = defineStepper(
+const { Stepper, useStepper, utils } = defineStepper(
   {
     id: "overview",
     title: <span>Overview</span>,
@@ -168,7 +168,7 @@ export default function TenderPage() {
       case "confirmations":
         return "questions";
       case "data":
-        return "questions_in_review_mimira";
+        return "questions";
       case "documentation":
         return "documents_preparing";
       case "decision":
@@ -234,17 +234,13 @@ export default function TenderPage() {
     nextHandlerRef.current = null;
   }, [confirmationsNextEnabled]);
 
-  const stepperMethodsRef = useRef<{
-    goTo: (
-      step: "overview" | "confirmations" | "data" | "documentation" | "decision"
-    ) => void;
-    current: { id: string };
-  } | null>(null);
+  const stepperMethodsRef = useRef<ReturnType<typeof useStepper> | null>(null);
 
   const initialStep = useMemo(() => {
     if (isLoading || !mapping) return;
+
     const status = mapping.status ?? "analysis";
-    if (status === "analysis") {
+    if (status === "analysis" || status === "questions") {
       const needsConfirmation = hasRequirementsToConfirmInbox(mapping);
       return needsConfirmation ? "confirmations" : "data";
     }
@@ -258,8 +254,6 @@ export default function TenderPage() {
       setNextEnabled(true);
     }
   }, [mapping, initialStep, initialConfirmationsNextEnabled]);
-
-  if (isLoading || !mapping) return null;
 
   const partSteps = ["overview", "confirmations"];
 
@@ -283,17 +277,7 @@ export default function TenderPage() {
                     <Stepper.Step
                       key={step.id}
                       of={step.id}
-                      onClick={() => {
-                        methods.goTo(step.id);
-                        const status = mapStepToStatus(step.id);
-                        if (mapping && status) {
-                          updateTenderStatus.mutate({
-                            mappingId: mapping.id,
-                            status,
-                          });
-                        }
-                      }}
-                      className="cursor-pointer"
+                      className="cursor-default"
                     >
                       <Stepper.Title className="text-sm font-medium">
                         {step.title}
@@ -344,18 +328,21 @@ export default function TenderPage() {
                     <Stepper.Controls className="flex justify-between">
                       <Button
                         variant="bordered"
-                        onClick={() => {
-                          const all = methods.all.map((s) => s.id);
-                          const currentIndex = all.indexOf(methods.current.id);
-                          const prevId = all[Math.max(0, currentIndex - 1)];
+                        onPress={() => {
+                          methods.beforePrev(() => {
+                            const status = mapStepToStatus(
+                              utils.getPrev(methods.current.id).id
+                            );
+                            if (mapping && status) {
+                              updateTenderStatus.mutate({
+                                mappingId: mapping.id,
+                                status,
+                              });
+                            }
+
+                            return true;
+                          });
                           methods.prev();
-                          const status = mapStepToStatus(prevId);
-                          if (mapping && status) {
-                            updateTenderStatus.mutate({
-                              mappingId: mapping.id,
-                              status,
-                            });
-                          }
                         }}
                         disabled={methods.isFirst}
                       >
@@ -366,33 +353,32 @@ export default function TenderPage() {
                         {!methods.isLast && (
                           <Button
                             color="primary"
-                            onPress={async () => {
-                              if (methods.current.id === "confirmations") {
-                                const canProceed =
-                                  await handleConfirmationsBeforeNext();
-                                if (!canProceed) return;
-                              }
+                            onPress={() => {
+                              methods.beforeNext(async () => {
+                                if (methods.current.id === "confirmations") {
+                                  const ok =
+                                    await handleConfirmationsBeforeNext();
+                                  if (!ok) return false;
+                                }
+                                if (nextHandlerRef.current) {
+                                  await nextHandlerRef.current();
+                                }
+                                return true;
+                              });
+                              methods.beforeNext(() => {
+                                const status = mapStepToStatus(
+                                  utils.getNext(methods.current.id).id
+                                );
+                                if (mapping && status) {
+                                  updateTenderStatus.mutate({
+                                    mappingId: mapping.id,
+                                    status,
+                                  });
+                                }
 
-                              const all = methods.all.map((s) => s.id);
-                              const currentIndex = all.indexOf(
-                                methods.current.id
-                              );
-                              const nextId =
-                                all[Math.min(all.length - 1, currentIndex + 1)];
-
-                              if (nextHandlerRef.current) {
-                                await nextHandlerRef.current();
-                                methods.next();
-                              } else {
-                                methods.next();
-                              }
-                              const status = mapStepToStatus(nextId);
-                              if (mapping && status) {
-                                updateTenderStatus.mutate({
-                                  mappingId: mapping.id,
-                                  status,
-                                });
-                              }
+                                return true;
+                              });
+                              methods.next();
                             }}
                             isDisabled={
                               !nextEnabled || isProcessingConfirmation

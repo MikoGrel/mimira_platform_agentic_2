@@ -94,7 +94,12 @@ export function useTendersList({
               requirement_text,
               reason,
               status,
-              tender_product_id
+              tender_product_id,
+              tender_products (
+                id,
+                product_req_name,
+                product_req_quantity
+              )
             )
           )
           `,
