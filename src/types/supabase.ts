@@ -352,7 +352,6 @@ export type Database = {
       profiles: {
         Row: {
           company_id: string | null
-          customer: string | null
           first_name: string | null
           id: string
           last_name: string | null
@@ -360,7 +359,6 @@ export type Database = {
         }
         Insert: {
           company_id?: string | null
-          customer?: string | null
           first_name?: string | null
           id: string
           last_name?: string | null
@@ -368,7 +366,6 @@ export type Database = {
         }
         Update: {
           company_id?: string | null
-          customer?: string | null
           first_name?: string | null
           id?: string
           last_name?: string | null
@@ -577,7 +574,6 @@ export type Database = {
       tenders: {
         Row: {
           application_form_llm: string | null
-          company: string
           contract_penalties_llm: string | null
           created_at: string | null
           deposit_llm: string | null
@@ -599,7 +595,6 @@ export type Database = {
         }
         Insert: {
           application_form_llm?: string | null
-          company: string
           contract_penalties_llm?: string | null
           created_at?: string | null
           deposit_llm?: string | null
@@ -621,7 +616,6 @@ export type Database = {
         }
         Update: {
           application_form_llm?: string | null
-          company?: string
           contract_penalties_llm?: string | null
           created_at?: string | null
           deposit_llm?: string | null
@@ -667,6 +661,18 @@ export type Database = {
           product_count: number
         }[]
       }
+      get_deadline_due_in_2_days: {
+        Args: Record<PropertyKey, never>
+        Returns: {
+          company_id: string
+          deadline: string
+          order_object: string
+          organization_name: string
+          recipient_email: string
+          tender_id: string
+          tender_url: string
+        }[]
+      }
       get_tenders_summary: {
         Args: { p_company_id: string }
         Returns: Database["public"]["CompositeTypes"]["tenders_summary_type"]
@@ -676,6 +682,10 @@ export type Database = {
         Returns: {
           json_response: Json
         }[]
+      }
+      send_deadline_2days_min: {
+        Args: Record<PropertyKey, never>
+        Returns: undefined
       }
     }
     Enums: {

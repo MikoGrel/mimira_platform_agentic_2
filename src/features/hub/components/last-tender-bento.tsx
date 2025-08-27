@@ -8,6 +8,7 @@ import { useIndividualTender } from "$/features/tenders";
 import Link from "next/link";
 import truncate from "lodash-es/truncate";
 import { defineStepper } from "$/components/stepper";
+import { useCurrentUser } from "$/features/auth/api";
 
 interface LastTenderBentoProps {
   loading?: boolean;
@@ -15,8 +16,9 @@ interface LastTenderBentoProps {
 }
 
 export function LastTenderBento({ loading, className }: LastTenderBentoProps) {
+  const { user } = useCurrentUser();
   const [lastTender] = useLocalStorage<string | undefined>(
-    "last-tender",
+    "last-tender" + user?.profile?.company_id,
     undefined
   );
   const { data: mapping } = useIndividualTender({

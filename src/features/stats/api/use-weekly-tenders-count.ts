@@ -24,7 +24,7 @@ export function useWeeklyTendersCount() {
       const { data, error } = await client.rpc(
         "get_weekly_tenders_by_company",
         {
-          p_company: user!.profile!.customer!,
+          p_company: user!.profile!.companies!.company_name!,
           p_no_of_weeks: 4,
         }
       );
@@ -33,6 +33,6 @@ export function useWeeklyTendersCount() {
 
       return data[0].json_response as unknown as WeeklyStats | undefined;
     },
-    enabled: !!user?.profile?.customer,
+    enabled: !!user?.profile?.companies?.company_name,
   });
 }

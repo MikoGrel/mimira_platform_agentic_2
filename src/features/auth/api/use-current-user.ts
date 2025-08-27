@@ -27,7 +27,7 @@ export default function useCurrentUser() {
 
       const { data: profile } = await client
         .from("profiles")
-        .select("*")
+        .select("*, companies(*)")
         .eq("id", user.id)
         .single();
 
@@ -42,11 +42,11 @@ export default function useCurrentUser() {
         ...omit(data.profile, "id"),
       });
 
-      if (data.profile?.customer) {
-        posthog.group("customer", data.profile?.customer);
+      if (data.profile?.companies?.company_name) {
+        posthog.group("customer", data.profile?.companies.company_name);
       }
     }
   }, [data]);
 
   return { user: data, ...rest };
-} 
+}
