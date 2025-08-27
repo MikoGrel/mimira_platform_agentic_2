@@ -7,7 +7,7 @@ import {
   useSubmitDocumentAnswers,
 } from "$/features/tender-form/hooks";
 import { toast } from "sonner";
-import { Alert } from "@heroui/react";
+import { Textarea } from "@heroui/react";
 import { InboxTenderMapping } from "$/features/inbox/api/use-tender-inbox-query";
 
 interface DataStepProps {
@@ -114,21 +114,15 @@ export function DataStep({
 
   return (
     <form className="space-y-4">
-      <Alert color="primary">
-        Fill in the answers to the questions below to proceed to the next step.
-      </Alert>
-
       {questions.map((question) => (
         <div key={question.id} className="space-y-2">
-          <label className="text-sm font-medium text-gray-700">
-            {question.question}
-          </label>
-          <textarea
-            className="w-full mt-1 p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+          <Textarea
+            label={question.question}
             rows={3}
+            variant="bordered"
+            placeholder="Enter your answer..."
             value={answers[question.id] || ""}
             onChange={(e) => handleAnswerChange(question.id, e.target.value)}
-            placeholder="Enter your answer..."
           />
         </div>
       ))}

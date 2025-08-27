@@ -15,6 +15,7 @@ import { useDateFormat } from "$/features/i18n/hooks/use-date-format";
 interface DocumentationStepProps {
   item: InboxTenderMapping;
   setNextEnabled?: (enabled: boolean) => void;
+  onNextHandler?: React.MutableRefObject<(() => Promise<void>) | null>;
 }
 
 type FileGroup = "refilled" | "optional" | "other";
@@ -34,7 +35,14 @@ const FILE_TYPE_LABELS: Record<FileGroup, React.ReactElement> = {
 export function DocumentationStep({
   item,
   setNextEnabled,
+  onNextHandler: _onNextHandler, // eslint-disable-line @typescript-eslint/no-unused-vars
 }: DocumentationStepProps) {
+  useEffect(() => {
+    if (setNextEnabled) {
+      setNextEnabled(true);
+    }
+  }, [setNextEnabled]);
+
   const {
     data: files,
     isLoading,
@@ -68,13 +76,6 @@ export function DocumentationStep({
       setGroupedFiles(grouped);
     }
   }, [files]);
-
-  // Enable next button when component loads (documentation step is always ready)
-  useEffect(() => {
-    if (setNextEnabled) {
-      setNextEnabled(true);
-    }
-  }, [setNextEnabled]);
 
   const handleDownload = useCallback(async (file: CompanyFileType) => {
     if (!file.s3path) {

@@ -54,7 +54,7 @@ export function PartsSidebar({
             key={part.id}
             isPressable
             isHoverable
-            shadow="sm"
+            shadow="none"
             radius="none"
             className={cn(
               "cursor-pointer w-full transition-all duration-200 border-b border-sidebar-border",

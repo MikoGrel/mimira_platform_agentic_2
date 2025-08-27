@@ -21,18 +21,17 @@ const shouldEnableNextButton = (
     (req) => req.status === "default"
   );
 
-  // Get product requirements
-  const productRequirements =
-    "tender_products" in item ? item.tender_products : [];
-
-  // Get service requirements (those without tender_product_id)
+  // Split requirements into product and service requirements
+  const productRequirementsData = defaultRequirements.filter(
+    (req) => req.tender_product_id
+  );
   const serviceRequirements = defaultRequirements.filter(
     (req) => !req.tender_product_id
   );
 
-  // Calculate total items that need confirmation
+  // Calculate total items that need confirmation (individual requirements)
   const totalItemsToConfirm =
-    productRequirements.length + serviceRequirements.length;
+    productRequirementsData.length + serviceRequirements.length;
 
   // If no items to confirm, enable next button
   if (totalItemsToConfirm === 0) return true;
@@ -59,24 +58,21 @@ export function ConfirmationsStep({
     (req) => req.status === "default"
   );
 
-  const productRequirements = item?.tender_products || [];
-  const serviceRequirements = defaultRequirements
-    .filter((req) => !req.tender_product_id)
-    .map((req) => ({
-      id: req.id.toString(),
-      requirement_text: req.requirement_text,
-      reason: req.reason || undefined,
-    }));
+  const productRequirements = defaultRequirements.filter(
+    (req) => req.tender_product_id
+  );
+
+  const serviceRequirements = defaultRequirements.filter(
+    (req) => !req.tender_product_id
+  );
 
   useEffect(() => {
     if (setNextEnabled) {
-      // If the part is already confirmed globally, enable the next button
       if (isConfirmed) {
         setNextEnabled(true);
         return;
       }
 
-      // Otherwise, check local confirmation state
       const enabled = shouldEnableNextButton(item, confirmedItems);
       setNextEnabled(enabled);
     }
@@ -92,7 +88,7 @@ export function ConfirmationsStep({
         <div className="grid grid-cols-1 gap-6">
           <RequirementConfirmation
             key={item?.id}
-            products={productRequirements}
+            productRequirements={productRequirements}
             serviceRequirements={serviceRequirements}
             onConfirmationChange={handleConfirmationChange}
           />

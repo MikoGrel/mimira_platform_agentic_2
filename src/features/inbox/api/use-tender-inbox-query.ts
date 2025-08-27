@@ -104,7 +104,12 @@ export default function useTenderInboxQuery({
               requirement_text,
               reason,
               status,
-              tender_product_id
+              tender_product_id,
+              tender_products (
+                id,
+                product_req_name,
+                product_req_quantity
+              )
             )
           )
           `,
@@ -242,3 +247,6 @@ export type InboxTender = InboxTenderMapping["tenders"];
 export type InboxTenderPart = InboxTenderMapping["tender_parts"][number];
 
 export type InboxTenderProduct = InboxTenderPart["tender_products"][number];
+
+export type InboxTenderRequirement =
+  InboxTenderPart["tender_requirements"][number];

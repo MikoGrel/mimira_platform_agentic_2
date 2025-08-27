@@ -4,7 +4,7 @@ import { useIndividualTender } from "$/features/tenders";
 import { CalendarClock, House, MoveLeft } from "lucide-react";
 import Link from "$/components/ui/link";
 import { useParams } from "next/navigation";
-import { useState, useEffect, useMemo, useRef, useCallback } from "react";
+import { useState, useEffect, useMemo, useRef, RefObject } from "react";
 import { defineStepper } from "$/components/stepper";
 import {
   ConfirmationsStep,
@@ -21,10 +21,8 @@ import React from "react";
 import { useDateFormat } from "$/features/i18n/hooks/use-date-format";
 import { InboxTenderMapping } from "$/features/inbox/api/use-tender-inbox-query";
 import { InboxTenderPart } from "$/features/inbox/api/use-tender-inbox-query";
-import {
-  useUpdateRequirementState,
-  useUpdatePartStatus,
-} from "$/features/tender-form/hooks";
+import { usePartsManagement } from "$/features/tender-form/hooks";
+import { useUpdateTenderStatus } from "$/features/tenders/api/use-update-tender-status";
 
 const { Stepper, useStepper } = defineStepper(
   {
@@ -59,7 +57,7 @@ function StepperContent({
   mapping?: InboxTenderMapping | null;
   selectedPart?: InboxTenderPart | null;
   setNextEnabled: (enabled: boolean) => void;
-  nextHandlerRef: React.MutableRefObject<(() => Promise<void>) | null>;
+  nextHandlerRef: RefObject<(() => Promise<void>) | null>;
   confirmedParts: Set<string>;
 }) {
   const { current, next } = useStepper();
@@ -108,7 +106,9 @@ function StepperContent({
           />
         );
       case "documentation":
-        return <DocumentationStep item={mapping} />;
+        return (
+          <DocumentationStep item={mapping} onNextHandler={nextHandlerRef} />
+        );
       case "decision":
         return (
           <DecisionStep
@@ -138,107 +138,67 @@ function StepperContent({
 
 export default function TenderPage() {
   const params = useParams();
-  const [selectedPart, setSelectedPart] = useState<InboxTenderPart | null>(
-    null
-  );
   const { relativeToNow } = useDateFormat();
 
   const [nextEnabled, setNextEnabled] = useState(true);
-  const [isProcessingConfirmation, setIsProcessingConfirmation] =
-    useState(false);
   const nextHandlerRef = useRef<(() => Promise<void>) | null>(null);
-
-  const [partsNeedingConfirmation, setPartsNeedingConfirmation] = useState<
-    InboxTenderPart[]
-  >([]);
-  const [confirmedParts, setConfirmedParts] = useState<Set<string>>(new Set());
 
   const { data: mapping, isLoading } = useIndividualTender({
     mappingId: params.id as string,
     enabled: true,
     skipCache: true,
   });
+  const updateTenderStatus = useUpdateTenderStatus();
+  const {
+    selectedPart,
+    confirmedParts,
+    isProcessingConfirmation,
+    areAllPartsConfirmed,
+    areAllPartsExceptCurrentConfirmed,
+    handlePartSelect,
+    handleConfirmationsBeforeNext,
+    confirmationsNextEnabled,
+    initialConfirmationsNextEnabled,
+  } = usePartsManagement(mapping ?? null);
 
-  const updateRequirementState = useUpdateRequirementState();
-  const updatePartStatus = useUpdatePartStatus();
-
-  useEffect(() => {
-    if (mapping?.tender_parts) {
-      const partsNeedingConfirm = mapping.tender_parts.filter((part) =>
-        part.tender_requirements.some((req) => req.status === "default")
-      );
-      setPartsNeedingConfirmation(partsNeedingConfirm);
-
-      if (partsNeedingConfirm.length > 0) {
-        setSelectedPart(partsNeedingConfirm[0]);
-      } else if (mapping.tender_parts.length > 0) {
-        setSelectedPart(mapping.tender_parts[0]);
-      }
-    }
-  }, [mapping]);
-
-  const handleConfirmCurrentPart = async (): Promise<void> => {
-    if (!selectedPart) return;
-
-    setIsProcessingConfirmation(true);
-
-    try {
-      const requirements = selectedPart.tender_requirements || [];
-      const defaultRequirements = requirements.filter(
-        (req) => req.status === "default"
-      );
-
-      if (defaultRequirements.length === 0) {
-        return;
-      }
-
-      const requirementPromises = defaultRequirements.map((req) =>
-        updateRequirementState.mutateAsync({
-          id: req.id,
-          status: "approve",
-        })
-      );
-
-      const partPromise = updatePartStatus.mutateAsync({
-        id: selectedPart.id,
-        status: "approve",
-      });
-
-      await Promise.all([...requirementPromises, partPromise]);
-      setConfirmedParts((prev) => new Set(prev).add(selectedPart.id));
-    } catch (error) {
-      console.error("Failed to confirm requirements:", error);
-      throw error;
-    } finally {
-      setIsProcessingConfirmation(false);
+  const mapStepToStatus = (stepId: string): string | null => {
+    switch (stepId) {
+      case "overview":
+        return "analysis";
+      case "confirmations":
+        return "questions";
+      case "data":
+        return "questions_in_review_mimira";
+      case "documentation":
+        return "documents_preparing";
+      case "decision":
+        return "decision_made_applied";
+      default:
+        return null;
     }
   };
 
-  const areAllPartsConfirmed = () => {
-    return partsNeedingConfirmation.every((part) =>
-      confirmedParts.has(part.id)
-    );
-  };
-
-  const areAllPartsExceptCurrentConfirmed = useCallback(() => {
-    if (!selectedPart) return false;
-    return partsNeedingConfirmation
-      .filter((part) => part.id !== selectedPart.id)
-      .every((part) => confirmedParts.has(part.id));
-  }, [selectedPart, confirmedParts, partsNeedingConfirmation]);
-
-  const getNextPartToConfirm = () => {
-    return partsNeedingConfirmation.find(
-      (part) => !confirmedParts.has(part.id)
-    );
-  };
-
-  const handlePartSelect = (partId: string) => {
-    if (!mapping) return;
-    const overviewParts = getOverviewParts(mapping);
-    const part = overviewParts.find((p) => p.id === partId);
-    if (!part) return;
-    setSelectedPart(part);
+  const mapStatusToStep = (
+    status: string | null | undefined
+  ): "overview" | "confirmations" | "data" | "documentation" | "decision" => {
+    switch (status) {
+      case "analysis":
+        return "overview";
+      case "questions":
+        return "confirmations";
+      case "questions_in_review_mimira":
+        return "data";
+      case "documents_preparing":
+      case "documents_ready":
+      case "documents_reviewed":
+        return "documentation";
+      case "decision_made_applied":
+      case "decision_made_rejected":
+      case "rejected":
+        return "decision";
+      default:
+        return "overview";
+    }
   };
 
   const getStepButtonText = (stepId: string) => {
@@ -266,30 +226,13 @@ export default function TenderPage() {
     if (stepperMethodsRef.current) {
       const currentStepId = stepperMethodsRef.current.current.id;
       if (currentStepId === "confirmations") {
-        const currentPartNeedsConfirmation =
-          selectedPart &&
-          partsNeedingConfirmation.some((p) => p.id === selectedPart.id);
-        const isCurrentPartConfirmed =
-          selectedPart && confirmedParts.has(selectedPart.id);
-
-        setNextEnabled(
-          Boolean(
-            !currentPartNeedsConfirmation ||
-              isCurrentPartConfirmed ||
-              areAllPartsExceptCurrentConfirmed()
-          )
-        );
+        setNextEnabled(confirmationsNextEnabled);
       } else {
         setNextEnabled(true);
       }
     }
     nextHandlerRef.current = null;
-  }, [
-    selectedPart,
-    confirmedParts,
-    partsNeedingConfirmation,
-    areAllPartsExceptCurrentConfirmed,
-  ]);
+  }, [confirmationsNextEnabled]);
 
   const stepperMethodsRef = useRef<{
     goTo: (
@@ -298,33 +241,23 @@ export default function TenderPage() {
     current: { id: string };
   } | null>(null);
 
-  useEffect(() => {
-    if (mapping && !selectedPart) {
-      const overviewParts = getOverviewParts(mapping);
-      if (overviewParts && overviewParts.length > 0) {
-        const firstPart = overviewParts[0];
-        setSelectedPart(firstPart);
-      }
-    }
-  }, [mapping, selectedPart]);
-
   const initialStep = useMemo(() => {
     if (isLoading || !mapping) return;
-    const needsConfirmation = hasRequirementsToConfirmInbox(mapping);
-
-    return needsConfirmation ? "confirmations" : "data";
+    const status = mapping.status ?? "analysis";
+    if (status === "analysis") {
+      const needsConfirmation = hasRequirementsToConfirmInbox(mapping);
+      return needsConfirmation ? "confirmations" : "data";
+    }
+    return mapStatusToStep(status);
   }, [isLoading, mapping]);
 
   useEffect(() => {
     if (mapping && initialStep === "confirmations") {
-      const firstPartNeedsConfirmation =
-        partsNeedingConfirmation.length > 0 &&
-        !confirmedParts.has(partsNeedingConfirmation[0].id);
-      setNextEnabled(!firstPartNeedsConfirmation);
+      setNextEnabled(initialConfirmationsNextEnabled);
     } else {
       setNextEnabled(true);
     }
-  }, [mapping, initialStep, partsNeedingConfirmation, confirmedParts]);
+  }, [mapping, initialStep, initialConfirmationsNextEnabled]);
 
   if (isLoading || !mapping) return null;
 
@@ -350,7 +283,16 @@ export default function TenderPage() {
                     <Stepper.Step
                       key={step.id}
                       of={step.id}
-                      onClick={() => methods.goTo(step.id)}
+                      onClick={() => {
+                        methods.goTo(step.id);
+                        const status = mapStepToStatus(step.id);
+                        if (mapping && status) {
+                          updateTenderStatus.mutate({
+                            mappingId: mapping.id,
+                            status,
+                          });
+                        }
+                      }}
                       className="cursor-pointer"
                     >
                       <Stepper.Title className="text-sm font-medium">
@@ -403,7 +345,17 @@ export default function TenderPage() {
                       <Button
                         variant="bordered"
                         onClick={() => {
+                          const all = methods.all.map((s) => s.id);
+                          const currentIndex = all.indexOf(methods.current.id);
+                          const prevId = all[Math.max(0, currentIndex - 1)];
                           methods.prev();
+                          const status = mapStepToStatus(prevId);
+                          if (mapping && status) {
+                            updateTenderStatus.mutate({
+                              mappingId: mapping.id,
+                              status,
+                            });
+                          }
                         }}
                         disabled={methods.isFirst}
                       >
@@ -416,32 +368,30 @@ export default function TenderPage() {
                             color="primary"
                             onPress={async () => {
                               if (methods.current.id === "confirmations") {
-                                if (
-                                  selectedPart &&
-                                  !confirmedParts.has(selectedPart.id)
-                                ) {
-                                  await handleConfirmCurrentPart();
-                                }
-
-                                if (
-                                  areAllPartsConfirmed() ||
-                                  areAllPartsExceptCurrentConfirmed()
-                                ) {
-                                  methods.next();
-                                } else {
-                                  const nextPart = getNextPartToConfirm();
-                                  if (nextPart) {
-                                    setSelectedPart(nextPart);
-                                  }
-                                }
-                                return;
+                                const canProceed =
+                                  await handleConfirmationsBeforeNext();
+                                if (!canProceed) return;
                               }
+
+                              const all = methods.all.map((s) => s.id);
+                              const currentIndex = all.indexOf(
+                                methods.current.id
+                              );
+                              const nextId =
+                                all[Math.min(all.length - 1, currentIndex + 1)];
 
                               if (nextHandlerRef.current) {
                                 await nextHandlerRef.current();
                                 methods.next();
                               } else {
                                 methods.next();
+                              }
+                              const status = mapStepToStatus(nextId);
+                              if (mapping && status) {
+                                updateTenderStatus.mutate({
+                                  mappingId: mapping.id,
+                                  status,
+                                });
                               }
                             }}
                             isDisabled={

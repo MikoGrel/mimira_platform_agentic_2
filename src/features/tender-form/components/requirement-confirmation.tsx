@@ -17,24 +17,28 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "$/components/ui/accordion";
-import { InboxTenderProduct } from "$/features/inbox/api/use-tender-inbox-query";
+import {
+  InboxTenderProduct,
+  InboxTenderRequirement,
+} from "$/features/inbox/api/use-tender-inbox-query";
 import { ProductSearchResult } from "$/features/products/api/use-products-search";
 import { CatalogDialog } from "$/features/products/components/catalog-dialog";
 
 interface RequirementConfirmationProps {
   products?: InboxTenderProduct[];
-  serviceRequirements?: Array<{
-    id: string | number;
-    requirement_text: string;
-  }>;
+  serviceRequirements?: Array<InboxTenderRequirement>;
+  productRequirements?: Array<InboxTenderRequirement>;
   onConfirmationChange?: (confirmedItems: Set<string>) => void;
 }
 
 interface ServiceRequirementItemProps {
-  requirement: {
-    id: string | number;
-    requirement_text: string;
-  };
+  requirement: InboxTenderRequirement;
+  isConfirmed: boolean;
+  onToggleConfirm: () => void;
+}
+
+interface ProductRequirementItemProps {
+  requirement: InboxTenderRequirement;
   isConfirmed: boolean;
   onToggleConfirm: () => void;
 }
@@ -82,6 +86,76 @@ function ServiceRequirementItem({
                 </Chip>
               )}
             </div>
+          </div>
+        </div>
+      </CardHeader>
+    </Card>
+  );
+}
+
+function ProductRequirementItem({
+  requirement,
+  isConfirmed,
+  onToggleConfirm,
+}: ProductRequirementItemProps) {
+  const productName = requirement.tender_products?.product_req_name;
+  const quantity = requirement.tender_products?.product_req_quantity;
+
+  return (
+    <Card
+      className={`mb-4 w-full max-w-full border transition-all duration-200 ${
+        isConfirmed ? "border-green-200 bg-green-50/30" : "border-border"
+      }`}
+      shadow="none"
+      isPressable
+      onPress={onToggleConfirm}
+    >
+      <CardHeader className="pb-3">
+        <div className="flex items-center gap-3 w-full">
+          <div className="flex items-center gap-2 cursor-pointer">
+            {isConfirmed ? (
+              <CheckCircle2 className="w-5 h-5 text-success" />
+            ) : (
+              <Circle className="w-5 h-5 text-default-400" />
+            )}
+          </div>
+
+          <span className="inline-flex items-center shrink-0 justify-center w-8 h-8 rounded-full bg-primary/10 text-primary border border-primary/20">
+            <Package className="w-4 h-4" />
+          </span>
+
+          <div className="flex flex-col min-w-0 flex-1">
+            <div className="flex items-center gap-2">
+              <span className="text-sm font-semibold text-foreground truncate">
+                {requirement.requirement_text}
+              </span>
+              {isConfirmed ? (
+                <Chip size="sm" color="success" variant="flat">
+                  ✓ Confirmed
+                </Chip>
+              ) : (
+                <Chip size="sm" variant="flat">
+                  Pending
+                </Chip>
+              )}
+            </div>
+
+            <div className="flex items-center gap-2 mt-1">
+              <span className="text-xs text-muted-foreground">
+                Product: {productName}
+              </span>
+              {quantity && (
+                <span className="text-xs text-muted-foreground">
+                  (Qty: {quantity})
+                </span>
+              )}
+            </div>
+
+            {requirement.reason && (
+              <div className="mt-2 p-2 bg-muted/50 rounded text-xs text-muted-foreground">
+                Reason: {requirement.reason}
+              </div>
+            )}
           </div>
         </div>
       </CardHeader>
@@ -263,6 +337,7 @@ function ProductItem({
 export function RequirementConfirmation({
   products = [],
   serviceRequirements = [],
+  productRequirements = [],
   onConfirmationChange,
 }: RequirementConfirmationProps) {
   const [confirmedItems, setConfirmedItems] = useState<Set<string>>(new Set());
@@ -325,6 +400,7 @@ export function RequirementConfirmation({
     const allKeys = [
       ...products.map((_, index) => `product-${index}`),
       ...serviceRequirements.map((req) => `service-${req.id}`),
+      ...productRequirements.map((req) => `product-req-${req.id}`),
     ];
     const newConfirmed = new Set(allKeys);
     setConfirmedItems(newConfirmed);
@@ -338,7 +414,8 @@ export function RequirementConfirmation({
     onConfirmationChange?.(newConfirmed);
   };
 
-  const totalCount = products.length + serviceRequirements.length;
+  const totalCount =
+    products.length + serviceRequirements.length + productRequirements.length;
   const confirmedCount = confirmedItems.size;
   const progressPercentage =
     totalCount > 0 ? Math.round((confirmedCount / totalCount) * 100) : 0;
@@ -435,6 +512,26 @@ export function RequirementConfirmation({
                 requirement={requirement}
                 isConfirmed={confirmedItems.has(serviceKey)}
                 onToggleConfirm={() => toggleItemConfirmed(serviceKey)}
+              />
+            );
+          })}
+        </div>
+      )}
+
+      {/* Product Requirements */}
+      {productRequirements.length > 0 && (
+        <div className="space-y-3 w-full">
+          <h4 className="text-sm font-medium text-gray-600">
+            Product Requirements ({productRequirements.length})
+          </h4>
+          {productRequirements.map((requirement) => {
+            const productReqKey = `product-req-${requirement.id}`;
+            return (
+              <ProductRequirementItem
+                key={productReqKey}
+                requirement={requirement}
+                isConfirmed={confirmedItems.has(productReqKey)}
+                onToggleConfirm={() => toggleItemConfirmed(productReqKey)}
               />
             );
           })}
