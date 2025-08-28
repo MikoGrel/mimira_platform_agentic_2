@@ -16,7 +16,7 @@ import {
   MessageSquareText,
 } from "lucide-react";
 import { motion, AnimatePresence } from "motion/react";
-import { useEffect, useState } from "react";
+import { useEffect, useState, type RefObject } from "react";
 import { useCommentsCount } from "$/features/tenders/api/use-comments-count";
 import { useRestoreRejectedTender } from "../api/use-restore-rejected-tender";
 import { truncate } from "lodash-es";
@@ -25,10 +25,12 @@ import { useUnseen } from "../api/use-unseen";
 import { toast } from "sonner";
 import { InboxTenderPart } from "../api/use-tender-inbox-query";
 import { IndividualTenderMapping } from "$/features/tenders/api/use-individual-tender";
+import { useScrollTrigger } from "$/hooks/use-scroll-trigger";
 
 interface TenderHeaderProps {
   mapping: IndividualTenderMapping;
-  isHeaderCollapsed: boolean;
+  containerRef?: RefObject<HTMLElement | null>;
+  threshold?: number;
   setCommentsOpened: (value: boolean) => void;
   onApprovePart?: () => void;
   approvedPartIds: Set<string>;
@@ -222,7 +224,7 @@ function HeaderButtons({
 }
 
 export function TenderHeader(props: TenderHeaderProps) {
-  const { mapping, isHeaderCollapsed } = props;
+  const { mapping } = props;
   const [hasRendered, setHasRendered] = useState(false);
   const { count } = useCommentsCount({
     mappingId: mapping.id,
@@ -239,6 +241,11 @@ export function TenderHeader(props: TenderHeaderProps) {
   });
   const { relativeToNow } = useDateFormat();
   const isRejected = mapping.status === "rejected";
+
+  const isHeaderCollapsed = useScrollTrigger({
+    threshold: props.threshold ?? 60,
+    containerRef: props.containerRef,
+  });
 
   useEffect(() => {
     setHasRendered(true);
@@ -310,7 +317,15 @@ export function TenderHeader(props: TenderHeaderProps) {
               )}
             </div>
             <HeaderButtons
-              {...props}
+              mapping={mapping}
+              approvedPartIds={props.approvedPartIds}
+              currentPart={props.currentPart}
+              onApprovePart={props.onApprovePart}
+              onRemoveCurrentPart={props.onRemoveCurrentPart}
+              onApply={props.onApply}
+              onReject={props.onReject}
+              onUnselectAll={props.onUnselectAll}
+              setCommentsOpened={props.setCommentsOpened}
               commentCount={count}
               restoreTender={restoreTender}
               onUnseen={onUnseen}
@@ -343,12 +358,19 @@ export function TenderHeader(props: TenderHeaderProps) {
           </div>
 
           <HeaderButtons
-            {...props}
+            mapping={mapping}
+            approvedPartIds={props.approvedPartIds}
+            currentPart={props.currentPart}
+            onApprovePart={props.onApprovePart}
+            onRemoveCurrentPart={props.onRemoveCurrentPart}
+            onApply={props.onApply}
+            onReject={props.onReject}
+            onUnselectAll={props.onUnselectAll}
+            setCommentsOpened={props.setCommentsOpened}
             commentCount={count}
             restoreTender={restoreTender}
             size="sm"
             onUnseen={onUnseen}
-            onApply={props.onApply}
             hasMultipleParts={props.hasMultipleParts}
           />
         </motion.div>

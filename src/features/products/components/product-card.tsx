@@ -49,7 +49,7 @@ export function ProductCard({
                   <span className="inline-flex items-center shrink-0 justify-center w-6 h-6 rounded-full bg-primary/5 text-primary border border-primary/20">
                     <Package className="w-3.5 h-3.5" />
                   </span>
-                  {product.product_req_name || "Product"}
+                  {product.product_req_name}
                 </p>
                 <div className="flex items-center gap-2">
                   {!product.closest_match && (

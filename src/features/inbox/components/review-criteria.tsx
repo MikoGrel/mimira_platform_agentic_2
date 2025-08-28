@@ -60,15 +60,15 @@ export function ReviewCriteria({
 
   return (
     <div className="w-full flex flex-row items-start gap-4 overflow-hidden">
-      <div className="flex-shrink-0 w-40 h-44">
+      <div className="flex-shrink-0 w-40 h-40">
         <ChartContainer config={chartConfig} className="w-full h-full">
           <PieChart>
             <Pie
               data={chartData}
               cx="50%"
               cy="50%"
-              innerRadius={55}
-              outerRadius={70}
+              innerRadius={50}
+              outerRadius={60}
               paddingAngle={6}
               cornerRadius={4}
               dataKey="value"
@@ -103,11 +103,15 @@ export function ReviewCriteria({
         </ChartContainer>
       </div>
 
-      <Accordion>
+      <Accordion defaultExpandedKeys={["0"]}>
         {reviewCriteria.map((criteria, index) => (
           <AccordionItem
             disabled={!criteria.opis}
-            key={criteria.kryterium}
+            key={index}
+            classNames={{
+              trigger: "pb-2",
+              content: "pt-0",
+            }}
             title={
               <div className="flex items-center gap-3 text-sm">
                 <div

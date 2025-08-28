@@ -1,7 +1,6 @@
 "use client";
 
 import { useMemo, useRef, useState } from "react";
-import { useScrollTrigger } from "$/hooks/use-scroll-trigger";
 import { AdditionalInfoSection } from "./additional-info-section";
 import { NavigationSidebar } from "./navigation-sidebar";
 import { RequirementsSection } from "./requirements-section";
@@ -80,10 +79,6 @@ export function TenderPreview({
   const hasMultipleParts = mapping.tender_parts.length > 1;
 
   const scrollRef = useRef<HTMLDivElement>(null);
-  const isHeaderCollapsed = useScrollTrigger({
-    threshold: hasMultipleParts ? 5 : 60,
-    containerRef: scrollRef,
-  });
 
   function handleApprovePart() {
     setApprovedPartIds((prev) => new Set(prev).add(selectedPart.id));
@@ -175,7 +170,7 @@ export function TenderPreview({
       <div className="h-full w-full flex flex-col">
         <TenderHeader
           mapping={mapping}
-          isHeaderCollapsed={isHeaderCollapsed}
+          containerRef={scrollRef}
           setCommentsOpened={setCommentsOpened}
           onApprovePart={handleApprovePart}
           approvedPartIds={approvedPartIds}
@@ -195,7 +190,7 @@ export function TenderPreview({
             {hasMultipleParts && (
               <div className="border-b sticky top-0 z-30 bg-background px-6">
                 <TenderPartsCarousel
-                  isCollapsed={isHeaderCollapsed}
+                  containerRef={scrollRef}
                   tenderParts={mapping.tender_parts}
                   selectedPart={selectedPart.id}
                   onPartSelect={setSelectedPart}

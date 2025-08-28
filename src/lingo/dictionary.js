@@ -6409,6 +6409,38 @@ export default {
         },
       },
     },
+    "features/inbox/components/inbox-sidebar.tsx": {
+      entries: {
+        "13/declaration/body/4/argument/1/1/3-placeholder": {
+          content: {
+            en: "Search",
+            pl: "Szukaj",
+          },
+          hash: "49dd6c21604b5e8d4153ff1aff2177e1",
+        },
+        "13/declaration/body/4/argument/5/1/3": {
+          content: {
+            en: "Ask Mimir",
+            pl: "Zapytaj Mimira",
+          },
+          hash: "c516ed1af9463ccd6bdcb19a1f13e4ac",
+        },
+        "13/declaration/body/4/argument/5/1/5": {
+          content: {
+            en: "Coming soon",
+            pl: "Już wkrótce",
+          },
+          hash: "9c77c5fe368c45ad99e634d30c8cee23",
+        },
+        "14/body/0/argument/1/expression/0/body/3/3": {
+          content: {
+            en: "·",
+            pl: "·",
+          },
+          hash: "26b80ae8a680de73667e096098aa69d8",
+        },
+      },
+    },
     "features/inbox/components/navigation-sidebar.tsx": {
       entries: {
         "4/declaration/body/2/0/init/0/1/value": {
@@ -8235,6 +8267,13 @@ export default {
           hash: "fce70517f1edc1f1054823ec6ea3d4f3",
         },
         "15/declaration/body/9/argument/1/expression/right": {
+          content: {
+            en: "Rejected",
+            pl: "Odrzucono",
+          },
+          hash: "fce70517f1edc1f1054823ec6ea3d4f3",
+        },
+        "16/declaration/body/10/argument/1/expression/right": {
           content: {
             en: "Rejected",
             pl: "Odrzucono",
@@ -10079,6 +10118,14 @@ export default {
           },
           hash: "5fde4eb14b844f2809fded6c09afef52",
         },
+        "12/declaration/body/13/argument/5/1/1/1/expression/0/body/1/3/1/3/expression/right/1":
+          {
+            content: {
+              en: "Products:",
+              pl: "Produkty:",
+            },
+            hash: "5fde4eb14b844f2809fded6c09afef52",
+          },
         "13/declaration/body/11/argument/1/1/1/expression/right/1": {
           content: {
             en: "Tender Parts ({tenderParts.length})",
@@ -11831,6 +11878,13 @@ export default {
             pl: "Przetarg został pomyślnie przeniesiony do analizy, przejdź do aktywnych przetargów, aby go zobaczyć",
           },
           hash: "78efde626dafcc52e22f7f6b702998a0",
+        },
+        "21/declaration/body/9/body/2/expression/0/1/value": {
+          content: {
+            en: "Tender was moved to analysis successfully, go to active tenders to see it",
+            pl: "Przetarg został pomyślnie przeniesiony do analizy, przejdź do aktywnych przetargów, aby go zobaczyć",
+          },
+          hash: "db19ec4f7ea5522f60443270198a75af",
         },
         "22/declaration/body/10/body/0/expression/0/1/value": {
           content: {
@@ -15908,6 +15962,14 @@ export default {
           hash: "5e2e93f8e2a5f315b6fecdd0a0e6f55f",
         },
         "14/declaration/body/6/0/init/body/1/argument/3/1/expression/0/body/1/1/1/3/3/expression/right/3":
+          {
+            content: {
+              en: "Requires signature (<expression/>)",
+              pl: "Wymaga podpisu (<expression/>)",
+            },
+            hash: "8fe90b93e687c56ab78af72490b8ecdb",
+          },
+        "14/declaration/body/6/0/init/body/1/argument/3/1/expression/0/body/1/1/1/5/3/expression/right/3":
           {
             content: {
               en: "Requires signature (<expression/>)",

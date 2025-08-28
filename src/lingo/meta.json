@@ -47,6 +47,110 @@
     },
     "app/(platform)/dashboard/inbox/page.tsx": {
       "scopes": {
+        "12/declaration/body/12/argument/1/1/1/3-placeholder": {
+          "type": "attribute",
+          "hash": "49dd6c21604b5e8d4153ff1aff2177e1",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Search"
+        },
+        "12/declaration/body/12/argument/1/5/1/3": {
+          "type": "element",
+          "hash": "c516ed1af9463ccd6bdcb19a1f13e4ac",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Ask Mimir"
+        },
+        "12/declaration/body/12/argument/1/5/1/5": {
+          "type": "element",
+          "hash": "05a8fc9f6d826fd88a809d98684edcad",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Coming soon"
+        },
+        "12/declaration/body/12/argument/3/expression/right/1/1": {
+          "type": "element",
+          "hash": "067789b01a081458db2f872f10a37c3f",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Select a tender to view details"
+        },
+        "12/declaration/body/13/argument/1/1/1/3-placeholder": {
+          "type": "attribute",
+          "hash": "49dd6c21604b5e8d4153ff1aff2177e1",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Search"
+        },
+        "12/declaration/body/13/argument/1/5/1/3": {
+          "type": "element",
+          "hash": "c516ed1af9463ccd6bdcb19a1f13e4ac",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Ask Mimir"
+        },
+        "12/declaration/body/13/argument/1/5/1/5": {
+          "type": "element",
+          "hash": "05a8fc9f6d826fd88a809d98684edcad",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Coming soon"
+        },
+        "12/declaration/body/13/argument/3/expression/right/1/1": {
+          "type": "element",
+          "hash": "067789b01a081458db2f872f10a37c3f",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Select a tender to view details"
+        },
+        "12/declaration/body/16/argument/1/1/1/3-placeholder": {
+          "type": "attribute",
+          "hash": "49dd6c21604b5e8d4153ff1aff2177e1",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Search"
+        },
+        "12/declaration/body/16/argument/1/5/1/3": {
+          "type": "element",
+          "hash": "c516ed1af9463ccd6bdcb19a1f13e4ac",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Ask Mimir"
+        },
+        "12/declaration/body/16/argument/1/5/1/5": {
+          "type": "element",
+          "hash": "05a8fc9f6d826fd88a809d98684edcad",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Coming soon"
+        },
+        "12/declaration/body/16/argument/3/expression/right/1/1": {
+          "type": "element",
+          "hash": "067789b01a081458db2f872f10a37c3f",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Select a tender to view details"
+        },
+        "13/body/0/argument/1/expression/0/body/3/3": {
+          "type": "element",
+          "hash": "26b80ae8a680de73667e096098aa69d8",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "·"
+        },
         "14/declaration/body/11/argument/1/1/1/3-placeholder": {
           "type": "attribute",
           "hash": "49dd6c21604b5e8d4153ff1aff2177e1",
@@ -7133,6 +7237,42 @@
         }
       }
     },
+    "features/inbox/components/inbox-sidebar.tsx": {
+      "scopes": {
+        "13/declaration/body/4/argument/1/1/3-placeholder": {
+          "type": "attribute",
+          "hash": "49dd6c21604b5e8d4153ff1aff2177e1",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Search"
+        },
+        "13/declaration/body/4/argument/5/1/3": {
+          "type": "element",
+          "hash": "c516ed1af9463ccd6bdcb19a1f13e4ac",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Ask Mimir"
+        },
+        "13/declaration/body/4/argument/5/1/5": {
+          "type": "element",
+          "hash": "9c77c5fe368c45ad99e634d30c8cee23",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Coming soon"
+        },
+        "14/body/0/argument/1/expression/0/body/3/3": {
+          "type": "element",
+          "hash": "26b80ae8a680de73667e096098aa69d8",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "·"
+        }
+      }
+    },
     "features/inbox/components/navigation-sidebar.tsx": {
       "scopes": {
         "4/declaration/body/2/0/init/0/1/value": {
@@ -9271,6 +9411,14 @@
           "overrides": {},
           "content": "Rejected"
         },
+        "16/declaration/body/10/argument/1/expression/right": {
+          "type": "element",
+          "hash": "fce70517f1edc1f1054823ec6ea3d4f3",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Rejected"
+        },
         "16/declaration/body/3/0/init/0/0/value/body/0/expression/0": {
           "type": "element",
           "hash": "067bc23c322ecd55a58584a5be9c0fd3",
@@ -11311,6 +11459,14 @@
           "overrides": {},
           "content": "Products:"
         },
+        "12/declaration/body/13/argument/5/1/1/1/expression/0/body/1/3/1/3/expression/right/1": {
+          "type": "element",
+          "hash": "5fde4eb14b844f2809fded6c09afef52",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Products:"
+        },
         "13/declaration/body/11/argument/1/1/1/expression/right/1": {
           "type": "element",
           "hash": "686c41a04a17fdfafd9c43b9ced99e68",
@@ -13222,6 +13378,14 @@
         "21/declaration/body/9/body/1/expression/0": {
           "type": "element",
           "hash": "78efde626dafcc52e22f7f6b702998a0",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Tender was moved to analysis successfully, go to active tenders to see it"
+        },
+        "21/declaration/body/9/body/2/expression/0/1/value": {
+          "type": "element",
+          "hash": "db19ec4f7ea5522f60443270198a75af",
           "context": "",
           "skip": false,
           "overrides": {},

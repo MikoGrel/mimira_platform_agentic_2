@@ -5,9 +5,10 @@ import { Check, ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "$/components/ui/button";
 import { cn } from "$/lib/utils";
 import useEmblaCarousel from "embla-carousel-react";
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useState, type RefObject } from "react";
 import { motion } from "motion/react";
 import { InboxTenderPart } from "../api/use-tender-inbox-query";
+import { useScrollTrigger } from "$/hooks/use-scroll-trigger";
 
 interface TenderPartsCarouselProps {
   title?: string;
@@ -15,7 +16,7 @@ interface TenderPartsCarouselProps {
   selectedPart: string | null;
   onPartSelect: (partId: string) => void;
   approvedPartIds: Set<string>;
-  isCollapsed: boolean;
+  containerRef?: RefObject<HTMLElement | null>;
   className?: string;
 }
 
@@ -59,9 +60,10 @@ export function TenderPartsCarousel({
   selectedPart,
   onPartSelect,
   approvedPartIds,
-  isCollapsed,
+  containerRef,
   className,
 }: TenderPartsCarouselProps) {
+  const isCollapsed = useScrollTrigger({ threshold: 60, containerRef });
   const [emblaRef, emblaApi] = useEmblaCarousel({
     align: "start",
     containScroll: "trimSnaps",
