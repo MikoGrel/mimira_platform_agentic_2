@@ -5,6 +5,9 @@ import { Input } from "@heroui/input";
 import { Alert, Checkbox } from "@heroui/react";
 import { useFormStatus } from "react-dom";
 import { login } from "$/features/auth/actions";
+import useCurrentUser from "$/features/auth/api/use-current-user";
+import Link from "$/components/ui/link";
+import { MoveRight } from "lucide-react";
 
 interface LoginFormProps {
   error: string | null;
@@ -27,6 +30,8 @@ export default function LoginForm({
   onInputChange,
   onForgotPasswordClick,
 }: LoginFormProps) {
+  const { user } = useCurrentUser();
+
   return (
     <div className="flex flex-col gap-4">
       <div className="flex flex-col gap-3">
@@ -62,6 +67,12 @@ export default function LoginForm({
           </button>
         </div>
         <SubmitButton />
+        {user ? (
+          <Link href="/dashboard" className="text-sm text-primary text-center">
+            You are already logged as {user.profile?.first_name}{" "}
+            <MoveRight className="stroke-1 inline" />
+          </Link>
+        ) : null}
       </form>
     </div>
   );

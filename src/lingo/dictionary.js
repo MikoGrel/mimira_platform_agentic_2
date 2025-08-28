@@ -1,6 +1,45 @@
 export default {
   version: 0.1,
   files: {
+    "app/(platform)/dashboard/account/page.tsx": {
+      entries: {
+        "0/declaration/body/0/argument": {
+          content: {
+            en: "Account",
+            pl: "Konto",
+          },
+          hash: "01215c12fb1cdb93bd0c84c1382bef56",
+        },
+        "0/declaration/body/0/argument/1": {
+          content: {
+            en: "test",
+            pl: "test",
+          },
+          hash: "a39e9dc2362a143f4bf667baad88f49d",
+        },
+        "0/declaration/body/0/argument/1/1": {
+          content: {
+            en: "Account settings",
+            pl: "Ustawienia konta",
+          },
+          hash: "288c51e39a05a5e2a539d1c225a63133",
+        },
+        "1/declaration/body/0/argument/1/1": {
+          content: {
+            en: "Account settings",
+            pl: "Ustawienia konta",
+          },
+          hash: "288c51e39a05a5e2a539d1c225a63133",
+        },
+        "2/declaration/body/0/argument/1/1": {
+          content: {
+            en: "Account settings",
+            pl: "Ustawienia konta",
+          },
+          hash: "288c51e39a05a5e2a539d1c225a63133",
+        },
+      },
+    },
     "app/(platform)/dashboard/inbox/page.tsx": {
       entries: {
         "14/declaration/body/11/argument/1/1/1/3-placeholder": {
@@ -3143,6 +3182,57 @@ export default {
             },
             hash: "da9587ba0b6ea8ef30c5757770facff9",
           },
+        "17/declaration/body/6/0/init/body/0/0/0/alternate/alternate/0/argument":
+          {
+            content: {
+              en: "Next part",
+              pl: "Następna część",
+            },
+            hash: "3bebbe9909ebc2ae788c9038831ddb6e",
+          },
+        "17/declaration/body/6/0/init/body/0/0/0/alternate/consequent/0/argument":
+          {
+            content: {
+              en: "Save and continue",
+              pl: "Zapisz i kontynuuj",
+            },
+            hash: "fa60853b0e075c7c134e4bb3c7c59d82",
+          },
+        "17/declaration/body/6/0/init/body/0/0/0/consequent/0/argument": {
+          content: {
+            en: "Save and continue",
+            pl: "Zapisz i kontynuuj",
+          },
+          hash: "fa60853b0e075c7c134e4bb3c7c59d82",
+        },
+        "17/declaration/body/6/0/init/body/0/1/0/argument": {
+          content: {
+            en: "Save answers and continue",
+            pl: "Zapisz odpowiedzi i kontynuuj",
+          },
+          hash: "88f8c2a27083267af9d5b574332ac836",
+        },
+        "17/declaration/body/6/0/init/body/0/2/0/argument": {
+          content: {
+            en: "Upload documents and continue",
+            pl: "Prześlij dokumenty i kontynuuj",
+          },
+          hash: "db50aad354a83c0dc4788ddc4da3c3a4",
+        },
+        "17/declaration/body/6/0/init/body/0/3/0/argument": {
+          content: {
+            en: "Submit decision",
+            pl: "Zatwierdź decyzję",
+          },
+          hash: "0ecb8520d3ff84380f16ac46a864b24a",
+        },
+        "17/declaration/body/6/0/init/body/0/4/0/argument": {
+          content: {
+            en: "Next step",
+            pl: "Następny krok",
+          },
+          hash: "712c63650b5180cbc14d6246b5d558c2",
+        },
         "17/declaration/body/7/0/init/body/0/0/0/argument": {
           content: {
             en: "Confirm and continue",
@@ -3271,6 +3361,167 @@ export default {
             },
             hash: "da9587ba0b6ea8ef30c5757770facff9",
           },
+        "18/declaration/body/14/argument/1/1/expression/body/2/argument/1/1": {
+          content: {
+            en: "<element:MoveLeft></element:MoveLeft> Return",
+            pl: "<element:MoveLeft></element:MoveLeft> Powrót",
+          },
+          hash: "1e2ea95a1cc35caf5407cb56609d471b",
+        },
+        "18/declaration/body/14/argument/1/1/expression/body/2/argument/3/3/5/1/1":
+          {
+            content: {
+              en: "Previous step",
+              pl: "Poprzedni krok",
+            },
+            hash: "054a50e59feb6c034f1368261fbfa015",
+          },
+        "18/declaration/body/14/argument/1/1/expression/body/2/argument/3/3/5/1/3/3/expression/right":
+          {
+            content: {
+              en: "Reset",
+              pl: "Resetuj",
+            },
+            hash: "da9587ba0b6ea8ef30c5757770facff9",
+          },
+        "18/declaration/body/15/argument/1/1/expression/body/1/argument/1/1": {
+          content: {
+            en: "<element:MoveLeft></element:MoveLeft> Return",
+            pl: "<element:MoveLeft></element:MoveLeft> Powrót",
+          },
+          hash: "1e2ea95a1cc35caf5407cb56609d471b",
+        },
+        "18/declaration/body/15/argument/1/1/expression/body/1/argument/3/3/5/1/1":
+          {
+            content: {
+              en: "Previous step",
+              pl: "Poprzedni krok",
+            },
+            hash: "054a50e59feb6c034f1368261fbfa015",
+          },
+        "18/declaration/body/15/argument/1/1/expression/body/1/argument/3/3/5/1/3/3/expression/right":
+          {
+            content: {
+              en: "Reset",
+              pl: "Resetuj",
+            },
+            hash: "da9587ba0b6ea8ef30c5757770facff9",
+          },
+        "18/declaration/body/15/argument/1/1/expression/body/2/argument/1/1": {
+          content: {
+            en: "<element:MoveLeft></element:MoveLeft> Return",
+            pl: "<element:MoveLeft></element:MoveLeft> Powrót",
+          },
+          hash: "1e2ea95a1cc35caf5407cb56609d471b",
+        },
+        "18/declaration/body/15/argument/1/1/expression/body/2/argument/3/3/5/1/1":
+          {
+            content: {
+              en: "Previous step",
+              pl: "Poprzedni krok",
+            },
+            hash: "054a50e59feb6c034f1368261fbfa015",
+          },
+        "18/declaration/body/15/argument/1/1/expression/body/2/argument/3/3/5/1/3/3/expression/right":
+          {
+            content: {
+              en: "Reset",
+              pl: "Resetuj",
+            },
+            hash: "da9587ba0b6ea8ef30c5757770facff9",
+          },
+        "18/declaration/body/15/argument/1/1/expression/body/5/argument/1/1": {
+          content: {
+            en: "<element:MoveLeft></element:MoveLeft> Return",
+            pl: "<element:MoveLeft></element:MoveLeft> Powrót",
+          },
+          hash: "1e2ea95a1cc35caf5407cb56609d471b",
+        },
+        "18/declaration/body/15/argument/1/1/expression/body/5/argument/3/3/5/1/1":
+          {
+            content: {
+              en: "Previous step",
+              pl: "Poprzedni krok",
+            },
+            hash: "054a50e59feb6c034f1368261fbfa015",
+          },
+        "18/declaration/body/15/argument/1/1/expression/body/5/argument/3/3/5/1/3/3/expression/right":
+          {
+            content: {
+              en: "Reset",
+              pl: "Resetuj",
+            },
+            hash: "da9587ba0b6ea8ef30c5757770facff9",
+          },
+        "18/declaration/body/16/argument/1/1/expression/body/1/argument/1/1": {
+          content: {
+            en: "<element:MoveLeft></element:MoveLeft> Return",
+            pl: "<element:MoveLeft></element:MoveLeft> Powrót",
+          },
+          hash: "1e2ea95a1cc35caf5407cb56609d471b",
+        },
+        "18/declaration/body/16/argument/1/1/expression/body/1/argument/3/3/5/1/1":
+          {
+            content: {
+              en: "Previous step",
+              pl: "Poprzedni krok",
+            },
+            hash: "054a50e59feb6c034f1368261fbfa015",
+          },
+        "18/declaration/body/16/argument/1/1/expression/body/1/argument/3/3/5/1/3/3/expression/right":
+          {
+            content: {
+              en: "Reset",
+              pl: "Resetuj",
+            },
+            hash: "da9587ba0b6ea8ef30c5757770facff9",
+          },
+        "18/declaration/body/16/argument/1/1/expression/body/2/argument/1/1": {
+          content: {
+            en: "<element:MoveLeft></element:MoveLeft> Return",
+            pl: "<element:MoveLeft></element:MoveLeft> Powrót",
+          },
+          hash: "1e2ea95a1cc35caf5407cb56609d471b",
+        },
+        "18/declaration/body/16/argument/1/1/expression/body/2/argument/3/1": {
+          content: {
+            en: "<element:MoveLeft></element:MoveLeft> Return",
+            pl: "<element:MoveLeft></element:MoveLeft> Powrót",
+          },
+          hash: "1e2ea95a1cc35caf5407cb56609d471b",
+        },
+        "18/declaration/body/16/argument/1/1/expression/body/2/argument/3/3/5/1/1":
+          {
+            content: {
+              en: "Previous step",
+              pl: "Poprzedni krok",
+            },
+            hash: "054a50e59feb6c034f1368261fbfa015",
+          },
+        "18/declaration/body/16/argument/1/1/expression/body/2/argument/3/3/5/1/3/3/expression/right":
+          {
+            content: {
+              en: "Reset",
+              pl: "Resetuj",
+            },
+            hash: "da9587ba0b6ea8ef30c5757770facff9",
+          },
+        "18/declaration/body/16/argument/1/1/expression/body/2/argument/5/3/5/1/1":
+          {
+            content: {
+              en: "Previous step",
+              pl: "Poprzedni krok",
+            },
+            hash: "054a50e59feb6c034f1368261fbfa015",
+          },
+        "18/declaration/body/16/argument/1/1/expression/body/2/argument/5/3/5/1/3/3/expression/right":
+          {
+            content: {
+              en: "Reset",
+              pl: "Resetuj",
+            },
+            hash: "da9587ba0b6ea8ef30c5757770facff9",
+          },
         "18/declaration/body/17/0/init/body/0/0/0/alternate/alternate/0/argument":
           {
             content: {
@@ -3368,6 +3619,52 @@ export default {
             },
             hash: "da9587ba0b6ea8ef30c5757770facff9",
           },
+        "18/declaration/body/19/argument/1/1/expression/body/1/argument/1/1": {
+          content: {
+            en: "<element:MoveLeft></element:MoveLeft> Return",
+            pl: "<element:MoveLeft></element:MoveLeft> Powrót",
+          },
+          hash: "1e2ea95a1cc35caf5407cb56609d471b",
+        },
+        "18/declaration/body/19/argument/1/1/expression/body/1/argument/3/3/5/1/1":
+          {
+            content: {
+              en: "Previous step",
+              pl: "Poprzedni krok",
+            },
+            hash: "054a50e59feb6c034f1368261fbfa015",
+          },
+        "18/declaration/body/19/argument/1/1/expression/body/1/argument/3/3/5/1/3/3/expression/right":
+          {
+            content: {
+              en: "Reset",
+              pl: "Resetuj",
+            },
+            hash: "da9587ba0b6ea8ef30c5757770facff9",
+          },
+        "18/declaration/body/20/argument/1/1/expression/body/1/argument/1/1": {
+          content: {
+            en: "<element:MoveLeft></element:MoveLeft> Return",
+            pl: "<element:MoveLeft></element:MoveLeft> Powrót",
+          },
+          hash: "1e2ea95a1cc35caf5407cb56609d471b",
+        },
+        "18/declaration/body/20/argument/1/1/expression/body/1/argument/3/3/5/1/1":
+          {
+            content: {
+              en: "Previous step",
+              pl: "Poprzedni krok",
+            },
+            hash: "054a50e59feb6c034f1368261fbfa015",
+          },
+        "18/declaration/body/20/argument/1/1/expression/body/1/argument/3/3/5/1/3/3/expression/right":
+          {
+            content: {
+              en: "Reset",
+              pl: "Resetuj",
+            },
+            hash: "da9587ba0b6ea8ef30c5757770facff9",
+          },
         "18/declaration/body/25/argument/1/1/expression/body/1/argument/1/1": {
           content: {
             en: "<element:MoveLeft></element:MoveLeft> Return",
@@ -3414,12 +3711,35 @@ export default {
             },
             hash: "da9587ba0b6ea8ef30c5757770facff9",
           },
+        "18/declaration/body/7/0/init/body/0/0/0/alternate/alternate/0/argument":
+          {
+            content: {
+              en: "Next part",
+              pl: "Następna część",
+            },
+            hash: "3bebbe9909ebc2ae788c9038831ddb6e",
+          },
+        "18/declaration/body/7/0/init/body/0/0/0/alternate/consequent/0/argument":
+          {
+            content: {
+              en: "Save and continue",
+              pl: "Zapisz i kontynuuj",
+            },
+            hash: "fa60853b0e075c7c134e4bb3c7c59d82",
+          },
         "18/declaration/body/7/0/init/body/0/0/0/argument": {
           content: {
             en: "Confirm and continue",
             pl: "Potwierdź i kontynuuj",
           },
           hash: "cf9769910b0a62b4a349954de4652cbc",
+        },
+        "18/declaration/body/7/0/init/body/0/0/0/consequent/0/argument": {
+          content: {
+            en: "Save and continue",
+            pl: "Zapisz i kontynuuj",
+          },
+          hash: "fa60853b0e075c7c134e4bb3c7c59d82",
         },
         "18/declaration/body/7/0/init/body/0/1/0/argument": {
           content: {
@@ -3443,6 +3763,57 @@ export default {
           hash: "0ecb8520d3ff84380f16ac46a864b24a",
         },
         "18/declaration/body/7/0/init/body/0/4/0/argument": {
+          content: {
+            en: "Next step",
+            pl: "Następny krok",
+          },
+          hash: "712c63650b5180cbc14d6246b5d558c2",
+        },
+        "18/declaration/body/9/0/init/body/0/0/0/alternate/alternate/0/argument":
+          {
+            content: {
+              en: "Next part",
+              pl: "Następna część",
+            },
+            hash: "3bebbe9909ebc2ae788c9038831ddb6e",
+          },
+        "18/declaration/body/9/0/init/body/0/0/0/alternate/consequent/0/argument":
+          {
+            content: {
+              en: "Save and continue",
+              pl: "Zapisz i kontynuuj",
+            },
+            hash: "fa60853b0e075c7c134e4bb3c7c59d82",
+          },
+        "18/declaration/body/9/0/init/body/0/0/0/consequent/0/argument": {
+          content: {
+            en: "Save and continue",
+            pl: "Zapisz i kontynuuj",
+          },
+          hash: "fa60853b0e075c7c134e4bb3c7c59d82",
+        },
+        "18/declaration/body/9/0/init/body/0/1/0/argument": {
+          content: {
+            en: "Save answers and continue",
+            pl: "Zapisz odpowiedzi i kontynuuj",
+          },
+          hash: "88f8c2a27083267af9d5b574332ac836",
+        },
+        "18/declaration/body/9/0/init/body/0/2/0/argument": {
+          content: {
+            en: "Upload documents and continue",
+            pl: "Prześlij dokumenty i kontynuuj",
+          },
+          hash: "db50aad354a83c0dc4788ddc4da3c3a4",
+        },
+        "18/declaration/body/9/0/init/body/0/3/0/argument": {
+          content: {
+            en: "Submit decision",
+            pl: "Zatwierdź decyzję",
+          },
+          hash: "0ecb8520d3ff84380f16ac46a864b24a",
+        },
+        "18/declaration/body/9/0/init/body/0/4/0/argument": {
           content: {
             en: "Next step",
             pl: "Następny krok",
@@ -3814,6 +4185,62 @@ export default {
     },
     "app/(platform)/login/page.tsx": {
       entries: {
+        "10/declaration/body/0/expression/1": {
+          content: {
+            en: "Logged out successfully",
+            pl: "Wylogowano pomyślnie",
+          },
+          hash: "1dd7a3bce7f7d46670dbd5de79f32c93",
+        },
+        "10/declaration/body/2/argument/1/3/3": {
+          content: {
+            en: "Welcome back!",
+            pl: "Witamy ponownie!",
+          },
+          hash: "808098dce4fa0b1b9c4cfc57189f9da1",
+        },
+        "10/declaration/body/2/argument/1/3/5": {
+          content: {
+            en: "Log in to browse, analyze and manage your tenders.",
+            pl: "Zaloguj się, aby przeglądać, analizować i zarządzać swoimi przetargami.",
+          },
+          hash: "bc08d7a9c081e38025ff84e56960c8dc",
+        },
+        "10/declaration/body/2/argument/1/5/1": {
+          content: {
+            en: "Trusted by:",
+            pl: "Zaufali nam:",
+          },
+          hash: "2f30f0e419c4906cb48884c792d03a5a",
+        },
+        "10/declaration/body/2/argument/3/1/7/expression/right/1/1": {
+          content: {
+            en: "Set new password:",
+            pl: "Ustaw nowe hasło:",
+          },
+          hash: "fef2eba7a64725d8bf548d37ad221c19",
+        },
+        "10/declaration/body/2/argument/3/1/7/expression/right/1/3": {
+          content: {
+            en: "Enter your new password to complete the reset.",
+            pl: "Wprowadź nowe hasło, aby zakończyć resetowanie.",
+          },
+          hash: "e6f0375a05415ef76ac913bc3ff1e787",
+        },
+        "10/declaration/body/2/argument/3/1/7/expression/right/5": {
+          content: {
+            en: "Back to Login",
+            pl: "Powrót do logowania",
+          },
+          hash: "d4afb542f307d3cca9b1f46fab9e7103",
+        },
+        "10/declaration/body/2/argument/3/3": {
+          content: {
+            en: "You don't have an account?<element:Link>Contact us</element:Link>",
+            pl: "Nie masz konta?<element:Link>Skontaktuj się z nami</element:Link>",
+          },
+          hash: "560ab78ac75a5b5df43ae45aa64f171e",
+        },
         "11/declaration/body/0/expression/1": {
           content: {
             en: "Logged out successfully",
@@ -3843,6 +4270,41 @@ export default {
           hash: "2f30f0e419c4906cb48884c792d03a5a",
         },
         "11/declaration/body/10/argument/3/3": {
+          content: {
+            en: "You don't have an account?<element:Link>Contact us</element:Link>",
+            pl: "Nie masz konta?<element:Link>Skontaktuj się z nami</element:Link>",
+          },
+          hash: "560ab78ac75a5b5df43ae45aa64f171e",
+        },
+        "8/declaration/body/0/expression/1": {
+          content: {
+            en: "Logged out successfully",
+            pl: "Wylogowano pomyślnie",
+          },
+          hash: "1dd7a3bce7f7d46670dbd5de79f32c93",
+        },
+        "8/declaration/body/2/argument/1/3/3": {
+          content: {
+            en: "Welcome back!",
+            pl: "Witamy ponownie!",
+          },
+          hash: "808098dce4fa0b1b9c4cfc57189f9da1",
+        },
+        "8/declaration/body/2/argument/1/3/5": {
+          content: {
+            en: "Log in to browse, analyze and manage your tenders.",
+            pl: "Zaloguj się, aby przeglądać, analizować i zarządzać swoimi przetargami.",
+          },
+          hash: "bc08d7a9c081e38025ff84e56960c8dc",
+        },
+        "8/declaration/body/2/argument/1/5/1": {
+          content: {
+            en: "Trusted by:",
+            pl: "Zaufali nam:",
+          },
+          hash: "2f30f0e419c4906cb48884c792d03a5a",
+        },
+        "8/declaration/body/2/argument/3/3": {
           content: {
             en: "You don't have an account?<element:Link>Contact us</element:Link>",
             pl: "Nie masz konta?<element:Link>Skontaktuj się z nami</element:Link>",
@@ -3990,6 +4452,319 @@ export default {
         },
       },
     },
+    "features/auth/components/access-form.tsx": {
+      entries: {
+        "1/declaration/body/0/argument/1": {
+          content: {
+            en: "Access secttings",
+            pl: "Ustawienia dostępu",
+          },
+          hash: "a0e3a086cca141af7eece32d36de743f",
+        },
+        "1/declaration/body/0/argument/5/1-label": {
+          content: {
+            en: "Reset password",
+            pl: "Zresetuj hasło",
+          },
+          hash: "c21b33e73f096fd7b02171d399b36adf",
+        },
+        "1/declaration/body/0/argument/5/1-placeholder": {
+          content: {
+            en: "Enter your email",
+            pl: "Wprowadź swój e-mail",
+          },
+          hash: "39931962707c99b99a5a073ab579396b",
+        },
+        "1/declaration/body/0/argument/5/1/1-label": {
+          content: {
+            en: "Reset password",
+            pl: "Zresetuj hasło",
+          },
+          hash: "c21b33e73f096fd7b02171d399b36adf",
+        },
+        "1/declaration/body/0/argument/5/1/1-placeholder": {
+          content: {
+            en: "Enter your email",
+            pl: "Wprowadź swój e-mail",
+          },
+          hash: "39931962707c99b99a5a073ab579396b",
+        },
+        "1/declaration/body/0/argument/5/1/1/openingElement/2/value/expression":
+          {
+            content: {
+              en: "Subscribe",
+              pl: "Subskrybuj",
+            },
+            hash: "c240955c0631271dee75a99790da7407",
+          },
+        "1/declaration/body/0/argument/5/1/1/openingElement/3/value/expression":
+          {
+            content: {
+              en: "Send reset link",
+              pl: "Wyślij link do resetowania",
+            },
+            hash: "f023f6fcc32d2725626ed968ad1cdfb5",
+          },
+        "1/declaration/body/0/argument/5/1/openingElement/3/value/expression": {
+          content: {
+            en: "Send reset link",
+            pl: "Wyślij link resetujący",
+          },
+          hash: "7a7fb8592a421245faf5effca13a4325",
+        },
+        "2/declaration/body/1/argument/1": {
+          content: {
+            en: "Access secttings",
+            pl: "Ustawienia dostępu",
+          },
+          hash: "a0e3a086cca141af7eece32d36de743f",
+        },
+        "2/declaration/body/1/argument/5/1-label": {
+          content: {
+            en: "Reset password",
+            pl: "Zresetuj hasło",
+          },
+          hash: "c21b33e73f096fd7b02171d399b36adf",
+        },
+        "2/declaration/body/1/argument/5/1/openingElement/4/value/expression": {
+          content: {
+            en: "Send reset link",
+            pl: "Wyślij link resetujący",
+          },
+          hash: "7a7fb8592a421245faf5effca13a4325",
+        },
+        "2/declaration/body/1/argument/5/1/openingElement/5/value/expression": {
+          content: {
+            en: "Send reset link",
+            pl: "Wyślij link resetujący",
+          },
+          hash: "7a7fb8592a421245faf5effca13a4325",
+        },
+        "3/declaration/body/2/argument/1": {
+          content: {
+            en: "Access secttings",
+            pl: "Ustawienia dostępu",
+          },
+          hash: "a0e3a086cca141af7eece32d36de743f",
+        },
+        "3/declaration/body/2/argument/5/1-label": {
+          content: {
+            en: "Reset password",
+            pl: "Zresetuj hasło",
+          },
+          hash: "c21b33e73f096fd7b02171d399b36adf",
+        },
+        "3/declaration/body/2/argument/5/1/openingElement/2/value/expression/body-label":
+          {
+            content: {
+              en: "Reset password",
+              pl: "Zresetuj hasło",
+            },
+            hash: "c21b33e73f096fd7b02171d399b36adf",
+          },
+        "3/declaration/body/2/argument/5/1/openingElement/2/value/expression/body/openingElement/7/value/expression":
+          {
+            content: {
+              en: "Send reset link",
+              pl: "Wyślij link resetujący",
+            },
+            hash: "e0b337512026f87e914d1ace024a8999",
+          },
+        "3/declaration/body/2/argument/5/1/openingElement/3/value/expression": {
+          content: {
+            en: "Send reset link",
+            pl: "Wyślij link resetujący",
+          },
+          hash: "7a7fb8592a421245faf5effca13a4325",
+        },
+        "4/declaration/body/3/argument/1": {
+          content: {
+            en: "Access secttings",
+            pl: "Ustawienia dostępu",
+          },
+          hash: "a0e3a086cca141af7eece32d36de743f",
+        },
+        "4/declaration/body/3/argument/5/1/openingElement/2/value/expression/body-label":
+          {
+            content: {
+              en: "Reset password",
+              pl: "Zresetuj hasło",
+            },
+            hash: "c21b33e73f096fd7b02171d399b36adf",
+          },
+        "4/declaration/body/3/argument/5/1/openingElement/2/value/expression/body/openingElement/7/value/expression":
+          {
+            content: {
+              en: "Send reset link",
+              pl: "Wyślij link resetujący",
+            },
+            hash: "e0b337512026f87e914d1ace024a8999",
+          },
+        "5/declaration/body/3/argument/1": {
+          content: {
+            en: "Access secttings",
+            pl: "Ustawienia dostępu",
+          },
+          hash: "a0e3a086cca141af7eece32d36de743f",
+        },
+        "5/declaration/body/3/argument/5/1/openingElement/2/value/expression/body-label":
+          {
+            content: {
+              en: "Reset password",
+              pl: "Zresetuj hasło",
+            },
+            hash: "c21b33e73f096fd7b02171d399b36adf",
+          },
+        "5/declaration/body/3/argument/5/1/openingElement/2/value/expression/body/openingElement/7/value/expression":
+          {
+            content: {
+              en: "Send reset link",
+              pl: "Wyślij link resetujący",
+            },
+            hash: "e0b337512026f87e914d1ace024a8999",
+          },
+        "6/declaration/body/4/argument/1": {
+          content: {
+            en: "Access secttings",
+            pl: "Ustawienia dostępu",
+          },
+          hash: "a0e3a086cca141af7eece32d36de743f",
+        },
+        "6/declaration/body/4/argument/5/1/openingElement/2/value/expression/body-label":
+          {
+            content: {
+              en: "Reset password",
+              pl: "Zresetuj hasło",
+            },
+            hash: "c21b33e73f096fd7b02171d399b36adf",
+          },
+        "6/declaration/body/4/argument/5/1/openingElement/2/value/expression/body/openingElement/7/value/expression":
+          {
+            content: {
+              en: "Reset password email sent to Send reset link",
+              pl: "Wyślij link resetujący",
+            },
+            hash: "e0b337512026f87e914d1ace024a8999",
+          },
+        "7/declaration/body/6/argument/1": {
+          content: {
+            en: "Access settings",
+            pl: "Ustawienia dostępu",
+          },
+          hash: "5e3d46795ff47e27f5b47e6e574e98ae",
+        },
+        "7/declaration/body/6/argument/5/1/expression/alternate/openingElement/2/value/expression/body-label":
+          {
+            content: {
+              en: "Reset password",
+              pl: "Zresetuj hasło",
+            },
+            hash: "c21b33e73f096fd7b02171d399b36adf",
+          },
+        "7/declaration/body/6/argument/5/1/expression/alternate/openingElement/2/value/expression/body/openingElement/7/value/expression":
+          {
+            content: {
+              en: "Send link",
+              pl: "E-mail z linkiem do resetowania hasła został wysłany",
+            },
+            hash: "1a27e74219140ef32ebee785ab271d40",
+          },
+        "7/declaration/body/6/argument/5/1/expression/alternate/openingElement/2/value/expression/body/openingElement/7/value/expression/1":
+          {
+            content: {
+              en: "Send link",
+              pl: "Wyślij link",
+            },
+            hash: "c7ca704b7e1cac40862f9ee51d6d9aea",
+          },
+        "7/declaration/body/6/argument/5/1/expression/alternate/openingElement/2/value/expression/body/openingElement/7/value/expression/openingElement/0/value/expression/body/1/expression/0":
+          {
+            content: {
+              en: "Reset password email sent to {field.value}",
+              pl: "E-mail z linkiem do resetowania hasła został wysłany na adres {field.value}",
+            },
+            hash: "2910988c83be96fc8da5e8c779e7e787",
+          },
+        "7/declaration/body/7/argument/1": {
+          content: {
+            en: "Access settings",
+            pl: "Ustawienia dostępu",
+          },
+          hash: "5e3d46795ff47e27f5b47e6e574e98ae",
+        },
+        "7/declaration/body/7/argument/5/1/expression/alternate/openingElement/2/value/expression/body-label":
+          {
+            content: {
+              en: "Reset password",
+              pl: "Zresetuj hasło",
+            },
+            hash: "c21b33e73f096fd7b02171d399b36adf",
+          },
+        "7/declaration/body/7/argument/5/1/expression/alternate/openingElement/2/value/expression/body/openingElement/7/value/expression":
+          {
+            content: {
+              en: "Send link",
+              pl: "E-mail z linkiem do resetowania hasła został wysłany",
+            },
+            hash: "1a27e74219140ef32ebee785ab271d40",
+          },
+        "7/declaration/body/7/argument/5/1/expression/consequent/1/1/openingElement/2/value/expression/body-label":
+          {
+            content: {
+              en: "New password",
+              pl: "Nowe hasło",
+            },
+            hash: "c3e35b0671004c7bbd9fa9b9654744d7",
+          },
+        "7/declaration/body/7/argument/5/1/expression/consequent/1/3/openingElement/2/value/expression/body-label":
+          {
+            content: {
+              en: "Confirm password",
+              pl: "Potwierdź hasło",
+            },
+            hash: "b5cdb861d8deb598b0613d48098b82b6",
+          },
+        "8/declaration/body/6/argument/1": {
+          content: {
+            en: "Access settings",
+            pl: "Ustawienia dostępu",
+          },
+          hash: "5e3d46795ff47e27f5b47e6e574e98ae",
+        },
+        "8/declaration/body/6/argument/5/1/expression/alternate/openingElement/2/value/expression/body-label":
+          {
+            content: {
+              en: "Reset password",
+              pl: "Zresetuj hasło",
+            },
+            hash: "c21b33e73f096fd7b02171d399b36adf",
+          },
+        "8/declaration/body/6/argument/5/1/expression/alternate/openingElement/2/value/expression/body/openingElement/7/value/expression":
+          {
+            content: {
+              en: "Send link",
+              pl: "E-mail z linkiem do resetowania hasła został wysłany",
+            },
+            hash: "1a27e74219140ef32ebee785ab271d40",
+          },
+        "8/declaration/body/6/argument/5/1/expression/alternate/openingElement/2/value/expression/body/openingElement/7/value/expression/1":
+          {
+            content: {
+              en: "Send link",
+              pl: "Wyślij link",
+            },
+            hash: "c7ca704b7e1cac40862f9ee51d6d9aea",
+          },
+        "8/declaration/body/6/argument/5/1/expression/alternate/openingElement/2/value/expression/body/openingElement/7/value/expression/openingElement/0/value/expression/body/1/expression/0":
+          {
+            content: {
+              en: "Reset password email sent to {field.value}",
+              pl: "E-mail z linkiem do resetowania hasła został wysłany na adres {field.value}",
+            },
+            hash: "2910988c83be96fc8da5e8c779e7e787",
+          },
+      },
+    },
     "features/auth/components/email-sent-message.tsx": {
       entries: {
         "3/declaration/body/0/argument/1/3": {
@@ -4031,6 +4806,48 @@ export default {
           },
           hash: "8348c4baada14cc0ae5abbe99d96f98e",
         },
+        "6/declaration/body/5/argument/1/1": {
+          content: {
+            en: "Reset Password:",
+            pl: "Resetowanie hasła:",
+          },
+          hash: "f879d60ac5b417206b5dba472fd18fbb",
+        },
+        "6/declaration/body/5/argument/1/3": {
+          content: {
+            en: "Enter your email address and we'll send you a link to reset your password",
+            pl: "Wprowadź swój adres e-mail, a wyślemy Ci link do zresetowania hasła",
+          },
+          hash: "6e820fc1a74664b8acdb6f563412e0b0",
+        },
+        "6/declaration/body/5/argument/3/3-label": {
+          content: {
+            en: "Email",
+            pl: "E-mail",
+          },
+          hash: "e7f34943a0c2fb849db1839ff6ef5cb5",
+        },
+        "6/declaration/body/5/argument/3/3-placeholder": {
+          content: {
+            en: "Enter your email address",
+            pl: "Wprowadź swój adres e-mail",
+          },
+          hash: "9bc008365ebe3e404e241c8ca876f56e",
+        },
+        "6/declaration/body/5/argument/3/5": {
+          content: {
+            en: "Send Reset Link",
+            pl: "Wyślij link resetujący",
+          },
+          hash: "0de8cdabf0744e2a7d87ddf2f4cb4466",
+        },
+        "6/declaration/body/5/argument/3/7": {
+          content: {
+            en: "Back to Login",
+            pl: "Powrót do logowania",
+          },
+          hash: "af1fe3e18ab8816b295086f5caa19bbb",
+        },
         "7/declaration/body/0/argument/1/1": {
           content: {
             en: "Reset Password:",
@@ -4070,6 +4887,55 @@ export default {
     },
     "features/auth/components/login-form.tsx": {
       entries: {
+        "10/declaration/body/1/argument/1/1/expression/consequent": {
+          content: {
+            en: "You are already logged as <expression/> <element:MoveRight></element:MoveRight>",
+            pl: "Jesteś już zalogowany jako <expression/> <element:MoveRight></element:MoveRight>",
+          },
+          hash: "e6fbc66356f1257e0ff96c97bb5abbea",
+        },
+        "10/declaration/body/1/argument/1/3": {
+          content: {
+            en: "Log in:",
+            pl: "Zaloguj się:",
+          },
+          hash: "8ef279de0a4c87e9b25cef41ab9651f0",
+        },
+        "10/declaration/body/1/argument/1/5": {
+          content: {
+            en: "Enter your email address and password to enter your dashboard",
+            pl: "Wprowadź swój adres e-mail i hasło, aby uzyskać dostęp do panelu",
+          },
+          hash: "78c8c873e0f2083d7ed85523a68a72e7",
+        },
+        "10/declaration/body/1/argument/3/3-label": {
+          content: {
+            en: "Email",
+            pl: "E-mail",
+          },
+          hash: "e7f34943a0c2fb849db1839ff6ef5cb5",
+        },
+        "10/declaration/body/1/argument/3/5-label": {
+          content: {
+            en: "Password",
+            pl: "Hasło",
+          },
+          hash: "223a61cf906ab9c40d22612c588dff48",
+        },
+        "10/declaration/body/1/argument/3/7/1": {
+          content: {
+            en: "Remember me",
+            pl: "Zapamiętaj mnie",
+          },
+          hash: "afc02ff1df56ecf8493e9e201592d764",
+        },
+        "10/declaration/body/1/argument/3/7/3": {
+          content: {
+            en: "Forgot password?",
+            pl: "Zapomniałeś hasła?",
+          },
+          hash: "4a0a69c05d0946a79ac6cc32bbb3c615",
+        },
         "6/body/1/argument": {
           content: {
             en: "Log in",
@@ -4118,6 +4984,650 @@ export default {
             pl: "Zapomniałeś hasła?",
           },
           hash: "4a0a69c05d0946a79ac6cc32bbb3c615",
+        },
+        "9/body/1/argument": {
+          content: {
+            en: "Log in",
+            pl: "Zaloguj się",
+          },
+          hash: "f902082746b643593b910bcd7d1ebcf9",
+        },
+      },
+    },
+    "features/auth/components/password-update-form.tsx": {
+      entries: {
+        "6/declaration/body/2/0/init/0/body/3/expression/0": {
+          content: {
+            en: "Password updated. You can now sign in",
+            pl: "Hasło zostało zaktualizowane. Możesz się teraz zalogować.",
+          },
+          hash: "26ee7d597f6edd41d21c00bb3a5e015f",
+        },
+        "6/declaration/body/3/argument/1/1/openingElement/3/value/expression/body-label":
+          {
+            content: {
+              en: "New password",
+              pl: "Nowe hasło",
+            },
+            hash: "c3e35b0671004c7bbd9fa9b9654744d7",
+          },
+        "6/declaration/body/3/argument/1/3/openingElement/3/value/expression/body-label":
+          {
+            content: {
+              en: "Confirm password",
+              pl: "Potwierdź hasło",
+            },
+            hash: "b5cdb861d8deb598b0613d48098b82b6",
+          },
+        "6/declaration/body/3/argument/1/5": {
+          content: {
+            en: "Update password",
+            pl: "Zaktualizuj hasło",
+          },
+          hash: "90615ba025a6dd38b03325497c2d58d1",
+        },
+      },
+    },
+    "features/auth/components/profile-form.tsx": {
+      entries: {
+        "4/declaration/body/4/argument": {
+          content: {
+            en: "<element:Input></element:Input><element:Input></element:Input><element:Select><element:SelectItem>English (US)</element:SelectItem><element:SelectItem>Polish (PL)</element:SelectItem></element:Select><element:Select><element:SelectItem>English (US)</element:SelectItem><element:SelectItem>Polish (PL)</element:SelectItem></element:Select> )} /><element:Button>Save</element:Button>",
+            pl: "<element:Input></element:Input><element:Input></element:Input><element:Select><element:SelectItem>Angielski (US)</element:SelectItem><element:SelectItem>Polski (PL)</element:SelectItem></element:Select><element:Select><element:SelectItem>Angielski (US)</element:SelectItem><element:SelectItem>Polski (PL)</element:SelectItem></element:Select> )} /><element:Button>Zapisz</element:Button>",
+          },
+          hash: "08d33be7da82a662eec9f8dc0558cd9a",
+        },
+        "4/declaration/body/4/argument/1-placeholder": {
+          content: {
+            en: "First name",
+            pl: "Imię",
+          },
+          hash: "9a22c348ecef9bbdb8934eb2e6fb873c",
+        },
+        "4/declaration/body/4/argument/1/1-placeholder": {
+          content: {
+            en: "First name",
+            pl: "Imię",
+          },
+          hash: "9a22c348ecef9bbdb8934eb2e6fb873c",
+        },
+        "4/declaration/body/4/argument/1/3-placeholder": {
+          content: {
+            en: "Last name",
+            pl: "Nazwisko",
+          },
+          hash: "b6485b5d256edb09ef2a8cade41120d2",
+        },
+        "4/declaration/body/4/argument/1/5/openingElement/2/value/expression/body-placeholder":
+          {
+            content: {
+              en: "Preferred locale",
+              pl: "Preferowany język",
+            },
+            hash: "5bd2227168801d9e0bbf6fed40bd547f",
+          },
+        "4/declaration/body/4/argument/1/5/openingElement/2/value/expression/body/1/1":
+          {
+            content: {
+              en: "English (US)",
+              pl: "Angielski (US)",
+            },
+            hash: "368aefd02ea6b7e202e8f742a34b7b28",
+          },
+        "4/declaration/body/4/argument/1/5/openingElement/2/value/expression/body/3/1":
+          {
+            content: {
+              en: "Polish (PL)",
+              pl: "Polski (PL)",
+            },
+            hash: "2d3315dd3f92394aa464a2ff5d746167",
+          },
+        "4/declaration/body/4/argument/1/7": {
+          content: {
+            en: "Save",
+            pl: "Zapisz",
+          },
+          hash: "6b4ccc24fb585a9004e0b337668e9371",
+        },
+        "4/declaration/body/4/argument/3-placeholder": {
+          content: {
+            en: "Last name",
+            pl: "Nazwisko",
+          },
+          hash: "b6485b5d256edb09ef2a8cade41120d2",
+        },
+        "4/declaration/body/4/argument/5-placeholder": {
+          content: {
+            en: "Preferred locale",
+            pl: "Preferowany język",
+          },
+          hash: "5bd2227168801d9e0bbf6fed40bd547f",
+        },
+        "4/declaration/body/4/argument/5/openingElement/2/value/expression/body-placeholder":
+          {
+            content: {
+              en: "Preferred locale",
+              pl: "Preferowany język",
+            },
+            hash: "5bd2227168801d9e0bbf6fed40bd547f",
+          },
+        "4/declaration/body/4/argument/5/openingElement/2/value/expression/body/1":
+          {
+            content: {
+              en: "English (US)",
+              pl: "Angielski (US)",
+            },
+            hash: "368aefd02ea6b7e202e8f742a34b7b28",
+          },
+        "4/declaration/body/4/argument/5/openingElement/2/value/expression/body/1/1":
+          {
+            content: {
+              en: "English (US)",
+              pl: "Angielski (US)",
+            },
+            hash: "368aefd02ea6b7e202e8f742a34b7b28",
+          },
+        "4/declaration/body/4/argument/5/openingElement/2/value/expression/body/3":
+          {
+            content: {
+              en: "Polish (PL)",
+              pl: "Polski (PL)",
+            },
+            hash: "2d3315dd3f92394aa464a2ff5d746167",
+          },
+        "4/declaration/body/4/argument/5/openingElement/2/value/expression/body/3/1":
+          {
+            content: {
+              en: "Polish (PL)",
+              pl: "Polski (PL)",
+            },
+            hash: "2d3315dd3f92394aa464a2ff5d746167",
+          },
+        "4/declaration/body/4/argument/7": {
+          content: {
+            en: "Save",
+            pl: "Zapisz",
+          },
+          hash: "36f3285809f644598a63487820024dec",
+        },
+        "4/declaration/body/4/argument/7-placeholder": {
+          content: {
+            en: "Preferred locale",
+            pl: "Preferowany język",
+          },
+          hash: "5bd2227168801d9e0bbf6fed40bd547f",
+        },
+        "5/declaration/body/4/argument/1/1-placeholder": {
+          content: {
+            en: "First name",
+            pl: "Imię",
+          },
+          hash: "9a22c348ecef9bbdb8934eb2e6fb873c",
+        },
+        "5/declaration/body/4/argument/1/3-placeholder": {
+          content: {
+            en: "Last name",
+            pl: "Nazwisko",
+          },
+          hash: "b6485b5d256edb09ef2a8cade41120d2",
+        },
+        "5/declaration/body/4/argument/1/5/openingElement/2/value/expression/body-placeholder":
+          {
+            content: {
+              en: "Preferred locale",
+              pl: "Preferowany język",
+            },
+            hash: "5bd2227168801d9e0bbf6fed40bd547f",
+          },
+        "5/declaration/body/4/argument/1/5/openingElement/2/value/expression/body/1/1":
+          {
+            content: {
+              en: "English (US)",
+              pl: "Angielski (US)",
+            },
+            hash: "368aefd02ea6b7e202e8f742a34b7b28",
+          },
+        "5/declaration/body/4/argument/1/5/openingElement/2/value/expression/body/3/1":
+          {
+            content: {
+              en: "Polish (PL)",
+              pl: "Polski (PL)",
+            },
+            hash: "2d3315dd3f92394aa464a2ff5d746167",
+          },
+        "5/declaration/body/4/argument/1/7": {
+          content: {
+            en: "Save",
+            pl: "Zapisz",
+          },
+          hash: "6b4ccc24fb585a9004e0b337668e9371",
+        },
+        "5/declaration/body/5/argument/1": {
+          content: {
+            en: "Edit profile",
+            pl: "Edytuj profil",
+          },
+          hash: "3b63f81408ad40f830cc9760f09ae5cb",
+        },
+        "5/declaration/body/5/argument/1/1": {
+          content: {
+            en: "Account settings",
+            pl: "Ustawienia konta",
+          },
+          hash: "df8e9882a1f5c75951f3a05ddfed72ba",
+        },
+        "5/declaration/body/5/argument/1/1-placeholder": {
+          content: {
+            en: "First name",
+            pl: "Imię",
+          },
+          hash: "9a22c348ecef9bbdb8934eb2e6fb873c",
+        },
+        "5/declaration/body/5/argument/1/1/1-placeholder": {
+          content: {
+            en: "First name",
+            pl: "Imię",
+          },
+          hash: "9a22c348ecef9bbdb8934eb2e6fb873c",
+        },
+        "5/declaration/body/5/argument/1/1/1/1-placeholder": {
+          content: {
+            en: "First name",
+            pl: "Imię",
+          },
+          hash: "9a22c348ecef9bbdb8934eb2e6fb873c",
+        },
+        "5/declaration/body/5/argument/1/1/1/1/openingElement/2/value/expression/body-label":
+          {
+            content: {
+              en: "First name",
+              pl: "Imię",
+            },
+            hash: "9a22c348ecef9bbdb8934eb2e6fb873c",
+          },
+        "5/declaration/body/5/argument/1/1/1/1/openingElement/2/value/expression/body-placeholder":
+          {
+            content: {
+              en: "Enter first name",
+              pl: "Wpisz imię",
+            },
+            hash: "44cb37faa04b9f426ffcc9392344f231",
+          },
+        "5/declaration/body/5/argument/1/1/1/3-placeholder": {
+          content: {
+            en: "Last name",
+            pl: "Nazwisko",
+          },
+          hash: "b6485b5d256edb09ef2a8cade41120d2",
+        },
+        "5/declaration/body/5/argument/1/1/1/3/openingElement/2/value/expression/body-label":
+          {
+            content: {
+              en: "Last name",
+              pl: "Nazwisko",
+            },
+            hash: "b6485b5d256edb09ef2a8cade41120d2",
+          },
+        "5/declaration/body/5/argument/1/1/1/3/openingElement/2/value/expression/body-placeholder":
+          {
+            content: {
+              en: "Enter last name",
+              pl: "Wpisz nazwisko",
+            },
+            hash: "f03bd3958259094998353ecba1518c78",
+          },
+        "5/declaration/body/5/argument/1/1/1/5/openingElement/2/value/expression/body-label":
+          {
+            content: {
+              en: "Preferred locale",
+              pl: "Preferowany język",
+            },
+            hash: "5bd2227168801d9e0bbf6fed40bd547f",
+          },
+        "5/declaration/body/5/argument/1/1/1/5/openingElement/2/value/expression/body-placeholder":
+          {
+            content: {
+              en: "Select preferred locale",
+              pl: "Wybierz preferowany język",
+            },
+            hash: "1dcda4398a1fe2444c05bc553cd19682",
+          },
+        "5/declaration/body/5/argument/1/1/1/7": {
+          content: {
+            en: "Save",
+            pl: "Zapisz",
+          },
+          hash: "727d97b690659a69248738bdd46e8806",
+        },
+        "5/declaration/body/5/argument/1/1/3-placeholder": {
+          content: {
+            en: "Last name",
+            pl: "Nazwisko",
+          },
+          hash: "b6485b5d256edb09ef2a8cade41120d2",
+        },
+        "5/declaration/body/5/argument/1/1/5/openingElement/2/value/expression/body-placeholder":
+          {
+            content: {
+              en: "Preferred locale",
+              pl: "Preferowany język",
+            },
+            hash: "5bd2227168801d9e0bbf6fed40bd547f",
+          },
+        "5/declaration/body/5/argument/1/1/7": {
+          content: {
+            en: "Save",
+            pl: "Zapisz",
+          },
+          hash: "5e8c62ddaad4ff4e4b011305580adcb6",
+        },
+        "5/declaration/body/5/argument/1/3-placeholder": {
+          content: {
+            en: "Last name",
+            pl: "Nazwisko",
+          },
+          hash: "b6485b5d256edb09ef2a8cade41120d2",
+        },
+        "5/declaration/body/5/argument/1/3/1/1-placeholder": {
+          content: {
+            en: "First name",
+            pl: "Imię",
+          },
+          hash: "9a22c348ecef9bbdb8934eb2e6fb873c",
+        },
+        "5/declaration/body/5/argument/1/3/1/3-placeholder": {
+          content: {
+            en: "Last name",
+            pl: "Nazwisko",
+          },
+          hash: "b6485b5d256edb09ef2a8cade41120d2",
+        },
+        "5/declaration/body/5/argument/1/3/1/5/openingElement/2/value/expression/body-placeholder":
+          {
+            content: {
+              en: "Preferred locale",
+              pl: "Preferowany język",
+            },
+            hash: "5bd2227168801d9e0bbf6fed40bd547f",
+          },
+        "5/declaration/body/5/argument/1/3/1/7": {
+          content: {
+            en: "Save",
+            pl: "Zapisz",
+          },
+          hash: "727d97b690659a69248738bdd46e8806",
+        },
+        "5/declaration/body/5/argument/1/5/openingElement/2/value/expression/body-placeholder":
+          {
+            content: {
+              en: "Preferred locale",
+              pl: "Preferowany język",
+            },
+            hash: "5bd2227168801d9e0bbf6fed40bd547f",
+          },
+        "5/declaration/body/5/argument/1/5/openingElement/2/value/expression/body/1/1":
+          {
+            content: {
+              en: "English (US)",
+              pl: "Angielski (US)",
+            },
+            hash: "368aefd02ea6b7e202e8f742a34b7b28",
+          },
+        "5/declaration/body/5/argument/1/5/openingElement/2/value/expression/body/3/1":
+          {
+            content: {
+              en: "Polish (PL)",
+              pl: "Polski (PL)",
+            },
+            hash: "2d3315dd3f92394aa464a2ff5d746167",
+          },
+        "5/declaration/body/5/argument/1/7": {
+          content: {
+            en: "Save",
+            pl: "Zapisz",
+          },
+          hash: "6b4ccc24fb585a9004e0b337668e9371",
+        },
+        "5/declaration/body/5/argument/3/1/1/1-placeholder": {
+          content: {
+            en: "First name",
+            pl: "Imię",
+          },
+          hash: "9a22c348ecef9bbdb8934eb2e6fb873c",
+        },
+        "5/declaration/body/5/argument/3/1/1/3-placeholder": {
+          content: {
+            en: "Last name",
+            pl: "Nazwisko",
+          },
+          hash: "b6485b5d256edb09ef2a8cade41120d2",
+        },
+        "5/declaration/body/5/argument/3/1/1/5/openingElement/2/value/expression/body-placeholder":
+          {
+            content: {
+              en: "Preferred locale",
+              pl: "Preferowany język",
+            },
+            hash: "5bd2227168801d9e0bbf6fed40bd547f",
+          },
+        "5/declaration/body/5/argument/3/1/1/7": {
+          content: {
+            en: "Save",
+            pl: "Zapisz",
+          },
+          hash: "727d97b690659a69248738bdd46e8806",
+        },
+        "5/declaration/body/5/argument/5/1/1/1-label": {
+          content: {
+            en: "First name",
+            pl: "Imię",
+          },
+          hash: "9a22c348ecef9bbdb8934eb2e6fb873c",
+        },
+        "5/declaration/body/5/argument/5/1/1/1-placeholder": {
+          content: {
+            en: "Enter first name",
+            pl: "Wpisz imię",
+          },
+          hash: "44cb37faa04b9f426ffcc9392344f231",
+        },
+        "5/declaration/body/5/argument/5/1/1/1/openingElement/2/value/expression/body-label":
+          {
+            content: {
+              en: "First name",
+              pl: "Imię",
+            },
+            hash: "9a22c348ecef9bbdb8934eb2e6fb873c",
+          },
+        "5/declaration/body/5/argument/5/1/1/1/openingElement/2/value/expression/body-placeholder":
+          {
+            content: {
+              en: "Enter first name",
+              pl: "Wpisz imię",
+            },
+            hash: "44cb37faa04b9f426ffcc9392344f231",
+          },
+        "5/declaration/body/5/argument/5/1/1/3-label": {
+          content: {
+            en: "Last name",
+            pl: "Nazwisko",
+          },
+          hash: "b6485b5d256edb09ef2a8cade41120d2",
+        },
+        "5/declaration/body/5/argument/5/1/1/3-placeholder": {
+          content: {
+            en: "Enter last name",
+            pl: "Wpisz nazwisko",
+          },
+          hash: "f03bd3958259094998353ecba1518c78",
+        },
+        "5/declaration/body/5/argument/5/1/1/3/openingElement/2/value/expression/body-label":
+          {
+            content: {
+              en: "Last name",
+              pl: "Nazwisko",
+            },
+            hash: "b6485b5d256edb09ef2a8cade41120d2",
+          },
+        "5/declaration/body/5/argument/5/1/1/3/openingElement/2/value/expression/body-placeholder":
+          {
+            content: {
+              en: "Enter last name",
+              pl: "Wpisz nazwisko",
+            },
+            hash: "f03bd3958259094998353ecba1518c78",
+          },
+        "5/declaration/body/5/argument/5/1/1/5/openingElement/2/value/expression/body-label":
+          {
+            content: {
+              en: "Preferred locale",
+              pl: "Preferowany język",
+            },
+            hash: "5bd2227168801d9e0bbf6fed40bd547f",
+          },
+        "5/declaration/body/5/argument/5/1/1/5/openingElement/2/value/expression/body-placeholder":
+          {
+            content: {
+              en: "Select preferred locale",
+              pl: "Wybierz preferowany język",
+            },
+            hash: "1dcda4398a1fe2444c05bc553cd19682",
+          },
+        "5/declaration/body/5/argument/5/1/1/7": {
+          content: {
+            en: "Save",
+            pl: "Zapisz",
+          },
+          hash: "727d97b690659a69248738bdd46e8806",
+        },
+        "6/declaration/body/5/argument/1/1-placeholder": {
+          content: {
+            en: "First name",
+            pl: "Imię",
+          },
+          hash: "9a22c348ecef9bbdb8934eb2e6fb873c",
+        },
+        "6/declaration/body/5/argument/1/3-placeholder": {
+          content: {
+            en: "Last name",
+            pl: "Nazwisko",
+          },
+          hash: "b6485b5d256edb09ef2a8cade41120d2",
+        },
+        "6/declaration/body/5/argument/1/5/openingElement/2/value/expression/body-placeholder":
+          {
+            content: {
+              en: "Preferred locale",
+              pl: "Preferowany język",
+            },
+            hash: "5bd2227168801d9e0bbf6fed40bd547f",
+          },
+        "6/declaration/body/5/argument/1/5/openingElement/2/value/expression/body/1/1":
+          {
+            content: {
+              en: "English (US)",
+              pl: "Angielski (US)",
+            },
+            hash: "368aefd02ea6b7e202e8f742a34b7b28",
+          },
+        "6/declaration/body/5/argument/1/5/openingElement/2/value/expression/body/3/1":
+          {
+            content: {
+              en: "Polish (PL)",
+              pl: "Polski (PL)",
+            },
+            hash: "2d3315dd3f92394aa464a2ff5d746167",
+          },
+        "6/declaration/body/5/argument/1/7": {
+          content: {
+            en: "Save",
+            pl: "Zapisz",
+          },
+          hash: "6b4ccc24fb585a9004e0b337668e9371",
+        },
+        "6/declaration/body/6/argument/1/1-placeholder": {
+          content: {
+            en: "First name",
+            pl: "Imię",
+          },
+          hash: "9a22c348ecef9bbdb8934eb2e6fb873c",
+        },
+        "6/declaration/body/6/argument/1/3-placeholder": {
+          content: {
+            en: "Last name",
+            pl: "Nazwisko",
+          },
+          hash: "b6485b5d256edb09ef2a8cade41120d2",
+        },
+        "6/declaration/body/6/argument/1/5/openingElement/2/value/expression/body-placeholder":
+          {
+            content: {
+              en: "Preferred locale",
+              pl: "Preferowany język",
+            },
+            hash: "5bd2227168801d9e0bbf6fed40bd547f",
+          },
+        "6/declaration/body/6/argument/1/5/openingElement/2/value/expression/body/1/1":
+          {
+            content: {
+              en: "English (US)",
+              pl: "Angielski (US)",
+            },
+            hash: "368aefd02ea6b7e202e8f742a34b7b28",
+          },
+        "6/declaration/body/6/argument/1/5/openingElement/2/value/expression/body/3/1":
+          {
+            content: {
+              en: "Polish (PL)",
+              pl: "Polski (PL)",
+            },
+            hash: "2d3315dd3f92394aa464a2ff5d746167",
+          },
+        "6/declaration/body/6/argument/1/7": {
+          content: {
+            en: "Save",
+            pl: "Zapisz",
+          },
+          hash: "6b4ccc24fb585a9004e0b337668e9371",
+        },
+      },
+    },
+    "features/auth/components/user-menu.tsx": {
+      entries: {
+        "3/declaration/body/1/argument/3/1": {
+          content: {
+            en: "Settings",
+            pl: "Ustawienia",
+          },
+          hash: "b13556c488912ebbb40abbb95dfdea40",
+        },
+        "3/declaration/body/1/argument/3/1/1": {
+          content: {
+            en: "Settings",
+            pl: "Ustawienia",
+          },
+          hash: "8df6777277469c1fd88cc18dde2f1cc3",
+        },
+        "4/declaration/body/1/argument/3/1/1": {
+          content: {
+            en: "Settings",
+            pl: "Ustawienia",
+          },
+          hash: "8df6777277469c1fd88cc18dde2f1cc3",
+        },
+        "5/declaration/body/1/argument/3/1/1": {
+          content: {
+            en: "Settings",
+            pl: "Ustawienia",
+          },
+          hash: "8df6777277469c1fd88cc18dde2f1cc3",
+        },
+        "5/declaration/body/1/argument/3/3/1": {
+          content: {
+            en: "Logout",
+            pl: "Wyloguj się",
+          },
+          hash: "07948fdf20705e04a7bf68ab197512bf",
         },
       },
     },
@@ -13414,6 +14924,20 @@ export default {
           },
           hash: "fda9ff14c0726917b5e705d3f5038e8a",
         },
+        "7/declaration/body/11/argument/1/expression/0/body/1-placeholder": {
+          content: {
+            en: "Enter your answer...",
+            pl: "Wpisz swoją odpowiedź...",
+          },
+          hash: "90ccf10b499b50632cd92ae8d9eb3015",
+        },
+        "7/declaration/body/11/argument/3/expression/0/body/1-placeholder": {
+          content: {
+            en: "Enter your answer...",
+            pl: "Wpisz swoją odpowiedź...",
+          },
+          hash: "90ccf10b499b50632cd92ae8d9eb3015",
+        },
         "7/declaration/body/11/argument/3/expression/0/body/3-placeholder": {
           content: {
             en: "Enter your answer...",
@@ -14166,10 +15690,10 @@ export default {
         },
         "14/declaration/body/10/consequent/0/argument/1/1": {
           content: {
-            en: "Loading documents...",
-            pl: "Ładowanie dokumentów...",
+            en: "Failed to load documents. Please try again.",
+            pl: "Nie udało się załadować dokumentów. Proszę spróbować ponownie.",
           },
-          hash: "b795b22e2d0abd430c2ff0b28fb26e5a",
+          hash: "1f3bb71b519b18f32ba0f1a5a360afb0",
         },
         "14/declaration/body/11/consequent/0/argument/1": {
           content: {
@@ -14194,17 +15718,17 @@ export default {
         },
         "14/declaration/body/12/consequent/0/argument/1": {
           content: {
-            en: "Brak dokumentów do wyświetlenia. Możesz przejść do następnego kroku.",
+            en: "No documents to display. You can proceed to the next step.",
             pl: "Brak dokumentów do wyświetlenia. Możesz przejść do następnego kroku.",
           },
-          hash: "68d3a7ccf14319317421bba3ebc5d86b",
+          hash: "2199cc5f0c63d0fd443f80ecc41d3550",
         },
         "14/declaration/body/12/consequent/0/argument/3/1": {
           content: {
-            en: "Nie znaleziono żadnych dokumentów dla tego przetargu.",
-            pl: "Nie znaleziono żadnych dokumentów dla tego przetargu.",
+            en: "No documents found for this tender.",
+            pl: "Nie znaleziono dokumentów dla tego przetargu.",
           },
-          hash: "fbeb193faa8de9619c5c5d09988f511f",
+          hash: "0aae5563123e8e15391ddd9126389668",
         },
         "14/declaration/body/13/argument/1": {
           content: {
@@ -14271,12 +15795,33 @@ export default {
             },
             hash: "ed58dbee176ae6a0914ff2ff0ee3c5ce",
           },
+        "14/declaration/body/6/0/init/0/body/0/consequent/0/expression/0": {
+          content: {
+            en: "File path not available",
+            pl: "Ścieżka pliku niedostępna",
+          },
+          hash: "c2eef71aec7de7aa3a3ca84750c752dc",
+        },
+        "14/declaration/body/6/0/init/0/body/1/block/11/expression/0": {
+          content: {
+            en: "File downloaded successfully",
+            pl: "Plik pobrano pomyślnie",
+          },
+          hash: "27f8e780c40b91032c1cc9cccc6befd4",
+        },
         "14/declaration/body/6/0/init/0/body/1/consequent/0/expression/0": {
           content: {
             en: "No files to download",
             pl: "Brak plików do pobrania",
           },
           hash: "f89e1437c35abdfcee9a280eeac09ceb",
+        },
+        "14/declaration/body/6/0/init/0/body/1/handler/body/1/expression/0": {
+          content: {
+            en: "Failed to download file",
+            pl: "Nie udało się pobrać pliku",
+          },
+          hash: "a8bad5861f2eef6c95c9684f82f1b61b",
         },
         "14/declaration/body/6/0/init/0/body/2/block/1/expression/0": {
           content: {
@@ -14320,12 +15865,40 @@ export default {
           },
           hash: "27f8e780c40b91032c1cc9cccc6befd4",
         },
+        "14/declaration/body/7/0/init/0/body/1/consequent/0/expression/0": {
+          content: {
+            en: "No files to download",
+            pl: "Brak plików do pobrania",
+          },
+          hash: "f89e1437c35abdfcee9a280eeac09ceb",
+        },
         "14/declaration/body/7/0/init/0/body/1/handler/body/1/expression/0": {
           content: {
             en: "Failed to download file",
             pl: "Nie udało się pobrać pliku",
           },
           hash: "a8bad5861f2eef6c95c9684f82f1b61b",
+        },
+        "14/declaration/body/7/0/init/0/body/2/block/1/expression/0": {
+          content: {
+            en: "Downloading {refilledFiles.length} files...",
+            pl: "Pobieranie {refilledFiles.length} plików...",
+          },
+          hash: "0374c6e661c408fd6122f4768d95e5de",
+        },
+        "14/declaration/body/7/0/init/0/body/2/block/3/expression/0": {
+          content: {
+            en: "All files have been downloaded",
+            pl: "Wszystkie pliki zostały pobrane",
+          },
+          hash: "3597a096cfb7f0d8d8c7ac558c2d2076",
+        },
+        "14/declaration/body/7/0/init/0/body/2/handler/body/1/expression/0": {
+          content: {
+            en: "Error during file download",
+            pl: "Błąd podczas pobierania pliku",
+          },
+          hash: "e8a47d5c1ea53927c7bcaf013a60c21f",
         },
         "14/declaration/body/7/0/init/body/0/consequent/0/argument/3/1": {
           content: {
@@ -14401,11 +15974,41 @@ export default {
         },
         "14/declaration/body/8/0/init/body/0/consequent/0/argument/3/1": {
           content: {
-            en: "Brak plików w tej kategorii",
+            en: "No files in this category",
             pl: "Brak plików w tej kategorii",
           },
-          hash: "bf594f7ee94b01c09c4cef20d5250a26",
+          hash: "21105bfd07013fa07e2fb64cc974ddc5",
         },
+        "14/declaration/body/8/0/init/body/1/argument/1/3/expression/right/3": {
+          content: {
+            en: "Download all",
+            pl: "Pobierz wszystko",
+          },
+          hash: "385e77c5c419ee4328a4b98098a5fd49",
+        },
+        "14/declaration/body/8/0/init/body/1/argument/1/3/expression/right/5": {
+          content: {
+            en: "All",
+            pl: "Wszystko",
+          },
+          hash: "5e2e93f8e2a5f315b6fecdd0a0e6f55f",
+        },
+        "14/declaration/body/8/0/init/body/1/argument/3/1/expression/0/body/1/1/1/3/3/expression/right/3":
+          {
+            content: {
+              en: "Requires signature (<expression/>)",
+              pl: "Wymaga podpisu (<expression/>)",
+            },
+            hash: "8fe90b93e687c56ab78af72490b8ecdb",
+          },
+        "14/declaration/body/8/0/init/body/1/argument/3/1/expression/0/body/1/1/3/3":
+          {
+            content: {
+              en: "Download",
+              pl: "Pobierz",
+            },
+            hash: "56b7d0834952b39ee394b44bd8179178",
+          },
         "14/declaration/body/8/0/init/body/1/argument/3/1/expression/0/body/1/5/expression/right":
           {
             content: {
@@ -17173,6 +18776,13 @@ export default {
             pl: "Wymagania dotyczące usługi ({serviceRequirements.length})",
           },
           hash: "8ae98328c0c0a76bd07975ef1c9968f0",
+        },
+        "14/declaration/body/15/argument/15/expression/right/1": {
+          content: {
+            en: "Product Requirements ({productRequirements.length})",
+            pl: "Wymagania dotyczące produktu ({products.length})",
+          },
+          hash: "47bba8de401c5e8c3155a8828895f12e",
         },
         "14/declaration/body/15/argument/3/3/1": {
           content: {

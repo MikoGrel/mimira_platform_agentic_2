@@ -3,11 +3,10 @@ import {
   SidebarProvider,
   SidebarTrigger,
 } from "$/components/ui/sidebar";
-import { User } from "lucide-react";
 import { LocaleSwitcher } from "$/features/i18n/components/LocaleSwitcher";
 import { DashboardSidebar } from "$/features/navigation/components";
 import { DashboardCommand } from "$/features/navigation/components/dashboard-command";
-import UserName from "$/features/auth/components/user-name";
+import UserMenu from "$/features/auth/components/user-menu";
 import { cookies } from "next/headers";
 import { CommandInput } from "$/features/navigation/components/command-input";
 
@@ -35,10 +34,7 @@ export default async function DashboardLayout({
 
           <div className="flex items-center gap-4 justify-end">
             <LocaleSwitcher locales={["pl", "en"]} />
-            <div className="flex items-center gap-2 px-3 py-2 bg-background rounded-full border">
-              <User className="w-5 h-5" />
-              <UserName />
-            </div>
+            <UserMenu />
           </div>
         </header>
         <div className="flex-1 rounded-tl-2xl border-l border-t border-sidebar-border overflow-y-auto overflow-x-hidden">

@@ -1,6 +1,50 @@
 {
   "version": 0.1,
   "files": {
+    "app/(platform)/dashboard/account/page.tsx": {
+      "scopes": {
+        "0/declaration/body/0/argument": {
+          "type": "element",
+          "hash": "01215c12fb1cdb93bd0c84c1382bef56",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Account"
+        },
+        "0/declaration/body/0/argument/1": {
+          "type": "element",
+          "hash": "a39e9dc2362a143f4bf667baad88f49d",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "test"
+        },
+        "0/declaration/body/0/argument/1/1": {
+          "type": "element",
+          "hash": "288c51e39a05a5e2a539d1c225a63133",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Account settings"
+        },
+        "1/declaration/body/0/argument/1/1": {
+          "type": "element",
+          "hash": "288c51e39a05a5e2a539d1c225a63133",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Account settings"
+        },
+        "2/declaration/body/0/argument/1/1": {
+          "type": "element",
+          "hash": "288c51e39a05a5e2a539d1c225a63133",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Account settings"
+        }
+      }
+    },
     "app/(platform)/dashboard/inbox/page.tsx": {
       "scopes": {
         "14/declaration/body/11/argument/1/1/1/3-placeholder": {
@@ -4543,6 +4587,70 @@
     },
     "app/(platform)/login/page.tsx": {
       "scopes": {
+        "10/declaration/body/0/expression/1": {
+          "type": "element",
+          "hash": "1dd7a3bce7f7d46670dbd5de79f32c93",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Logged out successfully"
+        },
+        "10/declaration/body/2/argument/1/3/3": {
+          "type": "element",
+          "hash": "808098dce4fa0b1b9c4cfc57189f9da1",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Welcome back!"
+        },
+        "10/declaration/body/2/argument/1/3/5": {
+          "type": "element",
+          "hash": "bc08d7a9c081e38025ff84e56960c8dc",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Log in to browse, analyze and manage your tenders."
+        },
+        "10/declaration/body/2/argument/1/5/1": {
+          "type": "element",
+          "hash": "2f30f0e419c4906cb48884c792d03a5a",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Trusted by:"
+        },
+        "10/declaration/body/2/argument/3/1/7/expression/right/1/1": {
+          "type": "element",
+          "hash": "fef2eba7a64725d8bf548d37ad221c19",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Set new password:"
+        },
+        "10/declaration/body/2/argument/3/1/7/expression/right/1/3": {
+          "type": "element",
+          "hash": "e6f0375a05415ef76ac913bc3ff1e787",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Enter your new password to complete the reset."
+        },
+        "10/declaration/body/2/argument/3/1/7/expression/right/5": {
+          "type": "element",
+          "hash": "d4afb542f307d3cca9b1f46fab9e7103",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Back to Login"
+        },
+        "10/declaration/body/2/argument/3/3": {
+          "type": "element",
+          "hash": "560ab78ac75a5b5df43ae45aa64f171e",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "You don't have an account?<element:Link>Contact us</element:Link>"
+        },
         "11/declaration/body/0/expression/1": {
           "type": "element",
           "hash": "1dd7a3bce7f7d46670dbd5de79f32c93",
@@ -4576,6 +4684,46 @@
           "content": "Trusted by:"
         },
         "11/declaration/body/10/argument/3/3": {
+          "type": "element",
+          "hash": "560ab78ac75a5b5df43ae45aa64f171e",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "You don't have an account?<element:Link>Contact us</element:Link>"
+        },
+        "8/declaration/body/0/expression/1": {
+          "type": "element",
+          "hash": "1dd7a3bce7f7d46670dbd5de79f32c93",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Logged out successfully"
+        },
+        "8/declaration/body/2/argument/1/3/3": {
+          "type": "element",
+          "hash": "808098dce4fa0b1b9c4cfc57189f9da1",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Welcome back!"
+        },
+        "8/declaration/body/2/argument/1/3/5": {
+          "type": "element",
+          "hash": "bc08d7a9c081e38025ff84e56960c8dc",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Log in to browse, analyze and manage your tenders."
+        },
+        "8/declaration/body/2/argument/1/5/1": {
+          "type": "element",
+          "hash": "2f30f0e419c4906cb48884c792d03a5a",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Trusted by:"
+        },
+        "8/declaration/body/2/argument/3/3": {
           "type": "element",
           "hash": "560ab78ac75a5b5df43ae45aa64f171e",
           "context": "",
@@ -4741,6 +4889,338 @@
         }
       }
     },
+    "features/auth/components/access-form.tsx": {
+      "scopes": {
+        "1/declaration/body/0/argument/1": {
+          "type": "element",
+          "hash": "a0e3a086cca141af7eece32d36de743f",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Access secttings"
+        },
+        "1/declaration/body/0/argument/5/1-label": {
+          "type": "attribute",
+          "hash": "c21b33e73f096fd7b02171d399b36adf",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Reset password"
+        },
+        "1/declaration/body/0/argument/5/1-placeholder": {
+          "type": "attribute",
+          "hash": "39931962707c99b99a5a073ab579396b",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Enter your email"
+        },
+        "1/declaration/body/0/argument/5/1/1-label": {
+          "type": "attribute",
+          "hash": "c21b33e73f096fd7b02171d399b36adf",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Reset password"
+        },
+        "1/declaration/body/0/argument/5/1/1-placeholder": {
+          "type": "attribute",
+          "hash": "39931962707c99b99a5a073ab579396b",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Enter your email"
+        },
+        "1/declaration/body/0/argument/5/1/1/openingElement/2/value/expression": {
+          "type": "element",
+          "hash": "c240955c0631271dee75a99790da7407",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Subscribe"
+        },
+        "1/declaration/body/0/argument/5/1/1/openingElement/3/value/expression": {
+          "type": "element",
+          "hash": "f023f6fcc32d2725626ed968ad1cdfb5",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Send reset link"
+        },
+        "1/declaration/body/0/argument/5/1/openingElement/3/value/expression": {
+          "type": "element",
+          "hash": "7a7fb8592a421245faf5effca13a4325",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Send reset link"
+        },
+        "2/declaration/body/1/argument/1": {
+          "type": "element",
+          "hash": "a0e3a086cca141af7eece32d36de743f",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Access secttings"
+        },
+        "2/declaration/body/1/argument/5/1-label": {
+          "type": "attribute",
+          "hash": "c21b33e73f096fd7b02171d399b36adf",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Reset password"
+        },
+        "2/declaration/body/1/argument/5/1/openingElement/4/value/expression": {
+          "type": "element",
+          "hash": "7a7fb8592a421245faf5effca13a4325",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Send reset link"
+        },
+        "2/declaration/body/1/argument/5/1/openingElement/5/value/expression": {
+          "type": "element",
+          "hash": "7a7fb8592a421245faf5effca13a4325",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Send reset link"
+        },
+        "3/declaration/body/2/argument/1": {
+          "type": "element",
+          "hash": "a0e3a086cca141af7eece32d36de743f",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Access secttings"
+        },
+        "3/declaration/body/2/argument/5/1-label": {
+          "type": "attribute",
+          "hash": "c21b33e73f096fd7b02171d399b36adf",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Reset password"
+        },
+        "3/declaration/body/2/argument/5/1/openingElement/2/value/expression/body-label": {
+          "type": "attribute",
+          "hash": "c21b33e73f096fd7b02171d399b36adf",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Reset password"
+        },
+        "3/declaration/body/2/argument/5/1/openingElement/2/value/expression/body/openingElement/7/value/expression": {
+          "type": "element",
+          "hash": "e0b337512026f87e914d1ace024a8999",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Send reset link"
+        },
+        "3/declaration/body/2/argument/5/1/openingElement/3/value/expression": {
+          "type": "element",
+          "hash": "7a7fb8592a421245faf5effca13a4325",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Send reset link"
+        },
+        "4/declaration/body/3/argument/1": {
+          "type": "element",
+          "hash": "a0e3a086cca141af7eece32d36de743f",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Access secttings"
+        },
+        "4/declaration/body/3/argument/5/1/openingElement/2/value/expression/body-label": {
+          "type": "attribute",
+          "hash": "c21b33e73f096fd7b02171d399b36adf",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Reset password"
+        },
+        "4/declaration/body/3/argument/5/1/openingElement/2/value/expression/body/openingElement/7/value/expression": {
+          "type": "element",
+          "hash": "e0b337512026f87e914d1ace024a8999",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Send reset link"
+        },
+        "5/declaration/body/3/argument/1": {
+          "type": "element",
+          "hash": "a0e3a086cca141af7eece32d36de743f",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Access secttings"
+        },
+        "5/declaration/body/3/argument/5/1/openingElement/2/value/expression/body-label": {
+          "type": "attribute",
+          "hash": "c21b33e73f096fd7b02171d399b36adf",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Reset password"
+        },
+        "5/declaration/body/3/argument/5/1/openingElement/2/value/expression/body/openingElement/7/value/expression": {
+          "type": "element",
+          "hash": "e0b337512026f87e914d1ace024a8999",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Send reset link"
+        },
+        "6/declaration/body/4/argument/1": {
+          "type": "element",
+          "hash": "a0e3a086cca141af7eece32d36de743f",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Access secttings"
+        },
+        "6/declaration/body/4/argument/5/1/openingElement/2/value/expression/body-label": {
+          "type": "attribute",
+          "hash": "c21b33e73f096fd7b02171d399b36adf",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Reset password"
+        },
+        "6/declaration/body/4/argument/5/1/openingElement/2/value/expression/body/openingElement/7/value/expression": {
+          "type": "element",
+          "hash": "e0b337512026f87e914d1ace024a8999",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Reset password email sent to Send reset link"
+        },
+        "7/declaration/body/6/argument/1": {
+          "type": "element",
+          "hash": "5e3d46795ff47e27f5b47e6e574e98ae",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Access settings"
+        },
+        "7/declaration/body/6/argument/5/1/expression/alternate/openingElement/2/value/expression/body-label": {
+          "type": "attribute",
+          "hash": "c21b33e73f096fd7b02171d399b36adf",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Reset password"
+        },
+        "7/declaration/body/6/argument/5/1/expression/alternate/openingElement/2/value/expression/body/openingElement/7/value/expression": {
+          "type": "element",
+          "hash": "1a27e74219140ef32ebee785ab271d40",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Send link"
+        },
+        "7/declaration/body/6/argument/5/1/expression/alternate/openingElement/2/value/expression/body/openingElement/7/value/expression/1": {
+          "type": "element",
+          "hash": "c7ca704b7e1cac40862f9ee51d6d9aea",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Send link"
+        },
+        "7/declaration/body/6/argument/5/1/expression/alternate/openingElement/2/value/expression/body/openingElement/7/value/expression/openingElement/0/value/expression/body/1/expression/0": {
+          "type": "element",
+          "hash": "2910988c83be96fc8da5e8c779e7e787",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Reset password email sent to {field.value}"
+        },
+        "7/declaration/body/7/argument/1": {
+          "type": "element",
+          "hash": "5e3d46795ff47e27f5b47e6e574e98ae",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Access settings"
+        },
+        "7/declaration/body/7/argument/5/1/expression/alternate/openingElement/2/value/expression/body-label": {
+          "type": "attribute",
+          "hash": "c21b33e73f096fd7b02171d399b36adf",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Reset password"
+        },
+        "7/declaration/body/7/argument/5/1/expression/alternate/openingElement/2/value/expression/body/openingElement/7/value/expression": {
+          "type": "element",
+          "hash": "1a27e74219140ef32ebee785ab271d40",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Send link"
+        },
+        "7/declaration/body/7/argument/5/1/expression/consequent/1/1/openingElement/2/value/expression/body-label": {
+          "type": "attribute",
+          "hash": "c3e35b0671004c7bbd9fa9b9654744d7",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "New password"
+        },
+        "7/declaration/body/7/argument/5/1/expression/consequent/1/3/openingElement/2/value/expression/body-label": {
+          "type": "attribute",
+          "hash": "b5cdb861d8deb598b0613d48098b82b6",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Confirm password"
+        },
+        "8/declaration/body/6/argument/1": {
+          "type": "element",
+          "hash": "5e3d46795ff47e27f5b47e6e574e98ae",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Access settings"
+        },
+        "8/declaration/body/6/argument/5/1/expression/alternate/openingElement/2/value/expression/body-label": {
+          "type": "attribute",
+          "hash": "c21b33e73f096fd7b02171d399b36adf",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Reset password"
+        },
+        "8/declaration/body/6/argument/5/1/expression/alternate/openingElement/2/value/expression/body/openingElement/7/value/expression": {
+          "type": "element",
+          "hash": "1a27e74219140ef32ebee785ab271d40",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Send link"
+        },
+        "8/declaration/body/6/argument/5/1/expression/alternate/openingElement/2/value/expression/body/openingElement/7/value/expression/1": {
+          "type": "element",
+          "hash": "c7ca704b7e1cac40862f9ee51d6d9aea",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Send link"
+        },
+        "8/declaration/body/6/argument/5/1/expression/alternate/openingElement/2/value/expression/body/openingElement/7/value/expression/openingElement/0/value/expression/body/1/expression/0": {
+          "type": "element",
+          "hash": "2910988c83be96fc8da5e8c779e7e787",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Reset password email sent to {field.value}"
+        }
+      }
+    },
     "features/auth/components/email-sent-message.tsx": {
       "scopes": {
         "3/declaration/body/0/argument/1/3": {
@@ -4787,6 +5267,54 @@
           "overrides": {},
           "content": "Send Reset Link"
         },
+        "6/declaration/body/5/argument/1/1": {
+          "type": "element",
+          "hash": "f879d60ac5b417206b5dba472fd18fbb",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Reset Password:"
+        },
+        "6/declaration/body/5/argument/1/3": {
+          "type": "element",
+          "hash": "6e820fc1a74664b8acdb6f563412e0b0",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Enter your email address and we'll send you a link to reset your password"
+        },
+        "6/declaration/body/5/argument/3/3-label": {
+          "type": "attribute",
+          "hash": "e7f34943a0c2fb849db1839ff6ef5cb5",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Email"
+        },
+        "6/declaration/body/5/argument/3/3-placeholder": {
+          "type": "attribute",
+          "hash": "9bc008365ebe3e404e241c8ca876f56e",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Enter your email address"
+        },
+        "6/declaration/body/5/argument/3/5": {
+          "type": "element",
+          "hash": "0de8cdabf0744e2a7d87ddf2f4cb4466",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Send Reset Link"
+        },
+        "6/declaration/body/5/argument/3/7": {
+          "type": "element",
+          "hash": "af1fe3e18ab8816b295086f5caa19bbb",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Back to Login"
+        },
         "7/declaration/body/0/argument/1/1": {
           "type": "element",
           "hash": "f879d60ac5b417206b5dba472fd18fbb",
@@ -4831,6 +5359,78 @@
     },
     "features/auth/components/login-form.tsx": {
       "scopes": {
+        "10/declaration/body/1/argument/1/1": {
+          "type": "element",
+          "hash": "8ef279de0a4c87e9b25cef41ab9651f0",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Log in:"
+        },
+        "10/declaration/body/1/argument/1/1/expression/consequent": {
+          "type": "element",
+          "hash": "e6fbc66356f1257e0ff96c97bb5abbea",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "You are already logged as <expression/> <element:MoveRight></element:MoveRight>"
+        },
+        "10/declaration/body/1/argument/1/3": {
+          "type": "element",
+          "hash": "78c8c873e0f2083d7ed85523a68a72e7",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Enter your email address and password to enter your dashboard"
+        },
+        "10/declaration/body/1/argument/1/5": {
+          "type": "element",
+          "hash": "78c8c873e0f2083d7ed85523a68a72e7",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Enter your email address and password to enter your dashboard"
+        },
+        "10/declaration/body/1/argument/3/11/expression/consequent": {
+          "type": "element",
+          "hash": "e6fbc66356f1257e0ff96c97bb5abbea",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "You are already logged as <expression/> <element:MoveRight></element:MoveRight>"
+        },
+        "10/declaration/body/1/argument/3/3-label": {
+          "type": "attribute",
+          "hash": "e7f34943a0c2fb849db1839ff6ef5cb5",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Email"
+        },
+        "10/declaration/body/1/argument/3/5-label": {
+          "type": "attribute",
+          "hash": "223a61cf906ab9c40d22612c588dff48",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Password"
+        },
+        "10/declaration/body/1/argument/3/7/1": {
+          "type": "element",
+          "hash": "afc02ff1df56ecf8493e9e201592d764",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Remember me"
+        },
+        "10/declaration/body/1/argument/3/7/3": {
+          "type": "element",
+          "hash": "4a0a69c05d0946a79ac6cc32bbb3c615",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Forgot password?"
+        },
         "6/body/1/argument": {
           "type": "element",
           "hash": "f902082746b643593b910bcd7d1ebcf9",
@@ -4886,6 +5486,794 @@
           "skip": false,
           "overrides": {},
           "content": "Forgot password?"
+        },
+        "9/body/1/argument": {
+          "type": "element",
+          "hash": "f902082746b643593b910bcd7d1ebcf9",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Log in"
+        }
+      }
+    },
+    "features/auth/components/password-update-form.tsx": {
+      "scopes": {
+        "6/declaration/body/2/0/init/0/body/3/expression/0": {
+          "type": "element",
+          "hash": "26ee7d597f6edd41d21c00bb3a5e015f",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Password updated. You can now sign in"
+        },
+        "6/declaration/body/3/argument/1/1/openingElement/3/value/expression/body-label": {
+          "type": "attribute",
+          "hash": "c3e35b0671004c7bbd9fa9b9654744d7",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "New password"
+        },
+        "6/declaration/body/3/argument/1/3/openingElement/3/value/expression/body-label": {
+          "type": "attribute",
+          "hash": "b5cdb861d8deb598b0613d48098b82b6",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Confirm password"
+        },
+        "6/declaration/body/3/argument/1/5": {
+          "type": "element",
+          "hash": "90615ba025a6dd38b03325497c2d58d1",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Update password"
+        }
+      }
+    },
+    "features/auth/components/profile-form.tsx": {
+      "scopes": {
+        "4/declaration/body/4/argument": {
+          "type": "element",
+          "hash": "08d33be7da82a662eec9f8dc0558cd9a",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "<element:Input></element:Input><element:Input></element:Input><element:Select><element:SelectItem>English (US)</element:SelectItem><element:SelectItem>Polish (PL)</element:SelectItem></element:Select><element:Select><element:SelectItem>English (US)</element:SelectItem><element:SelectItem>Polish (PL)</element:SelectItem></element:Select> )} /><element:Button>Save</element:Button>"
+        },
+        "4/declaration/body/4/argument/1-placeholder": {
+          "type": "attribute",
+          "hash": "9a22c348ecef9bbdb8934eb2e6fb873c",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "First name"
+        },
+        "4/declaration/body/4/argument/1/1-placeholder": {
+          "type": "attribute",
+          "hash": "9a22c348ecef9bbdb8934eb2e6fb873c",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "First name"
+        },
+        "4/declaration/body/4/argument/1/3-placeholder": {
+          "type": "attribute",
+          "hash": "b6485b5d256edb09ef2a8cade41120d2",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Last name"
+        },
+        "4/declaration/body/4/argument/1/5/openingElement/2/value/expression/body-placeholder": {
+          "type": "attribute",
+          "hash": "5bd2227168801d9e0bbf6fed40bd547f",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Preferred locale"
+        },
+        "4/declaration/body/4/argument/1/5/openingElement/2/value/expression/body/1/1": {
+          "type": "element",
+          "hash": "368aefd02ea6b7e202e8f742a34b7b28",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "English (US)"
+        },
+        "4/declaration/body/4/argument/1/5/openingElement/2/value/expression/body/3/1": {
+          "type": "element",
+          "hash": "2d3315dd3f92394aa464a2ff5d746167",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Polish (PL)"
+        },
+        "4/declaration/body/4/argument/1/7": {
+          "type": "element",
+          "hash": "6b4ccc24fb585a9004e0b337668e9371",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Save"
+        },
+        "4/declaration/body/4/argument/3-placeholder": {
+          "type": "attribute",
+          "hash": "b6485b5d256edb09ef2a8cade41120d2",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Last name"
+        },
+        "4/declaration/body/4/argument/5-placeholder": {
+          "type": "attribute",
+          "hash": "5bd2227168801d9e0bbf6fed40bd547f",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Preferred locale"
+        },
+        "4/declaration/body/4/argument/5/openingElement/2/value/expression/body-placeholder": {
+          "type": "attribute",
+          "hash": "5bd2227168801d9e0bbf6fed40bd547f",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Preferred locale"
+        },
+        "4/declaration/body/4/argument/5/openingElement/2/value/expression/body/1": {
+          "type": "element",
+          "hash": "368aefd02ea6b7e202e8f742a34b7b28",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "English (US)"
+        },
+        "4/declaration/body/4/argument/5/openingElement/2/value/expression/body/1/1": {
+          "type": "element",
+          "hash": "368aefd02ea6b7e202e8f742a34b7b28",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "English (US)"
+        },
+        "4/declaration/body/4/argument/5/openingElement/2/value/expression/body/3": {
+          "type": "element",
+          "hash": "2d3315dd3f92394aa464a2ff5d746167",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Polish (PL)"
+        },
+        "4/declaration/body/4/argument/5/openingElement/2/value/expression/body/3/1": {
+          "type": "element",
+          "hash": "2d3315dd3f92394aa464a2ff5d746167",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Polish (PL)"
+        },
+        "4/declaration/body/4/argument/7": {
+          "type": "element",
+          "hash": "36f3285809f644598a63487820024dec",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Save"
+        },
+        "4/declaration/body/4/argument/7-placeholder": {
+          "type": "attribute",
+          "hash": "5bd2227168801d9e0bbf6fed40bd547f",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Preferred locale"
+        },
+        "5/declaration/body/4/argument/1/1-placeholder": {
+          "type": "attribute",
+          "hash": "9a22c348ecef9bbdb8934eb2e6fb873c",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "First name"
+        },
+        "5/declaration/body/4/argument/1/3-placeholder": {
+          "type": "attribute",
+          "hash": "b6485b5d256edb09ef2a8cade41120d2",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Last name"
+        },
+        "5/declaration/body/4/argument/1/5/openingElement/2/value/expression/body-placeholder": {
+          "type": "attribute",
+          "hash": "5bd2227168801d9e0bbf6fed40bd547f",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Preferred locale"
+        },
+        "5/declaration/body/4/argument/1/5/openingElement/2/value/expression/body/1/1": {
+          "type": "element",
+          "hash": "368aefd02ea6b7e202e8f742a34b7b28",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "English (US)"
+        },
+        "5/declaration/body/4/argument/1/5/openingElement/2/value/expression/body/3/1": {
+          "type": "element",
+          "hash": "2d3315dd3f92394aa464a2ff5d746167",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Polish (PL)"
+        },
+        "5/declaration/body/4/argument/1/7": {
+          "type": "element",
+          "hash": "6b4ccc24fb585a9004e0b337668e9371",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Save"
+        },
+        "5/declaration/body/5/argument/1": {
+          "type": "element",
+          "hash": "3b63f81408ad40f830cc9760f09ae5cb",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Edit profile"
+        },
+        "5/declaration/body/5/argument/1/1": {
+          "type": "element",
+          "hash": "df8e9882a1f5c75951f3a05ddfed72ba",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Account settings"
+        },
+        "5/declaration/body/5/argument/1/1-placeholder": {
+          "type": "attribute",
+          "hash": "9a22c348ecef9bbdb8934eb2e6fb873c",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "First name"
+        },
+        "5/declaration/body/5/argument/1/1/1-placeholder": {
+          "type": "attribute",
+          "hash": "9a22c348ecef9bbdb8934eb2e6fb873c",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "First name"
+        },
+        "5/declaration/body/5/argument/1/1/1/1-placeholder": {
+          "type": "attribute",
+          "hash": "9a22c348ecef9bbdb8934eb2e6fb873c",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "First name"
+        },
+        "5/declaration/body/5/argument/1/1/1/1/openingElement/2/value/expression/body-label": {
+          "type": "attribute",
+          "hash": "9a22c348ecef9bbdb8934eb2e6fb873c",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "First name"
+        },
+        "5/declaration/body/5/argument/1/1/1/1/openingElement/2/value/expression/body-placeholder": {
+          "type": "attribute",
+          "hash": "44cb37faa04b9f426ffcc9392344f231",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Enter first name"
+        },
+        "5/declaration/body/5/argument/1/1/1/3-placeholder": {
+          "type": "attribute",
+          "hash": "b6485b5d256edb09ef2a8cade41120d2",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Last name"
+        },
+        "5/declaration/body/5/argument/1/1/1/3/openingElement/2/value/expression/body-label": {
+          "type": "attribute",
+          "hash": "b6485b5d256edb09ef2a8cade41120d2",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Last name"
+        },
+        "5/declaration/body/5/argument/1/1/1/3/openingElement/2/value/expression/body-placeholder": {
+          "type": "attribute",
+          "hash": "f03bd3958259094998353ecba1518c78",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Enter last name"
+        },
+        "5/declaration/body/5/argument/1/1/1/5/openingElement/2/value/expression/body-label": {
+          "type": "attribute",
+          "hash": "5bd2227168801d9e0bbf6fed40bd547f",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Preferred locale"
+        },
+        "5/declaration/body/5/argument/1/1/1/5/openingElement/2/value/expression/body-placeholder": {
+          "type": "attribute",
+          "hash": "1dcda4398a1fe2444c05bc553cd19682",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Select preferred locale"
+        },
+        "5/declaration/body/5/argument/1/1/1/5/openingElement/2/value/expression/body/1": {
+          "type": "element",
+          "hash": "9097465b8251019ebdb6d14dc7e01385",
+          "context": "",
+          "skip": true,
+          "overrides": {},
+          "content": "English (US)"
+        },
+        "5/declaration/body/5/argument/1/1/1/5/openingElement/2/value/expression/body/3": {
+          "type": "element",
+          "hash": "5fc0de87c053932fc85a3a31c5d400f1",
+          "context": "",
+          "skip": true,
+          "overrides": {},
+          "content": "Polish (PL)"
+        },
+        "5/declaration/body/5/argument/1/1/1/7": {
+          "type": "element",
+          "hash": "727d97b690659a69248738bdd46e8806",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Save"
+        },
+        "5/declaration/body/5/argument/1/1/3-placeholder": {
+          "type": "attribute",
+          "hash": "b6485b5d256edb09ef2a8cade41120d2",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Last name"
+        },
+        "5/declaration/body/5/argument/1/1/5/openingElement/2/value/expression/body-placeholder": {
+          "type": "attribute",
+          "hash": "5bd2227168801d9e0bbf6fed40bd547f",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Preferred locale"
+        },
+        "5/declaration/body/5/argument/1/1/5/openingElement/2/value/expression/body/1": {
+          "type": "element",
+          "hash": "7db48b1de1fdbc64c79134d598fd78f3",
+          "context": "",
+          "skip": true,
+          "overrides": {},
+          "content": "English (US)"
+        },
+        "5/declaration/body/5/argument/1/1/5/openingElement/2/value/expression/body/3": {
+          "type": "element",
+          "hash": "9f7406be58cdcd86a9bf2bb53fb4e6cc",
+          "context": "",
+          "skip": true,
+          "overrides": {},
+          "content": "Polish (PL)"
+        },
+        "5/declaration/body/5/argument/1/1/7": {
+          "type": "element",
+          "hash": "5e8c62ddaad4ff4e4b011305580adcb6",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Save"
+        },
+        "5/declaration/body/5/argument/1/3-placeholder": {
+          "type": "attribute",
+          "hash": "b6485b5d256edb09ef2a8cade41120d2",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Last name"
+        },
+        "5/declaration/body/5/argument/1/3/1/1-placeholder": {
+          "type": "attribute",
+          "hash": "9a22c348ecef9bbdb8934eb2e6fb873c",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "First name"
+        },
+        "5/declaration/body/5/argument/1/3/1/3-placeholder": {
+          "type": "attribute",
+          "hash": "b6485b5d256edb09ef2a8cade41120d2",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Last name"
+        },
+        "5/declaration/body/5/argument/1/3/1/5/openingElement/2/value/expression/body-placeholder": {
+          "type": "attribute",
+          "hash": "5bd2227168801d9e0bbf6fed40bd547f",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Preferred locale"
+        },
+        "5/declaration/body/5/argument/1/3/1/5/openingElement/2/value/expression/body/1": {
+          "type": "element",
+          "hash": "9097465b8251019ebdb6d14dc7e01385",
+          "context": "",
+          "skip": true,
+          "overrides": {},
+          "content": "English (US)"
+        },
+        "5/declaration/body/5/argument/1/3/1/5/openingElement/2/value/expression/body/3": {
+          "type": "element",
+          "hash": "5fc0de87c053932fc85a3a31c5d400f1",
+          "context": "",
+          "skip": true,
+          "overrides": {},
+          "content": "Polish (PL)"
+        },
+        "5/declaration/body/5/argument/1/3/1/7": {
+          "type": "element",
+          "hash": "727d97b690659a69248738bdd46e8806",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Save"
+        },
+        "5/declaration/body/5/argument/1/5/openingElement/2/value/expression/body-placeholder": {
+          "type": "attribute",
+          "hash": "5bd2227168801d9e0bbf6fed40bd547f",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Preferred locale"
+        },
+        "5/declaration/body/5/argument/1/5/openingElement/2/value/expression/body/1": {
+          "type": "element",
+          "hash": "ede7408fce9ec5f1160af956b6542535",
+          "context": "",
+          "skip": true,
+          "overrides": {},
+          "content": "English (US)"
+        },
+        "5/declaration/body/5/argument/1/5/openingElement/2/value/expression/body/1/1": {
+          "type": "element",
+          "hash": "368aefd02ea6b7e202e8f742a34b7b28",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "English (US)"
+        },
+        "5/declaration/body/5/argument/1/5/openingElement/2/value/expression/body/3": {
+          "type": "element",
+          "hash": "59ef9e9f72e51af636603e76951ff784",
+          "context": "",
+          "skip": true,
+          "overrides": {},
+          "content": "Polish (PL)"
+        },
+        "5/declaration/body/5/argument/1/5/openingElement/2/value/expression/body/3/1": {
+          "type": "element",
+          "hash": "2d3315dd3f92394aa464a2ff5d746167",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Polish (PL)"
+        },
+        "5/declaration/body/5/argument/1/7": {
+          "type": "element",
+          "hash": "6b4ccc24fb585a9004e0b337668e9371",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Save"
+        },
+        "5/declaration/body/5/argument/3/1/1/1-placeholder": {
+          "type": "attribute",
+          "hash": "9a22c348ecef9bbdb8934eb2e6fb873c",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "First name"
+        },
+        "5/declaration/body/5/argument/3/1/1/3-placeholder": {
+          "type": "attribute",
+          "hash": "b6485b5d256edb09ef2a8cade41120d2",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Last name"
+        },
+        "5/declaration/body/5/argument/3/1/1/5/openingElement/2/value/expression/body-placeholder": {
+          "type": "attribute",
+          "hash": "5bd2227168801d9e0bbf6fed40bd547f",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Preferred locale"
+        },
+        "5/declaration/body/5/argument/3/1/1/5/openingElement/2/value/expression/body/1": {
+          "type": "element",
+          "hash": "9097465b8251019ebdb6d14dc7e01385",
+          "context": "",
+          "skip": true,
+          "overrides": {},
+          "content": "English (US)"
+        },
+        "5/declaration/body/5/argument/3/1/1/5/openingElement/2/value/expression/body/3": {
+          "type": "element",
+          "hash": "5fc0de87c053932fc85a3a31c5d400f1",
+          "context": "",
+          "skip": true,
+          "overrides": {},
+          "content": "Polish (PL)"
+        },
+        "5/declaration/body/5/argument/3/1/1/7": {
+          "type": "element",
+          "hash": "727d97b690659a69248738bdd46e8806",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Save"
+        },
+        "5/declaration/body/5/argument/5/1/1/1-label": {
+          "type": "attribute",
+          "hash": "9a22c348ecef9bbdb8934eb2e6fb873c",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "First name"
+        },
+        "5/declaration/body/5/argument/5/1/1/1-placeholder": {
+          "type": "attribute",
+          "hash": "44cb37faa04b9f426ffcc9392344f231",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Enter first name"
+        },
+        "5/declaration/body/5/argument/5/1/1/1/openingElement/2/value/expression/body-label": {
+          "type": "attribute",
+          "hash": "9a22c348ecef9bbdb8934eb2e6fb873c",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "First name"
+        },
+        "5/declaration/body/5/argument/5/1/1/1/openingElement/2/value/expression/body-placeholder": {
+          "type": "attribute",
+          "hash": "44cb37faa04b9f426ffcc9392344f231",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Enter first name"
+        },
+        "5/declaration/body/5/argument/5/1/1/3-label": {
+          "type": "attribute",
+          "hash": "b6485b5d256edb09ef2a8cade41120d2",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Last name"
+        },
+        "5/declaration/body/5/argument/5/1/1/3-placeholder": {
+          "type": "attribute",
+          "hash": "f03bd3958259094998353ecba1518c78",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Enter last name"
+        },
+        "5/declaration/body/5/argument/5/1/1/3/openingElement/2/value/expression/body-label": {
+          "type": "attribute",
+          "hash": "b6485b5d256edb09ef2a8cade41120d2",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Last name"
+        },
+        "5/declaration/body/5/argument/5/1/1/3/openingElement/2/value/expression/body-placeholder": {
+          "type": "attribute",
+          "hash": "f03bd3958259094998353ecba1518c78",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Enter last name"
+        },
+        "5/declaration/body/5/argument/5/1/1/5/openingElement/2/value/expression/body-label": {
+          "type": "attribute",
+          "hash": "5bd2227168801d9e0bbf6fed40bd547f",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Preferred locale"
+        },
+        "5/declaration/body/5/argument/5/1/1/5/openingElement/2/value/expression/body-placeholder": {
+          "type": "attribute",
+          "hash": "1dcda4398a1fe2444c05bc553cd19682",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Select preferred locale"
+        },
+        "5/declaration/body/5/argument/5/1/1/5/openingElement/2/value/expression/body/1": {
+          "type": "element",
+          "hash": "9097465b8251019ebdb6d14dc7e01385",
+          "context": "",
+          "skip": true,
+          "overrides": {},
+          "content": "English (US)"
+        },
+        "5/declaration/body/5/argument/5/1/1/5/openingElement/2/value/expression/body/3": {
+          "type": "element",
+          "hash": "5fc0de87c053932fc85a3a31c5d400f1",
+          "context": "",
+          "skip": true,
+          "overrides": {},
+          "content": "Polish (PL)"
+        },
+        "5/declaration/body/5/argument/5/1/1/7": {
+          "type": "element",
+          "hash": "727d97b690659a69248738bdd46e8806",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Save"
+        },
+        "6/declaration/body/5/argument/1/1-placeholder": {
+          "type": "attribute",
+          "hash": "9a22c348ecef9bbdb8934eb2e6fb873c",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "First name"
+        },
+        "6/declaration/body/5/argument/1/3-placeholder": {
+          "type": "attribute",
+          "hash": "b6485b5d256edb09ef2a8cade41120d2",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Last name"
+        },
+        "6/declaration/body/5/argument/1/5/openingElement/2/value/expression/body-placeholder": {
+          "type": "attribute",
+          "hash": "5bd2227168801d9e0bbf6fed40bd547f",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Preferred locale"
+        },
+        "6/declaration/body/5/argument/1/5/openingElement/2/value/expression/body/1/1": {
+          "type": "element",
+          "hash": "368aefd02ea6b7e202e8f742a34b7b28",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "English (US)"
+        },
+        "6/declaration/body/5/argument/1/5/openingElement/2/value/expression/body/3/1": {
+          "type": "element",
+          "hash": "2d3315dd3f92394aa464a2ff5d746167",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Polish (PL)"
+        },
+        "6/declaration/body/5/argument/1/7": {
+          "type": "element",
+          "hash": "6b4ccc24fb585a9004e0b337668e9371",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Save"
+        },
+        "6/declaration/body/6/argument/1/1-placeholder": {
+          "type": "attribute",
+          "hash": "9a22c348ecef9bbdb8934eb2e6fb873c",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "First name"
+        },
+        "6/declaration/body/6/argument/1/3-placeholder": {
+          "type": "attribute",
+          "hash": "b6485b5d256edb09ef2a8cade41120d2",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Last name"
+        },
+        "6/declaration/body/6/argument/1/5/openingElement/2/value/expression/body-placeholder": {
+          "type": "attribute",
+          "hash": "5bd2227168801d9e0bbf6fed40bd547f",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Preferred locale"
+        },
+        "6/declaration/body/6/argument/1/5/openingElement/2/value/expression/body/1/1": {
+          "type": "element",
+          "hash": "368aefd02ea6b7e202e8f742a34b7b28",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "English (US)"
+        },
+        "6/declaration/body/6/argument/1/5/openingElement/2/value/expression/body/3/1": {
+          "type": "element",
+          "hash": "2d3315dd3f92394aa464a2ff5d746167",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Polish (PL)"
+        },
+        "6/declaration/body/6/argument/1/7": {
+          "type": "element",
+          "hash": "6b4ccc24fb585a9004e0b337668e9371",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Save"
+        }
+      }
+    },
+    "features/auth/components/user-menu.tsx": {
+      "scopes": {
+        "3/declaration/body/1/argument/3/1": {
+          "type": "element",
+          "hash": "b13556c488912ebbb40abbb95dfdea40",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Settings"
+        },
+        "3/declaration/body/1/argument/3/1/1": {
+          "type": "element",
+          "hash": "8df6777277469c1fd88cc18dde2f1cc3",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Settings"
+        },
+        "4/declaration/body/1/argument/3/1/1": {
+          "type": "element",
+          "hash": "8df6777277469c1fd88cc18dde2f1cc3",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Settings"
+        },
+        "5/declaration/body/1/argument/3/1/1": {
+          "type": "element",
+          "hash": "8df6777277469c1fd88cc18dde2f1cc3",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Settings"
+        },
+        "5/declaration/body/1/argument/3/3/1": {
+          "type": "element",
+          "hash": "07948fdf20705e04a7bf68ab197512bf",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Logout"
         }
       }
     },

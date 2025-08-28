@@ -2,71 +2,26 @@
 
 import Logo from "$/features/branding/components/Logo";
 import Link from "$/components/ui/link";
-import { useQueryState, parseAsString } from "nuqs";
-import { useEffect } from "react";
-import {
-  LoginForm,
-  ForgotPasswordForm,
-  EmailSentMessage,
-} from "$/features/auth/components";
+import { useLoginController } from "$/features/auth/hooks/use-login-controller";
+import { LoginForm, ForgotPasswordForm, EmailSentMessage } from "$/features/auth/components";
+import { PasswordUpdateForm } from "$/features/auth/components/password-update-form";
+import { Button } from "@heroui/button";
 import useQueryToast from "$/hooks/use-query-toast";
 import Partners from "$/features/branding/components/Partners";
 import { GateIllustration } from "$/features/branding/components/gate";
 import { LocaleSwitcher } from "$/features/i18n/components/LocaleSwitcher";
 
-type AuthStep = "login" | "forgot-password" | "email-sent";
-const authSteps: AuthStep[] = ["login", "forgot-password", "email-sent"];
-
 export default function LoginPage() {
   useQueryToast("loggedOut", <span>Logged out successfully</span>, "success");
-
-  const [error, setError] = useQueryState("error", parseAsString);
-  const [resetStatus, setResetStatus] = useQueryState("reset", parseAsString);
-  const [resetEmail, setResetEmail] = useQueryState("email", parseAsString);
-  const [step, setStep] = useQueryState<AuthStep>("step", {
-    defaultValue: "login",
-    parse: (value) => {
-      if (authSteps.includes(value as AuthStep)) {
-        return value as AuthStep;
-      }
-      return authSteps[0];
-    },
-    serialize: String,
-  });
-
-  useEffect(() => {
-    if (resetStatus === "sent" && resetEmail) {
-      setStep("email-sent");
-    }
-  }, [resetStatus, resetEmail, setStep]);
-
-  useEffect(() => {
-    if (error) {
-      const timer = setTimeout(() => {
-        setError(null);
-      }, 5000);
-
-      return () => clearTimeout(timer);
-    }
-  }, [error, setError]);
-
-  const handleInputChange = () => {
-    if (error) {
-      setError(null);
-    }
-  };
-
-  const handleForgotPasswordClick = () => {
-    setStep("forgot-password");
-    setError(null);
-  };
-
-  const handleBackToLogin = () => {
-    setStep("login");
-    setError(null);
-    setResetStatus(null);
-    setResetEmail(null);
-  };
+  const {
+    step,
+    error,
+    resetEmail,
+    handleInputChange,
+    handleForgotPasswordClick,
+    handleBackToLogin,
+    handlePasswordResetRequested,
+  } = useLoginController();
 
   return (
     <main className="w-screen h-screen grid grid-cols-2 grid-rows-1 mx-auto">
@@ -103,6 +58,7 @@ export default function LoginPage() {
               error={error}
               onInputChange={handleInputChange}
               onBackToLogin={handleBackToLogin}
+              onRequestReset={handlePasswordResetRequested}
             />
           )}
           {step === "email-sent" && (
@@ -110,6 +66,20 @@ export default function LoginPage() {
               resetEmail={resetEmail}
               onBackToLogin={handleBackToLogin}
             />
+          )}
+          {step === "password-update" && (
+            <div className="flex flex-col gap-4 w-full">
+              <div className="flex flex-col gap-3">
+                <h1 className="font-heading text-3xl font-medium">Set new password:</h1>
+                <h2 className="text-muted-foreground">
+                  Enter your new password to complete the reset.
+                </h2>
+              </div>
+              <PasswordUpdateForm onSuccess={handleBackToLogin} />
+              <Button type="button" variant="bordered" onClick={handleBackToLogin}>
+                Back to Login
+              </Button>
+            </div>
           )}
         </div>
         <div className="flex flex-center gap-2">
