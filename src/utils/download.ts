@@ -1,0 +1,9 @@
+export const openFileLink = (url: string) => {
+  const a = document.createElement("a");
+  a.href = url;
+  a.target = "_blank";
+  a.download = "download";
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+};

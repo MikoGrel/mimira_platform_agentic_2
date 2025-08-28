@@ -1,16 +1,16 @@
 "use client";
 
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect } from "react";
 import React from "react";
 import { groupBy } from "lodash-es";
 import { InboxTenderMapping } from "$/features/inbox/api/use-tender-inbox-query";
 import { CompanyFileType, useCompanyFiles } from "../hooks/use-company-files";
-import { createClient } from "$/lib/supabase/client";
-import { toast } from "sonner";
 
 import { Download, FileDown, FileText, Calendar, PenTool } from "lucide-react";
 import { Alert, Card, CardBody, Button } from "@heroui/react";
 import { useDateFormat } from "$/features/i18n/hooks/use-date-format";
+import { useDownloadFile } from "../hooks/use-download-file";
+import { toast } from "sonner";
 
 interface DocumentationStepProps {
   item: InboxTenderMapping;
@@ -50,6 +50,7 @@ export function DocumentationStep({
   } = useCompanyFiles({
     mappingId: item.id,
   });
+  const { downloadFile } = useDownloadFile();
   const { relativeToNow } = useDateFormat();
 
   const [groupedFiles, setGroupedFiles] = useState<GroupedFiles>({
@@ -77,84 +78,6 @@ export function DocumentationStep({
     }
   }, [files]);
 
-  const handleDownload = useCallback(async (file: CompanyFileType) => {
-    if (!file.s3path) {
-      toast.error(<>File path not available</>);
-      return;
-    }
-
-    try {
-      const client = createClient();
-      const { data, error } = await client.storage
-        .from("tender-files")
-        .download(file.s3path);
-
-      if (error) {
-        throw error;
-      }
-
-      // Create download link
-      const url = URL.createObjectURL(data);
-      const a = document.createElement("a");
-      a.href = url;
-      a.download = file.s3path.split("/").pop() || "file";
-      document.body.appendChild(a);
-      a.click();
-      document.body.removeChild(a);
-      URL.revokeObjectURL(url);
-
-      toast.success(<>File downloaded successfully</>);
-    } catch (error) {
-      console.error("Error downloading file:", error);
-      toast.error(<>Failed to download file</>);
-    }
-  }, []);
-
-  const handleDownloadAllRefilled = useCallback(async () => {
-    const refilledFiles = groupedFiles.refilled.filter((file) => file.s3path);
-
-    if (refilledFiles.length === 0) {
-      toast.error(<>No files to download</>);
-      return;
-    }
-
-    try {
-      const client = createClient();
-      toast.info(<>Downloading {refilledFiles.length} files...</>);
-
-      for (const file of refilledFiles) {
-        try {
-          const { data, error } = await client.storage
-            .from("tender-files")
-            .download(file.s3path!);
-
-          if (error) throw error;
-
-          // Create download link
-          const url = URL.createObjectURL(data);
-          const a = document.createElement("a");
-          a.href = url;
-          a.download = file.s3path!.split("/").pop() || "file";
-          document.body.appendChild(a);
-          a.click();
-          document.body.removeChild(a);
-          URL.revokeObjectURL(url);
-
-          // Small delay to avoid overwhelming the browser
-          await new Promise((resolve) => setTimeout(resolve, 500));
-        } catch (fileError) {
-          console.error(`Error downloading ${file.comment}:`, fileError);
-          toast.error(`Error downloading file: ${file.comment}`);
-        }
-      }
-
-      toast.success(<>All files have been downloaded</>);
-    } catch (error) {
-      console.error("Error in batch download:", error);
-      toast.error(<>Error during file download</>);
-    }
-  }, [groupedFiles.refilled]);
-
   const renderFileGroup = (groupKey: FileGroup, files: CompanyFileType[]) => {
     if (files.length === 0) {
       return (
@@ -179,7 +102,6 @@ export function DocumentationStep({
             <Button
               size="sm"
               variant="ghost"
-              onPress={handleDownloadAllRefilled}
               className="flex items-center gap-1.5 text-xs h-8"
             >
               <FileDown className="w-3.5 h-3.5" />
@@ -194,12 +116,17 @@ export function DocumentationStep({
               <CardBody className="p-3">
                 <div className="flex items-start justify-between gap-3">
                   <div className="flex-1 min-w-0 flex flex-col gap-2">
-                    <div className="flex items-center gap-2 mb-1">
+                    <div className="flex items-center gap-2">
                       <FileText className="w-4 h-4 text-primary flex-shrink-0" />
                       <h4 className="font-medium text-sm text-foreground truncate">
-                        {file.comment || file.file_type || "No name"}
+                        {file.s3path?.split("/").pop()}
                       </h4>
                     </div>
+                    {file.comment && (
+                      <div className="text-sm text-muted-foreground">
+                        {file.comment}
+                      </div>
+                    )}
 
                     <div className="flex items-center gap-4 text-xs text-muted-foreground">
                       <div className="flex items-center gap-1">
@@ -221,8 +148,12 @@ export function DocumentationStep({
                   <Button
                     size="sm"
                     variant="bordered"
-                    onPress={() => handleDownload(file)}
-                    disabled={!file.s3path}
+                    onPress={() =>
+                      downloadFile(file.s3path!).then(() =>
+                        toast.success(<>Downloading {file.comment}...</>)
+                      )
+                    }
+                    isDisabled={!file.s3path}
                   >
                     <Download className="w-3.5 h-3.5" />
                     <span className="hidden sm:inline">Download</span>
