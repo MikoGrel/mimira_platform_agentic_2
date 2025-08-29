@@ -42,6 +42,8 @@ export function OverviewStep({
 }: OverviewStepProps) {
   useEffect(() => setNextEnabled?.(true), [setNextEnabled]);
 
+  console.log(selectedPart);
+
   if (!mapping) {
     return (
       <div className="text-center py-6 text-gray-500">

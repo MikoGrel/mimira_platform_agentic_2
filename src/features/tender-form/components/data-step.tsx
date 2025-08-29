@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect, useCallback, RefObject } from "react";
 import React from "react";
 import {
   useDocumentQuestions,
@@ -11,10 +11,10 @@ import { Textarea } from "@heroui/react";
 import { InboxTenderMapping } from "$/features/inbox/api/use-tender-inbox-query";
 
 interface DataStepProps {
-  item: InboxTenderMapping;
+  item: InboxTenderMapping | null | undefined;
   onNext?: () => void;
   setNextEnabled?: (enabled: boolean) => void;
-  onNextHandler?: React.MutableRefObject<(() => Promise<void>) | null>;
+  onNextHandler?: RefObject<(() => Promise<void>) | null>;
 }
 
 export function DataStep({

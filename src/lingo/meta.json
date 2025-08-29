@@ -19433,6 +19433,14 @@
         },
         "11/declaration/body/2/consequent/0/argument/1": {
           "type": "element",
+          "hash": "62311abe07a2ea32b3058e97a4c55a9c",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "No tender data available"
+        },
+        "11/declaration/body/3/consequent/0/argument/1": {
+          "type": "element",
           "hash": "c79ad61b147ecd3c2950ae872e53579e",
           "context": "",
           "skip": false,
@@ -21223,6 +21231,86 @@
           "overrides": {},
           "content": "✓ Confirmed"
         },
+        "10/body/3/argument/1/1/1/5/1/3/expression/alternate": {
+          "type": "element",
+          "hash": "103ba0aa7490c53ecda36903debb5b2d",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Pending"
+        },
+        "10/body/3/argument/1/1/1/5/1/3/expression/consequent": {
+          "type": "element",
+          "hash": "41424aa118029ec6138c8075c9eb71d1",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "✓ Confirmed"
+        },
+        "10/body/3/argument/1/1/1/5/3/1/expression/right": {
+          "type": "element",
+          "hash": "f0fad5ddb66cafec421b7e9ccfd8b1e2",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Product: {productName}"
+        },
+        "10/body/3/argument/1/1/1/5/3/3/expression/right": {
+          "type": "element",
+          "hash": "fabb7f44a2fc4cd865bc25dfcd327490",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "(Qty: {quantity})"
+        },
+        "10/body/3/argument/1/1/1/5/5/expression/right": {
+          "type": "element",
+          "hash": "fcfa497bf174a917c85bfdd9d259c5ff",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Reason: {requirement.reason}"
+        },
+        "10/body/3/argument/1/1/3/1": {
+          "type": "element",
+          "hash": "beed60c5684a26ca19a7819cdd874e5e",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Catalogue"
+        },
+        "10/body/3/argument/1/1/3/3": {
+          "type": "element",
+          "hash": "f9d50eec30e73fd076d8f1eeef2c565b",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Add Manually"
+        },
+        "10/body/3/argument/3/expression/right/1/1": {
+          "type": "element",
+          "hash": "9519f73c2690677dee31fcb78ca5d9b0",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Requirement Details"
+        },
+        "10/body/3/argument/5/expression/right/1/1/1/3": {
+          "type": "element",
+          "hash": "84a81f9e3c41d52d03b88f46bd9235cf",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Selected Product"
+        },
+        "10/body/3/argument/5/expression/right/1/1/3": {
+          "type": "element",
+          "hash": "173cb2e7e032c809529b871b065f46d5",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Remove"
+        },
         "11/body/2/argument/1/1/5/1/3/expression/alternate": {
           "type": "element",
           "hash": "79d1d0e7e781e305aa4b30a0b6fc6f9d",
@@ -21279,6 +21367,22 @@
           "overrides": {},
           "content": "✓ Confirmed"
         },
+        "11/body/3/argument/1/1/1/5/3/1/expression/right": {
+          "type": "element",
+          "hash": "f0fad5ddb66cafec421b7e9ccfd8b1e2",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Product: {productName}"
+        },
+        "11/body/3/argument/1/1/1/5/3/3/expression/right": {
+          "type": "element",
+          "hash": "fabb7f44a2fc4cd865bc25dfcd327490",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "(Qty: {quantity})"
+        },
         "11/body/3/argument/1/1/1/5/3/expression/right": {
           "type": "element",
           "hash": "31a525a4b4d911d182aaa7032eaed55c",
@@ -21286,6 +21390,14 @@
           "skip": false,
           "overrides": {},
           "content": "Quantity: {product.product_req_quantity}"
+        },
+        "11/body/3/argument/1/1/1/5/5/expression/right": {
+          "type": "element",
+          "hash": "fcfa497bf174a917c85bfdd9d259c5ff",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Reason: {requirement.reason}"
         },
         "11/body/3/argument/1/1/3/1": {
           "type": "element",
@@ -21302,6 +21414,14 @@
           "skip": false,
           "overrides": {},
           "content": "Add Manually"
+        },
+        "11/body/3/argument/3/expression/right/1/1": {
+          "type": "element",
+          "hash": "9519f73c2690677dee31fcb78ca5d9b0",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Requirement Details"
         },
         "11/body/3/argument/3/expression/right/1/expression/right/1": {
           "type": "element",
@@ -21399,6 +21519,222 @@
           "overrides": {},
           "content": "Remove"
         },
+        "11/body/4/argument/1/1/1/1/1/1/5/1/3/expression/alternate": {
+          "type": "element",
+          "hash": "4a248eb5133a2d9c99577cd1eae4327a",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Pending"
+        },
+        "11/body/4/argument/1/1/1/1/1/1/5/1/3/expression/consequent": {
+          "type": "element",
+          "hash": "bf7394473b69cb4d26b91714fc7cbd8b",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "✓ Confirmed"
+        },
+        "11/body/4/argument/1/1/1/1/1/1/5/3/1/expression/right": {
+          "type": "element",
+          "hash": "a98dc00e566676745c55957a300a9ba6",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Product: {productName}"
+        },
+        "11/body/4/argument/1/1/1/1/1/3/1": {
+          "type": "element",
+          "hash": "87eab82f6072a7c9f1d59e1c53298f23",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Catalogue"
+        },
+        "11/body/4/argument/1/1/1/1/1/3/3": {
+          "type": "element",
+          "hash": "2ea90c868d81beb88c71af0d7706dbe0",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Add"
+        },
+        "11/body/4/argument/1/1/1/3/1/expression/right/1": {
+          "type": "element",
+          "hash": "e7a2573471163aec3faced931f55cfca",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "<element:FileText></element:FileText> Requirement Details"
+        },
+        "11/body/4/argument/1/1/1/3/3/expression/right/1/1": {
+          "type": "element",
+          "hash": "4c014e31dcb99c552af5d73d612e1fb5",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "<element:Tag></element:Tag> Selected Product"
+        },
+        "11/body/4/argument/1/1/1/3/3/expression/right/1/3": {
+          "type": "element",
+          "hash": "feb15e75efc81c54cb85538c42a7a5c9",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Remove"
+        },
+        "11/body/5/argument/1/1/1/5/1/3/expression/alternate": {
+          "type": "element",
+          "hash": "103ba0aa7490c53ecda36903debb5b2d",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Pending"
+        },
+        "11/body/5/argument/1/1/1/5/1/3/expression/consequent": {
+          "type": "element",
+          "hash": "41424aa118029ec6138c8075c9eb71d1",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "✓ Confirmed"
+        },
+        "11/body/5/argument/1/1/1/5/3/1/expression/right": {
+          "type": "element",
+          "hash": "f0fad5ddb66cafec421b7e9ccfd8b1e2",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Product: {productName}"
+        },
+        "11/body/5/argument/1/1/1/5/3/3/expression/right": {
+          "type": "element",
+          "hash": "fabb7f44a2fc4cd865bc25dfcd327490",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "(Qty: {quantity})"
+        },
+        "11/body/5/argument/1/1/1/5/5/expression/right": {
+          "type": "element",
+          "hash": "fcfa497bf174a917c85bfdd9d259c5ff",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Reason: {requirement.reason}"
+        },
+        "11/body/5/argument/1/1/3/1": {
+          "type": "element",
+          "hash": "beed60c5684a26ca19a7819cdd874e5e",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Catalogue"
+        },
+        "11/body/5/argument/1/1/3/3": {
+          "type": "element",
+          "hash": "f9d50eec30e73fd076d8f1eeef2c565b",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Add Manually"
+        },
+        "11/body/5/argument/3/expression/right/1/expression/right/1": {
+          "type": "element",
+          "hash": "c5a3bdb7325dab8d3d92a9634db65949",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Requirements for Confirmation"
+        },
+        "11/body/5/argument/3/expression/right/3/expression/right/1/1/1/3": {
+          "type": "element",
+          "hash": "edeccae2077d0b5c1bb725cdbbe6afb2",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Technical Specifications"
+        },
+        "11/body/5/argument/5/expression/right/1/1/1/3": {
+          "type": "element",
+          "hash": "84a81f9e3c41d52d03b88f46bd9235cf",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Selected Product"
+        },
+        "11/body/5/argument/5/expression/right/1/1/3": {
+          "type": "element",
+          "hash": "173cb2e7e032c809529b871b065f46d5",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Remove"
+        },
+        "11/declaration/body/13/consequent/0/argument/3": {
+          "type": "element",
+          "hash": "1e8bba060b349e8a000cda194252d06c",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "All requirements were confirmed, go to the next step!"
+        },
+        "11/declaration/body/14/argument/1/1/1": {
+          "type": "element",
+          "hash": "73e9ad48918c1ed1b958fdb4d17ab500",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Requirements to Confirm"
+        },
+        "11/declaration/body/14/argument/1/1/3": {
+          "type": "element",
+          "hash": "b428553edc4bc871b131f92969409c27",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "{confirmedCount} of {totalCount} confirmed"
+        },
+        "11/declaration/body/14/argument/1/3/1": {
+          "type": "element",
+          "hash": "906315f9d7868f2d3eaab9364bf661c5",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Clear All"
+        },
+        "11/declaration/body/14/argument/1/3/3": {
+          "type": "element",
+          "hash": "bd5a93e4d0455862385c9e6c714d0b32",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Confirm All"
+        },
+        "11/declaration/body/14/argument/11/expression/right/1": {
+          "type": "element",
+          "hash": "47bba8de401c5e8c3155a8828895f12e",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Product Requirements ({productRequirements.length})"
+        },
+        "11/declaration/body/14/argument/3/3/1": {
+          "type": "element",
+          "hash": "08ea4ddb6da2a0ec308cefba149ac7b6",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "{progressPercentage}% Complete"
+        },
+        "11/declaration/body/14/argument/7/expression/right/1": {
+          "type": "element",
+          "hash": "8ae98328c0c0a76bd07975ef1c9968f0",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Service Requirements ({serviceRequirements.length})"
+        },
         "12/body/3/argument/1/1/1/5/1/3/expression/alternate": {
           "type": "element",
           "hash": "103ba0aa7490c53ecda36903debb5b2d",
@@ -21489,11 +21825,11 @@
         },
         "12/declaration/body/14/argument/1/1/3": {
           "type": "element",
-          "hash": "b428553edc4bc871b131f92969409c27",
+          "hash": "1de61689d7d7beb04ddaf08e1f9aa3e3",
           "context": "",
           "skip": false,
           "overrides": {},
-          "content": "{confirmedCount} of {totalCount} confirmed"
+          "content": "{confirmedCount} of {totalCount} confirmed ({progressPercentage}%)"
         },
         "12/declaration/body/14/argument/1/3/1": {
           "type": "element",
@@ -21513,11 +21849,11 @@
         },
         "12/declaration/body/14/argument/11/expression/right/1": {
           "type": "element",
-          "hash": "8ae98328c0c0a76bd07975ef1c9968f0",
+          "hash": "47bba8de401c5e8c3155a8828895f12e",
           "context": "",
           "skip": false,
           "overrides": {},
-          "content": "Service Requirements ({serviceRequirements.length})"
+          "content": "Product Requirements ({productRequirements.length})"
         },
         "12/declaration/body/14/argument/13/expression/right/1": {
           "type": "element",
@@ -21537,11 +21873,11 @@
         },
         "12/declaration/body/14/argument/15/expression/right/1": {
           "type": "element",
-          "hash": "8ae98328c0c0a76bd07975ef1c9968f0",
+          "hash": "47bba8de401c5e8c3155a8828895f12e",
           "context": "",
           "skip": false,
           "overrides": {},
-          "content": "Service Requirements ({serviceRequirements.length})"
+          "content": "Product Requirements ({productRequirements.length})"
         },
         "12/declaration/body/14/argument/15/expression/right/1/3": {
           "type": "element",
@@ -21617,11 +21953,11 @@
         },
         "12/declaration/body/14/argument/7/expression/right/1": {
           "type": "element",
-          "hash": "47bba8de401c5e8c3155a8828895f12e",
+          "hash": "8ae98328c0c0a76bd07975ef1c9968f0",
           "context": "",
           "skip": false,
           "overrides": {},
-          "content": "Product Requirements ({productRequirements.length})"
+          "content": "Service Requirements ({serviceRequirements.length})"
         },
         "12/declaration/body/14/argument/9/expression/right/1": {
           "type": "element",
@@ -21832,6 +22168,86 @@
           "content": "{progressPercentage}% Complete"
         },
         "13/declaration/body/15/argument/7/expression/right/1": {
+          "type": "element",
+          "hash": "47bba8de401c5e8c3155a8828895f12e",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Product Requirements ({products.length})"
+        },
+        "14/declaration/body/13/consequent/0/argument/3": {
+          "type": "element",
+          "hash": "1e8bba060b349e8a000cda194252d06c",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "All requirements were confirmed, go to the next step!"
+        },
+        "14/declaration/body/14/argument/1/1/1": {
+          "type": "element",
+          "hash": "73e9ad48918c1ed1b958fdb4d17ab500",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Requirements to Confirm"
+        },
+        "14/declaration/body/14/argument/1/1/3": {
+          "type": "element",
+          "hash": "b428553edc4bc871b131f92969409c27",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "{confirmedCount} of {totalCount} confirmed"
+        },
+        "14/declaration/body/14/argument/1/3/1": {
+          "type": "element",
+          "hash": "906315f9d7868f2d3eaab9364bf661c5",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Clear All"
+        },
+        "14/declaration/body/14/argument/1/3/3": {
+          "type": "element",
+          "hash": "bd5a93e4d0455862385c9e6c714d0b32",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Confirm All"
+        },
+        "14/declaration/body/14/argument/11/expression/right/1": {
+          "type": "element",
+          "hash": "8ae98328c0c0a76bd07975ef1c9968f0",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Service Requirements ({serviceRequirements.length})"
+        },
+        "14/declaration/body/14/argument/15/expression/right/1": {
+          "type": "element",
+          "hash": "47bba8de401c5e8c3155a8828895f12e",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Product Requirements ({productRequirements.length})"
+        },
+        "14/declaration/body/14/argument/3/3/1": {
+          "type": "element",
+          "hash": "08ea4ddb6da2a0ec308cefba149ac7b6",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "{progressPercentage}% Complete"
+        },
+        "14/declaration/body/14/argument/5/expression/right/1": {
+          "type": "element",
+          "hash": "8ae98328c0c0a76bd07975ef1c9968f0",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Service Requirements ({serviceRequirements.length})"
+        },
+        "14/declaration/body/14/argument/7/expression/right/1": {
           "type": "element",
           "hash": "47bba8de401c5e8c3155a8828895f12e",
           "context": "",

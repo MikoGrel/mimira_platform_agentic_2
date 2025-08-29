@@ -45,17 +45,17 @@ export function usePartsManagement(
   useEffect(() => {
     if (!mapping?.tender_parts) return;
 
-    const needing = mapping.tender_parts.filter((part) =>
+    const analysisParts = mapping.tender_parts.filter(
+      (part) => !["default", "reject"].includes(part.status)
+    );
+
+    const needing = analysisParts.filter((part) =>
       part.tender_requirements.some((req) => req.status === "default")
     );
     setPartsNeedingConfirmation(needing);
 
     if (!selectedPart) {
-      if (needing.length > 0) {
-        setSelectedPart(needing[0]);
-      } else if (mapping.tender_parts.length > 0) {
-        setSelectedPart(mapping.tender_parts[0]);
-      }
+      setSelectedPart(needing[0] || analysisParts[0]);
     }
   }, [mapping, selectedPart]);
 

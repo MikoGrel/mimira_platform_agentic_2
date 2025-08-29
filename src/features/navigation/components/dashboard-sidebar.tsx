@@ -32,6 +32,7 @@ const navigationItems = [
     icon: Home,
     tooltip: "Home",
     url: "/dashboard",
+    disabled: false,
   },
   {
     id: "new-tenders",
@@ -39,6 +40,7 @@ const navigationItems = [
     icon: SparklesIcon,
     tooltip: "Discover new tenders",
     url: "/dashboard/inbox",
+    disabled: false,
   },
   {
     id: "active-tenders",
@@ -46,6 +48,7 @@ const navigationItems = [
     icon: FolderOpen,
     tooltip: "Active tenders",
     url: "/dashboard/tenders",
+    disabled: false,
   },
   {
     id: "documents",
@@ -53,6 +56,7 @@ const navigationItems = [
     icon: FileCheck,
     tooltip: "Documents",
     url: "/dashboard/documents",
+    disabled: true,
   },
 ] as const;
 
@@ -87,8 +91,9 @@ export default function DashboardSidebar() {
                           asChild
                           tooltip={item.tooltip}
                           isActive={isActive}
+                          disabled={item.disabled}
                         >
-                          <Link href={item.url}>
+                          <Link href={item.disabled ? "#" : item.url}>
                             <item.icon
                               className={cn(isActive && "text-primary")}
                             />

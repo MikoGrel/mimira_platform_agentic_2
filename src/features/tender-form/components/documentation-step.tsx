@@ -10,9 +10,8 @@ import { Alert } from "@heroui/react";
 import { FileGroup } from "./file-group";
 
 interface DocumentationStepProps {
-  item: InboxTenderMapping;
+  item: InboxTenderMapping | null | undefined;
   setNextEnabled?: (enabled: boolean) => void;
-  onNextHandler?: React.MutableRefObject<(() => Promise<void>) | null>;
 }
 
 type FileGroupKey = "refilled" | "optional" | "other";
@@ -26,7 +25,6 @@ interface GroupedFiles {
 export function DocumentationStep({
   item,
   setNextEnabled,
-  onNextHandler: _onNextHandler, // eslint-disable-line @typescript-eslint/no-unused-vars
 }: DocumentationStepProps) {
   useEffect(() => {
     if (setNextEnabled) {
@@ -39,7 +37,7 @@ export function DocumentationStep({
     isLoading,
     error,
   } = useCompanyFiles({
-    mappingId: item.id,
+    mappingId: item?.id,
   });
 
   const [groupedFiles, setGroupedFiles] = useState<GroupedFiles>({
@@ -111,8 +109,13 @@ export function DocumentationStep({
       <FileGroup
         label={<>Requires manual fill</>}
         files={groupedFiles.optional}
+        showDownloadAll
       />
-      <FileGroup label={<>Other attachments</>} files={groupedFiles.other} />
+      <FileGroup
+        label={<>Other attachments</>}
+        files={groupedFiles.other}
+        showDownloadAll
+      />
     </div>
   );
 }

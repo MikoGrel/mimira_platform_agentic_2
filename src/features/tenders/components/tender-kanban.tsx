@@ -33,6 +33,7 @@ const COLUMNS = [
     id: "analysis",
     title: <>Analysis</>,
     statuses: ["analysis"] as const,
+    updateStatus: "analysis",
     icon: Search,
     color: "text-amber-500",
   },
@@ -40,6 +41,7 @@ const COLUMNS = [
     id: "questions",
     title: <>Questions & Review</>,
     statuses: ["questions_in_review_mimira", "questions"] as const,
+    updateStatus: "questions",
     icon: MessageCircleQuestion,
     color: "text-purple-500",
   },
@@ -51,6 +53,7 @@ const COLUMNS = [
       "documents_ready",
       "documents_reviewed",
     ] as const,
+    updateStatus: "documents_ready",
     icon: FileText,
     color: "text-cyan-500",
   },
@@ -58,6 +61,7 @@ const COLUMNS = [
     id: "decision",
     title: <>Decision</>,
     statuses: ["decision_made_applied", "decision_made_rejected"] as const,
+    updateStatus: "decision_made_applied",
     icon: CheckCircle,
     color: "text-green-500",
   },
@@ -65,6 +69,7 @@ const COLUMNS = [
     id: "rejected",
     title: <>Rejected</>,
     statuses: ["rejected"] as const,
+    updateStatus: "rejected",
     icon: X,
     color: "text-red-500",
   },
@@ -74,12 +79,15 @@ type ColumnId = (typeof COLUMNS)[number]["id"];
 
 type ColumnDragData = {
   type: "Column";
-  column: { id: string; title: string };
+  column: { id: string; title: string; updateStatus: string };
+  updateStatus: string;
 };
 
 type TaskDragData = {
   type: "Task";
   task: IndividualTenderMapping;
+  column: { id: string; title: string; updateStatus: string };
+  updateStatus: string;
 };
 
 type DraggableData = ColumnDragData | TaskDragData;
@@ -182,62 +190,41 @@ export function TenderKanban({ searchQuery, filterQuery }: TenderKanbanProps) {
   const handleDragOver = (event: DragOverEvent) => {
     const { active, over } = event;
     if (!over) return;
-
-    const activeId = active.id;
-    const overId = over.id;
-
-    if (activeId === overId) return;
-
     if (!hasDraggableData(active) || !hasDraggableData(over)) return;
 
     const activeData = active.data.current;
+    if (activeData?.type !== "Task") return;
+
+    const activeTask = allTenders.find((m) => m.id === (active.id as string));
+    if (!activeTask) return;
+
     const overData = over.data.current;
 
-    const isActiveATask = activeData?.type === "Task";
-    const isOverATask = overData?.type === "Task";
+    let targetUpdateStatus: string | null = null;
 
-    if (!isActiveATask) return;
-
-    // Im dropping a Task over another Task
-    if (isActiveATask && isOverATask) {
-      const activeTask = allTenders.find((m) => m.id === activeId);
-      const overTask = allTenders.find((m) => m.id === overId);
-
-      if (activeTask && overTask) {
-        const activeColumn = getColumnForTender(activeTask);
+    if (overData?.type === "Column") {
+      const targetColumn = COLUMNS.find(
+        (col) => col.id === (over.id as string)
+      );
+      targetUpdateStatus = targetColumn?.updateStatus ?? null;
+    } else if (overData?.type === "Task") {
+      const overTask = allTenders.find((m) => m.id === (over.id as string));
+      if (overTask) {
         const overColumn = getColumnForTender(overTask);
-
-        if (activeColumn.id !== overColumn.id) {
-          const newStatus = overColumn.statuses[0];
-          optimisticUpdate(activeId as string, newStatus);
-          updateTenderStatus.mutate({
-            mappingId: activeId as string,
-            status: newStatus,
-          });
-        } else {
-          // Same-column reordering removed by request; do nothing
-        }
+        targetUpdateStatus = overColumn.updateStatus;
       }
     }
 
-    const isOverAColumn = overData?.type === "Column";
+    if (!targetUpdateStatus) return;
 
-    // Im dropping a Task over a column
-    if (isActiveATask && isOverAColumn) {
-      const activeTask = allTenders.find((m) => m.id === activeId);
+    const currentColumn = getColumnForTender(activeTask);
+    if (currentColumn.updateStatus === targetUpdateStatus) return;
 
-      if (activeTask) {
-        const targetColumn = COLUMNS.find((col) => col.id === overId);
-        if (targetColumn) {
-          const newStatus = targetColumn.statuses[0];
-          optimisticUpdate(activeId as string, newStatus);
-          updateTenderStatus.mutate({
-            mappingId: activeId as string,
-            status: newStatus,
-          });
-        }
-      }
-    }
+    optimisticUpdate(active.id as string, targetUpdateStatus);
+    updateTenderStatus.mutate({
+      mappingId: active.id as string,
+      status: targetUpdateStatus,
+    });
   };
 
   const handleDragEnd = () => {

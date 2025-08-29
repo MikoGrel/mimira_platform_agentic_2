@@ -14,7 +14,7 @@ import {
   PartsSidebar,
   OverviewStep,
 } from "$/features/tender-form/components";
-import { hasRequirementsToConfirmInbox } from "$/features/tenders/utils/confirmation";
+import { hasRequirementsToAnalyze } from "$/features/tenders/utils/confirmation";
 import { getOverviewParts } from "$/features/tenders/utils/parts";
 import { Button } from "@heroui/react";
 import React from "react";
@@ -62,20 +62,6 @@ function StepperContent({
 }) {
   const { current, next } = useStepper();
 
-  const resolvedItem: InboxTenderMapping | InboxTenderPart | null =
-    useMemo(() => {
-      if (!mapping) return null;
-      if (selectedPart) {
-        const foundPart = mapping.tender_parts?.find(
-          (part) => part.id === selectedPart.id
-        );
-        return (foundPart as InboxTenderPart) || null;
-      }
-      return mapping as InboxTenderMapping;
-    }, [selectedPart, mapping]);
-
-  if (!mapping) return null;
-
   const renderStepContent = () => {
     switch (current.id) {
       case "overview":
@@ -89,7 +75,7 @@ function StepperContent({
       case "confirmations":
         return (
           <ConfirmationsStep
-            item={resolvedItem as InboxTenderPart}
+            item={selectedPart}
             setNextEnabled={setNextEnabled}
             isConfirmed={
               selectedPart ? confirmedParts.has(selectedPart.id) : false
@@ -106,24 +92,17 @@ function StepperContent({
           />
         );
       case "documentation":
-        return (
-          <DocumentationStep item={mapping} onNextHandler={nextHandlerRef} />
-        );
+        return <DocumentationStep item={mapping} />;
       case "decision":
         return (
           <DecisionStep
-            item={resolvedItem}
+            item={mapping}
             setNextEnabled={setNextEnabled}
             onNextHandler={nextHandlerRef}
           />
         );
       default:
-        return (
-          <ConfirmationsStep
-            item={resolvedItem as InboxTenderPart}
-            setNextEnabled={setNextEnabled}
-          />
-        );
+        throw new Error(`Unknown step: ${current}`);
     }
   };
 
@@ -237,13 +216,15 @@ export default function TenderPage() {
   const stepperMethodsRef = useRef<ReturnType<typeof useStepper> | null>(null);
 
   const initialStep = useMemo(() => {
-    if (isLoading || !mapping) return;
+    if (isLoading || !mapping) return null;
 
     const status = mapping.status ?? "analysis";
     if (status === "analysis" || status === "questions") {
-      const needsConfirmation = hasRequirementsToConfirmInbox(mapping);
-      return needsConfirmation ? "confirmations" : "data";
+      const needsAnalysis = hasRequirementsToAnalyze(mapping);
+
+      return needsAnalysis ? "confirmations" : "data";
     }
+
     return mapStatusToStep(status);
   }, [isLoading, mapping]);
 
@@ -256,6 +237,8 @@ export default function TenderPage() {
   }, [mapping, initialStep, initialConfirmationsNextEnabled]);
 
   const partSteps = ["overview", "confirmations"];
+
+  if (!initialStep) return null;
 
   return (
     <main className="w-full h-full bg-primary-gradient">
