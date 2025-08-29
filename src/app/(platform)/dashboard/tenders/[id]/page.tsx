@@ -23,6 +23,11 @@ import { InboxTenderMapping } from "$/features/inbox/api/use-tender-inbox-query"
 import { InboxTenderPart } from "$/features/inbox/api/use-tender-inbox-query";
 import { usePartsManagement } from "$/features/tender-form/hooks";
 import { useUpdateTenderStatus } from "$/features/tenders/api/use-update-tender-status";
+import {
+  ResizablePanelGroup,
+  ResizablePanel,
+  ResizableHandle,
+} from "$/components/ui/resizable";
 
 const { Stepper, useStepper, utils } = defineStepper(
   {
@@ -269,88 +274,62 @@ export default function TenderPage() {
                   ))}
                 </Stepper.Navigation>
               </nav>
-              <section className="flex">
-                <PartsSidebar
-                  parts={mapping ? getOverviewParts(mapping) : []}
-                  selectedPart={selectedPart}
-                  onPartSelect={handlePartSelect}
-                  fullTenderStep={!partSteps.includes(methods.current.id)}
-                />
-
-                <div className="flex-1 flex flex-col">
-                  <div className="bg-background border-b border-gray-200 p-4 flex flex-col gap-2">
-                    <h1 className="text-sm font-medium">
-                      {mapping?.tenders?.order_object}
-                    </h1>
-                    <div className="flex items-center gap-4 text-sm text-muted-foreground ">
-                      <span className="flex items-center gap-2">
-                        <House className="w-4 h-4" />
-                        {mapping?.tenders?.organization_name}
-                      </span>
-                      <span className="flex items-center gap-2">
-                        <CalendarClock className="w-4 h-4" />
-                        {mapping?.tenders?.submitting_offers_date &&
-                          relativeToNow(
-                            new Date(mapping?.tenders?.submitting_offers_date)
-                          )}
-                      </span>
-                    </div>
-                  </div>
-
-                  <div className="flex-1 bg-background p-4 overflow-y-auto min-w-0">
-                    <StepperContent
-                      mapping={mapping}
+              <section className="h-full">
+                <ResizablePanelGroup direction="horizontal" className="h-full">
+                  <ResizablePanel defaultSize={25} minSize={20} maxSize={40}>
+                    <PartsSidebar
+                      parts={mapping ? getOverviewParts(mapping) : []}
                       selectedPart={selectedPart}
-                      setNextEnabled={setNextEnabled}
-                      nextHandlerRef={nextHandlerRef}
-                      confirmedParts={confirmedParts}
+                      onPartSelect={handlePartSelect}
+                      fullTenderStep={!partSteps.includes(methods.current.id)}
                     />
-                  </div>
+                  </ResizablePanel>
 
-                  <div className="bg-background border-t border-gray-200 p-4">
-                    <Stepper.Controls className="flex justify-between">
-                      <Button
-                        variant="bordered"
-                        onPress={() => {
-                          methods.beforePrev(() => {
-                            const status = mapStepToStatus(
-                              utils.getPrev(methods.current.id).id
-                            );
-                            if (mapping && status) {
-                              updateTenderStatus.mutate({
-                                mappingId: mapping.id,
-                                status,
-                              });
-                            }
+                  <ResizableHandle withHandle />
 
-                            return true;
-                          });
-                          methods.prev();
-                        }}
-                        disabled={methods.isFirst}
-                      >
-                        Previous step
-                      </Button>
+                  <ResizablePanel defaultSize={75}>
+                    <div className="flex flex-col h-full">
+                      <div className="bg-background border-b border-gray-200 p-4 flex flex-col gap-2 flex-shrink-0">
+                        <h1 className="text-sm font-medium">
+                          {mapping?.tenders?.order_object}
+                        </h1>
+                        <div className="flex items-center gap-4 text-sm text-muted-foreground ">
+                          <span className="flex items-center gap-2">
+                            <House className="w-4 h-4" />
+                            {mapping?.tenders?.organization_name}
+                          </span>
+                          <span className="flex items-center gap-2">
+                            <CalendarClock className="w-4 h-4" />
+                            {mapping?.tenders?.submitting_offers_date &&
+                              relativeToNow(
+                                new Date(
+                                  mapping?.tenders?.submitting_offers_date
+                                )
+                              )}
+                          </span>
+                        </div>
+                      </div>
 
-                      <div className="flex gap-2">
-                        {!methods.isLast && (
+                      <div className="flex-[1_0_0] overflow-y-auto bg-background">
+                        <div className="p-4">
+                          <StepperContent
+                            mapping={mapping}
+                            selectedPart={selectedPart}
+                            setNextEnabled={setNextEnabled}
+                            nextHandlerRef={nextHandlerRef}
+                            confirmedParts={confirmedParts}
+                          />
+                        </div>
+                      </div>
+
+                      <div className="bg-background border-t border-gray-200 p-4 flex-shrink-0">
+                        <Stepper.Controls className="flex justify-between">
                           <Button
-                            color="primary"
+                            variant="bordered"
                             onPress={() => {
-                              methods.beforeNext(async () => {
-                                if (methods.current.id === "confirmations") {
-                                  const ok =
-                                    await handleConfirmationsBeforeNext();
-                                  if (!ok) return false;
-                                }
-                                if (nextHandlerRef.current) {
-                                  await nextHandlerRef.current();
-                                }
-                                return true;
-                              });
-                              methods.beforeNext(() => {
+                              methods.beforePrev(() => {
                                 const status = mapStepToStatus(
-                                  utils.getNext(methods.current.id).id
+                                  utils.getPrev(methods.current.id).id
                                 );
                                 if (mapping && status) {
                                   updateTenderStatus.mutate({
@@ -361,26 +340,69 @@ export default function TenderPage() {
 
                                 return true;
                               });
-                              methods.next();
+                              methods.prev();
                             }}
-                            isDisabled={
-                              !nextEnabled || isProcessingConfirmation
-                            }
+                            disabled={methods.isFirst}
                           >
-                            {isProcessingConfirmation
-                              ? "Processing..."
-                              : getStepButtonText(methods.current.id)}
+                            Previous step
                           </Button>
-                        )}
-                        {methods.isLast && (
-                          <Button onPress={methods.reset} variant="bordered">
-                            Reset
-                          </Button>
-                        )}
+
+                          <div className="flex gap-2">
+                            {!methods.isLast && (
+                              <Button
+                                color="primary"
+                                onPress={() => {
+                                  methods.beforeNext(async () => {
+                                    if (
+                                      methods.current.id === "confirmations"
+                                    ) {
+                                      const ok =
+                                        await handleConfirmationsBeforeNext();
+                                      if (!ok) return false;
+                                    }
+                                    if (nextHandlerRef.current) {
+                                      await nextHandlerRef.current();
+                                    }
+                                    return true;
+                                  });
+                                  methods.beforeNext(() => {
+                                    const status = mapStepToStatus(
+                                      utils.getNext(methods.current.id).id
+                                    );
+                                    if (mapping && status) {
+                                      updateTenderStatus.mutate({
+                                        mappingId: mapping.id,
+                                        status,
+                                      });
+                                    }
+
+                                    return true;
+                                  });
+                                  methods.next();
+                                }}
+                                isDisabled={
+                                  !nextEnabled || isProcessingConfirmation
+                                }
+                              >
+                                {isProcessingConfirmation
+                                  ? "Processing..."
+                                  : getStepButtonText(methods.current.id)}
+                              </Button>
+                            )}
+                            {methods.isLast && (
+                              <Button
+                                onPress={methods.reset}
+                                variant="bordered"
+                              >
+                                Reset
+                              </Button>
+                            )}
+                          </div>
+                        </Stepper.Controls>
                       </div>
-                    </Stepper.Controls>
-                  </div>
-                </div>
+                    </div>
+                  </ResizablePanel>
+                </ResizablePanelGroup>
               </section>
             </div>
           );

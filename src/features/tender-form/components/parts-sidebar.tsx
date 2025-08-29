@@ -25,7 +25,7 @@ export function PartsSidebar({
   fullTenderStep = false,
 }: PartsSidebarProps) {
   return (
-    <aside className="border-r border-sidebar-border w-[450px] h-full bg-background">
+    <aside className="w-full h-full bg-background">
       <div className="p-4 border-b border-sidebar-border">
         <h3 className="text-sm font-semibold mb-1">Tender Parts</h3>
         <p className="text-xs text-muted-foreground">

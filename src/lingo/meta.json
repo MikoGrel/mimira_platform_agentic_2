@@ -2955,6 +2955,46 @@
           "overrides": {},
           "content": "Next step"
         },
+        "17/0/init/0/1/value": {
+          "type": "element",
+          "hash": "30c54e4dc4ce599b87d94be34a8617f5",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Overview"
+        },
+        "17/0/init/1/1/value": {
+          "type": "element",
+          "hash": "d6bd835d0f69b13150c90fe117eea0a9",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Confirmations"
+        },
+        "17/0/init/2/1/value": {
+          "type": "element",
+          "hash": "b7b46ab6ce9606032c8f81f6f6afbb9b",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Data"
+        },
+        "17/0/init/3/1/value": {
+          "type": "element",
+          "hash": "1563fcb5ddb5037b0709ccd3dd384a92",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Documentation"
+        },
+        "17/0/init/4/1/value": {
+          "type": "element",
+          "hash": "4757e269fee1aa76864469e762def497",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Decision"
+        },
         "17/declaration/body/11/0/init/body/0/0/0/argument": {
           "type": "element",
           "hash": "cf9769910b0a62b4a349954de4652cbc",
@@ -4276,6 +4316,182 @@
           "content": "Submit decision"
         },
         "18/declaration/body/9/0/init/body/0/4/0/argument": {
+          "type": "element",
+          "hash": "712c63650b5180cbc14d6246b5d558c2",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Next step"
+        },
+        "19/declaration/body/10/0/init/body/0/0/0/alternate/alternate/0/argument": {
+          "type": "element",
+          "hash": "3bebbe9909ebc2ae788c9038831ddb6e",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Next part"
+        },
+        "19/declaration/body/10/0/init/body/0/0/0/alternate/consequent/0/argument": {
+          "type": "element",
+          "hash": "fa60853b0e075c7c134e4bb3c7c59d82",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Save and continue"
+        },
+        "19/declaration/body/10/0/init/body/0/0/0/consequent/0/argument": {
+          "type": "element",
+          "hash": "fa60853b0e075c7c134e4bb3c7c59d82",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Save and continue"
+        },
+        "19/declaration/body/10/0/init/body/0/1/0/argument": {
+          "type": "element",
+          "hash": "88f8c2a27083267af9d5b574332ac836",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Save answers and continue"
+        },
+        "19/declaration/body/10/0/init/body/0/2/0/argument": {
+          "type": "element",
+          "hash": "db50aad354a83c0dc4788ddc4da3c3a4",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Upload documents and continue"
+        },
+        "19/declaration/body/10/0/init/body/0/3/0/argument": {
+          "type": "element",
+          "hash": "0ecb8520d3ff84380f16ac46a864b24a",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Submit decision"
+        },
+        "19/declaration/body/10/0/init/body/0/4/0/argument": {
+          "type": "element",
+          "hash": "712c63650b5180cbc14d6246b5d558c2",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Next step"
+        },
+        "19/declaration/body/16/argument/1/1/expression/body/1/argument/1/1": {
+          "type": "element",
+          "hash": "1e2ea95a1cc35caf5407cb56609d471b",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "<element:MoveLeft></element:MoveLeft> Return"
+        },
+        "19/declaration/body/16/argument/1/1/expression/body/1/argument/3/1/5/1/5/1/1": {
+          "type": "element",
+          "hash": "dc3149e5f8913e58f4705f41b238d00c",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Previous step"
+        },
+        "19/declaration/body/16/argument/1/1/expression/body/1/argument/3/1/5/1/5/1/3/3/expression/right": {
+          "type": "element",
+          "hash": "a0428f777a098e07120f19324d4f7eee",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Reset"
+        },
+        "19/declaration/body/16/argument/1/1/expression/body/1/argument/3/3/5/1/1": {
+          "type": "element",
+          "hash": "054a50e59feb6c034f1368261fbfa015",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Previous step"
+        },
+        "19/declaration/body/16/argument/1/1/expression/body/1/argument/3/3/5/1/3/3/expression/right": {
+          "type": "element",
+          "hash": "da9587ba0b6ea8ef30c5757770facff9",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Reset"
+        },
+        "19/declaration/body/17/argument/1/1/expression/body/1/argument/1/1": {
+          "type": "element",
+          "hash": "1e2ea95a1cc35caf5407cb56609d471b",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "<element:MoveLeft></element:MoveLeft> Return"
+        },
+        "19/declaration/body/17/argument/1/1/expression/body/1/argument/3/1/5/1/5/1/1": {
+          "type": "element",
+          "hash": "dc3149e5f8913e58f4705f41b238d00c",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Previous step"
+        },
+        "19/declaration/body/17/argument/1/1/expression/body/1/argument/3/1/5/1/5/1/3/3/expression/right": {
+          "type": "element",
+          "hash": "a0428f777a098e07120f19324d4f7eee",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Reset"
+        },
+        "19/declaration/body/9/0/init/body/0/0/0/alternate/alternate/0/argument": {
+          "type": "element",
+          "hash": "3bebbe9909ebc2ae788c9038831ddb6e",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Next part"
+        },
+        "19/declaration/body/9/0/init/body/0/0/0/alternate/consequent/0/argument": {
+          "type": "element",
+          "hash": "fa60853b0e075c7c134e4bb3c7c59d82",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Save and continue"
+        },
+        "19/declaration/body/9/0/init/body/0/0/0/consequent/0/argument": {
+          "type": "element",
+          "hash": "fa60853b0e075c7c134e4bb3c7c59d82",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Save and continue"
+        },
+        "19/declaration/body/9/0/init/body/0/1/0/argument": {
+          "type": "element",
+          "hash": "88f8c2a27083267af9d5b574332ac836",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Save answers and continue"
+        },
+        "19/declaration/body/9/0/init/body/0/2/0/argument": {
+          "type": "element",
+          "hash": "db50aad354a83c0dc4788ddc4da3c3a4",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Upload documents and continue"
+        },
+        "19/declaration/body/9/0/init/body/0/3/0/argument": {
+          "type": "element",
+          "hash": "0ecb8520d3ff84380f16ac46a864b24a",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Submit decision"
+        },
+        "19/declaration/body/9/0/init/body/0/4/0/argument": {
           "type": "element",
           "hash": "712c63650b5180cbc14d6246b5d558c2",
           "context": "",
