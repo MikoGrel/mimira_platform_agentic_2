@@ -38,8 +38,13 @@ export const baseTenderQuery = (s: ReturnType<typeof createClient>) =>
       tender_product_id,
       tender_products (
         id,
+        part_id,
         product_req_name,
-        product_req_quantity
+        product_req_quantity,
+        product_req_spec,
+        requirements_to_confirm,
+        alternative_products,
+        closest_match
       )
     )
   )

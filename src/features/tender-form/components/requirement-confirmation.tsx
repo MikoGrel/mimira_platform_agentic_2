@@ -1,7 +1,7 @@
 "use client";
 
-import { useState } from "react";
-import { Button, Chip, Card, CardBody } from "@heroui/react";
+import { useEffect, useState } from "react";
+import { Button, Chip, Card, CardBody, Tooltip } from "@heroui/react";
 import {
   Package,
   CheckCircle2,
@@ -9,7 +9,6 @@ import {
   Search,
   Plus,
   Wrench,
-  FileText,
   Tag,
 } from "lucide-react";
 import {
@@ -21,6 +20,10 @@ import {
 import { InboxTenderRequirement } from "$/features/inbox/api/use-tender-inbox-query";
 import { ProductSearchResult } from "$/features/products/api/use-products-search";
 import { CatalogDialog } from "$/features/products/components/catalog-dialog";
+import {
+  useCatalogProducts,
+  CatalogProduct,
+} from "$/features/products/api/use-catalog-products";
 
 interface RequirementConfirmationProps {
   serviceRequirements?: Array<InboxTenderRequirement>;
@@ -38,9 +41,10 @@ interface ProductRequirementItemProps {
   requirement: InboxTenderRequirement;
   isConfirmed: boolean;
   selectedProduct: ProductSearchResult | null;
-  onToggleConfirm: () => void;
   onOpenCatalog: () => void;
   onRemoveProduct: () => void;
+  catalogProducts?: CatalogProduct[];
+  onSelectCatalogProduct: (product: CatalogProduct) => void;
 }
 
 function ServiceRequirementItem({
@@ -48,6 +52,9 @@ function ServiceRequirementItem({
   isConfirmed,
   onToggleConfirm,
 }: ServiceRequirementItemProps) {
+  const [isOpen, setIsOpen] = useState(false);
+  const hasDetails = Boolean(requirement.reason);
+
   return (
     <Card
       className={`mb-3 w-full border transition-all duration-200 ${
@@ -56,44 +63,70 @@ function ServiceRequirementItem({
       shadow="none"
     >
       <CardBody className="p-3">
-        <div className="flex items-center gap-3 w-full">
-          <button
-            onClick={onToggleConfirm}
-            className="flex items-center gap-2 cursor-pointer hover:opacity-80 transition-opacity"
-          >
-            {isConfirmed ? (
-              <CheckCircle2 className="w-5 h-5 text-success" />
-            ) : (
-              <Circle className="w-5 h-5 text-default-400" />
-            )}
-          </button>
-
-          <span className="inline-flex items-center shrink-0 justify-center w-6 h-6 rounded-full bg-blue-100 text-blue-600 border border-blue-200">
-            <Wrench className="w-3.5 h-3.5" />
-          </span>
-
-          <div className="flex flex-col min-w-0 flex-1">
-            <div className="flex items-center gap-2">
-              <span className="text-sm font-medium text-foreground truncate">
-                {requirement.requirement_text}
-              </span>
+        {/* Header to match Product layout */}
+        <div className="flex items-center justify-between mb-3">
+          <div className="flex items-center gap-3">
+            <button
+              onClick={onToggleConfirm}
+              className="flex items-center gap-2 cursor-pointer hover:opacity-80 transition-opacity"
+            >
               {isConfirmed ? (
-                <Chip size="sm" color="success" variant="flat">
-                  ✓ Confirmed
-                </Chip>
+                <CheckCircle2 className="w-5 h-5 text-success" />
               ) : (
-                <Chip size="sm" variant="flat">
-                  Pending
-                </Chip>
+                <Circle className="w-5 h-5 text-default-400" />
               )}
+            </button>
+
+            <span className="inline-flex items-center shrink-0 justify-center w-6 h-6 rounded-full bg-blue-100 text-blue-600 border border-blue-200">
+              <Wrench className="w-3.5 h-3.5" />
+            </span>
+
+            <div className="flex flex-col min-w-0 flex-1">
+              <div className="flex items-center gap-2">
+                <span className="text-sm font-medium text-foreground truncate">
+                  {requirement.requirement_text}
+                </span>
+                {isConfirmed ? (
+                  <Chip size="sm" color="success" variant="flat">
+                    ✓ Confirmed
+                  </Chip>
+                ) : (
+                  <Chip size="sm" variant="flat">
+                    Pending
+                  </Chip>
+                )}
+              </div>
             </div>
-            {requirement.reason && (
-              <p className="text-xs text-muted-foreground mt-1">
-                {requirement.reason}
-              </p>
-            )}
           </div>
         </div>
+
+        {/* Details accordion to mirror product */}
+        <Accordion
+          type="single"
+          collapsible
+          disabled={!hasDetails}
+          value={isOpen ? "details" : "none"}
+          onValueChange={(value) => setIsOpen(value === "details")}
+        >
+          <AccordionItem value="details">
+            <AccordionTrigger className="px-0 py-0 items-center hover:no-underline hover:cursor-pointer">
+              <span className="text-sm text-muted-foreground">
+                {hasDetails ? "View Details" : "No additional details"}
+              </span>
+            </AccordionTrigger>
+
+            <AccordionContent className="px-0 pt-3 space-y-3">
+              {requirement.reason && (
+                <div className="text-sm">
+                  <span className="font-medium mb-1 block">Reason</span>
+                  <p className="text-foreground/90 whitespace-pre-wrap text-xs">
+                    {requirement.reason}
+                  </p>
+                </div>
+              )}
+            </AccordionContent>
+          </AccordionItem>
+        </Accordion>
       </CardBody>
     </Card>
   );
@@ -103,16 +136,47 @@ function ProductRequirementItem({
   requirement,
   isConfirmed,
   selectedProduct,
-  onToggleConfirm,
   onOpenCatalog,
   onRemoveProduct,
+  catalogProducts = [],
+  onSelectCatalogProduct,
 }: ProductRequirementItemProps) {
-  const productName = requirement.tender_products?.product_req_name;
-  const quantity = requirement.tender_products?.product_req_quantity;
-  const displayName =
-    productName || requirement.requirement_text || "Unnamed Product";
+  const [isOpen, setIsOpen] = useState(false);
+  const {
+    product_req_name,
+    product_req_quantity,
+    requirements_to_confirm,
+    product_req_spec,
+    closest_match,
+    alternative_products,
+  } = requirement.tender_products || {};
 
-  const hasDetails = Boolean(requirement.reason || selectedProduct);
+  const productName = product_req_name;
+  const quantity = product_req_quantity;
+
+  const closestMatchProduct =
+    catalogProducts?.find((p) => p.id === closest_match) || null;
+  const alternativeProducts =
+    catalogProducts?.filter((p) =>
+      (alternative_products as string[])?.includes(p.id)
+    ) || [];
+
+  const hasDetails = Boolean(
+    selectedProduct ||
+      product_req_spec ||
+      closest_match ||
+      alternative_products ||
+      requirements_to_confirm
+  );
+
+  const handleSelectCatalogProduct = (product: CatalogProduct) => {
+    onSelectCatalogProduct(product);
+    setIsOpen(false);
+  };
+
+  useEffect(() => {
+    setIsOpen(false);
+  }, [selectedProduct]);
 
   return (
     <Card
@@ -122,118 +186,158 @@ function ProductRequirementItem({
       shadow="none"
     >
       <CardBody className="p-3">
-        <Accordion type="single" collapsible disabled={!hasDetails}>
-          <AccordionItem value="details">
-            <AccordionTrigger className="px-0 py-0 items-center hover:no-underline hover:cursor-pointer">
-              <div className="flex w-full items-center justify-between">
-                <div className="flex items-center gap-3">
-                  <button
-                    onClick={onToggleConfirm}
-                    className="flex items-center gap-2 cursor-pointer hover:opacity-80 transition-opacity"
-                  >
-                    {isConfirmed ? (
-                      <CheckCircle2 className="w-5 h-5 text-success" />
-                    ) : (
-                      <Circle className="w-5 h-5 text-default-400" />
-                    )}
-                  </button>
+        <div className="flex items-center justify-between mb-3">
+          <div className="flex items-center gap-3">
+            <Tooltip content="To confirm this requirement, please select a product from the catalogue">
+              <button className="flex items-center gap-2 hover:opacity-80 transition-opacity">
+                {isConfirmed ? (
+                  <CheckCircle2 className="w-5 h-5 text-success" />
+                ) : (
+                  <Circle className="w-5 h-5 text-default-400" />
+                )}
+              </button>
+            </Tooltip>
 
-                  <span className="inline-flex items-center shrink-0 justify-center w-6 h-6 rounded-full bg-primary/10 text-primary border border-primary/20">
-                    <Package className="w-3.5 h-3.5" />
-                  </span>
+            <span className="inline-flex items-center shrink-0 justify-center w-6 h-6 rounded-full bg-primary/10 text-primary border border-primary/20">
+              <Package className="w-3.5 h-3.5" />
+            </span>
 
-                  <div className="flex flex-col min-w-0 flex-1">
-                    <div className="flex items-center gap-2">
-                      <span className="text-sm font-medium text-foreground truncate">
-                        {displayName}
-                      </span>
-                      {isConfirmed ? (
-                        <Chip size="sm" color="success" variant="flat">
-                          ✓ Confirmed
-                        </Chip>
-                      ) : (
-                        <Chip size="sm" variant="flat">
-                          Pending
-                        </Chip>
-                      )}
-                    </div>
-                    <div className="flex items-center gap-2 mt-0.5">
-                      {productName && productName !== displayName && (
-                        <span className="text-xs text-muted-foreground">
-                          Product: {productName}
-                        </span>
-                      )}
-                      {quantity && (
-                        <Chip size="sm" variant="flat" className="text-xs">
-                          {quantity}
-                        </Chip>
-                      )}
-                    </div>
-                  </div>
-                </div>
+            <div className="flex flex-col min-w-0 flex-1">
+              <div className="flex items-center gap-2">
+                <span className="text-sm font-medium text-foreground truncate">
+                  {productName}
+                </span>
 
-                <div className="flex items-center gap-1.5">
-                  <Button
-                    size="sm"
-                    color="primary"
-                    variant="light"
-                    startContent={<Search className="w-3.5 h-3.5" />}
-                    className="text-xs px-2"
-                    onPress={onOpenCatalog}
-                  >
-                    Catalogue
-                  </Button>
-                  <Button
-                    size="sm"
-                    color="primary"
-                    variant="light"
-                    startContent={<Plus className="w-3.5 h-3.5" />}
-                    className="text-xs px-2"
-                  >
-                    Add
-                  </Button>
-                </div>
+                {isConfirmed ? (
+                  <Chip size="sm" color="success" variant="flat">
+                    ✓ Confirmed
+                  </Chip>
+                ) : (
+                  <Chip size="sm" variant="flat">
+                    Pending
+                  </Chip>
+                )}
+                {quantity && (
+                  <Chip size="sm" variant="flat" className="text-xs">
+                    {quantity}
+                  </Chip>
+                )}
               </div>
+            </div>
+          </div>
+
+          <div className="flex items-center gap-1.5">
+            <Button
+              size="sm"
+              color="primary"
+              variant="light"
+              startContent={<Search className="w-3.5 h-3.5" />}
+              className="text-xs px-2"
+              onPress={onOpenCatalog}
+            >
+              Catalogue
+            </Button>
+            <Button
+              size="sm"
+              color="primary"
+              variant="light"
+              startContent={<Plus className="w-3.5 h-3.5" />}
+              className="text-xs px-2"
+            >
+              Add
+            </Button>
+          </div>
+        </div>
+
+        {selectedProduct && (
+          <div className="mb-3">
+            <Chip
+              size="sm"
+              variant="flat"
+              className="text-xs"
+              isCloseable
+              onClose={onRemoveProduct}
+            >
+              Selected: {selectedProduct.name}
+            </Chip>
+          </div>
+        )}
+
+        <Accordion
+          type="single"
+          collapsible
+          disabled={!hasDetails}
+          value={isOpen ? "details" : "none"}
+          onValueChange={(value) => setIsOpen(value === "details")}
+        >
+          <AccordionItem value="details" className="bg-muted p-2 rounded-md">
+            <AccordionTrigger className="px-0 py-0 items-center hover:no-underline hover:cursor-pointer">
+              <span className="text-xs text-muted-foreground">
+                {hasDetails ? <>Show details</> : <>No additional details</>}
+              </span>
             </AccordionTrigger>
 
-            <AccordionContent className="px-0 pt-3 space-y-3">
-              {requirement.reason && (
-                <div className="text-sm bg-muted/5 border border-muted/20 rounded-md p-3 leading-relaxed">
-                  <span className="inline-flex items-center gap-1 font-medium mb-1">
-                    <FileText className="w-3.5 h-3.5" />
-                    Requirement Details
+            <AccordionContent className="space-y-3 mt-2">
+              {product_req_spec && (
+                <div className="text-sm">
+                  <span className="font-medium mb-1 block">
+                    Product Specification
                   </span>
-                  <p className="text-foreground/90 whitespace-pre-wrap mt-1">
-                    {requirement.reason}
+                  <p className="text-foreground/90 whitespace-pre-wrap text-xs">
+                    {product_req_spec}
                   </p>
                 </div>
               )}
 
-              {selectedProduct && (
-                <div className="text-sm bg-primary/5 border border-primary/20 rounded-md p-3">
-                  <div className="flex items-center justify-between mb-2">
-                    <span className="inline-flex items-center gap-1 font-medium">
-                      <Tag className="w-3.5 h-3.5 text-success" />
-                      Selected Product
-                    </span>
-                    <Button
-                      size="sm"
-                      color="danger"
-                      variant="light"
-                      onPress={onRemoveProduct}
-                      className="text-xs px-2"
-                    >
-                      Remove
-                    </Button>
-                  </div>
-                  <p className="text-primary-700 font-medium">
-                    {selectedProduct.name}
+              {requirements_to_confirm && (
+                <div className="text-sm">
+                  <span className="font-medium mb-1 block">
+                    Requirements to Confirm
+                  </span>
+                  <p className="text-foreground/90 whitespace-pre-wrap text-xs">
+                    {requirements_to_confirm}
                   </p>
-                  {selectedProduct.subcategory?.name && (
-                    <p className="text-xs text-primary-600 mt-1">
-                      {selectedProduct.subcategory.name}
-                    </p>
-                  )}
+                </div>
+              )}
+
+              {closestMatchProduct && (
+                <div className="text-sm">
+                  <span className="font-medium mb-2 block">Closest Match</span>
+                  <Chip
+                    size="sm"
+                    color="success"
+                    variant="flat"
+                    className="cursor-pointer hover:bg-success/20 transition-colors"
+                    onClick={() =>
+                      handleSelectCatalogProduct(closestMatchProduct)
+                    }
+                    startContent={<Tag className="w-3.5 h-3.5 mx-1" />}
+                  >
+                    {closestMatchProduct.name}
+                  </Chip>
+                </div>
+              )}
+
+              {alternativeProducts.length > 0 && (
+                <div className="text-sm">
+                  <span className="font-medium mb-2 block">
+                    Alternative Products
+                  </span>
+                  <div className="flex flex-wrap gap-2">
+                    {alternativeProducts.map((product) => (
+                      <Chip
+                        key={product.id}
+                        size="sm"
+                        color="primary"
+                        variant="flat"
+                        className="cursor-pointer hover:bg-primary/20 transition-colors"
+                        onClick={() => handleSelectCatalogProduct(product)}
+                        startContent={<Tag className="w-3.5 h-3.5 mx-1" />}
+                      >
+                        {product.name}
+                      </Chip>
+                    ))}
+                  </div>
                 </div>
               )}
             </AccordionContent>
@@ -257,6 +361,20 @@ export function RequirementConfirmation({
   const [editingProductKey, setEditingProductKey] = useState<string | null>(
     null
   );
+
+  // Fetch catalog products for closest matches and alternatives
+  const catalogProductIds = productRequirements.flatMap((req) => {
+    const products = req.tender_products;
+    if (!products) return [];
+
+    const ids: (string | null | undefined)[] = [products.closest_match];
+    if (products.alternative_products) {
+      ids.push(...(products.alternative_products as string[]));
+    }
+    return ids;
+  });
+
+  const { data: catalogProducts } = useCatalogProducts(catalogProductIds);
 
   const toggleItemConfirmed = (itemKey: string) => {
     const newConfirmed = new Set(confirmedItems);
@@ -302,6 +420,23 @@ export function RequirementConfirmation({
     setConfirmedItems(newConfirmed);
     onConfirmationChange?.(newConfirmed);
   };
+
+  const handleSelectCatalogProduct =
+    (productKey: string) => (product: CatalogProduct) => {
+      // Convert CatalogProduct to ProductSearchResult format
+      const productSearchResult = product as unknown as ProductSearchResult;
+
+      const newSelectedProducts = { ...selectedProducts };
+      newSelectedProducts[productKey] = productSearchResult;
+
+      // Auto-confirm when selecting a product
+      const newConfirmed = new Set(confirmedItems);
+      newConfirmed.add(productKey);
+
+      setSelectedProducts(newSelectedProducts);
+      setConfirmedItems(newConfirmed);
+      onConfirmationChange?.(newConfirmed);
+    };
 
   const handleConfirmAll = () => {
     const allKeys = [
@@ -375,12 +510,9 @@ export function RequirementConfirmation({
         />
       </div>
 
-      {/* Service Requirements */}
       {serviceRequirements.length > 0 && (
         <div className="space-y-2 w-full">
-          <h4 className="text-sm font-medium text-gray-600 mb-1">
-            Service Requirements ({serviceRequirements.length})
-          </h4>
+          <h4 className="text-sm font-medium text-gray-600">Services</h4>
           {serviceRequirements.map((requirement) => {
             const serviceKey = `service-${requirement.id}`;
             return (
@@ -395,12 +527,9 @@ export function RequirementConfirmation({
         </div>
       )}
 
-      {/* Product Requirements */}
       {productRequirements.length > 0 && (
         <div className="space-y-2 w-full">
-          <h4 className="text-sm font-medium text-gray-600 mb-1">
-            Product Requirements ({productRequirements.length})
-          </h4>
+          <h4 className="text-sm font-medium text-gray-600">Products</h4>
           {productRequirements.map((requirement) => {
             const productReqKey = `product-req-${requirement.id}`;
             return (
@@ -409,9 +538,12 @@ export function RequirementConfirmation({
                 requirement={requirement}
                 isConfirmed={confirmedItems.has(productReqKey)}
                 selectedProduct={selectedProducts[productReqKey] || null}
-                onToggleConfirm={() => toggleItemConfirmed(productReqKey)}
                 onOpenCatalog={() => handleOpenCatalog(productReqKey)}
                 onRemoveProduct={() => handleRemoveProduct(productReqKey)}
+                catalogProducts={catalogProducts}
+                onSelectCatalogProduct={handleSelectCatalogProduct(
+                  productReqKey
+                )}
               />
             );
           })}

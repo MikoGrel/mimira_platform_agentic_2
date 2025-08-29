@@ -12,7 +12,9 @@ export function useCatalogProducts(ids: Array<string | null | undefined>) {
     queryFn: async () => {
       const { data, error } = await client
         .from("catalogue_products")
-        .select("*")
+        .select(
+          "*,subcategory:product_catalogues_subcategories(name, category:product_catalogues_categories(id,name))"
+        )
         .in("id", actualIds);
 
       if (error) {

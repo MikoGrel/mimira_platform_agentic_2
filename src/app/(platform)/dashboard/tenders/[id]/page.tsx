@@ -14,7 +14,7 @@ import {
   PartsSidebar,
   OverviewStep,
 } from "$/features/tender-form/components";
-import { hasRequirementsToAnalyze } from "$/features/tenders/utils/confirmation";
+import { hasPartsToAnalyze } from "$/features/tenders/utils/confirmation";
 import { getOverviewParts } from "$/features/tenders/utils/parts";
 import { Button } from "@heroui/react";
 import React from "react";
@@ -225,7 +225,11 @@ export default function TenderPage() {
 
     const status = mapping.status ?? "analysis";
     if (status === "analysis" || status === "questions") {
-      const needsAnalysis = hasRequirementsToAnalyze(mapping);
+      console.log("mapping", mapping);
+
+      const needsAnalysis = hasPartsToAnalyze(mapping);
+
+      console.log("needsAnalysis", needsAnalysis);
 
       return needsAnalysis ? "confirmations" : "data";
     }
