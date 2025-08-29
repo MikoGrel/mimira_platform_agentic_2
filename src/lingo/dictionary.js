@@ -15736,6 +15736,55 @@ export default {
           },
           hash: "3f2b5ba4364de20a8856ed2055272a86",
         },
+        "10/declaration/body/4/consequent/0/argument/1/1": {
+          content: {
+            en: "Loading documents...",
+            pl: "Ładowanie dokumentów...",
+          },
+          hash: "b795b22e2d0abd430c2ff0b28fb26e5a",
+        },
+        "10/declaration/body/5/consequent/0/argument/1/1": {
+          content: {
+            en: "Failed to load documents. Please try again.",
+            pl: "Nie udało się załadować dokumentów. Proszę spróbować ponownie.",
+          },
+          hash: "1f3bb71b519b18f32ba0f1a5a360afb0",
+        },
+        "10/declaration/body/7/consequent/0/argument/1": {
+          content: {
+            en: "No documents to display. You can proceed to the next step.",
+            pl: "Brak dokumentów do wyświetlenia. Możesz przejść do następnego kroku.",
+          },
+          hash: "2199cc5f0c63d0fd443f80ecc41d3550",
+        },
+        "10/declaration/body/7/consequent/0/argument/3/1": {
+          content: {
+            en: "No documents found for this tender.",
+            pl: "Nie znaleziono dokumentów dla tego przetargu.",
+          },
+          hash: "0aae5563123e8e15391ddd9126389668",
+        },
+        "10/declaration/body/8/argument/1/openingElement/0/value/expression": {
+          content: {
+            en: "Completed by us",
+            pl: "Wypełnione przez nas",
+          },
+          hash: "9f4a2b3bc99052f6ce1587dfcae08fc6",
+        },
+        "10/declaration/body/8/argument/3/openingElement/0/value/expression": {
+          content: {
+            en: "Requires manual fill",
+            pl: "Wymaga ręcznego wypełnienia",
+          },
+          hash: "030e160bf50c084716488dc452429db2",
+        },
+        "10/declaration/body/8/argument/5/openingElement/0/value/expression": {
+          content: {
+            en: "Other attachments",
+            pl: "Inne załączniki",
+          },
+          hash: "f187e342b6ff30e7d4d96d9395dea305",
+        },
         "12/0/init/0/value": {
           content: {
             en: "Completed by us",
@@ -17283,6 +17332,62 @@ export default {
           },
           hash: "3f2b5ba4364de20a8856ed2055272a86",
         },
+      },
+    },
+    "features/tender-form/components/file-group.tsx": {
+      entries: {
+        "8/declaration/body/2/consequent/0/argument/3/1": {
+          content: {
+            en: "No files in this category",
+            pl: "Brak plików w tej kategorii",
+          },
+          hash: "21105bfd07013fa07e2fb64cc974ddc5",
+        },
+        "8/declaration/body/3/argument/1/3/expression/right/3": {
+          content: {
+            en: "Download all",
+            pl: "Pobierz wszystko",
+          },
+          hash: "385e77c5c419ee4328a4b98098a5fd49",
+        },
+        "8/declaration/body/3/argument/1/3/expression/right/5": {
+          content: {
+            en: "All",
+            pl: "Wszystko",
+          },
+          hash: "5e2e93f8e2a5f315b6fecdd0a0e6f55f",
+        },
+        "8/declaration/body/3/argument/1/3/expression/right/openingElement/3/value/expression/body/0/body/0":
+          {
+            content: {
+              en: "Downloading all files...",
+              pl: "Pobieranie wszystkich plików...",
+            },
+            hash: "d016ffaffbb15d928d07e716e4bfb5dc",
+          },
+        "8/declaration/body/3/argument/3/1/expression/0/body/1/1/1/5/3/expression/right/3":
+          {
+            content: {
+              en: "Requires signature (<expression/>)",
+              pl: "Wymaga podpisu (<expression/>)",
+            },
+            hash: "be2fb8970f7780c0d6d4979ccddc2098",
+          },
+        "8/declaration/body/3/argument/3/1/expression/0/body/1/1/3/3": {
+          content: {
+            en: "Download",
+            pl: "Pobierz",
+          },
+          hash: "56b7d0834952b39ee394b44bd8179178",
+        },
+        "8/declaration/body/3/argument/3/1/expression/0/body/1/1/3/openingElement/2/value/expression/body/0/body/0":
+          {
+            content: {
+              en: "Downloading {file.comment}...",
+              pl: "Pobieranie {file.comment}...",
+            },
+            hash: "8358440b9ceec5d75689e0c43dfce034",
+          },
       },
     },
     "features/tender-form/components/overview-step.tsx": {

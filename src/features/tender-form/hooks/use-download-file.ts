@@ -31,7 +31,12 @@ export function useDownloadFile() {
     return data;
   }
 
+  async function downloadAllFiles(filePaths: string[]) {
+    return Promise.all(filePaths.map(downloadFile));
+  }
+
   return {
     downloadFile,
+    downloadAllFiles,
   };
 }
