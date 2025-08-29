@@ -324,18 +324,21 @@ export type Database = {
         Row: {
           category_id: string | null
           created_at: string | null
+          description: string | null
           id: string
           name: string | null
         }
         Insert: {
           category_id?: string | null
           created_at?: string | null
+          description?: string | null
           id?: string
           name?: string | null
         }
         Update: {
           category_id?: string | null
           created_at?: string | null
+          description?: string | null
           id?: string
           name?: string | null
         }
@@ -661,6 +664,13 @@ export type Database = {
           product_count: number
         }[]
       }
+      get_company_mapping_status_counts: {
+        Args: { p_company_id: string }
+        Returns: {
+          count: number
+          status: string
+        }[]
+      }
       get_deadline_due_in_2_days: {
         Args: Record<PropertyKey, never>
         Returns: {
@@ -676,6 +686,12 @@ export type Database = {
       get_tenders_summary: {
         Args: { p_company_id: string }
         Returns: Database["public"]["CompositeTypes"]["tenders_summary_type"]
+      }
+      get_weekly_company_mappings: {
+        Args: { p_company_id?: string; p_no_of_weeks?: number }
+        Returns: {
+          result: Json
+        }[]
       }
       get_weekly_tenders_by_company: {
         Args: { p_company?: string; p_no_of_weeks?: number }

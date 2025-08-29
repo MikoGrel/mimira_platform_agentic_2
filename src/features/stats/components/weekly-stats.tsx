@@ -19,7 +19,7 @@ export function WeeklyStats() {
   const { data: weeklyStats } = useWeeklyTendersCount();
 
   const total = weeklyStats?.weeks.reduce(
-    (acc, week) => acc + week.tenders_count,
+    (acc, week) => acc + week.mappings_count,
     0
   );
   const average = Math.ceil(
@@ -50,7 +50,7 @@ export function WeeklyStats() {
             tickMargin={8}
           />
           <Line
-            dataKey="tenders_count"
+            dataKey="mappings_count"
             type="natural"
             stroke="var(--color-primary)"
             strokeWidth={2}

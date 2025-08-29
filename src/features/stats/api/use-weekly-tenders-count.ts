@@ -11,7 +11,7 @@ export interface WeeklyStats {
 
 export interface Week {
   week_start: string;
-  tenders_count: number;
+  mappings_count: number;
 }
 
 export function useWeeklyTendersCount() {
@@ -21,18 +21,15 @@ export function useWeeklyTendersCount() {
   return useQuery<WeeklyStats | undefined>({
     queryKey: ["weekly-tenders-count"],
     queryFn: async () => {
-      const { data, error } = await client.rpc(
-        "get_weekly_tenders_by_company",
-        {
-          p_company: user!.profile!.companies!.company_name!,
-          p_no_of_weeks: 4,
-        }
-      );
+      const { data, error } = await client.rpc("get_weekly_company_mappings", {
+        p_company_id: user!.profile!.company_id!,
+        p_no_of_weeks: 4,
+      });
 
       if (error) throw error;
 
-      return data[0].json_response as unknown as WeeklyStats | undefined;
+      return data[0].result as unknown as WeeklyStats | undefined;
     },
-    enabled: !!user?.profile?.companies?.company_name,
+    enabled: !!user?.profile?.company_id,
   });
 }

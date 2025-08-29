@@ -2,43 +2,75 @@
 
 import { cn } from "$/lib/utils";
 import { ReactNode } from "react";
+import { useStatusCounts } from "../api/use-status-counts";
+import { floor } from "lodash-es";
 
 export function StateFunnel() {
+  const { data: statusCounts } = useStatusCounts();
+
+  const total = statusCounts?.reduce((acc, count) => acc + count.count, 0) || 0;
+  const qualified =
+    statusCounts
+      ?.filter((c) => c.status === "default")
+      .reduce((acc, count) => acc + count.count, 0) || 0;
+  const inProgress =
+    statusCounts
+      ?.filter((c) =>
+        ["analysis", "documents_preparing", "questions_answered"].includes(
+          c.status
+        )
+      )
+      .reduce((acc, count) => acc + count.count, 0) || 0;
+  const won =
+    statusCounts
+      ?.filter((c) => c.status === "won")
+      .reduce((acc, count) => acc + count.count, 0) || 0;
+  const lost =
+    statusCounts
+      ?.filter((c) => c.status === "lost")
+      .reduce((acc, count) => acc + count.count, 0) || 0;
+
+  const wonPercentage = floor((won / total) * 100, 1);
+
   return (
     <div>
       <div className="space-y-1">
-        <FunnelItem title={<span>Found</span>} value={100} maxValue={100} />
+        <FunnelItem
+          title={<span>Qualified</span>}
+          value={total}
+          maxValue={total}
+        />
         <FunnelItem
           className="bg-amber-500"
-          title={<span>Qualified for</span>}
-          value={80}
-          maxValue={100}
+          title={<span>Waiting for application</span>}
+          value={qualified}
+          maxValue={total}
         />
         <FunnelItem
           className="bg-sky-500"
-          title={<span>Applied to</span>}
-          value={50}
-          maxValue={80}
+          title={<span>In progress</span>}
+          value={inProgress}
+          maxValue={total}
         />
         <FunnelItem
           className="bg-green-500"
           title={<span>Won</span>}
-          value={20}
-          maxValue={50}
+          value={won}
+          maxValue={total}
         />
         <FunnelItem
           className="bg-red-500"
           title={<span>Lost</span>}
-          value={10}
-          maxValue={20}
+          value={lost}
+          maxValue={total}
         />
       </div>
       <div className="mt-3 text-sm text-muted-foreground">
         <p className="flex justify-between">
-          <span className="font-medium">Total deals:</span> 50
+          <span className="font-medium">Total deals:</span> {won}
         </p>
         <p className="flex justify-between">
-          <span className="font-medium">Conversion rate:</span> 10%
+          <span className="font-medium">Conversion rate:</span> {wonPercentage}%
         </p>
       </div>
     </div>
@@ -53,7 +85,7 @@ interface FunnelItemProps {
 }
 
 function FunnelItem({ title, value, maxValue, className }: FunnelItemProps) {
-  const percentage = (value / maxValue) * 100;
+  const percentage = floor((value / maxValue) * 100, 1);
 
   return (
     <div className="grid grid-cols-[1fr_auto] grid-rows-2 items-center text-sm">

@@ -42,6 +42,97 @@ export default {
     },
     "app/(platform)/dashboard/inbox/page.tsx": {
       entries: {
+        "12/declaration/body/12/argument/1/1/1/3-placeholder": {
+          content: {
+            en: "Search",
+            pl: "Szukaj",
+          },
+          hash: "49dd6c21604b5e8d4153ff1aff2177e1",
+        },
+        "12/declaration/body/12/argument/1/5/1/3": {
+          content: {
+            en: "Ask Mimir",
+            pl: "Zapytaj Mimira",
+          },
+          hash: "c516ed1af9463ccd6bdcb19a1f13e4ac",
+        },
+        "12/declaration/body/12/argument/1/5/1/5": {
+          content: {
+            en: "Coming soon",
+            pl: "Wkrótce dostępne",
+          },
+          hash: "05a8fc9f6d826fd88a809d98684edcad",
+        },
+        "12/declaration/body/12/argument/3/expression/right/1/1": {
+          content: {
+            en: "Select a tender to view details",
+            pl: "Wybierz przetarg, aby zobaczyć szczegóły",
+          },
+          hash: "067789b01a081458db2f872f10a37c3f",
+        },
+        "12/declaration/body/13/argument/1/1/1/3-placeholder": {
+          content: {
+            en: "Search",
+            pl: "Szukaj",
+          },
+          hash: "49dd6c21604b5e8d4153ff1aff2177e1",
+        },
+        "12/declaration/body/13/argument/1/5/1/3": {
+          content: {
+            en: "Ask Mimir",
+            pl: "Zapytaj Mimira",
+          },
+          hash: "c516ed1af9463ccd6bdcb19a1f13e4ac",
+        },
+        "12/declaration/body/13/argument/1/5/1/5": {
+          content: {
+            en: "Coming soon",
+            pl: "Wkrótce dostępne",
+          },
+          hash: "05a8fc9f6d826fd88a809d98684edcad",
+        },
+        "12/declaration/body/13/argument/3/expression/right/1/1": {
+          content: {
+            en: "Select a tender to view details",
+            pl: "Wybierz przetarg, aby zobaczyć szczegóły",
+          },
+          hash: "067789b01a081458db2f872f10a37c3f",
+        },
+        "12/declaration/body/16/argument/1/1/1/3-placeholder": {
+          content: {
+            en: "Search",
+            pl: "Szukaj",
+          },
+          hash: "49dd6c21604b5e8d4153ff1aff2177e1",
+        },
+        "12/declaration/body/16/argument/1/5/1/3": {
+          content: {
+            en: "Ask Mimir",
+            pl: "Zapytaj Mimira",
+          },
+          hash: "c516ed1af9463ccd6bdcb19a1f13e4ac",
+        },
+        "12/declaration/body/16/argument/1/5/1/5": {
+          content: {
+            en: "Coming soon",
+            pl: "Wkrótce dostępne",
+          },
+          hash: "05a8fc9f6d826fd88a809d98684edcad",
+        },
+        "12/declaration/body/16/argument/3/expression/right/1/1": {
+          content: {
+            en: "Select a tender to view details",
+            pl: "Wybierz przetarg, aby zobaczyć szczegóły",
+          },
+          hash: "067789b01a081458db2f872f10a37c3f",
+        },
+        "13/body/0/argument/1/expression/0/body/3/3": {
+          content: {
+            en: "·",
+            pl: "·",
+          },
+          hash: "26b80ae8a680de73667e096098aa69d8",
+        },
         "14/declaration/body/11/argument/1/1/1/3-placeholder": {
           content: {
             en: "Search",
@@ -13884,6 +13975,104 @@ export default {
           },
           hash: "6dd57ee0d55bba3637ed03cf8de47bb3",
         },
+        "3/declaration/body/2/argument/1/1/openingElement/0/value/expression": {
+          content: {
+            en: "Found",
+            pl: "Znalezione",
+          },
+          hash: "8cb2dd2518b1621873b4488e3da83d50",
+        },
+        "3/declaration/body/2/argument/1/3/openingElement/1/value/expression": {
+          content: {
+            en: "Qualified for",
+            pl: "Zakwalifikowane",
+          },
+          hash: "ce906e32ff6e1d1daaa35befc4deb874",
+        },
+        "3/declaration/body/2/argument/1/5/openingElement/1/value/expression": {
+          content: {
+            en: "Applied to",
+            pl: "Złożone aplikacje",
+          },
+          hash: "741779e7f6068e1f9ba958bc614f60e8",
+        },
+        "3/declaration/body/2/argument/1/7/openingElement/1/value/expression": {
+          content: {
+            en: "Won",
+            pl: "Wygrane",
+          },
+          hash: "61dcd4c53a7b9b4b86c20ebe571f111f",
+        },
+        "3/declaration/body/2/argument/1/9/openingElement/1/value/expression": {
+          content: {
+            en: "Lost",
+            pl: "Przegrane",
+          },
+          hash: "52ca04dc5bfb7642586e67a469aa3e24",
+        },
+        "3/declaration/body/2/argument/3/1": {
+          content: {
+            en: "<element:span>Total deals:</element:span> 50",
+            pl: "<element:span>Łączna liczba transakcji:</element:span> 50",
+          },
+          hash: "dae0998c98a09d510391cd2a33d9a8b6",
+        },
+        "3/declaration/body/2/argument/3/3": {
+          content: {
+            en: "<element:span>Conversion rate:</element:span> 10%",
+            pl: "<element:span>Wskaźnik konwersji:</element:span> 10%",
+          },
+          hash: "6dd57ee0d55bba3637ed03cf8de47bb3",
+        },
+        "3/declaration/body/6/argument/1/1/openingElement/0/value/expression": {
+          content: {
+            en: "Total",
+            pl: "Łącznie",
+          },
+          hash: "f60dc0a14e9b1bace656c644de25de5b",
+        },
+        "3/declaration/body/6/argument/1/3/openingElement/1/value/expression": {
+          content: {
+            en: "Newly found",
+            pl: "Nowo znalezione",
+          },
+          hash: "af380c21c3cfae324495e71d6f3239de",
+        },
+        "3/declaration/body/6/argument/1/5/openingElement/1/value/expression": {
+          content: {
+            en: "In progress",
+            pl: "W toku",
+          },
+          hash: "7b7abca427be23829be8e8c8cb433519",
+        },
+        "3/declaration/body/6/argument/1/7/openingElement/1/value/expression": {
+          content: {
+            en: "Won",
+            pl: "Wygrane",
+          },
+          hash: "61dcd4c53a7b9b4b86c20ebe571f111f",
+        },
+        "3/declaration/body/6/argument/1/9/openingElement/1/value/expression": {
+          content: {
+            en: "Lost",
+            pl: "Przegrane",
+          },
+          hash: "52ca04dc5bfb7642586e67a469aa3e24",
+        },
+        "3/declaration/body/6/argument/3/1": {
+          content: {
+            en: "<element:span>Total deals:</element:span> 50",
+            pl: "<element:span>Łączna liczba transakcji:</element:span> 50",
+          },
+          hash: "dae0998c98a09d510391cd2a33d9a8b6",
+        },
+        "3/declaration/body/6/argument/3/3": {
+          content: {
+            en: "<element:span>Conversion rate:</element:span> 10%",
+            pl: "<element:span>Wskaźnik konwersji:</element:span> 10%",
+          },
+          hash: "6dd57ee0d55bba3637ed03cf8de47bb3",
+        },
         "4/body/1/argument/3/3": {
           content: {
             en: "({percentage}%)",
@@ -13892,6 +14081,118 @@ export default {
           hash: "941a386f0a1da9f7ea122244021229ea",
         },
         "4/declaration/body/1/argument/3/3": {
+          content: {
+            en: "({percentage}%)",
+            pl: "({percentage}%)",
+          },
+          hash: "941a386f0a1da9f7ea122244021229ea",
+        },
+        "4/declaration/body/6/argument/1/1/openingElement/0/value/expression": {
+          content: {
+            en: "Qualified",
+            pl: "Zakwalifikowany",
+          },
+          hash: "ab91566819bc36d0831f136690b32878",
+        },
+        "4/declaration/body/6/argument/1/3/openingElement/1/value/expression": {
+          content: {
+            en: "Waiting for application",
+            pl: "Oczekiwanie na aplikację",
+          },
+          hash: "c4136cac50d8cbd90480eea77ee8ae18",
+        },
+        "4/declaration/body/6/argument/1/5/openingElement/1/value/expression": {
+          content: {
+            en: "In progress",
+            pl: "W toku",
+          },
+          hash: "7b7abca427be23829be8e8c8cb433519",
+        },
+        "4/declaration/body/6/argument/1/7/openingElement/1/value/expression": {
+          content: {
+            en: "Won",
+            pl: "Wygrane",
+          },
+          hash: "61dcd4c53a7b9b4b86c20ebe571f111f",
+        },
+        "4/declaration/body/6/argument/1/9/openingElement/1/value/expression": {
+          content: {
+            en: "Lost",
+            pl: "Przegrane",
+          },
+          hash: "52ca04dc5bfb7642586e67a469aa3e24",
+        },
+        "4/declaration/body/6/argument/3/1": {
+          content: {
+            en: "<element:span>Total deals:</element:span> 50",
+            pl: "<element:span>Łączna liczba transakcji:</element:span> 50",
+          },
+          hash: "dae0998c98a09d510391cd2a33d9a8b6",
+        },
+        "4/declaration/body/6/argument/3/3": {
+          content: {
+            en: "<element:span>Conversion rate:</element:span> 10%",
+            pl: "<element:span>Wskaźnik konwersji:</element:span> 10%",
+          },
+          hash: "6dd57ee0d55bba3637ed03cf8de47bb3",
+        },
+        "4/declaration/body/7/argument/1/1/openingElement/0/value/expression": {
+          content: {
+            en: "Qualified",
+            pl: "Zakwalifikowany",
+          },
+          hash: "ab91566819bc36d0831f136690b32878",
+        },
+        "4/declaration/body/7/argument/1/3/openingElement/1/value/expression": {
+          content: {
+            en: "Waiting for application",
+            pl: "Oczekiwanie na aplikację",
+          },
+          hash: "c4136cac50d8cbd90480eea77ee8ae18",
+        },
+        "4/declaration/body/7/argument/1/5/openingElement/1/value/expression": {
+          content: {
+            en: "In progress",
+            pl: "W toku",
+          },
+          hash: "7b7abca427be23829be8e8c8cb433519",
+        },
+        "4/declaration/body/7/argument/1/7/openingElement/1/value/expression": {
+          content: {
+            en: "Won",
+            pl: "Wygrane",
+          },
+          hash: "61dcd4c53a7b9b4b86c20ebe571f111f",
+        },
+        "4/declaration/body/7/argument/1/9/openingElement/1/value/expression": {
+          content: {
+            en: "Lost",
+            pl: "Przegrane",
+          },
+          hash: "52ca04dc5bfb7642586e67a469aa3e24",
+        },
+        "4/declaration/body/7/argument/3/1/1": {
+          content: {
+            en: "Total deals:",
+            pl: "Łączna liczba transakcji:",
+          },
+          hash: "95e4d77deecfc37c973b10efbe7ca1cb",
+        },
+        "4/declaration/body/7/argument/3/3": {
+          content: {
+            en: "<element:span>Conversion rate:</element:span> {wonPercentage}%",
+            pl: "<element:span>Wskaźnik konwersji:</element:span> {wonPercentage}%",
+          },
+          hash: "07327374d5d3994a0276776db210e9da",
+        },
+        "5/body/1/argument/3/3": {
+          content: {
+            en: "({percentage}%)",
+            pl: "({percentage}%)",
+          },
+          hash: "941a386f0a1da9f7ea122244021229ea",
+        },
+        "6/body/1/argument/3/3": {
           content: {
             en: "({percentage}%)",
             pl: "({percentage}%)",
@@ -13917,6 +14218,27 @@ export default {
           hash: "f88aa2f74615d4c75984e36154b9a6e9",
         },
         "4/declaration/body/3/argument/5/3/1": {
+          content: {
+            en: "Weekly average:",
+            pl: "Średnia tygodniowa:",
+          },
+          hash: "6eb200581a6da498ee6bc585c33dfae0",
+        },
+        "4/declaration/body/4/argument/1": {
+          content: {
+            en: "Last 4 weeks",
+            pl: "Ostatnie 4 tygodnie",
+          },
+          hash: "ff82774f1a7e6b68ac287b90b33d35a7",
+        },
+        "4/declaration/body/4/argument/5/1/1": {
+          content: {
+            en: "Total:",
+            pl: "Razem:",
+          },
+          hash: "f88aa2f74615d4c75984e36154b9a6e9",
+        },
+        "4/declaration/body/4/argument/5/3/1": {
           content: {
             en: "Weekly average:",
             pl: "Średnia tygodniowa:",
