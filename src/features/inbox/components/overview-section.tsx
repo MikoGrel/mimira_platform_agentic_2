@@ -26,8 +26,6 @@ export function OverviewSection({
     <Section id="at-glance" data-section>
       <SectionTitle>{title || <>Overview</>}</SectionTitle>
       <SectionContent>
-        {/* <TenderSummary tender={tender} /> */}
-
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           {canParticipate !== null && (
             <StatusCard

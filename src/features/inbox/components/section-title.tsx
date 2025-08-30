@@ -4,8 +4,6 @@ import type { ReactNode } from "react";
 
 export function SectionTitle({ children }: { children: ReactNode }) {
   return (
-    <h2 className="text-base font-semibold text-foreground border-b border-border pb-3">
-      {children}
-    </h2>
+    <h2 className="text-sm text-muted-foreground font-medium">{children}</h2>
   );
 }

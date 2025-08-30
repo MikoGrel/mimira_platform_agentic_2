@@ -16,9 +16,13 @@ export function StateFunnel() {
   const inProgress =
     statusCounts
       ?.filter((c) =>
-        ["analysis", "documents_preparing", "questions_answered"].includes(
-          c.status
-        )
+        [
+          "analysis",
+          "documents_preparing",
+          "questions_answered",
+          "documents_ready",
+          "questions",
+        ].includes(c.status)
       )
       .reduce((acc, count) => acc + count.count, 0) || 0;
   const won =

@@ -198,7 +198,7 @@ export function TenderPreview({
                 />
               </div>
             )}
-            <div className="flex-1 overflow-y-auto" ref={scrollRef}>
+            <div className="flex-1 overflow-y-auto bg-sidebar" ref={scrollRef}>
               <div className="px-6 py-6 grid grid-cols-1 gap-6 w-full">
                 <OverviewSection
                   title={selectedPart.part_name || mapping.tenders.order_object}
@@ -234,9 +234,6 @@ export function TenderPreview({
                 />
 
                 <AdditionalInfoSection
-                  application_form_llm={
-                    mapping.tenders?.application_form_llm || ""
-                  }
                   payment_terms_llm={mapping.tenders?.payment_terms_llm || ""}
                   contract_penalties_llm={
                     mapping.tenders?.contract_penalties_llm || ""
