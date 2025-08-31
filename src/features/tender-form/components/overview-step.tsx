@@ -92,7 +92,6 @@ export function OverviewStep({
           />
 
           <AdditionalInfoSection
-            application_form_llm={mapping.tenders?.application_form_llm || ""}
             payment_terms_llm={mapping.tenders?.payment_terms_llm || ""}
             contract_penalties_llm={
               mapping.tenders?.contract_penalties_llm || ""
