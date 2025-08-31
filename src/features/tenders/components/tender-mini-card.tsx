@@ -46,7 +46,9 @@ export function TenderMiniCard(props: TenderMiniCardProps) {
             >
               {timeUntilExpiration}
             </Chip>
-            <span className="block text-muted-foreground">{organization}</span>
+            <span className="block text-muted-foreground">
+              {truncate(organization, { length: 50 })}
+            </span>
           </div>
         </div>
         <div className="h-full ml-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-all">

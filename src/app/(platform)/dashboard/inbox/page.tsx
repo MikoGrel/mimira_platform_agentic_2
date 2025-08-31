@@ -156,7 +156,7 @@ export default function InboxPage() {
                     as={motion.li}
                     initial={{ opacity: 0 }}
                     animate={{
-                      opacity: t.seen_at ? (t.id === selectedId ? 1 : 0.8) : 1,
+                      opacity: t.seen_at ? (t.id === selectedId ? 1 : 0.5) : 1,
                       transition: {
                         duration: 0.25,
                         delay: (index % PAGE_SIZE) * 0.025,
@@ -177,13 +177,17 @@ export default function InboxPage() {
                   >
                     <div className="p-4 px-6 flex flex-col gap-2 hover:bg-muted">
                       <p className="text-sm relative">
+                        {!t.seen_at && (
+                          <span className="text-primary text-xs font-medium block">
+                            New
+                          </span>
+                        )}
                         {truncate(t.tenders?.order_object || "", {
                           length: 100,
                           omission: "...",
                         })}
-
                         {!t.seen_at && (
-                          <span className="block w-1.5 rounded-full h-1.5 bg-primary absolute -left-3.5 top-1.5" />
+                          <span className="block w-[5px] rounded-full h-[5px] bg-primary absolute -left-3 top-1" />
                         )}
                       </p>
                       <div className="flex items-center gap-2 flex-wrap text-slate-500">

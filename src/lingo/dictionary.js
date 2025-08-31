@@ -546,6 +546,29 @@ export default {
           },
           hash: "49dd6c21604b5e8d4153ff1aff2177e1",
         },
+        "19/declaration/body/16/argument/1/3/1/1/1/3/expression/0/body/1/1": {
+          content: {
+            en: "<expression/><function:truncate/><expression/> ``",
+            pl: "<expression/><function:truncate/><expression/> ``",
+          },
+          hash: "61ae1883a31696dc6397b44be6c03c18",
+        },
+        "19/declaration/body/16/argument/1/3/1/1/1/3/expression/0/body/1/1/1/expression/right":
+          {
+            content: {
+              en: "New",
+              pl: "Nowe",
+            },
+            hash: "320af698c03eca3566cae395621ca490",
+          },
+        "19/declaration/body/16/argument/1/3/1/1/1/3/expression/0/body/1/1/expression/right":
+          {
+            content: {
+              en: "New",
+              pl: "<element:span></element:span> Nowe",
+            },
+            hash: "28cc5c97076b485c4839cd890b6c8f1b",
+          },
         "19/declaration/body/16/argument/1/5/1/3": {
           content: {
             en: "Ask Mimir",
@@ -14363,6 +14386,90 @@ export default {
           hash: "0a11a1a9f68f5869a302ce40ed55538e",
         },
         "8/declaration/body/2/argument/1/1/1/3/7/expression/right/1/1": {
+          content: {
+            en: "Alternative products",
+            pl: "Alternatywne produkty",
+          },
+          hash: "d191c14ac2830891cfcfccde92ff9114",
+        },
+        "8/declaration/body/6/argument/1/1/1/1/1/3/1/expression/right": {
+          content: {
+            en: "No matches",
+            pl: "Brak wyników",
+          },
+          hash: "de28a58a7b2d59c69c69eb914ae578bd",
+        },
+        "8/declaration/body/6/argument/1/1/1/1/1/3/3/expression/right": {
+          content: {
+            en: "Matching product",
+            pl: "Pasujący produkt",
+          },
+          hash: "254c96ad8a5dd95a90dedda21de9b355",
+        },
+        "8/declaration/body/6/argument/1/1/1/3/1/expression/right/1": {
+          content: {
+            en: "Specification",
+            pl: "Specyfikacja",
+          },
+          hash: "5f95ead578f1a9f4221b12436e81101c",
+        },
+        "8/declaration/body/6/argument/1/1/1/3/3/expression/right/1/1": {
+          content: {
+            en: "Closest match",
+            pl: "Najbliższe dopasowanie",
+          },
+          hash: "9c928bcbcd8decb0bbf9a8d70a4f603a",
+        },
+        "8/declaration/body/6/argument/1/1/1/3/5/expression/right/1/1": {
+          content: {
+            en: "Requirements to confirm",
+            pl: "Wymagania do potwierdzenia",
+          },
+          hash: "0a11a1a9f68f5869a302ce40ed55538e",
+        },
+        "8/declaration/body/6/argument/1/1/1/3/7/expression/right/1/1": {
+          content: {
+            en: "Alternative products",
+            pl: "Alternatywne produkty",
+          },
+          hash: "d191c14ac2830891cfcfccde92ff9114",
+        },
+        "8/declaration/body/7/argument/1/1/1/1/1/3/1/expression/right": {
+          content: {
+            en: "No matches",
+            pl: "Brak wyników",
+          },
+          hash: "de28a58a7b2d59c69c69eb914ae578bd",
+        },
+        "8/declaration/body/7/argument/1/1/1/1/1/3/3/expression/right": {
+          content: {
+            en: "Matching product",
+            pl: "Pasujący produkt",
+          },
+          hash: "254c96ad8a5dd95a90dedda21de9b355",
+        },
+        "8/declaration/body/7/argument/1/1/1/3/1/expression/right/1": {
+          content: {
+            en: "Specification",
+            pl: "Specyfikacja",
+          },
+          hash: "5f95ead578f1a9f4221b12436e81101c",
+        },
+        "8/declaration/body/7/argument/1/1/1/3/3/expression/right/1/1": {
+          content: {
+            en: "Closest match",
+            pl: "Najbliższe dopasowanie",
+          },
+          hash: "9c928bcbcd8decb0bbf9a8d70a4f603a",
+        },
+        "8/declaration/body/7/argument/1/1/1/3/5/expression/right/1/1": {
+          content: {
+            en: "Requirements to confirm",
+            pl: "Wymagania do potwierdzenia",
+          },
+          hash: "0a11a1a9f68f5869a302ce40ed55538e",
+        },
+        "8/declaration/body/7/argument/1/1/1/3/7/expression/right/1/1": {
           content: {
             en: "Alternative products",
             pl: "Alternatywne produkty",
