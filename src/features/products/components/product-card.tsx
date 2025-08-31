@@ -11,6 +11,7 @@ import {
 } from "$/components/ui/accordion";
 import { InboxTenderProduct } from "$/features/inbox/api/use-tender-inbox-query";
 import { CatalogProduct } from "../api/use-catalog-products";
+import { truncate } from "lodash-es";
 
 interface ProductCardProps {
   product: InboxTenderProduct;
@@ -25,11 +26,13 @@ export function ProductCard({
   alternatives,
   className,
 }: ProductCardProps) {
+  const hasLongSpec = (product.product_req_spec?.length || 0) > 40;
+
   const hasDetails = Boolean(
-    product.product_req_spec ||
-      product.closest_match ||
+    product.closest_match ||
       product.requirements_to_confirm ||
-      product.alternative_products
+      (product.alternative_products as string[])?.length > 0 ||
+      hasLongSpec
   );
 
   return (
@@ -49,7 +52,14 @@ export function ProductCard({
                   <span className="inline-flex items-center shrink-0 justify-center w-6 h-6 rounded-full bg-primary/5 text-primary border border-primary/20">
                     <Package className="w-3.5 h-3.5" />
                   </span>
-                  {product.product_req_name}
+                  <span className="inline-flex flex-col">
+                    {product.product_req_name}
+                    <span className="text-xs text-muted-foreground">
+                      {truncate(product.product_req_spec || "", {
+                        length: 40,
+                      })}
+                    </span>
+                  </span>
                 </p>
                 <div className="flex items-center gap-2">
                   {!product.closest_match && (
@@ -71,7 +81,7 @@ export function ProductCard({
               </div>
             </AccordionTrigger>
             <AccordionContent className="px-0 pt-4 space-y-4">
-              {product.product_req_spec && (
+              {product.product_req_spec && hasLongSpec && (
                 <div className="text-sm bg-primary/5 border border-primary/20 rounded-md p-3 leading-relaxed">
                   <span className="inline-flex items-center gap-1 font-medium mb-1">
                     Specification
@@ -116,17 +126,12 @@ export function ProductCard({
                       Alternative products
                     </span>
                   </div>
-                  <ul className="space-y-1 pl-2">
-                    {alternatives.map((p) => (
-                      <li
-                        key={p.id}
-                        className="flex items-start gap-2 font-medium"
-                      >
-                        <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-muted-foreground/50" />
-                        <span>{p.name}</span>
-                      </li>
-                    ))}
-                  </ul>
+                  {alternatives.map((p) => (
+                    <div key={p.id}>
+                      <Tag className="w-4 h-4 text-primary inline mr-1 shrink-0" />
+                      <span>{p.name}</span>
+                    </div>
+                  ))}
                 </div>
               )}
             </AccordionContent>
