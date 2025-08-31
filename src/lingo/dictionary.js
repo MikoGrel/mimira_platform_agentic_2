@@ -6678,31 +6678,31 @@ export default {
         },
         "5/declaration/body/0/argument/3/1/1/expression/right-title": {
           content: {
-            en: "Application Form",
-            pl: "Formularz zgłoszeniowy",
-          },
-          hash: "c59c5c19b7235bd028026a6088c90b9b",
-        },
-        "5/declaration/body/0/argument/3/1/3/expression/right-title": {
-          content: {
             en: "Payment Terms",
             pl: "Warunki płatności",
           },
           hash: "ca6f26774e7e5e2c51cb11b7e305e5e2",
         },
-        "5/declaration/body/0/argument/3/1/5/expression/right-title": {
+        "5/declaration/body/0/argument/3/1/3/expression/right-title": {
           content: {
             en: "Contract Penalties",
             pl: "Kary umowne",
           },
           hash: "02fb39147ed4e21a831c31033ec0221b",
         },
-        "5/declaration/body/0/argument/3/1/7/expression/right-title": {
+        "5/declaration/body/0/argument/3/1/5/expression/right-title": {
           content: {
             en: "Deposit Information",
             pl: "Informacje o zaliczce",
           },
           hash: "34d811d0d02e76753d176ae6b99fb933",
+        },
+        "5/declaration/body/0/argument/3/1/7/expression/right-title": {
+          content: {
+            en: "Source URL",
+            pl: "Źródłowy URL",
+          },
+          hash: "dbf9149e47977b6caeccdf2cc8b57a44",
         },
         "5/declaration/body/0/argument/3/1/9/expression/right-title": {
           content: {
@@ -6777,6 +6777,34 @@ export default {
             pl: "Szczegółowy opis niedostępny",
           },
           hash: "33eb6b2072fd1b6046f5fdbedc2b687a",
+        },
+        "5/declaration/body/1/argument/1": {
+          content: {
+            en: "Description",
+            pl: "Opis",
+          },
+          hash: "e17686a22ffad04cc7bb70524ed4478b",
+        },
+        "7/declaration/body/3/argument/1": {
+          content: {
+            en: "Full description",
+            pl: "Pełny opis",
+          },
+          hash: "dc9b75484a44e37103ccad21dae20ee9",
+        },
+        "7/declaration/body/4/argument/1": {
+          content: {
+            en: "Description",
+            pl: "Opis",
+          },
+          hash: "e17686a22ffad04cc7bb70524ed4478b",
+        },
+        "8/declaration/body/3/argument/1": {
+          content: {
+            en: "Description",
+            pl: "Opis",
+          },
+          hash: "e17686a22ffad04cc7bb70524ed4478b",
         },
       },
     },
@@ -7171,6 +7199,43 @@ export default {
             pl: "Przegląd",
           },
           hash: "30c54e4dc4ce599b87d94be34a8617f5",
+        },
+        "7/declaration/body/0/argument/3/1/1/expression/right-title": {
+          content: {
+            en: "Eligibility",
+            pl: "Kwalifikowalność",
+          },
+          hash: "a895f9c2afd359f5f525b176d1c6010e",
+        },
+        "7/declaration/body/0/argument/3/1/1/expression/right/1/expression/alternate":
+          {
+            content: {
+              en: "Not eligible to participate",
+              pl: "Nie kwalifikuje się do udziału",
+            },
+            hash: "0593d8433868dc2c22761f44f8ada96b",
+          },
+        "7/declaration/body/0/argument/3/1/1/expression/right/1/expression/consequent":
+          {
+            content: {
+              en: "Eligible to participate",
+              pl: "Kwalifikuje się do udziału",
+            },
+            hash: "178bdec9274b413eb458a49351fe54a0",
+          },
+        "7/declaration/body/0/argument/3/1/3/expression/right-title": {
+          content: {
+            en: "Wadium",
+            pl: "Wadium",
+          },
+          hash: "cc1df5b4bb18ef18f1084db990961f72",
+        },
+        "7/declaration/body/0/argument/3/1/5/expression/right-title": {
+          content: {
+            en: "Completion Date",
+            pl: "Data zakończenia",
+          },
+          hash: "26465009e23d5f17e452842785193bda",
         },
         "7/declaration/body/0/argument/3/3/1/expression/right-title": {
           content: {
@@ -14561,6 +14626,55 @@ export default {
           hash: "95e4d77deecfc37c973b10efbe7ca1cb",
         },
         "4/declaration/body/7/argument/3/3": {
+          content: {
+            en: "<element:span>Conversion rate:</element:span> {wonPercentage}%",
+            pl: "<element:span>Wskaźnik konwersji:</element:span> {wonPercentage}%",
+          },
+          hash: "07327374d5d3994a0276776db210e9da",
+        },
+        "4/declaration/body/8/argument/1/1/openingElement/0/value/expression": {
+          content: {
+            en: "Qualified",
+            pl: "Zakwalifikowany",
+          },
+          hash: "ab91566819bc36d0831f136690b32878",
+        },
+        "4/declaration/body/8/argument/1/3/openingElement/1/value/expression": {
+          content: {
+            en: "Waiting for application",
+            pl: "Oczekiwanie na aplikację",
+          },
+          hash: "c4136cac50d8cbd90480eea77ee8ae18",
+        },
+        "4/declaration/body/8/argument/1/5/openingElement/1/value/expression": {
+          content: {
+            en: "In progress",
+            pl: "W toku",
+          },
+          hash: "7b7abca427be23829be8e8c8cb433519",
+        },
+        "4/declaration/body/8/argument/1/7/openingElement/1/value/expression": {
+          content: {
+            en: "Won",
+            pl: "Wygrane",
+          },
+          hash: "61dcd4c53a7b9b4b86c20ebe571f111f",
+        },
+        "4/declaration/body/8/argument/1/9/openingElement/1/value/expression": {
+          content: {
+            en: "Lost",
+            pl: "Przegrane",
+          },
+          hash: "52ca04dc5bfb7642586e67a469aa3e24",
+        },
+        "4/declaration/body/8/argument/3/1/1": {
+          content: {
+            en: "Total deals:",
+            pl: "Łączna liczba transakcji:",
+          },
+          hash: "95e4d77deecfc37c973b10efbe7ca1cb",
+        },
+        "4/declaration/body/8/argument/3/3": {
           content: {
             en: "<element:span>Conversion rate:</element:span> {wonPercentage}%",
             pl: "<element:span>Wskaźnik konwersji:</element:span> {wonPercentage}%",

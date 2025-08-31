@@ -104,7 +104,7 @@ export function DescriptionSection({
 
   return (
     <Section id="description" data-section>
-      <SectionTitle>Description</SectionTitle>
+      <SectionTitle>Full description</SectionTitle>
       <SectionContent>
         {beforeFirstHeading && (
           <div className="prose prose-sm max-w-none text-foreground leading-relaxed mb-6">
