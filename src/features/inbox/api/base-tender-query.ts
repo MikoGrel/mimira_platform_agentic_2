@@ -9,7 +9,7 @@ export const baseTenderQuery = (s: ReturnType<typeof createClient>) =>
   tenders!inner (
     *
   ),
-  tender_parts (
+  tender_parts!inner (
     id,
     part_name,
     ordercompletiondate_llm,
