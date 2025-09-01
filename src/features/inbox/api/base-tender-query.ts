@@ -19,6 +19,7 @@ export const baseTenderQuery = (s: ReturnType<typeof createClient>) =>
     order_number,
     status,
     can_participate,
+    payment_terms_llm,
     tender_products (
       id,
       part_id,

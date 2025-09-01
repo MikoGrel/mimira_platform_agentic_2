@@ -435,6 +435,7 @@ export type Database = {
           order_number: number | null
           ordercompletiondate_llm: string | null
           part_name: string | null
+          payment_terms_llm: string | null
           review_criteria_llm: string | null
           status: string
           updated_at: string | null
@@ -449,6 +450,7 @@ export type Database = {
           order_number?: number | null
           ordercompletiondate_llm?: string | null
           part_name?: string | null
+          payment_terms_llm?: string | null
           review_criteria_llm?: string | null
           status: string
           updated_at?: string | null
@@ -463,6 +465,7 @@ export type Database = {
           order_number?: number | null
           ordercompletiondate_llm?: string | null
           part_name?: string | null
+          payment_terms_llm?: string | null
           review_criteria_llm?: string | null
           status?: string
           updated_at?: string | null

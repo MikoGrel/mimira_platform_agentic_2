@@ -7589,11 +7589,11 @@
         },
         "7/declaration/body/4/argument/1": {
           "type": "element",
-          "hash": "e17686a22ffad04cc7bb70524ed4478b",
+          "hash": "dc9b75484a44e37103ccad21dae20ee9",
           "context": "",
           "skip": false,
           "overrides": {},
-          "content": "Description"
+          "content": "Full description"
         },
         "8/declaration/body/3/argument/1": {
           "type": "element",

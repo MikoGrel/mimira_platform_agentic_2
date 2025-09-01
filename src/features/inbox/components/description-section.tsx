@@ -88,17 +88,20 @@ export function DescriptionSection({
       <p className="text-sm text-foreground my-2">{children}</p>
     ),
     ul: ({ children }) => (
-      <ul className="list-disc list-inside text-sm text-foreground/80 space-y-1 ml-4">
+      <ul className="list-disc text-sm text-foreground/80 space-y-1 pl-5">
         {children}
       </ul>
     ),
     ol: ({ children }) => (
-      <ol className="list-decimal list-inside text-sm text-foreground/80 space-y-1 ml-4">
+      <ol className="list-decimal text-sm text-foreground/80 space-y-1 pl-5">
         {children}
       </ol>
     ),
     strong: ({ children }) => (
       <strong className="font-medium text-gray-900">{children}</strong>
+    ),
+    b: ({ children }) => (
+      <b className="font-medium text-gray-900">{children}</b>
     ),
   };
 

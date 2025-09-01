@@ -234,7 +234,11 @@ export function TenderPreview({
                 />
 
                 <AdditionalInfoSection
-                  payment_terms_llm={mapping.tenders?.payment_terms_llm || ""}
+                  payment_terms_llm={
+                    selectedPart?.payment_terms_llm ||
+                    mapping.tenders?.payment_terms_llm ||
+                    ""
+                  }
                   contract_penalties_llm={
                     mapping.tenders?.contract_penalties_llm || ""
                   }
