@@ -1,7 +1,5 @@
 "use client";
 
-import { useSortable } from "@dnd-kit/sortable";
-import { CSS } from "@dnd-kit/utilities";
 import { Card, CardBody, CardHeader, Chip } from "@heroui/react";
 import { CalendarClock, Building2, MapPin, Package } from "lucide-react";
 import { truncate } from "lodash-es";
@@ -21,36 +19,11 @@ import { getOverviewParts } from "../utils/parts";
 
 interface TenderCardProps {
   mapping: IndividualTenderMapping;
-  isDragging?: boolean;
 }
 
-function InternalTenderCard({ mapping, isDragging = false }: TenderCardProps) {
+function InternalTenderCard({ mapping }: TenderCardProps) {
   const { relativeToNow } = useDateFormat();
   const { mutate: updateTenderStatus } = useUpdateTenderStatus();
-
-  const {
-    attributes,
-    listeners,
-    setNodeRef,
-    transform,
-    transition,
-    isDragging: isSortableDragging,
-  } = useSortable({
-    id: mapping.id,
-    disabled: isDragging,
-    data: {
-      type: "Task",
-      task: mapping,
-    },
-  });
-
-  const style = {
-    transform: transform ? CSS.Translate.toString(transform) : undefined,
-    transition,
-    opacity: isSortableDragging || isDragging ? 0.5 : 1,
-    transformOrigin: "0 0",
-    willChange: "transform",
-  };
 
   const parts = getOverviewParts(mapping);
 
@@ -77,11 +50,7 @@ function InternalTenderCard({ mapping, isDragging = false }: TenderCardProps) {
       <Card
         as={Link}
         href={`/dashboard/tenders/${mapping.id}`}
-        ref={setNodeRef}
-        style={style}
-        {...attributes}
-        {...listeners}
-        className={`cursor-grab active:cursor-grabbing hover:cursor-pointer border border-border/70 w-full transition-colors hover:bg-muted/50`}
+        className="hover:cursor-pointer border border-border/70 w-full transition-colors hover:bg-muted/50"
         shadow="none"
         radius="sm"
       >
@@ -147,7 +116,5 @@ function InternalTenderCard({ mapping, isDragging = false }: TenderCardProps) {
 }
 
 export const TenderCard = memo(InternalTenderCard, (prev, next) => {
-  return (
-    prev.mapping.id === next.mapping.id && prev.isDragging === next.isDragging
-  );
+  return prev.mapping.id === next.mapping.id;
 });
