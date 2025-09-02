@@ -72,10 +72,7 @@ export function LastTenderBento({ loading, className }: LastTenderBentoProps) {
           <Stepper.Navigation aria-label="Tender Progress Steps">
             {methods.all.map((step) => (
               <div key={step.id}>
-                <Stepper.Step
-                  of={step.id}
-                  onClick={() => methods.goTo(step.id)}
-                >
+                <Stepper.Step of={step.id}>
                   <Stepper.Title>{step.title}</Stepper.Title>
                 </Stepper.Step>
               </div>

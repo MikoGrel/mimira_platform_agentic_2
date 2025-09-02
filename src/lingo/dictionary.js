@@ -18146,10 +18146,10 @@ export default {
         },
         "11/declaration/body/2/consequent/0/argument/1": {
           content: {
-            en: "No tender data available",
-            pl: "Brak dostępnych danych przetargowych",
+            en: "No parts available for overview",
+            pl: "Brak dostępnych części do przeglądu",
           },
-          hash: "62311abe07a2ea32b3058e97a4c55a9c",
+          hash: "c79ad61b147ecd3c2950ae872e53579e",
         },
         "11/declaration/body/3/consequent/0/argument/1": {
           content: {
@@ -22998,10 +22998,10 @@ export default {
         "5/declaration/body/5/argument/3/1/expression/consequent/3/expression/consequent/1":
           {
             content: {
-              en: "Expiring Tenders:",
-              pl: "Wygasające przetargi:",
+              en: "Offers expiring on this date:",
+              pl: "Oferty wygasające w tym dniu:",
             },
-            hash: "0ba1a65084182188ac8229eacdd19007",
+            hash: "3470690ace9f42b226e7317c545b9c5c",
           },
       },
     },

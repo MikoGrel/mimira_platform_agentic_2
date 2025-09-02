@@ -128,15 +128,22 @@ export default function useTenderInboxQuery({
       }
 
       if (filters.sortBy) {
-        query = query.order("tenders.submitting_offers_date", {
+        query = query.order("submitting_offers_date", {
+          referencedTable: "tenders",
           ascending: Array.from(filters.sortBy)[0] === "asc",
           nullsFirst: false,
         });
       }
 
-      const result = await query
-        .order("id", { ascending: false, nullsFirst: false })
-        .range(pageParam * pageSize!, pageParam * pageSize! + pageSize! - 1);
+      query = query.order("created_at", {
+        ascending: false,
+        nullsFirst: false,
+      });
+
+      const result = await query.range(
+        pageParam * pageSize!,
+        pageParam * pageSize! + pageSize! - 1
+      );
 
       return {
         data: result.data || [],

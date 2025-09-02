@@ -156,7 +156,7 @@ export default function InboxPage() {
                     as={motion.li}
                     initial={{ opacity: 0 }}
                     animate={{
-                      opacity: t.seen_at ? (t.id === selectedId ? 1 : 0.5) : 1,
+                      opacity: t.seen_at ? (t.id === selectedId ? 1 : 0.9) : 1,
                       transition: {
                         duration: 0.25,
                         delay: (index % PAGE_SIZE) * 0.025,

@@ -219,11 +219,7 @@ export default function TenderPage() {
 
     const status = mapping.status ?? "analysis";
     if (status === "analysis" || status === "questions") {
-      console.log("mapping", mapping);
-
       const needsAnalysis = hasPartsToAnalyze(mapping);
-
-      console.log("needsAnalysis", needsAnalysis);
 
       return needsAnalysis ? "confirmations" : "data";
     }

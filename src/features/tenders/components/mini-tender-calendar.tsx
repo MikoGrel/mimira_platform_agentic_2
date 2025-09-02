@@ -85,8 +85,11 @@ export default function MiniTenderCalendar({
             </p>
             {selectedDateTenders.length > 0 ? (
               <div className="space-y-1">
-                <p className="text-xs text-muted-foreground mb-2">
-                  Expiring Tenders:
+                <p
+                  className="text-xs text-muted-foreground mb-2"
+                  data-lingo-override-pl="Terminy składania ofert"
+                >
+                  Offers expiring on this date:
                 </p>
                 <ul className="space-y-1">
                   {selectedDateTenders.map((tender) => (
