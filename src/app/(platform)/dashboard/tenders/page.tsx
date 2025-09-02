@@ -83,6 +83,7 @@ export default function TendersPage() {
               }
             />
             <Tab
+              isDisabled
               key="list"
               name="List"
               title={
