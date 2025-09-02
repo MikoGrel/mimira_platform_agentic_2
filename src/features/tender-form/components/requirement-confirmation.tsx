@@ -52,9 +52,6 @@ function ServiceRequirementItem({
   isConfirmed,
   onToggleConfirm,
 }: ServiceRequirementItemProps) {
-  const [isOpen, setIsOpen] = useState(false);
-  const hasDetails = Boolean(requirement.reason);
-
   return (
     <Card
       className={`mb-3 w-full border transition-all duration-200 ${
@@ -63,70 +60,39 @@ function ServiceRequirementItem({
       shadow="none"
     >
       <CardBody className="p-3">
-        {/* Header to match Product layout */}
-        <div className="flex items-center justify-between mb-3">
-          <div className="flex items-center gap-3">
-            <button
-              onClick={onToggleConfirm}
-              className="flex items-center gap-2 cursor-pointer hover:opacity-80 transition-opacity"
-            >
+        <div className="flex items-center justify-between gap-3">
+          <button
+            onClick={onToggleConfirm}
+            className="flex items-center gap-2 cursor-pointer hover:opacity-80 transition-opacity"
+          >
+            {isConfirmed ? (
+              <CheckCircle2 className="w-5 h-5 text-success" />
+            ) : (
+              <Circle className="w-5 h-5 text-default-400" />
+            )}
+          </button>
+
+          <span className="inline-flex items-center shrink-0 justify-center w-6 h-6 rounded-full bg-blue-100 text-blue-600 border border-blue-200">
+            <Wrench className="w-3.5 h-3.5" />
+          </span>
+
+          <div className="flex flex-col min-w-0 flex-1">
+            <div className="flex items-center justify-between gap-2">
+              <span className="text-sm font-medium text-foreground max-w-full break-words">
+                {requirement.requirement_text}
+              </span>
               {isConfirmed ? (
-                <CheckCircle2 className="w-5 h-5 text-success" />
+                <Chip size="sm" color="success" variant="flat">
+                  ✓ Confirmed
+                </Chip>
               ) : (
-                <Circle className="w-5 h-5 text-default-400" />
+                <Chip size="sm" variant="flat">
+                  Pending
+                </Chip>
               )}
-            </button>
-
-            <span className="inline-flex items-center shrink-0 justify-center w-6 h-6 rounded-full bg-blue-100 text-blue-600 border border-blue-200">
-              <Wrench className="w-3.5 h-3.5" />
-            </span>
-
-            <div className="flex flex-col min-w-0 flex-1">
-              <div className="flex items-center gap-2">
-                <span className="text-sm font-medium text-foreground truncate">
-                  {requirement.requirement_text}
-                </span>
-                {isConfirmed ? (
-                  <Chip size="sm" color="success" variant="flat">
-                    ✓ Confirmed
-                  </Chip>
-                ) : (
-                  <Chip size="sm" variant="flat">
-                    Pending
-                  </Chip>
-                )}
-              </div>
             </div>
           </div>
         </div>
-
-        {/* Details accordion to mirror product */}
-        <Accordion
-          type="single"
-          collapsible
-          disabled={!hasDetails}
-          value={isOpen ? "details" : "none"}
-          onValueChange={(value) => setIsOpen(value === "details")}
-        >
-          <AccordionItem value="details">
-            <AccordionTrigger className="px-0 py-0 items-center hover:no-underline hover:cursor-pointer">
-              <span className="text-sm text-muted-foreground">
-                {hasDetails ? "View Details" : "No additional details"}
-              </span>
-            </AccordionTrigger>
-
-            <AccordionContent className="px-0 pt-3 space-y-3">
-              {requirement.reason && (
-                <div className="text-sm">
-                  <span className="font-medium mb-1 block">Reason</span>
-                  <p className="text-foreground/90 whitespace-pre-wrap text-xs">
-                    {requirement.reason}
-                  </p>
-                </div>
-              )}
-            </AccordionContent>
-          </AccordionItem>
-        </Accordion>
       </CardBody>
     </Card>
   );
@@ -204,7 +170,7 @@ function ProductRequirementItem({
 
             <div className="flex flex-col min-w-0 flex-1">
               <div className="flex items-center gap-2">
-                <span className="text-sm font-medium text-foreground truncate">
+                <span className="text-sm font-medium text-foreground truncate max-w-[600px]">
                   {productName}
                 </span>
 

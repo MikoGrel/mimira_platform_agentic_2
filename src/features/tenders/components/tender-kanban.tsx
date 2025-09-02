@@ -60,7 +60,7 @@ const COLUMNS = [
   {
     id: "decision",
     title: <>Decision</>,
-    statuses: ["decision_made_applied", "decision_made_rejected"] as const,
+    statuses: ["decision_made_applied"] as const,
     updateStatus: "decision_made_applied",
     icon: CheckCircle,
     color: "text-green-500",
@@ -68,7 +68,7 @@ const COLUMNS = [
   {
     id: "rejected",
     title: <>Rejected</>,
-    statuses: ["rejected"] as const,
+    statuses: ["rejected", "decision_made_rejected"] as const,
     updateStatus: "rejected",
     icon: X,
     color: "text-red-500",

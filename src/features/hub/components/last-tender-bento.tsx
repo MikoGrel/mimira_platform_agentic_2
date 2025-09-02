@@ -26,6 +26,8 @@ export function LastTenderBento({ loading, className }: LastTenderBentoProps) {
     enabled: !!lastTender,
   });
 
+  const isInInbox = mapping?.status === "default";
+
   const getCurrentStep = () => {
     if (!mapping?.status) return "preview";
 
@@ -83,7 +85,11 @@ export function LastTenderBento({ loading, className }: LastTenderBentoProps) {
       </Stepper.Provider>
       <Button
         as={Link}
-        href={`/dashboard/tenders/${mapping?.id}`}
+        href={
+          isInInbox
+            ? `/dashboard/inbox?id=${mapping?.id}`
+            : `/dashboard/tenders/${mapping?.id}`
+        }
         color="primary"
         endContent={<MoveRight />}
       >

@@ -1,21 +1,21 @@
 "use client";
 
-import { Card, CardContent, CardHeader, CardTitle } from "$/components/ui/card";
+import { Button } from "@heroui/react";
+import { Card, CardBody, CardFooter, CardHeader } from "@heroui/react";
+import { useUpdateTenderStatus } from "$/features/tenders/api/use-update-tender-status";
 import { InboxTenderMapping } from "$/features/inbox/api/use-tender-inbox-query";
-import { InboxTenderPart } from "$/features/inbox/api/use-tender-inbox-query";
+import { useRouter } from "next/navigation";
 import React from "react";
+import { toast } from "sonner";
 
 interface DecisionStepProps {
-  item: InboxTenderMapping | InboxTenderPart | null | undefined;
-  setNextEnabled?: (enabled: boolean) => void;
-  onNextHandler?: React.MutableRefObject<(() => Promise<void>) | null>;
+  item: InboxTenderMapping | null | undefined;
 }
 
-export function DecisionStep({
-  item,
-  setNextEnabled: _setNextEnabled, // eslint-disable-line @typescript-eslint/no-unused-vars
-  onNextHandler: _onNextHandler, // eslint-disable-line @typescript-eslint/no-unused-vars
-}: DecisionStepProps) {
+export function DecisionStep({ item }: DecisionStepProps) {
+  const router = useRouter();
+  const { mutate: updateTenderStatus, isPending } = useUpdateTenderStatus();
+
   if (!item) {
     return (
       <div className="text-center py-6 text-gray-500">
@@ -24,65 +24,53 @@ export function DecisionStep({
     );
   }
 
-  // Check if item is a tender part
-  function isTenderPart(
-    x: InboxTenderMapping | InboxTenderPart | null | undefined
-  ): x is InboxTenderPart {
-    return x !== null && x !== undefined && "part_id" in x;
-  }
+  const handleYes = () => {
+    toast.success(<p>Thank you for using mimira!</p>);
+    router.push("/dashboard/tenders");
+  };
 
-  const isPart = isTenderPart(item);
+  const handleNo = () => {
+    updateTenderStatus(
+      {
+        mappingId: item.id,
+        status: "decision_made_rejected",
+      },
+      {
+        onSuccess: () => {
+          toast.info(<p>This tender has been rejected</p>);
+          router.push("/dashboard/tenders");
+        },
+        onError: () => {
+          toast.error(<p>Failed to reject the tender. Please try again.</p>);
+        },
+      }
+    );
+  };
+
   return (
-    <Card>
+    <Card shadow="none">
       <CardHeader>
-        <CardTitle>
-          {isPart
-            ? `Decision for ${item.part_name || `Part ${item.id}`}`
-            : "Final Decision"}
-        </CardTitle>
+        <h2 className="text-lg font-semibold">
+          Did you apply for this tender?
+        </h2>
       </CardHeader>
-      <CardContent className="space-y-4">
+      <CardBody>
         <div className="p-4 bg-muted rounded-md">
-          <p className="text-sm text-muted-foreground mb-4">
-            Review all information before making your final decision.
+          <p className="text-sm text-muted-foreground">
+            Your response will help us improve our tender management process.
           </p>
         </div>
-        <div className="space-y-3">
-          <div className="flex items-center space-x-2">
-            <input
-              type="radio"
-              id="decision-submit"
-              name="decision"
-              value="submit"
-            />
-            <label htmlFor="decision-submit" className="text-sm">
-              Submit tender application
-            </label>
-          </div>
-          <div className="flex items-center space-x-2">
-            <input
-              type="radio"
-              id="decision-draft"
-              name="decision"
-              value="draft"
-            />
-            <label htmlFor="decision-draft" className="text-sm">
-              Save as draft
-            </label>
-          </div>
-          <div className="flex items-center space-x-2">
-            <input
-              type="radio"
-              id="decision-cancel"
-              name="decision"
-              value="cancel"
-            />
-            <label htmlFor="decision-cancel" className="text-sm">
-              Cancel application
-            </label>
-          </div>
+      </CardBody>
+      <CardFooter>
+        <div className="flex justify-end gap-4 w-full">
+          <Button variant="bordered" onPress={handleNo} disabled={isPending}>
+            No i didn&apos;t apply
+          </Button>
+          <Button onPress={handleYes} disabled={isPending} color="primary">
+            Yes, I applied
+          </Button>
         </div>
-      </CardContent>
+      </CardFooter>
     </Card>
   );
 }

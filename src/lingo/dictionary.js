@@ -6375,6 +6375,27 @@ export default {
           },
           hash: "8208df3c0f89efff2b48433a4f98902e",
         },
+        "11/declaration/body/5/0/init/0/1/value": {
+          content: {
+            en: "Preview",
+            pl: "Podgląd",
+          },
+          hash: "3173ee1f0f1d4e50665ca4a84c38e15d",
+        },
+        "11/declaration/body/5/0/init/1/1/value": {
+          content: {
+            en: "Filling-out data",
+            pl: "Uzupełnianie danych",
+          },
+          hash: "6b21fd589cc826495915020a9c6c36c0",
+        },
+        "11/declaration/body/5/0/init/2/1/value": {
+          content: {
+            en: "Application",
+            pl: "Aplikacja",
+          },
+          hash: "6dee9191cf69144d6b569683c49631d8",
+        },
         "11/declaration/body/5/argument/5": {
           content: {
             en: "Continue",
@@ -6383,6 +6404,20 @@ export default {
           hash: "3f894c5b6419e20fd455a1b0d8dbc279",
         },
         "11/declaration/body/5/argument/openingElement/1/value/expression": {
+          content: {
+            en: "Return to last tender",
+            pl: "Powrót do ostatniego przetargu",
+          },
+          hash: "8208df3c0f89efff2b48433a4f98902e",
+        },
+        "11/declaration/body/6/argument/5": {
+          content: {
+            en: "Continue",
+            pl: "Kontynuuj",
+          },
+          hash: "3f894c5b6419e20fd455a1b0d8dbc279",
+        },
+        "11/declaration/body/6/argument/openingElement/1/value/expression": {
           content: {
             en: "Return to last tender",
             pl: "Powrót do ostatniego przetargu",
@@ -6817,10 +6852,10 @@ export default {
         },
         "7/declaration/body/4/argument/1": {
           content: {
-            en: "Description",
-            pl: "Opis",
+            en: "Full description",
+            pl: "Pełny opis",
           },
-          hash: "e17686a22ffad04cc7bb70524ed4478b",
+          hash: "dc9b75484a44e37103ccad21dae20ee9",
         },
         "8/declaration/body/3/argument/1": {
           content: {
@@ -16307,6 +16342,113 @@ export default {
           },
           hash: "1f68d74c00b7cbbf87657bffc8ec76b3",
         },
+        "8/declaration/body/2/consequent/0/argument/1": {
+          content: {
+            en: "No item selected",
+            pl: "Nie wybrano żadnego elementu",
+          },
+          hash: "7025b650153f3d62cf2cd01acdc5c8d7",
+        },
+        "8/declaration/body/3/0/init/body/0/expression/0": {
+          content: {
+            en: "Thank you for using mimira!",
+            pl: "Dziękujemy za korzystanie z mimira!",
+          },
+          hash: "f0ef204044053aa939d2544986e0496c",
+        },
+        "8/declaration/body/4/0/init/body/0/expression/1/0/value/body/0/expression/0":
+          {
+            content: {
+              en: "This tender has been rejected",
+              pl: "Ten przetarg został odrzucony",
+            },
+            hash: "4312d070c7df80a5752c5fdf927ecfb6",
+          },
+        "8/declaration/body/4/0/init/body/0/expression/1/1/value/body/0/expression/0":
+          {
+            content: {
+              en: "Failed to reject the tender. Please try again.",
+              pl: "Nie udało się odrzucić przetargu. Proszę spróbować ponownie.",
+            },
+            hash: "7e85afd169b31b69a9ac49904e8b83f8",
+          },
+        "8/declaration/body/5/argument/1/1": {
+          content: {
+            en: "Did you apply for this tender?",
+            pl: "Czy złożyłeś wniosek o udział w tym przetargu?",
+          },
+          hash: "bf9151dde1fd3ea9f1d419573635e758",
+        },
+        "8/declaration/body/5/argument/3/1/1": {
+          content: {
+            en: "Your response will help us improve our tender management process.",
+            pl: "Twoja odpowiedź pomoże nam ulepszyć nasz proces zarządzania przetargami.",
+          },
+          hash: "69aaeeabebe127dca061ac941540ae33",
+        },
+        "8/declaration/body/5/argument/5/1/1": {
+          content: {
+            en: "No i didn't apply",
+            pl: "Nie, nie aplikowałem",
+          },
+          hash: "b8c2551c7abc9870b6fe0bb598ef3f8c",
+        },
+        "8/declaration/body/5/argument/5/1/3": {
+          content: {
+            en: "Yes, I applied",
+            pl: "Tak, złożyłem wniosek",
+          },
+          hash: "c340abf1b9610dfa4d30b3a387b98549",
+        },
+        "9/declaration/body/2/consequent/0/argument/1": {
+          content: {
+            en: "No item selected",
+            pl: "Nie wybrano żadnego elementu",
+          },
+          hash: "7025b650153f3d62cf2cd01acdc5c8d7",
+        },
+        "9/declaration/body/7/argument/1/1": {
+          content: {
+            en: "Did you apply for this tender?",
+            pl: "Czy złożyłeś wniosek o udział w tym przetargu?",
+          },
+          hash: "bf9151dde1fd3ea9f1d419573635e758",
+        },
+        "9/declaration/body/7/argument/1/3": {
+          content: {
+            en: "Did you apply for this tender through other means?",
+            pl: "Czy złożyłeś wniosek o ten przetarg w inny sposób?",
+          },
+          hash: "6ec38dd358dc4d463229cfd6a01fcf1d",
+        },
+        "9/declaration/body/7/argument/3/1/1": {
+          content: {
+            en: "Your response will help us improve our tender management process.",
+            pl: "Twoja odpowiedź pomoże nam ulepszyć nasz proces zarządzania przetargami.",
+          },
+          hash: "69aaeeabebe127dca061ac941540ae33",
+        },
+        "9/declaration/body/7/argument/3/3/3": {
+          content: {
+            en: "Yes, I applied",
+            pl: "Tak, złożyłem wniosek",
+          },
+          hash: "c340abf1b9610dfa4d30b3a387b98549",
+        },
+        "9/declaration/body/7/argument/5/1/3": {
+          content: {
+            en: "Yes, I applied",
+            pl: "Tak, złożyłem wniosek",
+          },
+          hash: "c340abf1b9610dfa4d30b3a387b98549",
+        },
+        "9/declaration/body/7/argument/5/3": {
+          content: {
+            en: "Yes, I applied",
+            pl: "Tak, złożyłem wniosek",
+          },
+          hash: "c2f1760c27156e28c1c1ac040dac4eb9",
+        },
       },
     },
     "features/tender-form/components/documentation-step.tsx": {
@@ -18303,10 +18445,10 @@ export default {
         },
         "5/0/init/1/value": {
           content: {
-            en: "Pending",
-            pl: "Oczekujący",
+            en: "Analysis",
+            pl: "Analiza",
           },
-          hash: "030a6f3395d5d4efddd3cc67d6009039",
+          hash: "409bac6215382c47e59f5039cc4cdcdd",
         },
         "5/0/init/2/value": {
           content: {
@@ -18416,16 +18558,23 @@ export default {
         "6/declaration/body/0/argument/1/3": {
           content: {
             en: "{parts.length} parts in analysis",
-            pl: "{parts.length} oczekujące części",
+            pl: "{parts.length} części w analizie",
           },
-          hash: "e2d205460739619e4c27dcaf290b6e2e",
+          hash: "5e1854030211725a73125fba09d80f68",
         },
         "6/declaration/body/0/argument/3/1/expression/right/1": {
           content: {
-            en: "This tender has no parts",
-            pl: "Ten przetarg nie ma części",
+            en: "You're applying for only one part",
+            pl: "Składasz wniosek tylko na jedną część",
           },
-          hash: "55fc137734a78962bd7b94b75e91f5b4",
+          hash: "e1f5cb11d1c870c097b16d07dd98a088",
+        },
+        "6/declaration/body/0/argument/3/3/expression/right/1": {
+          content: {
+            en: "This step regards full tender",
+            pl: "Ten krok dotyczy pełnego przetargu",
+          },
+          hash: "ccfbc9b0f487fe3e6d1145354eeff0ee",
         },
         "7/declaration/body/0/argument/1/1": {
           content: {
@@ -19666,6 +19815,20 @@ export default {
             pl: "Usuń",
           },
           hash: "173cb2e7e032c809529b871b065f46d5",
+        },
+        "11/body/0/argument/1/1/1/5/1/3/expression/alternate": {
+          content: {
+            en: "Pending",
+            pl: "Oczekujące",
+          },
+          hash: "103ba0aa7490c53ecda36903debb5b2d",
+        },
+        "11/body/0/argument/1/1/1/5/1/3/expression/consequent": {
+          content: {
+            en: "✓ Confirmed",
+            pl: "✓ Potwierdzone",
+          },
+          hash: "41424aa118029ec6138c8075c9eb71d1",
         },
         "11/body/0/argument/1/1/5/1/3/expression/alternate": {
           content: {

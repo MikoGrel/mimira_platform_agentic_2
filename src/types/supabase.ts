@@ -712,7 +712,7 @@ export type Database = {
     }
     CompositeTypes: {
       tenders_summary_type: {
-        found_today: number | null
+        mappings_created_today: number | null
         expiring_this_week: number | null
       }
     }

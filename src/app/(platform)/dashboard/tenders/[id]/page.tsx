@@ -99,13 +99,7 @@ function StepperContent({
       case "documentation":
         return <DocumentationStep item={mapping} />;
       case "decision":
-        return (
-          <DecisionStep
-            item={mapping}
-            setNextEnabled={setNextEnabled}
-            onNextHandler={nextHandlerRef}
-          />
-        );
+        return <DecisionStep item={mapping} />;
       default:
         throw new Error(`Unknown step: ${current}`);
     }
@@ -315,7 +309,7 @@ export default function TenderPage() {
                       </div>
 
                       <div className="flex-[1_0_0] overflow-y-auto bg-background">
-                        <div className="p-4">
+                        <div className="p-4 bg-sidebar">
                           <StepperContent
                             mapping={mapping}
                             selectedPart={selectedPart}
@@ -391,14 +385,6 @@ export default function TenderPage() {
                                 {isProcessingConfirmation
                                   ? "Processing..."
                                   : getStepButtonText(methods.current.id)}
-                              </Button>
-                            )}
-                            {methods.isLast && (
-                              <Button
-                                onPress={methods.reset}
-                                variant="bordered"
-                              >
-                                Reset
                               </Button>
                             )}
                           </div>

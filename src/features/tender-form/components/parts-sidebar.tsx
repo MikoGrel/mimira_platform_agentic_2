@@ -3,7 +3,6 @@
 import { Card, CardBody, CardHeader, Chip } from "@heroui/react";
 import { IndividualTenderPart } from "$/features/tenders/api/use-individual-tender";
 import { cn } from "$/lib/utils";
-import { truncate } from "lodash-es";
 
 interface PartsSidebarProps {
   parts: IndividualTenderPart[];
@@ -37,7 +36,7 @@ export function PartsSidebar({
         {parts.length <= 1 && (
           <div className="absolute top-0 left-0 w-full h-full bg-background/80 z-20 flex flex-center">
             <Chip variant="flat" color="primary">
-              This tender has only one part
+              You&apos;re applying for only one part
             </Chip>
           </div>
         )}
@@ -67,11 +66,9 @@ export function PartsSidebar({
               )}
               onPress={() => onPartSelect(part.id)}
             >
-              <CardHeader className="pb-1 px-3 pt-3 flex flex-col gap-1">
-                <h4 className="text-left line-clamp-2 text-font-base w-full text-sm">
-                  {part.part_name
-                    ? truncate(part.part_name, { length: 60 })
-                    : `Part ${part.order_number}`}
+              <CardHeader className="pb-1 px-3 pt-3 pr-6 flex flex-col gap-1">
+                <h4 className="text-left line-clamp-2 text-font-base w-full text-sm break-words">
+                  {part.part_name}
                 </h4>
               </CardHeader>
               <CardBody className="pt-0 px-3 pb-3 text-muted-foreground">

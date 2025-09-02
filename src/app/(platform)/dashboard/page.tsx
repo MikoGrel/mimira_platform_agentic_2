@@ -44,7 +44,7 @@ export default function DashboardPage() {
           </div>
           <p className="max-w-[75%] text-muted-foreground">
             Today&apos;s briefing: Since yesterday we&apos;ve managed to find
-            you {dailySummary?.found_today ?? "..."} new tenders,{" "}
+            you {dailySummary?.mappings_created_today ?? "..."} new tenders,{" "}
             {dailySummary?.expiring_this_week ?? "..."} require your attention.
           </p>
         </header>
