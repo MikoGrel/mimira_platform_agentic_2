@@ -8,12 +8,9 @@ import { floor } from "lodash-es";
 export function StateFunnel() {
   const { data: statusCounts } = useStatusCounts();
 
-  const total = statusCounts?.reduce((acc, count) => acc + count.count, 0) || 0;
-  const qualified =
-    statusCounts
-      ?.filter((c) => c.status === "default")
-      .reduce((acc, count) => acc + count.count, 0) || 0;
-  const inProgress =
+  const analysed =
+    statusCounts?.reduce((acc, count) => acc + count.count, 0) || 0;
+  const confirmedApplication =
     statusCounts
       ?.filter((c) =>
         [
@@ -25,56 +22,64 @@ export function StateFunnel() {
         ].includes(c.status)
       )
       .reduce((acc, count) => acc + count.count, 0) || 0;
+
+  const preparingOffer =
+    statusCounts
+      ?.filter((c) =>
+        [
+          "documents_preparing",
+          "questions_answered",
+          "documents_ready",
+          "questions",
+        ].includes(c.status)
+      )
+      .reduce((acc, count) => acc + count.count, 0) || 0;
+  const applied =
+    statusCounts
+      ?.filter((c) => c.status === "decision_made_applied")
+      .reduce((acc, count) => acc + count.count, 0) || 0;
   const won =
     statusCounts
       ?.filter((c) => c.status === "won")
       .reduce((acc, count) => acc + count.count, 0) || 0;
-  const lost =
-    statusCounts
-      ?.filter((c) => c.status === "lost")
-      .reduce((acc, count) => acc + count.count, 0) || 0;
-
-  const wonPercentage = floor((won / total) * 100, 1);
 
   return (
     <div>
       <div className="space-y-1">
         <FunnelItem
-          title={<span>Qualified</span>}
-          value={total}
-          maxValue={total}
+          title={<span>Analysed</span>}
+          value={analysed}
+          maxValue={analysed}
         />
         <FunnelItem
           className="bg-amber-500"
-          title={<span>Waiting for application</span>}
-          value={qualified}
-          maxValue={total}
+          title={<span>Confirmed application</span>}
+          value={confirmedApplication}
+          maxValue={analysed}
+        />
+        <FunnelItem
+          className="bg-orange-500"
+          title={<span>Preparing an offer</span>}
+          value={preparingOffer}
+          maxValue={analysed}
         />
         <FunnelItem
           className="bg-sky-500"
-          title={<span>In progress</span>}
-          value={inProgress}
-          maxValue={total}
+          title={<span>Applied</span>}
+          value={applied}
+          maxValue={analysed}
         />
         <FunnelItem
           className="bg-green-500"
           title={<span>Won</span>}
           value={won}
-          maxValue={total}
-        />
-        <FunnelItem
-          className="bg-red-500"
-          title={<span>Lost</span>}
-          value={lost}
-          maxValue={total}
+          maxValue={analysed}
         />
       </div>
       <div className="mt-3 text-sm text-muted-foreground">
         <p className="flex justify-between">
-          <span className="font-medium">Total deals:</span> {won}
-        </p>
-        <p className="flex justify-between">
-          <span className="font-medium">Conversion rate:</span> {wonPercentage}%
+          <span className="font-medium">Total number of tenders:</span>{" "}
+          {analysed}
         </p>
       </div>
     </div>

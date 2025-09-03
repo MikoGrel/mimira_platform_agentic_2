@@ -569,6 +569,22 @@ export default {
             },
             hash: "28cc5c97076b485c4839cd890b6c8f1b",
           },
+        "19/declaration/body/16/argument/1/3/1/1/1/3/expression/0/body/1/3/1/1":
+          {
+            content: {
+              en: "Mark as unseen",
+              pl: "Oznacz jako nieprzeczytane",
+            },
+            hash: "a6f772a6af99c8c1f32f897c91d8d06c",
+          },
+        "19/declaration/body/16/argument/1/3/1/1/1/3/expression/0/body/3/1/1/expression/right":
+          {
+            content: {
+              en: "New",
+              pl: "Nowe",
+            },
+            hash: "320af698c03eca3566cae395621ca490",
+          },
         "19/declaration/body/16/argument/1/5/1/3": {
           content: {
             en: "Ask Mimir",
@@ -591,6 +607,57 @@ export default {
           hash: "067789b01a081458db2f872f10a37c3f",
         },
         "20/body/0/argument/1/expression/0/body/3/3": {
+          content: {
+            en: "·",
+            pl: "·",
+          },
+          hash: "26b80ae8a680de73667e096098aa69d8",
+        },
+        "20/declaration/body/17/argument/1/1/1/3-placeholder": {
+          content: {
+            en: "Search",
+            pl: "Szukaj",
+          },
+          hash: "49dd6c21604b5e8d4153ff1aff2177e1",
+        },
+        "20/declaration/body/17/argument/1/3/1/1/1/3/expression/0/body/1/3/1/1":
+          {
+            content: {
+              en: "Mark as unseen",
+              pl: "Oznacz jako nieprzeczytane",
+            },
+            hash: "a6f772a6af99c8c1f32f897c91d8d06c",
+          },
+        "20/declaration/body/17/argument/1/3/1/1/1/3/expression/0/body/3/1/1/expression/right":
+          {
+            content: {
+              en: "New",
+              pl: "Nowe",
+            },
+            hash: "320af698c03eca3566cae395621ca490",
+          },
+        "20/declaration/body/17/argument/1/5/1/3": {
+          content: {
+            en: "Ask Mimir",
+            pl: "Zapytaj Mimira",
+          },
+          hash: "c516ed1af9463ccd6bdcb19a1f13e4ac",
+        },
+        "20/declaration/body/17/argument/1/5/1/5": {
+          content: {
+            en: "Coming soon",
+            pl: "Wkrótce dostępne",
+          },
+          hash: "05a8fc9f6d826fd88a809d98684edcad",
+        },
+        "20/declaration/body/17/argument/3/expression/right/1/1": {
+          content: {
+            en: "Select a tender to view details",
+            pl: "Wybierz przetarg, aby zobaczyć szczegóły",
+          },
+          hash: "067789b01a081458db2f872f10a37c3f",
+        },
+        "21/body/0/argument/1/expression/0/body/3/3": {
           content: {
             en: "·",
             pl: "·",
@@ -4596,6 +4663,14 @@ export default {
             },
             hash: "cdcd07927d6f1143aff26779f8a63691",
           },
+        "6/declaration/body/5/argument/1/1/3/3/openingElement/3/value/expression":
+          {
+            content: {
+              en: "<element:List></element:List> List",
+              pl: "<element:List></element:List> Lista",
+            },
+            hash: "cdcd07927d6f1143aff26779f8a63691",
+          },
         "6/declaration/body/6/argument/1/1/1-placeholder": {
           content: {
             en: "Search tenders...",
@@ -6284,6 +6359,27 @@ export default {
           },
           hash: "8208df3c0f89efff2b48433a4f98902e",
         },
+        "10/declaration/body/4/0/init/0/1/value": {
+          content: {
+            en: "Preview",
+            pl: "Podgląd",
+          },
+          hash: "3173ee1f0f1d4e50665ca4a84c38e15d",
+        },
+        "10/declaration/body/4/0/init/1/1/value": {
+          content: {
+            en: "Filling-out data",
+            pl: "Uzupełnianie danych",
+          },
+          hash: "6b21fd589cc826495915020a9c6c36c0",
+        },
+        "10/declaration/body/4/0/init/2/1/value": {
+          content: {
+            en: "Application",
+            pl: "Aplikacja",
+          },
+          hash: "6dee9191cf69144d6b569683c49631d8",
+        },
         "10/declaration/body/4/argument/5": {
           content: {
             en: "Continue",
@@ -6292,6 +6388,20 @@ export default {
           hash: "3f894c5b6419e20fd455a1b0d8dbc279",
         },
         "10/declaration/body/4/argument/openingElement/1/value/expression": {
+          content: {
+            en: "Return to last tender",
+            pl: "Powrót do ostatniego przetargu",
+          },
+          hash: "8208df3c0f89efff2b48433a4f98902e",
+        },
+        "10/declaration/body/5/argument/5": {
+          content: {
+            en: "Continue",
+            pl: "Kontynuuj",
+          },
+          hash: "3f894c5b6419e20fd455a1b0d8dbc279",
+        },
+        "10/declaration/body/5/argument/openingElement/1/value/expression": {
           content: {
             en: "Return to last tender",
             pl: "Powrót do ostatniego przetargu",
@@ -14676,40 +14786,75 @@ export default {
           },
           hash: "941a386f0a1da9f7ea122244021229ea",
         },
-        "4/declaration/body/6/argument/1/1/openingElement/0/value/expression": {
+        "4/declaration/body/5/argument/1/1/openingElement/0/value/expression": {
           content: {
-            en: "Qualified",
-            pl: "Zakwalifikowany",
+            en: "Analysed",
+            pl: "Przeanalizowane",
           },
-          hash: "ab91566819bc36d0831f136690b32878",
+          hash: "f74ae4c3c0c20717d3d58e0b8c8c34bf",
         },
-        "4/declaration/body/6/argument/1/3/openingElement/1/value/expression": {
+        "4/declaration/body/5/argument/1/3/openingElement/1/value/expression": {
           content: {
-            en: "Waiting for application",
-            pl: "Oczekiwanie na aplikację",
+            en: "Confirmed application",
+            pl: "Potwierdzona aplikacja",
           },
-          hash: "c4136cac50d8cbd90480eea77ee8ae18",
+          hash: "92f97a7b5aa637eb638e4d6d9bdaa01b",
         },
-        "4/declaration/body/6/argument/1/5/openingElement/1/value/expression": {
+        "4/declaration/body/5/argument/1/5/openingElement/1/value/expression": {
           content: {
-            en: "In progress",
-            pl: "W toku",
+            en: "Applied",
+            pl: "Złożono aplikację",
           },
-          hash: "7b7abca427be23829be8e8c8cb433519",
+          hash: "a79bcd1e53b38db7b03b506ff2e05904",
         },
-        "4/declaration/body/6/argument/1/7/openingElement/1/value/expression": {
+        "4/declaration/body/5/argument/1/7/openingElement/1/value/expression": {
           content: {
             en: "Won",
             pl: "Wygrane",
           },
           hash: "61dcd4c53a7b9b4b86c20ebe571f111f",
         },
+        "4/declaration/body/5/argument/3/1/1": {
+          content: {
+            en: "Total number of tenders:",
+            pl: "Łączna liczba ofert:",
+          },
+          hash: "4f13d241ebe58ba5f3069098f2135bbf",
+        },
+        "4/declaration/body/6/argument/1/1/openingElement/0/value/expression": {
+          content: {
+            en: "Analysed",
+            pl: "Przeanalizowane",
+          },
+          hash: "f74ae4c3c0c20717d3d58e0b8c8c34bf",
+        },
+        "4/declaration/body/6/argument/1/3/openingElement/1/value/expression": {
+          content: {
+            en: "Confirmed application",
+            pl: "Potwierdzona aplikacja",
+          },
+          hash: "92f97a7b5aa637eb638e4d6d9bdaa01b",
+        },
+        "4/declaration/body/6/argument/1/5/openingElement/1/value/expression": {
+          content: {
+            en: "Preparing an offer",
+            pl: "Przygotowywanie oferty",
+          },
+          hash: "901b25ae5cfdd0ec2d2a87c81b7a20bb",
+        },
+        "4/declaration/body/6/argument/1/7/openingElement/1/value/expression": {
+          content: {
+            en: "Applied",
+            pl: "Złożono aplikację",
+          },
+          hash: "a79bcd1e53b38db7b03b506ff2e05904",
+        },
         "4/declaration/body/6/argument/1/9/openingElement/1/value/expression": {
           content: {
-            en: "Lost",
-            pl: "Przegrane",
+            en: "Won",
+            pl: "Wygrane",
           },
-          hash: "52ca04dc5bfb7642586e67a469aa3e24",
+          hash: "61dcd4c53a7b9b4b86c20ebe571f111f",
         },
         "4/declaration/body/6/argument/3/1": {
           content: {
@@ -14717,6 +14862,13 @@ export default {
             pl: "<element:span>Łączna liczba transakcji:</element:span> 50",
           },
           hash: "dae0998c98a09d510391cd2a33d9a8b6",
+        },
+        "4/declaration/body/6/argument/3/1/1": {
+          content: {
+            en: "Total number of tenders:",
+            pl: "Łączna liczba ofert:",
+          },
+          hash: "4f13d241ebe58ba5f3069098f2135bbf",
         },
         "4/declaration/body/6/argument/3/3": {
           content: {
@@ -22783,6 +22935,20 @@ export default {
           },
           hash: "32f13e40da30102f390ffd5e61260b68",
         },
+        "6/body/0/argument/1/3/1/1/expression/right/3/expression/right/1": {
+          content: {
+            en: "No tenders",
+            pl: "Brak przetargów",
+          },
+          hash: "32f13e40da30102f390ffd5e61260b68",
+        },
+        "6/body/2/argument/1/1/3/1/1/expression/right/3/expression/right/1": {
+          content: {
+            en: "No tenders",
+            pl: "Brak przetargów",
+          },
+          hash: "32f13e40da30102f390ffd5e61260b68",
+        },
         "7/declaration/body/1/argument/1/1": {
           content: {
             en: "<element:h3>{title}</element:h3> ·<element:span>{tenders.length}</element:span>",
@@ -23070,7 +23236,28 @@ export default {
           },
           hash: "3314bd8d7d9277a56475e8e2fae3a304",
         },
+        "12/body/3/body/0/expression/1/0/value/body/0": {
+          content: {
+            en: "Tender restored to inbox",
+            pl: "Przetarg przywrócony do skrzynki odbiorczej",
+          },
+          hash: "9fa090b63ef800c860a8c2beb55db264",
+        },
         "12/body/4/argument/3/1/1": {
+          content: {
+            en: "Restore to inbox",
+            pl: "Przywróć do skrzynki odbiorczej",
+          },
+          hash: "951351c2250fd5ecd5968b20cde28723",
+        },
+        "12/body/5/body/0/expression/1/0/value/body/0": {
+          content: {
+            en: "Tender restored to inbox",
+            pl: "Przetarg przywrócony do skrzynki odbiorczej",
+          },
+          hash: "9fa090b63ef800c860a8c2beb55db264",
+        },
+        "12/body/6/argument/3/1/1": {
           content: {
             en: "Restore to inbox",
             pl: "Przywróć do skrzynki odbiorczej",
@@ -23403,6 +23590,41 @@ export default {
             pl: "Przywróć do skrzynki odbiorczej",
           },
           hash: "951351c2250fd5ecd5968b20cde28723",
+        },
+        "6/0/init/expression/0/1/value": {
+          content: {
+            en: "Analysis",
+            pl: "Analiza",
+          },
+          hash: "409bac6215382c47e59f5039cc4cdcdd",
+        },
+        "6/0/init/expression/1/1/value": {
+          content: {
+            en: "Questions & Review",
+            pl: "Pytania i przegląd",
+          },
+          hash: "bd17707e3e924f958ec68060726f1068",
+        },
+        "6/0/init/expression/2/1/value": {
+          content: {
+            en: "Documents",
+            pl: "Dokumenty",
+          },
+          hash: "c3882fc98216636873ab9091f3453f0c",
+        },
+        "6/0/init/expression/3/1/value": {
+          content: {
+            en: "Decision",
+            pl: "Decyzja",
+          },
+          hash: "4757e269fee1aa76864469e762def497",
+        },
+        "6/0/init/expression/4/1/value": {
+          content: {
+            en: "Rejected",
+            pl: "Odrzucone",
+          },
+          hash: "30202c9a9a2093021b0e9a1c61717fe9",
         },
         "7/0/init/expression/0/1/value": {
           content: {

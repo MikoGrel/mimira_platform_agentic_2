@@ -60,6 +60,7 @@ export function StatsBento({ loading, className }: StatsBentoProps) {
             title={<AlignLeft className="w-4 h-4" />}
           ></Tab>
           <Tab
+            isDisabled
             key="Weekly"
             name="Weekly"
             title={<Calendar className="w-4 h-4" />}
