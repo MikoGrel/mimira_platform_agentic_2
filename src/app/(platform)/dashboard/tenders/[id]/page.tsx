@@ -28,6 +28,7 @@ import {
   ResizablePanel,
   ResizableHandle,
 } from "$/components/ui/resizable";
+import { useLastTender } from "$/features/tenders/hooks/use-last-tender";
 
 const { Stepper, useStepper, utils } = defineStepper(
   {
@@ -126,6 +127,9 @@ export default function TenderPage() {
     enabled: true,
     skipCache: true,
   });
+
+  const { setLastMappingId } = useLastTender();
+
   const updateTenderStatus = useUpdateTenderStatus();
   const {
     selectedPart,
@@ -234,6 +238,12 @@ export default function TenderPage() {
       setNextEnabled(true);
     }
   }, [mapping, initialStep, initialConfirmationsNextEnabled]);
+
+  useEffect(() => {
+    if (mapping) {
+      setLastMappingId(mapping.id);
+    }
+  }, [mapping, setLastMappingId]);
 
   const partSteps = ["overview", "confirmations"];
 

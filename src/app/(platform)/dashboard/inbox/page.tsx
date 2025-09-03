@@ -17,8 +17,7 @@ import { useMarkAsSeen } from "$/features/inbox/api/use-mark-as-seen";
 import useTenderInboxQuery, {
   InboxTenderMapping,
 } from "$/features/inbox/api/use-tender-inbox-query";
-import { useLocalStorage } from "react-use";
-import { useCurrentUser } from "$/features/auth/api";
+import { useLastTender } from "$/features/tenders/hooks/use-last-tender";
 
 const TenderPreview = dynamic(
   () =>
@@ -34,7 +33,6 @@ const PAGE_SIZE = 10;
 
 export default function InboxPage() {
   const { filterQuery, addFilter } = useFilterForm();
-  const { user } = useCurrentUser();
 
   const [showFilterForm, setShowFilterForm] = useState(false);
   const { relativeToNow } = useDateFormat();
@@ -45,10 +43,7 @@ export default function InboxPage() {
   );
   const [selectedId, setSelectedId] = useQueryState("id", parseAsString);
   const [selectedPart, setSelectedPart] = useQueryState("part", parseAsString);
-  const [, setLastTender] = useLocalStorage<string | undefined>(
-    "last-tender" + user?.profile?.company_id,
-    undefined
-  );
+  const { setLastMappingId } = useLastTender();
 
   const {
     tenders,
@@ -89,7 +84,7 @@ export default function InboxPage() {
     setSelectedPart(tender.tender_parts[0].id);
 
     markAsSeen(tender.id);
-    setLastTender(tender.id);
+    setLastMappingId(tender.id);
   }
 
   function handleArchiveButtonPress() {

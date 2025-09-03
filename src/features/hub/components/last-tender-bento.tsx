@@ -3,12 +3,11 @@
 import { Button } from "@heroui/react";
 import { MoveRight } from "lucide-react";
 import { BentoCard } from "$/components/ui/bento-card";
-import { useLocalStorage } from "react-use";
 import { useIndividualTender } from "$/features/tenders";
 import Link from "next/link";
 import truncate from "lodash-es/truncate";
 import { defineStepper } from "$/components/stepper";
-import { useCurrentUser } from "$/features/auth/api";
+import { useLastTender } from "$/features/tenders/hooks/use-last-tender";
 
 interface LastTenderBentoProps {
   loading?: boolean;
@@ -16,14 +15,11 @@ interface LastTenderBentoProps {
 }
 
 export function LastTenderBento({ loading, className }: LastTenderBentoProps) {
-  const { user } = useCurrentUser();
-  const [lastTender] = useLocalStorage<string | undefined>(
-    "last-tender" + user?.profile?.company_id,
-    undefined
-  );
+  const { lastMappingId } = useLastTender();
+
   const { data: mapping } = useIndividualTender({
-    mappingId: lastTender!,
-    enabled: !!lastTender,
+    mappingId: lastMappingId!,
+    enabled: !!lastMappingId,
   });
 
   const isInInbox = mapping?.status === "default";
