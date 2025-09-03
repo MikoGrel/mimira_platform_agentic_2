@@ -10147,13 +10147,11 @@
         },
         "15/body/6/argument/1/expression/consequent/5/expression/right/3": {
           "type": "element",
-          "hash": "f35462f1697a83a3e6b582cb71b021ba",
+          "hash": "22e14fc7b433ffa07e6702e4ebf13cdc",
           "context": "",
           "skip": false,
-          "overrides": {
-            "pl": "Aplikuj na cały przetarg"
-          },
-          "content": "Apply to full tender"
+          "overrides": {},
+          "content": "Unselect all"
         },
         "15/body/6/argument/1/expression/consequent/5/expression/right/5": {
           "type": "element",

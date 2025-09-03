@@ -157,15 +157,6 @@ function HeaderButtons({
                 Apply to selected parts
               </Button>
 
-              <Button
-                size={size}
-                variant="flat"
-                onPress={() => onApply()}
-                data-lingo-override-pl="Aplikuj na cały przetarg"
-              >
-                Apply to full tender
-              </Button>
-
               <Button size={size} variant="flat" onPress={onUnselectAll}>
                 Unselect all
               </Button>

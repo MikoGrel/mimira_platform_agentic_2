@@ -211,8 +211,11 @@ export function TenderPartsCarousel({
                     isHoverable
                     shadow="sm"
                     className={cn(
-                      "cursor-pointer transition-all duration-200 h-full w-full",
-                      selectedPart === part.id && "ring ring-primary/70"
+                      "cursor-pointer transition-all duration-200 h-full w-full ring-primary/70",
+                      {
+                        "ring ": selectedPart === part.id,
+                        "bg-primary/5 ring": isApproved(part),
+                      }
                     )}
                     onPress={() => onPartSelect(part.id)}
                   >
