@@ -455,6 +455,14 @@ export default {
           },
           hash: "49dd6c21604b5e8d4153ff1aff2177e1",
         },
+        "18/declaration/body/15/argument/1/3/1/1/1/3/expression/0/body/1/1/1/expression/right":
+          {
+            content: {
+              en: "New",
+              pl: "Nowe",
+            },
+            hash: "320af698c03eca3566cae395621ca490",
+          },
         "18/declaration/body/15/argument/1/5/1/3": {
           content: {
             en: "Ask Mimir",
@@ -7370,10 +7378,10 @@ export default {
         },
         "7/declaration/body/0/argument/3/1/1/expression/right-title": {
           content: {
-            en: "Eligibility",
-            pl: "Kwalifikowalność",
+            en: "Possibility to participate ",
+            pl: "Możliwość uczestnictwa",
           },
-          hash: "a895f9c2afd359f5f525b176d1c6010e",
+          hash: "f47ec84059995f503ace32213c52fa60",
         },
         "7/declaration/body/0/argument/3/1/1/expression/right/1/expression/alternate":
           {
@@ -7400,10 +7408,10 @@ export default {
         },
         "7/declaration/body/0/argument/3/1/5/expression/right-title": {
           content: {
-            en: "Completion Date",
-            pl: "Data zakończenia",
+            en: "Voievodeship",
+            pl: "Województwo",
           },
-          hash: "26465009e23d5f17e452842785193bda",
+          hash: "77527897f4aa770c3781d1c4569d35db",
         },
         "7/declaration/body/0/argument/3/3/1/expression/right-title": {
           content: {
@@ -7457,6 +7465,50 @@ export default {
             pl: "Data zakończenia",
           },
           hash: "26465009e23d5f17e452842785193bda",
+        },
+        "8/declaration/body/0/argument/1/0/expression/right": {
+          content: {
+            en: "Overview",
+            pl: "Przegląd",
+          },
+          hash: "30c54e4dc4ce599b87d94be34a8617f5",
+        },
+        "8/declaration/body/0/argument/3/1/1/expression/right-title": {
+          content: {
+            en: "Possibility to participate ",
+            pl: "Możliwość uczestnictwa",
+          },
+          hash: "f47ec84059995f503ace32213c52fa60",
+        },
+        "8/declaration/body/0/argument/3/1/1/expression/right/1/expression/alternate":
+          {
+            content: {
+              en: "Not eligible to participate",
+              pl: "Nie kwalifikuje się do udziału",
+            },
+            hash: "0593d8433868dc2c22761f44f8ada96b",
+          },
+        "8/declaration/body/0/argument/3/1/1/expression/right/1/expression/consequent":
+          {
+            content: {
+              en: "Eligible to participate",
+              pl: "Kwalifikuje się do udziału",
+            },
+            hash: "178bdec9274b413eb458a49351fe54a0",
+          },
+        "8/declaration/body/0/argument/3/1/3/expression/right-title": {
+          content: {
+            en: "Wadium",
+            pl: "Wadium",
+          },
+          hash: "cc1df5b4bb18ef18f1084db990961f72",
+        },
+        "8/declaration/body/0/argument/3/1/5/expression/right-title": {
+          content: {
+            en: "Voievodeship",
+            pl: "Województwo",
+          },
+          hash: "77527897f4aa770c3781d1c4569d35db",
         },
       },
     },
@@ -7681,6 +7733,13 @@ export default {
     },
     "features/inbox/components/requirements-list.tsx": {
       entries: {
+        "2/declaration/body/1/argument/1/1/1/3": {
+          content: {
+            en: "({items.length})",
+            pl: "({items.length})",
+          },
+          hash: "1409f9e98be0e57da01149ada6e30953",
+        },
         "2/declaration/body/3/argument/1/5": {
           content: {
             en: "({items.length})",
@@ -7810,6 +7869,20 @@ export default {
             pl: "Niespełnione wymagania",
           },
           hash: "c358cf9796d545d7b72954dc6ddd6dc2",
+        },
+        "6/declaration/body/4/argument/1": {
+          content: {
+            en: "Requirements",
+            pl: "Wymagania",
+          },
+          hash: "e108e149e0fd5b65f5850b6f032ccabe",
+        },
+        "6/declaration/body/4/argument/3/1/1/expression/0/body/1/1/3": {
+          content: {
+            en: "({section.items.length})",
+            pl: "({section.items.length})",
+          },
+          hash: "d7ef7b855850a7d1dc6956e1197c33bb",
         },
       },
     },
@@ -10426,6 +10499,13 @@ export default {
           },
           hash: "d727054cb65d0e95c79cfb34bc3e3f28",
         },
+        "10/body/0/argument/7": {
+          content: {
+            en: "/",
+            pl: "/",
+          },
+          hash: "d727054cb65d0e95c79cfb34bc3e3f28",
+        },
         "10/declaration/body/9/argument/1/1/expression/right/1": {
           content: {
             en: "Tender Parts ({tenderParts.length})",
@@ -10798,10 +10878,10 @@ export default {
         "12/declaration/body/13/argument/1/expression/right/1/1/expression/alternate":
           {
             content: {
-              en: "Tender Parts ({tenderParts.length})",
-              pl: "Części przetargu ({tenderParts.length})",
+              en: "Matched tender parts ({tenderParts.length})",
+              pl: "Dopasowane części przetargu ({tenderParts.length})",
             },
-            hash: "9661e246a3d3ede3d0144c0b178cd7c3",
+            hash: "7cd89a62cdf99d56f10c399c294d6c20",
           },
         "12/declaration/body/13/argument/5/1/1/1/expression/0/body/1/1/1/3": {
           content: {
@@ -12277,7 +12357,23 @@ export default {
             },
             hash: "a003449ecbde6b7a73044f46ea6bbe75",
           },
+        "21/declaration/body/13/0/init/0/body/0/argument/expression/callee/object/0/consequent/1/value":
+          {
+            content: {
+              en: "Products",
+              pl: "Produkty",
+            },
+            hash: "a003449ecbde6b7a73044f46ea6bbe75",
+          },
         "21/declaration/body/13/0/init/0/body/0/argument/expression/callee/object/1/1/value":
+          {
+            content: {
+              en: "Requirements",
+              pl: "Wymagania",
+            },
+            hash: "e108e149e0fd5b65f5850b6f032ccabe",
+          },
+        "21/declaration/body/13/0/init/0/body/0/argument/expression/callee/object/1/consequent/1/value":
           {
             content: {
               en: "Requirements",
@@ -12301,7 +12397,23 @@ export default {
             },
             hash: "e17686a22ffad04cc7bb70524ed4478b",
           },
+        "21/declaration/body/13/0/init/0/body/0/argument/expression/callee/object/3/consequent/1/value":
+          {
+            content: {
+              en: "Description",
+              pl: "Opis",
+            },
+            hash: "e17686a22ffad04cc7bb70524ed4478b",
+          },
         "21/declaration/body/13/0/init/0/body/0/argument/expression/callee/object/4/1/value":
+          {
+            content: {
+              en: "Additional Info",
+              pl: "Dodatkowe informacje",
+            },
+            hash: "d5bf1e70991802fd4a801f3a79cf9e5d",
+          },
+        "21/declaration/body/13/0/init/0/body/0/argument/expression/callee/object/4/consequent/1/value":
           {
             content: {
               en: "Additional Info",

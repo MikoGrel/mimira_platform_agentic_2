@@ -1,26 +1,27 @@
 "use client";
 
-import { CheckCircle, AlertCircle, Clock } from "lucide-react";
-// import { TenderSummary } from "$/features/tenders";
+import { CheckCircle, AlertCircle, House } from "lucide-react";
 
 import { ReactNode } from "react";
 import { Section } from "./section";
 import { SectionContent } from "./section-content";
 import { SectionTitle } from "./section-title";
 import { StatusCard } from "./status-card";
+import { startCase } from "lodash-es";
 
 interface OverviewSectionProps {
   title?: ReactNode;
   canParticipate: boolean;
   wadium: string;
   completionDate: string;
+  voievodeship: string;
 }
 
 export function OverviewSection({
   title,
   canParticipate,
   wadium,
-  completionDate,
+  voievodeship,
 }: OverviewSectionProps) {
   return (
     <Section id="at-glance" data-section>
@@ -30,7 +31,7 @@ export function OverviewSection({
           {canParticipate !== null && (
             <StatusCard
               icon={canParticipate ? CheckCircle : AlertCircle}
-              title="Eligibility"
+              title="Possibility to participate "
               type={canParticipate ? "success" : "error"}
             >
               {canParticipate ? (
@@ -42,14 +43,14 @@ export function OverviewSection({
           )}
 
           {wadium && (
-            <StatusCard icon={AlertCircle} title="Wadium" type="warning">
+            <StatusCard icon={AlertCircle} title="Wadium" type="info">
               {wadium}
             </StatusCard>
           )}
 
-          {completionDate && (
-            <StatusCard icon={Clock} title="Completion Date" type="neutral">
-              {completionDate}
+          {voievodeship && (
+            <StatusCard icon={House} title="Voievodeship" type="neutral">
+              {startCase(voievodeship)}
             </StatusCard>
           )}
         </div>

@@ -152,18 +152,33 @@ export function TenderPreview({
 
   const sections = useMemo(() => {
     return [
-      { id: "products", label: <span>Products</span> },
-      { id: "requirements", label: <span>Requirements</span> },
-      mapping.tenders?.review_criteria_llm
+      selectedPart.tender_products?.length > 0
+        ? { id: "products", label: <span>Products</span> }
+        : null,
+      selectedPart.tender_requirements.length > 0
+        ? { id: "requirements", label: <span>Requirements</span> }
+        : null,
+      selectedPart.review_criteria_llm
         ? {
             id: "review-criteria",
             label: <span>Review Criteria</span>,
           }
         : null,
-      { id: "description", label: <span>Description</span> },
-      { id: "others", label: <span>Additional Info</span> },
+      selectedPart.description_part_long_llm
+        ? { id: "description", label: <span>Description</span> }
+        : null,
+      selectedPart.payment_terms_llm || mapping.tenders?.payment_terms_llm
+        ? { id: "others", label: <span>Additional Info</span> }
+        : null,
     ].filter(Boolean) as Section[];
-  }, [mapping.tenders?.review_criteria_llm]);
+  }, [
+    mapping.tenders?.payment_terms_llm,
+    selectedPart.description_part_long_llm,
+    selectedPart.payment_terms_llm,
+    selectedPart.review_criteria_llm,
+    selectedPart.tender_products?.length,
+    selectedPart.tender_requirements.length,
+  ]);
 
   return (
     <section className="h-full w-full">
@@ -205,6 +220,7 @@ export function TenderPreview({
                   canParticipate={Boolean(selectedPart.can_participate)}
                   wadium={selectedPart.wadium_llm || ""}
                   completionDate={selectedPart.ordercompletiondate_llm || ""}
+                  voievodeship={mapping.tenders.voivodship || ""}
                 />
 
                 {selectedPart.tender_products && (
@@ -234,6 +250,7 @@ export function TenderPreview({
                 />
 
                 <AdditionalInfoSection
+                  key={mapping.id}
                   payment_terms_llm={
                     selectedPart?.payment_terms_llm ||
                     mapping.tenders?.payment_terms_llm ||

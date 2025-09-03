@@ -1,7 +1,13 @@
 "use client";
 
 import { Card, CardBody, CardHeader } from "@heroui/react";
-import { Check, ChevronLeft, ChevronRight } from "lucide-react";
+import {
+  Check,
+  ChevronLeft,
+  ChevronRight,
+  CircleQuestionMark,
+  X,
+} from "lucide-react";
 import { Button } from "$/components/ui/button";
 import { cn } from "$/lib/utils";
 import useEmblaCarousel from "embla-carousel-react";
@@ -27,12 +33,19 @@ function RequirementsStatus(props: {
 }) {
   return (
     <div className="gap-1 inline-flex ml-1">
-      <span className="text-success-600 font-medium">{props.approve || 0}</span>
+      <span className="text-success-600 font-medium flex items-center gap-1">
+        {props.approve || 0}
+        <Check className="w-3 h-3 inline-block" />
+      </span>
       <span className="text-subtle-foreground">/</span>
-      <span className="text-warning-600 font-medium">
-        {[props.default, props.approve, props.reject]
-          .filter(Boolean)
-          .reduce((acc, curr) => acc + curr, 0)}
+      <span className="text-warning-600 font-medium flex items-center gap-1">
+        {props.default || 0}
+        <CircleQuestionMark className="w-3 h-3 inline-block" />{" "}
+      </span>
+      <span className="text-subtle-foreground">/</span>
+      <span className="text-danger-600 font-medium flex items-center gap-1">
+        {props.reject || 0}
+        <X className="w-3 h-3 inline-block" />
       </span>
     </div>
   );
@@ -134,7 +147,11 @@ export function TenderPartsCarousel({
       {!isCollapsed && (
         <div className="flex items-center justify-between mb-2">
           <h2 className="text-sm font-medium text-muted-foreground">
-            {title ? <>{title}</> : <>Tender Parts ({tenderParts.length})</>}
+            {title ? (
+              <>{title}</>
+            ) : (
+              <>Matched tender parts ({tenderParts.length})</>
+            )}
           </h2>
           <div className="flex gap-2">
             <Button
@@ -218,7 +235,7 @@ export function TenderPartsCarousel({
                           duration: 0.2,
                         }}
                       >
-                        <div className="text-xs w-full">
+                        <div className="text-xs w-full flex items-center">
                           <span className="inline">Requirements:</span>
                           <RequirementsStatus {...groupedRequirements(part)} />
                         </div>

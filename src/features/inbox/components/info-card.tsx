@@ -1,5 +1,11 @@
 "use client";
 
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "$/components/ui/accordion";
 import { cn } from "$/lib/utils";
 import { ReactNode } from "react";
 
@@ -13,18 +19,26 @@ export function InfoCard({
   variant?: "default" | "highlight";
 }) {
   return (
-    <div
+    <Accordion
+      type="single"
+      collapsible
       className={cn(
-        "p-4 rounded-lg border",
+        "px-4 rounded-lg border",
         variant === "highlight"
           ? "bg-primary/5 border-primary/20"
           : "bg-subtle/30 border-border"
       )}
     >
-      <h4 className="text-sm font-medium text-foreground mb-2">{title}</h4>
-      <p className="text-sm text-muted-foreground whitespace-pre-wrap leading-relaxed">
-        {content}
-      </p>
-    </div>
+      <AccordionItem value="item-0">
+        <AccordionTrigger>
+          <h4 className="text-sm font-medium text-foreground">{title}</h4>
+        </AccordionTrigger>
+        <AccordionContent>
+          <p className="text-sm text-muted-foreground whitespace-pre-wrap leading-relaxed">
+            {content}
+          </p>
+        </AccordionContent>
+      </AccordionItem>
+    </Accordion>
   );
 }

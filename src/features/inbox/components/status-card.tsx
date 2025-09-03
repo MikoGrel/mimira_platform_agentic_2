@@ -13,13 +13,14 @@ export function StatusCard({
   icon: React.ComponentType<{ className?: string }>;
   title: string;
   children?: ReactNode;
-  type?: "success" | "warning" | "error" | "neutral";
+  type?: "success" | "warning" | "error" | "neutral" | "info";
 }) {
   const badgeColors = {
     success: "bg-green-50 text-green-700 border-green-200",
     warning: "bg-amber-50 text-amber-700 border-amber-200",
     error: "bg-red-50 text-red-700 border-red-200",
     neutral: "bg-subtle text-foreground/70 border-border",
+    info: "bg-blue-50 text-blue-700 border-blue-200",
   } as const;
 
   return (
