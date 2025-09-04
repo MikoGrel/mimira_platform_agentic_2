@@ -11,10 +11,11 @@ export function useCommandSearch(search: string) {
       const trimmed = search.trim();
       const { data, error } = await client
         .from("companies_tenders_mappings")
-        .select("id, tenders(order_object), status")
+        .select("id, tenders!inner(order_object), status")
         .textSearch("tenders.order_object", trimmed, { type: "phrase" })
         .eq("company_id", user!.profile!.company_id!)
         .eq("can_participate", true)
+        .in("status", ["analysis", "default"])
         .limit(20);
       if (error) throw error;
       return data;
