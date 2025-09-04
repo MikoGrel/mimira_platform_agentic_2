@@ -4755,6 +4755,22 @@
           "overrides": {},
           "content": "Reset"
         },
+        "20/declaration/body/18/argument/1/1/expression/body/1/argument/1/1": {
+          "type": "element",
+          "hash": "1e2ea95a1cc35caf5407cb56609d471b",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "<element:MoveLeft></element:MoveLeft> Return"
+        },
+        "20/declaration/body/18/argument/1/1/expression/body/1/argument/3/1/5/1/5/1/1": {
+          "type": "element",
+          "hash": "dc3149e5f8913e58f4705f41b238d00c",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Previous step"
+        },
         "20/declaration/body/9/0/init/body/0/0/0/alternate/alternate/0/argument": {
           "type": "element",
           "hash": "3bebbe9909ebc2ae788c9038831ddb6e",
@@ -18773,6 +18789,22 @@
           "overrides": {},
           "content": "Completed by us"
         },
+        "10/declaration/body/8/argument/1/openingElement/1/value/expression": {
+          "type": "element",
+          "hash": "9f4a2b3bc99052f6ce1587dfcae08fc6",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Completed by us"
+        },
+        "10/declaration/body/8/argument/1/openingElement/2/value/expression": {
+          "type": "element",
+          "hash": "9f4a2b3bc99052f6ce1587dfcae08fc6",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Completed by us"
+        },
         "10/declaration/body/8/argument/3/openingElement/0/value/expression": {
           "type": "element",
           "hash": "030e160bf50c084716488dc452429db2",
@@ -18781,7 +18813,23 @@
           "overrides": {},
           "content": "Requires manual fill"
         },
+        "10/declaration/body/8/argument/3/openingElement/1/value/expression": {
+          "type": "element",
+          "hash": "030e160bf50c084716488dc452429db2",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Requires manual fill"
+        },
         "10/declaration/body/8/argument/5/openingElement/0/value/expression": {
+          "type": "element",
+          "hash": "f187e342b6ff30e7d4d96d9395dea305",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Other attachments"
+        },
+        "10/declaration/body/8/argument/5/openingElement/1/value/expression": {
           "type": "element",
           "hash": "f187e342b6ff30e7d4d96d9395dea305",
           "context": "",

@@ -9,12 +9,14 @@ import { toast } from "sonner";
 import { CompanyFileType } from "../hooks/use-company-files";
 
 interface FileGroupProps {
+  zipName: string;
   label: React.ReactNode;
   files: CompanyFileType[];
   showDownloadAll?: boolean;
 }
 
 export function FileGroup({
+  zipName,
   label,
   files,
   showDownloadAll = false,
@@ -34,9 +36,10 @@ export function FileGroup({
             variant="ghost"
             className="flex items-center gap-1.5 text-xs h-8"
             onPress={() =>
-              downloadAllFiles(files.map((file) => file.s3path!)).then(() =>
-                toast.success(<>Downloading all files...</>)
-              )
+              downloadAllFiles(
+                zipName,
+                files.map((file) => file.s3path!)
+              ).then(() => toast.success(<>Downloading all files...</>))
             }
           >
             <FileDown className="w-3.5 h-3.5" />

@@ -102,16 +102,23 @@ export function DocumentationStep({
   return (
     <div className="space-y-4">
       <FileGroup
+        zipName={"completed_" + item?.tenders.order_object?.slice(0, 80)}
         label={<>Completed by us</>}
         files={groupedFiles.refilled}
         showDownloadAll
       />
       <FileGroup
+        zipName={
+          "requires_manual_fill_" + item?.tenders.order_object?.slice(0, 80)
+        }
         label={<>Requires manual fill</>}
         files={groupedFiles.optional}
         showDownloadAll
       />
       <FileGroup
+        zipName={
+          "other_attachments_" + item?.tenders.order_object?.slice(0, 80)
+        }
         label={<>Other attachments</>}
         files={groupedFiles.other}
         showDownloadAll
