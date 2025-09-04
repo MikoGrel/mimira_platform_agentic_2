@@ -39,7 +39,7 @@ export default function useCurrentUser() {
     if (data) {
       posthog.identify(data.id, {
         email: data.email,
-        ...omit(data.profile, "id"),
+        ...omit(data.profile, "id", "email"),
       });
 
       if (data.profile?.companies?.company_name) {
