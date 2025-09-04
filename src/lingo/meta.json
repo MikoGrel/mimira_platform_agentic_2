@@ -3077,19 +3077,19 @@
         },
         "17/0/init/2/1/value": {
           "type": "element",
-          "hash": "b7b46ab6ce9606032c8f81f6f6afbb9b",
-          "context": "",
-          "skip": false,
-          "overrides": {},
-          "content": "Data"
-        },
-        "17/0/init/3/1/value": {
-          "type": "element",
           "hash": "1563fcb5ddb5037b0709ccd3dd384a92",
           "context": "",
           "skip": false,
           "overrides": {},
           "content": "Documentation"
+        },
+        "17/0/init/3/1/value": {
+          "type": "element",
+          "hash": "4757e269fee1aa76864469e762def497",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Decision"
         },
         "17/0/init/4/1/value": {
           "type": "element",
@@ -3853,19 +3853,19 @@
         },
         "18/0/init/2/1/value": {
           "type": "element",
-          "hash": "b7b46ab6ce9606032c8f81f6f6afbb9b",
-          "context": "",
-          "skip": false,
-          "overrides": {},
-          "content": "Data"
-        },
-        "18/0/init/3/1/value": {
-          "type": "element",
           "hash": "1563fcb5ddb5037b0709ccd3dd384a92",
           "context": "",
           "skip": false,
           "overrides": {},
           "content": "Documentation"
+        },
+        "18/0/init/3/1/value": {
+          "type": "element",
+          "hash": "4757e269fee1aa76864469e762def497",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Decision"
         },
         "18/0/init/4/1/value": {
           "type": "element",
@@ -4539,6 +4539,14 @@
           "overrides": {},
           "content": "Previous step"
         },
+        "19/declaration/body/16/argument/1/1/expression/body/1/argument/3/1/5/1/5/1/3/1/expression/right": {
+          "type": "element",
+          "hash": "41b7a61422ab6a6c9b0a9bf39f940642",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Continue"
+        },
         "19/declaration/body/16/argument/1/1/expression/body/1/argument/3/1/5/1/5/1/3/3/expression/right": {
           "type": "element",
           "hash": "a0428f777a098e07120f19324d4f7eee",
@@ -4579,6 +4587,14 @@
           "overrides": {},
           "content": "Previous step"
         },
+        "19/declaration/body/17/argument/1/1/expression/body/1/argument/3/1/5/1/5/1/3/1/expression/right": {
+          "type": "element",
+          "hash": "41b7a61422ab6a6c9b0a9bf39f940642",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Continue"
+        },
         "19/declaration/body/17/argument/1/1/expression/body/1/argument/3/1/5/1/5/1/3/3/expression/right": {
           "type": "element",
           "hash": "a0428f777a098e07120f19324d4f7eee",
@@ -4586,6 +4602,54 @@
           "skip": false,
           "overrides": {},
           "content": "Reset"
+        },
+        "19/declaration/body/18/argument/1/1/expression/body/1/argument/1/1": {
+          "type": "element",
+          "hash": "1e2ea95a1cc35caf5407cb56609d471b",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "<element:MoveLeft></element:MoveLeft> Return"
+        },
+        "19/declaration/body/18/argument/1/1/expression/body/1/argument/3/1/5/1/5/1/1": {
+          "type": "element",
+          "hash": "dc3149e5f8913e58f4705f41b238d00c",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Previous step"
+        },
+        "19/declaration/body/18/argument/1/1/expression/body/1/argument/3/1/5/1/5/1/3/1/expression/right": {
+          "type": "element",
+          "hash": "41b7a61422ab6a6c9b0a9bf39f940642",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Continue"
+        },
+        "19/declaration/body/19/argument/1/1/expression/body/1/argument/1/1": {
+          "type": "element",
+          "hash": "1e2ea95a1cc35caf5407cb56609d471b",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "<element:MoveLeft></element:MoveLeft> Return"
+        },
+        "19/declaration/body/19/argument/1/1/expression/body/1/argument/3/1/5/1/5/1/1": {
+          "type": "element",
+          "hash": "dc3149e5f8913e58f4705f41b238d00c",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Previous step"
+        },
+        "19/declaration/body/19/argument/1/1/expression/body/1/argument/3/1/5/1/5/1/3/1/expression/right": {
+          "type": "element",
+          "hash": "41b7a61422ab6a6c9b0a9bf39f940642",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Continue"
         },
         "19/declaration/body/9/0/init/body/0/0/0/alternate/alternate/0/argument": {
           "type": "element",
@@ -4746,6 +4810,14 @@
           "skip": false,
           "overrides": {},
           "content": "Previous step"
+        },
+        "20/declaration/body/17/argument/1/1/expression/body/1/argument/3/1/5/1/5/1/3/1/expression/right": {
+          "type": "element",
+          "hash": "41b7a61422ab6a6c9b0a9bf39f940642",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Continue"
         },
         "20/declaration/body/17/argument/1/1/expression/body/1/argument/3/1/5/1/5/1/3/3/expression/right": {
           "type": "element",
@@ -14615,11 +14687,11 @@
         },
         "4/declaration/body/1/argument/5": {
           "type": "element",
-          "hash": "c345a5ea391526f8436ffaebfac14f09",
+          "hash": "aaef893cad5786be23663109f000d078",
           "context": "",
           "skip": false,
           "overrides": {},
-          "content": "J"
+          "content": "Ctrl + J"
         }
       }
     },
@@ -18757,7 +18829,23 @@
           "overrides": {},
           "content": "Loading documents..."
         },
+        "10/declaration/body/4/consequent/argument": {
+          "type": "element",
+          "hash": "4a114eaec6549479c2f80880c53eed6e",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Documents will be available in 24 hours. You will be notified via email."
+        },
         "10/declaration/body/5/consequent/0/argument/1/1": {
+          "type": "element",
+          "hash": "b795b22e2d0abd430c2ff0b28fb26e5a",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Loading documents..."
+        },
+        "10/declaration/body/6/consequent/0/argument/1/1": {
           "type": "element",
           "hash": "1f3bb71b519b18f32ba0f1a5a360afb0",
           "context": "",
@@ -18791,11 +18879,11 @@
         },
         "10/declaration/body/8/argument/1/openingElement/1/value/expression": {
           "type": "element",
-          "hash": "9f4a2b3bc99052f6ce1587dfcae08fc6",
+          "hash": "3ba81e87ae8016eea5860e247c708dd9",
           "context": "",
           "skip": false,
           "overrides": {},
-          "content": "Completed by us"
+          "content": "Ready documentation"
         },
         "10/declaration/body/8/argument/1/openingElement/2/value/expression": {
           "type": "element",
@@ -18830,6 +18918,46 @@
           "content": "Other attachments"
         },
         "10/declaration/body/8/argument/5/openingElement/1/value/expression": {
+          "type": "element",
+          "hash": "f187e342b6ff30e7d4d96d9395dea305",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Other attachments"
+        },
+        "10/declaration/body/8/consequent/0/argument/1": {
+          "type": "element",
+          "hash": "2199cc5f0c63d0fd443f80ecc41d3550",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "No documents to display. You can proceed to the next step."
+        },
+        "10/declaration/body/8/consequent/0/argument/3/1": {
+          "type": "element",
+          "hash": "0aae5563123e8e15391ddd9126389668",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "No documents found for this tender."
+        },
+        "10/declaration/body/9/argument/1/openingElement/1/value/expression": {
+          "type": "element",
+          "hash": "3ba81e87ae8016eea5860e247c708dd9",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Ready documentation"
+        },
+        "10/declaration/body/9/argument/3/openingElement/1/value/expression": {
+          "type": "element",
+          "hash": "030e160bf50c084716488dc452429db2",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Requires manual fill"
+        },
+        "10/declaration/body/9/argument/5/openingElement/1/value/expression": {
           "type": "element",
           "hash": "f187e342b6ff30e7d4d96d9395dea305",
           "context": "",
@@ -20610,6 +20738,54 @@
           "content": "Download"
         },
         "8/declaration/body/3/argument/3/1/expression/0/body/1/1/3/openingElement/2/value/expression/body/0/body/0": {
+          "type": "element",
+          "hash": "8358440b9ceec5d75689e0c43dfce034",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Downloading {file.comment}..."
+        },
+        "9/declaration/body/3/argument/1/3/1/1/expression/right/3": {
+          "type": "element",
+          "hash": "385e77c5c419ee4328a4b98098a5fd49",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Download all"
+        },
+        "9/declaration/body/3/argument/1/3/1/1/expression/right/5": {
+          "type": "element",
+          "hash": "5e2e93f8e2a5f315b6fecdd0a0e6f55f",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "All"
+        },
+        "9/declaration/body/3/argument/1/3/1/1/expression/right/openingElement/3/value/expression/body/0/body/0": {
+          "type": "element",
+          "hash": "d016ffaffbb15d928d07e716e4bfb5dc",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Downloading all files..."
+        },
+        "9/declaration/body/3/argument/1/3/1/3/expression/0/body/1/1/1/5/3/expression/right/3": {
+          "type": "element",
+          "hash": "7165e7561176bca854eb1fee9c1641d6",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Requires signature (<expression/>)"
+        },
+        "9/declaration/body/3/argument/1/3/1/3/expression/0/body/1/1/3/3": {
+          "type": "element",
+          "hash": "56b7d0834952b39ee394b44bd8179178",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Download"
+        },
+        "9/declaration/body/3/argument/1/3/1/3/expression/0/body/1/1/3/openingElement/2/value/expression/body/0/body/0": {
           "type": "element",
           "hash": "8358440b9ceec5d75689e0c43dfce034",
           "context": "",

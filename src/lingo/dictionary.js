@@ -2801,17 +2801,17 @@ export default {
         },
         "17/0/init/2/1/value": {
           content: {
-            en: "Data",
-            pl: "Dane",
-          },
-          hash: "b7b46ab6ce9606032c8f81f6f6afbb9b",
-        },
-        "17/0/init/3/1/value": {
-          content: {
             en: "Documentation",
             pl: "Dokumentacja",
           },
           hash: "1563fcb5ddb5037b0709ccd3dd384a92",
+        },
+        "17/0/init/3/1/value": {
+          content: {
+            en: "Decision",
+            pl: "Decyzja",
+          },
+          hash: "4757e269fee1aa76864469e762def497",
         },
         "17/0/init/4/1/value": {
           content: {
@@ -3508,17 +3508,17 @@ export default {
         },
         "18/0/init/2/1/value": {
           content: {
-            en: "Data",
-            pl: "Dane",
-          },
-          hash: "b7b46ab6ce9606032c8f81f6f6afbb9b",
-        },
-        "18/0/init/3/1/value": {
-          content: {
             en: "Documentation",
             pl: "Dokumentacja",
           },
           hash: "1563fcb5ddb5037b0709ccd3dd384a92",
+        },
+        "18/0/init/3/1/value": {
+          content: {
+            en: "Decision",
+            pl: "Decyzja",
+          },
+          hash: "4757e269fee1aa76864469e762def497",
         },
         "18/0/init/4/1/value": {
           content: {
@@ -4145,6 +4145,14 @@ export default {
             },
             hash: "dc3149e5f8913e58f4705f41b238d00c",
           },
+        "19/declaration/body/16/argument/1/1/expression/body/1/argument/3/1/5/1/5/1/3/1/expression/right":
+          {
+            content: {
+              en: "Continue",
+              pl: "Kontynuuj",
+            },
+            hash: "41b7a61422ab6a6c9b0a9bf39f940642",
+          },
         "19/declaration/body/16/argument/1/1/expression/body/1/argument/3/1/5/1/5/1/3/3/expression/right":
           {
             content: {
@@ -4184,6 +4192,14 @@ export default {
             },
             hash: "dc3149e5f8913e58f4705f41b238d00c",
           },
+        "19/declaration/body/17/argument/1/1/expression/body/1/argument/3/1/5/1/5/1/3/1/expression/right":
+          {
+            content: {
+              en: "Continue",
+              pl: "Kontynuuj",
+            },
+            hash: "41b7a61422ab6a6c9b0a9bf39f940642",
+          },
         "19/declaration/body/17/argument/1/1/expression/body/1/argument/3/1/5/1/5/1/3/3/expression/right":
           {
             content: {
@@ -4191,6 +4207,52 @@ export default {
               pl: "Resetuj",
             },
             hash: "a0428f777a098e07120f19324d4f7eee",
+          },
+        "19/declaration/body/18/argument/1/1/expression/body/1/argument/1/1": {
+          content: {
+            en: "<element:MoveLeft></element:MoveLeft> Return",
+            pl: "<element:MoveLeft></element:MoveLeft> Powrót",
+          },
+          hash: "1e2ea95a1cc35caf5407cb56609d471b",
+        },
+        "19/declaration/body/18/argument/1/1/expression/body/1/argument/3/1/5/1/5/1/1":
+          {
+            content: {
+              en: "Previous step",
+              pl: "Poprzedni krok",
+            },
+            hash: "dc3149e5f8913e58f4705f41b238d00c",
+          },
+        "19/declaration/body/18/argument/1/1/expression/body/1/argument/3/1/5/1/5/1/3/1/expression/right":
+          {
+            content: {
+              en: "Continue",
+              pl: "Kontynuuj",
+            },
+            hash: "41b7a61422ab6a6c9b0a9bf39f940642",
+          },
+        "19/declaration/body/19/argument/1/1/expression/body/1/argument/1/1": {
+          content: {
+            en: "<element:MoveLeft></element:MoveLeft> Return",
+            pl: "<element:MoveLeft></element:MoveLeft> Powrót",
+          },
+          hash: "1e2ea95a1cc35caf5407cb56609d471b",
+        },
+        "19/declaration/body/19/argument/1/1/expression/body/1/argument/3/1/5/1/5/1/1":
+          {
+            content: {
+              en: "Previous step",
+              pl: "Poprzedni krok",
+            },
+            hash: "dc3149e5f8913e58f4705f41b238d00c",
+          },
+        "19/declaration/body/19/argument/1/1/expression/body/1/argument/3/1/5/1/5/1/3/1/expression/right":
+          {
+            content: {
+              en: "Continue",
+              pl: "Kontynuuj",
+            },
+            hash: "41b7a61422ab6a6c9b0a9bf39f940642",
           },
         "19/declaration/body/9/0/init/body/0/0/0/alternate/alternate/0/argument":
           {
@@ -4339,6 +4401,14 @@ export default {
             },
             hash: "dc3149e5f8913e58f4705f41b238d00c",
           },
+        "20/declaration/body/17/argument/1/1/expression/body/1/argument/3/1/5/1/5/1/3/1/expression/right":
+          {
+            content: {
+              en: "Continue",
+              pl: "Kontynuuj",
+            },
+            hash: "41b7a61422ab6a6c9b0a9bf39f940642",
+          },
         "20/declaration/body/17/argument/1/1/expression/body/1/argument/3/1/5/1/5/1/3/3/expression/right":
           {
             content: {
@@ -4346,6 +4416,21 @@ export default {
               pl: "Resetuj",
             },
             hash: "a0428f777a098e07120f19324d4f7eee",
+          },
+        "20/declaration/body/18/argument/1/1/expression/body/1/argument/1/1": {
+          content: {
+            en: "<element:MoveLeft></element:MoveLeft> Return",
+            pl: "<element:MoveLeft></element:MoveLeft> Powrót",
+          },
+          hash: "1e2ea95a1cc35caf5407cb56609d471b",
+        },
+        "20/declaration/body/18/argument/1/1/expression/body/1/argument/3/1/5/1/5/1/1":
+          {
+            content: {
+              en: "Previous step",
+              pl: "Poprzedni krok",
+            },
+            hash: "dc3149e5f8913e58f4705f41b238d00c",
           },
         "20/declaration/body/9/0/init/body/0/0/0/alternate/alternate/0/argument":
           {
@@ -7884,6 +7969,41 @@ export default {
           },
           hash: "d7ef7b855850a7d1dc6956e1197c33bb",
         },
+        "7/declaration/body/0/0/init/0/0/value": {
+          content: {
+            en: "Met Requirements",
+            pl: "Spełnione wymagania",
+          },
+          hash: "f5251ea9ac1d7825fd0b543fb0e0b4f5",
+        },
+        "7/declaration/body/0/0/init/1/0/value": {
+          content: {
+            en: "Needs Confirmation",
+            pl: "Wymaga potwierdzenia",
+          },
+          hash: "a7d90ec8d0e7143313dfbfd6368cf79c",
+        },
+        "7/declaration/body/0/0/init/2/0/value": {
+          content: {
+            en: "Not Met Requirements",
+            pl: "Niespełnione wymagania",
+          },
+          hash: "c358cf9796d545d7b72954dc6ddd6dc2",
+        },
+        "7/declaration/body/4/argument/1": {
+          content: {
+            en: "Requirements",
+            pl: "Wymagania",
+          },
+          hash: "e108e149e0fd5b65f5850b6f032ccabe",
+        },
+        "7/declaration/body/4/argument/3/1/1/expression/0/body/1/1/3": {
+          content: {
+            en: "({section.items.length})",
+            pl: "({section.items.length})",
+          },
+          hash: "d7ef7b855850a7d1dc6956e1197c33bb",
+        },
       },
     },
     "features/inbox/components/review-criteria-section.tsx": {
@@ -9006,9 +9126,10 @@ export default {
         },
         "15/body/6/argument/1/expression/consequent/5/expression/right/3": {
           content: {
-            en: "Apply to full tender",
+            en: "Unselect all",
+            pl: "Odznacz wszystko",
           },
-          hash: "f35462f1697a83a3e6b582cb71b021ba",
+          hash: "22e14fc7b433ffa07e6702e4ebf13cdc",
         },
         "15/body/6/argument/1/expression/consequent/5/expression/right/5": {
           content: {
@@ -13055,10 +13176,10 @@ export default {
         },
         "4/declaration/body/1/argument/5": {
           content: {
-            en: "J",
-            pl: "J",
+            en: "Ctrl + J",
+            pl: "Ctrl + J",
           },
-          hash: "c345a5ea391526f8436ffaebfac14f09",
+          hash: "aaef893cad5786be23663109f000d078",
         },
       },
     },
@@ -16752,7 +16873,21 @@ export default {
           },
           hash: "b795b22e2d0abd430c2ff0b28fb26e5a",
         },
+        "10/declaration/body/4/consequent/argument": {
+          content: {
+            en: "Documents will be available in 24 hours. You will be notified via email.",
+            pl: "Dokumenty będą dostępne w ciągu 24 godzin. Zostaniesz powiadomiony/a e-mailem.",
+          },
+          hash: "4a114eaec6549479c2f80880c53eed6e",
+        },
         "10/declaration/body/5/consequent/0/argument/1/1": {
+          content: {
+            en: "Loading documents...",
+            pl: "Ładowanie dokumentów...",
+          },
+          hash: "b795b22e2d0abd430c2ff0b28fb26e5a",
+        },
+        "10/declaration/body/6/consequent/0/argument/1/1": {
           content: {
             en: "Failed to load documents. Please try again.",
             pl: "Nie udało się załadować dokumentów. Proszę spróbować ponownie.",
@@ -16780,6 +16915,20 @@ export default {
           },
           hash: "9f4a2b3bc99052f6ce1587dfcae08fc6",
         },
+        "10/declaration/body/8/argument/1/openingElement/1/value/expression": {
+          content: {
+            en: "Ready documentation",
+            pl: "Gotowa dokumentacja",
+          },
+          hash: "3ba81e87ae8016eea5860e247c708dd9",
+        },
+        "10/declaration/body/8/argument/1/openingElement/2/value/expression": {
+          content: {
+            en: "Completed by us",
+            pl: "Wypełnione przez nas",
+          },
+          hash: "9f4a2b3bc99052f6ce1587dfcae08fc6",
+        },
         "10/declaration/body/8/argument/3/openingElement/0/value/expression": {
           content: {
             en: "Requires manual fill",
@@ -16787,7 +16936,56 @@ export default {
           },
           hash: "030e160bf50c084716488dc452429db2",
         },
+        "10/declaration/body/8/argument/3/openingElement/1/value/expression": {
+          content: {
+            en: "Requires manual fill",
+            pl: "Wymaga ręcznego wypełnienia",
+          },
+          hash: "030e160bf50c084716488dc452429db2",
+        },
         "10/declaration/body/8/argument/5/openingElement/0/value/expression": {
+          content: {
+            en: "Other attachments",
+            pl: "Inne załączniki",
+          },
+          hash: "f187e342b6ff30e7d4d96d9395dea305",
+        },
+        "10/declaration/body/8/argument/5/openingElement/1/value/expression": {
+          content: {
+            en: "Other attachments",
+            pl: "Inne załączniki",
+          },
+          hash: "f187e342b6ff30e7d4d96d9395dea305",
+        },
+        "10/declaration/body/8/consequent/0/argument/1": {
+          content: {
+            en: "No documents to display. You can proceed to the next step.",
+            pl: "Brak dokumentów do wyświetlenia. Możesz przejść do następnego kroku.",
+          },
+          hash: "2199cc5f0c63d0fd443f80ecc41d3550",
+        },
+        "10/declaration/body/8/consequent/0/argument/3/1": {
+          content: {
+            en: "No documents found for this tender.",
+            pl: "Nie znaleziono dokumentów dla tego przetargu.",
+          },
+          hash: "0aae5563123e8e15391ddd9126389668",
+        },
+        "10/declaration/body/9/argument/1/openingElement/1/value/expression": {
+          content: {
+            en: "Ready documentation",
+            pl: "Gotowa dokumentacja",
+          },
+          hash: "3ba81e87ae8016eea5860e247c708dd9",
+        },
+        "10/declaration/body/9/argument/3/openingElement/1/value/expression": {
+          content: {
+            en: "Requires manual fill",
+            pl: "Wymaga ręcznego wypełnienia",
+          },
+          hash: "030e160bf50c084716488dc452429db2",
+        },
+        "10/declaration/body/9/argument/5/openingElement/1/value/expression": {
           content: {
             en: "Other attachments",
             pl: "Inne załączniki",
@@ -18390,6 +18588,51 @@ export default {
           hash: "56b7d0834952b39ee394b44bd8179178",
         },
         "8/declaration/body/3/argument/3/1/expression/0/body/1/1/3/openingElement/2/value/expression/body/0/body/0":
+          {
+            content: {
+              en: "Downloading {file.comment}...",
+              pl: "Pobieranie {file.comment}...",
+            },
+            hash: "8358440b9ceec5d75689e0c43dfce034",
+          },
+        "9/declaration/body/3/argument/1/3/1/1/expression/right/3": {
+          content: {
+            en: "Download all",
+            pl: "Pobierz wszystko",
+          },
+          hash: "385e77c5c419ee4328a4b98098a5fd49",
+        },
+        "9/declaration/body/3/argument/1/3/1/1/expression/right/5": {
+          content: {
+            en: "All",
+            pl: "Wszystko",
+          },
+          hash: "5e2e93f8e2a5f315b6fecdd0a0e6f55f",
+        },
+        "9/declaration/body/3/argument/1/3/1/1/expression/right/openingElement/3/value/expression/body/0/body/0":
+          {
+            content: {
+              en: "Downloading all files...",
+              pl: "Pobieranie wszystkich plików...",
+            },
+            hash: "d016ffaffbb15d928d07e716e4bfb5dc",
+          },
+        "9/declaration/body/3/argument/1/3/1/3/expression/0/body/1/1/1/5/3/expression/right/3":
+          {
+            content: {
+              en: "Requires signature (<expression/>)",
+              pl: "Wymaga podpisu (<expression/>)",
+            },
+            hash: "7165e7561176bca854eb1fee9c1641d6",
+          },
+        "9/declaration/body/3/argument/1/3/1/3/expression/0/body/1/1/3/3": {
+          content: {
+            en: "Download",
+            pl: "Pobierz",
+          },
+          hash: "56b7d0834952b39ee394b44bd8179178",
+        },
+        "9/declaration/body/3/argument/1/3/1/3/expression/0/body/1/1/3/openingElement/2/value/expression/body/0/body/0":
           {
             content: {
               en: "Downloading {file.comment}...",

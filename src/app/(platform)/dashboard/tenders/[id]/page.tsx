@@ -8,13 +8,11 @@ import { useState, useEffect, useMemo, useRef, RefObject } from "react";
 import { defineStepper } from "$/components/stepper";
 import {
   ConfirmationsStep,
-  DataStep,
   DocumentationStep,
   DecisionStep,
   PartsSidebar,
   OverviewStep,
 } from "$/features/tender-form/components";
-import { hasPartsToAnalyze } from "$/features/tenders/utils/confirmation";
 import { getOverviewParts } from "$/features/tenders/utils/parts";
 import { Button } from "@heroui/react";
 import React from "react";
@@ -40,10 +38,6 @@ const { Stepper, useStepper, utils } = defineStepper(
     title: <span>Confirmations</span>,
   },
   {
-    id: "data",
-    title: <span>Data</span>,
-  },
-  {
     id: "documentation",
     title: <span>Documentation</span>,
   },
@@ -57,7 +51,6 @@ function StepperContent({
   mapping,
   selectedPart,
   setNextEnabled,
-  nextHandlerRef,
   confirmedParts,
 }: {
   mapping?: InboxTenderMapping | null;
@@ -66,7 +59,7 @@ function StepperContent({
   nextHandlerRef: RefObject<(() => Promise<void>) | null>;
   confirmedParts: Set<string>;
 }) {
-  const { current, next } = useStepper();
+  const { current } = useStepper();
 
   const renderStepContent = () => {
     switch (current.id) {
@@ -86,15 +79,6 @@ function StepperContent({
             isConfirmed={
               selectedPart ? confirmedParts.has(selectedPart.id) : false
             }
-          />
-        );
-      case "data":
-        return (
-          <DataStep
-            item={mapping}
-            onNext={next}
-            setNextEnabled={setNextEnabled}
-            onNextHandler={nextHandlerRef}
           />
         );
       case "documentation":
@@ -135,12 +119,9 @@ export default function TenderPage() {
     selectedPart,
     confirmedParts,
     isProcessingConfirmation,
-    areAllPartsConfirmed,
-    areAllPartsExceptCurrentConfirmed,
     handlePartSelect,
     handleConfirmationsBeforeNext,
     confirmationsNextEnabled,
-    initialConfirmationsNextEnabled,
   } = usePartsManagement(mapping ?? null);
 
   const mapStepToStatus = (stepId: string): string | null => {
@@ -162,14 +143,14 @@ export default function TenderPage() {
 
   const mapStatusToStep = (
     status: string | null | undefined
-  ): "overview" | "confirmations" | "data" | "documentation" | "decision" => {
+  ): "overview" | "confirmations" | "documentation" | "decision" => {
     switch (status) {
       case "analysis":
-        return "overview";
+        return "confirmations";
       case "questions":
         return "confirmations";
       case "questions_in_review_mimira":
-        return "data";
+        return "confirmations";
       case "documents_preparing":
       case "documents_ready":
       case "documents_reviewed":
@@ -183,38 +164,21 @@ export default function TenderPage() {
     }
   };
 
-  const getStepButtonText = (stepId: string) => {
-    switch (stepId) {
-      case "confirmations":
-        if (areAllPartsConfirmed()) {
-          return <>Save and continue</>;
-        } else if (areAllPartsExceptCurrentConfirmed()) {
-          return <>Save and continue</>;
-        } else {
-          return <>Next part</>;
-        }
-      case "data":
-        return <>Save answers and continue</>;
-      case "documentation":
-        return <>Upload documents and continue</>;
-      case "decision":
-        return <>Submit decision</>;
-      default:
-        return <>Next step</>;
-    }
-  };
-
   useEffect(() => {
+    if (!mapping?.id) return;
+
     if (stepperMethodsRef.current) {
       const currentStepId = stepperMethodsRef.current.current.id;
       if (currentStepId === "confirmations") {
         setNextEnabled(confirmationsNextEnabled);
+      } else if (currentStepId === "documentation") {
+        setNextEnabled(mapping?.docs_ready ?? false);
       } else {
         setNextEnabled(true);
       }
     }
     nextHandlerRef.current = null;
-  }, [confirmationsNextEnabled]);
+  }, [confirmationsNextEnabled, mapping?.id, mapping?.docs_ready]);
 
   const stepperMethodsRef = useRef<ReturnType<typeof useStepper> | null>(null);
 
@@ -222,22 +186,9 @@ export default function TenderPage() {
     if (isLoading || !mapping) return null;
 
     const status = mapping.status ?? "analysis";
-    if (status === "analysis" || status === "questions") {
-      const needsAnalysis = hasPartsToAnalyze(mapping);
-
-      return needsAnalysis ? "confirmations" : "data";
-    }
 
     return mapStatusToStep(status);
   }, [isLoading, mapping]);
-
-  useEffect(() => {
-    if (mapping && initialStep === "confirmations") {
-      setNextEnabled(initialConfirmationsNextEnabled);
-    } else {
-      setNextEnabled(true);
-    }
-  }, [mapping, initialStep, initialConfirmationsNextEnabled]);
 
   useEffect(() => {
     if (mapping) {
@@ -265,11 +216,18 @@ export default function TenderPage() {
                   <MoveLeft className="stroke-1" /> Return
                 </Link>
                 <Stepper.Navigation className="px-4">
-                  {methods.all.map((step) => (
+                  {methods.all.map((step, index) => (
                     <Stepper.Step
                       key={step.id}
                       of={step.id}
                       className="cursor-default"
+                      onClick={
+                        index < utils.getIndex(methods.current.id)
+                          ? () => {
+                              methods.goTo(step.id);
+                            }
+                          : undefined
+                      }
                     >
                       <Stepper.Title className="text-sm font-medium">
                         {step.title}
@@ -314,8 +272,8 @@ export default function TenderPage() {
                         </div>
                       </div>
 
-                      <div className="flex-[1_0_0] overflow-y-auto bg-background">
-                        <div className="p-4 bg-sidebar">
+                      <div className="flex-[1_0_0] overflow-y-auto bg-sidebar">
+                        <div className="p-4">
                           <StepperContent
                             mapping={mapping}
                             selectedPart={selectedPart}
@@ -354,6 +312,7 @@ export default function TenderPage() {
                           <div className="flex gap-2">
                             {!methods.isLast && (
                               <Button
+                                key={nextEnabled.toString()}
                                 color="primary"
                                 onPress={() => {
                                   methods.beforeNext(async () => {
@@ -388,9 +347,7 @@ export default function TenderPage() {
                                   !nextEnabled || isProcessingConfirmation
                                 }
                               >
-                                {isProcessingConfirmation
-                                  ? "Processing..."
-                                  : getStepButtonText(methods.current.id)}
+                                Continue
                               </Button>
                             )}
                           </div>

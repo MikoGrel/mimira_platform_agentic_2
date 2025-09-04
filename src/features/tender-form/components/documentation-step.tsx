@@ -64,6 +64,13 @@ export function DocumentationStep({
     }
   }, [files]);
 
+  if (!item?.docs_ready)
+    return (
+      <Alert color="primary">
+        Documents will be available in 24 hours. You will be notified via email.
+      </Alert>
+    );
+
   if (isLoading) {
     return (
       <div className="text-center py-6 text-gray-500">
@@ -100,12 +107,13 @@ export function DocumentationStep({
   }
 
   return (
-    <div className="space-y-4">
+    <div className="space-y-2">
       <FileGroup
         zipName={"completed_" + item?.tenders.order_object?.slice(0, 80)}
-        label={<>Completed by us</>}
+        label={<>Ready documentation</>}
         files={groupedFiles.refilled}
         showDownloadAll
+        defaultOpen
       />
       <FileGroup
         zipName={
@@ -114,6 +122,7 @@ export function DocumentationStep({
         label={<>Requires manual fill</>}
         files={groupedFiles.optional}
         showDownloadAll
+        defaultOpen
       />
       <FileGroup
         zipName={

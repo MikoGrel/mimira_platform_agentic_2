@@ -216,6 +216,7 @@ export type Database = {
           can_participate: boolean | null
           company_id: string | null
           created_at: string
+          docs_ready: boolean
           id: string
           seen_at: string | null
           status: string | null
@@ -226,6 +227,7 @@ export type Database = {
           can_participate?: boolean | null
           company_id?: string | null
           created_at?: string
+          docs_ready?: boolean
           id?: string
           seen_at?: string | null
           status?: string | null
@@ -236,6 +238,7 @@ export type Database = {
           can_participate?: boolean | null
           company_id?: string | null
           created_at?: string
+          docs_ready?: boolean
           id?: string
           seen_at?: string | null
           status?: string | null
@@ -355,6 +358,7 @@ export type Database = {
       profiles: {
         Row: {
           company_id: string | null
+          email: string | null
           first_name: string | null
           id: string
           last_name: string | null
@@ -362,6 +366,7 @@ export type Database = {
         }
         Insert: {
           company_id?: string | null
+          email?: string | null
           first_name?: string | null
           id: string
           last_name?: string | null
@@ -369,6 +374,7 @@ export type Database = {
         }
         Update: {
           company_id?: string | null
+          email?: string | null
           first_name?: string | null
           id?: string
           last_name?: string | null
