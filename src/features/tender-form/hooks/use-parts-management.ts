@@ -12,17 +12,12 @@ import {
 type UsePartsManagementResult = {
   selectedPart: InboxTenderPart | null;
   setSelectedPart: (part: InboxTenderPart | null) => void;
-  partsNeedingConfirmation: InboxTenderPart[];
   confirmedParts: Set<string>;
   isProcessingConfirmation: boolean;
-  handleConfirmCurrentPart: () => Promise<void>;
-  areAllPartsConfirmed: () => boolean;
-  areAllPartsExceptCurrentConfirmed: () => boolean;
-  getNextPartToConfirm: () => InboxTenderPart | undefined;
   handlePartSelect: (partId: string) => void;
-  handleConfirmationsBeforeNext: () => Promise<boolean>;
-  confirmationsNextEnabled: boolean;
-  initialConfirmationsNextEnabled: boolean;
+  handleContinue: () => Promise<boolean>;
+  partsNeedingConfirmation: InboxTenderPart[];
+  allSelectableParts: InboxTenderPart[];
 };
 
 export function usePartsManagement(
@@ -31,148 +26,149 @@ export function usePartsManagement(
   const [selectedPart, setSelectedPart] = useState<InboxTenderPart | null>(
     null
   );
-  const [partsNeedingConfirmation, setPartsNeedingConfirmation] = useState<
-    InboxTenderPart[]
-  >([]);
-  const [confirmedParts, setConfirmedParts] = useState<Set<string>>(new Set());
+  const [sessionConfirmedParts, setSessionConfirmedParts] = useState<
+    Set<string>
+  >(new Set());
   const [isProcessingConfirmation, setIsProcessingConfirmation] =
     useState(false);
 
   const updateRequirementState = useUpdateRequirementState();
   const updatePartStatus = useUpdatePartStatus();
 
-  // Establish parts that need confirmation and initial selected part
-  useEffect(() => {
-    if (!mapping?.tender_parts) return;
+  const confirmedParts = useMemo(() => {
+    const dbConfirmed = new Set(
+      mapping?.tender_parts
+        ?.filter((part) => part.status === "approve")
+        ?.map((part) => part.id) || []
+    );
+    return new Set([...dbConfirmed, ...sessionConfirmedParts]);
+  }, [mapping, sessionConfirmedParts]);
 
-    const analysisParts = mapping.tender_parts.filter(
+  const partsNeedingConfirmation = useMemo(() => {
+    if (!mapping?.tender_parts) return [];
+
+    return mapping.tender_parts
+      .filter((part) => !["default", "reject"].includes(part.status))
+      .filter((part) => {
+        if (confirmedParts.has(part.id)) return false;
+
+        return (
+          part.tender_requirements?.some((req) => req.status === "default") ||
+          false
+        );
+      });
+  }, [mapping, confirmedParts]);
+
+  const allSelectableParts = useMemo(() => {
+    if (!mapping?.tender_parts) return [];
+    return mapping.tender_parts.filter(
       (part) => !["default", "reject"].includes(part.status)
     );
+  }, [mapping]);
 
-    const needing = analysisParts.filter((part) =>
-      part.tender_requirements.some((req) => req.status === "default")
-    );
-    setPartsNeedingConfirmation(needing);
-
-    if (!selectedPart) {
-      setSelectedPart(needing[0] || analysisParts[0]);
+  useEffect(() => {
+    if (!selectedPart && allSelectableParts.length > 0) {
+      setSelectedPart(allSelectableParts[0]);
     }
-  }, [mapping, selectedPart]);
+  }, [selectedPart, allSelectableParts]);
 
-  const handleConfirmCurrentPart = useCallback(async (): Promise<void> => {
+  const saveCurrentPart = useCallback(async (): Promise<void> => {
     if (!selectedPart) return;
 
     setIsProcessingConfirmation(true);
     try {
       const requirements = selectedPart.tender_requirements || [];
       const defaultRequirements = requirements.filter(
-        (req) => req.status === "default"
+        (req) => req?.status === "default"
       );
 
       if (defaultRequirements.length === 0) return;
 
-      const requirementPromises = defaultRequirements.map((req) =>
-        updateRequirementState.mutateAsync({ id: req.id, status: "approve" })
-      );
+      await updateRequirementState.mutateAsync({
+        id: defaultRequirements.map((req) => req.id),
+        status: "approve",
+      });
 
-      const partPromise = updatePartStatus.mutateAsync({
+      await updatePartStatus.mutateAsync({
         id: selectedPart.id,
         status: "approve",
       });
 
-      await Promise.all([...requirementPromises, partPromise]);
-      setConfirmedParts((prev) => new Set(prev).add(selectedPart.id));
+      setSessionConfirmedParts((prev) => new Set(prev).add(selectedPart.id));
+    } catch (error) {
+      console.error("Failed to save part:", error);
+      throw error;
     } finally {
       setIsProcessingConfirmation(false);
     }
   }, [selectedPart, updateRequirementState, updatePartStatus]);
 
-  const areAllPartsConfirmed = useCallback((): boolean => {
-    return partsNeedingConfirmation.every((part) =>
-      confirmedParts.has(part.id)
-    );
-  }, [partsNeedingConfirmation, confirmedParts]);
+  const handleContinue = useCallback(async (): Promise<boolean> => {
+    if (isProcessingConfirmation) return false;
 
-  const areAllPartsExceptCurrentConfirmed = useCallback((): boolean => {
-    if (!selectedPart) return false;
-    return partsNeedingConfirmation
-      .filter((part) => part.id !== selectedPart.id)
-      .every((part) => confirmedParts.has(part.id));
-  }, [selectedPart, confirmedParts, partsNeedingConfirmation]);
+    if (partsNeedingConfirmation.length === 0) {
+      return true;
+    }
 
-  const getNextPartToConfirm = useCallback(() => {
-    return partsNeedingConfirmation.find(
-      (part) => !confirmedParts.has(part.id)
-    );
-  }, [partsNeedingConfirmation, confirmedParts]);
+    if (selectedPart && !confirmedParts.has(selectedPart.id)) {
+      try {
+        await saveCurrentPart();
+      } catch (error) {
+        console.error("Save failed, staying on current part:", error);
+        return false;
+      }
+    }
+
+    const freshConfirmedParts = new Set([
+      ...confirmedParts,
+      ...(selectedPart ? [selectedPart.id] : []),
+    ]);
+
+    const stillNeedingConfirmation =
+      mapping?.tender_parts
+        ?.filter((part) => !["default", "reject"].includes(part.status))
+        ?.filter((part) => {
+          if (freshConfirmedParts.has(part.id)) return false;
+          return part.tender_requirements?.some(
+            (req) => req.status === "default"
+          );
+        }) || [];
+
+    if (stillNeedingConfirmation.length > 0) {
+      setSelectedPart(stillNeedingConfirmation[0]);
+      return false;
+    }
+
+    return true;
+  }, [
+    selectedPart,
+    confirmedParts,
+    partsNeedingConfirmation,
+    saveCurrentPart,
+    isProcessingConfirmation,
+    mapping,
+  ]);
 
   const handlePartSelect = useCallback(
     (partId: string) => {
       if (!mapping) return;
       const overviewParts = getOverviewParts(mapping);
       const part = overviewParts.find((p) => p.id === partId);
-      if (!part) return;
-      setSelectedPart(part);
+      if (part) {
+        setSelectedPart(part);
+      }
     },
     [mapping]
   );
 
-  return useMemo(
-    () => ({
-      selectedPart,
-      setSelectedPart,
-      partsNeedingConfirmation,
-      confirmedParts,
-      isProcessingConfirmation,
-      handleConfirmCurrentPart,
-      areAllPartsConfirmed,
-      areAllPartsExceptCurrentConfirmed,
-      getNextPartToConfirm,
-      handlePartSelect,
-      handleConfirmationsBeforeNext: async () => {
-        if (selectedPart && !confirmedParts.has(selectedPart.id)) {
-          await handleConfirmCurrentPart();
-        }
-
-        if (areAllPartsConfirmed() || areAllPartsExceptCurrentConfirmed()) {
-          return true;
-        }
-
-        const nextPart = getNextPartToConfirm();
-        if (nextPart) {
-          setSelectedPart(nextPart);
-        }
-        return false;
-      },
-      confirmationsNextEnabled: (() => {
-        const currentPartNeedsConfirmation =
-          !!selectedPart &&
-          partsNeedingConfirmation.some((p) => p.id === selectedPart.id);
-        const isCurrentPartConfirmed =
-          !!selectedPart && confirmedParts.has(selectedPart.id);
-        return Boolean(
-          !currentPartNeedsConfirmation ||
-            isCurrentPartConfirmed ||
-            areAllPartsExceptCurrentConfirmed()
-        );
-      })(),
-      initialConfirmationsNextEnabled: (() => {
-        const firstPartNeedsConfirmation =
-          partsNeedingConfirmation.length > 0 &&
-          !confirmedParts.has(partsNeedingConfirmation[0].id);
-        return !firstPartNeedsConfirmation;
-      })(),
-    }),
-    [
-      selectedPart,
-      partsNeedingConfirmation,
-      confirmedParts,
-      isProcessingConfirmation,
-      handleConfirmCurrentPart,
-      areAllPartsConfirmed,
-      areAllPartsExceptCurrentConfirmed,
-      getNextPartToConfirm,
-      handlePartSelect,
-    ]
-  );
+  return {
+    selectedPart,
+    setSelectedPart,
+    confirmedParts,
+    isProcessingConfirmation,
+    handlePartSelect,
+    handleContinue,
+    partsNeedingConfirmation,
+    allSelectableParts,
+  };
 }

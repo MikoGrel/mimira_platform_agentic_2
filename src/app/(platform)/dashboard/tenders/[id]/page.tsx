@@ -4,7 +4,7 @@ import { useIndividualTender } from "$/features/tenders";
 import { CalendarClock, House, MoveLeft } from "lucide-react";
 import Link from "$/components/ui/link";
 import { useParams } from "next/navigation";
-import { useState, useEffect, useMemo, useRef, RefObject } from "react";
+import { useState, useEffect, useMemo, useRef } from "react";
 import { defineStepper } from "$/components/stepper";
 import {
   ConfirmationsStep,
@@ -27,6 +27,7 @@ import {
   ResizableHandle,
 } from "$/components/ui/resizable";
 import { useLastTender } from "$/features/tenders/hooks/use-last-tender";
+import { toast } from "sonner";
 
 const { Stepper, useStepper, utils } = defineStepper(
   {
@@ -56,7 +57,6 @@ function StepperContent({
   mapping?: InboxTenderMapping | null;
   selectedPart?: InboxTenderPart | null;
   setNextEnabled: (enabled: boolean) => void;
-  nextHandlerRef: RefObject<(() => Promise<void>) | null>;
   confirmedParts: Set<string>;
 }) {
   const { current } = useStepper();
@@ -103,25 +103,25 @@ export default function TenderPage() {
   const params = useParams();
   const { relativeToNow } = useDateFormat();
 
+  const stepperMethodsRef = useRef<ReturnType<typeof useStepper> | null>(null);
   const [nextEnabled, setNextEnabled] = useState(true);
   const nextHandlerRef = useRef<(() => Promise<void>) | null>(null);
 
   const { data: mapping, isLoading } = useIndividualTender({
     mappingId: params.id as string,
-    enabled: true,
     skipCache: true,
   });
 
   const { setLastMappingId } = useLastTender();
 
   const updateTenderStatus = useUpdateTenderStatus();
+
   const {
     selectedPart,
     confirmedParts,
     isProcessingConfirmation,
     handlePartSelect,
-    handleConfirmationsBeforeNext,
-    confirmationsNextEnabled,
+    handleContinue,
   } = usePartsManagement(mapping ?? null);
 
   const mapStepToStatus = (stepId: string): string | null => {
@@ -129,8 +129,6 @@ export default function TenderPage() {
       case "overview":
         return "analysis";
       case "confirmations":
-        return "questions";
-      case "data":
         return "questions";
       case "documentation":
         return "documents_preparing";
@@ -146,7 +144,7 @@ export default function TenderPage() {
   ): "overview" | "confirmations" | "documentation" | "decision" => {
     switch (status) {
       case "analysis":
-        return "confirmations";
+        return "overview"; // Fix: analysis status should map back to overview
       case "questions":
         return "confirmations";
       case "questions_in_review_mimira":
@@ -170,7 +168,8 @@ export default function TenderPage() {
     if (stepperMethodsRef.current) {
       const currentStepId = stepperMethodsRef.current.current.id;
       if (currentStepId === "confirmations") {
-        setNextEnabled(confirmationsNextEnabled);
+        // nextEnabled will be set by ConfirmationsStep via setNextEnabled
+        // No need to override it here - let ConfirmationsStep manage it
       } else if (currentStepId === "documentation") {
         setNextEnabled(mapping?.docs_ready ?? false);
       } else {
@@ -178,9 +177,7 @@ export default function TenderPage() {
       }
     }
     nextHandlerRef.current = null;
-  }, [confirmationsNextEnabled, mapping?.id, mapping?.docs_ready]);
-
-  const stepperMethodsRef = useRef<ReturnType<typeof useStepper> | null>(null);
+  }, [mapping?.id, mapping?.docs_ready]);
 
   const initialStep = useMemo(() => {
     if (isLoading || !mapping) return null;
@@ -278,7 +275,6 @@ export default function TenderPage() {
                             mapping={mapping}
                             selectedPart={selectedPart}
                             setNextEnabled={setNextEnabled}
-                            nextHandlerRef={nextHandlerRef}
                             confirmedParts={confirmedParts}
                           />
                         </div>
@@ -290,17 +286,25 @@ export default function TenderPage() {
                             variant="bordered"
                             onPress={() => {
                               methods.beforePrev(() => {
-                                const status = mapStepToStatus(
-                                  utils.getPrev(methods.current.id).id
-                                );
-                                if (mapping && status) {
-                                  updateTenderStatus.mutate({
-                                    mappingId: mapping.id,
-                                    status,
-                                  });
+                                try {
+                                  const prevStepId = utils.getPrev(
+                                    methods.current.id
+                                  ).id;
+                                  const status = mapStepToStatus(prevStepId);
+                                  if (mapping && status) {
+                                    updateTenderStatus.mutate({
+                                      mappingId: mapping.id,
+                                      status,
+                                    });
+                                  }
+                                  return true;
+                                } catch (error) {
+                                  console.error(
+                                    "Previous navigation failed:",
+                                    error
+                                  );
+                                  return false;
                                 }
-
-                                return true;
                               });
                               methods.prev();
                             }}
@@ -314,24 +318,30 @@ export default function TenderPage() {
                               <Button
                                 key={nextEnabled.toString()}
                                 color="primary"
-                                onPress={() => {
-                                  methods.beforeNext(async () => {
+                                onPress={async () => {
+                                  try {
+                                    // Handle confirmations step logic first
                                     if (
                                       methods.current.id === "confirmations"
                                     ) {
-                                      const ok =
-                                        await handleConfirmationsBeforeNext();
-                                      if (!ok) return false;
+                                      const shouldProceedToNextStep =
+                                        await handleContinue();
+
+                                      if (!shouldProceedToNextStep) {
+                                        return; // Don't proceed to next step
+                                      }
                                     }
+
+                                    // Execute any pending next handler
                                     if (nextHandlerRef.current) {
                                       await nextHandlerRef.current();
                                     }
-                                    return true;
-                                  });
-                                  methods.beforeNext(() => {
-                                    const status = mapStepToStatus(
-                                      utils.getNext(methods.current.id).id
-                                    );
+
+                                    // Update tender status only after successful navigation logic
+                                    const nextStepId = utils.getNext(
+                                      methods.current.id
+                                    ).id;
+                                    const status = mapStepToStatus(nextStepId);
                                     if (mapping && status) {
                                       updateTenderStatus.mutate({
                                         mappingId: mapping.id,
@@ -339,9 +349,13 @@ export default function TenderPage() {
                                       });
                                     }
 
-                                    return true;
-                                  });
-                                  methods.next();
+                                    // Only call next() if all checks pass
+                                    methods.next();
+                                  } catch (error) {
+                                    if (error instanceof Error)
+                                      toast.error(error.message);
+                                    console.error("Navigation failed:", error);
+                                  }
                                 }}
                                 isDisabled={
                                   !nextEnabled || isProcessingConfirmation

@@ -1,42 +1,31 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import { InboxTenderMapping } from "$/features/inbox/api/use-tender-inbox-query";
 import { InboxTenderPart } from "$/features/inbox/api/use-tender-inbox-query";
 import { RequirementConfirmation } from "./requirement-confirmation";
+import { Package } from "lucide-react";
 
 /**
  * Determines if the next button should be enabled based on confirmation state
  */
 const shouldEnableNextButton = (
-  item: InboxTenderMapping | InboxTenderPart | null | undefined,
+  item: InboxTenderPart | null | undefined,
   confirmedItems: Set<string>
 ): boolean => {
   if (!item) return true;
-
-  // Get requirements with status "default"
-  const requirements =
-    "tender_requirements" in item ? item.tender_requirements : [];
+  const requirements = item.tender_requirements || {};
   const defaultRequirements = requirements.filter(
     (req) => req.status === "default"
   );
-
-  // Split requirements into product and service requirements
   const productRequirementsData = defaultRequirements.filter(
     (req) => req.tender_product_id
   );
   const serviceRequirements = defaultRequirements.filter(
     (req) => !req.tender_product_id
   );
-
-  // Calculate total items that need confirmation (individual requirements)
   const totalItemsToConfirm =
     productRequirementsData.length + serviceRequirements.length;
-
-  // If no items to confirm, enable next button
   if (totalItemsToConfirm === 0) return true;
-
-  // All items must be confirmed
   return confirmedItems.size >= totalItemsToConfirm;
 };
 
@@ -81,6 +70,17 @@ export function ConfirmationsStep({
   const handleConfirmationChange = (newConfirmedItems: Set<string>) => {
     setConfirmedItems(newConfirmedItems);
   };
+
+  if (isConfirmed) {
+    return (
+      <div className="text-center py-6 text-primary">
+        <Package className="w-8 h-8 mx-auto mb-2 text-primary" />
+        <p className="text-sm">
+          All requirements were confirmed, go to the next step!
+        </p>
+      </div>
+    );
+  }
 
   return (
     <section className="h-full w-full">

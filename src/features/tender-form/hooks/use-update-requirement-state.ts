@@ -4,7 +4,7 @@ import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { createClient } from "$/lib/supabase/client";
 
 interface UpdateRequirementStateParams {
-  id: string;
+  id: string[];
   status: "approve" | "reject" | "default";
   reason?: string;
 }
@@ -22,9 +22,8 @@ export function useUpdateRequirementState() {
       const { data, error } = await client
         .from("tender_requirements")
         .update({ status, reason })
-        .eq("id", id)
-        .select()
-        .single();
+        .in("id", id)
+        .select();
 
       if (error) {
         throw new Error(`Failed to update requirement: ${error.message}`);

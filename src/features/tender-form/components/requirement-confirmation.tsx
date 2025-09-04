@@ -364,7 +364,6 @@ export function RequirementConfirmation({
     const newSelectedProducts = { ...selectedProducts };
     newSelectedProducts[editingProductKey] = product;
 
-    // Auto-confirm when selecting a product
     const newConfirmed = new Set(confirmedItems);
     newConfirmed.add(editingProductKey);
 
@@ -389,13 +388,11 @@ export function RequirementConfirmation({
 
   const handleSelectCatalogProduct =
     (productKey: string) => (product: CatalogProduct) => {
-      // Convert CatalogProduct to ProductSearchResult format
       const productSearchResult = product as unknown as ProductSearchResult;
 
       const newSelectedProducts = { ...selectedProducts };
       newSelectedProducts[productKey] = productSearchResult;
 
-      // Auto-confirm when selecting a product
       const newConfirmed = new Set(confirmedItems);
       newConfirmed.add(productKey);
 
@@ -425,17 +422,6 @@ export function RequirementConfirmation({
   const confirmedCount = confirmedItems.size;
   const progressPercentage =
     totalCount > 0 ? Math.round((confirmedCount / totalCount) * 100) : 0;
-
-  if (totalCount === 0) {
-    return (
-      <div className="text-center py-6 text-primary">
-        <Package className="w-8 h-8 mx-auto mb-2 text-primary" />
-        <p className="text-sm">
-          All requirements were confirmed, go to the next step!
-        </p>
-      </div>
-    );
-  }
 
   return (
     <div className="space-y-4 w-full max-w-full overflow-hidden">
