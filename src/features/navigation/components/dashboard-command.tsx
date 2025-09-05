@@ -77,7 +77,7 @@ export function DashboardCommand() {
                     if (mapping?.status === "default") {
                       goToPage("/dashboard/inbox?id=" + id);
                     } else {
-                      goToPage("/dashboard/tenders?id=" + id);
+                      goToPage("/dashboard/tenders/" + id);
                     }
                   }}
                 >

@@ -15,7 +15,7 @@ export function useCommandSearch(search: string) {
         .textSearch("tenders.order_object", trimmed, { type: "phrase" })
         .eq("company_id", user!.profile!.company_id!)
         .eq("can_participate", true)
-        .in("status", ["analysis", "default"])
+        .not("status", "eq", "rejected")
         .limit(20);
       if (error) throw error;
       return data;
