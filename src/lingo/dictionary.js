@@ -4378,6 +4378,14 @@ export default {
             },
             hash: "dc3149e5f8913e58f4705f41b238d00c",
           },
+        "20/declaration/body/16/argument/1/1/expression/body/1/argument/3/1/5/1/5/1/3/1/expression/right":
+          {
+            content: {
+              en: "Next step",
+              pl: "Następny krok",
+            },
+            hash: "1b83ad9be0e4455f6522b168b9f85812",
+          },
         "20/declaration/body/16/argument/1/1/expression/body/1/argument/3/1/5/1/5/1/3/3/expression/right":
           {
             content: {
@@ -4385,6 +4393,29 @@ export default {
               pl: "Resetuj",
             },
             hash: "a0428f777a098e07120f19324d4f7eee",
+          },
+        "20/declaration/body/16/argument/1/1/expression/body/3/argument/1/1": {
+          content: {
+            en: "<element:MoveLeft></element:MoveLeft> Return",
+            pl: "<element:MoveLeft></element:MoveLeft> Powrót",
+          },
+          hash: "1e2ea95a1cc35caf5407cb56609d471b",
+        },
+        "20/declaration/body/16/argument/1/1/expression/body/3/argument/3/1/5/1/5/1/1":
+          {
+            content: {
+              en: "Previous step",
+              pl: "Poprzedni krok",
+            },
+            hash: "dc3149e5f8913e58f4705f41b238d00c",
+          },
+        "20/declaration/body/16/argument/1/1/expression/body/3/argument/3/1/5/1/5/1/3/1/expression/right":
+          {
+            content: {
+              en: "Continue",
+              pl: "Kontynuuj",
+            },
+            hash: "41b7a61422ab6a6c9b0a9bf39f940642",
           },
         "20/declaration/body/17/argument/1/1/expression/body/1/argument/1/1": {
           content: {
@@ -4417,6 +4448,29 @@ export default {
             },
             hash: "a0428f777a098e07120f19324d4f7eee",
           },
+        "20/declaration/body/17/argument/1/1/expression/body/2/argument/1/1": {
+          content: {
+            en: "<element:MoveLeft></element:MoveLeft> Return",
+            pl: "<element:MoveLeft></element:MoveLeft> Powrót",
+          },
+          hash: "1e2ea95a1cc35caf5407cb56609d471b",
+        },
+        "20/declaration/body/17/argument/1/1/expression/body/2/argument/3/1/5/1/5/1/1":
+          {
+            content: {
+              en: "Previous step",
+              pl: "Poprzedni krok",
+            },
+            hash: "dc3149e5f8913e58f4705f41b238d00c",
+          },
+        "20/declaration/body/17/argument/1/1/expression/body/2/argument/3/1/5/1/5/1/3/1/expression/right":
+          {
+            content: {
+              en: "Continue",
+              pl: "Kontynuuj",
+            },
+            hash: "41b7a61422ab6a6c9b0a9bf39f940642",
+          },
         "20/declaration/body/18/argument/1/1/expression/body/1/argument/1/1": {
           content: {
             en: "<element:MoveLeft></element:MoveLeft> Return",
@@ -4431,6 +4485,29 @@ export default {
               pl: "Poprzedni krok",
             },
             hash: "dc3149e5f8913e58f4705f41b238d00c",
+          },
+        "20/declaration/body/18/argument/1/1/expression/body/2/argument/1/1": {
+          content: {
+            en: "<element:MoveLeft></element:MoveLeft> Return",
+            pl: "<element:MoveLeft></element:MoveLeft> Powrót",
+          },
+          hash: "1e2ea95a1cc35caf5407cb56609d471b",
+        },
+        "20/declaration/body/18/argument/1/1/expression/body/2/argument/3/1/5/1/5/1/1":
+          {
+            content: {
+              en: "Previous step",
+              pl: "Poprzedni krok",
+            },
+            hash: "dc3149e5f8913e58f4705f41b238d00c",
+          },
+        "20/declaration/body/18/argument/1/1/expression/body/2/argument/3/1/5/1/5/1/3/1/expression/right":
+          {
+            content: {
+              en: "Continue",
+              pl: "Kontynuuj",
+            },
+            hash: "41b7a61422ab6a6c9b0a9bf39f940642",
           },
         "20/declaration/body/9/0/init/body/0/0/0/alternate/alternate/0/argument":
           {
@@ -7154,6 +7231,13 @@ export default {
             },
             hash: "b29e7fb41cd951f791b73fc5fc19561c",
           },
+        "7/declaration/body/1/argument/7": {
+          content: {
+            en: "Apply Filters",
+            pl: "Zastosuj filtry",
+          },
+          hash: "654bc45ae1a830657660662ecfe83468",
+        },
         "7/declaration/body/1/argument/7/openingElement/2/value/expression/body-label":
           {
             content: {
@@ -15839,6 +15923,13 @@ export default {
           },
           hash: "61596fc5d5fdfbec41a997df52641f63",
         },
+        "6/declaration/body/7/consequent/0/argument/3": {
+          content: {
+            en: "All requirements were confirmed, go to the next step!",
+            pl: "Wszystkie wymagania zostały potwierdzone, przejdź do następnego kroku!",
+          },
+          hash: "1e8bba060b349e8a000cda194252d06c",
+        },
         "6/declaration/body/8/argument/1/1": {
           content: {
             en: "Confirm Tender Requirements",
@@ -15895,6 +15986,13 @@ export default {
             pl: "Wszystkie wymagania potwierdzone",
           },
           hash: "be2ff9e2a6558e49845cef458be96107",
+        },
+        "7/declaration/body/7/consequent/0/argument/3": {
+          content: {
+            en: "All requirements were confirmed, go to the next step!",
+            pl: "Wszystkie wymagania zostały potwierdzone, przejdź do następnego kroku!",
+          },
+          hash: "1e8bba060b349e8a000cda194252d06c",
         },
         "8/declaration/body/10/argument/1/1": {
           content: {
@@ -22145,17 +22243,17 @@ export default {
         },
         "13/declaration/body/16/argument/5/expression/right/1": {
           content: {
-            en: "Service Requirements",
-            pl: "Wymagania dotyczące usługi",
+            en: "Services",
+            pl: "Usługi",
           },
-          hash: "1c2fa0d094f6c0a5f24c7f41cc8d3783",
+          hash: "8ea10b45b9abab2a3bfc3c07e1c9cdc6",
         },
         "13/declaration/body/16/argument/7/expression/right/1": {
           content: {
-            en: "Product Requirements",
-            pl: "Wymagania dotyczące produktu",
+            en: "Products",
+            pl: "Produkty",
           },
-          hash: "9e21fe9d869081c93424fbd3bbad5476",
+          hash: "a003449ecbde6b7a73044f46ea6bbe75",
         },
         "13/declaration/body/16/consequent/0/argument/3": {
           content: {

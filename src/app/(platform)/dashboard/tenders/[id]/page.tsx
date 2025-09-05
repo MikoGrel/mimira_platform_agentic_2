@@ -361,7 +361,7 @@ export default function TenderPage() {
                                   !nextEnabled || isProcessingConfirmation
                                 }
                               >
-                                Continue
+                                Next step
                               </Button>
                             )}
                           </div>
