@@ -16,7 +16,7 @@ export default function DashboardPage() {
   const { data: dailySummary } = useDailySummary();
 
   return (
-    <main className="w-full bg-gradient-to-b from-primary/5 to-transparent">
+    <main className="w-full bg-primary-gradient">
       <div className="max-w-5xl mx-auto flex flex-col gap-6 p-4 lg:pt-12">
         <header className="flex flex-col gap-4">
           <div className="flex flex-col-reverse lg:flex-row lg:items-center justify-between gap-4">
@@ -43,9 +43,10 @@ export default function DashboardPage() {
             </h1>
           </div>
           <p className="max-w-[75%] text-muted-foreground">
-            Today&apos;s briefing: Since yesterday we&apos;ve managed to find
-            you {dailySummary?.mappings_created_today ?? "..."} new tenders,{" "}
-            {dailySummary?.expiring_this_week ?? "..."} require your attention.
+            In last 7 days we&apos;ve managed to find you{" "}
+            {dailySummary?.mappings_created_last_week ?? "..."} new tenders,{" "}
+            {dailySummary?.expiring_this_week ?? "..."} require filling out the
+            application this week.
           </p>
         </header>
 

@@ -546,6 +546,7 @@ export type Database = {
           reason: string | null
           requirement_text: string
           status: string
+          status_original: string | null
           tender_product_id: string | null
         }
         Insert: {
@@ -555,6 +556,7 @@ export type Database = {
           reason?: string | null
           requirement_text: string
           status?: string
+          status_original?: string | null
           tender_product_id?: string | null
         }
         Update: {
@@ -564,6 +566,7 @@ export type Database = {
           reason?: string | null
           requirement_text?: string
           status?: string
+          status_original?: string | null
           tender_product_id?: string | null
         }
         Relationships: [
@@ -680,21 +683,9 @@ export type Database = {
           status: string
         }[]
       }
-      get_deadline_due_in_2_days: {
-        Args: Record<PropertyKey, never>
-        Returns: {
-          company_id: string
-          deadline: string
-          order_object: string
-          organization_name: string
-          recipient_email: string
-          tender_id: string
-          tender_url: string
-        }[]
-      }
       get_tenders_summary: {
         Args: { p_company_id: string }
-        Returns: Database["public"]["CompositeTypes"]["tenders_summary_type"]
+        Returns: Database["public"]["CompositeTypes"]["tenders_weekly_summary_type"]
       }
       get_weekly_company_mappings: {
         Args: { p_company_id?: string; p_no_of_weeks?: number }
@@ -708,17 +699,13 @@ export type Database = {
           json_response: Json
         }[]
       }
-      send_deadline_2days_min: {
-        Args: Record<PropertyKey, never>
-        Returns: undefined
-      }
     }
     Enums: {
       [_ in never]: never
     }
     CompositeTypes: {
-      tenders_summary_type: {
-        mappings_created_today: number | null
+      tenders_weekly_summary_type: {
+        mappings_created_last_week: number | null
         expiring_this_week: number | null
       }
     }

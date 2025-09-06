@@ -106,5 +106,5 @@
 }
 
 @utility bg-primary-gradient {
-  @apply bg-gradient-to-b from-primary/5 to-background;
+  @apply bg-gradient-to-b from-primary/[1%] to-background;
 }
