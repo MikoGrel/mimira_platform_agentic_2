@@ -7279,6 +7279,38 @@
           "overrides": {},
           "content": "Return to last tender"
         },
+        "10/declaration/body/5/argument/1/1": {
+          "type": "element",
+          "hash": "46d373a4bd848c802e7bcbf678daa119",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "You will see your recently visited tender here"
+        },
+        "10/declaration/body/5/argument/1/expression/right/1": {
+          "type": "element",
+          "hash": "a9379ca83de263943764092fbd10a649",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "You will see your recently visited tender here"
+        },
+        "10/declaration/body/5/argument/3": {
+          "type": "element",
+          "hash": "3f894c5b6419e20fd455a1b0d8dbc279",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Continue"
+        },
+        "10/declaration/body/5/argument/3/expression/right/5": {
+          "type": "element",
+          "hash": "d34fc8a0b1f9070a796a8be4422bc439",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Continue"
+        },
         "10/declaration/body/5/argument/5": {
           "type": "element",
           "hash": "3f894c5b6419e20fd455a1b0d8dbc279",

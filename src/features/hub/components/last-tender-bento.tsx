@@ -61,33 +61,46 @@ export function LastTenderBento({ loading, className }: LastTenderBentoProps) {
       className={className}
       bodyClassName="flex flex-col gap-4 pt-0"
     >
-      <p>{truncate(mapping?.tenders.order_object || "", { length: 100 })}</p>
+      {!mapping && (
+        <div className="w-full h-full bg-sidebar flex flex-center rounded-lg">
+          <p className="text-muted-foreground text-xs">
+            You will see your recently visited tender here
+          </p>
+        </div>
+      )}
+      {mapping && (
+        <>
+          <p>
+            {truncate(mapping?.tenders.order_object || "", { length: 100 })}
+          </p>
 
-      <Stepper.Provider variant="vertical" initialStep={getCurrentStep()}>
-        {({ methods }) => (
-          <Stepper.Navigation aria-label="Tender Progress Steps">
-            {methods.all.map((step) => (
-              <div key={step.id}>
-                <Stepper.Step of={step.id}>
-                  <Stepper.Title>{step.title}</Stepper.Title>
-                </Stepper.Step>
-              </div>
-            ))}
-          </Stepper.Navigation>
-        )}
-      </Stepper.Provider>
-      <Button
-        as={Link}
-        href={
-          isInInbox
-            ? `/dashboard/inbox?id=${mapping?.id}`
-            : `/dashboard/tenders/${mapping?.id}`
-        }
-        color="primary"
-        endContent={<MoveRight />}
-      >
-        Continue
-      </Button>
+          <Stepper.Provider variant="vertical" initialStep={getCurrentStep()}>
+            {({ methods }) => (
+              <Stepper.Navigation aria-label="Tender Progress Steps">
+                {methods.all.map((step) => (
+                  <div key={step.id}>
+                    <Stepper.Step of={step.id}>
+                      <Stepper.Title>{step.title}</Stepper.Title>
+                    </Stepper.Step>
+                  </div>
+                ))}
+              </Stepper.Navigation>
+            )}
+          </Stepper.Provider>
+          <Button
+            as={Link}
+            href={
+              isInInbox
+                ? `/dashboard/inbox?id=${mapping?.id}`
+                : `/dashboard/tenders/${mapping?.id}`
+            }
+            color="primary"
+            endContent={<MoveRight />}
+          >
+            Continue
+          </Button>
+        </>
+      )}
     </BentoCard>
   );
 }

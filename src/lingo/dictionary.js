@@ -6564,6 +6564,34 @@ export default {
           },
           hash: "8208df3c0f89efff2b48433a4f98902e",
         },
+        "10/declaration/body/5/argument/1/1": {
+          content: {
+            en: "You will see your recently visited tender here",
+            pl: "Tutaj zobaczysz ostatnio odwiedzony przetarg",
+          },
+          hash: "46d373a4bd848c802e7bcbf678daa119",
+        },
+        "10/declaration/body/5/argument/1/expression/right/1": {
+          content: {
+            en: "You will see your recently visited tender here",
+            pl: "Tutaj zobaczysz swoje ostatnio odwiedzone przetargi",
+          },
+          hash: "a9379ca83de263943764092fbd10a649",
+        },
+        "10/declaration/body/5/argument/3": {
+          content: {
+            en: "Continue",
+            pl: "Kontynuuj",
+          },
+          hash: "3f894c5b6419e20fd455a1b0d8dbc279",
+        },
+        "10/declaration/body/5/argument/3/expression/right/5": {
+          content: {
+            en: "Continue",
+            pl: "Kontynuuj",
+          },
+          hash: "d34fc8a0b1f9070a796a8be4422bc439",
+        },
         "10/declaration/body/5/argument/5": {
           content: {
             en: "Continue",
