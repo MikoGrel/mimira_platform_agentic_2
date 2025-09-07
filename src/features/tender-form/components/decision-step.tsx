@@ -1,76 +1,92 @@
 "use client";
 
-import { Button } from "@heroui/react";
+import { Alert, Button, Divider, Radio, RadioGroup } from "@heroui/react";
 import { Card, CardBody, CardFooter, CardHeader } from "@heroui/react";
 import { useUpdateTenderStatus } from "$/features/tenders/api/use-update-tender-status";
 import { InboxTenderMapping } from "$/features/inbox/api/use-tender-inbox-query";
 import { useRouter } from "next/navigation";
 import React from "react";
 import { toast } from "sonner";
+import { Controller, useForm } from "react-hook-form";
 
 interface DecisionStepProps {
   item: InboxTenderMapping | null | undefined;
 }
 
+interface DecisionFormData {
+  decision: "applied" | "not_applied";
+}
+
 export function DecisionStep({ item }: DecisionStepProps) {
   const router = useRouter();
   const { mutate: updateTenderStatus, isPending } = useUpdateTenderStatus();
+  const { control, handleSubmit } = useForm<DecisionFormData>();
 
-  if (!item) {
-    return (
-      <div className="text-center py-6 text-gray-500">
-        <p className="text-sm">No item selected</p>
-      </div>
-    );
-  }
+  if (!item) return null;
 
-  const handleYes = () => {
-    toast.success(<p>Thank you for using mimira!</p>);
-    router.push("/dashboard/tenders");
-  };
-
-  const handleNo = () => {
-    updateTenderStatus(
-      {
-        mappingId: item.id,
-        status: "decision_made_rejected",
-      },
-      {
-        onSuccess: () => {
-          toast.info(<p>This tender has been rejected</p>);
-          router.push("/dashboard/tenders");
+  const onSubmit = handleSubmit((data) => {
+    if (data.decision === "applied") {
+      toast.success(<p>Thank you for using mimira!</p>);
+      router.push("/dashboard/tenders");
+    } else {
+      updateTenderStatus(
+        {
+          mappingId: item.id,
+          status: "decision_made_rejected",
         },
-        onError: () => {
-          toast.error(<p>Failed to reject the tender. Please try again.</p>);
-        },
-      }
-    );
-  };
+        {
+          onSuccess: () => {
+            toast.info(<p>This tender has been rejected</p>);
+            router.push("/dashboard/tenders");
+          },
+        }
+      );
+    }
+  });
 
   return (
-    <Card shadow="none">
-      <CardHeader>
-        <h2 className="text-lg font-semibold">
-          Did you apply for this tender?
-        </h2>
-      </CardHeader>
-      <CardBody>
-        <div className="p-4 bg-muted rounded-md">
+    <form onSubmit={onSubmit}>
+      <Card shadow="sm">
+        <CardHeader>Final decision</CardHeader>
+        <Divider />
+        <CardBody className="gap-4">
           <p className="text-sm text-muted-foreground">
-            Your response will help us improve our tender management process.
+            Review all information before making your final decision.
           </p>
-        </div>
-      </CardBody>
-      <CardFooter>
-        <div className="flex justify-end gap-4 w-full">
-          <Button variant="bordered" onPress={handleNo} disabled={isPending}>
-            No i didn&apos;t apply
+          <Alert color="primary" className="text-sm">
+            {item.tenders.application_form_llm}
+          </Alert>
+          <div className="flex flex-col gap-2">
+            <Controller
+              control={control}
+              name="decision"
+              render={({ field, fieldState }) => (
+                <RadioGroup
+                  label="Company's decision"
+                  errorMessage={fieldState.error?.message}
+                  isInvalid={!!fieldState.error}
+                  value={field.value}
+                  onValueChange={field.onChange}
+                  onBlur={field.onBlur}
+                  name={field.name}
+                >
+                  <Radio value="applied" classNames={{ label: "pl-1" }}>
+                    Applied to tender
+                  </Radio>
+                  <Radio value="not_applied" classNames={{ label: "pl-1" }}>
+                    Cancel the application
+                  </Radio>
+                </RadioGroup>
+              )}
+            />
+          </div>
+        </CardBody>
+        <CardFooter className="justify-end">
+          <Button type="submit" disabled={isPending} color="primary">
+            Save and go back to inbox
           </Button>
-          <Button onPress={handleYes} disabled={isPending} color="primary">
-            Yes, I applied
-          </Button>
-        </div>
-      </CardFooter>
-    </Card>
+        </CardFooter>
+      </Card>
+    </form>
   );
 }
