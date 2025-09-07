@@ -11,14 +11,13 @@ import { useLastTender } from "$/features/tenders/hooks/use-last-tender";
 import { MappingStatus } from "$/features/tenders/constants/status";
 
 interface LastTenderBentoProps {
-  loading?: boolean;
   className?: string;
 }
 
-export function LastTenderBento({ loading, className }: LastTenderBentoProps) {
+export function LastTenderBento({ className }: LastTenderBentoProps) {
   const { lastMappingId } = useLastTender();
 
-  const { data: mapping } = useIndividualTender({
+  const { data: mapping, isLoading } = useIndividualTender({
     mappingId: lastMappingId!,
     enabled: !!lastMappingId,
   });
@@ -52,7 +51,7 @@ export function LastTenderBento({ loading, className }: LastTenderBentoProps) {
 
   return (
     <BentoCard
-      loading={loading}
+      loading={isLoading}
       title={<span>Return to last tender</span>}
       className={className}
       bodyClassName="flex flex-col gap-4 pt-0"
