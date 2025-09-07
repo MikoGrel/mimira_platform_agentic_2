@@ -4,6 +4,7 @@ import { cn } from "$/lib/utils";
 import { ReactNode } from "react";
 import { useStatusCounts } from "../api/use-status-counts";
 import { floor } from "lodash-es";
+import { MappingStatus } from "$/features/tenders/constants/status";
 
 export function StateFunnel() {
   const { data: statusCounts } = useStatusCounts();
@@ -14,11 +15,11 @@ export function StateFunnel() {
     statusCounts
       ?.filter((c) =>
         [
-          "analysis",
-          "documents_preparing",
-          "questions_answered",
-          "documents_ready",
-          "questions",
+          MappingStatus.analysis,
+          MappingStatus.documents_preparing,
+          MappingStatus.questions_answered,
+          MappingStatus.documents_ready,
+          MappingStatus.questions,
         ].includes(c.status)
       )
       .reduce((acc, count) => acc + count.count, 0) || 0;
@@ -27,20 +28,20 @@ export function StateFunnel() {
     statusCounts
       ?.filter((c) =>
         [
-          "documents_preparing",
-          "questions_answered",
-          "documents_ready",
-          "questions",
+          MappingStatus.documents_preparing,
+          MappingStatus.questions_answered,
+          MappingStatus.documents_ready,
+          MappingStatus.questions,
         ].includes(c.status)
       )
       .reduce((acc, count) => acc + count.count, 0) || 0;
   const applied =
     statusCounts
-      ?.filter((c) => c.status === "decision_made_applied")
+      ?.filter((c) => c.status === MappingStatus.decision_made_applied)
       .reduce((acc, count) => acc + count.count, 0) || 0;
   const won =
     statusCounts
-      ?.filter((c) => c.status === "won")
+      ?.filter((c) => c.status === MappingStatus.won)
       .reduce((acc, count) => acc + count.count, 0) || 0;
 
   return (

@@ -13,21 +13,25 @@ import {
 import { useTendersList } from "../api";
 import { FilterQuery } from "$/features/inbox/hooks/use-filter-form";
 import { IndividualTenderMapping } from "../api/use-individual-tender";
+import { MappingStatus } from "../constants/status";
 
 const COLUMNS = [
   {
     id: "analysis",
     title: <>Analysis</>,
-    statuses: ["analysis"] as const,
-    updateStatus: "analysis",
+    statuses: [MappingStatus.analysis] as const,
+    updateStatus: MappingStatus.analysis,
     icon: Search,
     color: "text-amber-500",
   },
   {
     id: "questions",
     title: <>Questions & Review</>,
-    statuses: ["questions_in_review_mimira", "questions"] as const,
-    updateStatus: "questions",
+    statuses: [
+      MappingStatus.questions_in_review_mimira,
+      MappingStatus.questions,
+    ] as const,
+    updateStatus: MappingStatus.questions,
     icon: MessageCircleQuestion,
     color: "text-purple-500",
   },
@@ -35,27 +39,30 @@ const COLUMNS = [
     id: "documents",
     title: <>Documents</>,
     statuses: [
-      "documents_preparing",
-      "documents_ready",
-      "documents_reviewed",
+      MappingStatus.documents_preparing,
+      MappingStatus.documents_ready,
+      MappingStatus.documents_reviewed,
     ] as const,
-    updateStatus: "documents_ready",
+    updateStatus: MappingStatus.documents_ready,
     icon: FileText,
     color: "text-cyan-500",
   },
   {
     id: "decision",
     title: <>Decision</>,
-    statuses: ["decision_made_applied"] as const,
-    updateStatus: "decision_made_applied",
+    statuses: [MappingStatus.decision_made_applied] as const,
+    updateStatus: MappingStatus.decision_made_applied,
     icon: CheckCircle,
     color: "text-green-500",
   },
   {
     id: "rejected",
     title: <>Rejected</>,
-    statuses: ["rejected", "decision_made_rejected"] as const,
-    updateStatus: "rejected",
+    statuses: [
+      MappingStatus.rejected,
+      MappingStatus.decision_made_rejected,
+    ] as const,
+    updateStatus: MappingStatus.rejected,
     icon: X,
     color: "text-red-500",
   },

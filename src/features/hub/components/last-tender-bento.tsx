@@ -8,6 +8,7 @@ import Link from "next/link";
 import truncate from "lodash-es/truncate";
 import { defineStepper } from "$/components/stepper";
 import { useLastTender } from "$/features/tenders/hooks/use-last-tender";
+import { MappingStatus } from "$/features/tenders/constants/status";
 
 interface LastTenderBentoProps {
   loading?: boolean;
@@ -22,21 +23,16 @@ export function LastTenderBento({ loading, className }: LastTenderBentoProps) {
     enabled: !!lastMappingId,
   });
 
-  const isInInbox = mapping?.status === "default";
+  const isInInbox = mapping?.status === MappingStatus.default;
 
   const getCurrentStep = () => {
-    if (!mapping?.status) return "preview";
+    if (!mapping?.status) return undefined;
 
-    switch (mapping.status) {
-      case "default":
-        return "preview";
-      case "analysis":
-        return "filling-out";
-      case "applied":
-        return "application";
-      default:
-        return "preview";
-    }
+    if (mapping.status === MappingStatus.default) return "preview";
+    if (mapping.status === MappingStatus.decision_made_applied)
+      return "application";
+
+    return "filling-out";
   };
 
   const { Stepper } = defineStepper(

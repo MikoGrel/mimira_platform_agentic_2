@@ -28,6 +28,7 @@ import {
 } from "$/components/ui/resizable";
 import { useLastTender } from "$/features/tenders/hooks/use-last-tender";
 import { toast } from "sonner";
+import { MappingStatus } from "$/features/tenders/constants/status";
 
 const { Stepper, useStepper } = defineStepper(
   {
@@ -76,13 +77,13 @@ function StepperContent({
   const mapStepToStatus = (stepId: string): string | null => {
     switch (stepId) {
       case "overview":
-        return "analysis";
+        return MappingStatus.analysis;
       case "confirmations":
-        return "questions";
+        return MappingStatus.questions;
       case "documentation":
-        return "documents_preparing";
+        return MappingStatus.documents_preparing;
       case "decision":
-        return "decision_made_applied";
+        return MappingStatus.decision_made_applied;
       default:
         return null;
     }
@@ -286,19 +287,19 @@ export default function TenderPage() {
     status: string | null | undefined
   ): "overview" | "confirmations" | "documentation" | "decision" => {
     switch (status) {
-      case "analysis":
-        return "overview"; // Fix: analysis status should map back to overview
-      case "questions":
+      case MappingStatus.analysis:
+        return "overview";
+      case MappingStatus.questions:
         return "confirmations";
-      case "questions_in_review_mimira":
+      case MappingStatus.questions_in_review_mimira:
         return "confirmations";
-      case "documents_preparing":
-      case "documents_ready":
-      case "documents_reviewed":
+      case MappingStatus.documents_preparing:
+      case MappingStatus.documents_ready:
+      case MappingStatus.documents_reviewed:
         return "documentation";
-      case "decision_made_applied":
-      case "decision_made_rejected":
-      case "rejected":
+      case MappingStatus.decision_made_applied:
+      case MappingStatus.decision_made_rejected:
+      case MappingStatus.rejected:
         return "decision";
       default:
         return "overview";
@@ -308,7 +309,7 @@ export default function TenderPage() {
   const initialStep = useMemo(() => {
     if (isLoading || !mapping) return null;
 
-    const status = mapping.status ?? "analysis";
+    const status = mapping.status ?? MappingStatus.analysis;
 
     return mapStatusToStep(status);
   }, [isLoading, mapping]);

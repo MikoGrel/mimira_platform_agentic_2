@@ -8,6 +8,7 @@ import { useRouter } from "next/navigation";
 import React from "react";
 import { toast } from "sonner";
 import { Controller, useForm } from "react-hook-form";
+import { MappingStatus } from "$/features/tenders/constants/status";
 
 interface DecisionStepProps {
   item: InboxTenderMapping | null | undefined;
@@ -32,7 +33,7 @@ export function DecisionStep({ item }: DecisionStepProps) {
       updateTenderStatus(
         {
           mappingId: item.id,
-          status: "decision_made_rejected",
+          status: MappingStatus.decision_made_rejected,
         },
         {
           onSuccess: () => {
