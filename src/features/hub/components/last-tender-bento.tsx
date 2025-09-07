@@ -70,15 +70,20 @@ export function LastTenderBento({ loading, className }: LastTenderBentoProps) {
             {truncate(mapping?.tenders.order_object || "", { length: 100 })}
           </p>
 
-          <Stepper.Provider variant="vertical" initialStep={getCurrentStep()}>
+          <Stepper.Provider
+            variant="vertical"
+            initialStep={getCurrentStep()}
+            className="flex-1"
+          >
             {({ methods }) => (
-              <Stepper.Navigation aria-label="Tender Progress Steps">
+              <Stepper.Navigation
+                aria-label="Tender Progress Steps"
+                className="h-full"
+              >
                 {methods.all.map((step) => (
-                  <div key={step.id}>
-                    <Stepper.Step of={step.id}>
-                      <Stepper.Title>{step.title}</Stepper.Title>
-                    </Stepper.Step>
-                  </div>
+                  <Stepper.Step of={step.id} key={step.id}>
+                    <Stepper.Title>{step.title}</Stepper.Title>
+                  </Stepper.Step>
                 ))}
               </Stepper.Navigation>
             )}
