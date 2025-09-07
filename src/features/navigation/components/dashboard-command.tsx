@@ -1,6 +1,6 @@
 "use client";
 
-import { Home, SparklesIcon, Loader2, Scroll } from "lucide-react";
+import { Home, SparklesIcon, Loader2, Scroll, FolderOpen } from "lucide-react";
 import {
   CommandDialog,
   CommandEmpty,
@@ -57,6 +57,10 @@ export function DashboardCommand() {
             <CommandItem onSelect={() => goToPage("/dashboard/inbox")}>
               <SparklesIcon />
               <span>Discover New Tenders</span>
+            </CommandItem>
+            <CommandItem onSelect={() => goToPage("/dashboard/tenders")}>
+              <FolderOpen />
+              <span>Active tenders</span>
             </CommandItem>
           </CommandGroup>
           {(isFetching || (mappings && mappings.length > 0)) && (

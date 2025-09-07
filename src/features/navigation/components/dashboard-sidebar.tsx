@@ -12,7 +12,13 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
 } from "$/components/ui/sidebar";
-import { Home, FolderOpen, SparklesIcon, FileCheck } from "lucide-react";
+import {
+  Home,
+  FolderOpen,
+  SparklesIcon,
+  FileCheck,
+  Package,
+} from "lucide-react";
 import SidebarLogo from "./sidebar-logo";
 import Link from "$/components/ui/link";
 import { SidebarLogOutButton } from "./sidebar-logout-button";
@@ -58,6 +64,14 @@ const navigationItems = [
     url: "/dashboard/documents",
     disabled: true,
   },
+  {
+    id: "products",
+    title: <span>My product catalog</span>,
+    icon: Package,
+    tooltip: "Products",
+    url: "/dashboard/products",
+    disabled: true,
+  },
 ] as const;
 
 export type SidebarItemId = (typeof navigationItems)[number]["id"];
@@ -91,7 +105,7 @@ export default function DashboardSidebar() {
                           asChild
                           tooltip={item.tooltip}
                           isActive={isActive}
-                          disabled={item.disabled}
+                          aria-disabled={item.disabled}
                         >
                           <Link href={item.disabled ? "#" : item.url}>
                             <item.icon

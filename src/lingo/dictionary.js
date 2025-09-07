@@ -808,10 +808,10 @@ export default {
         },
         "5/declaration/body/2/argument/1/1/1/1": {
           content: {
-            en: "<element:AnimatedSymbol></element:AnimatedSymbol> Hello, <element:AnimatePresence><expression/></element:AnimatePresence>",
-            pl: "<element:AnimatedSymbol></element:AnimatedSymbol> Witaj, <element:AnimatePresence><expression/></element:AnimatePresence>",
+            en: "<element:AnimatedSymbol></element:AnimatedSymbol> Hello,<expression/>",
+            pl: "<element:AnimatedSymbol></element:AnimatedSymbol> Cześć,<expression/>",
           },
-          hash: "73715f4d21eaa480228fa97ba826f4e6",
+          hash: "8855701c993a302bb7a8214614546322",
         },
         "5/declaration/body/2/argument/1/1/3": {
           content: {
@@ -4079,6 +4079,20 @@ export default {
           },
           hash: "712c63650b5180cbc14d6246b5d558c2",
         },
+        "19/body/10/argument/5/1/1": {
+          content: {
+            en: "Previous step",
+            pl: "Poprzedni krok",
+          },
+          hash: "09264f201cbbdc79247a8c17a93d7e3c",
+        },
+        "19/body/10/argument/5/1/3/1/expression/right": {
+          content: {
+            en: "Next step",
+            pl: "Następny krok",
+          },
+          hash: "43fb9d3da12cdf80c1d49037ec8b8eba",
+        },
         "19/body/17/argument/1/5/1/5/1/1": {
           content: {
             en: "Previous step",
@@ -4425,6 +4439,13 @@ export default {
             pl: "Następny krok",
           },
           hash: "712c63650b5180cbc14d6246b5d558c2",
+        },
+        "20/declaration/body/11/argument/1/1/expression/body/0/argument/1/1": {
+          content: {
+            en: "<element:MoveLeft></element:MoveLeft> Return",
+            pl: "<element:MoveLeft></element:MoveLeft> Powrót",
+          },
+          hash: "1e2ea95a1cc35caf5407cb56609d471b",
         },
         "20/declaration/body/16/argument/1/1/expression/body/1/argument/1/1": {
           content: {
@@ -13715,6 +13736,13 @@ export default {
           },
           hash: "bff28bbb9a32e0ddf1aba571d27ea42e",
         },
+        "8/declaration/body/7/argument/1/3/3/5/3": {
+          content: {
+            en: "Active tenders",
+            pl: "Aktywne przetargi",
+          },
+          hash: "bd9a5531afffb07a322a91ec689859ee",
+        },
         "8/declaration/body/7/argument/1/3/3/openingElement/0/value/expression":
           {
             content: {
@@ -13840,6 +13868,13 @@ export default {
             pl: "Dokumenty",
           },
           hash: "c3882fc98216636873ab9091f3453f0c",
+        },
+        "9/0/init/expression/4/1/value": {
+          content: {
+            en: "My product catalog",
+            pl: "Mój katalog produktów",
+          },
+          hash: "dd80de4369186ba9c0363168cc4b4593",
         },
         "9/declaration/body/1/argument/3/1/1": {
           content: {
@@ -16035,6 +16070,13 @@ export default {
             pl: "Potwierdź wymagania przetargowe",
           },
           hash: "84cfd4121dee0ab16acb021a89b6d010",
+        },
+        "6/declaration/body/8/consequent/0/argument/3": {
+          content: {
+            en: "All requirements were confirmed, go to the next step!",
+            pl: "Wszystkie wymagania zostały potwierdzone, przejdź do następnego kroku!",
+          },
+          hash: "1e8bba060b349e8a000cda194252d06c",
         },
         "7/declaration/body/5/consequent/0/argument/1": {
           content: {

@@ -12,8 +12,8 @@ import { useDailySummary } from "$/features/stats/api/use-daily-summary";
 import { AnimatePresence, motion } from "motion/react";
 
 export default function DashboardPage() {
-  const { user, isLoading } = useCurrentUser();
   const { data: dailySummary } = useDailySummary();
+  const { user, isLoading } = useCurrentUser();
 
   return (
     <main className="w-full bg-primary-gradient">
@@ -52,7 +52,10 @@ export default function DashboardPage() {
 
         <section className="grid grid-cols-1 lg:grid-rows-[380px_330px] lg:grid-cols-6 gap-6">
           <NewTendersBento className="lg:col-start-1 lg:col-end-5" />
-          <StatsBento className="lg:col-start-5 lg:col-end-7" />
+          <StatsBento
+            className="lg:col-start-5 lg:col-end-7"
+            loading={isLoading}
+          />
           <LastTenderBento className="lg:col-start-1 lg:col-end-4" />
           <DeadlineCalendarBento className="lg:col-start-4 lg:col-end-7" />
         </section>

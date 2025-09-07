@@ -926,6 +926,22 @@
           "skip": false,
           "overrides": {},
           "content": "In last 7 days we've managed to find you <expression/> new tenders, <expression/> require filling out the application this week."
+        },
+        "5/declaration/body/3/argument/1/1/1/1": {
+          "type": "element",
+          "hash": "73715f4d21eaa480228fa97ba826f4e6",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "<element:AnimatedSymbol></element:AnimatedSymbol> Hello, <element:AnimatePresence><expression/></element:AnimatePresence>"
+        },
+        "5/declaration/body/3/argument/1/1/3": {
+          "type": "element",
+          "hash": "730f0f90b6acd81d0af13db27df537f9",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "In last 7 days we've managed to find you <expression/> new tenders, <expression/> require filling out the application this week."
         }
       }
     },
@@ -7800,6 +7816,14 @@
     "features/hub/components/stats-bento.tsx": {
       "scopes": {
         "9/declaration/body/5/argument/openingElement/1/value/expression": {
+          "type": "element",
+          "hash": "5cf8b052c89fa1b05397a956ebec69b2",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Stats"
+        },
+        "9/declaration/body/6/argument/openingElement/1/value/expression": {
           "type": "element",
           "hash": "5cf8b052c89fa1b05397a956ebec69b2",
           "context": "",
@@ -15305,6 +15329,14 @@
           "overrides": {},
           "content": "Discover New Tenders"
         },
+        "8/declaration/body/7/argument/1/3/3/5/3": {
+          "type": "element",
+          "hash": "bd9a5531afffb07a322a91ec689859ee",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Active tenders"
+        },
         "8/declaration/body/7/argument/1/3/3/openingElement/0/value/expression": {
           "type": "element",
           "hash": "0373afd8238db1c49f4be4fa6cdf5cd3",
@@ -15444,6 +15476,14 @@
           "skip": false,
           "overrides": {},
           "content": "Documents"
+        },
+        "9/0/init/expression/4/1/value": {
+          "type": "element",
+          "hash": "dd80de4369186ba9c0363168cc4b4593",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "My product catalog"
         },
         "9/declaration/body/1/argument/3/1/1": {
           "type": "element",
@@ -17071,29 +17111,37 @@
         },
         "4/declaration/body/7/argument/1/1/openingElement/0/value/expression": {
           "type": "element",
-          "hash": "ab91566819bc36d0831f136690b32878",
+          "hash": "f74ae4c3c0c20717d3d58e0b8c8c34bf",
           "context": "",
           "skip": false,
           "overrides": {},
-          "content": "Qualified"
+          "content": "Analysed"
         },
         "4/declaration/body/7/argument/1/3/openingElement/1/value/expression": {
           "type": "element",
-          "hash": "c4136cac50d8cbd90480eea77ee8ae18",
+          "hash": "92f97a7b5aa637eb638e4d6d9bdaa01b",
           "context": "",
           "skip": false,
           "overrides": {},
-          "content": "Waiting for application"
+          "content": "Confirmed application"
         },
         "4/declaration/body/7/argument/1/5/openingElement/1/value/expression": {
           "type": "element",
-          "hash": "7b7abca427be23829be8e8c8cb433519",
+          "hash": "901b25ae5cfdd0ec2d2a87c81b7a20bb",
           "context": "",
           "skip": false,
           "overrides": {},
-          "content": "In progress"
+          "content": "Preparing an offer"
         },
         "4/declaration/body/7/argument/1/7/openingElement/1/value/expression": {
+          "type": "element",
+          "hash": "a79bcd1e53b38db7b03b506ff2e05904",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Applied"
+        },
+        "4/declaration/body/7/argument/1/9/openingElement/1/value/expression": {
           "type": "element",
           "hash": "61dcd4c53a7b9b4b86c20ebe571f111f",
           "context": "",
@@ -17101,21 +17149,13 @@
           "overrides": {},
           "content": "Won"
         },
-        "4/declaration/body/7/argument/1/9/openingElement/1/value/expression": {
-          "type": "element",
-          "hash": "52ca04dc5bfb7642586e67a469aa3e24",
-          "context": "",
-          "skip": false,
-          "overrides": {},
-          "content": "Lost"
-        },
         "4/declaration/body/7/argument/3/1/1": {
           "type": "element",
-          "hash": "95e4d77deecfc37c973b10efbe7ca1cb",
+          "hash": "4f13d241ebe58ba5f3069098f2135bbf",
           "context": "",
           "skip": false,
           "overrides": {},
-          "content": "Total deals:"
+          "content": "Total number of tenders:"
         },
         "4/declaration/body/7/argument/3/3": {
           "type": "element",
@@ -17189,7 +17229,63 @@
           "overrides": {},
           "content": "({percentage}%)"
         },
+        "5/declaration/body/6/argument/1/1/openingElement/0/value/expression": {
+          "type": "element",
+          "hash": "f74ae4c3c0c20717d3d58e0b8c8c34bf",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Analysed"
+        },
+        "5/declaration/body/6/argument/1/3/openingElement/1/value/expression": {
+          "type": "element",
+          "hash": "92f97a7b5aa637eb638e4d6d9bdaa01b",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Confirmed application"
+        },
+        "5/declaration/body/6/argument/1/5/openingElement/1/value/expression": {
+          "type": "element",
+          "hash": "901b25ae5cfdd0ec2d2a87c81b7a20bb",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Preparing an offer"
+        },
+        "5/declaration/body/6/argument/1/7/openingElement/1/value/expression": {
+          "type": "element",
+          "hash": "a79bcd1e53b38db7b03b506ff2e05904",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Applied"
+        },
+        "5/declaration/body/6/argument/1/9/openingElement/1/value/expression": {
+          "type": "element",
+          "hash": "61dcd4c53a7b9b4b86c20ebe571f111f",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Won"
+        },
+        "5/declaration/body/6/argument/3/1/1": {
+          "type": "element",
+          "hash": "4f13d241ebe58ba5f3069098f2135bbf",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Total number of tenders:"
+        },
         "6/body/1/argument/3/3": {
+          "type": "element",
+          "hash": "941a386f0a1da9f7ea122244021229ea",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "({percentage}%)"
+        },
+        "7/body/1/argument/3/3": {
           "type": "element",
           "hash": "941a386f0a1da9f7ea122244021229ea",
           "context": "",
@@ -17330,6 +17426,30 @@
           "content": "Total:"
         },
         "5/declaration/body/3/argument/5/3/1": {
+          "type": "element",
+          "hash": "6eb200581a6da498ee6bc585c33dfae0",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Weekly average:"
+        },
+        "5/declaration/body/4/argument/1": {
+          "type": "element",
+          "hash": "ff82774f1a7e6b68ac287b90b33d35a7",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Last 4 weeks"
+        },
+        "5/declaration/body/4/argument/5/1/1": {
+          "type": "element",
+          "hash": "f88aa2f74615d4c75984e36154b9a6e9",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Total:"
+        },
+        "5/declaration/body/4/argument/5/3/1": {
           "type": "element",
           "hash": "6eb200581a6da498ee6bc585c33dfae0",
           "context": "",
