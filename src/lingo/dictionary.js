@@ -4079,6 +4079,62 @@ export default {
           },
           hash: "712c63650b5180cbc14d6246b5d558c2",
         },
+        "19/body/17/argument/1/5/1/5/1/1": {
+          content: {
+            en: "Previous step",
+            pl: "Poprzedni krok",
+          },
+          hash: "f260a408f40ee2d3ee6ce0179ea240b2",
+        },
+        "19/body/17/argument/1/5/1/5/1/3/1/expression/right": {
+          content: {
+            en: "Next step",
+            pl: "Następny krok",
+          },
+          hash: "ca420e8e25d3f2abf1c7f6d95055650e",
+        },
+        "19/body/2/argument/1/5/1/1": {
+          content: {
+            en: "Previous step",
+            pl: "Poprzedni krok",
+          },
+          hash: "77b0776a62adb61c3c34bd14bb16af13",
+        },
+        "19/body/2/argument/1/5/1/3/1/expression/right": {
+          content: {
+            en: "Next step",
+            pl: "Następny krok",
+          },
+          hash: "6149ebb19fa066bc8e64a2647fdd9a97",
+        },
+        "19/body/2/argument/5/1/1": {
+          content: {
+            en: "Previous step",
+            pl: "Poprzedni krok",
+          },
+          hash: "09264f201cbbdc79247a8c17a93d7e3c",
+        },
+        "19/body/2/argument/5/1/3/1/expression/right": {
+          content: {
+            en: "Next step",
+            pl: "Następny krok",
+          },
+          hash: "43fb9d3da12cdf80c1d49037ec8b8eba",
+        },
+        "19/body/3/argument/5/1/1": {
+          content: {
+            en: "Previous step",
+            pl: "Poprzedni krok",
+          },
+          hash: "09264f201cbbdc79247a8c17a93d7e3c",
+        },
+        "19/body/3/argument/5/1/3/1/expression/right": {
+          content: {
+            en: "Next step",
+            pl: "Następny krok",
+          },
+          hash: "43fb9d3da12cdf80c1d49037ec8b8eba",
+        },
         "19/declaration/body/10/0/init/body/0/0/0/alternate/alternate/0/argument":
           {
             content: {
@@ -4312,6 +4368,13 @@ export default {
           },
           hash: "3ecd92ef253604c8cfc84c7b86fad7ca",
         },
+        "20/declaration/body/1/argument/1/1/expression/body/0/argument/1/1": {
+          content: {
+            en: "<element:MoveLeft></element:MoveLeft> Return",
+            pl: "<element:MoveLeft></element:MoveLeft> Powrót",
+          },
+          hash: "1e2ea95a1cc35caf5407cb56609d471b",
+        },
         "20/declaration/body/10/0/init/body/0/0/0/alternate/alternate/0/argument":
           {
             content: {
@@ -4435,10 +4498,10 @@ export default {
         "20/declaration/body/17/argument/1/1/expression/body/1/argument/3/1/5/1/5/1/3/1/expression/right":
           {
             content: {
-              en: "Continue",
-              pl: "Kontynuuj",
+              en: "Next step",
+              pl: "Następny krok",
             },
-            hash: "41b7a61422ab6a6c9b0a9bf39f940642",
+            hash: "1b83ad9be0e4455f6522b168b9f85812",
           },
         "20/declaration/body/17/argument/1/1/expression/body/1/argument/3/1/5/1/5/1/3/3/expression/right":
           {
@@ -4485,6 +4548,14 @@ export default {
               pl: "Poprzedni krok",
             },
             hash: "dc3149e5f8913e58f4705f41b238d00c",
+          },
+        "20/declaration/body/18/argument/1/1/expression/body/1/argument/3/1/5/1/5/1/3/1/expression/right":
+          {
+            content: {
+              en: "Next step",
+              pl: "Następny krok",
+            },
+            hash: "1b83ad9be0e4455f6522b168b9f85812",
           },
         "20/declaration/body/18/argument/1/1/expression/body/2/argument/1/1": {
           content: {
@@ -16741,6 +16812,268 @@ export default {
           },
           hash: "1f68d74c00b7cbbf87657bffc8ec76b3",
         },
+        "10/declaration/body/3/0/init/0/body/0/alternate/0/expression/1/0/value/body/0/expression/0":
+          {
+            content: {
+              en: "This tender has been rejected",
+              pl: "Ten przetarg został odrzucony",
+            },
+            hash: "4312d070c7df80a5752c5fdf927ecfb6",
+          },
+        "10/declaration/body/3/0/init/0/body/0/consequent/0/expression/0": {
+          content: {
+            en: "Thank you for using mimira!",
+            pl: "Dziękujemy za korzystanie z mimira!",
+          },
+          hash: "f0ef204044053aa939d2544986e0496c",
+        },
+        "10/declaration/body/3/consequent/0/argument/1": {
+          content: {
+            en: "No item selected",
+            pl: "Nie wybrano żadnego elementu",
+          },
+          hash: "7025b650153f3d62cf2cd01acdc5c8d7",
+        },
+        "10/declaration/body/4/0/init/0/body/0/alternate/0/expression/1/0/value/body/0/expression/0":
+          {
+            content: {
+              en: "This tender has been rejected",
+              pl: "Ten przetarg został odrzucony",
+            },
+            hash: "4312d070c7df80a5752c5fdf927ecfb6",
+          },
+        "10/declaration/body/4/0/init/0/body/0/consequent/0/expression/0": {
+          content: {
+            en: "Thank you for using mimira!",
+            pl: "Dziękujemy za korzystanie z mimira!",
+          },
+          hash: "f0ef204044053aa939d2544986e0496c",
+        },
+        "10/declaration/body/4/0/init/body/0/expression/0": {
+          content: {
+            en: "Thank you for using mimira!",
+            pl: "Dziękujemy za korzystanie z mimira!",
+          },
+          hash: "f0ef204044053aa939d2544986e0496c",
+        },
+        "10/declaration/body/4/argument/1": {
+          content: {
+            en: "Final decision",
+            pl: "Ostateczna decyzja",
+          },
+          hash: "45259d971b5617d3a7aed82783f45408",
+        },
+        "10/declaration/body/4/argument/5/1": {
+          content: {
+            en: "Review all information before making your final decision.",
+            pl: "Przejrzyj wszystkie informacje przed podjęciem ostatecznej decyzji.",
+          },
+          hash: "079d9ec1ab94bb6f2564565b078f0915",
+        },
+        "10/declaration/body/4/argument/5/5/1/openingElement/2/value/expression/body-label":
+          {
+            content: {
+              en: "Company's decision",
+              pl: "Decyzja firmy",
+            },
+            hash: "b69de22cb9cdee8cc374194c75e3ce1b",
+          },
+        "10/declaration/body/4/argument/5/5/1/openingElement/2/value/expression/body/1":
+          {
+            content: {
+              en: "Applied to tender",
+              pl: "Złożono ofertę w przetargu",
+            },
+            hash: "1e5777b501151a4249bbf14e883460ef",
+          },
+        "10/declaration/body/4/argument/5/5/1/openingElement/2/value/expression/body/3":
+          {
+            content: {
+              en: "Cancel the application",
+              pl: "Anuluj zgłoszenie",
+            },
+            hash: "555f416d008083897609f3713a44ed0d",
+          },
+        "10/declaration/body/4/argument/7/1": {
+          content: {
+            en: "Save and go back to inbox",
+            pl: "Zapisz i wróć do skrzynki odbiorczej",
+          },
+          hash: "68419d9d38df015129515964554fcdd6",
+        },
+        "10/declaration/body/5/0/init/body/0/expression/1/0/value/body/0/expression/0":
+          {
+            content: {
+              en: "This tender has been rejected",
+              pl: "Ten przetarg został odrzucony",
+            },
+            hash: "4312d070c7df80a5752c5fdf927ecfb6",
+          },
+        "10/declaration/body/5/0/init/body/0/expression/1/1/value/body/0/expression/0":
+          {
+            content: {
+              en: "Failed to reject the tender. Please try again.",
+              pl: "Nie udało się odrzucić przetargu. Proszę spróbować ponownie.",
+            },
+            hash: "7e85afd169b31b69a9ac49904e8b83f8",
+          },
+        "10/declaration/body/5/argument/1": {
+          content: {
+            en: "Final decision",
+            pl: "Ostateczna decyzja",
+          },
+          hash: "45259d971b5617d3a7aed82783f45408",
+        },
+        "10/declaration/body/5/argument/1/1": {
+          content: {
+            en: "Final decision",
+            pl: "Ostateczna decyzja",
+          },
+          hash: "45259d971b5617d3a7aed82783f45408",
+        },
+        "10/declaration/body/5/argument/1/5/1": {
+          content: {
+            en: "Review all information before making your final decision.",
+            pl: "Przejrzyj wszystkie informacje przed podjęciem ostatecznej decyzji.",
+          },
+          hash: "1e007c8a29783e589b1729b97e883c25",
+        },
+        "10/declaration/body/5/argument/1/5/5/1/openingElement/2/value/expression/body-label":
+          {
+            content: {
+              en: "Company's decision",
+              pl: "Decyzja firmy",
+            },
+            hash: "b69de22cb9cdee8cc374194c75e3ce1b",
+          },
+        "10/declaration/body/5/argument/1/5/5/1/openingElement/2/value/expression/body/1":
+          {
+            content: {
+              en: "Applied to tender",
+              pl: "Zgłoszono do przetargu",
+            },
+            hash: "9191e417ed390daffc1fc70522ce7133",
+          },
+        "10/declaration/body/5/argument/1/5/5/1/openingElement/2/value/expression/body/3":
+          {
+            content: {
+              en: "Cancel the application",
+              pl: "Anuluj wniosek",
+            },
+            hash: "9545239c9fa0f0cc31259d7cd43b63a3",
+          },
+        "10/declaration/body/5/argument/1/7/1": {
+          content: {
+            en: "Save and go back to inbox",
+            pl: "Zapisz i wróć do skrzynki odbiorczej",
+          },
+          hash: "a1868c58cdd75ea73eee0cefa47584db",
+        },
+        "10/declaration/body/5/argument/5/1": {
+          content: {
+            en: "Review all information before making your final decision.",
+            pl: "Przejrzyj wszystkie informacje przed podjęciem ostatecznej decyzji.",
+          },
+          hash: "079d9ec1ab94bb6f2564565b078f0915",
+        },
+        "10/declaration/body/5/argument/5/5/1/openingElement/2/value/expression/body-label":
+          {
+            content: {
+              en: "Company's decision",
+              pl: "Decyzja firmy",
+            },
+            hash: "b69de22cb9cdee8cc374194c75e3ce1b",
+          },
+        "10/declaration/body/5/argument/5/5/1/openingElement/2/value/expression/body/1":
+          {
+            content: {
+              en: "Applied to tender",
+              pl: "Złożono ofertę w przetargu",
+            },
+            hash: "1e5777b501151a4249bbf14e883460ef",
+          },
+        "10/declaration/body/5/argument/5/5/1/openingElement/2/value/expression/body/3":
+          {
+            content: {
+              en: "Cancel the application",
+              pl: "Anuluj zgłoszenie",
+            },
+            hash: "555f416d008083897609f3713a44ed0d",
+          },
+        "10/declaration/body/5/argument/7/1": {
+          content: {
+            en: "Save and go back to inbox",
+            pl: "Zapisz i wróć do skrzynki odbiorczej",
+          },
+          hash: "68419d9d38df015129515964554fcdd6",
+        },
+        "10/declaration/body/6/0/init/0/body/0/alternate/0/expression/0": {
+          content: {
+            en: "This tender has been rejected",
+            pl: "Ten przetarg został odrzucony",
+          },
+          hash: "4312d070c7df80a5752c5fdf927ecfb6",
+        },
+        "10/declaration/body/6/0/init/0/body/0/alternate/0/expression/1/0/value/body/0/expression/0":
+          {
+            content: {
+              en: "This tender has been rejected",
+              pl: "Ten przetarg został odrzucony",
+            },
+            hash: "4312d070c7df80a5752c5fdf927ecfb6",
+          },
+        "10/declaration/body/6/0/init/0/body/0/consequent/0/expression/0": {
+          content: {
+            en: "Thank you for using mimira!",
+            pl: "Dziękujemy za korzystanie z mimira!",
+          },
+          hash: "f0ef204044053aa939d2544986e0496c",
+        },
+        "10/declaration/body/7/argument/1": {
+          content: {
+            en: "Final decision",
+            pl: "Ostateczna decyzja",
+          },
+          hash: "45259d971b5617d3a7aed82783f45408",
+        },
+        "10/declaration/body/7/argument/5/1": {
+          content: {
+            en: "Review all information before making your final decision.",
+            pl: "Przejrzyj wszystkie informacje przed podjęciem ostatecznej decyzji.",
+          },
+          hash: "079d9ec1ab94bb6f2564565b078f0915",
+        },
+        "10/declaration/body/7/argument/5/5/1/openingElement/2/value/expression/body-label":
+          {
+            content: {
+              en: "Company's decision",
+              pl: "Decyzja firmy",
+            },
+            hash: "b69de22cb9cdee8cc374194c75e3ce1b",
+          },
+        "10/declaration/body/7/argument/5/5/1/openingElement/2/value/expression/body/1":
+          {
+            content: {
+              en: "Applied to tender",
+              pl: "Złożono ofertę w przetargu",
+            },
+            hash: "1e5777b501151a4249bbf14e883460ef",
+          },
+        "10/declaration/body/7/argument/5/5/1/openingElement/2/value/expression/body/3":
+          {
+            content: {
+              en: "Cancel the application",
+              pl: "Anuluj zgłoszenie",
+            },
+            hash: "555f416d008083897609f3713a44ed0d",
+          },
+        "10/declaration/body/7/argument/7/1": {
+          content: {
+            en: "Save and go back to inbox",
+            pl: "Zapisz i wróć do skrzynki odbiorczej",
+          },
+          hash: "68419d9d38df015129515964554fcdd6",
+        },
         "3/declaration/body/0/consequent/0/argument/1": {
           content: {
             en: "No item selected",
@@ -16967,6 +17300,20 @@ export default {
           },
           hash: "f0ef204044053aa939d2544986e0496c",
         },
+        "9/declaration/body/3/consequent/0/argument/1": {
+          content: {
+            en: "No item selected",
+            pl: "Nie wybrano żadnego elementu",
+          },
+          hash: "7025b650153f3d62cf2cd01acdc5c8d7",
+        },
+        "9/declaration/body/4/0/init/body/0/expression/0": {
+          content: {
+            en: "Thank you for using mimira!",
+            pl: "Dziękujemy za korzystanie z mimira!",
+          },
+          hash: "f0ef204044053aa939d2544986e0496c",
+        },
         "9/declaration/body/4/0/init/body/0/expression/1/0/value/body/0/expression/0":
           {
             content: {
@@ -16976,6 +17323,22 @@ export default {
             hash: "4312d070c7df80a5752c5fdf927ecfb6",
           },
         "9/declaration/body/4/0/init/body/0/expression/1/1/value/body/0/expression/0":
+          {
+            content: {
+              en: "Failed to reject the tender. Please try again.",
+              pl: "Nie udało się odrzucić przetargu. Proszę spróbować ponownie.",
+            },
+            hash: "7e85afd169b31b69a9ac49904e8b83f8",
+          },
+        "9/declaration/body/5/0/init/body/0/expression/1/0/value/body/0/expression/0":
+          {
+            content: {
+              en: "This tender has been rejected",
+              pl: "Ten przetarg został odrzucony",
+            },
+            hash: "4312d070c7df80a5752c5fdf927ecfb6",
+          },
+        "9/declaration/body/5/0/init/body/0/expression/1/1/value/body/0/expression/0":
           {
             content: {
               en: "Failed to reject the tender. Please try again.",
@@ -17137,6 +17500,79 @@ export default {
           },
           hash: "555f416d008083897609f3713a44ed0d",
         },
+        "9/declaration/body/6/argument/1": {
+          content: {
+            en: "Final decision",
+            pl: "Ostateczna decyzja",
+          },
+          hash: "45259d971b5617d3a7aed82783f45408",
+        },
+        "9/declaration/body/6/argument/5/1": {
+          content: {
+            en: "Review all information before making your final decision.",
+            pl: "Przejrzyj wszystkie informacje przed podjęciem ostatecznej decyzji.",
+          },
+          hash: "079d9ec1ab94bb6f2564565b078f0915",
+        },
+        "9/declaration/body/6/argument/5/5/1": {
+          content: {
+            en: "Company's decision",
+            pl: "Decyzja firmy",
+          },
+          hash: "b69de22cb9cdee8cc374194c75e3ce1b",
+        },
+        "9/declaration/body/6/argument/5/5/1/openingElement/2/value/expression/body-label":
+          {
+            content: {
+              en: "Company's decision",
+              pl: "Decyzja firmy",
+            },
+            hash: "b69de22cb9cdee8cc374194c75e3ce1b",
+          },
+        "9/declaration/body/6/argument/5/5/1/openingElement/2/value/expression/body/1":
+          {
+            content: {
+              en: "Applied to tender",
+              pl: "Złożono ofertę w przetargu",
+            },
+            hash: "1e5777b501151a4249bbf14e883460ef",
+          },
+        "9/declaration/body/6/argument/5/5/1/openingElement/2/value/expression/body/3":
+          {
+            content: {
+              en: "Cancel the application",
+              pl: "Anuluj wniosek",
+            },
+            hash: "d461524983aea417b89f16be0e4857d2",
+          },
+        "9/declaration/body/6/argument/5/5/3/1": {
+          content: {
+            en: "Applied to tender",
+            pl: "Złożono ofertę w przetargu",
+          },
+          hash: "1e5777b501151a4249bbf14e883460ef",
+        },
+        "9/declaration/body/6/argument/5/5/3/3": {
+          content: {
+            en: "Cancel the application",
+            pl: "Anuluj zgłoszenie",
+          },
+          hash: "555f416d008083897609f3713a44ed0d",
+        },
+        "9/declaration/body/6/argument/7/1": {
+          content: {
+            en: "Save and go back to inbox",
+            pl: "Zapisz i wróć do skrzynki odbiorczej",
+          },
+          hash: "68419d9d38df015129515964554fcdd6",
+        },
+        "9/declaration/body/7/argument/1": {
+          content: {
+            en: "Final decision",
+            pl: "Ostateczna decyzja",
+          },
+          hash: "45259d971b5617d3a7aed82783f45408",
+        },
         "9/declaration/body/7/argument/1/1": {
           content: {
             en: "Did you apply for this tender?",
@@ -17165,6 +17601,13 @@ export default {
           },
           hash: "c340abf1b9610dfa4d30b3a387b98549",
         },
+        "9/declaration/body/7/argument/5/1": {
+          content: {
+            en: "Review all information before making your final decision.",
+            pl: "Przejrzyj wszystkie informacje przed podjęciem ostatecznej decyzji.",
+          },
+          hash: "079d9ec1ab94bb6f2564565b078f0915",
+        },
         "9/declaration/body/7/argument/5/1/3": {
           content: {
             en: "Yes, I applied",
@@ -17178,6 +17621,37 @@ export default {
             pl: "Tak, złożyłem wniosek",
           },
           hash: "c2f1760c27156e28c1c1ac040dac4eb9",
+        },
+        "9/declaration/body/7/argument/5/5/1/openingElement/2/value/expression/body-label":
+          {
+            content: {
+              en: "Company's decision",
+              pl: "Decyzja firmy",
+            },
+            hash: "b69de22cb9cdee8cc374194c75e3ce1b",
+          },
+        "9/declaration/body/7/argument/5/5/1/openingElement/2/value/expression/body/1":
+          {
+            content: {
+              en: "Applied to tender",
+              pl: "Złożono ofertę w przetargu",
+            },
+            hash: "1e5777b501151a4249bbf14e883460ef",
+          },
+        "9/declaration/body/7/argument/5/5/1/openingElement/2/value/expression/body/3":
+          {
+            content: {
+              en: "Cancel the application",
+              pl: "Anuluj zgłoszenie",
+            },
+            hash: "555f416d008083897609f3713a44ed0d",
+          },
+        "9/declaration/body/7/argument/7/1": {
+          content: {
+            en: "Save and go back to inbox",
+            pl: "Zapisz i wróć do skrzynki odbiorczej",
+          },
+          hash: "68419d9d38df015129515964554fcdd6",
         },
       },
     },
