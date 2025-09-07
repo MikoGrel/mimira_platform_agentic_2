@@ -1,7 +1,12 @@
 "use client";
 
-import { useIndividualTender } from "$/features/tenders";
-import { CalendarClock, House, MoveLeft } from "lucide-react";
+import { CommentsDrawer, useIndividualTender } from "$/features/tenders";
+import {
+  CalendarClock,
+  House,
+  MessageSquareText,
+  MoveLeft,
+} from "lucide-react";
 import Link from "$/components/ui/link";
 import { useParams } from "next/navigation";
 import { useState, useEffect, useMemo, useRef, useCallback } from "react";
@@ -62,7 +67,7 @@ function StepperContent({
   const { relativeToNow } = useDateFormat();
   const [nextEnabled, setNextEnabled] = useState(true);
   const nextHandlerRef = useRef<(() => Promise<void>) | null>(null);
-
+  const [commentsOpened, setCommentsOpened] = useState(false);
   const updateTenderStatus = useUpdateTenderStatus();
 
   const { confirmedParts, isProcessingConfirmation, handleContinue } =
@@ -147,6 +152,14 @@ function StepperContent({
             {mapping?.tenders?.submitting_offers_date &&
               relativeToNow(new Date(mapping?.tenders?.submitting_offers_date))}
           </span>
+          <Button
+            size="sm"
+            variant="ghost"
+            onPress={() => setCommentsOpened(true)}
+            className="!min-w-6 ml-auto"
+          >
+            <MessageSquareText className="w-4 h-4 stroke-[1.5]" /> Comments
+          </Button>
         </div>
       </div>
 
@@ -242,6 +255,12 @@ function StepperContent({
           </div>
         </Stepper.Controls>
       </div>
+
+      <CommentsDrawer
+        mapping={mapping}
+        open={commentsOpened}
+        setOpen={setCommentsOpened}
+      />
     </div>
   );
 }
