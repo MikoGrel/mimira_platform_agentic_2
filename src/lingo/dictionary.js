@@ -463,6 +463,14 @@ export default {
             },
             hash: "320af698c03eca3566cae395621ca490",
           },
+        "18/declaration/body/15/argument/1/3/1/1/1/3/expression/0/body/1/3/1/expression/consequent":
+          {
+            content: {
+              en: "Expired",
+              pl: "Wygasło",
+            },
+            hash: "54df90bcc08fbc121668cb7d08f6c283",
+          },
         "18/declaration/body/15/argument/1/5/1/3": {
           content: {
             en: "Ask Mimir",
@@ -18043,10 +18051,10 @@ export default {
         },
         "10/declaration/body/4/consequent/argument": {
           content: {
-            en: "Documents will be available in 24 hours. You will be notified via email.",
-            pl: "Dokumenty będą dostępne w ciągu 24 godzin. Zostaniesz powiadomiony/a e-mailem.",
+            en: "Documents are being prepared. You will be notified via email when they are ready.",
+            pl: "Dokumenty są przygotowywane. Zostaniesz powiadomiony/a e-mailem, gdy będą gotowe.",
           },
-          hash: "4a114eaec6549479c2f80880c53eed6e",
+          hash: "7f260a4572519666eb2ba96b155df40d",
         },
         "10/declaration/body/5/consequent/0/argument/1/1": {
           content: {

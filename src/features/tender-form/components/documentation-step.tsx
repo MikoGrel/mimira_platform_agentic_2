@@ -67,7 +67,8 @@ export function DocumentationStep({
   if (!item?.docs_ready)
     return (
       <Alert color="primary">
-        Documents will be available in 24 hours. You will be notified via email.
+        Documents are being prepared. You will be notified via email when they
+        are ready.
       </Alert>
     );
 
