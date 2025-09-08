@@ -9,6 +9,7 @@ import { DashboardCommand } from "$/features/navigation/components/dashboard-com
 import UserMenu from "$/features/auth/components/user-menu";
 import { cookies } from "next/headers";
 import { CommandInput } from "$/features/navigation/components/command-input";
+import AuthGuard from "$/features/auth/components/auth-guard";
 
 export default async function DashboardLayout({
   children,
@@ -21,6 +22,7 @@ export default async function DashboardLayout({
     <SidebarProvider defaultOpen={sidebarState?.value === "true"}>
       <DashboardSidebar />
       <DashboardCommand />
+      <AuthGuard />
 
       <SidebarInset className="flex flex-col h-screen">
         <header className="grid grid-cols-3 grid-rows-1 h-16 shrink-0  gap-4 bg-sidebar px-4 sticky top-0 z-10">
