@@ -112,7 +112,14 @@ export default function useTenderInboxQuery({
             "yyyy-MM-dd"
           )
         );
+      } else {
+        // By default, filter out expired tenders (only show future deadlines)
+        query = query.gte(
+          "tenders.submitting_offers_date",
+          format(new Date(), "yyyy-MM-dd")
+        );
       }
+
       if (filters.offersDeadlineTo) {
         query = query.lte(
           "tenders.submitting_offers_date",
@@ -127,16 +134,8 @@ export default function useTenderInboxQuery({
         query = query.in("tenders.voivodship", Array.from(filters.voivodeship));
       }
 
-      if (filters.sortBy) {
-        query = query.order("submitting_offers_date", {
-          referencedTable: "tenders",
-          ascending: Array.from(filters.sortBy)[0] === "asc",
-          nullsFirst: false,
-        });
-      }
-
-      query = query.order("created_at", {
-        ascending: false,
+      query = query.order("tenders(submitting_offers_date)", {
+        ascending: true,
         nullsFirst: false,
       });
 
