@@ -9475,6 +9475,22 @@ export default {
             },
             hash: "f260619ed82ea10f4fc0dcff41a1ada8",
           },
+        "15/body/6/argument/1/expression/consequent/3/expression/right/1/expression/alternate/1":
+          {
+            content: {
+              en: "Approve this part",
+              pl: "Zatwierdź tę część",
+            },
+            hash: "7053b3aeb986e11ee5d151478c19c14b",
+          },
+        "15/body/6/argument/1/expression/consequent/3/expression/right/1/expression/alternate/3":
+          {
+            content: {
+              en: "Reject this tender",
+              pl: "Odrzuć tę ofertę",
+            },
+            hash: "676de58ded59cc9dc7af128fd2b15ca8",
+          },
         "15/body/6/argument/1/expression/consequent/3/expression/right/1/expression/consequent":
           {
             content: {

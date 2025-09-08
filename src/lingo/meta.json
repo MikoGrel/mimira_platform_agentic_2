@@ -10623,6 +10623,24 @@
           "overrides": {},
           "content": "Approve this part"
         },
+        "15/body/6/argument/1/expression/consequent/3/expression/right/1/expression/alternate/1": {
+          "type": "element",
+          "hash": "7053b3aeb986e11ee5d151478c19c14b",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Approve this part"
+        },
+        "15/body/6/argument/1/expression/consequent/3/expression/right/1/expression/alternate/3": {
+          "type": "element",
+          "hash": "676de58ded59cc9dc7af128fd2b15ca8",
+          "context": "",
+          "skip": false,
+          "overrides": {
+            "pl": "Odrzuć ten przetarg"
+          },
+          "content": "Reject this tender"
+        },
         "15/body/6/argument/1/expression/consequent/3/expression/right/1/expression/consequent": {
           "type": "element",
           "hash": "95abf29177d2693c76f5278cad6e3102",

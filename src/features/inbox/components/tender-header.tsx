@@ -133,14 +133,24 @@ function HeaderButtons({
                   Unselect
                 </Button>
               ) : (
-                <Button
-                  size={size}
-                  color="primary"
-                  variant="flat"
-                  onPress={onApprovePart}
-                >
-                  Approve this part
-                </Button>
+                <>
+                  <Button
+                    size={size}
+                    color="primary"
+                    variant="flat"
+                    onPress={onApprovePart}
+                  >
+                    Approve this part
+                  </Button>
+                  <Button
+                    onPress={() => onReject?.()}
+                    size={size}
+                    variant="flat"
+                    data-lingo-override-pl="Odrzuć ten przetarg"
+                  >
+                    Reject this tender
+                  </Button>
+                </>
               )}
             </>
           )}
