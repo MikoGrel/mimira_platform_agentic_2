@@ -14,6 +14,7 @@ import {
   EllipsisVertical,
   House,
   MessageSquareText,
+  Bot,
 } from "lucide-react";
 import { motion, AnimatePresence } from "motion/react";
 import { useEffect, useState, type RefObject } from "react";
@@ -43,6 +44,7 @@ interface TenderHeaderProps {
   onApply: (partIds?: string[]) => void;
   onReject?: () => void;
   hasMultipleParts: boolean;
+  setChatOpened: (value: boolean) => void;
 }
 
 interface HeaderButtonsProps {
@@ -59,6 +61,7 @@ interface HeaderButtonsProps {
   onReject?: () => void;
   onUnselectAll?: () => void;
   setCommentsOpened: (value: boolean) => void;
+  setChatOpened: (value: boolean) => void;
   commentCount?: number;
   restoreTender: (id: string) => void;
   onUnseen: (id: string) => void;
@@ -76,6 +79,7 @@ function HeaderButtons({
   onReject,
   onUnselectAll,
   setCommentsOpened,
+  setChatOpened,
   commentCount,
   restoreTender,
   onUnseen,
@@ -202,6 +206,18 @@ function HeaderButtons({
         <MessageSquareText className="w-5 h-5 stroke-[1.5]" />
         {!!commentCount && commentCount}
       </Button>
+      <Tooltip content={<span data-lingo-skip>Assistant</span>}>
+        <Button
+          size={size}
+          variant="ghost"
+          onPress={() => setChatOpened(true)}
+          className="!min-w-10"
+          data-lingo-skip
+          isIconOnly
+        >
+          <Bot className="w-5 h-5 stroke-[1.5]" />
+        </Button>
+      </Tooltip>
       <Dropdown>
         <DropdownTrigger>
           <Button size={size} variant="bordered" isIconOnly>
@@ -327,6 +343,7 @@ export function TenderHeader(props: TenderHeaderProps) {
               onReject={props.onReject}
               onUnselectAll={props.onUnselectAll}
               setCommentsOpened={props.setCommentsOpened}
+              setChatOpened={props.setChatOpened}
               commentCount={count}
               restoreTender={restoreTender}
               onUnseen={onUnseen}
@@ -365,14 +382,15 @@ export function TenderHeader(props: TenderHeaderProps) {
             onApprovePart={props.onApprovePart}
             onRemoveCurrentPart={props.onRemoveCurrentPart}
             onApply={props.onApply}
-            onReject={props.onReject}
-            onUnselectAll={props.onUnselectAll}
-            setCommentsOpened={props.setCommentsOpened}
-            commentCount={count}
-            restoreTender={restoreTender}
-            size="sm"
-            onUnseen={onUnseen}
-            hasMultipleParts={props.hasMultipleParts}
+          onReject={props.onReject}
+          onUnselectAll={props.onUnselectAll}
+          setCommentsOpened={props.setCommentsOpened}
+          setChatOpened={props.setChatOpened}
+          commentCount={count}
+          restoreTender={restoreTender}
+          size="sm"
+          onUnseen={onUnseen}
+          hasMultipleParts={props.hasMultipleParts}
           />
         </motion.div>
       )}

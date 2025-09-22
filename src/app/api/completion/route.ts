@@ -8,7 +8,7 @@ export async function POST(req: Request) {
   const { prompt }: { prompt: string } = await req.json();
 
   const result = streamText({
-    model: openai("gpt-4o-mini"),
+    model: openai("gpt-5-mini"),
     prompt,
     experimental_transform: smoothStream(),
   });

@@ -4467,6 +4467,27 @@ export default {
           },
           hash: "43fb9d3da12cdf80c1d49037ec8b8eba",
         },
+        "20/body/12/argument/1/3/5/3": {
+          content: {
+            en: "<element:MessageSquareText></element:MessageSquareText> Comments",
+            pl: "<element:MessageSquareText></element:MessageSquareText> Komentarze",
+          },
+          hash: "4363b06a6d14db2f2eb20b67c19ec777",
+        },
+        "20/body/12/argument/5/1/1": {
+          content: {
+            en: "Previous step",
+            pl: "Poprzedni krok",
+          },
+          hash: "09264f201cbbdc79247a8c17a93d7e3c",
+        },
+        "20/body/12/argument/5/1/3/1/expression/right": {
+          content: {
+            en: "Next step",
+            pl: "Następny krok",
+          },
+          hash: "43fb9d3da12cdf80c1d49037ec8b8eba",
+        },
         "20/declaration/body/1/argument/1/1/expression/body/0/argument/1/1": {
           content: {
             en: "<element:MoveLeft></element:MoveLeft> Return",
@@ -9534,6 +9555,13 @@ export default {
           },
           hash: "a6f772a6af99c8c1f32f897c91d8d06c",
         },
+        "15/body/6/argument/7/3/1/1": {
+          content: {
+            en: "Mark as unseen",
+            pl: "Oznacz jako nieprzeczytane",
+          },
+          hash: "a6f772a6af99c8c1f32f897c91d8d06c",
+        },
         "15/declaration/body/3/0/init/0/0/value/body/0/expression/0": {
           content: {
             en: "Tender restored",
@@ -13250,7 +13278,23 @@ export default {
             },
             hash: "a003449ecbde6b7a73044f46ea6bbe75",
           },
+        "22/declaration/body/14/0/init/0/body/0/argument/expression/callee/object/0/consequent/1/value":
+          {
+            content: {
+              en: "Products",
+              pl: "Produkty",
+            },
+            hash: "a003449ecbde6b7a73044f46ea6bbe75",
+          },
         "22/declaration/body/14/0/init/0/body/0/argument/expression/callee/object/1/1/value":
+          {
+            content: {
+              en: "Requirements",
+              pl: "Wymagania",
+            },
+            hash: "e108e149e0fd5b65f5850b6f032ccabe",
+          },
+        "22/declaration/body/14/0/init/0/body/0/argument/expression/callee/object/1/consequent/1/value":
           {
             content: {
               en: "Requirements",
@@ -13274,7 +13318,23 @@ export default {
             },
             hash: "e17686a22ffad04cc7bb70524ed4478b",
           },
+        "22/declaration/body/14/0/init/0/body/0/argument/expression/callee/object/3/consequent/1/value":
+          {
+            content: {
+              en: "Description",
+              pl: "Opis",
+            },
+            hash: "e17686a22ffad04cc7bb70524ed4478b",
+          },
         "22/declaration/body/14/0/init/0/body/0/argument/expression/callee/object/4/1/value":
+          {
+            content: {
+              en: "Additional Info",
+              pl: "Dodatkowe informacje",
+            },
+            hash: "d5bf1e70991802fd4a801f3a79cf9e5d",
+          },
+        "22/declaration/body/14/0/init/0/body/0/argument/expression/callee/object/4/consequent/1/value":
           {
             content: {
               en: "Additional Info",
@@ -24315,6 +24375,889 @@ export default {
           },
           hash: "bcd20f0bd4dd518e244133fe58fa6649",
         },
+      },
+    },
+    "features/tenders/components/chatbot-drawer.tsx": {
+      entries: {
+        "11/declaration/body/10/0/init/0/body/consequent/1/expression/0/body/1/1/expression/alternate":
+          {
+            content: {
+              en: "You",
+              pl: "Ty",
+            },
+            hash: "db2a4a796b70cc1430d1b21f6ffb6dcb",
+          },
+        "11/declaration/body/10/0/init/0/body/consequent/1/expression/0/body/1/1/expression/consequent":
+          {
+            content: {
+              en: "<element:Bot></element:Bot> Assistant",
+              pl: "<element:Bot></element:Bot> Asystent",
+            },
+            hash: "486477c4b22b0cfccf512e6aadaf471a",
+          },
+        "11/declaration/body/11/argument/1/1/expression/body/5/1/1-placeholder":
+          {
+            content: {
+              en: "Type your question",
+              pl: "Wpisz swoje pytanie",
+            },
+            hash: "5ce094b6530b667b2c86ef49163a7876",
+          },
+        "12/0/init/body/0/consequent/0/argument": {
+          content: {
+            en: "No content available for this file.",
+            pl: "Brak dostępnej zawartości dla tego pliku.",
+          },
+          hash: "d2a161e899791eacedca70b8a483bf6a",
+        },
+        "13/0/init/body/0/consequent/0/argument": {
+          content: {
+            en: "No content available for this file.",
+            pl: "Brak dostępnej zawartości dla tego pliku.",
+          },
+          hash: "d2a161e899791eacedca70b8a483bf6a",
+        },
+        "14/0/init/body/0/consequent/0/argument": {
+          content: {
+            en: "No content available for this file.",
+            pl: "Brak dostępnej zawartości dla tego pliku.",
+          },
+          hash: "d2a161e899791eacedca70b8a483bf6a",
+        },
+        "14/declaration/body/10/0/init/0/body/consequent/1/expression/0/body/1/1/expression/alternate":
+          {
+            content: {
+              en: "You",
+              pl: "Ty",
+            },
+            hash: "db2a4a796b70cc1430d1b21f6ffb6dcb",
+          },
+        "14/declaration/body/10/0/init/0/body/consequent/1/expression/0/body/1/1/expression/consequent":
+          {
+            content: {
+              en: "<element:Bot></element:Bot> Assistant",
+              pl: "<element:Bot></element:Bot> Asystent",
+            },
+            hash: "486477c4b22b0cfccf512e6aadaf471a",
+          },
+        "14/declaration/body/11/argument/1/1/expression/body/5/1/1-placeholder":
+          {
+            content: {
+              en: "Type your question",
+              pl: "Wpisz swoje pytanie",
+            },
+            hash: "5ce094b6530b667b2c86ef49163a7876",
+          },
+        "14/declaration/body/12/0/init/0/body/consequent/1/expression/0/body/1/1/expression/alternate":
+          {
+            content: {
+              en: "You",
+              pl: "Ty",
+            },
+            hash: "db2a4a796b70cc1430d1b21f6ffb6dcb",
+          },
+        "14/declaration/body/12/0/init/0/body/consequent/1/expression/0/body/1/1/expression/consequent":
+          {
+            content: {
+              en: "<element:Bot></element:Bot> Assistant",
+              pl: "<element:Bot></element:Bot> Asystent",
+            },
+            hash: "486477c4b22b0cfccf512e6aadaf471a",
+          },
+        "14/declaration/body/13/argument/1/1/expression/body/5/1/1-placeholder":
+          {
+            content: {
+              en: "Type your question",
+              pl: "Wpisz swoje pytanie",
+            },
+            hash: "5ce094b6530b667b2c86ef49163a7876",
+          },
+        "14/declaration/body/14/0/init/0/body/1/argument/1/expression/0/body/1/1/expression/alternate":
+          {
+            content: {
+              en: "You",
+              pl: "Ty",
+            },
+            hash: "db2a4a796b70cc1430d1b21f6ffb6dcb",
+          },
+        "14/declaration/body/14/0/init/0/body/1/argument/1/expression/0/body/1/1/expression/consequent":
+          {
+            content: {
+              en: "<element:Bot></element:Bot> Assistant",
+              pl: "<element:Bot></element:Bot> Asystent",
+            },
+            hash: "f1da061dfc84b76e2306a9ac0850d577",
+          },
+        "14/declaration/body/14/0/init/0/body/1/argument/1/expression/0/body/5/expression/right/1":
+          {
+            content: {
+              en: "Sources",
+              pl: "Źródła",
+            },
+            hash: "32899fc3749c911ca678472bda7a9e3e",
+          },
+        "14/declaration/body/14/0/init/0/body/consequent/1/expression/0/body/1/1/expression/alternate":
+          {
+            content: {
+              en: "You",
+              pl: "Ty",
+            },
+            hash: "db2a4a796b70cc1430d1b21f6ffb6dcb",
+          },
+        "14/declaration/body/14/0/init/0/body/consequent/1/expression/0/body/1/1/expression/consequent":
+          {
+            content: {
+              en: "<element:Bot></element:Bot> Assistant",
+              pl: "<element:Bot></element:Bot> Asystent",
+            },
+            hash: "486477c4b22b0cfccf512e6aadaf471a",
+          },
+        "14/declaration/body/15/argument/1/1/1/expression/body/5/1/1-placeholder":
+          {
+            content: {
+              en: "Type your question",
+              pl: "Wpisz swoje pytanie",
+            },
+            hash: "5ce094b6530b667b2c86ef49163a7876",
+          },
+        "14/declaration/body/15/argument/1/1/expression/body/5/1/1-placeholder":
+          {
+            content: {
+              en: "Type your question",
+              pl: "Wpisz swoje pytanie",
+            },
+            hash: "5ce094b6530b667b2c86ef49163a7876",
+          },
+        "14/declaration/body/15/argument/3/1/1/expression/body/2/argument/5/1":
+          {
+            content: {
+              en: "Close",
+              pl: "Zamknij",
+            },
+            hash: "a3ca1ea6dee147739081cf664c41ff16",
+          },
+        "15/declaration/body/14/0/init/0/body/1/argument/1/expression/0/body/1/1/expression/alternate":
+          {
+            content: {
+              en: "You",
+              pl: "Ty",
+            },
+            hash: "db2a4a796b70cc1430d1b21f6ffb6dcb",
+          },
+        "15/declaration/body/14/0/init/0/body/1/argument/1/expression/0/body/1/1/expression/consequent":
+          {
+            content: {
+              en: "<element:Bot></element:Bot> Assistant",
+              pl: "<element:Bot></element:Bot> Asystent",
+            },
+            hash: "f1da061dfc84b76e2306a9ac0850d577",
+          },
+        "15/declaration/body/14/0/init/0/body/1/argument/1/expression/0/body/5/expression/right/1":
+          {
+            content: {
+              en: "Sources",
+              pl: "Źródła",
+            },
+            hash: "32899fc3749c911ca678472bda7a9e3e",
+          },
+        "15/declaration/body/15/argument/1/1/1/expression/body/5/1/1-placeholder":
+          {
+            content: {
+              en: "Type your question",
+              pl: "Wpisz swoje pytanie",
+            },
+            hash: "5ce094b6530b667b2c86ef49163a7876",
+          },
+        "15/declaration/body/15/argument/3/1/1/expression/body/2/argument/5/1":
+          {
+            content: {
+              en: "Close",
+              pl: "Zamknij",
+            },
+            hash: "a3ca1ea6dee147739081cf664c41ff16",
+          },
+        "15/declaration/body/15/argument/3/1/1/expression/body/5/argument/5/1":
+          {
+            content: {
+              en: "Close",
+              pl: "Zamknij",
+            },
+            hash: "a3ca1ea6dee147739081cf664c41ff16",
+          },
+        "15/declaration/body/15/argument/3/1/1/expression/body/6/argument/5/1":
+          {
+            content: {
+              en: "Close",
+              pl: "Zamknij",
+            },
+            hash: "a3ca1ea6dee147739081cf664c41ff16",
+          },
+        "16/0/init/body/1/argument/1": {
+          content: {
+            en: "Top search results",
+            pl: "Najlepsze wyniki wyszukiwania",
+          },
+          hash: "1d133c300941ae3adfff7dd785c47839",
+        },
+        "16/0/init/body/1/argument/3/expression/0/body/2/argument/1": {
+          content: {
+            en: "<expression/>. File: {label}",
+            pl: "<expression/>. Plik: {label}",
+          },
+          hash: "f3b8a5c72774e02f0a7e3bbb01a90c20",
+        },
+        "16/0/init/body/1/argument/3/expression/0/body/2/argument/3/expression/alternate":
+          {
+            content: {
+              en: "Text preview: No preview available.",
+              pl: "Podgląd tekstu: Podgląd niedostępny.",
+            },
+            hash: "617a517d20f0ef84360594940e5eb679",
+          },
+        "16/0/init/body/1/argument/3/expression/0/body/2/argument/3/expression/consequent":
+          {
+            content: {
+              en: "Text preview: {preview}",
+              pl: "Podgląd tekstu: {preview}",
+            },
+            hash: "7a6f574bb125c4d1cd4d95611fd02989",
+          },
+        "16/0/init/body/3/argument/1": {
+          content: {
+            en: "Najlepsze dopasowanie",
+            pl: "Best match",
+          },
+          hash: "eb0acf0f126501fa63556cbdfc8adaca",
+        },
+        "16/0/init/body/7/argument/1": {
+          content: {
+            en: "Najlepsze dopasowania",
+            pl: "Best matches",
+          },
+          hash: "fd72e281e574d7818de294e0999f2392",
+        },
+        "16/declaration/body/14/0/init/0/body/1/argument/1/expression/0/body/1/1/expression/alternate":
+          {
+            content: {
+              en: "You",
+              pl: "Ty",
+            },
+            hash: "db2a4a796b70cc1430d1b21f6ffb6dcb",
+          },
+        "16/declaration/body/14/0/init/0/body/1/argument/1/expression/0/body/1/1/expression/consequent":
+          {
+            content: {
+              en: "<element:Bot></element:Bot> Assistant",
+              pl: "<element:Bot></element:Bot> Asystent",
+            },
+            hash: "f1da061dfc84b76e2306a9ac0850d577",
+          },
+        "16/declaration/body/14/0/init/0/body/1/argument/1/expression/0/body/5/expression/right/1":
+          {
+            content: {
+              en: "Sources",
+              pl: "Źródła",
+            },
+            hash: "32899fc3749c911ca678472bda7a9e3e",
+          },
+        "16/declaration/body/15/argument/1/1/1/expression/body/5/1/1-placeholder":
+          {
+            content: {
+              en: "Type your question",
+              pl: "Wpisz swoje pytanie",
+            },
+            hash: "5ce094b6530b667b2c86ef49163a7876",
+          },
+        "16/declaration/body/15/argument/3/1/1/expression/body/6/argument/5/1":
+          {
+            content: {
+              en: "Close",
+              pl: "Zamknij",
+            },
+            hash: "a3ca1ea6dee147739081cf664c41ff16",
+          },
+        "18/declaration/body/14/0/init/0/body/1/argument/1/expression/0/body/1/1/expression/alternate":
+          {
+            content: {
+              en: "You",
+              pl: "Ty",
+            },
+            hash: "db2a4a796b70cc1430d1b21f6ffb6dcb",
+          },
+        "18/declaration/body/14/0/init/0/body/1/argument/1/expression/0/body/1/1/expression/consequent":
+          {
+            content: {
+              en: "<element:Bot></element:Bot> Assistant",
+              pl: "<element:Bot></element:Bot> Asystent",
+            },
+            hash: "f1da061dfc84b76e2306a9ac0850d577",
+          },
+        "18/declaration/body/14/0/init/0/body/1/argument/1/expression/0/body/3/argument/1/1/expression/alternate":
+          {
+            content: {
+              en: "You",
+              pl: "Ty",
+            },
+            hash: "db2a4a796b70cc1430d1b21f6ffb6dcb",
+          },
+        "18/declaration/body/14/0/init/0/body/1/argument/1/expression/0/body/3/argument/1/1/expression/consequent":
+          {
+            content: {
+              en: "<element:Bot></element:Bot> Assistant",
+              pl: "<element:Bot></element:Bot> Asystent",
+            },
+            hash: "486477c4b22b0cfccf512e6aadaf471a",
+          },
+        "18/declaration/body/14/0/init/0/body/1/argument/1/expression/0/body/3/argument/5/expression/right/1":
+          {
+            content: {
+              en: "Sources",
+              pl: "Źródła",
+            },
+            hash: "2acb36555840019eaad0d6ee061b7157",
+          },
+        "18/declaration/body/14/0/init/0/body/1/argument/1/expression/0/body/4/argument/1/1/expression/alternate":
+          {
+            content: {
+              en: "You",
+              pl: "Ty",
+            },
+            hash: "db2a4a796b70cc1430d1b21f6ffb6dcb",
+          },
+        "18/declaration/body/14/0/init/0/body/1/argument/1/expression/0/body/4/argument/1/1/expression/consequent":
+          {
+            content: {
+              en: "<element:Bot></element:Bot> Assistant",
+              pl: "<element:Bot></element:Bot> Asystent",
+            },
+            hash: "486477c4b22b0cfccf512e6aadaf471a",
+          },
+        "18/declaration/body/14/0/init/0/body/1/argument/1/expression/0/body/4/argument/5/expression/right/1":
+          {
+            content: {
+              en: "Sources",
+              pl: "Źródła",
+            },
+            hash: "2acb36555840019eaad0d6ee061b7157",
+          },
+        "18/declaration/body/14/0/init/0/body/1/argument/1/expression/0/body/5/expression/right/1":
+          {
+            content: {
+              en: "Sources",
+              pl: "Źródła",
+            },
+            hash: "32899fc3749c911ca678472bda7a9e3e",
+          },
+        "18/declaration/body/15/argument/1/1/1/expression/body/5/1/1-placeholder":
+          {
+            content: {
+              en: "Type your question",
+              pl: "Wpisz swoje pytanie",
+            },
+            hash: "5ce094b6530b667b2c86ef49163a7876",
+          },
+        "18/declaration/body/15/argument/3/1/1/expression/body/6/argument/5/1":
+          {
+            content: {
+              en: "Close",
+              pl: "Zamknij",
+            },
+            hash: "a3ca1ea6dee147739081cf664c41ff16",
+          },
+        "18/declaration/body/16/0/init/0/body/1/argument/1/expression/0/body/4/argument/1/1/expression/alternate":
+          {
+            content: {
+              en: "You",
+              pl: "Ty",
+            },
+            hash: "db2a4a796b70cc1430d1b21f6ffb6dcb",
+          },
+        "18/declaration/body/16/0/init/0/body/1/argument/1/expression/0/body/4/argument/1/1/expression/consequent":
+          {
+            content: {
+              en: "<element:Bot></element:Bot> Assistant",
+              pl: "<element:Bot></element:Bot> Asystent",
+            },
+            hash: "486477c4b22b0cfccf512e6aadaf471a",
+          },
+        "18/declaration/body/16/0/init/0/body/1/argument/1/expression/0/body/4/argument/5/expression/right/1":
+          {
+            content: {
+              en: "Sources",
+              pl: "Źródła",
+            },
+            hash: "2acb36555840019eaad0d6ee061b7157",
+          },
+        "18/declaration/body/17/0/init/0/body/1/argument/1/expression/0/body/3/argument/1/1/expression/alternate":
+          {
+            content: {
+              en: "You",
+              pl: "Ty",
+            },
+            hash: "db2a4a796b70cc1430d1b21f6ffb6dcb",
+          },
+        "18/declaration/body/17/0/init/0/body/1/argument/1/expression/0/body/3/argument/1/1/expression/consequent":
+          {
+            content: {
+              en: "<element:Bot></element:Bot> Assistant",
+              pl: "<element:Bot></element:Bot> Asystent",
+            },
+            hash: "486477c4b22b0cfccf512e6aadaf471a",
+          },
+        "18/declaration/body/17/0/init/0/body/1/argument/1/expression/0/body/3/argument/5/expression/right/1":
+          {
+            content: {
+              en: "Źródła wyszukiwania",
+              pl: "Search sources",
+            },
+            hash: "7c4f977e0a89152fcfadac0759a6577e",
+          },
+        "18/declaration/body/17/0/init/0/body/1/argument/1/expression/0/body/3/argument/7/expression/right/1":
+          {
+            content: {
+              en: "Sources",
+              pl: "Źródła",
+            },
+            hash: "2acb36555840019eaad0d6ee061b7157",
+          },
+        "18/declaration/body/17/0/init/0/body/1/argument/1/expression/0/body/4/argument/1/1/expression/alternate":
+          {
+            content: {
+              en: "You",
+              pl: "Ty",
+            },
+            hash: "db2a4a796b70cc1430d1b21f6ffb6dcb",
+          },
+        "18/declaration/body/17/0/init/0/body/1/argument/1/expression/0/body/4/argument/1/1/expression/consequent":
+          {
+            content: {
+              en: "<element:Bot></element:Bot> Assistant",
+              pl: "<element:Bot></element:Bot> Asystent",
+            },
+            hash: "486477c4b22b0cfccf512e6aadaf471a",
+          },
+        "18/declaration/body/17/0/init/0/body/1/argument/1/expression/0/body/4/argument/5/expression/right/1":
+          {
+            content: {
+              en: "Sources",
+              pl: "Źródła",
+            },
+            hash: "2acb36555840019eaad0d6ee061b7157",
+          },
+        "18/declaration/body/17/argument/1/1/1/expression/body/5/1/1-placeholder":
+          {
+            content: {
+              en: "Type your question",
+              pl: "Wpisz swoje pytanie",
+            },
+            hash: "5ce094b6530b667b2c86ef49163a7876",
+          },
+        "18/declaration/body/17/argument/3/1/1/expression/body/6/argument/5/1":
+          {
+            content: {
+              en: "Close",
+              pl: "Zamknij",
+            },
+            hash: "a3ca1ea6dee147739081cf664c41ff16",
+          },
+        "18/declaration/body/18/0/init/0/body/1/argument/1/expression/0/body/3/argument/1/1/expression/alternate":
+          {
+            content: {
+              en: "You",
+              pl: "Ty",
+            },
+            hash: "db2a4a796b70cc1430d1b21f6ffb6dcb",
+          },
+        "18/declaration/body/18/0/init/0/body/1/argument/1/expression/0/body/3/argument/1/1/expression/consequent":
+          {
+            content: {
+              en: "<element:Bot></element:Bot> Assistant",
+              pl: "<element:Bot></element:Bot> Asystent",
+            },
+            hash: "486477c4b22b0cfccf512e6aadaf471a",
+          },
+        "18/declaration/body/18/0/init/0/body/1/argument/1/expression/0/body/3/argument/5/expression/right/1":
+          {
+            content: {
+              en: "Źródła wyszukiwania",
+              pl: "Search sources",
+            },
+            hash: "7c4f977e0a89152fcfadac0759a6577e",
+          },
+        "18/declaration/body/18/0/init/0/body/1/argument/1/expression/0/body/3/argument/7/expression/right/1":
+          {
+            content: {
+              en: "Sources",
+              pl: "Źródła",
+            },
+            hash: "2acb36555840019eaad0d6ee061b7157",
+          },
+        "18/declaration/body/18/argument/1/1/1/expression/body/5/1/1-placeholder":
+          {
+            content: {
+              en: "Type your question",
+              pl: "Wpisz swoje pytanie",
+            },
+            hash: "5ce094b6530b667b2c86ef49163a7876",
+          },
+        "18/declaration/body/18/argument/3/1/1/expression/body/6/argument/5/1":
+          {
+            content: {
+              en: "Close",
+              pl: "Zamknij",
+            },
+            hash: "a3ca1ea6dee147739081cf664c41ff16",
+          },
+        "18/declaration/body/19/0/init/0/body/1/argument/1/expression/0/body/3/argument/1/1/expression/alternate":
+          {
+            content: {
+              en: "You",
+              pl: "Ty",
+            },
+            hash: "db2a4a796b70cc1430d1b21f6ffb6dcb",
+          },
+        "18/declaration/body/19/0/init/0/body/1/argument/1/expression/0/body/3/argument/1/1/expression/consequent":
+          {
+            content: {
+              en: "<element:Bot></element:Bot> Assistant",
+              pl: "<element:Bot></element:Bot> Asystent",
+            },
+            hash: "486477c4b22b0cfccf512e6aadaf471a",
+          },
+        "18/declaration/body/19/0/init/0/body/1/argument/1/expression/0/body/3/argument/5/expression/right/1":
+          {
+            content: {
+              en: "Źródła wyszukiwania",
+              pl: "Search sources",
+            },
+            hash: "7c4f977e0a89152fcfadac0759a6577e",
+          },
+        "18/declaration/body/19/0/init/0/body/1/argument/1/expression/0/body/3/argument/7/expression/right/1":
+          {
+            content: {
+              en: "Sources",
+              pl: "Źródła",
+            },
+            hash: "2acb36555840019eaad0d6ee061b7157",
+          },
+        "18/declaration/body/19/argument/1/1/1/expression/body/3/3/1/1/1": {
+          content: {
+            en: "Original documents",
+            pl: "Oryginalne dokumenty",
+          },
+          hash: "e4b5dc8a27b8e5966a17b65b95a5035d",
+        },
+        "18/declaration/body/19/argument/1/1/1/expression/body/5/1/1-placeholder":
+          {
+            content: {
+              en: "Type your question",
+              pl: "Wpisz swoje pytanie",
+            },
+            hash: "5ce094b6530b667b2c86ef49163a7876",
+          },
+        "18/declaration/body/19/argument/3/1/1/expression/body/6/argument/5/1":
+          {
+            content: {
+              en: "Close",
+              pl: "Zamknij",
+            },
+            hash: "a3ca1ea6dee147739081cf664c41ff16",
+          },
+        "18/declaration/body/20/0/init/0/body/1/argument/1/expression/0/body/3/argument/1/1/expression/alternate":
+          {
+            content: {
+              en: "You",
+              pl: "Ty",
+            },
+            hash: "db2a4a796b70cc1430d1b21f6ffb6dcb",
+          },
+        "18/declaration/body/20/0/init/0/body/1/argument/1/expression/0/body/3/argument/1/1/expression/consequent":
+          {
+            content: {
+              en: "<element:Bot></element:Bot> Assistant",
+              pl: "<element:Bot></element:Bot> Asystent",
+            },
+            hash: "486477c4b22b0cfccf512e6aadaf471a",
+          },
+        "18/declaration/body/20/0/init/0/body/1/argument/1/expression/0/body/3/argument/5/expression/right/1":
+          {
+            content: {
+              en: "Źródła wyszukiwania",
+              pl: "Search sources",
+            },
+            hash: "7c4f977e0a89152fcfadac0759a6577e",
+          },
+        "18/declaration/body/20/0/init/0/body/1/argument/1/expression/0/body/3/argument/7/expression/right/1":
+          {
+            content: {
+              en: "Sources",
+              pl: "Źródła",
+            },
+            hash: "2acb36555840019eaad0d6ee061b7157",
+          },
+        "18/declaration/body/20/argument/1/1/1/expression/body/3/3/1/1/1": {
+          content: {
+            en: "Original documents",
+            pl: "Oryginalne dokumenty",
+          },
+          hash: "e4b5dc8a27b8e5966a17b65b95a5035d",
+        },
+        "18/declaration/body/20/argument/1/1/1/expression/body/5/1/1-placeholder":
+          {
+            content: {
+              en: "Type your question",
+              pl: "Wpisz swoje pytanie",
+            },
+            hash: "5ce094b6530b667b2c86ef49163a7876",
+          },
+        "18/declaration/body/20/argument/3/1/1/expression/body/6/argument/5/1":
+          {
+            content: {
+              en: "Close",
+              pl: "Zamknij",
+            },
+            hash: "a3ca1ea6dee147739081cf664c41ff16",
+          },
+        "18/declaration/body/21/argument/1/1/1/expression/body/3/3/1/1/1": {
+          content: {
+            en: "Original documents",
+            pl: "Oryginalne dokumenty",
+          },
+          hash: "e4b5dc8a27b8e5966a17b65b95a5035d",
+        },
+        "18/declaration/body/21/argument/1/1/1/expression/body/5/1/1-placeholder":
+          {
+            content: {
+              en: "Type your question",
+              pl: "Wpisz swoje pytanie",
+            },
+            hash: "5ce094b6530b667b2c86ef49163a7876",
+          },
+        "18/declaration/body/21/argument/3/1/1/expression/body/6/argument/5/1":
+          {
+            content: {
+              en: "Close",
+              pl: "Zamknij",
+            },
+            hash: "a3ca1ea6dee147739081cf664c41ff16",
+          },
+        "18/declaration/body/23/0/init/0/body/1/argument/1/expression/0/body/3/argument/1/1/expression/alternate":
+          {
+            content: {
+              en: "You",
+              pl: "Ty",
+            },
+            hash: "db2a4a796b70cc1430d1b21f6ffb6dcb",
+          },
+        "18/declaration/body/23/0/init/0/body/1/argument/1/expression/0/body/3/argument/1/1/expression/consequent":
+          {
+            content: {
+              en: "<element:Bot></element:Bot> Assistant",
+              pl: "<element:Bot></element:Bot> Asystent",
+            },
+            hash: "486477c4b22b0cfccf512e6aadaf471a",
+          },
+        "18/declaration/body/23/0/init/0/body/1/argument/1/expression/0/body/3/argument/5/expression/right/1":
+          {
+            content: {
+              en: "Źródła wyszukiwania",
+              pl: "Search sources",
+            },
+            hash: "7c4f977e0a89152fcfadac0759a6577e",
+          },
+        "18/declaration/body/23/0/init/0/body/1/argument/1/expression/0/body/3/argument/7/expression/right/1":
+          {
+            content: {
+              en: "Sources",
+              pl: "Źródła",
+            },
+            hash: "2acb36555840019eaad0d6ee061b7157",
+          },
+        "18/declaration/body/24/argument/1/1/1/expression/body/3/3/1/1/1": {
+          content: {
+            en: "Original documents",
+            pl: "Oryginalne dokumenty",
+          },
+          hash: "e4b5dc8a27b8e5966a17b65b95a5035d",
+        },
+        "18/declaration/body/24/argument/1/1/1/expression/body/5/1/1-placeholder":
+          {
+            content: {
+              en: "Type your question",
+              pl: "Wpisz swoje pytanie",
+            },
+            hash: "5ce094b6530b667b2c86ef49163a7876",
+          },
+        "18/declaration/body/24/argument/3/1/1/expression/body/6/argument/5/1":
+          {
+            content: {
+              en: "Close",
+              pl: "Zamknij",
+            },
+            hash: "a3ca1ea6dee147739081cf664c41ff16",
+          },
+        "20/declaration/body/21/0/init/0/body/1/argument/1/expression/0/body/2/argument/1/1/expression/alternate":
+          {
+            content: {
+              en: "You",
+            },
+            hash: "db2a4a796b70cc1430d1b21f6ffb6dcb",
+          },
+        "20/declaration/body/21/0/init/0/body/1/argument/1/expression/0/body/2/argument/1/1/expression/consequent":
+          {
+            content: {
+              en: "<element:Bot></element:Bot> Assistant",
+            },
+            hash: "486477c4b22b0cfccf512e6aadaf471a",
+          },
+        "20/declaration/body/21/0/init/0/body/1/argument/1/expression/0/body/2/argument/5/expression/right/1":
+          {
+            content: {
+              en: "Źródła wyszukiwania",
+            },
+            hash: "7c4f977e0a89152fcfadac0759a6577e",
+          },
+        "20/declaration/body/21/0/init/0/body/1/argument/1/expression/0/body/2/argument/7/expression/right/1":
+          {
+            content: {
+              en: "Sources",
+            },
+            hash: "2acb36555840019eaad0d6ee061b7157",
+          },
+        "20/declaration/body/21/0/init/0/body/1/argument/1/expression/0/body/3/argument/1/1/expression/alternate":
+          {
+            content: {
+              en: "You",
+              pl: "Ty",
+            },
+            hash: "db2a4a796b70cc1430d1b21f6ffb6dcb",
+          },
+        "20/declaration/body/21/0/init/0/body/1/argument/1/expression/0/body/3/argument/1/1/expression/consequent":
+          {
+            content: {
+              en: "<element:Bot></element:Bot> Assistant",
+              pl: "<element:Bot></element:Bot> Asystent",
+            },
+            hash: "486477c4b22b0cfccf512e6aadaf471a",
+          },
+        "20/declaration/body/21/0/init/0/body/1/argument/1/expression/0/body/3/argument/5/expression/right/1":
+          {
+            content: {
+              en: "Źródła wyszukiwania",
+              pl: "Search sources",
+            },
+            hash: "7c4f977e0a89152fcfadac0759a6577e",
+          },
+        "20/declaration/body/21/0/init/0/body/1/argument/1/expression/0/body/3/argument/7/expression/right/1":
+          {
+            content: {
+              en: "Sources",
+              pl: "Źródła",
+            },
+            hash: "2acb36555840019eaad0d6ee061b7157",
+          },
+        "20/declaration/body/22/argument/1/1/1/expression/body/3/3/1/1/1": {
+          content: {
+            en: "Original documents",
+            pl: "Oryginalne dokumenty",
+          },
+          hash: "e4b5dc8a27b8e5966a17b65b95a5035d",
+        },
+        "20/declaration/body/22/argument/1/1/1/expression/body/5/1/1-placeholder":
+          {
+            content: {
+              en: "Type your question",
+              pl: "Wpisz swoje pytanie",
+            },
+            hash: "5ce094b6530b667b2c86ef49163a7876",
+          },
+        "20/declaration/body/22/argument/3/1/1/expression/body/6/argument/5/1":
+          {
+            content: {
+              en: "Close",
+              pl: "Zamknij",
+            },
+            hash: "a3ca1ea6dee147739081cf664c41ff16",
+          },
+        "20/declaration/body/23/0/init/0/body/1/argument/1/expression/0/body/3/argument/1/1/expression/alternate":
+          {
+            content: {
+              en: "You",
+              pl: "Ty",
+            },
+            hash: "db2a4a796b70cc1430d1b21f6ffb6dcb",
+          },
+        "20/declaration/body/23/0/init/0/body/1/argument/1/expression/0/body/3/argument/1/1/expression/consequent":
+          {
+            content: {
+              en: "<element:Bot></element:Bot> Assistant",
+              pl: "<element:Bot></element:Bot> Asystent",
+            },
+            hash: "486477c4b22b0cfccf512e6aadaf471a",
+          },
+        "20/declaration/body/23/0/init/0/body/1/argument/1/expression/0/body/3/argument/5/expression/right/1":
+          {
+            content: {
+              en: "Źródła wyszukiwania",
+              pl: "Search sources",
+            },
+            hash: "7c4f977e0a89152fcfadac0759a6577e",
+          },
+        "20/declaration/body/23/0/init/0/body/1/argument/1/expression/0/body/3/argument/7/expression/right/1":
+          {
+            content: {
+              en: "Sources",
+              pl: "Źródła",
+            },
+            hash: "2acb36555840019eaad0d6ee061b7157",
+          },
+        "20/declaration/body/24/argument/1/1/1/expression/body/3/3/1/1/1": {
+          content: {
+            en: "Original documents",
+            pl: "Oryginalne dokumenty",
+          },
+          hash: "e4b5dc8a27b8e5966a17b65b95a5035d",
+        },
+        "20/declaration/body/24/argument/1/1/1/expression/body/5/1/1-placeholder":
+          {
+            content: {
+              en: "Type your question",
+              pl: "Wpisz swoje pytanie",
+            },
+            hash: "5ce094b6530b667b2c86ef49163a7876",
+          },
+        "20/declaration/body/24/argument/3/1/1/expression/body/6/argument/5/1":
+          {
+            content: {
+              en: "Close",
+              pl: "Zamknij",
+            },
+            hash: "a3ca1ea6dee147739081cf664c41ff16",
+          },
+        "9/declaration/body/10/0/init/0/body/consequent/1/expression/0/body/1/1/expression/alternate":
+          {
+            content: {
+              en: "You",
+              pl: "Ty",
+            },
+            hash: "db2a4a796b70cc1430d1b21f6ffb6dcb",
+          },
+        "9/declaration/body/10/0/init/0/body/consequent/1/expression/0/body/1/1/expression/consequent":
+          {
+            content: {
+              en: "<element:Bot></element:Bot> Assistant",
+              pl: "<element:Bot></element:Bot> Asystent",
+            },
+            hash: "486477c4b22b0cfccf512e6aadaf471a",
+          },
+        "9/declaration/body/11/argument/1/1/expression/body/5/1/1-placeholder":
+          {
+            content: {
+              en: "Type your question",
+              pl: "Wpisz swoje pytanie",
+            },
+            hash: "5ce094b6530b667b2c86ef49163a7876",
+          },
       },
     },
     "features/tenders/components/comments-drawer.tsx": {

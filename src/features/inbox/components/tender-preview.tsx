@@ -38,6 +38,14 @@ const CommentsDrawer = dynamic(
   }
 );
 
+const ChatbotDrawer = dynamic(
+  () =>
+    import("$/features/tenders/components").then((mod) => mod.ChatbotDrawer),
+  {
+    ssr: false,
+  }
+);
+
 const ReviewCriteriaSection = dynamic(
   () =>
     import("./review-criteria-section").then(
@@ -69,6 +77,7 @@ export function TenderPreview({
   showNextTender,
 }: TenderPreviewProps) {
   const [commentsOpened, setCommentsOpened] = useState(false);
+  const [chatOpened, setChatOpened] = useState(false);
   const [approvedPartIds, setApprovedPartIds] = useState<Set<string>>(
     new Set()
   );
@@ -198,6 +207,7 @@ export function TenderPreview({
           onApply={handleApply}
           onReject={handleReject}
           hasMultipleParts={hasMultipleParts}
+          setChatOpened={setChatOpened}
         />
 
         <div className="flex overflow-hidden h-full flex-[1_0_0]">
@@ -272,6 +282,14 @@ export function TenderPreview({
             open={commentsOpened}
             setOpen={setCommentsOpened}
             mapping={mapping}
+          />
+          <ChatbotDrawer
+            open={chatOpened}
+            setOpen={setChatOpened}
+            mappingId={mapping.id}
+            tenderTitle={
+              selectedPart.part_name || mapping.tenders?.order_object || ""
+            }
           />
         </div>
       </div>

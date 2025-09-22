@@ -1,11 +1,16 @@
 "use client";
 
-import { CommentsDrawer, useIndividualTender } from "$/features/tenders";
+import {
+  ChatbotDrawer,
+  CommentsDrawer,
+  useIndividualTender,
+} from "$/features/tenders";
 import {
   CalendarClock,
   House,
   MessageSquareText,
   MoveLeft,
+  Bot,
 } from "lucide-react";
 import Link from "$/components/ui/link";
 import { useParams } from "next/navigation";
@@ -68,6 +73,7 @@ function StepperContent({
   const [nextEnabled, setNextEnabled] = useState(true);
   const nextHandlerRef = useRef<(() => Promise<void>) | null>(null);
   const [commentsOpened, setCommentsOpened] = useState(false);
+  const [chatOpened, setChatOpened] = useState(false);
   const updateTenderStatus = useUpdateTenderStatus();
 
   const { confirmedParts, isProcessingConfirmation, handleContinue } =
@@ -152,14 +158,25 @@ function StepperContent({
             {mapping?.tenders?.submitting_offers_date &&
               relativeToNow(new Date(mapping?.tenders?.submitting_offers_date))}
           </span>
-          <Button
-            size="sm"
-            variant="ghost"
-            onPress={() => setCommentsOpened(true)}
-            className="!min-w-6 ml-auto"
-          >
-            <MessageSquareText className="w-4 h-4 stroke-[1.5]" /> Comments
-          </Button>
+          <div className="flex items-center gap-2 ml-auto">
+            <Button
+              size="sm"
+              variant="ghost"
+              onPress={() => setChatOpened(true)}
+              className="!min-w-6"
+              data-lingo-skip
+            >
+              <Bot className="w-4 h-4 stroke-[1.5]" /> Assistant
+            </Button>
+            <Button
+              size="sm"
+              variant="ghost"
+              onPress={() => setCommentsOpened(true)}
+              className="!min-w-6"
+            >
+              <MessageSquareText className="w-4 h-4 stroke-[1.5]" /> Comments
+            </Button>
+          </div>
         </div>
       </div>
 
@@ -260,6 +277,12 @@ function StepperContent({
         mapping={mapping}
         open={commentsOpened}
         setOpen={setCommentsOpened}
+      />
+      <ChatbotDrawer
+        open={chatOpened}
+        setOpen={setChatOpened}
+        mappingId={mapping?.id ?? null}
+        tenderTitle={mapping?.tenders?.order_object ?? null}
       />
     </div>
   );
