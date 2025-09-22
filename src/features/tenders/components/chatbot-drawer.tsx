@@ -502,7 +502,7 @@ export function ChatbotDrawer({
   const disabled = !mappingId || isSending || !inputValue.trim();
 
   const resolveFilename = useCallback(
-    (citation: { fileId: string; filename?: string }) => {
+    (citation: { fileId: string; filename?: string; vectorStoreFileId?: string }) => {
       if (citation.filename && citation.filename.trim().length > 0) {
         return citation.filename;
       }
