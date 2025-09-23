@@ -189,7 +189,7 @@ const SearchResultDetails = ({
             className="text-xs"
             onPress={() => setActiveIndex(index)}
           >
-            {`Source ${index + 1}`}
+            {`Źródło ${index + 1}`}
           </Button>
         ))}
       </div>
@@ -444,8 +444,6 @@ export function ChatbotDrawer({
   const [inputValue, setInputValue] = useState("");
   const [isSending, setIsSending] = useState(false);
   const [files, setFiles] = useState<ChatFileEntry[]>([]);
-  const [isLoadingFiles, setIsLoadingFiles] = useState(false);
-  const [filesError, setFilesError] = useState<string | null>(null);
   const [chatError, setChatError] = useState<string | null>(null);
   const [activeCitation, setActiveCitation] = useState<CitationPreviewState | null>(
     null
@@ -453,7 +451,6 @@ export function ChatbotDrawer({
   const [activeSearchMessageId, setActiveSearchMessageId] = useState<string | null>(
     null
   );
-  const [documentsExpanded, setDocumentsExpanded] = useState(true);
 
   const updateMessageById = useCallback(
     (id: string, updater: (message: ChatMessage) => ChatMessage) =>
@@ -467,27 +464,45 @@ export function ChatbotDrawer({
   >(new Map());
 
   useEffect(() => {
-    if (!open) {
+    fileCacheRef.current.clear();
+    setFiles([]);
+  }, [mappingId]);
+
+  useEffect(() => {
+    if (!open || !mappingId) {
+      if (!mappingId) {
+        setFiles([]);
+      }
       return;
     }
 
-    setFilesError(null);
-    setIsLoadingFiles(true);
+    let cancelled = false;
 
-    fetch(VECTOR_FILES_ENDPOINT, { cache: "no-store" })
+    const params = new URLSearchParams({ mappingId });
+
+    fetch(`${VECTOR_FILES_ENDPOINT}?${params.toString()}`, {
+      cache: "no-store",
+    })
       .then(async (res) => {
         if (!res.ok) {
           throw new Error("Failed to load files");
         }
         const data = await res.json();
-        setFiles(data?.files ?? []);
+        if (!cancelled) {
+          setFiles(data?.files ?? []);
+        }
       })
-      .catch(() => {
-        setFilesError("Unable to load linked files");
-        setFiles([]);
-      })
-      .finally(() => setIsLoadingFiles(false));
-  }, [open]);
+      .catch((error) => {
+        console.error("Failed to load tender files", error);
+        if (!cancelled) {
+          setFiles([]);
+        }
+      });
+
+    return () => {
+      cancelled = true;
+    };
+  }, [open, mappingId]);
 
   useEffect(() => {
     if (!activeSearchMessageId) {
@@ -557,6 +572,9 @@ export function ChatbotDrawer({
       const params = new URLSearchParams();
       if (citation.fileId) {
         params.set("source", citation.fileId);
+      }
+      if (mappingId) {
+        params.set("mappingId", mappingId);
       }
       const query = params.toString();
 
@@ -910,8 +928,9 @@ export function ChatbotDrawer({
                 <div className="mt-3 space-y-2" data-lingo-skip>
                   <Button
                     size="sm"
-                    variant="light"
-                    className="w-fit text-xs"
+                    color="primary"
+                    variant="flat"
+                    className="w-fit text-xs font-medium shadow-sm"
                     startContent={<Search className="h-3.5 w-3.5" />}
                     onPress={() => toggleSearchDetails(id)}
                     aria-expanded={activeSearchMessageId === id}
@@ -923,31 +942,6 @@ export function ChatbotDrawer({
                       <SearchResultDetails results={searchResults ?? []} />
                     </div>
                   )}
-                </div>
-              )}
-              {isAssistant && citations && citations.length > 0 && (
-                <div className="mt-3 flex flex-col gap-2" data-lingo-skip>
-                  <span className="text-xs font-medium text-muted-foreground">
-                    Sources
-                  </span>
-                  <div className="flex flex-wrap gap-2">
-                    {citations.map((citation) => {
-                      const displayName = resolveFilename(citation);
-                      return (
-                        <Button
-                          key={`${id}-${citation.fileId}`}
-                          size="sm"
-                          variant="flat"
-                          className="text-xs"
-                          onPress={() => handleCitationClick(citation)}
-                          data-lingo-skip
-                        >
-                          <FileText className="mr-2 h-3.5 w-3.5" />
-                          {displayName}
-                        </Button>
-                      );
-                    })}
-                  </div>
                 </div>
               )}
             </div>
@@ -974,7 +968,7 @@ export function ChatbotDrawer({
                 <div className="flex items-center gap-2">
                   <Bot className="h-5 w-5" />
                   <h3 className="text-lg font-semibold" data-lingo-skip>
-                    Tender assistant
+                    Asystent Mimira
                   </h3>
                 </div>
               </div>
@@ -991,7 +985,7 @@ export function ChatbotDrawer({
                 {isSending && (
                   <div className="flex items-center gap-2 text-sm text-muted-foreground" data-lingo-skip>
                     <Spinner size="sm" color="primary" />
-                    Generating answer...
+                    Przeszukiwanie dokumentacji...
                   </div>
                 )}
                 {chatError && (
@@ -1000,58 +994,6 @@ export function ChatbotDrawer({
                     {chatError}
                   </div>
                 )}
-              </div>
-
-              <div className="flex flex-col gap-3">
-                <div className="flex items-center justify-between">
-                  <button
-                    type="button"
-                    onClick={() => setDocumentsExpanded((prev) => !prev)}
-                    className="flex items-center gap-2 text-sm font-medium"
-                    data-lingo-skip
-                  >
-                    <span>Original documents</span>
-                    <ChevronDown
-                      className={`h-4 w-4 transition-transform ${
-                        documentsExpanded ? "rotate-180" : ""
-                      }`}
-                    />
-                  </button>
-                  {isLoadingFiles && <Spinner size="sm" />}
-                </div>
-                <div className="space-y-2">
-                  {filesError && (
-                    <p className="text-xs text-warning" data-lingo-skip>
-                      {filesError}
-                    </p>
-                  )}
-                  {!filesError && files.length === 0 && !isLoadingFiles && (
-                    <p className="text-xs text-muted-foreground" data-lingo-skip>
-                      No files detected for this tender.
-                    </p>
-                  )}
-                  {documentsExpanded &&
-                    files.map((file) => {
-                      const displayName =
-                        file.filename?.trim().length
-                          ? file.filename
-                          : file.originalFileId?.trim().length
-                            ? file.originalFileId
-                            : file.id;
-                      return (
-                        <div
-                          key={file.id}
-                          className="flex items-center gap-2 rounded-md border bg-content1 px-3 py-2 text-xs"
-                          data-lingo-skip
-                        >
-                          <FileText className="h-3.5 w-3.5 text-muted-foreground" />
-                          <span className="truncate" title={displayName}>
-                            {displayName}
-                          </span>
-                        </div>
-                      );
-                    })}
-                </div>
               </div>
             </DrawerBody>
 
@@ -1093,123 +1035,6 @@ export function ChatbotDrawer({
         )}
       </DrawerContent>
       </Drawer>
-
-      <Modal
-        isOpen={Boolean(activeCitation)}
-        onOpenChange={(isOpen) => {
-          if (!isOpen) {
-            setActiveCitation(null);
-          }
-        }}
-        size="2xl"
-        scrollBehavior="inside"
-      >
-        <ModalContent data-lingo-skip>
-          {(onClose) => {
-            const citation = activeCitation?.citation;
-            const displayName = citation
-              ? resolveFilename(citation)
-              : "Highlighted source";
-            const hasTextContent = Boolean(
-              activeCitation?.content && activeCitation.content.trim().length > 0
-            );
-            const rawData = activeCitation?.raw;
-            const dataUrl = rawData
-              ? `data:${rawData.mimeType};base64,${rawData.base64}`
-              : null;
-            const rawError = activeCitation?.rawError;
-
-            return (
-              <>
-                <ModalHeader className="flex flex-col gap-1">
-                  <span className="text-base font-semibold" data-lingo-skip>
-                    {displayName}
-                  </span>
-                  {citation?.quotes.length ? (
-                    <span className="text-xs text-muted-foreground" data-lingo-skip>
-                      Highlighted excerpts from this file
-                    </span>
-                  ) : null}
-                </ModalHeader>
-                <ModalBody>
-                  {activeCitation?.isLoading ? (
-                    <div className="flex items-center justify-center py-6">
-                      <Spinner />
-                    </div>
-                  ) : activeCitation?.error ? (
-                    <p className="text-sm text-warning" data-lingo-skip>
-                      {activeCitation.error}
-                    </p>
-                  ) : hasTextContent ? (
-                    <ScrollShadow className="max-h-[60vh] space-y-4 pr-2">
-                      {citation && citation.quotes.length > 0 ? (
-                        citation.quotes.map((quote, idx) => (
-                          <div
-                            key={`${citation.fileId}-${idx}`}
-                            className="rounded-md border bg-content1 px-3 py-2"
-                          >
-                            <p className="mb-2 text-xs font-medium text-muted-foreground" data-lingo-skip>
-                              Match {idx + 1}
-                            </p>
-                            <pre className="whitespace-pre-wrap text-sm leading-relaxed" data-lingo-skip>
-                              {buildHighlightedSnippet(
-                                activeCitation?.content ?? "",
-                                quote
-                              )}
-                            </pre>
-                          </div>
-                        ))
-                      ) : (
-                        <pre className="whitespace-pre-wrap text-sm leading-relaxed" data-lingo-skip>
-                          {buildHighlightedSnippet(activeCitation?.content ?? "")}
-                        </pre>
-                      )}
-                    </ScrollShadow>
-                  ) : rawData ? (
-                    <div className="space-y-3 text-sm leading-relaxed">
-                      <p data-lingo-skip>
-                        Text preview isn’t available for this document. Open the
-                        original file to review the source context.
-                      </p>
-                      <Button
-                        color="primary"
-                        onPress={() => {
-                          if (!dataUrl) return;
-                          if (typeof window !== "undefined") {
-                            window.open(dataUrl, "_blank", "noopener,noreferrer");
-                          }
-                        }}
-                        data-lingo-skip
-                      >
-                        Open original file
-                      </Button>
-                    </div>
-                  ) : rawError ? (
-                    <div className="space-y-3 text-sm text-warning" data-lingo-skip>
-                      Unable to retrieve the original file: {rawError}
-                    </div>
-                  ) : (
-                    <p className="text-sm text-muted-foreground" data-lingo-skip>
-                      No preview available for this file.
-                    </p>
-                  )}
-                </ModalBody>
-                <ModalFooter>
-                  <Button
-                    variant="light"
-                    onPress={() => {
-                      setActiveCitation(null);
-                      onClose();
-                    }}
-                  >
-                    Close
-                  </Button>
-                </ModalFooter>
-              </>
-            );
-          }}
-        </ModalContent>
-      </Modal>
     </>
   );
 }

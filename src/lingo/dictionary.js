@@ -59,7 +59,7 @@ export default {
         "12/declaration/body/12/argument/1/5/1/5": {
           content: {
             en: "Coming soon",
-            pl: "Wkrótce dostępne",
+            pl: "Już jest!",
           },
           hash: "05a8fc9f6d826fd88a809d98684edcad",
         },
@@ -87,7 +87,7 @@ export default {
         "12/declaration/body/13/argument/1/5/1/5": {
           content: {
             en: "Coming soon",
-            pl: "Wkrótce dostępne",
+            pl: "Już jest!",
           },
           hash: "05a8fc9f6d826fd88a809d98684edcad",
         },
@@ -115,7 +115,7 @@ export default {
         "12/declaration/body/16/argument/1/5/1/5": {
           content: {
             en: "Coming soon",
-            pl: "Wkrótce dostępne",
+            pl: "Już jest!",
           },
           hash: "05a8fc9f6d826fd88a809d98684edcad",
         },
@@ -150,7 +150,7 @@ export default {
         "14/declaration/body/11/argument/1/5/1/5": {
           content: {
             en: "Coming soon",
-            pl: "Wkrótce dostępne",
+            pl: "Już jest!",
           },
           hash: "05a8fc9f6d826fd88a809d98684edcad",
         },
@@ -171,7 +171,7 @@ export default {
         "14/declaration/body/12/argument/1/5/1/5": {
           content: {
             en: "Coming soon",
-            pl: "Wkrótce dostępne",
+            pl: "Już jest!",
           },
           hash: "05a8fc9f6d826fd88a809d98684edcad",
         },
@@ -199,7 +199,7 @@ export default {
         "15/declaration/body/12/argument/1/5/1/5": {
           content: {
             en: "Coming soon",
-            pl: "Wkrótce dostępne",
+            pl: "Już jest!",
           },
           hash: "05a8fc9f6d826fd88a809d98684edcad",
         },
@@ -227,7 +227,7 @@ export default {
         "16/declaration/body/11/argument/1/5/1/5": {
           content: {
             en: "Coming soon",
-            pl: "Wkrótce dostępne",
+            pl: "Już jest!",
           },
           hash: "05a8fc9f6d826fd88a809d98684edcad",
         },
@@ -255,7 +255,7 @@ export default {
         "16/declaration/body/12/argument/1/5/1/5": {
           content: {
             en: "Coming soon",
-            pl: "Wkrótce dostępne",
+            pl: "Już jest!",
           },
           hash: "05a8fc9f6d826fd88a809d98684edcad",
         },
@@ -283,7 +283,7 @@ export default {
         "16/declaration/body/13/argument/1/5/1/5": {
           content: {
             en: "Coming soon",
-            pl: "Wkrótce dostępne",
+            pl: "Już jest!",
           },
           hash: "05a8fc9f6d826fd88a809d98684edcad",
         },
@@ -318,7 +318,7 @@ export default {
         "17/declaration/body/13/argument/1/5/1/5": {
           content: {
             en: "Coming soon",
-            pl: "Wkrótce dostępne",
+            pl: "Już jest!",
           },
           hash: "05a8fc9f6d826fd88a809d98684edcad",
         },
@@ -346,7 +346,7 @@ export default {
         "17/declaration/body/14/argument/1/5/1/5": {
           content: {
             en: "Coming soon",
-            pl: "Wkrótce dostępne",
+            pl: "Już jest!",
           },
           hash: "05a8fc9f6d826fd88a809d98684edcad",
         },
@@ -374,7 +374,7 @@ export default {
         "17/declaration/body/15/argument/1/5/1/5": {
           content: {
             en: "Coming soon",
-            pl: "Wkrótce dostępne",
+            pl: "Już jest!",
           },
           hash: "05a8fc9f6d826fd88a809d98684edcad",
         },
@@ -409,7 +409,7 @@ export default {
         "18/declaration/body/13/argument/1/5/1/5": {
           content: {
             en: "Coming soon",
-            pl: "Wkrótce dostępne",
+            pl: "Już jest!",
           },
           hash: "05a8fc9f6d826fd88a809d98684edcad",
         },
@@ -437,7 +437,7 @@ export default {
         "18/declaration/body/14/argument/1/5/1/5": {
           content: {
             en: "Coming soon",
-            pl: "Wkrótce dostępne",
+            pl: "Już jest!",
           },
           hash: "05a8fc9f6d826fd88a809d98684edcad",
         },
@@ -481,7 +481,7 @@ export default {
         "18/declaration/body/15/argument/1/5/1/5": {
           content: {
             en: "Coming soon",
-            pl: "Wkrótce dostępne",
+            pl: "Już jest!",
           },
           hash: "05a8fc9f6d826fd88a809d98684edcad",
         },
@@ -516,7 +516,7 @@ export default {
         "19/declaration/body/15/argument/1/5/1/5": {
           content: {
             en: "Coming soon",
-            pl: "Wkrótce dostępne",
+            pl: "Już jest!",
           },
           hash: "05a8fc9f6d826fd88a809d98684edcad",
         },
@@ -537,7 +537,7 @@ export default {
         "19/declaration/body/15/argument/3/5/1/5": {
           content: {
             en: "Coming soon",
-            pl: "Wkrótce dostępne",
+            pl: "Już jest!",
           },
           hash: "05a8fc9f6d826fd88a809d98684edcad",
         },
@@ -611,7 +611,7 @@ export default {
         "19/declaration/body/16/argument/1/5/1/5": {
           content: {
             en: "Coming soon",
-            pl: "Wkrótce dostępne",
+            pl: "Już jest!",
           },
           hash: "05a8fc9f6d826fd88a809d98684edcad",
         },
@@ -662,7 +662,7 @@ export default {
         "20/declaration/body/17/argument/1/5/1/5": {
           content: {
             en: "Coming soon",
-            pl: "Wkrótce dostępne",
+            pl: "Już jest!",
           },
           hash: "05a8fc9f6d826fd88a809d98684edcad",
         },
@@ -24632,7 +24632,7 @@ export default {
         "16/0/init/body/7/argument/1": {
           content: {
             en: "Najlepsze dopasowania",
-            pl: "Best matches",
+            pl: "Najlepsze dopasowania",
           },
           hash: "fd72e281e574d7818de294e0999f2392",
         },
@@ -24807,8 +24807,8 @@ export default {
         "18/declaration/body/17/0/init/0/body/1/argument/1/expression/0/body/3/argument/5/expression/right/1":
           {
             content: {
-              en: "Źródła wyszukiwania",
-              pl: "Search sources",
+              en: "Search Sources",
+              pl: "Źródła wyszukiwania",
             },
             hash: "7c4f977e0a89152fcfadac0759a6577e",
           },
@@ -24879,8 +24879,8 @@ export default {
         "18/declaration/body/18/0/init/0/body/1/argument/1/expression/0/body/3/argument/5/expression/right/1":
           {
             content: {
-              en: "Źródła wyszukiwania",
-              pl: "Search sources",
+              en: "Search Sources",
+              pl: "Źródła wyszukiwania",
             },
             hash: "7c4f977e0a89152fcfadac0759a6577e",
           },
@@ -24927,8 +24927,8 @@ export default {
         "18/declaration/body/19/0/init/0/body/1/argument/1/expression/0/body/3/argument/5/expression/right/1":
           {
             content: {
-              en: "Źródła wyszukiwania",
-              pl: "Search sources",
+              en: "Search Sources",
+              pl: "Źródła wyszukiwania",
             },
             hash: "7c4f977e0a89152fcfadac0759a6577e",
           },
@@ -24982,8 +24982,8 @@ export default {
         "18/declaration/body/20/0/init/0/body/1/argument/1/expression/0/body/3/argument/5/expression/right/1":
           {
             content: {
-              en: "Źródła wyszukiwania",
-              pl: "Search sources",
+              en: "Search Sources",
+              pl: "Źródła wyszukiwania",
             },
             hash: "7c4f977e0a89152fcfadac0759a6577e",
           },
@@ -25060,8 +25060,8 @@ export default {
         "18/declaration/body/23/0/init/0/body/1/argument/1/expression/0/body/3/argument/5/expression/right/1":
           {
             content: {
-              en: "Źródła wyszukiwania",
-              pl: "Search sources",
+              en: "Search Sources",
+              pl: "Źródła wyszukiwania",
             },
             hash: "7c4f977e0a89152fcfadac0759a6577e",
           },
@@ -25113,7 +25113,7 @@ export default {
         "20/declaration/body/21/0/init/0/body/1/argument/1/expression/0/body/2/argument/5/expression/right/1":
           {
             content: {
-              en: "Źródła wyszukiwania",
+              en: "Search Sources",
             },
             hash: "7c4f977e0a89152fcfadac0759a6577e",
           },
@@ -25143,8 +25143,8 @@ export default {
         "20/declaration/body/21/0/init/0/body/1/argument/1/expression/0/body/3/argument/5/expression/right/1":
           {
             content: {
-              en: "Źródła wyszukiwania",
-              pl: "Search sources",
+              en: "Search Sources",
+              pl: "Źródła wyszukiwania",
             },
             hash: "7c4f977e0a89152fcfadac0759a6577e",
           },
@@ -25198,8 +25198,8 @@ export default {
         "20/declaration/body/23/0/init/0/body/1/argument/1/expression/0/body/3/argument/5/expression/right/1":
           {
             content: {
-              en: "Źródła wyszukiwania",
-              pl: "Search sources",
+              en: "Search Sources",
+              pl: "Źródła wyszukiwania",
             },
             hash: "7c4f977e0a89152fcfadac0759a6577e",
           },

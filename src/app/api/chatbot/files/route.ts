@@ -1,11 +1,19 @@
 import { NextResponse } from "next/server";
 
-const VECTOR_STORE_ID = "vs_68d132247b088191a6002c604f3f72e7";
-const OPENAI_VECTOR_URL = `https://api.openai.com/v1/vector_stores/${VECTOR_STORE_ID}/files`;
+import {
+  getDefaultVectorStoreId,
+  resolveVectorStoreId,
+} from "../vector-store";
 
-async function fetchFileMeta(apiKey: string, fileId: string) {
+async function fetchFileMeta(
+  apiKey: string,
+  vectorStoreId: string,
+  fileId: string
+) {
   const response = await fetch(
-    `${OPENAI_VECTOR_URL}/${encodeURIComponent(fileId)}/content`,
+    `https://api.openai.com/v1/vector_stores/${encodeURIComponent(
+      vectorStoreId
+    )}/files/${encodeURIComponent(fileId)}/content`,
     {
       headers: {
         Authorization: `Bearer ${apiKey}`,
@@ -33,7 +41,7 @@ async function fetchFileMeta(apiKey: string, fileId: string) {
   };
 }
 
-export async function GET() {
+export async function GET(request: Request) {
   try {
     const apiKey = process.env.OPENAI_API_KEY;
 
@@ -44,7 +52,25 @@ export async function GET() {
       );
     }
 
-    const response = await fetch(OPENAI_VECTOR_URL, {
+    const url = new URL(request.url);
+    const mappingId = url.searchParams.get("mappingId");
+
+    const vectorStoreId = mappingId
+      ? await resolveVectorStoreId(mappingId)
+      : getDefaultVectorStoreId();
+
+    if (!vectorStoreId) {
+      return NextResponse.json(
+        { error: "Vector store is not configured.", files: [] },
+        { status: 400 }
+      );
+    }
+
+    const openAiVectorUrl = `https://api.openai.com/v1/vector_stores/${encodeURIComponent(
+      vectorStoreId
+    )}/files`;
+
+    const response = await fetch(openAiVectorUrl, {
       headers: {
         Authorization: `Bearer ${apiKey}`,
         "OpenAI-Beta": "assistants=v2",
@@ -75,7 +101,7 @@ export async function GET() {
             : undefined;
 
         if (!filename && id) {
-          const meta = await fetchFileMeta(apiKey, id);
+          const meta = await fetchFileMeta(apiKey, vectorStoreId, id);
           filename = meta?.filename ?? filename;
         }
 
@@ -89,7 +115,7 @@ export async function GET() {
       })
     );
 
-    return NextResponse.json({ files: enriched });
+    return NextResponse.json({ files: enriched, vectorStoreId });
   } catch (error) {
     console.error("Chatbot file list error", error);
     return NextResponse.json(

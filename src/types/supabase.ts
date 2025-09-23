@@ -218,6 +218,7 @@ export type Database = {
           created_at: string
           docs_ready: boolean
           id: string
+          vector_store_id: string | null
           seen_at: string | null
           status: string | null
           tender_id: string | null
@@ -229,6 +230,7 @@ export type Database = {
           created_at?: string
           docs_ready?: boolean
           id?: string
+          vector_store_id?: string | null
           seen_at?: string | null
           status?: string | null
           tender_id?: string | null
@@ -240,6 +242,7 @@ export type Database = {
           created_at?: string
           docs_ready?: boolean
           id?: string
+          vector_store_id?: string | null
           seen_at?: string | null
           status?: string | null
           tender_id?: string | null
@@ -602,6 +605,8 @@ export type Database = {
           publication_date: string | null
           review_criteria_llm: string | null
           submitting_offers_date: string | null
+          vector_db: Json | null
+          vector_store_id: string | null
           updated_at: string | null
           url: string | null
           url_user: string | null
@@ -623,6 +628,8 @@ export type Database = {
           publication_date?: string | null
           review_criteria_llm?: string | null
           submitting_offers_date?: string | null
+          vector_db?: Json | null
+          vector_store_id?: string | null
           updated_at?: string | null
           url?: string | null
           url_user?: string | null
@@ -644,6 +651,8 @@ export type Database = {
           publication_date?: string | null
           review_criteria_llm?: string | null
           submitting_offers_date?: string | null
+          vector_db?: Json | null
+          vector_store_id?: string | null
           updated_at?: string | null
           url?: string | null
           url_user?: string | null

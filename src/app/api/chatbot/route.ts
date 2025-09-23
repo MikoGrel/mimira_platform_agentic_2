@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 
-const VECTOR_STORE_ID = "vs_68d132247b088191a6002c604f3f72e7";
+import { resolveVectorStoreId } from "./vector-store";
 const OPENAI_URL = "https://api.openai.com/v1/responses";
 const SYSTEM_PROMPT =
   "You are an assistant for tender intelligence. Answer only using the provided documentation. If the documentation does not contain the answer, say that you do not know. Keep responses concise, focused, and avoid speculation. Always reply in the same language as the user's latest message.";
@@ -49,7 +49,7 @@ export async function POST(request: Request) {
       );
     }
 
-    const { message, stream } = (await request.json()) as {
+    const { message, mappingId, stream } = (await request.json()) as {
       message?: string;
       mappingId?: string | null;
       stream?: boolean;
@@ -62,6 +62,22 @@ export async function POST(request: Request) {
       );
     }
 
+    if (!mappingId || typeof mappingId !== "string") {
+      return NextResponse.json(
+        { error: "Mapping identifier is required." },
+        { status: 400 }
+      );
+    }
+
+    const vectorStoreId = await resolveVectorStoreId(mappingId);
+
+    if (!vectorStoreId) {
+      return NextResponse.json(
+        { error: "Vector store is not configured for this tender." },
+        { status: 400 }
+      );
+    }
+
     const shouldStream = Boolean(stream);
 
     const requestBody: Record<string, unknown> = {
@@ -69,7 +85,7 @@ export async function POST(request: Request) {
       tools: [
         {
           type: "file_search",
-          vector_store_ids: [VECTOR_STORE_ID],
+          vector_store_ids: [vectorStoreId],
           max_num_results: 20,
         },
       ],

@@ -1,10 +1,12 @@
 import { NextResponse } from "next/server";
 import { Buffer } from "node:buffer";
 
-export const runtime = "nodejs";
+import {
+  getDefaultVectorStoreId,
+  resolveVectorStoreId,
+} from "../../vector-store";
 
-const VECTOR_STORE_ID = "vs_68d132247b088191a6002c604f3f72e7";
-const OPENAI_VECTOR_URL = `https://api.openai.com/v1/vector_stores/${VECTOR_STORE_ID}/files`;
+export const runtime = "nodejs";
 
 export async function GET(
   request: Request,
@@ -31,13 +33,27 @@ export async function GET(
 
     const url = new URL(request.url);
     const sourceFileId = url.searchParams.get("source") ?? "";
+    const mappingId = url.searchParams.get("mappingId");
+
+    const vectorStoreId = mappingId
+      ? await resolveVectorStoreId(mappingId)
+      : getDefaultVectorStoreId();
+
+    if (!vectorStoreId) {
+      return NextResponse.json(
+        { error: "Vector store is not configured." },
+        { status: 400 }
+      );
+    }
 
     let payload: Record<string, unknown> | null = null;
     let primaryError: string | undefined;
     let primaryStatus = 502;
 
     const vectorResponse = await fetch(
-      `${OPENAI_VECTOR_URL}/${encodeURIComponent(vectorStoreFileId)}/content`,
+      `https://api.openai.com/v1/vector_stores/${encodeURIComponent(
+        vectorStoreId
+      )}/files/${encodeURIComponent(vectorStoreFileId)}/content`,
       {
         headers: {
           Authorization: `Bearer ${apiKey}`,
@@ -118,9 +134,9 @@ export async function GET(
           };
           rawError = undefined;
           break;
-          }
+        }
 
-        rawError = await fileResponse.text().catch(() => null) ?? undefined;
+        rawError = (await fileResponse.text().catch(() => null)) ?? undefined;
       }
     }
 

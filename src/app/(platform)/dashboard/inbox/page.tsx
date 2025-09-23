@@ -66,6 +66,7 @@ export default function InboxPage() {
   });
 
   const selectedMapping = selectedMappingFromList || individualMapping;
+  const [chatOpenSignal, setChatOpenSignal] = useState(0);
 
   const { getRef } = useInfiniteList({
     onIntersect: () => {
@@ -89,6 +90,14 @@ export default function InboxPage() {
 
   function handleArchiveButtonPress() {
     addFilter("showRejected", !filterQuery.showRejected);
+  }
+
+  function handleAskMimirClick() {
+    if (!selectedMapping) {
+      return;
+    }
+
+    setChatOpenSignal((value) => value + 1);
   }
 
   return (
@@ -213,13 +222,19 @@ export default function InboxPage() {
           </div>
         </div>
         <div className="absolute bottom-0 left-0 right-0 p-3 px-4 text-sm bg-background border-t border-border">
-          <div className="flex items-center justify-start gap-2">
+          <Button
+            color="primary"
+            variant="flat"
+            className="w-full justify-start gap-3 shadow-sm"
+            onPress={handleAskMimirClick}
+            isDisabled={!selectedMapping}
+          >
             <Symbol className="w-6 h-6" />
-            <p className="font-medium">Ask Mimir</p>
+            <span className="font-medium">Ask Mimir</span>
             <Chip color="primary" variant="flat" size="sm">
               Coming soon
             </Chip>
-          </div>
+          </Button>
         </div>
       </aside>
       {!selectedMapping && (
@@ -246,6 +261,7 @@ export default function InboxPage() {
               setSelectedId(null);
             }
           }}
+          openChatSignal={chatOpenSignal}
         />
       )}
     </main>

@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { AdditionalInfoSection } from "./additional-info-section";
 import { NavigationSidebar } from "./navigation-sidebar";
 import { RequirementsSection } from "./requirements-section";
@@ -68,6 +68,7 @@ interface TenderPreviewProps {
   showNextTender?: () => void;
   selectedPart: InboxTenderPart;
   setSelectedPart: (part: string | null) => void;
+  openChatSignal?: number;
 }
 
 export function TenderPreview({
@@ -75,6 +76,7 @@ export function TenderPreview({
   selectedPart,
   setSelectedPart,
   showNextTender,
+  openChatSignal,
 }: TenderPreviewProps) {
   const [commentsOpened, setCommentsOpened] = useState(false);
   const [chatOpened, setChatOpened] = useState(false);
@@ -88,6 +90,12 @@ export function TenderPreview({
   const hasMultipleParts = mapping.tender_parts.length > 1;
 
   const scrollRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (openChatSignal && openChatSignal > 0) {
+      setChatOpened(true);
+    }
+  }, [openChatSignal]);
 
   function handleApprovePart() {
     setApprovedPartIds((prev) => new Set(prev).add(selectedPart.id));
@@ -288,7 +296,7 @@ export function TenderPreview({
             setOpen={setChatOpened}
             mappingId={mapping.id}
             tenderTitle={
-              selectedPart.part_name || mapping.tenders?.order_object || ""
+              mapping.tenders.order_object || mapping.tenders?.order_object || ""
             }
           />
         </div>

@@ -209,9 +209,10 @@ function HeaderButtons({
       <Tooltip content={<span data-lingo-skip>Assistant</span>}>
         <Button
           size={size}
-          variant="ghost"
+          color="primary"
+          variant="flat"
           onPress={() => setChatOpened(true)}
-          className="!min-w-10"
+          className="!min-w-10 shadow-sm"
           data-lingo-skip
           isIconOnly
         >

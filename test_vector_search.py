@@ -13,7 +13,7 @@ response = client.responses.create(
     input="Jakie rodzaje podpisu są wymagne?",
     tools=[{
         "type": "file_search",
-        "vector_store_ids": ["vs_68d132247b088191a6002c604f3f72e7"]
+        "vector_store_ids": ["vs_68d2847cfda88191bd90b7d7ec6c28f9"]
     }],
     include=["file_search_call.results"]
 )
