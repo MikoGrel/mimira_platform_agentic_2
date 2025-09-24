@@ -51,14 +51,14 @@ export default {
         },
         "12/declaration/body/12/argument/1/5/1/3": {
           content: {
-            en: "Ask Mimir",
+            en: "Ask Mimira",
             pl: "Zapytaj Mimira",
           },
           hash: "c516ed1af9463ccd6bdcb19a1f13e4ac",
         },
         "12/declaration/body/12/argument/1/5/1/5": {
           content: {
-            en: "Coming soon",
+            en: "Try now",
             pl: "Już jest!",
           },
           hash: "05a8fc9f6d826fd88a809d98684edcad",
@@ -79,14 +79,14 @@ export default {
         },
         "12/declaration/body/13/argument/1/5/1/3": {
           content: {
-            en: "Ask Mimir",
+            en: "Ask Mimira",
             pl: "Zapytaj Mimira",
           },
           hash: "c516ed1af9463ccd6bdcb19a1f13e4ac",
         },
         "12/declaration/body/13/argument/1/5/1/5": {
           content: {
-            en: "Coming soon",
+            en: "Try now",
             pl: "Już jest!",
           },
           hash: "05a8fc9f6d826fd88a809d98684edcad",
@@ -107,14 +107,14 @@ export default {
         },
         "12/declaration/body/16/argument/1/5/1/3": {
           content: {
-            en: "Ask Mimir",
+            en: "Ask Mimira",
             pl: "Zapytaj Mimira",
           },
           hash: "c516ed1af9463ccd6bdcb19a1f13e4ac",
         },
         "12/declaration/body/16/argument/1/5/1/5": {
           content: {
-            en: "Coming soon",
+            en: "Try now",
             pl: "Już jest!",
           },
           hash: "05a8fc9f6d826fd88a809d98684edcad",
@@ -142,14 +142,14 @@ export default {
         },
         "14/declaration/body/11/argument/1/5/1/3": {
           content: {
-            en: "Ask Mimir",
+            en: "Ask Mimira",
             pl: "Zapytaj Mimira",
           },
           hash: "c516ed1af9463ccd6bdcb19a1f13e4ac",
         },
         "14/declaration/body/11/argument/1/5/1/5": {
           content: {
-            en: "Coming soon",
+            en: "Try now",
             pl: "Już jest!",
           },
           hash: "05a8fc9f6d826fd88a809d98684edcad",
@@ -163,14 +163,14 @@ export default {
         },
         "14/declaration/body/12/argument/1/5/1/3": {
           content: {
-            en: "Ask Mimir",
+            en: "Ask Mimira",
             pl: "Zapytaj Mimira",
           },
           hash: "c516ed1af9463ccd6bdcb19a1f13e4ac",
         },
         "14/declaration/body/12/argument/1/5/1/5": {
           content: {
-            en: "Coming soon",
+            en: "Try now",
             pl: "Już jest!",
           },
           hash: "05a8fc9f6d826fd88a809d98684edcad",
@@ -191,14 +191,14 @@ export default {
         },
         "15/declaration/body/12/argument/1/5/1/3": {
           content: {
-            en: "Ask Mimir",
+            en: "Ask Mimira",
             pl: "Zapytaj Mimira",
           },
           hash: "c516ed1af9463ccd6bdcb19a1f13e4ac",
         },
         "15/declaration/body/12/argument/1/5/1/5": {
           content: {
-            en: "Coming soon",
+            en: "Try now",
             pl: "Już jest!",
           },
           hash: "05a8fc9f6d826fd88a809d98684edcad",
@@ -219,14 +219,14 @@ export default {
         },
         "16/declaration/body/11/argument/1/5/1/3": {
           content: {
-            en: "Ask Mimir",
+            en: "Ask Mimira",
             pl: "Zapytaj Mimira",
           },
           hash: "c516ed1af9463ccd6bdcb19a1f13e4ac",
         },
         "16/declaration/body/11/argument/1/5/1/5": {
           content: {
-            en: "Coming soon",
+            en: "Try now",
             pl: "Już jest!",
           },
           hash: "05a8fc9f6d826fd88a809d98684edcad",
@@ -247,14 +247,14 @@ export default {
         },
         "16/declaration/body/12/argument/1/5/1/3": {
           content: {
-            en: "Ask Mimir",
+            en: "Ask Mimira",
             pl: "Zapytaj Mimira",
           },
           hash: "c516ed1af9463ccd6bdcb19a1f13e4ac",
         },
         "16/declaration/body/12/argument/1/5/1/5": {
           content: {
-            en: "Coming soon",
+            en: "Try now",
             pl: "Już jest!",
           },
           hash: "05a8fc9f6d826fd88a809d98684edcad",
@@ -275,14 +275,14 @@ export default {
         },
         "16/declaration/body/13/argument/1/5/1/3": {
           content: {
-            en: "Ask Mimir",
+            en: "Ask Mimira",
             pl: "Zapytaj Mimira",
           },
           hash: "c516ed1af9463ccd6bdcb19a1f13e4ac",
         },
         "16/declaration/body/13/argument/1/5/1/5": {
           content: {
-            en: "Coming soon",
+            en: "Try now",
             pl: "Już jest!",
           },
           hash: "05a8fc9f6d826fd88a809d98684edcad",
@@ -310,14 +310,14 @@ export default {
         },
         "17/declaration/body/13/argument/1/5/1/3": {
           content: {
-            en: "Ask Mimir",
+            en: "Ask Mimira",
             pl: "Zapytaj Mimira",
           },
           hash: "c516ed1af9463ccd6bdcb19a1f13e4ac",
         },
         "17/declaration/body/13/argument/1/5/1/5": {
           content: {
-            en: "Coming soon",
+            en: "Try now",
             pl: "Już jest!",
           },
           hash: "05a8fc9f6d826fd88a809d98684edcad",
@@ -338,14 +338,14 @@ export default {
         },
         "17/declaration/body/14/argument/1/5/1/3": {
           content: {
-            en: "Ask Mimir",
+            en: "Ask Mimira",
             pl: "Zapytaj Mimira",
           },
           hash: "c516ed1af9463ccd6bdcb19a1f13e4ac",
         },
         "17/declaration/body/14/argument/1/5/1/5": {
           content: {
-            en: "Coming soon",
+            en: "Try now",
             pl: "Już jest!",
           },
           hash: "05a8fc9f6d826fd88a809d98684edcad",
@@ -366,14 +366,14 @@ export default {
         },
         "17/declaration/body/15/argument/1/5/1/3": {
           content: {
-            en: "Ask Mimir",
+            en: "Ask Mimira",
             pl: "Zapytaj Mimira",
           },
           hash: "c516ed1af9463ccd6bdcb19a1f13e4ac",
         },
         "17/declaration/body/15/argument/1/5/1/5": {
           content: {
-            en: "Coming soon",
+            en: "Try now",
             pl: "Już jest!",
           },
           hash: "05a8fc9f6d826fd88a809d98684edcad",
@@ -401,14 +401,14 @@ export default {
         },
         "18/declaration/body/13/argument/1/5/1/3": {
           content: {
-            en: "Ask Mimir",
+            en: "Ask Mimira",
             pl: "Zapytaj Mimira",
           },
           hash: "c516ed1af9463ccd6bdcb19a1f13e4ac",
         },
         "18/declaration/body/13/argument/1/5/1/5": {
           content: {
-            en: "Coming soon",
+            en: "Try now",
             pl: "Już jest!",
           },
           hash: "05a8fc9f6d826fd88a809d98684edcad",
@@ -429,14 +429,14 @@ export default {
         },
         "18/declaration/body/14/argument/1/5/1/3": {
           content: {
-            en: "Ask Mimir",
+            en: "Ask Mimira",
             pl: "Zapytaj Mimira",
           },
           hash: "c516ed1af9463ccd6bdcb19a1f13e4ac",
         },
         "18/declaration/body/14/argument/1/5/1/5": {
           content: {
-            en: "Coming soon",
+            en: "Try now",
             pl: "Już jest!",
           },
           hash: "05a8fc9f6d826fd88a809d98684edcad",
@@ -473,14 +473,14 @@ export default {
           },
         "18/declaration/body/15/argument/1/5/1/3": {
           content: {
-            en: "Ask Mimir",
+            en: "Ask Mimira",
             pl: "Zapytaj Mimira",
           },
           hash: "c516ed1af9463ccd6bdcb19a1f13e4ac",
         },
         "18/declaration/body/15/argument/1/5/1/5": {
           content: {
-            en: "Coming soon",
+            en: "Try now",
             pl: "Już jest!",
           },
           hash: "05a8fc9f6d826fd88a809d98684edcad",
@@ -509,17 +509,17 @@ export default {
           },
         "18/declaration/body/17/argument/1/5/1/3": {
           content: {
-            en: "Ask Mimir",
+            en: "Ask Mimira",
             pl: "Zapytaj Mimira",
           },
-          hash: "c516ed1af9463ccd6bdcb19a1f13e4ac",
+          hash: "794ecd418d0b3530b94008aed80b30d7",
         },
         "18/declaration/body/17/argument/1/5/1/5": {
           content: {
-            en: "Coming soon",
-            pl: "Już jest!",
+            en: "Try now",
+            pl: "Wypróbuj teraz",
           },
-          hash: "05a8fc9f6d826fd88a809d98684edcad",
+          hash: "9b9feae9d2550e4d7d39f3634be37ce6",
         },
         "18/declaration/body/17/argument/3/expression/right/1/1": {
           content: {
@@ -544,14 +544,14 @@ export default {
         },
         "19/declaration/body/15/argument/1/5/1/3": {
           content: {
-            en: "Ask Mimir",
+            en: "Ask Mimira",
             pl: "Zapytaj Mimira",
           },
           hash: "c516ed1af9463ccd6bdcb19a1f13e4ac",
         },
         "19/declaration/body/15/argument/1/5/1/5": {
           content: {
-            en: "Coming soon",
+            en: "Try now",
             pl: "Już jest!",
           },
           hash: "05a8fc9f6d826fd88a809d98684edcad",
@@ -565,14 +565,14 @@ export default {
         },
         "19/declaration/body/15/argument/3/5/1/3": {
           content: {
-            en: "Ask Mimir",
+            en: "Ask Mimira",
             pl: "Zapytaj Mimira",
           },
           hash: "c516ed1af9463ccd6bdcb19a1f13e4ac",
         },
         "19/declaration/body/15/argument/3/5/1/5": {
           content: {
-            en: "Coming soon",
+            en: "Try now",
             pl: "Już jest!",
           },
           hash: "05a8fc9f6d826fd88a809d98684edcad",
@@ -639,14 +639,14 @@ export default {
           },
         "19/declaration/body/16/argument/1/5/1/3": {
           content: {
-            en: "Ask Mimir",
+            en: "Ask Mimira",
             pl: "Zapytaj Mimira",
           },
           hash: "c516ed1af9463ccd6bdcb19a1f13e4ac",
         },
         "19/declaration/body/16/argument/1/5/1/5": {
           content: {
-            en: "Coming soon",
+            en: "Try now",
             pl: "Już jest!",
           },
           hash: "05a8fc9f6d826fd88a809d98684edcad",
@@ -690,14 +690,14 @@ export default {
           },
         "20/declaration/body/17/argument/1/5/1/3": {
           content: {
-            en: "Ask Mimir",
+            en: "Ask Mimira",
             pl: "Zapytaj Mimira",
           },
           hash: "c516ed1af9463ccd6bdcb19a1f13e4ac",
         },
         "20/declaration/body/17/argument/1/5/1/5": {
           content: {
-            en: "Coming soon",
+            en: "Try now",
             pl: "Już jest!",
           },
           hash: "05a8fc9f6d826fd88a809d98684edcad",
@@ -7612,14 +7612,14 @@ export default {
         },
         "13/declaration/body/4/argument/5/1/3": {
           content: {
-            en: "Ask Mimir",
+            en: "Ask Mimira",
             pl: "Zapytaj Mimira",
           },
           hash: "c516ed1af9463ccd6bdcb19a1f13e4ac",
         },
         "13/declaration/body/4/argument/5/1/5": {
           content: {
-            en: "Coming soon",
+            en: "Try now",
             pl: "Już wkrótce",
           },
           hash: "9c77c5fe368c45ad99e634d30c8cee23",
@@ -24476,6 +24476,20 @@ export default {
     },
     "features/tenders/components/chatbot-drawer.tsx": {
       entries: {
+        "11/0/init/body/0/consequent/0/argument": {
+          content: {
+            en: "No content available for this file.",
+            pl: "Brak dostępnej zawartości dla tego pliku.",
+          },
+          hash: "d2a161e899791eacedca70b8a483bf6a",
+        },
+        "11/0/init/body/7/argument/1": {
+          content: {
+            en: "Najlepsze dopasowania",
+            pl: "Najlepsze dopasowania",
+          },
+          hash: "fd72e281e574d7818de294e0999f2392",
+        },
         "11/declaration/body/10/0/init/0/body/consequent/1/expression/0/body/1/1/expression/alternate":
           {
             content: {
@@ -24513,6 +24527,221 @@ export default {
             pl: "Brak dostępnej zawartości dla tego pliku.",
           },
           hash: "d2a161e899791eacedca70b8a483bf6a",
+        },
+        "13/0/init/body/7/argument/1": {
+          content: {
+            en: "Najlepsze dopasowania",
+            pl: "Najlepsze dopasowania",
+          },
+          hash: "fd72e281e574d7818de294e0999f2392",
+        },
+        "13/declaration/body/13/0/init/0/body/1/argument/1/expression/0/body/2/argument/1/1/expression/alternate":
+          {
+            content: {
+              en: "You",
+              pl: "Ty",
+            },
+            hash: "db2a4a796b70cc1430d1b21f6ffb6dcb",
+          },
+        "13/declaration/body/13/0/init/0/body/1/argument/1/expression/0/body/2/argument/1/1/expression/consequent":
+          {
+            content: {
+              en: "<element:Bot></element:Bot> Assistant",
+              pl: "<element:Bot></element:Bot> Asystent",
+            },
+            hash: "486477c4b22b0cfccf512e6aadaf471a",
+          },
+        "13/declaration/body/13/0/init/0/body/1/argument/1/expression/0/body/2/argument/5/expression/right/1":
+          {
+            content: {
+              en: "Źródła wyszukiwania",
+              pl: "Źródła wyszukiwania",
+            },
+            hash: "7c4f977e0a89152fcfadac0759a6577e",
+          },
+        "13/declaration/body/13/0/init/0/body/1/argument/1/expression/0/body/3/argument/1/1/expression/alternate":
+          {
+            content: {
+              en: "You",
+              pl: "Ty",
+            },
+            hash: "db2a4a796b70cc1430d1b21f6ffb6dcb",
+          },
+        "13/declaration/body/13/0/init/0/body/1/argument/1/expression/0/body/3/argument/1/1/expression/consequent":
+          {
+            content: {
+              en: "<element:Bot></element:Bot> Assistant",
+              pl: "<element:Bot></element:Bot> Asystent",
+            },
+            hash: "486477c4b22b0cfccf512e6aadaf471a",
+          },
+        "13/declaration/body/13/0/init/0/body/1/argument/1/expression/0/body/3/argument/5/expression/right/1":
+          {
+            content: {
+              en: "Źródła odpowiedzi",
+              pl: "Źródła odpowiedzi",
+            },
+            hash: "0872e78d28d69246dec97100f71b7b8c",
+          },
+        "13/declaration/body/13/0/init/0/body/1/argument/1/expression/0/body/3/argument/7/expression/right/1":
+          {
+            content: {
+              en: "Źródła wyszukiwania",
+              pl: "Źródła wyszukiwania",
+            },
+            hash: "7c4f977e0a89152fcfadac0759a6577e",
+          },
+        "13/declaration/body/14/0/init/0/body/1/argument/1/expression/0/body/3/argument/1/1/expression/alternate":
+          {
+            content: {
+              en: "You",
+              pl: "Ty",
+            },
+            hash: "db2a4a796b70cc1430d1b21f6ffb6dcb",
+          },
+        "13/declaration/body/14/0/init/0/body/1/argument/1/expression/0/body/3/argument/1/1/expression/consequent":
+          {
+            content: {
+              en: "<element:Bot></element:Bot> Assistant",
+              pl: "<element:Bot></element:Bot> Asystent",
+            },
+            hash: "486477c4b22b0cfccf512e6aadaf471a",
+          },
+        "13/declaration/body/14/0/init/0/body/1/argument/1/expression/0/body/3/argument/5/expression/right/1":
+          {
+            content: {
+              en: "Źródła odpowiedzi",
+              pl: "Źródła odpowiedzi",
+            },
+            hash: "0872e78d28d69246dec97100f71b7b8c",
+          },
+        "13/declaration/body/14/0/init/0/body/1/argument/1/expression/0/body/3/argument/7/expression/right/1":
+          {
+            content: {
+              en: "Źródła wyszukiwania",
+              pl: "Źródła wyszukiwania",
+            },
+            hash: "7c4f977e0a89152fcfadac0759a6577e",
+          },
+        "13/declaration/body/14/argument/1/1/1/expression/body/5/1/1-placeholder":
+          {
+            content: {
+              en: "Type your question",
+              pl: "Wpisz swoje pytanie",
+            },
+            hash: "5ce094b6530b667b2c86ef49163a7876",
+          },
+        "13/declaration/body/14/argument/3/1/1/expression/body/1/1": {
+          content: {
+            en: "Źródło odpowiedzi",
+            pl: "Źródło odpowiedzi",
+          },
+          hash: "a2a66ba7d3e5f33bb95c8cb6000aa688",
+        },
+        "13/declaration/body/14/argument/3/1/1/expression/body/5/1": {
+          content: {
+            en: "Zamknij",
+            pl: "Zamknij",
+          },
+          hash: "2613133ea2f4545ced472d395fbc8875",
+        },
+        "13/declaration/body/16/argument/1/1/1/expression/body/5/1/1-placeholder":
+          {
+            content: {
+              en: "Type your question",
+              pl: "Wpisz swoje pytanie",
+            },
+            hash: "5ce094b6530b667b2c86ef49163a7876",
+          },
+        "13/declaration/body/16/argument/3/1/1/expression/body/1/1": {
+          content: {
+            en: "Źródło odpowiedzi",
+            pl: "Źródło odpowiedzi",
+          },
+          hash: "a2a66ba7d3e5f33bb95c8cb6000aa688",
+        },
+        "13/declaration/body/16/argument/3/1/1/expression/body/5/1": {
+          content: {
+            en: "Zamknij",
+            pl: "Zamknij",
+          },
+          hash: "2613133ea2f4545ced472d395fbc8875",
+        },
+        "13/declaration/body/17/argument/1/1/1/expression/body/5/1/1-placeholder":
+          {
+            content: {
+              en: "Type your question",
+              pl: "Wpisz swoje pytanie",
+            },
+            hash: "5ce094b6530b667b2c86ef49163a7876",
+          },
+        "13/declaration/body/17/argument/3/1/1/expression/body/1/1": {
+          content: {
+            en: "Źródło odpowiedzi",
+            pl: "Źródło odpowiedzi",
+          },
+          hash: "a2a66ba7d3e5f33bb95c8cb6000aa688",
+        },
+        "13/declaration/body/17/argument/3/1/1/expression/body/5/1": {
+          content: {
+            en: "Zamknij",
+            pl: "Zamknij",
+          },
+          hash: "2613133ea2f4545ced472d395fbc8875",
+        },
+        "13/declaration/body/18/0/init/0/body/1/argument/1/expression/0/body/3/argument/1/1/expression/alternate":
+          {
+            content: {
+              en: "You",
+              pl: "Ty",
+            },
+            hash: "db2a4a796b70cc1430d1b21f6ffb6dcb",
+          },
+        "13/declaration/body/18/0/init/0/body/1/argument/1/expression/0/body/3/argument/1/1/expression/consequent":
+          {
+            content: {
+              en: "<element:Bot></element:Bot> Assistant",
+              pl: "<element:Bot></element:Bot> Asystent",
+            },
+            hash: "486477c4b22b0cfccf512e6aadaf471a",
+          },
+        "13/declaration/body/18/0/init/0/body/1/argument/1/expression/0/body/3/argument/5/expression/right/1":
+          {
+            content: {
+              en: "Źródła odpowiedzi",
+              pl: "Źródła odpowiedzi",
+            },
+            hash: "0872e78d28d69246dec97100f71b7b8c",
+          },
+        "13/declaration/body/18/0/init/0/body/1/argument/1/expression/0/body/3/argument/7/expression/right/1":
+          {
+            content: {
+              en: "Źródła wyszukiwania",
+              pl: "Źródła wyszukiwania",
+            },
+            hash: "7c4f977e0a89152fcfadac0759a6577e",
+          },
+        "13/declaration/body/21/argument/1/1/1/expression/body/5/1/1-placeholder":
+          {
+            content: {
+              en: "Type your question",
+              pl: "Wpisz swoje pytanie",
+            },
+            hash: "5ce094b6530b667b2c86ef49163a7876",
+          },
+        "13/declaration/body/21/argument/3/1/1/expression/body/1/1": {
+          content: {
+            en: "Źródło odpowiedzi",
+            pl: "Źródło odpowiedzi",
+          },
+          hash: "a2a66ba7d3e5f33bb95c8cb6000aa688",
+        },
+        "13/declaration/body/21/argument/3/1/1/expression/body/5/1": {
+          content: {
+            en: "Zamknij",
+            pl: "Zamknij",
+          },
+          hash: "2613133ea2f4545ced472d395fbc8875",
         },
         "14/0/init/body/0/consequent/0/argument": {
           content: {
@@ -24696,6 +24925,114 @@ export default {
             },
             hash: "a3ca1ea6dee147739081cf664c41ff16",
           },
+        "15/declaration/body/18/0/init/0/body/1/argument/1/expression/0/body/3/argument/1/1/expression/alternate":
+          {
+            content: {
+              en: "You",
+              pl: "Ty",
+            },
+            hash: "db2a4a796b70cc1430d1b21f6ffb6dcb",
+          },
+        "15/declaration/body/18/0/init/0/body/1/argument/1/expression/0/body/3/argument/1/1/expression/consequent":
+          {
+            content: {
+              en: "<element:Bot></element:Bot> Assistant",
+              pl: "<element:Bot></element:Bot> Asystent",
+            },
+            hash: "486477c4b22b0cfccf512e6aadaf471a",
+          },
+        "15/declaration/body/18/0/init/0/body/1/argument/1/expression/0/body/3/argument/5/expression/right/1":
+          {
+            content: {
+              en: "Źródła odpowiedzi",
+              pl: "Źródła odpowiedzi",
+            },
+            hash: "0872e78d28d69246dec97100f71b7b8c",
+          },
+        "15/declaration/body/18/0/init/0/body/1/argument/1/expression/0/body/3/argument/7/expression/right/1":
+          {
+            content: {
+              en: "Źródła wyszukiwania",
+              pl: "Źródła wyszukiwania",
+            },
+            hash: "7c4f977e0a89152fcfadac0759a6577e",
+          },
+        "15/declaration/body/20/0/init/0/body/1/argument/1/expression/0/body/3/argument/1/1/expression/alternate":
+          {
+            content: {
+              en: "You",
+              pl: "Ty",
+            },
+            hash: "db2a4a796b70cc1430d1b21f6ffb6dcb",
+          },
+        "15/declaration/body/20/0/init/0/body/1/argument/1/expression/0/body/3/argument/1/1/expression/consequent":
+          {
+            content: {
+              en: "<element:Bot></element:Bot> Assistant",
+              pl: "<element:Bot></element:Bot> Asystent",
+            },
+            hash: "486477c4b22b0cfccf512e6aadaf471a",
+          },
+        "15/declaration/body/20/0/init/0/body/1/argument/1/expression/0/body/3/argument/5/expression/right/1":
+          {
+            content: {
+              en: "Źródła odpowiedzi",
+              pl: "Źródła odpowiedzi",
+            },
+            hash: "0872e78d28d69246dec97100f71b7b8c",
+          },
+        "15/declaration/body/20/0/init/0/body/1/argument/1/expression/0/body/3/argument/7/expression/right/1":
+          {
+            content: {
+              en: "Źródła wyszukiwania",
+              pl: "Źródła wyszukiwania",
+            },
+            hash: "7c4f977e0a89152fcfadac0759a6577e",
+          },
+        "15/declaration/body/21/argument/1/1/1/expression/body/5/1/1-placeholder":
+          {
+            content: {
+              en: "Type your question",
+              pl: "Wpisz swoje pytanie",
+            },
+            hash: "5ce094b6530b667b2c86ef49163a7876",
+          },
+        "15/declaration/body/21/argument/3/1/1/expression/body/1/1": {
+          content: {
+            en: "Źródło odpowiedzi",
+            pl: "Źródło odpowiedzi",
+          },
+          hash: "a2a66ba7d3e5f33bb95c8cb6000aa688",
+        },
+        "15/declaration/body/21/argument/3/1/1/expression/body/5/1": {
+          content: {
+            en: "Zamknij",
+            pl: "Zamknij",
+          },
+          hash: "2613133ea2f4545ced472d395fbc8875",
+        },
+        "15/declaration/body/23/argument/1/1/1/expression/body/5/1/1-placeholder":
+          {
+            content: {
+              en: "Type your question",
+              pl: "Wpisz swoje pytanie",
+            },
+            hash: "5ce094b6530b667b2c86ef49163a7876",
+          },
+        "15/declaration/body/23/argument/3/1/1/expression/body/1/1": {
+          content: {
+            en: "Źródło odpowiedzi",
+            pl: "Źródło odpowiedzi",
+          },
+          hash: "a2a66ba7d3e5f33bb95c8cb6000aa688",
+        },
+        "15/declaration/body/23/argument/3/1/1/expression/body/5/1": {
+          content: {
+            en: "Zamknij",
+            pl: "Zamknij",
+          },
+          hash: "2613133ea2f4545ced472d395fbc8875",
+        },
         "16/0/init/body/1/argument/1": {
           content: {
             en: "Top search results",
@@ -24780,6 +25117,60 @@ export default {
             },
             hash: "a3ca1ea6dee147739081cf664c41ff16",
           },
+        "17/declaration/body/20/0/init/0/body/1/argument/1/expression/0/body/3/argument/1/1/expression/alternate":
+          {
+            content: {
+              en: "You",
+              pl: "Ty",
+            },
+            hash: "db2a4a796b70cc1430d1b21f6ffb6dcb",
+          },
+        "17/declaration/body/20/0/init/0/body/1/argument/1/expression/0/body/3/argument/1/1/expression/consequent":
+          {
+            content: {
+              en: "<element:Bot></element:Bot> Assistant",
+              pl: "<element:Bot></element:Bot> Asystent",
+            },
+            hash: "486477c4b22b0cfccf512e6aadaf471a",
+          },
+        "17/declaration/body/20/0/init/0/body/1/argument/1/expression/0/body/3/argument/5/expression/right/1":
+          {
+            content: {
+              en: "Źródła odpowiedzi",
+              pl: "Źródła odpowiedzi",
+            },
+            hash: "0872e78d28d69246dec97100f71b7b8c",
+          },
+        "17/declaration/body/20/0/init/0/body/1/argument/1/expression/0/body/3/argument/7/expression/right/1":
+          {
+            content: {
+              en: "Źródła wyszukiwania",
+              pl: "Źródła wyszukiwania",
+            },
+            hash: "7c4f977e0a89152fcfadac0759a6577e",
+          },
+        "17/declaration/body/23/argument/1/1/1/expression/body/5/1/1-placeholder":
+          {
+            content: {
+              en: "Type your question",
+              pl: "Wpisz swoje pytanie",
+            },
+            hash: "5ce094b6530b667b2c86ef49163a7876",
+          },
+        "17/declaration/body/23/argument/3/1/1/expression/body/1/1": {
+          content: {
+            en: "Źródło odpowiedzi",
+            pl: "Źródło odpowiedzi",
+          },
+          hash: "a2a66ba7d3e5f33bb95c8cb6000aa688",
+        },
+        "17/declaration/body/23/argument/3/1/1/expression/body/5/1": {
+          content: {
+            en: "Zamknij",
+            pl: "Zamknij",
+          },
+          hash: "2613133ea2f4545ced472d395fbc8875",
+        },
         "18/declaration/body/14/0/init/0/body/1/argument/1/expression/0/body/1/1/expression/alternate":
           {
             content: {
@@ -25627,6 +26018,13 @@ export default {
             },
             hash: "a3ca1ea6dee147739081cf664c41ff16",
           },
+        "9/0/init/body/7/argument/1": {
+          content: {
+            en: "Najlepsze dopasowania",
+            pl: "Najlepsze dopasowania",
+          },
+          hash: "fd72e281e574d7818de294e0999f2392",
+        },
         "9/declaration/body/10/0/init/0/body/consequent/1/expression/0/body/1/1/expression/alternate":
           {
             content: {

@@ -230,9 +230,9 @@ export default function InboxPage() {
             isDisabled={!selectedMapping}
           >
             <Symbol className="w-6 h-6" />
-            <span className="font-medium">Ask Mimir</span>
+            <span className="font-medium">Ask Mimira</span>
             <Chip color="primary" variant="flat" size="sm">
-              Coming soon
+              Try now
             </Chip>
           </Button>
         </div>

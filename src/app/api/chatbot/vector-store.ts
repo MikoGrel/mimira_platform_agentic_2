@@ -130,14 +130,21 @@ export async function resolveVectorStoreId(mappingId: string) {
     const supabase = await createSupabaseClient();
 
     let canPersistVectorStoreId = mappingVectorColumnAvailable !== false;
-    const mappingSelect =
-      mappingVectorColumnAvailable === false ? "tender_id" : "tender_id, vector_store_id";
 
-    const { data: mapping, error: mappingError } = await supabase
-      .from("companies_tenders_mappings")
-      .select(mappingSelect)
-      .eq("id", mappingId)
-      .maybeSingle();
+    const mappingResponse =
+      mappingVectorColumnAvailable === false
+        ? await supabase
+            .from("companies_tenders_mappings")
+            .select("tender_id")
+            .eq("id", mappingId)
+            .maybeSingle()
+        : await supabase
+            .from("companies_tenders_mappings")
+            .select("tender_id,vector_store_id")
+            .eq("id", mappingId)
+            .maybeSingle();
+
+    const { data: mapping, error: mappingError } = mappingResponse;
 
     let mappingRecord: { tender_id?: string | null; vector_store_id?: string | null } | null =
       mapping ?? null;
@@ -186,14 +193,20 @@ export async function resolveVectorStoreId(mappingId: string) {
       return DEFAULT_VECTOR_STORE_ID_INTERNAL ?? null;
     }
 
-    const tenderSelect =
-      tenderVectorDbColumnAvailable === false ? "vector_store_id" : "vector_db, vector_store_id";
+    const tenderResponse =
+      tenderVectorDbColumnAvailable === false
+        ? await supabase
+            .from("tenders")
+            .select("vector_store_id")
+            .eq("id", tenderId)
+            .maybeSingle()
+        : await supabase
+            .from("tenders")
+            .select("vector_db,vector_store_id")
+            .eq("id", tenderId)
+            .maybeSingle();
 
-    const { data: tender, error: tenderError } = await supabase
-      .from("tenders")
-      .select(tenderSelect)
-      .eq("id", tenderId)
-      .maybeSingle();
+    const { data: tender, error: tenderError } = tenderResponse;
 
     let tenderRecord: { vector_db?: unknown; vector_store_id?: string | null } | null = tender ?? null;
 
