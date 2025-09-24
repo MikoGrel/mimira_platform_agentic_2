@@ -287,6 +287,7 @@ function StepperContent({
         setOpen={setCommentsOpened}
       />
       <ChatbotDrawer
+        key={mapping?.id ?? "tender-chatbot"}
         open={chatOpened}
         setOpen={setChatOpened}
         mappingId={mapping?.id ?? null}

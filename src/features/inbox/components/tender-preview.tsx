@@ -304,6 +304,7 @@ export function TenderPreview({
             mapping={mapping}
           />
           <ChatbotDrawer
+            key={mapping.id ?? "inbox-chatbot"}
             open={chatOpened}
             setOpen={setChatOpened}
             mappingId={mapping.id}
