@@ -1,13 +1,6 @@
 "use client";
 
-import {
-  ReactNode,
-  useCallback,
-  useEffect,
-  useMemo,
-  useRef,
-  useState,
-} from "react";
+import { ReactNode, useCallback, useEffect, useMemo, useRef, useState } from "react";
 import {
   Drawer,
   DrawerBody,
@@ -16,22 +9,15 @@ import {
   DrawerHeader,
   Button,
   Input,
-  Spinner,
   Modal,
   ModalBody,
   ModalContent,
   ModalFooter,
   ModalHeader,
   ScrollShadow,
+  Spinner,
 } from "@heroui/react";
-import {
-  Bot,
-  ChevronDown,
-  FileText,
-  Search,
-  Send,
-  TriangleAlert,
-} from "lucide-react";
+import { Bot, ChevronDown, FileText, Search, Send, TriangleAlert } from "lucide-react";
 
 interface ChatCitation {
   fileId: string;
@@ -466,6 +452,7 @@ export function ChatbotDrawer({
   useEffect(() => {
     fileCacheRef.current.clear();
     setFiles([]);
+    setActiveCitation(null);
   }, [mappingId]);
 
   useEffect(() => {
@@ -513,6 +500,13 @@ export function ChatbotDrawer({
       setActiveSearchMessageId(null);
     }
   }, [messages, activeSearchMessageId]);
+
+  useEffect(() => {
+    if (!open) {
+      setActiveCitation(null);
+      setActiveSearchMessageId(null);
+    }
+  }, [open]);
 
   const disabled = !mappingId || isSending || !inputValue.trim();
 
@@ -652,7 +646,7 @@ export function ChatbotDrawer({
           );
         });
     },
-    [resolveFilename]
+    [mappingId, resolveFilename]
   );
 
   const toggleSearchDetails = useCallback((messageId: string) => {
@@ -901,6 +895,8 @@ export function ChatbotDrawer({
           const isAssistant = role === "assistant";
           const hasSearchResults =
             isAssistant && Boolean(searchResults && searchResults.length > 0);
+          const hasCitations =
+            isAssistant && Boolean(citations && citations.length > 0);
 
           return (
             <div
@@ -924,6 +920,27 @@ export function ChatbotDrawer({
               <p className="whitespace-pre-wrap" data-lingo-skip>
                 {content}
               </p>
+              {hasCitations && (
+                <div className="mt-3 space-y-2" data-lingo-skip>
+                  <p className="text-xs font-medium text-muted-foreground">
+                    Źródła odpowiedzi
+                  </p>
+                  <div className="flex flex-wrap gap-2">
+                    {citations?.map((citation, index) => (
+                      <Button
+                        key={`${id}-citation-${index}`}
+                        size="sm"
+                        variant="flat"
+                        className="text-xs"
+                        startContent={<FileText className="h-3.5 w-3.5" />}
+                        onPress={() => handleCitationClick(citation)}
+                      >
+                        {resolveFilename(citation)}
+                      </Button>
+                    ))}
+                  </div>
+                </div>
+              )}
               {hasSearchResults && (
                 <div className="mt-3 space-y-2" data-lingo-skip>
                   <Button
@@ -932,6 +949,13 @@ export function ChatbotDrawer({
                     variant="flat"
                     className="w-fit text-xs font-medium shadow-sm"
                     startContent={<Search className="h-3.5 w-3.5" />}
+                    endContent={
+                      <ChevronDown
+                        className={`h-3 w-3 transition-transform ${
+                          activeSearchMessageId === id ? "rotate-180" : ""
+                        }`}
+                      />
+                    }
                     onPress={() => toggleSearchDetails(id)}
                     aria-expanded={activeSearchMessageId === id}
                   >
@@ -957,84 +981,158 @@ export function ChatbotDrawer({
     toggleSearchDetails,
   ]);
 
+  const isCitationModalOpen = Boolean(activeCitation);
+  const citationModalTitle = activeCitation?.citation.filename?.trim().length
+    ? activeCitation.citation.filename
+    : activeCitation?.citation.fileId ?? "";
+
   return (
     <>
       <Drawer isOpen={open} onOpenChange={setOpen} size="xl" radius="sm">
-      <DrawerContent data-lingo-skip>
-        {() => (
-          <>
-            <DrawerHeader className="flex flex-col gap-1 border-b">
-              <div className="flex items-center justify-between">
-                <div className="flex items-center gap-2">
-                  <Bot className="h-5 w-5" />
-                  <h3 className="text-lg font-semibold" data-lingo-skip>
-                    Asystent Mimira
-                  </h3>
+        <DrawerContent data-lingo-skip>
+          {() => (
+            <>
+              <DrawerHeader className="flex flex-col gap-1 border-b">
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center gap-2">
+                    <Bot className="h-5 w-5" />
+                    <h3 className="text-lg font-semibold" data-lingo-skip>
+                      Asystent Mimira
+                    </h3>
+                  </div>
                 </div>
-              </div>
-              {tenderTitle && (
-                <p className="text-sm text-muted-foreground" data-lingo-skip>
-                  {tenderTitle}
-                </p>
-              )}
-            </DrawerHeader>
-
-            <DrawerBody className="flex flex-col gap-6 overflow-y-hidden">
-              <div className="flex flex-col gap-4 overflow-y-auto pr-2">
-                {renderedMessages}
-                {isSending && (
-                  <div className="flex items-center gap-2 text-sm text-muted-foreground" data-lingo-skip>
-                    <Spinner size="sm" color="primary" />
-                    Przeszukiwanie dokumentacji...
-                  </div>
-                )}
-                {chatError && (
-                  <div className="flex items-center gap-2 rounded-md border border-warning/50 bg-warning-50 px-3 py-2 text-xs text-warning" data-lingo-skip>
-                    <TriangleAlert className="h-3.5 w-3.5" />
-                    {chatError}
-                  </div>
-                )}
-              </div>
-            </DrawerBody>
-
-            <DrawerFooter className="border-t">
-              <form
-                className="flex w-full flex-col gap-3"
-                onSubmit={(event) => {
-                  event.preventDefault();
-                  void handleSend();
-                }}
-              >
-                <Input
-                  value={inputValue}
-                  onChange={(event) => setInputValue(event.target.value)}
-                  placeholder="Type your question"
-                  radius="sm"
-                  endContent={
-                    <Button
-                      color="primary"
-                      isIconOnly
-                      size="sm"
-                      type="submit"
-                      isLoading={isSending}
-                      isDisabled={disabled}
-                    >
-                      <Send className="h-4 w-4" />
-                    </Button>
-                  }
-                  isDisabled={!mappingId}
-                />
-                {!mappingId && (
-                  <p className="text-xs text-muted-foreground" data-lingo-skip>
-                    Select a tender to start chatting.
+                {tenderTitle && (
+                  <p className="text-sm text-muted-foreground" data-lingo-skip>
+                    {tenderTitle}
                   </p>
                 )}
-              </form>
-            </DrawerFooter>
-          </>
-        )}
-      </DrawerContent>
+              </DrawerHeader>
+
+              <DrawerBody className="flex flex-col gap-6 overflow-y-hidden">
+                <div className="flex flex-col gap-4 overflow-y-auto pr-2">
+                  {renderedMessages}
+                  {isSending && (
+                    <div className="flex items-center gap-2 text-sm text-muted-foreground" data-lingo-skip>
+                      <Spinner size="sm" color="primary" />
+                      Przeszukiwanie dokumentacji...
+                    </div>
+                  )}
+                  {chatError && (
+                    <div className="flex items-center gap-2 rounded-md border border-warning/50 bg-warning-50 px-3 py-2 text-xs text-warning" data-lingo-skip>
+                      <TriangleAlert className="h-3.5 w-3.5" />
+                      {chatError}
+                    </div>
+                  )}
+                </div>
+              </DrawerBody>
+
+              <DrawerFooter className="border-t">
+                <form
+                  className="flex w-full flex-col gap-3"
+                  onSubmit={(event) => {
+                    event.preventDefault();
+                    void handleSend();
+                  }}
+                >
+                  <Input
+                    value={inputValue}
+                    onChange={(event) => setInputValue(event.target.value)}
+                    placeholder="Type your question"
+                    radius="sm"
+                    endContent={
+                      <Button
+                        color="primary"
+                        isIconOnly
+                        size="sm"
+                        type="submit"
+                        isLoading={isSending}
+                        isDisabled={disabled}
+                      >
+                        <Send className="h-4 w-4" />
+                      </Button>
+                    }
+                    isDisabled={!mappingId}
+                  />
+                  {!mappingId && (
+                    <p className="text-xs text-muted-foreground" data-lingo-skip>
+                      Select a tender to start chatting.
+                    </p>
+                  )}
+                </form>
+              </DrawerFooter>
+            </>
+          )}
+        </DrawerContent>
       </Drawer>
+
+      <Modal
+        isOpen={isCitationModalOpen}
+        onOpenChange={(nextOpen) => {
+          if (!nextOpen) {
+            setActiveCitation(null);
+          }
+        }}
+        size="2xl"
+      >
+        <ModalContent>
+          {(onClose) => (
+            <>
+              <ModalHeader className="flex flex-col gap-1">
+                <span className="text-xs font-medium uppercase tracking-wide text-muted-foreground">
+                  Źródło odpowiedzi
+                </span>
+                <p className="text-base font-semibold" data-lingo-skip>
+                  {citationModalTitle || "Źródło"}
+                </p>
+              </ModalHeader>
+              <ModalBody>
+                {!activeCitation ? null : activeCitation.isLoading ? (
+                  <div className="flex items-center gap-2 text-sm text-muted-foreground" data-lingo-skip>
+                    <Spinner size="sm" color="primary" />
+                    Ładowanie źródła...
+                  </div>
+                ) : activeCitation.error ? (
+                  <p className="text-sm text-danger" data-lingo-skip>
+                    {activeCitation.error}
+                  </p>
+                ) : (
+                  <div className="space-y-4">
+                    <ScrollShadow className="max-h-80 rounded-md border bg-content1/70 p-4">
+                      <div className="whitespace-pre-wrap text-sm leading-relaxed" data-lingo-skip>
+                        {buildHighlightedSnippet(
+                          activeCitation.content ?? "",
+                          activeCitation.citation.quotes?.[0]
+                        )}
+                      </div>
+                    </ScrollShadow>
+                    {activeCitation.citation.quotes?.length ? (
+                      <p className="text-xs text-muted-foreground" data-lingo-skip>
+                        Wyróżniono fragment dopasowany do odpowiedzi.
+                      </p>
+                    ) : null}
+                    {activeCitation.rawError && (
+                      <p className="text-xs text-danger" data-lingo-skip>
+                        {activeCitation.rawError}
+                      </p>
+                    )}
+                  </div>
+                )}
+              </ModalBody>
+              <ModalFooter>
+                <Button
+                  variant="flat"
+                  onPress={() => {
+                    setActiveCitation(null);
+                    onClose();
+                  }}
+                >
+                  Zamknij
+                </Button>
+              </ModalFooter>
+            </>
+          )}
+        </ModalContent>
+      </Modal>
     </>
   );
 }

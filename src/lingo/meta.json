@@ -29839,6 +29839,46 @@
           "overrides": {},
           "content": "Close"
         },
+        "20/declaration/body/20/0/init/0/body/0/consequent/0/argument/3": {
+          "type": "element",
+          "hash": "08c0e62517e5aedc651d1a16a3eb0b8c",
+          "context": "",
+          "skip": true,
+          "overrides": {},
+          "content": "Ask anything about this tender to get started."
+        },
+        "20/declaration/body/20/0/init/0/body/1/argument/1/expression/0/body/3/argument/1/1/expression/alternate": {
+          "type": "element",
+          "hash": "db2a4a796b70cc1430d1b21f6ffb6dcb",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "You"
+        },
+        "20/declaration/body/20/0/init/0/body/1/argument/1/expression/0/body/3/argument/1/1/expression/consequent": {
+          "type": "element",
+          "hash": "486477c4b22b0cfccf512e6aadaf471a",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "<element:Bot></element:Bot> Assistant"
+        },
+        "20/declaration/body/20/0/init/0/body/1/argument/1/expression/0/body/3/argument/5/expression/right/1": {
+          "type": "element",
+          "hash": "0872e78d28d69246dec97100f71b7b8c",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Źródła odpowiedzi"
+        },
+        "20/declaration/body/20/0/init/0/body/1/argument/1/expression/0/body/3/argument/7/expression/right/1": {
+          "type": "element",
+          "hash": "7c4f977e0a89152fcfadac0759a6577e",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Źródła wyszukiwania"
+        },
         "20/declaration/body/20/argument/1/1/1/expression/body/1/1/1/3": {
           "type": "element",
           "hash": "196a4123c964350bb4421c9fc4b1565a",
@@ -30086,6 +30126,70 @@
           "skip": false,
           "overrides": {},
           "content": "Sources"
+        },
+        "20/declaration/body/23/argument/1/1/1/expression/body/1/1/1/3": {
+          "type": "element",
+          "hash": "a2f9fa35968877d8226365c39680688d",
+          "context": "",
+          "skip": true,
+          "overrides": {},
+          "content": "Asystent Mimira"
+        },
+        "20/declaration/body/23/argument/1/1/1/expression/body/3/1/3/expression/right": {
+          "type": "element",
+          "hash": "0bb14f660c4cfce7bbb567437ebd634d",
+          "context": "",
+          "skip": true,
+          "overrides": {},
+          "content": "<element:Spinner></element:Spinner> Przeszukiwanie dokumentacji..."
+        },
+        "20/declaration/body/23/argument/1/1/1/expression/body/5/1/1-placeholder": {
+          "type": "attribute",
+          "hash": "5ce094b6530b667b2c86ef49163a7876",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Type your question"
+        },
+        "20/declaration/body/23/argument/1/1/1/expression/body/5/1/3/expression/right": {
+          "type": "element",
+          "hash": "c70bf962ff64eca1361e6cd37f19f9ed",
+          "context": "",
+          "skip": true,
+          "overrides": {},
+          "content": "Select a tender to start chatting."
+        },
+        "20/declaration/body/23/argument/3/1/1/expression/body/1/1": {
+          "type": "element",
+          "hash": "a2a66ba7d3e5f33bb95c8cb6000aa688",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Źródło odpowiedzi"
+        },
+        "20/declaration/body/23/argument/3/1/1/expression/body/3/1/expression/alternate/alternate/alternate/3/expression/consequent": {
+          "type": "element",
+          "hash": "e7a2dffcd1f9edc6562320e85a7e5e69",
+          "context": "",
+          "skip": true,
+          "overrides": {},
+          "content": "Wyróżniono fragment dopasowany do odpowiedzi."
+        },
+        "20/declaration/body/23/argument/3/1/1/expression/body/3/1/expression/alternate/consequent": {
+          "type": "element",
+          "hash": "ae26037a8a1220f6e1859e7ee0693528",
+          "context": "",
+          "skip": true,
+          "overrides": {},
+          "content": "<element:Spinner></element:Spinner> Ładowanie źródła..."
+        },
+        "20/declaration/body/23/argument/3/1/1/expression/body/5/1": {
+          "type": "element",
+          "hash": "2613133ea2f4545ced472d395fbc8875",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Zamknij"
         },
         "20/declaration/body/24/argument/1/1/1/expression/body/1/1/1/3": {
           "type": "element",

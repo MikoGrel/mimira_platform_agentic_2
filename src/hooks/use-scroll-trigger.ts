@@ -22,41 +22,23 @@ export function useScrollTrigger({
 
   React.useEffect(() => {
     const handleScroll = () => {
-      if (containerRef?.current) {
-        const scrollTop = containerRef.current.scrollTop;
-        const shouldTrigger = scrollTop > threshold;
+      const scrollTop = containerRef?.current
+        ? containerRef.current.scrollTop
+        : window.scrollY;
+      const shouldTrigger = scrollTop > threshold;
 
-        setIsTriggered((prev) =>
-          prev !== shouldTrigger ? shouldTrigger : prev
-        );
-      } else {
-        const scrollTop = window.scrollY;
-        const shouldTrigger = scrollTop > threshold;
-
-        setIsTriggered((prev) =>
-          prev !== shouldTrigger ? shouldTrigger : prev
-        );
-      }
+      setIsTriggered((prev) => (prev !== shouldTrigger ? shouldTrigger : prev));
     };
 
-    const scrollElement = containerRef?.current;
+    const target: HTMLElement | Window = containerRef?.current ?? window;
 
-    if (scrollElement) {
-      scrollElement.addEventListener("scroll", handleScroll);
-      handleScroll();
+    target.addEventListener("scroll", handleScroll);
+    handleScroll();
 
-      return () => {
-        scrollElement.removeEventListener("scroll", handleScroll);
-      };
-    } else {
-      window.addEventListener("scroll", handleScroll);
-      handleScroll();
-
-      return () => {
-        window.removeEventListener("scroll", handleScroll);
-      };
-    }
-  }, [threshold, containerRef?.current]);
+    return () => {
+      target.removeEventListener("scroll", handleScroll);
+    };
+  }, [threshold, containerRef]);
 
   return isTriggered;
 }
