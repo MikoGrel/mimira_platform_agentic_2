@@ -15047,6 +15047,22 @@
           "overrides": {},
           "content": "Additional Info"
         },
+        "22/declaration/body/16/body/1/expression/0": {
+          "type": "element",
+          "hash": "78efde626dafcc52e22f7f6b702998a0",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Tender was moved to analysis successfully, go to active tenders to see it"
+        },
+        "22/declaration/body/16/body/2/expression/0/1/value": {
+          "type": "element",
+          "hash": "db19ec4f7ea5522f60443270198a75af",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Tender was moved to analysis successfully, go to active tenders to see it"
+        },
         "22/declaration/body/17/0/init/0/body/0/argument/0/1/value": {
           "type": "element",
           "hash": "a003449ecbde6b7a73044f46ea6bbe75",
@@ -15072,6 +15088,94 @@
           "content": "Description"
         },
         "22/declaration/body/17/0/init/0/body/0/argument/3/1/value": {
+          "type": "element",
+          "hash": "d5bf1e70991802fd4a801f3a79cf9e5d",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Additional Info"
+        },
+        "22/declaration/body/19/body/1/expression/0": {
+          "type": "element",
+          "hash": "60696b80d10dffc59336ef7184f915c1",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Tender was rejected successfully, go to archive tab to see it"
+        },
+        "22/declaration/body/20/0/init/0/body/0/argument/expression/callee/object/0/consequent/1/value": {
+          "type": "element",
+          "hash": "a003449ecbde6b7a73044f46ea6bbe75",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Products"
+        },
+        "22/declaration/body/20/0/init/0/body/0/argument/expression/callee/object/1/consequent/1/value": {
+          "type": "element",
+          "hash": "e108e149e0fd5b65f5850b6f032ccabe",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Requirements"
+        },
+        "22/declaration/body/20/0/init/0/body/0/argument/expression/callee/object/2/consequent/1/value": {
+          "type": "element",
+          "hash": "d524df30da3658fdbc1794408fcfdab4",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Review Criteria"
+        },
+        "22/declaration/body/20/0/init/0/body/0/argument/expression/callee/object/3/consequent/1/value": {
+          "type": "element",
+          "hash": "e17686a22ffad04cc7bb70524ed4478b",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Description"
+        },
+        "22/declaration/body/20/0/init/0/body/0/argument/expression/callee/object/4/consequent/1/value": {
+          "type": "element",
+          "hash": "d5bf1e70991802fd4a801f3a79cf9e5d",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Additional Info"
+        },
+        "22/declaration/body/21/0/init/0/body/0/argument/expression/callee/object/0/consequent/1/value": {
+          "type": "element",
+          "hash": "a003449ecbde6b7a73044f46ea6bbe75",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Products"
+        },
+        "22/declaration/body/21/0/init/0/body/0/argument/expression/callee/object/1/consequent/1/value": {
+          "type": "element",
+          "hash": "e108e149e0fd5b65f5850b6f032ccabe",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Requirements"
+        },
+        "22/declaration/body/21/0/init/0/body/0/argument/expression/callee/object/2/consequent/1/value": {
+          "type": "element",
+          "hash": "d524df30da3658fdbc1794408fcfdab4",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Review Criteria"
+        },
+        "22/declaration/body/21/0/init/0/body/0/argument/expression/callee/object/3/consequent/1/value": {
+          "type": "element",
+          "hash": "e17686a22ffad04cc7bb70524ed4478b",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Description"
+        },
+        "22/declaration/body/21/0/init/0/body/0/argument/expression/callee/object/4/consequent/1/value": {
           "type": "element",
           "hash": "d5bf1e70991802fd4a801f3a79cf9e5d",
           "context": "",

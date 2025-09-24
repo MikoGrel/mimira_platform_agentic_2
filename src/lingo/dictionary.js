@@ -1,4 +1,4 @@
-export default {
+export default { // eslint-disable-line import/no-anonymous-default-export
   version: 0.1,
   files: {
     "app/(platform)/dashboard/account/page.tsx": {

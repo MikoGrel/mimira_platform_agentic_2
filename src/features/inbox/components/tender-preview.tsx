@@ -87,7 +87,19 @@ export function TenderPreview({
   const { mutate: updateTenderStatus } = useUpdateTenderStatus();
   const { showSidebarPopup } = useSidebarPopupStore();
 
-  const hasMultipleParts = mapping.tender_parts.length > 1;
+  const participatingParts = useMemo(
+    () => mapping.tender_parts.filter((part) => part.can_participate),
+    [mapping.tender_parts]
+  );
+  const shouldUsePartLevelDescription = participatingParts.length > 1;
+  const hasMultipleParts = participatingParts.length > 1;
+
+  const tenderLevelDescription = mapping.tenders?.description_long_llm || "";
+  const partLevelDescription =
+    selectedPart.description_part_long_llm?.trim() || "";
+  const descriptionForSection = shouldUsePartLevelDescription
+    ? partLevelDescription || tenderLevelDescription
+    : tenderLevelDescription || partLevelDescription;
 
   const scrollRef = useRef<HTMLDivElement>(null);
 
@@ -167,6 +179,8 @@ export function TenderPreview({
     showNextTender?.();
   }
 
+  const hasDescriptionSection = descriptionForSection.trim().length > 0;
+
   const sections = useMemo(() => {
     return [
       selectedPart.tender_products?.length > 0
@@ -181,7 +195,7 @@ export function TenderPreview({
             label: <span>Review Criteria</span>,
           }
         : null,
-      selectedPart.description_part_long_llm
+      hasDescriptionSection
         ? { id: "description", label: <span>Description</span> }
         : null,
       selectedPart.payment_terms_llm || mapping.tenders?.payment_terms_llm
@@ -190,7 +204,7 @@ export function TenderPreview({
     ].filter(Boolean) as Section[];
   }, [
     mapping.tenders?.payment_terms_llm,
-    selectedPart.description_part_long_llm,
+    hasDescriptionSection,
     selectedPart.payment_terms_llm,
     selectedPart.review_criteria_llm,
     selectedPart.tender_products?.length,
@@ -261,11 +275,9 @@ export function TenderPreview({
 
                 <DescriptionSection
                   description_long_llm={
-                    selectedPart.description_part_long_llm ||
-                    mapping.tenders?.description_long_llm ||
-                    ""
-                  }
-                />
+      descriptionForSection
+    }
+  />
 
                 <AdditionalInfoSection
                   key={mapping.id}

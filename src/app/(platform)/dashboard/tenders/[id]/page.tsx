@@ -166,7 +166,7 @@ function StepperContent({
               className="!min-w-6"
               data-lingo-skip
             >
-              <Bot className="w-4 h-4 stroke-[1.5]" /> Assistant
+              <Bot className="w-4 h-4 stroke-[1.5]" /> Asystent
             </Button>
             <Button
               size="sm"
