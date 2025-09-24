@@ -1,6 +1,6 @@
 "use client";
 
-import { ReactNode, useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 import {
   Drawer,
   DrawerBody,
@@ -9,22 +9,9 @@ import {
   DrawerHeader,
   Button,
   Input,
-  Modal,
-  ModalBody,
-  ModalContent,
-  ModalFooter,
-  ModalHeader,
-  ScrollShadow,
   Spinner,
 } from "@heroui/react";
-import { Bot, ChevronDown, FileText, Search, Send, TriangleAlert } from "lucide-react";
-
-interface ChatCitation {
-  fileId: string;
-  filename?: string;
-  quotes: string[];
-  vectorStoreFileId?: string;
-}
+import { Bot, ChevronDown, Search, Send, TriangleAlert } from "lucide-react";
 
 interface ChatSearchResult {
   fileId: string;
@@ -33,35 +20,12 @@ interface ChatSearchResult {
   vectorStoreFileId?: string;
 }
 
-interface RawFileData {
-  base64: string;
-  mimeType: string;
-}
-
 interface ChatMessage {
   id: string;
   role: "user" | "assistant";
   content: string;
-  citations?: ChatCitation[];
   searchResults?: ChatSearchResult[];
 }
-
-interface ChatFileEntry {
-  id: string;
-  filename: string;
-  created_at?: number;
-  originalFileId?: string;
-}
-
-interface CitationPreviewState {
-  citation: ChatCitation;
-  content: string | null;
-  isLoading: boolean;
-  error: string | null;
-  raw?: RawFileData;
-  rawError?: string;
-}
-
 interface ChatbotDrawerProps {
   open?: boolean;
   setOpen?: (open: boolean) => void;
@@ -69,7 +33,6 @@ interface ChatbotDrawerProps {
   tenderTitle?: string | null;
 }
 
-const VECTOR_FILES_ENDPOINT = "/api/chatbot/files";
 const CHAT_ENDPOINT = "/api/chatbot";
 
 const createMessageId = () => {
@@ -77,51 +40,6 @@ const createMessageId = () => {
     return crypto.randomUUID();
   }
   return Math.random().toString(36).slice(2);
-};
-
-const escapeRegExp = (value: string) =>
-  value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
-
-const buildHighlightedSnippet = (content: string, quote?: string): ReactNode => {
-  if (!content) {
-    return <span>No content available for this file.</span>;
-  }
-
-  if (!quote) {
-    const preview = content.slice(0, 500);
-    return <span>{preview}</span>;
-  }
-
-  const loweredContent = content.toLowerCase();
-  const loweredQuote = quote.toLowerCase();
-  const index = loweredContent.indexOf(loweredQuote);
-
-  const padding = 200;
-
-  if (index === -1) {
-    const preview = content.slice(0, 500);
-    return <span>{preview}</span>;
-  }
-
-  const start = Math.max(0, index - padding);
-  const end = Math.min(content.length, index + quote.length + padding);
-  const snippet = content.slice(start, end);
-  const regex = new RegExp(`(${escapeRegExp(quote)})`, "gi");
-  const parts = snippet.split(regex);
-
-  return (
-    <span>
-      {parts.map((part, idx) =>
-        part.toLowerCase() === loweredQuote ? (
-          <mark key={`${part}-${idx}`} className="rounded-sm bg-warning/40 px-1">
-            {part}
-          </mark>
-        ) : (
-          <span key={`${part}-${idx}`}>{part}</span>
-        )
-      )}
-    </span>
-  );
 };
 
 const truncatePreview = (text: string, limit = 260) => {
@@ -264,9 +182,9 @@ const extractDeltaText = (event: Record<string, unknown>): string => {
 
 const parseAssistantPayload = (
   payload: unknown
-): { text: string; citations: ChatCitation[]; searchResults: ChatSearchResult[] } => {
+): { text: string; searchResults: ChatSearchResult[] } => {
   if (!payload || typeof payload !== "object") {
-    return { text: "", citations: [], searchResults: [] };
+    return { text: "", searchResults: [] };
   }
 
   const output = Array.isArray((payload as { output?: unknown[] }).output)
@@ -274,9 +192,7 @@ const parseAssistantPayload = (
     : [];
 
   const textParts: string[] = [];
-  const citationMap = new Map<string, ChatCitation>();
   const searchResults: ChatSearchResult[] = [];
-  const fileIdToVectorMap = new Map<string, string>();
 
   output.forEach((item) => {
     if (!item || typeof item !== "object") return;
@@ -295,64 +211,6 @@ const parseAssistantPayload = (
         if (typeof text === "string") {
           textParts.push(text);
         }
-
-        const annotations = Array.isArray(
-          (entry as { annotations?: unknown[] }).annotations
-        )
-          ? ((entry as { annotations: unknown[] }).annotations as unknown[])
-          : [];
-
-        annotations.forEach((annotation) => {
-          if (!annotation || typeof annotation !== "object") return;
-          if ((annotation as { type?: string }).type !== "file_citation") return;
-
-          const rawFileId =
-            (annotation as { file_id?: unknown }).file_id ??
-            (annotation as { fileId?: unknown }).fileId;
-          const fileId = rawFileId ? String(rawFileId) : "";
-          if (!fileId) return;
-
-          const filename =
-            typeof (annotation as { filename?: unknown }).filename === "string"
-              ? (annotation as { filename: string }).filename
-              : undefined;
-
-          const quoteCandidate = (annotation as { text?: unknown }).text;
-          const quoteBackup = (annotation as { quote?: unknown }).quote;
-          const quote =
-            typeof quoteCandidate === "string"
-              ? quoteCandidate
-              : typeof quoteBackup === "string"
-                ? quoteBackup
-                : undefined;
-
-          const vectorStoreFileId =
-            typeof (annotation as { vector_store_file_id?: unknown }).vector_store_file_id ===
-            "string"
-              ? String((annotation as { vector_store_file_id: string }).vector_store_file_id)
-              : undefined;
-
-          const existing = citationMap.get(fileId) ?? {
-            fileId,
-            filename,
-            quotes: [] as string[],
-            vectorStoreFileId,
-          };
-
-          if (filename && !existing.filename) {
-            existing.filename = filename;
-          }
-
-          if (vectorStoreFileId && !existing.vectorStoreFileId) {
-            existing.vectorStoreFileId = vectorStoreFileId;
-          }
-
-          if (quote && !existing.quotes.includes(quote)) {
-            existing.quotes.push(quote);
-          }
-
-          citationMap.set(fileId, existing);
-        });
       });
     }
 
@@ -389,10 +247,6 @@ const parseAssistantPayload = (
           return;
         }
 
-        if (sourceFileId && vectorStoreFileId) {
-          fileIdToVectorMap.set(String(sourceFileId), vectorStoreFileId);
-        }
-
         searchResults.push({
           fileId: fileId || filename || `result-${searchResults.length}`,
           filename,
@@ -403,19 +257,8 @@ const parseAssistantPayload = (
     }
   });
 
-  const citations = Array.from(citationMap.values()).map((citation) => {
-    if (!citation.vectorStoreFileId && citation.fileId) {
-      const mapped = fileIdToVectorMap.get(citation.fileId);
-      if (mapped) {
-        return { ...citation, vectorStoreFileId: mapped };
-      }
-    }
-    return citation;
-  });
-
   return {
     text: textParts.join("\n\n"),
-    citations,
     searchResults: searchResults.slice(0, 3),
   };
 };
@@ -429,11 +272,7 @@ export function ChatbotDrawer({
   const [messages, setMessages] = useState<ChatMessage[]>([]);
   const [inputValue, setInputValue] = useState("");
   const [isSending, setIsSending] = useState(false);
-  const [files, setFiles] = useState<ChatFileEntry[]>([]);
   const [chatError, setChatError] = useState<string | null>(null);
-  const [activeCitation, setActiveCitation] = useState<CitationPreviewState | null>(
-    null
-  );
   const [activeSearchMessageId, setActiveSearchMessageId] = useState<string | null>(
     null
   );
@@ -445,52 +284,6 @@ export function ChatbotDrawer({
       ),
     []
   );
-  const fileCacheRef = useRef<
-    Map<string, { content: string; filename: string; raw?: RawFileData; rawError?: string }>
-  >(new Map());
-
-  useEffect(() => {
-    fileCacheRef.current.clear();
-    setFiles([]);
-    setActiveCitation(null);
-  }, [mappingId]);
-
-  useEffect(() => {
-    if (!open || !mappingId) {
-      if (!mappingId) {
-        setFiles([]);
-      }
-      return;
-    }
-
-    let cancelled = false;
-
-    const params = new URLSearchParams({ mappingId });
-
-    fetch(`${VECTOR_FILES_ENDPOINT}?${params.toString()}`, {
-      cache: "no-store",
-    })
-      .then(async (res) => {
-        if (!res.ok) {
-          throw new Error("Failed to load files");
-        }
-        const data = await res.json();
-        if (!cancelled) {
-          setFiles(data?.files ?? []);
-        }
-      })
-      .catch((error) => {
-        console.error("Failed to load tender files", error);
-        if (!cancelled) {
-          setFiles([]);
-        }
-      });
-
-    return () => {
-      cancelled = true;
-    };
-  }, [open, mappingId]);
-
   useEffect(() => {
     if (!activeSearchMessageId) {
       return;
@@ -503,151 +296,11 @@ export function ChatbotDrawer({
 
   useEffect(() => {
     if (!open) {
-      setActiveCitation(null);
       setActiveSearchMessageId(null);
     }
   }, [open]);
 
   const disabled = !mappingId || isSending || !inputValue.trim();
-
-  const resolveFilename = useCallback(
-    (citation: { fileId: string; filename?: string; vectorStoreFileId?: string }) => {
-      if (citation.filename && citation.filename.trim().length > 0) {
-        return citation.filename;
-      }
-
-      const cached = fileCacheRef.current.get(citation.fileId);
-      if (cached?.filename) {
-        return cached.filename;
-      }
-
-      const entry = files.find(
-        (file) =>
-          file.id === citation.vectorStoreFileId ||
-          file.id === citation.fileId ||
-          file.originalFileId === citation.fileId
-      );
-      if (entry?.filename && entry.filename.trim().length > 0) {
-        return entry.filename;
-      }
-
-      return citation.fileId;
-    },
-    [files]
-  );
-
-  const handleCitationClick = useCallback(
-    (citation: ChatCitation) => {
-      const filename = resolveFilename(citation);
-      const cached = fileCacheRef.current.get(citation.fileId);
-
-      if (cached) {
-        setActiveCitation({
-          citation: { ...citation, filename },
-          content: cached.content,
-          isLoading: false,
-          error: null,
-          raw: cached.raw,
-          rawError: cached.rawError,
-        });
-        return;
-      }
-
-      setActiveCitation({
-        citation: { ...citation, filename },
-        content: null,
-        isLoading: true,
-        error: null,
-        raw: undefined,
-        rawError: undefined,
-      });
-
-      const targetId = citation.vectorStoreFileId ?? citation.fileId;
-      const params = new URLSearchParams();
-      if (citation.fileId) {
-        params.set("source", citation.fileId);
-      }
-      if (mappingId) {
-        params.set("mappingId", mappingId);
-      }
-      const query = params.toString();
-
-      fetch(
-        `${VECTOR_FILES_ENDPOINT}/${encodeURIComponent(targetId)}${
-          query ? `?${query}` : ""
-        }`,
-        {
-          cache: "no-store",
-        }
-      )
-        .then(async (res) => {
-          const data = await res.json().catch(() => null);
-
-          if (!res.ok || !data) {
-            throw new Error(data?.error ?? "Unable to load file content.");
-          }
-          const content =
-            typeof data?.file?.content === "string" ? data.file.content : "";
-          const resolvedFilename =
-            typeof data?.file?.filename === "string"
-              ? data.file.filename
-              : filename;
-          const rawData =
-            data?.file?.raw &&
-            typeof data.file.raw.base64 === "string" &&
-            typeof data.file.raw.mimeType === "string"
-              ? {
-                  base64: data.file.raw.base64,
-                  mimeType: data.file.raw.mimeType,
-                }
-              : undefined;
-          const rawError =
-            typeof data?.file?.rawError === "string"
-              ? data.file.rawError
-              : undefined;
-
-          fileCacheRef.current.set(citation.fileId, {
-            content,
-            filename: resolvedFilename,
-            raw: rawData,
-            rawError,
-          });
-
-          setActiveCitation((prev) =>
-            prev && prev.citation.fileId === citation.fileId
-              ? {
-                  citation: {
-                    ...prev.citation,
-                    filename: resolvedFilename,
-                  },
-                  content,
-                  isLoading: false,
-                  error: null,
-                  raw: rawData,
-                  rawError,
-                }
-              : prev
-          );
-        })
-        .catch((error) => {
-          console.error("Citation fetch error", error);
-          const message =
-            error instanceof Error ? error.message : "Unknown error.";
-          setActiveCitation((prev) =>
-            prev && prev.citation.fileId === citation.fileId
-              ? {
-                  ...prev,
-                  isLoading: false,
-                  error: message,
-                  raw: prev.raw,
-                  rawError: prev.rawError,
-                }
-              : prev
-          );
-        });
-    },
-    [mappingId, resolveFilename]
-  );
 
   const toggleSearchDetails = useCallback((messageId: string) => {
     setActiveSearchMessageId((current) =>
@@ -664,7 +317,7 @@ export function ChatbotDrawer({
       const parsed =
         payload && typeof payload === "object"
           ? parseAssistantPayload(payload)
-          : { text: "", citations: [] as ChatCitation[], searchResults: [] as ChatSearchResult[] };
+          : { text: "", searchResults: [] as ChatSearchResult[] };
 
       const candidateReply = parsed.text.trim().length
         ? parsed.text.trim()
@@ -680,7 +333,6 @@ export function ChatbotDrawer({
       updateMessageById(assistantId, (message) => ({
         ...message,
         content: assistantText,
-        citations: parsed.citations,
         searchResults: parsed.searchResults,
       }));
     },
@@ -821,7 +473,6 @@ export function ChatbotDrawer({
         id: assistantMessageId,
         role: "assistant",
         content: "",
-        citations: [],
         searchResults: [],
       },
     ]);
@@ -863,7 +514,6 @@ export function ChatbotDrawer({
       updateMessageById(assistantMessageId, (message) => ({
         ...message,
         content: "Sorry, I couldn’t reach the assistant. Please try again.",
-        citations: [],
         searchResults: [],
       }));
     } finally {
@@ -891,12 +541,10 @@ export function ChatbotDrawer({
 
     return (
       <div className="space-y-4">
-        {messages.map(({ id, role, content, citations, searchResults }) => {
+        {messages.map(({ id, role, content, searchResults }) => {
           const isAssistant = role === "assistant";
           const hasSearchResults =
             isAssistant && Boolean(searchResults && searchResults.length > 0);
-          const hasCitations =
-            isAssistant && Boolean(citations && citations.length > 0);
 
           return (
             <div
@@ -920,27 +568,6 @@ export function ChatbotDrawer({
               <p className="whitespace-pre-wrap" data-lingo-skip>
                 {content}
               </p>
-              {hasCitations && (
-                <div className="mt-3 space-y-2" data-lingo-skip>
-                  <p className="text-xs font-medium text-muted-foreground">
-                    Źródła odpowiedzi
-                  </p>
-                  <div className="flex flex-wrap gap-2">
-                    {citations?.map((citation, index) => (
-                      <Button
-                        key={`${id}-citation-${index}`}
-                        size="sm"
-                        variant="flat"
-                        className="text-xs"
-                        startContent={<FileText className="h-3.5 w-3.5" />}
-                        onPress={() => handleCitationClick(citation)}
-                      >
-                        {resolveFilename(citation)}
-                      </Button>
-                    ))}
-                  </div>
-                </div>
-              )}
               {hasSearchResults && (
                 <div className="mt-3 space-y-2" data-lingo-skip>
                   <Button
@@ -975,16 +602,9 @@ export function ChatbotDrawer({
     );
   }, [
     messages,
-    resolveFilename,
-    handleCitationClick,
     activeSearchMessageId,
     toggleSearchDetails,
   ]);
-
-  const isCitationModalOpen = Boolean(activeCitation);
-  const citationModalTitle = activeCitation?.citation.filename?.trim().length
-    ? activeCitation.citation.filename
-    : activeCitation?.citation.fileId ?? "";
 
   return (
     <>
@@ -1064,75 +684,6 @@ export function ChatbotDrawer({
           )}
         </DrawerContent>
       </Drawer>
-
-      <Modal
-        isOpen={isCitationModalOpen}
-        onOpenChange={(nextOpen) => {
-          if (!nextOpen) {
-            setActiveCitation(null);
-          }
-        }}
-        size="2xl"
-      >
-        <ModalContent>
-          {(onClose) => (
-            <>
-              <ModalHeader className="flex flex-col gap-1">
-                <span className="text-xs font-medium uppercase tracking-wide text-muted-foreground">
-                  Źródło odpowiedzi
-                </span>
-                <p className="text-base font-semibold" data-lingo-skip>
-                  {citationModalTitle || "Źródło"}
-                </p>
-              </ModalHeader>
-              <ModalBody>
-                {!activeCitation ? null : activeCitation.isLoading ? (
-                  <div className="flex items-center gap-2 text-sm text-muted-foreground" data-lingo-skip>
-                    <Spinner size="sm" color="primary" />
-                    Ładowanie źródła...
-                  </div>
-                ) : activeCitation.error ? (
-                  <p className="text-sm text-danger" data-lingo-skip>
-                    {activeCitation.error}
-                  </p>
-                ) : (
-                  <div className="space-y-4">
-                    <ScrollShadow className="max-h-80 rounded-md border bg-content1/70 p-4">
-                      <div className="whitespace-pre-wrap text-sm leading-relaxed" data-lingo-skip>
-                        {buildHighlightedSnippet(
-                          activeCitation.content ?? "",
-                          activeCitation.citation.quotes?.[0]
-                        )}
-                      </div>
-                    </ScrollShadow>
-                    {activeCitation.citation.quotes?.length ? (
-                      <p className="text-xs text-muted-foreground" data-lingo-skip>
-                        Wyróżniono fragment dopasowany do odpowiedzi.
-                      </p>
-                    ) : null}
-                    {activeCitation.rawError && (
-                      <p className="text-xs text-danger" data-lingo-skip>
-                        {activeCitation.rawError}
-                      </p>
-                    )}
-                  </div>
-                )}
-              </ModalBody>
-              <ModalFooter>
-                <Button
-                  variant="flat"
-                  onPress={() => {
-                    setActiveCitation(null);
-                    onClose();
-                  }}
-                >
-                  Zamknij
-                </Button>
-              </ModalFooter>
-            </>
-          )}
-        </ModalContent>
-      </Modal>
     </>
   );
 }
