@@ -190,7 +190,7 @@ export async function resolveVectorStoreId(mappingId: string) {
     const tenderId = mappingRecord?.tender_id;
     if (!tenderId) {
       console.log("[chatbot API] mapping missing tender", { mappingId });
-      return DEFAULT_VECTOR_STORE_ID_INTERNAL ?? null;
+      return null;
     }
 
     const tenderResponse =
@@ -251,10 +251,6 @@ export async function resolveVectorStoreId(mappingId: string) {
       resolvedVectorStoreId = trimmed.length > 0 ? trimmed : null;
     }
 
-    if (!resolvedVectorStoreId) {
-      resolvedVectorStoreId = DEFAULT_VECTOR_STORE_ID_INTERNAL ?? null;
-    }
-
     if (resolvedVectorStoreId) {
       const trimmed = resolvedVectorStoreId.trim();
 
@@ -282,7 +278,7 @@ export async function resolveVectorStoreId(mappingId: string) {
       mappingId,
       error: error instanceof Error ? error.message : String(error),
     });
-    return DEFAULT_VECTOR_STORE_ID_INTERNAL ?? null;
+    return null;
   }
 }
 

@@ -85,7 +85,7 @@ function StepperContent({
 
   const methods = useStepper();
 
-  const mapStepToStatus = (stepId: string): string | null => {
+  const mapStepToStatus = useCallback((stepId: string): string | null => {
     switch (stepId) {
       case "overview":
         return MappingStatus.analysis;
@@ -98,7 +98,7 @@ function StepperContent({
       default:
         return null;
     }
-  };
+  }, []);
 
   useEffect(() => {
     if (!mapping?.id || !current) return;
@@ -226,43 +226,51 @@ function StepperContent({
               <Button
                 key={nextEnabled.toString()}
                 color="primary"
-                onPress={async () => {
-                  try {
-                    // Handle confirmations step logic first
-                    if (methods.current.id === "confirmations") {
-                      const shouldProceedToNextStep = await handleContinue();
-
-                      if (!shouldProceedToNextStep) {
-                        return; // Don't proceed to next step
-                      }
-                    }
-
-                    // Execute any pending next handler
-                    if (nextHandlerRef.current) {
-                      await nextHandlerRef.current();
-                    }
-
-                    // Update tender status only after successful navigation logic
-                    const currentIndex = methods.all.findIndex(
-                      (s) => s.id === methods.current.id
-                    );
-                    if (currentIndex < methods.all.length - 1) {
-                      const nextStepId = methods.all[currentIndex + 1].id;
-                      const status = mapStepToStatus(nextStepId);
-                      if (mapping && status) {
-                        updateTenderStatus.mutate({
-                          mappingId: mapping.id,
-                          status,
-                        });
-                      }
-                    }
-
-                    // Only call next() if all checks pass
-                    methods.next();
-                  } catch (error) {
-                    if (error instanceof Error) toast.error(error.message);
-                    console.error("Navigation failed:", error);
+                onPress={() => {
+                  if (!nextEnabled || isProcessingConfirmation) {
+                    return;
                   }
+
+                  const runNextTransition = async () => {
+                    try {
+                      // Handle confirmations step logic first
+                      if (methods.current.id === "confirmations") {
+                        const shouldProceedToNextStep = await handleContinue();
+
+                        if (!shouldProceedToNextStep) {
+                          return; // Don't proceed to next step
+                        }
+                      }
+
+                      // Execute any pending next handler
+                      if (nextHandlerRef.current) {
+                        await nextHandlerRef.current();
+                      }
+
+                      // Update tender status only after successful navigation logic
+                      const currentIndex = methods.all.findIndex(
+                        (s) => s.id === methods.current.id
+                      );
+                      if (currentIndex < methods.all.length - 1) {
+                        const nextStepId = methods.all[currentIndex + 1].id;
+                        const status = mapStepToStatus(nextStepId);
+                        if (mapping && status) {
+                          updateTenderStatus.mutate({
+                            mappingId: mapping.id,
+                            status,
+                          });
+                        }
+                      }
+
+                      // Only call next() if all checks pass
+                      methods.next();
+                    } catch (error) {
+                      if (error instanceof Error) toast.error(error.message);
+                      console.error("Navigation failed:", error);
+                    }
+                  };
+
+                  void runNextTransition();
                 }}
                 isDisabled={!nextEnabled || isProcessingConfirmation}
               >
