@@ -3,6 +3,9 @@ import { createClient as createSupabaseClient } from "$/lib/supabase/server";
 const DEFAULT_VECTOR_STORE_ID_INTERNAL =
   process.env.OPENAI_VECTOR_STORE_ID ?? "vs_68d2847cfda88191bd90b7d7ec6c28f9";
 
+let mappingVectorColumnAvailable: boolean | null = null;
+let tenderVectorDbColumnAvailable: boolean | null = null;
+
 function readEnvValue(name: string): string | null {
   const value = typeof name === "string" ? process.env[name] : undefined;
   return typeof value === "string" && value.trim().length > 0
@@ -126,37 +129,79 @@ export async function resolveVectorStoreId(mappingId: string) {
   try {
     const supabase = await createSupabaseClient();
 
+    let canPersistVectorStoreId = mappingVectorColumnAvailable !== false;
+    const mappingSelect =
+      mappingVectorColumnAvailable === false ? "tender_id" : "tender_id, vector_store_id";
+
     const { data: mapping, error: mappingError } = await supabase
       .from("companies_tenders_mappings")
-      .select("tender_id, vector_store_id")
+      .select(mappingSelect)
       .eq("id", mappingId)
       .maybeSingle();
 
-    if (mappingError) {
+    let mappingRecord: { tender_id?: string | null; vector_store_id?: string | null } | null =
+      mapping ?? null;
+
+    const vectorColumnMissing =
+      typeof mappingError?.message === "string" &&
+      mappingError.message.includes("column companies_tenders_mappings.vector_store_id does not exist");
+
+    if (mappingError && !vectorColumnMissing) {
       console.log("[chatbot API] mapping lookup error", {
         mappingId,
         error: mappingError.message,
       });
     }
 
-    const existing = mapping?.vector_store_id?.trim();
+    if (vectorColumnMissing) {
+      mappingVectorColumnAvailable = false;
+      canPersistVectorStoreId = false;
+
+      const { data: fallbackMapping, error: fallbackError } = await supabase
+        .from("companies_tenders_mappings")
+        .select("tender_id")
+        .eq("id", mappingId)
+        .maybeSingle();
+
+      if (fallbackError) {
+        console.log("[chatbot API] mapping lookup error", {
+          mappingId,
+          error: fallbackError.message,
+        });
+      }
+
+      mappingRecord = fallbackMapping ?? null;
+    } else if (!mappingError && mappingVectorColumnAvailable !== false) {
+      mappingVectorColumnAvailable = true;
+    }
+
+    const existing = mappingRecord?.vector_store_id?.trim();
     if (existing) {
       return existing;
     }
 
-    const tenderId = mapping?.tender_id;
+    const tenderId = mappingRecord?.tender_id;
     if (!tenderId) {
       console.log("[chatbot API] mapping missing tender", { mappingId });
       return DEFAULT_VECTOR_STORE_ID_INTERNAL ?? null;
     }
 
+    const tenderSelect =
+      tenderVectorDbColumnAvailable === false ? "vector_store_id" : "vector_db, vector_store_id";
+
     const { data: tender, error: tenderError } = await supabase
       .from("tenders")
-      .select("vector_db, vector_store_id")
+      .select(tenderSelect)
       .eq("id", tenderId)
       .maybeSingle();
 
-    if (tenderError) {
+    let tenderRecord: { vector_db?: unknown; vector_store_id?: string | null } | null = tender ?? null;
+
+    const tenderVectorDbMissing =
+      typeof tenderError?.message === "string" &&
+      tenderError.message.includes("column tenders.vector_db does not exist");
+
+    if (tenderError && !tenderVectorDbMissing) {
       console.log("[chatbot API] tender lookup error", {
         mappingId,
         tenderId,
@@ -164,10 +209,32 @@ export async function resolveVectorStoreId(mappingId: string) {
       });
     }
 
-    let resolvedVectorStoreId = extractVectorStoreId(tender?.vector_db);
+    if (tenderVectorDbMissing) {
+      tenderVectorDbColumnAvailable = false;
 
-    if (!resolvedVectorStoreId && typeof tender?.vector_store_id === "string") {
-      const trimmed = tender.vector_store_id.trim();
+      const { data: fallbackTender, error: fallbackTenderError } = await supabase
+        .from("tenders")
+        .select("vector_store_id")
+        .eq("id", tenderId)
+        .maybeSingle();
+
+      if (fallbackTenderError) {
+        console.log("[chatbot API] tender lookup error", {
+          mappingId,
+          tenderId,
+          error: fallbackTenderError.message,
+        });
+      }
+
+      tenderRecord = fallbackTender ?? null;
+    } else if (!tenderError && tenderVectorDbColumnAvailable !== false) {
+      tenderVectorDbColumnAvailable = true;
+    }
+
+    let resolvedVectorStoreId = extractVectorStoreId(tenderRecord?.vector_db);
+
+    if (!resolvedVectorStoreId && typeof tenderRecord?.vector_store_id === "string") {
+      const trimmed = tenderRecord.vector_store_id.trim();
       resolvedVectorStoreId = trimmed.length > 0 ? trimmed : null;
     }
 
@@ -178,7 +245,7 @@ export async function resolveVectorStoreId(mappingId: string) {
     if (resolvedVectorStoreId) {
       const trimmed = resolvedVectorStoreId.trim();
 
-      if (!existing || existing !== trimmed) {
+      if (canPersistVectorStoreId && (!existing || existing !== trimmed)) {
         const { error: updateError } = await supabase
           .from("companies_tenders_mappings")
           .update({ vector_store_id: trimmed })
