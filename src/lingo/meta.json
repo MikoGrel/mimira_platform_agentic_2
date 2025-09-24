@@ -27607,6 +27607,14 @@
           "overrides": {},
           "content": "Najlepsze dopasowania"
         },
+        "13/declaration/body/13/0/init/0/body/0/consequent/0/argument/1": {
+          "type": "element",
+          "hash": "1dd93a44e9f78453c798069cafbcc076",
+          "context": "",
+          "skip": true,
+          "overrides": {},
+          "content": "Che†nie pomogę Ci z obecnym przetargiem. Postaraj się zadawać precyzyjne pytania."
+        },
         "13/declaration/body/13/0/init/0/body/0/consequent/0/argument/3": {
           "type": "element",
           "hash": "08c0e62517e5aedc651d1a16a3eb0b8c",

@@ -531,9 +531,8 @@ export function ChatbotDrawer({
     if (messages.length === 0) {
       return (
         <div className="flex h-full min-h-32 flex-col items-center justify-center gap-3 rounded-md border border-dashed p-6 text-center">
-          <Bot className="h-6 w-6 text-muted-foreground" />
           <p className="text-sm text-muted-foreground" data-lingo-skip>
-            Ask anything about this tender to get started.
+            Che†nie pomogę Ci z obecnym przetargiem. Postaraj się zadawać precyzyjne pytania. 
           </p>
         </div>
       );
