@@ -12,6 +12,7 @@ import {
   Spinner,
 } from "@heroui/react";
 import { Bot, ChevronDown, Search, Send, TriangleAlert } from "lucide-react";
+import Markdown, { type Components } from "react-markdown";
 
 interface ChatSearchResult {
   fileId: string;
@@ -43,12 +44,101 @@ const createMessageId = () => {
   return Math.random().toString(36).slice(2);
 };
 
+const stripFileCitations = (text: string): string => {
+  // Remove file citation patterns like fileciteturn0file8turn0file4
+  return text.replace(/filecite[a-zA-Z0-9_]+/g, '').trim();
+};
+
+const MessageHeader = ({ isAssistant }: { isAssistant: boolean }) => {
+  return (
+    <div className="mb-1 flex items-center gap-2 text-xs uppercase tracking-wide text-muted-foreground" data-lingo-skip>
+      {isAssistant && (
+        <span data-lingo-skip>
+          <Bot className="h-3.5 w-3.5" /> Asystent
+        </span>
+      )}
+      {!isAssistant && (
+        <span data-lingo-skip>Ty</span>
+      )}
+    </div>
+  );
+};
+
 const truncatePreview = (text: string, limit = 260) => {
   const trimmed = text.trim();
   if (trimmed.length <= limit) {
     return trimmed;
   }
   return `${trimmed.slice(0, limit)}…`;
+};
+
+// Markdown components for chatbot responses
+const markdownComponents: Components = {
+  h1: ({ children }) => (
+    <h1 className="text-base font-semibold text-foreground mt-3 mb-2" data-lingo-skip>{children}</h1>
+  ),
+  h2: ({ children }) => (
+    <h2 className="text-base font-semibold text-foreground mt-3 mb-2" data-lingo-skip>{children}</h2>
+  ),
+  h3: ({ children }) => (
+    <h3 className="text-sm font-semibold text-foreground mt-2 mb-1" data-lingo-skip>{children}</h3>
+  ),
+  h4: ({ children }) => (
+    <h4 className="text-sm font-medium text-foreground mt-2 mb-1" data-lingo-skip>{children}</h4>
+  ),
+  p: ({ children }) => (
+    <p className="text-sm text-foreground mb-2 last:mb-0" data-lingo-skip>{children}</p>
+  ),
+  ul: ({ children }) => (
+    <ul className="list-disc text-sm text-foreground space-y-1 pl-4 mb-2 last:mb-0" data-lingo-skip>
+      {children}
+    </ul>
+  ),
+  ol: ({ children }) => (
+    <ol className="list-decimal text-sm text-foreground space-y-1 pl-4 mb-2 last:mb-0" data-lingo-skip>
+      {children}
+    </ol>
+  ),
+  li: ({ children }) => (
+    <li className="text-sm text-foreground" data-lingo-skip>{children}</li>
+  ),
+  strong: ({ children }) => (
+    <strong className="font-semibold text-foreground" data-lingo-skip>{children}</strong>
+  ),
+  b: ({ children }) => (
+    <b className="font-semibold text-foreground" data-lingo-skip>{children}</b>
+  ),
+  em: ({ children }) => (
+    <em className="italic text-foreground" data-lingo-skip>{children}</em>
+  ),
+  i: ({ children }) => (
+    <i className="italic text-foreground" data-lingo-skip>{children}</i>
+  ),
+  blockquote: ({ children }) => (
+    <blockquote className="border-l-2 border-primary/30 pl-3 italic text-muted-foreground mb-2 last:mb-0" data-lingo-skip>
+      {children}
+    </blockquote>
+  ),
+  code: ({ children, className }) => {
+    const isInline = !className;
+    if (isInline) {
+      return (
+        <code className="bg-content2 text-foreground px-1 py-0.5 rounded text-xs font-mono" data-lingo-skip>
+          {children}
+        </code>
+      );
+    }
+    return (
+      <code className="block bg-content2 text-foreground p-2 rounded text-xs font-mono overflow-x-auto mb-2 last:mb-0" data-lingo-skip>
+        {children}
+      </code>
+    );
+  },
+  pre: ({ children }) => (
+    <pre className="bg-content2 text-foreground p-2 rounded text-xs font-mono overflow-x-auto mb-2 last:mb-0" data-lingo-skip>
+      {children}
+    </pre>
+  ),
 };
 
 const SearchResultDetails = ({
@@ -210,7 +300,7 @@ const parseAssistantPayload = (
 
         const text = (entry as { text?: unknown }).text;
         if (typeof text === "string") {
-          textParts.push(text);
+          textParts.push(stripFileCitations(text));
         }
       });
     }
@@ -366,8 +456,8 @@ export function ChatbotDrawer({
 
       const assistantText =
         candidateReply.length > 0
-          ? candidateReply
-          : "The assistant did not return any content.";
+          ? stripFileCitations(candidateReply)
+          : "Asystent nie zwrócił żadnej treści."; // The assistant did not return any content.
 
       updateMessageById(assistantId, (message) => ({
         ...message,
@@ -376,7 +466,7 @@ export function ChatbotDrawer({
       }));
 
       // Save conversation history for streaming responses
-      if (assistantText && assistantText !== "The assistant did not return any content.") {
+      if (assistantText && assistantText !== "Asystent nie zwrócił żadnej treści.") {
         void saveConversationHistory(assistantText);
       }
     },
@@ -387,7 +477,7 @@ export function ChatbotDrawer({
     async (response: Response, assistantId: string) => {
       const body = response.body;
       if (!body) {
-        throw new Error("Empty response stream.");
+        throw new Error("Pusty strumień odpowiedzi."); // Empty response stream.
       }
 
       const reader = body.getReader();
@@ -423,7 +513,7 @@ export function ChatbotDrawer({
             aggregatedText += delta;
             updateMessageById(assistantId, (message) => ({
               ...message,
-              content: aggregatedText,
+              content: stripFileCitations(aggregatedText),
             }));
           }
           return;
@@ -448,7 +538,7 @@ export function ChatbotDrawer({
           const message =
             typeof (parsed.error as { message?: unknown })?.message === "string"
               ? ((parsed.error as { message: string }).message as string)
-              : "Assistant streaming error.";
+              : "Błąd strumieniowania asystenta."; // Assistant streaming error.
           throw new Error(message);
         }
 
@@ -458,7 +548,7 @@ export function ChatbotDrawer({
             aggregatedText += delta;
             updateMessageById(assistantId, (message) => ({
               ...message,
-              content: aggregatedText,
+              content: stripFileCitations(aggregatedText),
             }));
           }
         }
@@ -534,7 +624,7 @@ export function ChatbotDrawer({
 
       if (!response.ok) {
         const errorPayload = await response.json().catch(() => null);
-        throw new Error(errorPayload?.error ?? "Failed to reach assistant");
+        throw new Error(errorPayload?.error ?? "Nie udało się połączyć z asystentem"); // Failed to reach assistant
       }
 
       const contentType = response.headers.get("content-type") ?? "";
@@ -553,11 +643,11 @@ export function ChatbotDrawer({
     } catch (error) {
       console.error("Chatbot send error", error);
       const fallback =
-        error instanceof Error ? error.message : "Unexpected error";
+        error instanceof Error ? error.message : "Nieoczekiwany błąd"; // Unexpected error
       setChatError(fallback);
       updateMessageById(assistantMessageId, (message) => ({
         ...message,
-        content: "Sorry, I couldn’t reach the assistant. Please try again.",
+        content: "Przepraszam, nie mogę połączyć się z asystentem. Spróbuj ponownie.", // Sorry, I couldn't reach the assistant. Please try again.
         searchResults: [],
       }));
     } finally {
@@ -576,7 +666,7 @@ export function ChatbotDrawer({
       return (
         <div className="flex h-full min-h-32 flex-col items-center justify-center gap-3 rounded-md border border-dashed p-6 text-center">
           <p className="text-sm text-muted-foreground" data-lingo-skip>
-            Che†nie pomogę Ci z obecnym przetargiem. Postaraj się zadawać precyzyjne pytania. 
+            Chętnie pomogę Ci z obecnym przetargiem. Postaraj się zadawać precyzyjne pytania.
           </p>
         </div>
       );
@@ -598,19 +688,22 @@ export function ChatbotDrawer({
                   : "bg-content1 text-foreground/90"
               }`}
               data-lingo-skip
+              suppressHydrationWarning
             >
-              <div className="mb-1 flex items-center gap-2 text-xs uppercase tracking-wide text-muted-foreground">
+              <MessageHeader isAssistant={isAssistant} />
+              <div className="prose prose-sm max-w-none" data-lingo-skip>
                 {isAssistant ? (
-                  <>
-                    <Bot className="h-3.5 w-3.5" /> Assistant
-                  </>
+                  <div data-lingo-skip>
+                    <Markdown components={markdownComponents}>
+                      {content}
+                    </Markdown>
+                  </div>
                 ) : (
-                  <>You</>
+                  <p className="whitespace-pre-wrap text-sm text-foreground" data-lingo-skip>
+                    {content}
+                  </p>
                 )}
               </div>
-              <p className="whitespace-pre-wrap" data-lingo-skip>
-                {content}
-              </p>
               {hasSearchResults && (
                 <div className="mt-3 space-y-2" data-lingo-skip>
                   <Button
@@ -701,7 +794,7 @@ export function ChatbotDrawer({
                   <Input
                     value={inputValue}
                     onChange={(event) => setInputValue(event.target.value)}
-                    placeholder="Type your question"
+                    placeholder="Zadaj pytanie"
                     radius="sm"
                     endContent={
                       <Button
@@ -719,7 +812,7 @@ export function ChatbotDrawer({
                   />
                   {!mappingId && (
                     <p className="text-xs text-muted-foreground" data-lingo-skip>
-                      Select a tender to start chatting.
+                      Wybierz przetarg, aby rozpocząć rozmowę.
                     </p>
                   )}
                 </form>

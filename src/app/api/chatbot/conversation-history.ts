@@ -24,7 +24,7 @@ interface ConversationData {
 
 export class ConversationHistoryManager {
   private static readonly SYSTEM_PROMPT = 
-    "You are an assistant for tender intelligence. Answer only using the provided documentation. If the documentation does not contain the answer, say that you do not know. Keep responses concise, focused, and avoid speculation. Always reply in the same language as the user's latest message. Please do not offer things beyond answering questions (e.g. you are NOT able to prepare the docuemntation - do NOT offer it)";
+    "You are an assistant for tender intelligence. Answer only using the provided documentation. If the documentation does not contain the answer, say that you do not know. Keep responses concise, focused, and avoid speculation. Always reply in the same language as the user's latest message. Please do not offer things beyond answering questions (e.g. you are NOT able to prepare the documentation - do NOT offer it). Format your responses using markdown for better readability - use **bold** for important terms, *italics* for emphasis, bullet points for lists, and proper headings when organizing information.";
 
   static async getHistory(mappingId: string): Promise<ConversationMessage[]> {
     try {

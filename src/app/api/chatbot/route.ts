@@ -4,6 +4,11 @@ import { resolveVectorStoreId } from "./vector-store";
 import { ConversationHistoryManager } from "./conversation-history";
 const OPENAI_URL = "https://api.openai.com/v1/responses";
 
+function stripFileCitations(text: string): string {
+  // Remove file citation patterns like fileciteturn0file8turn0file4
+  return text.replace(/filecite[a-zA-Z0-9_]+/g, '').trim();
+}
+
 function extractAssistantReply(payload: unknown): string | null {
   if (
     !payload ||
@@ -30,7 +35,7 @@ function extractAssistantReply(payload: unknown): string | null {
     ) as { text?: string } | undefined;
 
     if (textItem?.text) {
-      return textItem.text;
+      return stripFileCitations(textItem.text);
     }
   }
 
@@ -43,7 +48,7 @@ export async function POST(request: Request) {
 
     if (!apiKey) {
       return NextResponse.json(
-        { error: "OpenAI API key is not configured." },
+        { error: "Klucz API OpenAI nie jest skonfigurowany." }, // OpenAI API key is not configured.
         { status: 500 }
       );
     }
@@ -56,14 +61,14 @@ export async function POST(request: Request) {
 
     if (!message || typeof message !== "string") {
       return NextResponse.json(
-        { error: "Message is required." },
+        { error: "Wiadomość jest wymagana." }, // Message is required.
         { status: 400 }
       );
     }
 
     if (!mappingId || typeof mappingId !== "string") {
       return NextResponse.json(
-        { error: "Mapping identifier is required." },
+        { error: "Identyfikator mapowania jest wymagany." }, // Mapping identifier is required.
         { status: 400 }
       );
     }
@@ -72,7 +77,7 @@ export async function POST(request: Request) {
 
     if (!vectorStoreId) {
       return NextResponse.json(
-        { error: "Vector store is not configured for this tender." },
+        { error: "Magazyn wektorów nie jest skonfigurowany dla tego przetargu." }, // Vector store is not configured for this tender.
         { status: 400 }
       );
     }
@@ -119,9 +124,9 @@ export async function POST(request: Request) {
             const parsed = JSON.parse(errorPayload) as {
               error?: { message?: string };
             };
-            return parsed?.error?.message ?? "Failed to stream from OpenAI.";
+            return parsed?.error?.message ?? "Nie udało się przesłać strumienia z OpenAI."; // Failed to stream from OpenAI.
           } catch {
-            return errorPayload || "Failed to stream from OpenAI.";
+            return errorPayload || "Nie udało się przesłać strumienia z OpenAI."; // Failed to stream from OpenAI.
           }
         })();
 
@@ -133,7 +138,7 @@ export async function POST(request: Request) {
 
       if (!response.body) {
         return NextResponse.json(
-          { error: "OpenAI did not return a stream." },
+          { error: "OpenAI nie zwróciło strumienia." }, // OpenAI did not return a stream.
           { status: 502 }
         );
       }
@@ -152,7 +157,7 @@ export async function POST(request: Request) {
     if (!response.ok) {
       const errorPayload = await response.json().catch(() => null);
       const errorMessage =
-        errorPayload?.error?.message ?? "Failed to reach OpenAI.";
+        errorPayload?.error?.message ?? "Nie udało się połączyć z OpenAI."; // Failed to reach OpenAI.
       return NextResponse.json(
         { error: errorMessage },
         { status: response.status }
@@ -174,7 +179,7 @@ export async function POST(request: Request) {
   } catch (error) {
     console.error("Chatbot API error", error);
     return NextResponse.json(
-      { error: "Unexpected error while contacting OpenAI." },
+      { error: "Nieoczekiwany błąd podczas kontaktu z OpenAI." }, // Unexpected error while contacting OpenAI.
       { status: 500 }
     );
   }
