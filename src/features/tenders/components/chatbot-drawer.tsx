@@ -794,7 +794,7 @@ export function ChatbotDrawer({
                   <Input
                     value={inputValue}
                     onChange={(event) => setInputValue(event.target.value)}
-                    placeholder="Wyślij wiadomość"
+                    placeholder="Zadaj pytanie"
                     radius="sm"
                     endContent={
                       <Button

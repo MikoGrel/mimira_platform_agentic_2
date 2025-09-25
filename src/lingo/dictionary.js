@@ -25403,7 +25403,7 @@ export default {
         "17/declaration/body/16/argument/1/1/1/expression/body/5/1/1-placeholder":
           {
             content: {
-              en: "Wyślij wiadomość",
+              en: "Zadaj pytanie",
               pl: "Send message",
             },
             hash: "71bf3638fffa0a20a256d46b227b0e77",
