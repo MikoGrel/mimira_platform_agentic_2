@@ -60,47 +60,47 @@ const truncatePreview = (text: string, limit = 260) => {
 // Markdown components for chatbot responses
 const markdownComponents: Components = {
   h1: ({ children }) => (
-    <h1 className="text-base font-semibold text-foreground mt-3 mb-2">{children}</h1>
+    <h1 className="text-base font-semibold text-foreground mt-3 mb-2" data-lingo-skip>{children}</h1>
   ),
   h2: ({ children }) => (
-    <h2 className="text-base font-semibold text-foreground mt-3 mb-2">{children}</h2>
+    <h2 className="text-base font-semibold text-foreground mt-3 mb-2" data-lingo-skip>{children}</h2>
   ),
   h3: ({ children }) => (
-    <h3 className="text-sm font-semibold text-foreground mt-2 mb-1">{children}</h3>
+    <h3 className="text-sm font-semibold text-foreground mt-2 mb-1" data-lingo-skip>{children}</h3>
   ),
   h4: ({ children }) => (
-    <h4 className="text-sm font-medium text-foreground mt-2 mb-1">{children}</h4>
+    <h4 className="text-sm font-medium text-foreground mt-2 mb-1" data-lingo-skip>{children}</h4>
   ),
   p: ({ children }) => (
-    <p className="text-sm text-foreground mb-2 last:mb-0">{children}</p>
+    <p className="text-sm text-foreground mb-2 last:mb-0" data-lingo-skip>{children}</p>
   ),
   ul: ({ children }) => (
-    <ul className="list-disc text-sm text-foreground space-y-1 pl-4 mb-2 last:mb-0">
+    <ul className="list-disc text-sm text-foreground space-y-1 pl-4 mb-2 last:mb-0" data-lingo-skip>
       {children}
     </ul>
   ),
   ol: ({ children }) => (
-    <ol className="list-decimal text-sm text-foreground space-y-1 pl-4 mb-2 last:mb-0">
+    <ol className="list-decimal text-sm text-foreground space-y-1 pl-4 mb-2 last:mb-0" data-lingo-skip>
       {children}
     </ol>
   ),
   li: ({ children }) => (
-    <li className="text-sm text-foreground">{children}</li>
+    <li className="text-sm text-foreground" data-lingo-skip>{children}</li>
   ),
   strong: ({ children }) => (
-    <strong className="font-semibold text-foreground">{children}</strong>
+    <strong className="font-semibold text-foreground" data-lingo-skip>{children}</strong>
   ),
   b: ({ children }) => (
-    <b className="font-semibold text-foreground">{children}</b>
+    <b className="font-semibold text-foreground" data-lingo-skip>{children}</b>
   ),
   em: ({ children }) => (
-    <em className="italic text-foreground">{children}</em>
+    <em className="italic text-foreground" data-lingo-skip>{children}</em>
   ),
   i: ({ children }) => (
-    <i className="italic text-foreground">{children}</i>
+    <i className="italic text-foreground" data-lingo-skip>{children}</i>
   ),
   blockquote: ({ children }) => (
-    <blockquote className="border-l-2 border-primary/30 pl-3 italic text-muted-foreground mb-2 last:mb-0">
+    <blockquote className="border-l-2 border-primary/30 pl-3 italic text-muted-foreground mb-2 last:mb-0" data-lingo-skip>
       {children}
     </blockquote>
   ),
@@ -108,19 +108,19 @@ const markdownComponents: Components = {
     const isInline = !className;
     if (isInline) {
       return (
-        <code className="bg-content2 text-foreground px-1 py-0.5 rounded text-xs font-mono">
+        <code className="bg-content2 text-foreground px-1 py-0.5 rounded text-xs font-mono" data-lingo-skip>
           {children}
         </code>
       );
     }
     return (
-      <code className="block bg-content2 text-foreground p-2 rounded text-xs font-mono overflow-x-auto mb-2 last:mb-0">
+      <code className="block bg-content2 text-foreground p-2 rounded text-xs font-mono overflow-x-auto mb-2 last:mb-0" data-lingo-skip>
         {children}
       </code>
     );
   },
   pre: ({ children }) => (
-    <pre className="bg-content2 text-foreground p-2 rounded text-xs font-mono overflow-x-auto mb-2 last:mb-0">
+    <pre className="bg-content2 text-foreground p-2 rounded text-xs font-mono overflow-x-auto mb-2 last:mb-0" data-lingo-skip>
       {children}
     </pre>
   ),
@@ -673,23 +673,26 @@ export function ChatbotDrawer({
                   : "bg-content1 text-foreground/90"
               }`}
               data-lingo-skip
+              suppressHydrationWarning
             >
               <div className="mb-1 flex items-center gap-2 text-xs uppercase tracking-wide text-muted-foreground" data-lingo-skip>
                 {isAssistant ? (
-                  <>
+                  <span data-lingo-skip>
                     <Bot className="h-3.5 w-3.5" /> Asystent
-                  </>
+                  </span>
                 ) : (
-                  <>Ty</>
+                  <span data-lingo-skip>Ty</span>
                 )}
               </div>
               <div className="prose prose-sm max-w-none" data-lingo-skip>
                 {isAssistant ? (
-                  <Markdown components={markdownComponents}>
-                    {content}
-                  </Markdown>
+                  <div data-lingo-skip>
+                    <Markdown components={markdownComponents}>
+                      {content}
+                    </Markdown>
+                  </div>
                 ) : (
-                  <p className="whitespace-pre-wrap text-sm text-foreground">
+                  <p className="whitespace-pre-wrap text-sm text-foreground" data-lingo-skip>
                     {content}
                   </p>
                 )}

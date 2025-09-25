@@ -29363,7 +29363,7 @@
           "type": "element",
           "hash": "d1252b3e2716d725d0857db30023b67e",
           "context": "",
-          "skip": false,
+          "skip": true,
           "overrides": {},
           "content": "Ty"
         },
@@ -29371,7 +29371,7 @@
           "type": "element",
           "hash": "3bcecbd018de5f55d1bd5588ff695c6c",
           "context": "",
-          "skip": false,
+          "skip": true,
           "overrides": {},
           "content": "<element:Bot></element:Bot> Asystent"
         },
