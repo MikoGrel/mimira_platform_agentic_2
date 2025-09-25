@@ -1,4 +1,4 @@
-export default { // eslint-disable-line import/no-anonymous-default-export
+export default {
   version: 0.1,
   files: {
     "app/(platform)/dashboard/account/page.tsx": {
@@ -13481,6 +13481,20 @@ export default { // eslint-disable-line import/no-anonymous-default-export
           },
           hash: "d5bf1e70991802fd4a801f3a79cf9e5d",
         },
+        "22/declaration/body/16/body/1/expression/0": {
+          content: {
+            en: "Tender was moved to analysis successfully, go to active tenders to see it",
+            pl: "Przetarg został pomyślnie przeniesiony do analizy, przejdź do aktywnych przetargów, aby go zobaczyć",
+          },
+          hash: "78efde626dafcc52e22f7f6b702998a0",
+        },
+        "22/declaration/body/16/body/2/expression/0/1/value": {
+          content: {
+            en: "Tender was moved to analysis successfully, go to active tenders to see it",
+            pl: "Przetarg został pomyślnie przeniesiony do analizy, przejdź do aktywnych przetargów, aby go zobaczyć",
+          },
+          hash: "db19ec4f7ea5522f60443270198a75af",
+        },
         "22/declaration/body/17/0/init/0/body/0/argument/0/1/value": {
           content: {
             en: "Products",
@@ -13509,6 +13523,93 @@ export default { // eslint-disable-line import/no-anonymous-default-export
           },
           hash: "d5bf1e70991802fd4a801f3a79cf9e5d",
         },
+        "22/declaration/body/19/body/1/expression/0": {
+          content: {
+            en: "Tender was rejected successfully, go to archive tab to see it",
+            pl: "Przetarg został pomyślnie odrzucony, przejdź do zakładki archiwum, aby go zobaczyć",
+          },
+          hash: "60696b80d10dffc59336ef7184f915c1",
+        },
+        "22/declaration/body/20/0/init/0/body/0/argument/expression/callee/object/0/consequent/1/value":
+          {
+            content: {
+              en: "Products",
+              pl: "Produkty",
+            },
+            hash: "a003449ecbde6b7a73044f46ea6bbe75",
+          },
+        "22/declaration/body/20/0/init/0/body/0/argument/expression/callee/object/1/consequent/1/value":
+          {
+            content: {
+              en: "Requirements",
+              pl: "Wymagania",
+            },
+            hash: "e108e149e0fd5b65f5850b6f032ccabe",
+          },
+        "22/declaration/body/20/0/init/0/body/0/argument/expression/callee/object/2/consequent/1/value":
+          {
+            content: {
+              en: "Review Criteria",
+              pl: "Kryteria oceny",
+            },
+            hash: "d524df30da3658fdbc1794408fcfdab4",
+          },
+        "22/declaration/body/20/0/init/0/body/0/argument/expression/callee/object/3/consequent/1/value":
+          {
+            content: {
+              en: "Description",
+              pl: "Opis",
+            },
+            hash: "e17686a22ffad04cc7bb70524ed4478b",
+          },
+        "22/declaration/body/20/0/init/0/body/0/argument/expression/callee/object/4/consequent/1/value":
+          {
+            content: {
+              en: "Additional Info",
+              pl: "Dodatkowe informacje",
+            },
+            hash: "d5bf1e70991802fd4a801f3a79cf9e5d",
+          },
+        "22/declaration/body/21/0/init/0/body/0/argument/expression/callee/object/0/consequent/1/value":
+          {
+            content: {
+              en: "Products",
+              pl: "Produkty",
+            },
+            hash: "a003449ecbde6b7a73044f46ea6bbe75",
+          },
+        "22/declaration/body/21/0/init/0/body/0/argument/expression/callee/object/1/consequent/1/value":
+          {
+            content: {
+              en: "Requirements",
+              pl: "Wymagania",
+            },
+            hash: "e108e149e0fd5b65f5850b6f032ccabe",
+          },
+        "22/declaration/body/21/0/init/0/body/0/argument/expression/callee/object/2/consequent/1/value":
+          {
+            content: {
+              en: "Review Criteria",
+              pl: "Kryteria oceny",
+            },
+            hash: "d524df30da3658fdbc1794408fcfdab4",
+          },
+        "22/declaration/body/21/0/init/0/body/0/argument/expression/callee/object/3/consequent/1/value":
+          {
+            content: {
+              en: "Description",
+              pl: "Opis",
+            },
+            hash: "e17686a22ffad04cc7bb70524ed4478b",
+          },
+        "22/declaration/body/21/0/init/0/body/0/argument/expression/callee/object/4/consequent/1/value":
+          {
+            content: {
+              en: "Additional Info",
+              pl: "Dodatkowe informacje",
+            },
+            hash: "d5bf1e70991802fd4a801f3a79cf9e5d",
+          },
         "27/declaration/body/16/0/init/0/body/0/argument/0/1/value": {
           content: {
             en: "Overview",
@@ -24476,6 +24577,13 @@ export default { // eslint-disable-line import/no-anonymous-default-export
     },
     "features/tenders/components/chatbot-drawer.tsx": {
       entries: {
+        "10/0/init/body/7/argument/1": {
+          content: {
+            en: "Najlepsze dopasowania",
+            pl: "Najlepsze dopasowania",
+          },
+          hash: "fd72e281e574d7818de294e0999f2392",
+        },
         "11/0/init/body/0/consequent/0/argument": {
           content: {
             en: "No content available for this file.",
@@ -24838,6 +24946,30 @@ export default { // eslint-disable-line import/no-anonymous-default-export
             },
             hash: "486477c4b22b0cfccf512e6aadaf471a",
           },
+        "14/declaration/body/15/0/init/0/body/1/argument/1/expression/0/body/2/argument/1/1/expression/alternate":
+          {
+            content: {
+              en: "Ty",
+              pl: "Ty",
+            },
+            hash: "d1252b3e2716d725d0857db30023b67e",
+          },
+        "14/declaration/body/15/0/init/0/body/1/argument/1/expression/0/body/2/argument/1/1/expression/consequent":
+          {
+            content: {
+              en: "<element:Bot></element:Bot> Asystent",
+              pl: "<element:Bot></element:Bot> Asystent",
+            },
+            hash: "3bcecbd018de5f55d1bd5588ff695c6c",
+          },
+        "14/declaration/body/15/0/init/0/body/1/argument/1/expression/0/body/2/argument/5/expression/right/1":
+          {
+            content: {
+              en: "Źródła wyszukiwania",
+              pl: "Źródła wyszukiwania",
+            },
+            hash: "7c4f977e0a89152fcfadac0759a6577e",
+          },
         "14/declaration/body/15/argument/1/1/1/expression/body/5/1/1-placeholder":
           {
             content: {
@@ -24861,6 +24993,46 @@ export default { // eslint-disable-line import/no-anonymous-default-export
               pl: "Zamknij",
             },
             hash: "a3ca1ea6dee147739081cf664c41ff16",
+          },
+        "14/declaration/body/16/0/init/0/body/1/argument/1/expression/0/body/2/argument/1/1/expression/alternate":
+          {
+            content: {
+              en: "You",
+              pl: "Ty",
+            },
+            hash: "db2a4a796b70cc1430d1b21f6ffb6dcb",
+          },
+        "14/declaration/body/16/0/init/0/body/1/argument/1/expression/0/body/2/argument/1/1/expression/consequent":
+          {
+            content: {
+              en: "<element:Bot></element:Bot> Assistant",
+              pl: "<element:Bot></element:Bot> Asystent",
+            },
+            hash: "486477c4b22b0cfccf512e6aadaf471a",
+          },
+        "14/declaration/body/16/0/init/0/body/1/argument/1/expression/0/body/2/argument/5/expression/right/1":
+          {
+            content: {
+              en: "Źródła wyszukiwania",
+              pl: "Źródła wyszukiwania",
+            },
+            hash: "7c4f977e0a89152fcfadac0759a6577e",
+          },
+        "14/declaration/body/16/argument/1/1/1/expression/body/5/1/1-placeholder":
+          {
+            content: {
+              en: "Wpisz swoje pytanie",
+              pl: "Wpisz swoje pytanie",
+            },
+            hash: "35313c08abb960ea510158eadd17e052",
+          },
+        "14/declaration/body/17/argument/1/1/1/expression/body/5/1/1-placeholder":
+          {
+            content: {
+              en: "Type your question",
+              pl: "Wpisz swoje pytanie",
+            },
+            hash: "5ce094b6530b667b2c86ef49163a7876",
           },
         "15/0/init/body/7/argument/1": {
           content: {
@@ -24924,6 +25096,38 @@ export default { // eslint-disable-line import/no-anonymous-default-export
               pl: "Zamknij",
             },
             hash: "a3ca1ea6dee147739081cf664c41ff16",
+          },
+        "15/declaration/body/16/0/init/0/body/1/argument/1/expression/0/body/2/argument/1/1/expression/alternate":
+          {
+            content: {
+              en: "You",
+              pl: "Ty",
+            },
+            hash: "db2a4a796b70cc1430d1b21f6ffb6dcb",
+          },
+        "15/declaration/body/16/0/init/0/body/1/argument/1/expression/0/body/2/argument/1/1/expression/consequent":
+          {
+            content: {
+              en: "<element:Bot></element:Bot> Assistant",
+              pl: "<element:Bot></element:Bot> Asystent",
+            },
+            hash: "486477c4b22b0cfccf512e6aadaf471a",
+          },
+        "15/declaration/body/16/0/init/0/body/1/argument/1/expression/0/body/2/argument/5/expression/right/1":
+          {
+            content: {
+              en: "Źródła wyszukiwania",
+              pl: "Źródła wyszukiwania",
+            },
+            hash: "7c4f977e0a89152fcfadac0759a6577e",
+          },
+        "15/declaration/body/17/argument/1/1/1/expression/body/5/1/1-placeholder":
+          {
+            content: {
+              en: "Type your question",
+              pl: "Wpisz swoje pytanie",
+            },
+            hash: "5ce094b6530b667b2c86ef49163a7876",
           },
         "15/declaration/body/18/0/init/0/body/1/argument/1/expression/0/body/3/argument/1/1/expression/alternate":
           {

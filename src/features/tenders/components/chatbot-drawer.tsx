@@ -576,7 +576,7 @@ export function ChatbotDrawer({
       return (
         <div className="flex h-full min-h-32 flex-col items-center justify-center gap-3 rounded-md border border-dashed p-6 text-center">
           <p className="text-sm text-muted-foreground" data-lingo-skip>
-            Che†nie pomogę Ci z obecnym przetargiem. Postaraj się zadawać precyzyjne pytania. 
+            Chętnie pomogę Ci z obecnym przetargiem. Postaraj się zadawać precyzyjne pytania.
           </p>
         </div>
       );
@@ -599,13 +599,13 @@ export function ChatbotDrawer({
               }`}
               data-lingo-skip
             >
-              <div className="mb-1 flex items-center gap-2 text-xs uppercase tracking-wide text-muted-foreground">
+              <div className="mb-1 flex items-center gap-2 text-xs uppercase tracking-wide text-muted-foreground" data-lingo-skip>
                 {isAssistant ? (
                   <>
-                    <Bot className="h-3.5 w-3.5" /> Assistant
+                    <Bot className="h-3.5 w-3.5" /> Asystent
                   </>
                 ) : (
-                  <>You</>
+                  <>Ty</>
                 )}
               </div>
               <p className="whitespace-pre-wrap" data-lingo-skip>
@@ -701,7 +701,7 @@ export function ChatbotDrawer({
                   <Input
                     value={inputValue}
                     onChange={(event) => setInputValue(event.target.value)}
-                    placeholder="Type your question"
+                    placeholder="Wpisz swoje pytanie"
                     radius="sm"
                     endContent={
                       <Button
@@ -719,7 +719,7 @@ export function ChatbotDrawer({
                   />
                   {!mappingId && (
                     <p className="text-xs text-muted-foreground" data-lingo-skip>
-                      Select a tender to start chatting.
+                      Wybierz przetarg, aby rozpocząć rozmowę.
                     </p>
                   )}
                 </form>
