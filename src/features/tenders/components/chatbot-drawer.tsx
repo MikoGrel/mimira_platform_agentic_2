@@ -367,7 +367,7 @@ export function ChatbotDrawer({
       const assistantText =
         candidateReply.length > 0
           ? candidateReply
-          : "The assistant did not return any content.";
+          : "Asystent nie zwrócił żadnej treści."; // The assistant did not return any content.
 
       updateMessageById(assistantId, (message) => ({
         ...message,
@@ -376,7 +376,7 @@ export function ChatbotDrawer({
       }));
 
       // Save conversation history for streaming responses
-      if (assistantText && assistantText !== "The assistant did not return any content.") {
+      if (assistantText && assistantText !== "Asystent nie zwrócił żadnej treści.") {
         void saveConversationHistory(assistantText);
       }
     },
@@ -387,7 +387,7 @@ export function ChatbotDrawer({
     async (response: Response, assistantId: string) => {
       const body = response.body;
       if (!body) {
-        throw new Error("Empty response stream.");
+        throw new Error("Pusty strumień odpowiedzi."); // Empty response stream.
       }
 
       const reader = body.getReader();
@@ -448,7 +448,7 @@ export function ChatbotDrawer({
           const message =
             typeof (parsed.error as { message?: unknown })?.message === "string"
               ? ((parsed.error as { message: string }).message as string)
-              : "Assistant streaming error.";
+              : "Błąd strumieniowania asystenta."; // Assistant streaming error.
           throw new Error(message);
         }
 
@@ -534,7 +534,7 @@ export function ChatbotDrawer({
 
       if (!response.ok) {
         const errorPayload = await response.json().catch(() => null);
-        throw new Error(errorPayload?.error ?? "Failed to reach assistant");
+        throw new Error(errorPayload?.error ?? "Nie udało się połączyć z asystentem"); // Failed to reach assistant
       }
 
       const contentType = response.headers.get("content-type") ?? "";
@@ -553,11 +553,11 @@ export function ChatbotDrawer({
     } catch (error) {
       console.error("Chatbot send error", error);
       const fallback =
-        error instanceof Error ? error.message : "Unexpected error";
+        error instanceof Error ? error.message : "Nieoczekiwany błąd"; // Unexpected error
       setChatError(fallback);
       updateMessageById(assistantMessageId, (message) => ({
         ...message,
-        content: "Sorry, I couldn’t reach the assistant. Please try again.",
+        content: "Przepraszam, nie mogę połączyć się z asystentem. Spróbuj ponownie.", // Sorry, I couldn't reach the assistant. Please try again.
         searchResults: [],
       }));
     } finally {
