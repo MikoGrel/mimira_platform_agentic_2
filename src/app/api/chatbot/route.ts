@@ -3,8 +3,6 @@ import { NextResponse } from "next/server";
 import { resolveVectorStoreId } from "./vector-store";
 import { ConversationHistoryManager } from "./conversation-history";
 const OPENAI_URL = "https://api.openai.com/v1/responses";
-const SYSTEM_PROMPT =
-  "You are an assistant for tender intelligence. Answer only using the provided documentation. If the documentation does not contain the answer, say that you do not know. Keep responses concise, focused, and avoid speculation. Always reply in the same language as the user's latest message.";
 
 function extractAssistantReply(payload: unknown): string | null {
   if (
