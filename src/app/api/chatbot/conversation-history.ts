@@ -1,11 +1,12 @@
 import { createClient } from "$/lib/supabase/server";
+import type { Json } from "$/types/supabase";
 
 interface ConversationMessage {
   role: "system" | "user" | "assistant";
   content: Array<{
     type: string;
     text?: string;
-    [key: string]: any;
+    [key: string]: unknown;
   }>;
   timestamp: string;
   searchResults?: Array<{
@@ -23,7 +24,7 @@ interface ConversationData {
 
 export class ConversationHistoryManager {
   private static readonly SYSTEM_PROMPT = 
-    "You are an assistant for tender intelligence. Answer only using the provided documentation. If the documentation does not contain the answer, say that you do not know. Keep responses concise, focused, and avoid speculation. Always reply in the same language as the user's latest message. Please do not offer things beyond answering questions (e.g. you are NOT able to prepare the docuemntation - do NOT offer it)";
+    "You are an assistant for tender intelligence. Answer only using the provided documentation. If the documentation does not contain the answer, say that you do not know. Keep responses concise, focused, and avoid speculation. Always reply in the same language as the user's latest message. Please do not offer things beyond answering questions (e.g. you are NOT able to prepare the documentation - do NOT offer it)";
 
   static async getHistory(mappingId: string): Promise<ConversationMessage[]> {
     try {
@@ -60,7 +61,7 @@ export class ConversationHistoryManager {
   }
 
   // Convert stored conversation to OpenAI format (removes timestamps and metadata)
-  static async getOpenAIHistory(mappingId: string): Promise<Array<{role: string, content: any[]}>> {
+  static async getOpenAIHistory(mappingId: string): Promise<Array<{role: string, content: Array<{type: string; text?: string; [key: string]: unknown}>}>> {
     const history = await this.getHistory(mappingId);
     
     return history.map(message => ({
@@ -92,7 +93,7 @@ export class ConversationHistoryManager {
       const { error } = await supabase
         .from('companies_tenders_mappings')
         .update({ 
-          chatbot_responses: conversationData as any,
+          chatbot_responses: conversationData as unknown as Json,
           updated_at: new Date().toISOString()
         })
         .eq('id', mappingId);
@@ -132,14 +133,14 @@ export class ConversationHistoryManager {
 
   static async addAssistantResponse(
     mappingId: string, 
-    responseOutput: any[],
-    searchResults?: any[]
+    responseOutput: Array<{role?: string; content?: unknown}>,
+    searchResults?: Array<{fileId: string; filename?: string; text?: string; vectorStoreFileId?: string}>
   ): Promise<void> {
     const history = await this.getHistory(mappingId);
 
     // Add assistant messages from the response output
     for (const output of responseOutput) {
-      if (output.role && output.content) {
+      if (output.role && output.content && (output.role === 'user' || output.role === 'assistant' || output.role === 'system')) {
         const assistantMessage: ConversationMessage = {
           role: output.role,
           content: Array.isArray(output.content) ? output.content : [output.content],
@@ -160,7 +161,7 @@ export class ConversationHistoryManager {
   static async addAssistantMessage(
     mappingId: string,
     content: string,
-    searchResults?: any[]
+    searchResults?: Array<{fileId: string; filename?: string; text?: string; vectorStoreFileId?: string}>
   ): Promise<void> {
     const history = await this.getHistory(mappingId);
 
