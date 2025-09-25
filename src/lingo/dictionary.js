@@ -24865,6 +24865,13 @@ export default {
           },
           hash: "d2a161e899791eacedca70b8a483bf6a",
         },
+        "14/0/init/body/7/argument/1": {
+          content: {
+            en: "Najlepsze dopasowania",
+            pl: "Najlepsze dopasowania",
+          },
+          hash: "fd72e281e574d7818de294e0999f2392",
+        },
         "14/declaration/body/10/0/init/0/body/consequent/1/expression/0/body/1/1/expression/alternate":
           {
             content: {
@@ -25534,6 +25541,14 @@ export default {
             },
             hash: "32899fc3749c911ca678472bda7a9e3e",
           },
+        "18/declaration/body/15/0/init/0/body/1/argument/1/expression/0/body/2/argument/5/expression/right/1":
+          {
+            content: {
+              en: "Źródła wyszukiwania",
+              pl: "Źródła wyszukiwania",
+            },
+            hash: "7c4f977e0a89152fcfadac0759a6577e",
+          },
         "18/declaration/body/15/argument/1/1/1/expression/body/5/1/1-placeholder":
           {
             content: {
@@ -25573,6 +25588,14 @@ export default {
               pl: "Źródła",
             },
             hash: "2acb36555840019eaad0d6ee061b7157",
+          },
+        "18/declaration/body/16/argument/1/1/1/expression/body/5/1/1-placeholder":
+          {
+            content: {
+              en: "Zadaj pytanie",
+              pl: "Zadaj pytanie",
+            },
+            hash: "a89739d1f7f84d97efbb0b14fe3f5a51",
           },
         "18/declaration/body/17/0/init/0/body/1/argument/1/expression/0/body/3/argument/1/1/expression/alternate":
           {
