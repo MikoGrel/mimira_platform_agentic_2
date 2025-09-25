@@ -214,6 +214,7 @@ export type Database = {
       companies_tenders_mappings: {
         Row: {
           can_participate: boolean | null
+          chatbot_responses: Json | null
           company_id: string | null
           created_at: string
           docs_ready: boolean
@@ -226,6 +227,7 @@ export type Database = {
         }
         Insert: {
           can_participate?: boolean | null
+          chatbot_responses?: Json | null
           company_id?: string | null
           created_at?: string
           docs_ready?: boolean
@@ -238,6 +240,7 @@ export type Database = {
         }
         Update: {
           can_participate?: boolean | null
+          chatbot_responses?: Json | null
           company_id?: string | null
           created_at?: string
           docs_ready?: boolean

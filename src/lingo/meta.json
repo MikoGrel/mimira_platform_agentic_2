@@ -27479,6 +27479,22 @@
     },
     "features/tenders/components/chatbot-drawer.tsx": {
       "scopes": {
+        "10/0/init/body/3/consequent/0/argument": {
+          "type": "element",
+          "hash": "bf0eec21b49ce31cb66df1a7332d374f",
+          "context": "",
+          "skip": true,
+          "overrides": {},
+          "content": "Brak dopasowań z wyszukiwarki."
+        },
+        "10/0/init/body/7/argument/1": {
+          "type": "element",
+          "hash": "fd72e281e574d7818de294e0999f2392",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Najlepsze dopasowania"
+        },
         "11/0/init/body/0/consequent/0/argument": {
           "type": "element",
           "hash": "d2a161e899791eacedca70b8a483bf6a",
@@ -27729,11 +27745,11 @@
         },
         "13/declaration/body/14/argument/1/1/1/expression/body/3/1/3/expression/right": {
           "type": "element",
-          "hash": "0bb14f660c4cfce7bbb567437ebd634d",
+          "hash": "830476fbd6faf72514726f67ace4c85f",
           "context": "",
           "skip": true,
           "overrides": {},
-          "content": "<element:Spinner></element:Spinner> Przeszukiwanie dokumentacji..."
+          "content": "<element:Spinner></element:Spinner> Przeszukiwanie dokumentacji... Mo"
         },
         "13/declaration/body/14/argument/1/1/1/expression/body/5/1/1-placeholder": {
           "type": "attribute",
@@ -28223,6 +28239,38 @@
           "overrides": {},
           "content": "<element:Bot></element:Bot> Assistant"
         },
+        "14/declaration/body/15/0/init/0/body/0/consequent/0/argument/1": {
+          "type": "element",
+          "hash": "1dd93a44e9f78453c798069cafbcc076",
+          "context": "",
+          "skip": true,
+          "overrides": {},
+          "content": "Che†nie pomogę Ci z obecnym przetargiem. Postaraj się zadawać precyzyjne pytania."
+        },
+        "14/declaration/body/15/0/init/0/body/1/argument/1/expression/0/body/2/argument/1/1/expression/alternate": {
+          "type": "element",
+          "hash": "db2a4a796b70cc1430d1b21f6ffb6dcb",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "You"
+        },
+        "14/declaration/body/15/0/init/0/body/1/argument/1/expression/0/body/2/argument/1/1/expression/consequent": {
+          "type": "element",
+          "hash": "486477c4b22b0cfccf512e6aadaf471a",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "<element:Bot></element:Bot> Assistant"
+        },
+        "14/declaration/body/15/0/init/0/body/1/argument/1/expression/0/body/2/argument/5/expression/right/1": {
+          "type": "element",
+          "hash": "7c4f977e0a89152fcfadac0759a6577e",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Źródła wyszukiwania"
+        },
         "14/declaration/body/15/argument/1/1/1/expression/body/1/1/1/3": {
           "type": "element",
           "hash": "ad58e7ee8980645f03be85dd53e3b13f",
@@ -28342,6 +28390,118 @@
           "skip": false,
           "overrides": {},
           "content": "Close"
+        },
+        "14/declaration/body/16/0/init/0/body/0/consequent/0/argument/1": {
+          "type": "element",
+          "hash": "1dd93a44e9f78453c798069cafbcc076",
+          "context": "",
+          "skip": true,
+          "overrides": {},
+          "content": "Che†nie pomogę Ci z obecnym przetargiem. Postaraj się zadawać precyzyjne pytania."
+        },
+        "14/declaration/body/16/0/init/0/body/1/argument/1/expression/0/body/2/argument/1/1/expression/alternate": {
+          "type": "element",
+          "hash": "db2a4a796b70cc1430d1b21f6ffb6dcb",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "You"
+        },
+        "14/declaration/body/16/0/init/0/body/1/argument/1/expression/0/body/2/argument/1/1/expression/consequent": {
+          "type": "element",
+          "hash": "486477c4b22b0cfccf512e6aadaf471a",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "<element:Bot></element:Bot> Assistant"
+        },
+        "14/declaration/body/16/0/init/0/body/1/argument/1/expression/0/body/2/argument/5/expression/right/1": {
+          "type": "element",
+          "hash": "7c4f977e0a89152fcfadac0759a6577e",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Źródła wyszukiwania"
+        },
+        "14/declaration/body/16/argument/1/1/1/expression/body/1/1/1/3": {
+          "type": "element",
+          "hash": "a2f9fa35968877d8226365c39680688d",
+          "context": "",
+          "skip": true,
+          "overrides": {},
+          "content": "Asystent Mimira"
+        },
+        "14/declaration/body/16/argument/1/1/1/expression/body/1/1/3/expression/right": {
+          "type": "element",
+          "hash": "9a43cb29159dbab5fb70e90c9270d378",
+          "context": "",
+          "skip": true,
+          "overrides": {},
+          "content": "Wyczyść historię"
+        },
+        "14/declaration/body/16/argument/1/1/1/expression/body/3/1/3/expression/right": {
+          "type": "element",
+          "hash": "7623acf833a52b35906c1786f165eab6",
+          "context": "",
+          "skip": true,
+          "overrides": {},
+          "content": "<element:Spinner></element:Spinner> Przeszukiwanie dokumentacji... Może mi to zajać chwilę."
+        },
+        "14/declaration/body/16/argument/1/1/1/expression/body/5/1/1-placeholder": {
+          "type": "attribute",
+          "hash": "5ce094b6530b667b2c86ef49163a7876",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Type your question"
+        },
+        "14/declaration/body/16/argument/1/1/1/expression/body/5/1/3/expression/right": {
+          "type": "element",
+          "hash": "c70bf962ff64eca1361e6cd37f19f9ed",
+          "context": "",
+          "skip": true,
+          "overrides": {},
+          "content": "Select a tender to start chatting."
+        },
+        "14/declaration/body/17/argument/1/1/1/expression/body/1/1/1/3": {
+          "type": "element",
+          "hash": "a2f9fa35968877d8226365c39680688d",
+          "context": "",
+          "skip": true,
+          "overrides": {},
+          "content": "Asystent Mimira"
+        },
+        "14/declaration/body/17/argument/1/1/1/expression/body/1/1/3/expression/right": {
+          "type": "element",
+          "hash": "9a43cb29159dbab5fb70e90c9270d378",
+          "context": "",
+          "skip": true,
+          "overrides": {},
+          "content": "Wyczyść historię"
+        },
+        "14/declaration/body/17/argument/1/1/1/expression/body/3/1/3/expression/right": {
+          "type": "element",
+          "hash": "7623acf833a52b35906c1786f165eab6",
+          "context": "",
+          "skip": true,
+          "overrides": {},
+          "content": "<element:Spinner></element:Spinner> Przeszukiwanie dokumentacji... Może mi to zajać chwilę."
+        },
+        "14/declaration/body/17/argument/1/1/1/expression/body/5/1/1-placeholder": {
+          "type": "attribute",
+          "hash": "5ce094b6530b667b2c86ef49163a7876",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Type your question"
+        },
+        "14/declaration/body/17/argument/1/1/1/expression/body/5/1/3/expression/right": {
+          "type": "element",
+          "hash": "c70bf962ff64eca1361e6cd37f19f9ed",
+          "context": "",
+          "skip": true,
+          "overrides": {},
+          "content": "Select a tender to start chatting."
         },
         "15/0/init/body/3/consequent/0/argument": {
           "type": "element",
@@ -28566,6 +28726,78 @@
           "skip": false,
           "overrides": {},
           "content": "Close"
+        },
+        "15/declaration/body/16/0/init/0/body/0/consequent/0/argument/1": {
+          "type": "element",
+          "hash": "1dd93a44e9f78453c798069cafbcc076",
+          "context": "",
+          "skip": true,
+          "overrides": {},
+          "content": "Che†nie pomogę Ci z obecnym przetargiem. Postaraj się zadawać precyzyjne pytania."
+        },
+        "15/declaration/body/16/0/init/0/body/1/argument/1/expression/0/body/2/argument/1/1/expression/alternate": {
+          "type": "element",
+          "hash": "db2a4a796b70cc1430d1b21f6ffb6dcb",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "You"
+        },
+        "15/declaration/body/16/0/init/0/body/1/argument/1/expression/0/body/2/argument/1/1/expression/consequent": {
+          "type": "element",
+          "hash": "486477c4b22b0cfccf512e6aadaf471a",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "<element:Bot></element:Bot> Assistant"
+        },
+        "15/declaration/body/16/0/init/0/body/1/argument/1/expression/0/body/2/argument/5/expression/right/1": {
+          "type": "element",
+          "hash": "7c4f977e0a89152fcfadac0759a6577e",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Źródła wyszukiwania"
+        },
+        "15/declaration/body/17/argument/1/1/1/expression/body/1/1/1/3": {
+          "type": "element",
+          "hash": "a2f9fa35968877d8226365c39680688d",
+          "context": "",
+          "skip": true,
+          "overrides": {},
+          "content": "Asystent Mimira"
+        },
+        "15/declaration/body/17/argument/1/1/1/expression/body/1/1/3/expression/right": {
+          "type": "element",
+          "hash": "9a43cb29159dbab5fb70e90c9270d378",
+          "context": "",
+          "skip": true,
+          "overrides": {},
+          "content": "Wyczyść historię"
+        },
+        "15/declaration/body/17/argument/1/1/1/expression/body/3/1/3/expression/right": {
+          "type": "element",
+          "hash": "7623acf833a52b35906c1786f165eab6",
+          "context": "",
+          "skip": true,
+          "overrides": {},
+          "content": "<element:Spinner></element:Spinner> Przeszukiwanie dokumentacji... Może mi to zajać chwilę."
+        },
+        "15/declaration/body/17/argument/1/1/1/expression/body/5/1/1-placeholder": {
+          "type": "attribute",
+          "hash": "5ce094b6530b667b2c86ef49163a7876",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Type your question"
+        },
+        "15/declaration/body/17/argument/1/1/1/expression/body/5/1/3/expression/right": {
+          "type": "element",
+          "hash": "c70bf962ff64eca1361e6cd37f19f9ed",
+          "context": "",
+          "skip": true,
+          "overrides": {},
+          "content": "Select a tender to start chatting."
         },
         "15/declaration/body/18/0/init/0/body/0/consequent/0/argument/3": {
           "type": "element",

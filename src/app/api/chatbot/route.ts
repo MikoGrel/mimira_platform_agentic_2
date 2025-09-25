@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 
 import { resolveVectorStoreId } from "./vector-store";
+import { ConversationHistoryManager } from "./conversation-history";
 const OPENAI_URL = "https://api.openai.com/v1/responses";
 const SYSTEM_PROMPT =
   "You are an assistant for tender intelligence. Answer only using the provided documentation. If the documentation does not contain the answer, say that you do not know. Keep responses concise, focused, and avoid speculation. Always reply in the same language as the user's latest message.";
@@ -80,6 +81,12 @@ export async function POST(request: Request) {
 
     const shouldStream = Boolean(stream);
 
+    // Add current user message to stored conversation history
+    await ConversationHistoryManager.addUserMessage(mappingId, message);
+    
+    // Get OpenAI-compatible conversation history (without timestamps/metadata)
+    const conversationHistory = await ConversationHistoryManager.getOpenAIHistory(mappingId);
+
     const requestBody: Record<string, unknown> = {
       model: "gpt-5-mini",
       tools: [
@@ -90,26 +97,7 @@ export async function POST(request: Request) {
         },
       ],
       include: ["file_search_call.results"],
-      input: [
-        {
-          role: "system",
-          content: [
-            {
-              type: "input_text",
-              text: SYSTEM_PROMPT,
-            },
-          ],
-        },
-        {
-          role: "user",
-          content: [
-            {
-              type: "input_text",
-              text: message,
-            },
-          ],
-        },
-      ],
+      input: conversationHistory, // Send full conversation history
     };
 
     if (shouldStream) {
@@ -175,6 +163,11 @@ export async function POST(request: Request) {
 
     const payload = await response.json();
     const reply = extractAssistantReply(payload);
+
+    // Save assistant response to conversation history
+    if (payload.output && Array.isArray(payload.output)) {
+      await ConversationHistoryManager.addAssistantResponse(mappingId, payload.output);
+    }
 
     return NextResponse.json({
       reply,

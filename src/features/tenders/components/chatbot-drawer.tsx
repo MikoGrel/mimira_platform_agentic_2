@@ -34,6 +34,7 @@ interface ChatbotDrawerProps {
 }
 
 const CHAT_ENDPOINT = "/api/chatbot";
+const SAVE_HISTORY_ENDPOINT = "/api/chatbot/save-history";
 
 const createMessageId = () => {
   if (typeof crypto !== "undefined" && typeof crypto.randomUUID === "function") {
@@ -300,6 +301,13 @@ export function ChatbotDrawer({
     }
   }, [open]);
 
+  // Reset UI state when switching tenders (but preserve conversation history in database)
+  useEffect(() => {
+    setMessages([]);
+    setActiveSearchMessageId(null);
+    setChatError(null);
+  }, [mappingId]);
+
   const disabled = !mappingId || isSending || !inputValue.trim();
 
   const toggleSearchDetails = useCallback((messageId: string) => {
@@ -307,6 +315,37 @@ export function ChatbotDrawer({
       current === messageId ? null : messageId
     );
   }, []);
+
+  const saveConversationHistory = useCallback(
+    async (assistantMessage: string) => {
+      if (!mappingId || !assistantMessage.trim()) {
+        return;
+      }
+
+      try {
+        await fetch(SAVE_HISTORY_ENDPOINT, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            mappingId,
+            assistantMessage: {
+              role: "assistant",
+              content: assistantMessage,
+            },
+          }),
+        });
+      } catch (error) {
+        console.error("Failed to save conversation history:", error);
+        // Don't throw - this shouldn't break the chat experience
+      }
+    },
+    [mappingId]
+  );
+
+  // Note: Clear history functionality removed per user request
+  // Conversations are now stored permanently
 
   const finalizeAssistantMessage = useCallback(
     (
@@ -335,8 +374,13 @@ export function ChatbotDrawer({
         content: assistantText,
         searchResults: parsed.searchResults,
       }));
+
+      // Save conversation history for streaming responses
+      if (assistantText && assistantText !== "The assistant did not return any content.") {
+        void saveConversationHistory(assistantText);
+      }
     },
-    [updateMessageById]
+    [updateMessageById, saveConversationHistory]
   );
 
   const consumeStreamResponse = useCallback(
@@ -619,6 +663,7 @@ export function ChatbotDrawer({
                       Asystent Mimira
                     </h3>
                   </div>
+                  {/* Clear history button removed - conversations stored permanently */}
                 </div>
                 {tenderTitle && (
                   <p className="text-sm text-muted-foreground" data-lingo-skip>
@@ -633,7 +678,7 @@ export function ChatbotDrawer({
                   {isSending && (
                     <div className="flex items-center gap-2 text-sm text-muted-foreground" data-lingo-skip>
                       <Spinner size="sm" color="primary" />
-                      Przeszukiwanie dokumentacji...
+                      Przeszukiwanie dokumentacji... Może mi to zajać chwilę.
                     </div>
                   )}
                   {chatError && (
