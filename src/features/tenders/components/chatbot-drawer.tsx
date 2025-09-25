@@ -49,6 +49,21 @@ const stripFileCitations = (text: string): string => {
   return text.replace(/filecite[a-zA-Z0-9_]+/g, '').trim();
 };
 
+const MessageHeader = ({ isAssistant }: { isAssistant: boolean }) => {
+  return (
+    <div className="mb-1 flex items-center gap-2 text-xs uppercase tracking-wide text-muted-foreground" data-lingo-skip>
+      {isAssistant && (
+        <span data-lingo-skip>
+          <Bot className="h-3.5 w-3.5" /> Asystent
+        </span>
+      )}
+      {!isAssistant && (
+        <span data-lingo-skip>Ty</span>
+      )}
+    </div>
+  );
+};
+
 const truncatePreview = (text: string, limit = 260) => {
   const trimmed = text.trim();
   if (trimmed.length <= limit) {
@@ -675,15 +690,7 @@ export function ChatbotDrawer({
               data-lingo-skip
               suppressHydrationWarning
             >
-              <div className="mb-1 flex items-center gap-2 text-xs uppercase tracking-wide text-muted-foreground" data-lingo-skip>
-                {isAssistant ? (
-                  <span data-lingo-skip>
-                    <Bot className="h-3.5 w-3.5" /> Asystent
-                  </span>
-                ) : (
-                  <span data-lingo-skip>Ty</span>
-                )}
-              </div>
+              <MessageHeader isAssistant={isAssistant} />
               <div className="prose prose-sm max-w-none" data-lingo-skip>
                 {isAssistant ? (
                   <div data-lingo-skip>
@@ -787,7 +794,7 @@ export function ChatbotDrawer({
                   <Input
                     value={inputValue}
                     onChange={(event) => setInputValue(event.target.value)}
-                    placeholder="Wpisz swoje pytanie"
+                    placeholder="Wyślij wiadomość"
                     radius="sm"
                     endContent={
                       <Button

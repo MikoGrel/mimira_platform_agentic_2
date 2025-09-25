@@ -24629,6 +24629,13 @@ export default {
           },
           hash: "d2a161e899791eacedca70b8a483bf6a",
         },
+        "12/0/init/body/7/argument/1": {
+          content: {
+            en: "Najlepsze dopasowania",
+            pl: "Najlepsze dopasowania",
+          },
+          hash: "fd72e281e574d7818de294e0999f2392",
+        },
         "13/0/init/body/0/consequent/0/argument": {
           content: {
             en: "No content available for this file.",
@@ -25065,6 +25072,30 @@ export default {
             },
             hash: "32899fc3749c911ca678472bda7a9e3e",
           },
+        "15/declaration/body/15/0/init/0/body/1/argument/1/expression/0/body/2/argument/1/1/expression/alternate":
+          {
+            content: {
+              en: "Ty",
+              pl: "Ty",
+            },
+            hash: "d1252b3e2716d725d0857db30023b67e",
+          },
+        "15/declaration/body/15/0/init/0/body/1/argument/1/expression/0/body/2/argument/1/1/expression/consequent":
+          {
+            content: {
+              en: "<element:Bot></element:Bot> Asystent",
+              pl: "<element:Bot></element:Bot> Asystent",
+            },
+            hash: "3bcecbd018de5f55d1bd5588ff695c6c",
+          },
+        "15/declaration/body/15/0/init/0/body/1/argument/1/expression/0/body/2/argument/5/expression/right/1":
+          {
+            content: {
+              en: "Źródła wyszukiwania",
+              pl: "Źródła wyszukiwania",
+            },
+            hash: "7c4f977e0a89152fcfadac0759a6577e",
+          },
         "15/declaration/body/15/argument/1/1/1/expression/body/5/1/1-placeholder":
           {
             content: {
@@ -25120,6 +25151,14 @@ export default {
               pl: "Źródła wyszukiwania",
             },
             hash: "7c4f977e0a89152fcfadac0759a6577e",
+          },
+        "15/declaration/body/16/argument/1/1/1/expression/body/5/1/1-placeholder":
+          {
+            content: {
+              en: "Wpisz swoje pytanie",
+              pl: "Wpisz swoje pytanie",
+            },
+            hash: "35313c08abb960ea510158eadd17e052",
           },
         "15/declaration/body/17/argument/1/1/1/expression/body/5/1/1-placeholder":
           {
@@ -25305,6 +25344,30 @@ export default {
             },
             hash: "32899fc3749c911ca678472bda7a9e3e",
           },
+        "16/declaration/body/15/0/init/0/body/1/argument/1/expression/0/body/2/argument/1/1/expression/alternate":
+          {
+            content: {
+              en: "Ty",
+              pl: "Ty",
+            },
+            hash: "d1252b3e2716d725d0857db30023b67e",
+          },
+        "16/declaration/body/15/0/init/0/body/1/argument/1/expression/0/body/2/argument/1/1/expression/consequent":
+          {
+            content: {
+              en: "<element:Bot></element:Bot> Asystent",
+              pl: "<element:Bot></element:Bot> Asystent",
+            },
+            hash: "3bcecbd018de5f55d1bd5588ff695c6c",
+          },
+        "16/declaration/body/15/0/init/0/body/1/argument/1/expression/0/body/2/argument/5/expression/right/1":
+          {
+            content: {
+              en: "Źródła wyszukiwania",
+              pl: "Źródła wyszukiwania",
+            },
+            hash: "7c4f977e0a89152fcfadac0759a6577e",
+          },
         "16/declaration/body/15/argument/1/1/1/expression/body/5/1/1-placeholder":
           {
             content: {
@@ -25320,6 +25383,30 @@ export default {
               pl: "Zamknij",
             },
             hash: "a3ca1ea6dee147739081cf664c41ff16",
+          },
+        "16/declaration/body/16/argument/1/1/1/expression/body/5/1/1-placeholder":
+          {
+            content: {
+              en: "Wpisz swoje pytanie",
+              pl: "Wpisz swoje pytanie",
+            },
+            hash: "35313c08abb960ea510158eadd17e052",
+          },
+        "17/declaration/body/15/0/init/0/body/1/argument/1/expression/0/body/2/argument/5/expression/right/1":
+          {
+            content: {
+              en: "Źródła wyszukiwania",
+              pl: "Źródła wyszukiwania",
+            },
+            hash: "7c4f977e0a89152fcfadac0759a6577e",
+          },
+        "17/declaration/body/16/argument/1/1/1/expression/body/5/1/1-placeholder":
+          {
+            content: {
+              en: "Wyślij wiadomość",
+              pl: "Send message",
+            },
+            hash: "71bf3638fffa0a20a256d46b227b0e77",
           },
         "17/declaration/body/20/0/init/0/body/1/argument/1/expression/0/body/3/argument/1/1/expression/alternate":
           {
