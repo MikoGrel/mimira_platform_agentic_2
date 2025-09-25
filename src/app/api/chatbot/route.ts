@@ -3,6 +3,12 @@ import { NextResponse } from "next/server";
 import { resolveVectorStoreId } from "./vector-store";
 import { ConversationHistoryManager } from "./conversation-history";
 const OPENAI_URL = "https://api.openai.com/v1/responses";
+
+function stripFileCitations(text: string): string {
+  // Remove file citation patterns like fileciteturn0file8turn0file4
+  return text.replace(/filecite[a-zA-Z0-9_]+/g, '').trim();
+}
+
 function extractAssistantReply(payload: unknown): string | null {
   if (
     !payload ||
@@ -29,7 +35,7 @@ function extractAssistantReply(payload: unknown): string | null {
     ) as { text?: string } | undefined;
 
     if (textItem?.text) {
-      return textItem.text;
+      return stripFileCitations(textItem.text);
     }
   }
 

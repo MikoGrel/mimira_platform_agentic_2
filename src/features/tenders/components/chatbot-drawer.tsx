@@ -12,6 +12,7 @@ import {
   Spinner,
 } from "@heroui/react";
 import { Bot, ChevronDown, Search, Send, TriangleAlert } from "lucide-react";
+import Markdown, { type Components } from "react-markdown";
 
 interface ChatSearchResult {
   fileId: string;
@@ -43,12 +44,86 @@ const createMessageId = () => {
   return Math.random().toString(36).slice(2);
 };
 
+const stripFileCitations = (text: string): string => {
+  // Remove file citation patterns like fileciteturn0file8turn0file4
+  return text.replace(/filecite[a-zA-Z0-9_]+/g, '').trim();
+};
+
 const truncatePreview = (text: string, limit = 260) => {
   const trimmed = text.trim();
   if (trimmed.length <= limit) {
     return trimmed;
   }
   return `${trimmed.slice(0, limit)}…`;
+};
+
+// Markdown components for chatbot responses
+const markdownComponents: Components = {
+  h1: ({ children }) => (
+    <h1 className="text-base font-semibold text-foreground mt-3 mb-2">{children}</h1>
+  ),
+  h2: ({ children }) => (
+    <h2 className="text-base font-semibold text-foreground mt-3 mb-2">{children}</h2>
+  ),
+  h3: ({ children }) => (
+    <h3 className="text-sm font-semibold text-foreground mt-2 mb-1">{children}</h3>
+  ),
+  h4: ({ children }) => (
+    <h4 className="text-sm font-medium text-foreground mt-2 mb-1">{children}</h4>
+  ),
+  p: ({ children }) => (
+    <p className="text-sm text-foreground mb-2 last:mb-0">{children}</p>
+  ),
+  ul: ({ children }) => (
+    <ul className="list-disc text-sm text-foreground space-y-1 pl-4 mb-2 last:mb-0">
+      {children}
+    </ul>
+  ),
+  ol: ({ children }) => (
+    <ol className="list-decimal text-sm text-foreground space-y-1 pl-4 mb-2 last:mb-0">
+      {children}
+    </ol>
+  ),
+  li: ({ children }) => (
+    <li className="text-sm text-foreground">{children}</li>
+  ),
+  strong: ({ children }) => (
+    <strong className="font-semibold text-foreground">{children}</strong>
+  ),
+  b: ({ children }) => (
+    <b className="font-semibold text-foreground">{children}</b>
+  ),
+  em: ({ children }) => (
+    <em className="italic text-foreground">{children}</em>
+  ),
+  i: ({ children }) => (
+    <i className="italic text-foreground">{children}</i>
+  ),
+  blockquote: ({ children }) => (
+    <blockquote className="border-l-2 border-primary/30 pl-3 italic text-muted-foreground mb-2 last:mb-0">
+      {children}
+    </blockquote>
+  ),
+  code: ({ children, className }) => {
+    const isInline = !className;
+    if (isInline) {
+      return (
+        <code className="bg-content2 text-foreground px-1 py-0.5 rounded text-xs font-mono">
+          {children}
+        </code>
+      );
+    }
+    return (
+      <code className="block bg-content2 text-foreground p-2 rounded text-xs font-mono overflow-x-auto mb-2 last:mb-0">
+        {children}
+      </code>
+    );
+  },
+  pre: ({ children }) => (
+    <pre className="bg-content2 text-foreground p-2 rounded text-xs font-mono overflow-x-auto mb-2 last:mb-0">
+      {children}
+    </pre>
+  ),
 };
 
 const SearchResultDetails = ({
@@ -210,7 +285,7 @@ const parseAssistantPayload = (
 
         const text = (entry as { text?: unknown }).text;
         if (typeof text === "string") {
-          textParts.push(text);
+          textParts.push(stripFileCitations(text));
         }
       });
     }
@@ -366,7 +441,7 @@ export function ChatbotDrawer({
 
       const assistantText =
         candidateReply.length > 0
-          ? candidateReply
+          ? stripFileCitations(candidateReply)
           : "Asystent nie zwrócił żadnej treści."; // The assistant did not return any content.
 
       updateMessageById(assistantId, (message) => ({
@@ -423,7 +498,7 @@ export function ChatbotDrawer({
             aggregatedText += delta;
             updateMessageById(assistantId, (message) => ({
               ...message,
-              content: aggregatedText,
+              content: stripFileCitations(aggregatedText),
             }));
           }
           return;
@@ -458,7 +533,7 @@ export function ChatbotDrawer({
             aggregatedText += delta;
             updateMessageById(assistantId, (message) => ({
               ...message,
-              content: aggregatedText,
+              content: stripFileCitations(aggregatedText),
             }));
           }
         }
@@ -608,9 +683,17 @@ export function ChatbotDrawer({
                   <>Ty</>
                 )}
               </div>
-              <p className="whitespace-pre-wrap" data-lingo-skip>
-                {content}
-              </p>
+              <div className="prose prose-sm max-w-none" data-lingo-skip>
+                {isAssistant ? (
+                  <Markdown components={markdownComponents}>
+                    {content}
+                  </Markdown>
+                ) : (
+                  <p className="whitespace-pre-wrap text-sm text-foreground">
+                    {content}
+                  </p>
+                )}
+              </div>
               {hasSearchResults && (
                 <div className="mt-3 space-y-2" data-lingo-skip>
                   <Button
