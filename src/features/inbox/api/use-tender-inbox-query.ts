@@ -43,7 +43,7 @@ export default function useTenderInboxQuery({
     publishedAtTo: null,
     voivodeship: null,
     sortBy: null,
-    showRejected: null,
+    showRejected: false,
   };
 
   const queryKey = [
