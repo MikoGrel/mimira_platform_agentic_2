@@ -16,6 +16,7 @@ export function useExpiringTenders({ from, to }: { from: Date; to: Date }) {
         .select("id, tenders!inner (order_object, submitting_offers_date)")
         .gte("tenders.submitting_offers_date", from.toISOString())
         .lte("tenders.submitting_offers_date", to.toISOString())
+        .eq("status", "default")
         .eq("company_id", user!.profile!.company_id!)
         .eq("can_participate", true);
 
