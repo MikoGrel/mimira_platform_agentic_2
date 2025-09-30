@@ -8082,6 +8082,14 @@
           "skip": false,
           "overrides": {},
           "content": "Select language"
+        },
+        "9/declaration/body/5/argument-aria-label": {
+          "type": "attribute",
+          "hash": "7fa8806eeb911aa9ba9f013b274a2e47",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Select language"
         }
       }
     },

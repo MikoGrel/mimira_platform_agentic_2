@@ -1,10 +1,11 @@
 "use client";
 
 import React, { useTransition } from "react";
-import { usePathname } from "next/navigation";
 import { Select, SelectItem } from "@heroui/react";
-import { setLocale } from "$/features/i18n/actions";
 import useCurrentLocale from "$/features/i18n/hooks/use-current-locale";
+import { setLingoLocale } from "lingo.dev/react/client";
+import { useUpdateProfile } from "$/features/auth/api/use-update-profile";
+import { useCurrentUser } from "$/features/auth/api";
 
 type Locale = "pl" | "en";
 
@@ -18,19 +19,20 @@ const localeLabels = {
 } as const;
 
 export function LocaleSwitcher({ locales }: LocaleSwitcherProps) {
+  const { user } = useCurrentUser();
+  const { mutate: updateProfile } = useUpdateProfile();
   const currentLocale = useCurrentLocale();
-  const pathname = usePathname();
-  const [isPending, startTransition] = useTransition();
+  const [isPending] = useTransition();
 
   const handleLocaleChange = (keys: Set<React.Key> | "all") => {
-    if (keys === "all") return;
+    if (keys === "all" || !user) return;
     const newLocale = Array.from(keys)[0] as Locale;
     if (newLocale === currentLocale) return;
 
-    startTransition(async () => {
-      await setLocale(newLocale, pathname);
-      // Force a page refresh to update the layout
-      window.location.reload();
+    setLingoLocale(newLocale);
+    updateProfile({
+      preferred_locale: newLocale,
+      id: user.profile!.id,
     });
   };
 

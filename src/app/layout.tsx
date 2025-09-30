@@ -47,14 +47,14 @@ export default async function RootLayout({
         <body
           className={`${geistSans.variable} ${geistMono.variable} ${spaceGrotesk.variable} antialiased light font-body text-font-base`}
         >
-          <LocaleProvider locale={locale}>
-            <QueryProvider>
+          <QueryProvider>
+            <LocaleProvider locale={locale}>
               <ThemeProvider>
                 <NuqsAdapter>{children}</NuqsAdapter>
               </ThemeProvider>
-            </QueryProvider>
-            <Toaster />
-          </LocaleProvider>
+            </LocaleProvider>
+          </QueryProvider>
+          <Toaster />
         </body>
       </html>
     </LingoProvider>

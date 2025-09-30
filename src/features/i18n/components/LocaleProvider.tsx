@@ -1,6 +1,7 @@
 "use client";
 
 import React, { createContext, useContext } from "react";
+import { useLocaleRestorer } from "../hooks/use-locale-restorer";
 
 type Locale = "pl" | "en";
 
@@ -16,6 +17,8 @@ interface LocaleProviderProps {
 }
 
 export function LocaleProvider({ children, locale }: LocaleProviderProps) {
+  useLocaleRestorer();
+
   return (
     <LocaleContext.Provider value={{ locale }}>
       {children}
