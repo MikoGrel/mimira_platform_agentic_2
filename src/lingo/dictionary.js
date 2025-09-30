@@ -507,6 +507,20 @@ export default {
             },
             hash: "320af698c03eca3566cae395621ca490",
           },
+        "18/declaration/body/17/argument/1/3/1/1/3/1": {
+          content: {
+            en: "Give us a minute!",
+            pl: "Daj nam chwilę!",
+          },
+          hash: "9c526f2c3d43ea39acb35b1066b101e7",
+        },
+        "18/declaration/body/17/argument/1/3/1/1/3/3": {
+          content: {
+            en: "We are constantly searching for tenders for you. If we find new ones, you will be notified by email.",
+            pl: "Nieustannie wyszukujemy przetargi dla Ciebie. Jeśli znajdziemy nowe, zostaniesz o tym powiadomiony/a e-mailem.",
+          },
+          hash: "fe6e6e6ce61c94a408fda1b6b4ded620",
+        },
         "18/declaration/body/17/argument/1/5/1/3": {
           content: {
             en: "Ask Mimira",
@@ -652,6 +666,53 @@ export default {
           hash: "05a8fc9f6d826fd88a809d98684edcad",
         },
         "19/declaration/body/16/argument/3/expression/right/1/1": {
+          content: {
+            en: "Select a tender to view details",
+            pl: "Wybierz przetarg, aby zobaczyć szczegóły",
+          },
+          hash: "067789b01a081458db2f872f10a37c3f",
+        },
+        "19/declaration/body/17/argument/1/1/1/3-placeholder": {
+          content: {
+            en: "Search",
+            pl: "Szukaj",
+          },
+          hash: "49dd6c21604b5e8d4153ff1aff2177e1",
+        },
+        "19/declaration/body/17/argument/1/3/1/1/1/expression/right/3": {
+          content: {
+            en: "We are constantly searching for tenders for you. If we find new ones, you will be notified by email.",
+          },
+          hash: "0d95cbb89e58b53143ac30795f5f3280",
+        },
+        "19/declaration/body/17/argument/1/3/1/1/3/3": {
+          content: {
+            en: "We are constantly searching for tenders for you. If we find new ones, you will be notified by email.",
+          },
+          hash: "fe6e6e6ce61c94a408fda1b6b4ded620",
+        },
+        "19/declaration/body/17/argument/1/3/1/1/3/5": {
+          content: {
+            en: "We are constantly searching for tenders for you. If we find new ones, you will be notified by email.",
+            pl: "Nieustannie wyszukujemy przetargi dla Ciebie. Jeśli znajdziemy nowe, zostaniesz o tym powiadomiony/a e-mailem.",
+          },
+          hash: "fe6e6e6ce61c94a408fda1b6b4ded620",
+        },
+        "19/declaration/body/17/argument/1/5/1/3": {
+          content: {
+            en: "Ask Mimira",
+            pl: "Zapytaj Mimira",
+          },
+          hash: "794ecd418d0b3530b94008aed80b30d7",
+        },
+        "19/declaration/body/17/argument/1/5/1/5": {
+          content: {
+            en: "Try now",
+            pl: "Wypróbuj teraz",
+          },
+          hash: "9b9feae9d2550e4d7d39f3634be37ce6",
+        },
+        "19/declaration/body/17/argument/3/expression/right/1/1": {
           content: {
             en: "Select a tender to view details",
             pl: "Wybierz przetarg, aby zobaczyć szczegóły",
@@ -7259,6 +7320,13 @@ export default {
     "features/i18n/components/LocaleSwitcher.tsx": {
       entries: {
         "8/declaration/body/4/argument-aria-label": {
+          content: {
+            en: "Select language",
+            pl: "Wybierz język",
+          },
+          hash: "7fa8806eeb911aa9ba9f013b274a2e47",
+        },
+        "9/declaration/body/5/argument-aria-label": {
           content: {
             en: "Select language",
             pl: "Wybierz język",

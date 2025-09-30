@@ -18,6 +18,7 @@ import useTenderInboxQuery, {
   InboxTenderMapping,
 } from "$/features/inbox/api/use-tender-inbox-query";
 import { useLastTender } from "$/features/tenders/hooks/use-last-tender";
+import { AnimatedSymbol } from "$/features/branding/components";
 
 const TenderPreview = dynamic(
   () =>
@@ -152,6 +153,15 @@ export default function InboxPage() {
         <div className="flex-[1_0_0] overflow-y-auto">
           <div>
             <ul className="pb-12">
+              {!tenders.length && !isPending && (
+                <div className="m-4 flex flex-center flex-col gap-2 bg-sidebar border border-sidebar-border p-6 rounded-lg text-center">
+                  <AnimatedSymbol className="w-8 h-8 text-primary" />
+                  <p className="text-sm w-4/5">
+                    We are constantly searching for tenders for you. If we find
+                    new ones, you will be notified by email.
+                  </p>
+                </div>
+              )}
               <AnimatePresence>
                 {isPending && <ListSkeleton />}
                 {tenders?.map((t, index) => (
