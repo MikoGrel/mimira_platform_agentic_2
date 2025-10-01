@@ -17,7 +17,7 @@ interface LocaleProviderProps {
 }
 
 export function LocaleProvider({ children, locale }: LocaleProviderProps) {
-  useLocaleRestorer();
+  useLocaleRestorer(locale);
 
   return (
     <LocaleContext.Provider value={{ locale }}>

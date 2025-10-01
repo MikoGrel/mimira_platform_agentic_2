@@ -12,6 +12,10 @@ import { ProductsSection } from "./products-section";
 import { useRejectTender } from "../api/use-reject-tender";
 import { getRequirements } from "../utils/compat";
 import {
+  generateTenderDocx,
+  downloadTenderDocx,
+} from "../utils/generate-tender-docx";
+import {
   InboxTenderMapping,
   InboxTenderPart,
 } from "../api/use-tender-inbox-query";
@@ -193,6 +197,31 @@ export function TenderPreview({
     showNextTender?.();
   }
 
+  async function handleDownloadDocx() {
+    try {
+      toast.info(<span>Generowanie dokumentu...</span>);
+      
+      const blob = await generateTenderDocx({
+        mapping,
+        selectedPart,
+        hasMultipleParts,
+      });
+
+      const tenderName = mapping.tenders?.order_object?.slice(0, 50) || "przetarg";
+      const suffix = hasMultipleParts ? "wszystkie-czesci" : (selectedPart.part_name || "dokument");
+      const filename = `${tenderName}-${suffix}.docx`
+        .replace(/[^a-z0-9]/gi, "-")
+        .toLowerCase();
+
+      downloadTenderDocx(blob, filename);
+      
+      toast.success(<span>Dokument pobrany pomyślnie!</span>);
+    } catch (error) {
+      console.error("Error generating DOCX:", error);
+      toast.error(<span>Nie udało się wygenerować dokumentu. Spróbuj ponownie.</span>);
+    }
+  }
+
   const hasDescriptionSection = descriptionForSection.trim().length > 0;
 
   const sections = [
@@ -249,6 +278,7 @@ export function TenderPreview({
           onReject={handleReject}
           hasMultipleParts={hasMultipleParts}
           setChatOpened={setChatOpened}
+          onDownloadDocx={handleDownloadDocx}
         />
 
         <div className="flex overflow-hidden h-full flex-[1_0_0]">

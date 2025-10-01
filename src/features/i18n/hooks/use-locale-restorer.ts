@@ -1,20 +1,20 @@
 "use client";
 
 import { useCurrentUser } from "$/features/auth/api";
-import { useLingoLocale, setLingoLocale } from "lingo.dev/react-client";
+import { setLocale } from "$/features/i18n/actions";
 import { useRef, useEffect } from "react";
 
-export function useLocaleRestorer() {
-  const localeRestored = useRef(false);
+type Locale = "pl" | "en";
 
+export function useLocaleRestorer(currentLocale: Locale) {
+  const localeRestored = useRef(false);
   const { user } = useCurrentUser();
-  const currentLocale = useLingoLocale();
 
   useEffect(() => {
     if (localeRestored.current || !user || !currentLocale) return;
 
     if (currentLocale !== user.profile?.preferred_locale) {
-      setLingoLocale(user.profile?.preferred_locale as string);
+      setLocale(user.profile?.preferred_locale as Locale);
       localeRestored.current = true;
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps

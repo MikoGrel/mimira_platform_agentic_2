@@ -15,6 +15,7 @@ import {
   House,
   MessageSquareText,
   Bot,
+  Download,
 } from "lucide-react";
 import { motion, AnimatePresence } from "motion/react";
 import { useEffect, useState, type RefObject } from "react";
@@ -45,6 +46,7 @@ interface TenderHeaderProps {
   onReject?: () => void;
   hasMultipleParts: boolean;
   setChatOpened: (value: boolean) => void;
+  onDownloadDocx: () => void;
 }
 
 interface HeaderButtonsProps {
@@ -66,6 +68,7 @@ interface HeaderButtonsProps {
   restoreTender: (id: string) => void;
   onUnseen: (id: string) => void;
   hasMultipleParts: boolean;
+  onDownloadDocx: () => void;
 }
 
 function HeaderButtons({
@@ -84,6 +87,7 @@ function HeaderButtons({
   restoreTender,
   onUnseen,
   hasMultipleParts,
+  onDownloadDocx,
 }: HeaderButtonsProps) {
   const isRejected = mapping.status === "rejected";
   const hasApprovedParts = approvedPartIds.size > 0;
@@ -229,9 +233,17 @@ function HeaderButtons({
           onAction={(key) => {
             if (key === "unseen") {
               onUnseen(mapping.id);
+            } else if (key === "download") {
+              onDownloadDocx();
             }
           }}
         >
+          <DropdownItem
+            key="download"
+            startContent={<Download className="w-4 h-4" />}
+          >
+            <span>Download as DOCX</span>
+          </DropdownItem>
           <DropdownItem key="unseen">
             <span>Mark as unseen</span>
           </DropdownItem>
@@ -349,6 +361,7 @@ export function TenderHeader(props: TenderHeaderProps) {
               restoreTender={restoreTender}
               onUnseen={onUnseen}
               hasMultipleParts={props.hasMultipleParts}
+              onDownloadDocx={props.onDownloadDocx}
             />
           </motion.div>
         )}
@@ -392,6 +405,7 @@ export function TenderHeader(props: TenderHeaderProps) {
           size="sm"
           onUnseen={onUnseen}
           hasMultipleParts={props.hasMultipleParts}
+          onDownloadDocx={props.onDownloadDocx}
           />
         </motion.div>
       )}

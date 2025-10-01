@@ -3,7 +3,7 @@
 import React, { useTransition } from "react";
 import { Select, SelectItem } from "@heroui/react";
 import useCurrentLocale from "$/features/i18n/hooks/use-current-locale";
-import { setLingoLocale } from "lingo.dev/react/client";
+import { setLocale } from "$/features/i18n/actions";
 import { useUpdateProfile } from "$/features/auth/api/use-update-profile";
 import { useCurrentUser } from "$/features/auth/api";
 
@@ -29,7 +29,7 @@ export function LocaleSwitcher({ locales }: LocaleSwitcherProps) {
     const newLocale = Array.from(keys)[0] as Locale;
     if (newLocale === currentLocale) return;
 
-    setLingoLocale(newLocale);
+    setLocale(newLocale);
     updateProfile({
       preferred_locale: newLocale,
       id: user.profile!.id,
