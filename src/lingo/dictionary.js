@@ -507,6 +507,13 @@ export default {
             },
             hash: "320af698c03eca3566cae395621ca490",
           },
+        "18/declaration/body/17/argument/1/3/1/1/1/expression/right/3": {
+          content: {
+            en: "We are constantly searching for tenders for you. If we find new ones, you will be notified by email.",
+            pl: "Nieustannie wyszukujemy przetargi dla Ciebie. Jeśli znajdziemy nowe, zostaniesz powiadomiony(-a) e-mailem.",
+          },
+          hash: "0d95cbb89e58b53143ac30795f5f3280",
+        },
         "18/declaration/body/17/argument/1/3/1/1/3/1": {
           content: {
             en: "Give us a minute!",
@@ -521,6 +528,14 @@ export default {
           },
           hash: "fe6e6e6ce61c94a408fda1b6b4ded620",
         },
+        "18/declaration/body/17/argument/1/3/1/1/3/3/expression/0/body/1/1/1/expression/right":
+          {
+            content: {
+              en: "New",
+              pl: "Nowe",
+            },
+            hash: "320af698c03eca3566cae395621ca490",
+          },
         "18/declaration/body/17/argument/1/5/1/3": {
           content: {
             en: "Ask Mimira",
@@ -682,15 +697,25 @@ export default {
         "19/declaration/body/17/argument/1/3/1/1/1/expression/right/3": {
           content: {
             en: "We are constantly searching for tenders for you. If we find new ones, you will be notified by email.",
+            pl: "Nieustannie wyszukujemy przetargi dla Ciebie. Jeśli znajdziemy nowe, zostaniesz powiadomiony(-a) e-mailem.",
           },
           hash: "0d95cbb89e58b53143ac30795f5f3280",
         },
         "19/declaration/body/17/argument/1/3/1/1/3/3": {
           content: {
             en: "We are constantly searching for tenders for you. If we find new ones, you will be notified by email.",
+            pl: "Nieustannie wyszukujemy przetargi dla Ciebie. Jeśli znajdziemy nowe, zostaniesz o tym powiadomiony/a e-mailem.",
           },
           hash: "fe6e6e6ce61c94a408fda1b6b4ded620",
         },
+        "19/declaration/body/17/argument/1/3/1/1/3/3/expression/0/body/1/1/1/expression/right":
+          {
+            content: {
+              en: "New",
+              pl: "Nowe",
+            },
+            hash: "320af698c03eca3566cae395621ca490",
+          },
         "19/declaration/body/17/argument/1/3/1/1/3/5": {
           content: {
             en: "We are constantly searching for tenders for you. If we find new ones, you will be notified by email.",
@@ -7269,6 +7294,20 @@ export default {
     },
     "features/hub/components/new-tenders-bento.tsx": {
       entries: {
+        "10/declaration/body/2/argument/openingElement/1/value/expression": {
+          content: {
+            en: "New tenders",
+            pl: "Nowe przetargi",
+          },
+          hash: "b6a405902627530cdf66b4c52e322ee3",
+        },
+        "10/declaration/body/2/argument/openingElement/2/value/expression": {
+          content: {
+            en: "Open full list",
+            pl: "Otwórz pełną listę",
+          },
+          hash: "31b50a6e655b9e4c34034afe38b5fa0f",
+        },
         "7/declaration/body/1/argument/openingElement/1/value/expression": {
           content: {
             en: "New tenders",
@@ -7291,6 +7330,20 @@ export default {
           hash: "b6a405902627530cdf66b4c52e322ee3",
         },
         "8/declaration/body/1/argument/openingElement/2/value/expression": {
+          content: {
+            en: "Open full list",
+            pl: "Otwórz pełną listę",
+          },
+          hash: "31b50a6e655b9e4c34034afe38b5fa0f",
+        },
+        "9/declaration/body/1/argument/openingElement/1/value/expression": {
+          content: {
+            en: "New tenders",
+            pl: "Nowe przetargi",
+          },
+          hash: "b6a405902627530cdf66b4c52e322ee3",
+        },
+        "9/declaration/body/1/argument/openingElement/2/value/expression": {
           content: {
             en: "Open full list",
             pl: "Otwórz pełną listę",
@@ -7557,6 +7610,24 @@ export default {
             pl: "Opis",
           },
           hash: "e17686a22ffad04cc7bb70524ed4478b",
+        },
+      },
+    },
+    "features/inbox/components/empty-inbox-message.tsx": {
+      entries: {
+        "1/declaration/body/0/argument/3": {
+          content: {
+            en: "We are constantly searching for tenders for you. If we find new ones, you will be notified by email.",
+            pl: "Nieustannie wyszukujemy przetargi dla Ciebie. Jeśli znajdziemy nowe, zostaniesz powiadomiony(-a) e-mailem.",
+          },
+          hash: "dbb41d8021ec8fb4a0d9dfc20d4cf500",
+        },
+        "2/declaration/body/0/argument/3": {
+          content: {
+            en: "We are constantly searching for tenders for you. If we find new ones, you will be notified by email.",
+            pl: "Nieustannie wyszukujemy przetargi dla Ciebie. Jeśli znajdziemy nowe, zostaniesz powiadomiony(-a) e-mailem.",
+          },
+          hash: "dbb41d8021ec8fb4a0d9dfc20d4cf500",
         },
       },
     },
@@ -13678,6 +13749,94 @@ export default {
             },
             hash: "d5bf1e70991802fd4a801f3a79cf9e5d",
           },
+        "24/declaration/body/19/body/1/expression/0": {
+          content: {
+            en: "Tender was moved to analysis successfully, go to active tenders to see it",
+            pl: "Przetarg został pomyślnie przeniesiony do analizy, przejdź do aktywnych przetargów, aby go zobaczyć",
+          },
+          hash: "78efde626dafcc52e22f7f6b702998a0",
+        },
+        "24/declaration/body/19/body/2/expression/0/1/value": {
+          content: {
+            en: "Tender was moved to analysis successfully, go to active tenders to see it",
+            pl: "Przetarg został pomyślnie przeniesiony do analizy, przejdź do aktywnych przetargów, aby go zobaczyć",
+          },
+          hash: "db19ec4f7ea5522f60443270198a75af",
+        },
+        "24/declaration/body/22/body/1/expression/0": {
+          content: {
+            en: "Tender was rejected successfully, go to archive tab to see it",
+            pl: "Przetarg został pomyślnie odrzucony, przejdź do zakładki archiwum, aby go zobaczyć",
+          },
+          hash: "60696b80d10dffc59336ef7184f915c1",
+        },
+        "24/declaration/body/24/0/init/expression/callee/object/callee/object/0/1/value":
+          {
+            content: {
+              en: "Products",
+              pl: "Produkty",
+            },
+            hash: "a003449ecbde6b7a73044f46ea6bbe75",
+          },
+        "24/declaration/body/24/0/init/expression/callee/object/callee/object/1/1/value":
+          {
+            content: {
+              en: "Requirements",
+              pl: "Wymagania",
+            },
+            hash: "e108e149e0fd5b65f5850b6f032ccabe",
+          },
+        "24/declaration/body/24/0/init/expression/callee/object/callee/object/2/1/value":
+          {
+            content: {
+              en: "Review Criteria",
+              pl: "Kryteria oceny",
+            },
+            hash: "d524df30da3658fdbc1794408fcfdab4",
+          },
+        "24/declaration/body/24/0/init/expression/callee/object/callee/object/3/1/value":
+          {
+            content: {
+              en: "Description",
+              pl: "Opis",
+            },
+            hash: "e17686a22ffad04cc7bb70524ed4478b",
+          },
+        "24/declaration/body/24/0/init/expression/callee/object/callee/object/4/1/value":
+          {
+            content: {
+              en: "Additional Info",
+              pl: "Dodatkowe informacje",
+            },
+            hash: "d5bf1e70991802fd4a801f3a79cf9e5d",
+          },
+        "24/declaration/body/25/argument/3/1/1/1/1": {
+          content: {
+            en: "Apply to this Tender",
+          },
+          hash: "f9e1123fe9ea9487a82c63bc74875285",
+        },
+        "24/declaration/body/25/argument/3/1/1/3/1": {
+          content: {
+            en: "Do you confirm all requirements? The next step will start generating documents.",
+            pl: "Czy potwierdzasz wszystkie wymagania? Następnym krokiem będzie rozpoczęcie generowania dokumentów.",
+          },
+          hash: "ca90b2271fee4ab44a492ffc5e4c4564",
+        },
+        "24/declaration/body/25/argument/3/1/3/1/1": {
+          content: {
+            en: "Cancel",
+            pl: "Anuluj",
+          },
+          hash: "2e2a849c2223911717de8caa2c71bade",
+        },
+        "24/declaration/body/25/argument/3/1/3/3/1": {
+          content: {
+            en: "Confirm Application",
+            pl: "Potwierdź aplikację",
+          },
+          hash: "4e339e027c055cd03887b14aefc51a99",
+        },
         "27/declaration/body/16/0/init/0/body/0/argument/0/1/value": {
           content: {
             en: "Overview",

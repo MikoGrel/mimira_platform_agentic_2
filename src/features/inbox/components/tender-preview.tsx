@@ -20,6 +20,17 @@ import { toast } from "sonner";
 import { TenderPartsCarouselSkeleton } from "./tender-parts-carousel-skeleton";
 import { Section } from "./navigation-sidebar";
 import { useSidebarPopupStore } from "$/features/navigation/store/use-sidebar-popup-store";
+import {
+  AlertDialog,
+  AlertDialogAction,
+  AlertDialogCancel,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogTitle,
+} from "$/components/ui/alert-dialog";
+import { useRouter } from "next/navigation";
 
 const TenderPartsCarousel = dynamic(
   () =>
@@ -78,10 +89,16 @@ export function TenderPreview({
   showNextTender,
   openChatSignal,
 }: TenderPreviewProps) {
+  const router = useRouter();
+
   const [commentsOpened, setCommentsOpened] = useState(false);
   const [chatOpened, setChatOpened] = useState(false);
   const [approvedPartIds, setApprovedPartIds] = useState<Set<string>>(
     new Set()
+  );
+  const [confirmDialogOpen, setConfirmDialogOpen] = useState(false);
+  const [pendingPartIds, setPendingPartIds] = useState<string[] | undefined>(
+    undefined
   );
   const { mutate: rejectTender } = useRejectTender();
   const { mutate: updateTenderStatus } = useUpdateTenderStatus();
@@ -113,27 +130,21 @@ export function TenderPreview({
     setApprovedPartIds((prev) => new Set(prev).add(selectedPart.id));
   }
 
-  /**
-   * If any part has requirements that are not met, return "analysis"
-   * Otherwise, return "approve"
-   */
-  function getPartsApprovalStatus(parts: InboxTenderPart[]) {
-    return parts.some(
-      (p) =>
-        p.tender_requirements.filter((r) => r.status === "default").length > 0
-    )
-      ? "analysis"
-      : "approve";
+  function handleApply(partIds?: string[]) {
+    setPendingPartIds(partIds);
+    setConfirmDialogOpen(true);
   }
 
-  function handleApply(partIds?: string[]) {
+  function confirmApply() {
     updateTenderStatus({
       status: "analysis",
       mappingId: mapping.id,
-      partIds,
-      partsStatus: getPartsApprovalStatus(
-        mapping.tender_parts.filter((p) => partIds?.includes(p.id))
-      ),
+      partIds: pendingPartIds,
+      partsStatus: "approve",
+      requirementStatus: {
+        from: "default",
+        to: "approve",
+      },
     });
 
     toast.success(
@@ -154,7 +165,10 @@ export function TenderPreview({
       duration: 3000,
     });
 
-    showNextTender?.();
+    setConfirmDialogOpen(false);
+    setPendingPartIds(undefined);
+
+    router.push(`/dashboard/tenders/${mapping.id}`);
   }
 
   function handleUnselectAll() {
@@ -181,35 +195,40 @@ export function TenderPreview({
 
   const hasDescriptionSection = descriptionForSection.trim().length > 0;
 
-  const sections = useMemo(() => {
-    return [
-      selectedPart.tender_products?.length > 0
-        ? { id: "products", label: <span>Products</span> }
-        : null,
-      selectedPart.tender_requirements.length > 0
-        ? { id: "requirements", label: <span>Requirements</span> }
-        : null,
-      selectedPart.review_criteria_llm
-        ? {
-            id: "review-criteria",
-            label: <span>Review Criteria</span>,
-          }
-        : null,
-      hasDescriptionSection
-        ? { id: "description", label: <span>Description</span> }
-        : null,
-      selectedPart.payment_terms_llm || mapping.tenders?.payment_terms_llm
-        ? { id: "others", label: <span>Additional Info</span> }
-        : null,
-    ].filter(Boolean) as Section[];
-  }, [
-    mapping.tenders?.payment_terms_llm,
-    hasDescriptionSection,
-    selectedPart.payment_terms_llm,
-    selectedPart.review_criteria_llm,
-    selectedPart.tender_products?.length,
-    selectedPart.tender_requirements.length,
-  ]);
+  const sections = [
+    {
+      id: "products",
+      label: <span>Products</span>,
+      enabled: (selectedPart.tender_products?.length ?? 0) > 0,
+    },
+    {
+      id: "requirements",
+      label: <span>Requirements</span>,
+      enabled: selectedPart.tender_requirements.length > 0,
+    },
+    {
+      id: "review-criteria",
+      label: <span>Review Criteria</span>,
+      enabled: !!selectedPart.review_criteria_llm,
+    },
+    {
+      id: "description",
+      label: <span>Description</span>,
+      enabled: hasDescriptionSection,
+    },
+    {
+      id: "others",
+      label: <span>Additional Info</span>,
+      enabled: !!(
+        selectedPart.payment_terms_llm || mapping.tenders?.payment_terms_llm
+      ),
+    },
+  ]
+    .filter((section) => section.enabled)
+    .map((section) => ({
+      id: section.id,
+      label: section.label,
+    })) as Section[];
 
   return (
     <section className="h-full w-full">
@@ -274,10 +293,8 @@ export function TenderPreview({
                 />
 
                 <DescriptionSection
-                  description_long_llm={
-      descriptionForSection
-    }
-  />
+                  description_long_llm={descriptionForSection}
+                />
 
                 <AdditionalInfoSection
                   key={mapping.id}
@@ -309,11 +326,39 @@ export function TenderPreview({
             setOpen={setChatOpened}
             mappingId={mapping.id}
             tenderTitle={
-              mapping.tenders.order_object || mapping.tenders?.order_object || ""
+              mapping.tenders.order_object ||
+              mapping.tenders?.order_object ||
+              ""
             }
           />
         </div>
       </div>
+
+      <AlertDialog open={confirmDialogOpen} onOpenChange={setConfirmDialogOpen}>
+        <AlertDialogContent>
+          <AlertDialogHeader>
+            <AlertDialogTitle>
+              <span data-lingo-override-pl="Aplikuj na ten przetarg">
+                Apply to this Tender
+              </span>
+            </AlertDialogTitle>
+            <AlertDialogDescription>
+              <span>
+                Do you confirm all requirements? The next step will start
+                generating documents.
+              </span>
+            </AlertDialogDescription>
+          </AlertDialogHeader>
+          <AlertDialogFooter>
+            <AlertDialogCancel>
+              <span>Cancel</span>
+            </AlertDialogCancel>
+            <AlertDialogAction onClick={confirmApply}>
+              <span>Confirm Application</span>
+            </AlertDialogAction>
+          </AlertDialogFooter>
+        </AlertDialogContent>
+      </AlertDialog>
     </section>
   );
 }

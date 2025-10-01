@@ -7,12 +7,15 @@ import { TenderMiniCard } from "$/features/tenders/components/tender-mini-card";
 import { cn } from "$/lib/utils";
 import { AnimatePresence } from "motion/react";
 import useTenderInboxQuery from "$/features/inbox/api/use-tender-inbox-query";
+import { EmptyInboxMessage } from "$/features/inbox";
+import { useCurrentUser } from "$/features/auth/api";
 
 interface NewTendersBentoProps {
   className?: string;
 }
 
 export function NewTendersBento({ className }: NewTendersBentoProps) {
+  const { user } = useCurrentUser();
   const { tenders, loading } = useTenderInboxQuery({ pageSize: 3 });
 
   return (
@@ -41,6 +44,9 @@ export function NewTendersBento({ className }: NewTendersBentoProps) {
               }
             />
           ))}
+          {user && !loading && !tenders?.length && (
+            <EmptyInboxMessage className="m-0 h-[90%]" />
+          )}
         </div>
       </AnimatePresence>
     </BentoCard>

@@ -1,4 +1,9 @@
-export { FilterForm, FilterChips, TenderPreview } from "./components";
+export {
+  FilterForm,
+  FilterChips,
+  TenderPreview,
+  EmptyInboxMessage,
+} from "./components";
 export {
   useFilterForm,
   type FilterForm as FilterFormType,
