@@ -11,4 +11,7 @@ export const MappingStatus = {
   decision_made_rejected: "decision_made_rejected",
   rejected: "rejected",
   won: "won",
-};
+} as const;
+
+export type MappingStatusType =
+  (typeof MappingStatus)[keyof typeof MappingStatus];

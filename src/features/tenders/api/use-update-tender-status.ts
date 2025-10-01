@@ -2,10 +2,8 @@
 
 import { createClient } from "$/lib/supabase/client";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
-import {
-  IndividualTenderMapping,
-  IndividualTenderPart,
-} from "./use-individual-tender";
+import { IndividualTenderPart } from "./use-individual-tender";
+import { MappingStatusType } from "../constants/status";
 
 export function useUpdateTenderStatus() {
   const client = createClient();
@@ -20,7 +18,7 @@ export function useUpdateTenderStatus() {
       requirementStatus,
     }: {
       mappingId: string;
-      status: IndividualTenderMapping["status"];
+      status: MappingStatusType;
       partIds?: string[];
       partsStatus?: IndividualTenderPart["status"];
       requirementStatus?: {

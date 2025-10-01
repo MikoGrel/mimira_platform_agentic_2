@@ -38,7 +38,10 @@ import {
 } from "$/components/ui/resizable";
 import { useLastTender } from "$/features/tenders/hooks/use-last-tender";
 import { toast } from "sonner";
-import { MappingStatus } from "$/features/tenders/constants/status";
+import {
+  MappingStatus,
+  MappingStatusType,
+} from "$/features/tenders/constants/status";
 
 const { Stepper, useStepper } = defineStepper(
   {
@@ -85,20 +88,23 @@ function StepperContent({
 
   const methods = useStepper();
 
-  const mapStepToStatus = useCallback((stepId: string): string | null => {
-    switch (stepId) {
-      case "overview":
-        return MappingStatus.analysis;
-      case "confirmations":
-        return MappingStatus.questions;
-      case "documentation":
-        return MappingStatus.documents_preparing;
-      case "decision":
-        return MappingStatus.decision_made_applied;
-      default:
-        return null;
-    }
-  }, []);
+  const mapStepToStatus = useCallback(
+    (stepId: string): MappingStatusType | null => {
+      switch (stepId) {
+        case "overview":
+          return MappingStatus.analysis;
+        case "confirmations":
+          return MappingStatus.questions;
+        case "documentation":
+          return MappingStatus.documents_preparing;
+        case "decision":
+          return MappingStatus.decision_made_applied;
+        default:
+          return null;
+      }
+    },
+    []
+  );
 
   useEffect(() => {
     if (!mapping?.id || !current) return;

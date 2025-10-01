@@ -137,7 +137,7 @@ export function TenderPreview({
 
   function confirmApply() {
     updateTenderStatus({
-      status: "analysis",
+      status: "documents_preparing",
       mappingId: mapping.id,
       partIds: pendingPartIds,
       partsStatus: "approve",

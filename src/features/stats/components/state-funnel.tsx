@@ -20,7 +20,7 @@ export function StateFunnel() {
           MappingStatus.questions_answered,
           MappingStatus.documents_ready,
           MappingStatus.questions,
-        ].includes(c.status)
+        ].includes(c.status as typeof MappingStatus.analysis)
       )
       .reduce((acc, count) => acc + count.count, 0) || 0;
 
@@ -32,7 +32,7 @@ export function StateFunnel() {
           MappingStatus.questions_answered,
           MappingStatus.documents_ready,
           MappingStatus.questions,
-        ].includes(c.status)
+        ].includes(c.status as typeof MappingStatus.questions)
       )
       .reduce((acc, count) => acc + count.count, 0) || 0;
   const applied =
