@@ -18923,6 +18923,20 @@ export default {
           },
           hash: "6b328a72212de60dc33ad35f65d690ce",
         },
+        "11/declaration/body/4/consequent/argument/1/1": {
+          content: {
+            en: "We will prepare your documents. They will be ready within 48 hours at the latest",
+            pl: "Przygotujemy Twoje dokumenty. Będą gotowe najpóźniej w ciągu 48 godzin.",
+          },
+          hash: "28e5b302e5adec94d929969721a9d520",
+        },
+        "11/declaration/body/4/consequent/argument/1/5": {
+          content: {
+            en: "Don't forget to include the valuation. We can also help you with it — just let us know at mimira@mimiraoffers.eu or +48 732 070 469.",
+            pl: "Nie zapomnij dołączyć wyceny. Możemy Ci w tym pomóc — po prostu daj nam znać na mimira@mimiraoffers.eu lub +48 732 070 469.",
+          },
+          hash: "8b199e4c03646258cacdb01bdc3ad72f",
+        },
         "11/declaration/body/4/consequent/argument/5": {
           content: {
             en: "Don’t forget to include the valuation. We can also help you with it — just let us know at mimira@mimiraoffers.eu or +48 732 070 469.",

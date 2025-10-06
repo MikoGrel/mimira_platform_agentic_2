@@ -67,16 +67,22 @@ export function DocumentationStep({
 
   if (!item?.docs_ready)
     return (
-      <div className="mt-12 space-y-4 max-w-[500px] mx-auto">
-        <h1 className="text-sm font-medium">
-          We will prepare your documents. They will be ready within 48 hours at
-          the latest
-        </h1>
-        <DocumentPreparationAnimation />
-        <p className="text-xs text-muted-foreground">
-          Don’t forget to include the valuation. We can also help you with it —
-          just let us know at mimira@mimiraoffers.eu or +48 732 070 469.
-        </p>
+      <div
+        className="flex items-center justify-center"
+        style={{ minHeight: "calc(100vh - 400px)" }}
+      >
+        <div className="space-y-4 max-w-[500px]">
+          <h1 className="text-sm font-medium">
+            We will prepare your documents. They will be ready within 48 hours
+            at the latest
+          </h1>
+          <DocumentPreparationAnimation />
+          <p className="text-xs text-muted-foreground">
+            Don&apos;t forget to include the valuation. We can also help you
+            with it — just let us know at mimira@mimiraoffers.eu or +48 732 070
+            469.
+          </p>
+        </div>
       </div>
     );
 

@@ -21113,6 +21113,22 @@
           "overrides": {},
           "content": "We will prepare your documents. They will be ready within 48 hours at the latest"
         },
+        "11/declaration/body/4/consequent/argument/1/1": {
+          "type": "element",
+          "hash": "28e5b302e5adec94d929969721a9d520",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "We will prepare your documents. They will be ready within 48 hours at the latest"
+        },
+        "11/declaration/body/4/consequent/argument/1/5": {
+          "type": "element",
+          "hash": "8b199e4c03646258cacdb01bdc3ad72f",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Don't forget to include the valuation. We can also help you with it — just let us know at mimira@mimiraoffers.eu or +48 732 070 469."
+        },
         "11/declaration/body/4/consequent/argument/5": {
           "type": "element",
           "hash": "568738cd87d32a7f2c77c3cfa973ace0",
