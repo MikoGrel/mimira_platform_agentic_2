@@ -212,7 +212,7 @@ function HeaderButtons({
           color="primary"
           variant="flat"
           onPress={() => setChatOpened(true)}
-          className="!min-w-10 shadow-sm"
+          className="!min-w-10"
           data-lingo-skip
           isIconOnly
         >
@@ -383,15 +383,15 @@ export function TenderHeader(props: TenderHeaderProps) {
             onApprovePart={props.onApprovePart}
             onRemoveCurrentPart={props.onRemoveCurrentPart}
             onApply={props.onApply}
-          onReject={props.onReject}
-          onUnselectAll={props.onUnselectAll}
-          setCommentsOpened={props.setCommentsOpened}
-          setChatOpened={props.setChatOpened}
-          commentCount={count}
-          restoreTender={restoreTender}
-          size="sm"
-          onUnseen={onUnseen}
-          hasMultipleParts={props.hasMultipleParts}
+            onReject={props.onReject}
+            onUnselectAll={props.onUnselectAll}
+            setCommentsOpened={props.setCommentsOpened}
+            setChatOpened={props.setChatOpened}
+            commentCount={count}
+            restoreTender={restoreTender}
+            size="sm"
+            onUnseen={onUnseen}
+            hasMultipleParts={props.hasMultipleParts}
           />
         </motion.div>
       )}
