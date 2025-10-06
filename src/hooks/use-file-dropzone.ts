@@ -15,6 +15,7 @@ export function useFileDropzone(options: UseFileDropzoneOptions = {}) {
   const [files, setFiles] = useState<File[]>([]);
 
   const onDrop = useCallback(
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     (acceptedFiles: File[], rejectedFiles: FileRejection[]) => {
       setFiles((prev) => [...prev, ...acceptedFiles]);
     },
