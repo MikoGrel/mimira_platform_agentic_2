@@ -64,14 +64,6 @@ const navigationItems = [
     url: "/dashboard/documents",
     disabled: true,
   },
-  {
-    id: "products",
-    title: <span>My product catalog</span>,
-    icon: Package,
-    tooltip: "Products",
-    url: "/dashboard/products",
-    disabled: true,
-  },
 ] as const;
 
 export type SidebarItemId = (typeof navigationItems)[number]["id"];
