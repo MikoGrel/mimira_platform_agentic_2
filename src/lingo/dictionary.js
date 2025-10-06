@@ -18497,6 +18497,269 @@ export default {
         },
       },
     },
+    "features/tender-form/components/document-preparation-animation.tsx": {
+      entries: {
+        "0/declaration/body/0/argument": {
+          content: {
+            en: "DocumentPreparationAnimation",
+            pl: "DocumentPreparationAnimation",
+          },
+          hash: "f7b2326094bb13f210f92a3159fb78b7",
+        },
+        "2/0/init/0": {
+          content: {
+            en: "Analyzing tender requirements...",
+            pl: "Analizowanie wymagań przetargowych...",
+          },
+          hash: "f2bf2333724e367b192b1c971b9fceeb",
+        },
+        "2/0/init/1": {
+          content: {
+            en: "Gathering company documentation...",
+            pl: "Zbieranie dokumentacji firmy...",
+          },
+          hash: "a936aba5385197d73b6800d48029322a",
+        },
+        "2/0/init/10": {
+          content: {
+            en: "Optimizing file structures...",
+            pl: "Optymalizowanie struktur plików...",
+          },
+          hash: "fac43bb264221ee44a8cbc6e6f14eca5",
+        },
+        "2/0/init/11": {
+          content: {
+            en: "Preparing submission package...",
+            pl: "Przygotowywanie pakietu zgłoszeniowego...",
+          },
+          hash: "3d1e7965e480e023a5e33ceef84533f4",
+        },
+        "2/0/init/2": {
+          content: {
+            en: "Preparing financial statements...",
+            pl: "Przygotowywanie sprawozdań finansowych...",
+          },
+          hash: "64f055ff4036e05e875991f6a9043eee",
+        },
+        "2/0/init/3": {
+          content: {
+            en: "Compiling technical specifications...",
+            pl: "Opracowywanie specyfikacji technicznych...",
+          },
+          hash: "3bf364e48ef8a3a8b74f1ec50e0520ce",
+        },
+        "2/0/init/4": {
+          content: {
+            en: "Reviewing compliance documents...",
+            pl: "Przeglądanie dokumentów zgodności...",
+          },
+          hash: "7aaa6876292c3d07cd17faff90a86e25",
+        },
+        "2/0/init/5": {
+          content: {
+            en: "Generating executive summary...",
+            pl: "Tworzenie streszczenia wykonawczego...",
+          },
+          hash: "9993e87a7651b71db8d0623d07ba08e9",
+        },
+        "2/0/init/6": {
+          content: {
+            en: "Organizing certificate files...",
+            pl: "Organizowanie plików certyfikatów...",
+          },
+          hash: "25d976a454e510191184a5c1c53564d6",
+        },
+        "2/0/init/7": {
+          content: {
+            en: "Formatting application documents...",
+            pl: "Formatowanie dokumentów aplikacyjnych...",
+          },
+          hash: "982b17acc3430eba1fc0387ec545e24b",
+        },
+        "2/0/init/8": {
+          content: {
+            en: "Cross-referencing requirements...",
+            pl: "Porównywanie wymagań...",
+          },
+          hash: "93b25efa846203ed1ed10ba4149eb42c",
+        },
+        "2/0/init/9": {
+          content: {
+            en: "Validating document completeness...",
+            pl: "Weryfikowanie kompletności dokumentów...",
+          },
+          hash: "e018697f921db485461ebb09763b2b5f",
+        },
+        "3/0/init/0": {
+          content: {
+            en: "<element:FileSearch></element:FileSearch> Analyzing tender requirements...",
+            pl: "<element:FileSearch></element:FileSearch> Analizowanie wymagań przetargowych...",
+          },
+          hash: "6882059714d05eacde7e9f869bb47f45",
+        },
+        "3/0/init/1": {
+          content: {
+            en: "<element:Building2></element:Building2> Extracting company information...",
+            pl: "<element:Building2></element:Building2> Pobieranie informacji o firmie...",
+          },
+          hash: "27a33dc8d04a834d325f8fd222110c42",
+        },
+        "3/0/init/10": {
+          content: {
+            en: "<element:FolderCheck></element:FolderCheck> Organizing submission structure...",
+            pl: "<element:FolderCheck></element:FolderCheck> Organizowanie struktury zgłoszenia...",
+          },
+          hash: "be654b25449ef22c7db516bb89b105cf",
+        },
+        "3/0/init/11": {
+          content: {
+            en: "<element:Package></element:Package> Finalizing application package...",
+            pl: "<element:Package></element:Package> Finalizowanie pakietu aplikacyjnego...",
+          },
+          hash: "bddbc703db463b5e41e8595fbcc65226",
+        },
+        "3/0/init/2": {
+          content: {
+            en: "<element:FileSpreadsheet></element:FileSpreadsheet> Generating financial documentation...",
+            pl: "<element:FileSpreadsheet></element:FileSpreadsheet> Generowanie dokumentacji finansowej...",
+          },
+          hash: "7291069a8e36b74dfcf0a63b9f493c3a",
+        },
+        "3/0/init/3": {
+          content: {
+            en: "<element:Wrench></element:Wrench> Compiling technical specifications...",
+            pl: "<element:Wrench></element:Wrench> Opracowywanie specyfikacji technicznych...",
+          },
+          hash: "af5edc90067d7c014adc7337a568db9f",
+        },
+        "3/0/init/4": {
+          content: {
+            en: "<element:ShieldCheck></element:ShieldCheck> Verifying compliance requirements...",
+            pl: "<element:ShieldCheck></element:ShieldCheck> Weryfikowanie wymagań zgodności...",
+          },
+          hash: "5ae76bf7499c32e980b15a34c63e2a9e",
+        },
+        "3/0/init/5": {
+          content: {
+            en: "<element:FileText></element:FileText> Creating executive summary...",
+            pl: "<element:FileText></element:FileText> Tworzenie streszczenia wykonawczego...",
+          },
+          hash: "9a520a6e5eb0f4f34200045dcf64a1bb",
+        },
+        "3/0/init/6": {
+          content: {
+            en: "<element:Award></element:Award> Attaching certificates and qualifications...",
+            pl: "<element:Award></element:Award> Dołączanie certyfikatów i kwalifikacji...",
+          },
+          hash: "7dec07116379c8f3c39c778a6bcf7657",
+        },
+        "3/0/init/7": {
+          content: {
+            en: "<element:AlignLeft></element:AlignLeft> Formatting proposal documents...",
+            pl: "<element:AlignLeft></element:AlignLeft> Formatowanie dokumentów oferty...",
+          },
+          hash: "f5c5726a79c1e4c40d4a3e59219d465b",
+        },
+        "3/0/init/8": {
+          content: {
+            en: "<element:GitCompare></element:GitCompare> Cross-referencing tender criteria...",
+            pl: "<element:GitCompare></element:GitCompare> Porównywanie kryteriów przetargowych...",
+          },
+          hash: "7cebfc881ac9615d9751fbfafd132436",
+        },
+        "3/0/init/9": {
+          content: {
+            en: "<element:CheckCircle2></element:CheckCircle2> Validating document completeness...",
+            pl: "<element:CheckCircle2></element:CheckCircle2> Weryfikowanie kompletności dokumentów...",
+          },
+          hash: "d86c414701a815318877ffd7d072ff38",
+        },
+        "4/0/init/0": {
+          content: {
+            en: "<element:FileSearch></element:FileSearch> Analyzing tender requirements...",
+            pl: "<element:FileSearch></element:FileSearch> Analizowanie wymagań przetargowych...",
+          },
+          hash: "6882059714d05eacde7e9f869bb47f45",
+        },
+        "4/0/init/1": {
+          content: {
+            en: "<element:Building2></element:Building2> Extracting company information...",
+            pl: "<element:Building2></element:Building2> Pobieranie informacji o firmie...",
+          },
+          hash: "27a33dc8d04a834d325f8fd222110c42",
+        },
+        "4/0/init/10": {
+          content: {
+            en: "<element:FolderCheck></element:FolderCheck> Organizing submission structure...",
+            pl: "<element:FolderCheck></element:FolderCheck> Organizowanie struktury zgłoszenia...",
+          },
+          hash: "be654b25449ef22c7db516bb89b105cf",
+        },
+        "4/0/init/11": {
+          content: {
+            en: "<element:Package></element:Package> Finalizing application package...",
+            pl: "<element:Package></element:Package> Finalizowanie pakietu aplikacyjnego...",
+          },
+          hash: "bddbc703db463b5e41e8595fbcc65226",
+        },
+        "4/0/init/2": {
+          content: {
+            en: "<element:FileSpreadsheet></element:FileSpreadsheet> Generating financial documentation...",
+            pl: "<element:FileSpreadsheet></element:FileSpreadsheet> Generowanie dokumentacji finansowej...",
+          },
+          hash: "7291069a8e36b74dfcf0a63b9f493c3a",
+        },
+        "4/0/init/3": {
+          content: {
+            en: "<element:Wrench></element:Wrench> Compiling technical specifications...",
+            pl: "<element:Wrench></element:Wrench> Opracowywanie specyfikacji technicznych...",
+          },
+          hash: "af5edc90067d7c014adc7337a568db9f",
+        },
+        "4/0/init/4": {
+          content: {
+            en: "<element:ShieldCheck></element:ShieldCheck> Verifying compliance requirements...",
+            pl: "<element:ShieldCheck></element:ShieldCheck> Weryfikowanie wymagań zgodności...",
+          },
+          hash: "5ae76bf7499c32e980b15a34c63e2a9e",
+        },
+        "4/0/init/5": {
+          content: {
+            en: "<element:FileText></element:FileText> Creating executive summary...",
+            pl: "<element:FileText></element:FileText> Tworzenie streszczenia wykonawczego...",
+          },
+          hash: "9a520a6e5eb0f4f34200045dcf64a1bb",
+        },
+        "4/0/init/6": {
+          content: {
+            en: "<element:Award></element:Award> Attaching certificates and qualifications...",
+            pl: "<element:Award></element:Award> Dołączanie certyfikatów i kwalifikacji...",
+          },
+          hash: "7dec07116379c8f3c39c778a6bcf7657",
+        },
+        "4/0/init/7": {
+          content: {
+            en: "<element:AlignLeft></element:AlignLeft> Formatting proposal documents...",
+            pl: "<element:AlignLeft></element:AlignLeft> Formatowanie dokumentów oferty...",
+          },
+          hash: "f5c5726a79c1e4c40d4a3e59219d465b",
+        },
+        "4/0/init/8": {
+          content: {
+            en: "<element:GitCompare></element:GitCompare> Cross-referencing tender criteria...",
+            pl: "<element:GitCompare></element:GitCompare> Porównywanie kryteriów przetargowych...",
+          },
+          hash: "7cebfc881ac9615d9751fbfafd132436",
+        },
+        "4/0/init/9": {
+          content: {
+            en: "<element:CheckCircle2></element:CheckCircle2> Validating document completeness...",
+            pl: "<element:CheckCircle2></element:CheckCircle2> Weryfikowanie kompletności dokumentów...",
+          },
+          hash: "d86c414701a815318877ffd7d072ff38",
+        },
+      },
+    },
     "features/tender-form/components/documentation-step.tsx": {
       entries: {
         "1/declaration/body/0/argument/1/1": {
@@ -18647,6 +18910,69 @@ export default {
           hash: "030e160bf50c084716488dc452429db2",
         },
         "10/declaration/body/9/argument/5/openingElement/1/value/expression": {
+          content: {
+            en: "Other attachments",
+            pl: "Inne załączniki",
+          },
+          hash: "f187e342b6ff30e7d4d96d9395dea305",
+        },
+        "11/declaration/body/4/consequent/argument/1": {
+          content: {
+            en: "We will prepare your documents. They will be ready within 48 hours at the latest",
+            pl: "Przygotujemy Twoje dokumenty. Będą gotowe najpóźniej w ciągu 48 godzin.",
+          },
+          hash: "6b328a72212de60dc33ad35f65d690ce",
+        },
+        "11/declaration/body/4/consequent/argument/5": {
+          content: {
+            en: "Don’t forget to include the valuation. We can also help you with it — just let us know at mimira@mimiraoffers.eu or +48 732 070 469.",
+            pl: "Nie zapomnij dołączyć wyceny. Możemy Ci w tym pomóc — po prostu daj nam znać na mimira@mimiraoffers.eu lub +48 732 070 469.",
+          },
+          hash: "568738cd87d32a7f2c77c3cfa973ace0",
+        },
+        "11/declaration/body/5/consequent/0/argument/1/1": {
+          content: {
+            en: "Loading documents...",
+            pl: "Ładowanie dokumentów...",
+          },
+          hash: "b795b22e2d0abd430c2ff0b28fb26e5a",
+        },
+        "11/declaration/body/6/consequent/0/argument/1/1": {
+          content: {
+            en: "Failed to load documents. Please try again.",
+            pl: "Nie udało się załadować dokumentów. Proszę spróbować ponownie.",
+          },
+          hash: "1f3bb71b519b18f32ba0f1a5a360afb0",
+        },
+        "11/declaration/body/8/consequent/0/argument/1": {
+          content: {
+            en: "No documents to display. You can proceed to the next step.",
+            pl: "Brak dokumentów do wyświetlenia. Możesz przejść do następnego kroku.",
+          },
+          hash: "2199cc5f0c63d0fd443f80ecc41d3550",
+        },
+        "11/declaration/body/8/consequent/0/argument/3/1": {
+          content: {
+            en: "No documents found for this tender.",
+            pl: "Nie znaleziono dokumentów dla tego przetargu.",
+          },
+          hash: "0aae5563123e8e15391ddd9126389668",
+        },
+        "11/declaration/body/9/argument/1/openingElement/1/value/expression": {
+          content: {
+            en: "Ready documentation",
+            pl: "Gotowa dokumentacja",
+          },
+          hash: "3ba81e87ae8016eea5860e247c708dd9",
+        },
+        "11/declaration/body/9/argument/3/openingElement/1/value/expression": {
+          content: {
+            en: "Requires manual fill",
+            pl: "Wymaga ręcznego wypełnienia",
+          },
+          hash: "030e160bf50c084716488dc452429db2",
+        },
+        "11/declaration/body/9/argument/5/openingElement/1/value/expression": {
           content: {
             en: "Other attachments",
             pl: "Inne załączniki",

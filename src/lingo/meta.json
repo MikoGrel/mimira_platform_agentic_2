@@ -20627,6 +20627,306 @@
         }
       }
     },
+    "features/tender-form/components/document-preparation-animation.tsx": {
+      "scopes": {
+        "0/declaration/body/0/argument": {
+          "type": "element",
+          "hash": "f7b2326094bb13f210f92a3159fb78b7",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "DocumentPreparationAnimation"
+        },
+        "2/0/init/0": {
+          "type": "element",
+          "hash": "f2bf2333724e367b192b1c971b9fceeb",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Analyzing tender requirements..."
+        },
+        "2/0/init/1": {
+          "type": "element",
+          "hash": "a936aba5385197d73b6800d48029322a",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Gathering company documentation..."
+        },
+        "2/0/init/10": {
+          "type": "element",
+          "hash": "fac43bb264221ee44a8cbc6e6f14eca5",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Optimizing file structures..."
+        },
+        "2/0/init/11": {
+          "type": "element",
+          "hash": "3d1e7965e480e023a5e33ceef84533f4",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Preparing submission package..."
+        },
+        "2/0/init/2": {
+          "type": "element",
+          "hash": "64f055ff4036e05e875991f6a9043eee",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Preparing financial statements..."
+        },
+        "2/0/init/3": {
+          "type": "element",
+          "hash": "3bf364e48ef8a3a8b74f1ec50e0520ce",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Compiling technical specifications..."
+        },
+        "2/0/init/4": {
+          "type": "element",
+          "hash": "7aaa6876292c3d07cd17faff90a86e25",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Reviewing compliance documents..."
+        },
+        "2/0/init/5": {
+          "type": "element",
+          "hash": "9993e87a7651b71db8d0623d07ba08e9",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Generating executive summary..."
+        },
+        "2/0/init/6": {
+          "type": "element",
+          "hash": "25d976a454e510191184a5c1c53564d6",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Organizing certificate files..."
+        },
+        "2/0/init/7": {
+          "type": "element",
+          "hash": "982b17acc3430eba1fc0387ec545e24b",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Formatting application documents..."
+        },
+        "2/0/init/8": {
+          "type": "element",
+          "hash": "93b25efa846203ed1ed10ba4149eb42c",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Cross-referencing requirements..."
+        },
+        "2/0/init/9": {
+          "type": "element",
+          "hash": "e018697f921db485461ebb09763b2b5f",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Validating document completeness..."
+        },
+        "3/0/init/0": {
+          "type": "element",
+          "hash": "6882059714d05eacde7e9f869bb47f45",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "<element:FileSearch></element:FileSearch> Analyzing tender requirements..."
+        },
+        "3/0/init/1": {
+          "type": "element",
+          "hash": "27a33dc8d04a834d325f8fd222110c42",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "<element:Building2></element:Building2> Extracting company information..."
+        },
+        "3/0/init/10": {
+          "type": "element",
+          "hash": "be654b25449ef22c7db516bb89b105cf",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "<element:FolderCheck></element:FolderCheck> Organizing submission structure..."
+        },
+        "3/0/init/11": {
+          "type": "element",
+          "hash": "bddbc703db463b5e41e8595fbcc65226",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "<element:Package></element:Package> Finalizing application package..."
+        },
+        "3/0/init/2": {
+          "type": "element",
+          "hash": "7291069a8e36b74dfcf0a63b9f493c3a",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "<element:FileSpreadsheet></element:FileSpreadsheet> Generating financial documentation..."
+        },
+        "3/0/init/3": {
+          "type": "element",
+          "hash": "af5edc90067d7c014adc7337a568db9f",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "<element:Wrench></element:Wrench> Compiling technical specifications..."
+        },
+        "3/0/init/4": {
+          "type": "element",
+          "hash": "5ae76bf7499c32e980b15a34c63e2a9e",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "<element:ShieldCheck></element:ShieldCheck> Verifying compliance requirements..."
+        },
+        "3/0/init/5": {
+          "type": "element",
+          "hash": "9a520a6e5eb0f4f34200045dcf64a1bb",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "<element:FileText></element:FileText> Creating executive summary..."
+        },
+        "3/0/init/6": {
+          "type": "element",
+          "hash": "7dec07116379c8f3c39c778a6bcf7657",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "<element:Award></element:Award> Attaching certificates and qualifications..."
+        },
+        "3/0/init/7": {
+          "type": "element",
+          "hash": "f5c5726a79c1e4c40d4a3e59219d465b",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "<element:AlignLeft></element:AlignLeft> Formatting proposal documents..."
+        },
+        "3/0/init/8": {
+          "type": "element",
+          "hash": "7cebfc881ac9615d9751fbfafd132436",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "<element:GitCompare></element:GitCompare> Cross-referencing tender criteria..."
+        },
+        "3/0/init/9": {
+          "type": "element",
+          "hash": "d86c414701a815318877ffd7d072ff38",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "<element:CheckCircle2></element:CheckCircle2> Validating document completeness..."
+        },
+        "4/0/init/0": {
+          "type": "element",
+          "hash": "6882059714d05eacde7e9f869bb47f45",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "<element:FileSearch></element:FileSearch> Analyzing tender requirements..."
+        },
+        "4/0/init/1": {
+          "type": "element",
+          "hash": "27a33dc8d04a834d325f8fd222110c42",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "<element:Building2></element:Building2> Extracting company information..."
+        },
+        "4/0/init/10": {
+          "type": "element",
+          "hash": "be654b25449ef22c7db516bb89b105cf",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "<element:FolderCheck></element:FolderCheck> Organizing submission structure..."
+        },
+        "4/0/init/11": {
+          "type": "element",
+          "hash": "bddbc703db463b5e41e8595fbcc65226",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "<element:Package></element:Package> Finalizing application package..."
+        },
+        "4/0/init/2": {
+          "type": "element",
+          "hash": "7291069a8e36b74dfcf0a63b9f493c3a",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "<element:FileSpreadsheet></element:FileSpreadsheet> Generating financial documentation..."
+        },
+        "4/0/init/3": {
+          "type": "element",
+          "hash": "af5edc90067d7c014adc7337a568db9f",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "<element:Wrench></element:Wrench> Compiling technical specifications..."
+        },
+        "4/0/init/4": {
+          "type": "element",
+          "hash": "5ae76bf7499c32e980b15a34c63e2a9e",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "<element:ShieldCheck></element:ShieldCheck> Verifying compliance requirements..."
+        },
+        "4/0/init/5": {
+          "type": "element",
+          "hash": "9a520a6e5eb0f4f34200045dcf64a1bb",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "<element:FileText></element:FileText> Creating executive summary..."
+        },
+        "4/0/init/6": {
+          "type": "element",
+          "hash": "7dec07116379c8f3c39c778a6bcf7657",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "<element:Award></element:Award> Attaching certificates and qualifications..."
+        },
+        "4/0/init/7": {
+          "type": "element",
+          "hash": "f5c5726a79c1e4c40d4a3e59219d465b",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "<element:AlignLeft></element:AlignLeft> Formatting proposal documents..."
+        },
+        "4/0/init/8": {
+          "type": "element",
+          "hash": "7cebfc881ac9615d9751fbfafd132436",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "<element:GitCompare></element:GitCompare> Cross-referencing tender criteria..."
+        },
+        "4/0/init/9": {
+          "type": "element",
+          "hash": "d86c414701a815318877ffd7d072ff38",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "<element:CheckCircle2></element:CheckCircle2> Validating document completeness..."
+        }
+      }
+    },
     "features/tender-form/components/documentation-step.tsx": {
       "scopes": {
         "1/declaration/body/0/argument/1/1": {
@@ -20798,6 +21098,78 @@
           "content": "Requires manual fill"
         },
         "10/declaration/body/9/argument/5/openingElement/1/value/expression": {
+          "type": "element",
+          "hash": "f187e342b6ff30e7d4d96d9395dea305",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Other attachments"
+        },
+        "11/declaration/body/4/consequent/argument/1": {
+          "type": "element",
+          "hash": "6b328a72212de60dc33ad35f65d690ce",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "We will prepare your documents. They will be ready within 48 hours at the latest"
+        },
+        "11/declaration/body/4/consequent/argument/5": {
+          "type": "element",
+          "hash": "568738cd87d32a7f2c77c3cfa973ace0",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Don’t forget to include the valuation. We can also help you with it — just let us know at mimira@mimiraoffers.eu or +48 732 070 469."
+        },
+        "11/declaration/body/5/consequent/0/argument/1/1": {
+          "type": "element",
+          "hash": "b795b22e2d0abd430c2ff0b28fb26e5a",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Loading documents..."
+        },
+        "11/declaration/body/6/consequent/0/argument/1/1": {
+          "type": "element",
+          "hash": "1f3bb71b519b18f32ba0f1a5a360afb0",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Failed to load documents. Please try again."
+        },
+        "11/declaration/body/8/consequent/0/argument/1": {
+          "type": "element",
+          "hash": "2199cc5f0c63d0fd443f80ecc41d3550",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "No documents to display. You can proceed to the next step."
+        },
+        "11/declaration/body/8/consequent/0/argument/3/1": {
+          "type": "element",
+          "hash": "0aae5563123e8e15391ddd9126389668",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "No documents found for this tender."
+        },
+        "11/declaration/body/9/argument/1/openingElement/1/value/expression": {
+          "type": "element",
+          "hash": "3ba81e87ae8016eea5860e247c708dd9",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Ready documentation"
+        },
+        "11/declaration/body/9/argument/3/openingElement/1/value/expression": {
+          "type": "element",
+          "hash": "030e160bf50c084716488dc452429db2",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Requires manual fill"
+        },
+        "11/declaration/body/9/argument/5/openingElement/1/value/expression": {
           "type": "element",
           "hash": "f187e342b6ff30e7d4d96d9395dea305",
           "context": "",

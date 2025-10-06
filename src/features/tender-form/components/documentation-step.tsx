@@ -8,6 +8,7 @@ import { CompanyFileType, useCompanyFiles } from "../hooks/use-company-files";
 
 import { Alert } from "@heroui/react";
 import { FileGroup } from "./file-group";
+import { DocumentPreparationAnimation } from "./document-preparation-animation";
 
 interface DocumentationStepProps {
   item: InboxTenderMapping | null | undefined;
@@ -66,10 +67,17 @@ export function DocumentationStep({
 
   if (!item?.docs_ready)
     return (
-      <Alert color="primary">
-        Documents are being prepared. You will be notified via email when they
-        are ready.
-      </Alert>
+      <div className="mt-12 space-y-4 max-w-[500px] mx-auto">
+        <h1 className="text-sm font-medium">
+          We will prepare your documents. They will be ready within 48 hours at
+          the latest
+        </h1>
+        <DocumentPreparationAnimation />
+        <p className="text-xs text-muted-foreground">
+          Don’t forget to include the valuation. We can also help you with it —
+          just let us know at mimira@mimiraoffers.eu or +48 732 070 469.
+        </p>
+      </div>
     );
 
   if (isLoading) {
