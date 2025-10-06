@@ -5609,11 +5609,11 @@
         },
         "6/declaration/body/5/argument/1/1/3/1": {
           "type": "element",
-          "hash": "626325a05e4c8800f7ede7012b0cadaf",
+          "hash": "0504560ee3df42256be1c54dab01940e",
           "context": "",
           "skip": false,
           "overrides": {},
-          "content": "Filter"
+          "content": "Add tender"
         },
         "6/declaration/body/5/argument/1/1/3/1/1": {
           "type": "element",
@@ -5630,6 +5630,22 @@
           "skip": false,
           "overrides": {},
           "content": "Filter"
+        },
+        "6/declaration/body/5/argument/1/1/3/1/1/openingElement/2/value/expression": {
+          "type": "element",
+          "hash": "ce0397f71b96fd05f4eeb7ce66fd66a2",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "<element:Kanban></element:Kanban> Kanban"
+        },
+        "6/declaration/body/5/argument/1/1/3/1/3/openingElement/3/value/expression": {
+          "type": "element",
+          "hash": "266c1aaa95bf84b21b7b5f2c90e47fa7",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "<element:List></element:List> List"
         },
         "6/declaration/body/5/argument/1/1/3/1/openingElement/2/value/expression": {
           "type": "element",
@@ -5654,6 +5670,22 @@
           "skip": false,
           "overrides": {},
           "content": "Filter Tenders"
+        },
+        "6/declaration/body/5/argument/1/1/3/3/1/openingElement/2/value/expression": {
+          "type": "element",
+          "hash": "ce0397f71b96fd05f4eeb7ce66fd66a2",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "<element:Kanban></element:Kanban> Kanban"
+        },
+        "6/declaration/body/5/argument/1/1/3/3/3/openingElement/3/value/expression": {
+          "type": "element",
+          "hash": "266c1aaa95bf84b21b7b5f2c90e47fa7",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "<element:List></element:List> List"
         },
         "6/declaration/body/5/argument/1/1/3/3/openingElement/2/value/expression": {
           "type": "element",
@@ -5711,6 +5743,14 @@
           "overrides": {},
           "content": "Filter"
         },
+        "7/declaration/body/5/argument/1/1/3/1": {
+          "type": "element",
+          "hash": "0504560ee3df42256be1c54dab01940e",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Add tender"
+        },
         "7/declaration/body/5/argument/1/1/3/1/openingElement/2/value/expression": {
           "type": "element",
           "hash": "28610240c76b357448df68718834ac78",
@@ -5718,6 +5758,22 @@
           "skip": false,
           "overrides": {},
           "content": "<element:Kanban></element:Kanban> Kanban"
+        },
+        "7/declaration/body/5/argument/1/1/3/3/1/openingElement/2/value/expression": {
+          "type": "element",
+          "hash": "ce0397f71b96fd05f4eeb7ce66fd66a2",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "<element:Kanban></element:Kanban> Kanban"
+        },
+        "7/declaration/body/5/argument/1/1/3/3/3/openingElement/3/value/expression": {
+          "type": "element",
+          "hash": "266c1aaa95bf84b21b7b5f2c90e47fa7",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "<element:List></element:List> List"
         },
         "7/declaration/body/5/argument/1/1/3/3/openingElement/2/value/expression": {
           "type": "element",
@@ -5743,6 +5799,14 @@
           "overrides": {},
           "content": "Filter"
         },
+        "7/declaration/body/6/argument/1/1/3/1": {
+          "type": "element",
+          "hash": "d6d14f8a4c59da453e4ff932d12bf9af",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Upload new tender"
+        },
         "7/declaration/body/6/argument/1/1/3/1/openingElement/2/value/expression": {
           "type": "element",
           "hash": "28610240c76b357448df68718834ac78",
@@ -5750,6 +5814,22 @@
           "skip": false,
           "overrides": {},
           "content": "<element:Kanban></element:Kanban> Kanban"
+        },
+        "7/declaration/body/6/argument/1/1/3/3/1/openingElement/2/value/expression": {
+          "type": "element",
+          "hash": "ce0397f71b96fd05f4eeb7ce66fd66a2",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "<element:Kanban></element:Kanban> Kanban"
+        },
+        "7/declaration/body/6/argument/1/1/3/3/3/openingElement/3/value/expression": {
+          "type": "element",
+          "hash": "266c1aaa95bf84b21b7b5f2c90e47fa7",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "<element:List></element:List> List"
         },
         "7/declaration/body/6/argument/1/1/3/3/openingElement/2/value/expression": {
           "type": "element",
@@ -5918,6 +5998,90 @@
           "skip": false,
           "overrides": {},
           "content": "Something went wrong"
+        }
+      }
+    },
+    "components/dropzone.tsx": {
+      "scopes": {
+        "11/0/init/body/3/consequent/0/argument/3": {
+          "type": "element",
+          "hash": "bafaf122390d160875f6daaf473449b3",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Successfully uploaded {files.length} file<expression/>"
+        },
+        "11/0/init/body/4/argument/1/expression/0/body/2/argument/3/3/expression/alternate/alternate/alternate/consequent": {
+          "type": "element",
+          "hash": "376d9b743a60a996b8f9d889727ef00e",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Successfully uploaded file"
+        },
+        "11/0/init/body/4/argument/1/expression/0/body/2/argument/3/3/expression/alternate/alternate/consequent": {
+          "type": "element",
+          "hash": "37e4a48bd7e227207b7132680ed5fe46",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Failed to upload: {fileError.message}"
+        },
+        "11/0/init/body/4/argument/1/expression/0/body/2/argument/3/3/expression/alternate/consequent": {
+          "type": "element",
+          "hash": "6f85dd13c7680cc0a162c14003047ddc",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Uploading file..."
+        },
+        "11/0/init/body/4/argument/3/expression/right": {
+          "type": "element",
+          "hash": "d9c4790ccca55bcaea16002949650047",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "You may upload only up to {maxFiles} files, please remove <expression/> file<expression/>."
+        },
+        "11/0/init/body/4/argument/5/expression/right/1/1/expression/alternate": {
+          "type": "element",
+          "hash": "0c517ac5a21439c4a3b8d1f4070ed9fe",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Upload files"
+        },
+        "11/0/init/body/4/argument/5/expression/right/1/1/expression/consequent": {
+          "type": "element",
+          "hash": "ad6971e1a2793a85e21c650c22e85ce9",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "<element:Loader2></element:Loader2> Uploading..."
+        },
+        "12/0/init/body/2/argument/3": {
+          "type": "element",
+          "hash": "85de6a8fbd9fa31e845160ce5e231576",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Upload<expression/> file<expression/>"
+        },
+        "12/0/init/body/2/argument/5/1": {
+          "type": "element",
+          "hash": "f7401dcfc58bd8fb5f78e0d7c70a977a",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Drag and drop or <element:a>select <expression/></element:a> to upload"
+        },
+        "12/0/init/body/2/argument/5/3/expression/right": {
+          "type": "element",
+          "hash": "4234b4730252acef5a5c99b8179051b2",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Maximum file size: <function:formatBytes/>"
         }
       }
     },
@@ -16093,6 +16257,38 @@
     },
     "features/navigation/components/dashboard-sidebar.tsx": {
       "scopes": {
+        "11/0/init/expression/0/1/value": {
+          "type": "element",
+          "hash": "104a3db3b671c04e167eafbe21e57881",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Home"
+        },
+        "11/0/init/expression/1/1/value": {
+          "type": "element",
+          "hash": "a94c4eb8b9f76eedf17a5b47e0f12908",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Discover new tenders"
+        },
+        "11/0/init/expression/2/1/value": {
+          "type": "element",
+          "hash": "bd9a5531afffb07a322a91ec689859ee",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Active tenders"
+        },
+        "11/0/init/expression/3/1/value": {
+          "type": "element",
+          "hash": "c3882fc98216636873ab9091f3453f0c",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Documents"
+        },
         "11/declaration/body/2/argument/3/1/1": {
           "type": "element",
           "hash": "9e8d5035217a4088af5d7de48c14283b",
@@ -16100,6 +16296,30 @@
           "skip": false,
           "overrides": {},
           "content": "Main Navigation"
+        },
+        "13/declaration/body/3/argument/3/1/1": {
+          "type": "element",
+          "hash": "9e8d5035217a4088af5d7de48c14283b",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Main Navigation"
+        },
+        "13/declaration/body/3/argument/3/1/3/1/3/1/3": {
+          "type": "element",
+          "hash": "737191d77c8c7f6ff61bd76ac4554cee",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Upload new tender"
+        },
+        "13/declaration/body/3/argument/3/1/3/1/5/1/1/3": {
+          "type": "element",
+          "hash": "c3882fc98216636873ab9091f3453f0c",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Documents"
         },
         "7/0/init/0/0/value": {
           "type": "element",
@@ -33570,6 +33790,470 @@
           "skip": false,
           "overrides": {},
           "content": "Generating summary..."
+        }
+      }
+    },
+    "features/tenders/components/tender-upload-dialog.tsx": {
+      "scopes": {
+        "10/declaration/body/6/argument/1/1/1": {
+          "type": "element",
+          "hash": "32f5c37695ccfa1adcc059af47b61b89",
+          "context": "",
+          "skip": false,
+          "overrides": {
+            "pl": "Prześlij przetarg"
+          },
+          "content": "Upload tender"
+        },
+        "10/declaration/body/6/argument/1/3/1-label": {
+          "type": "attribute",
+          "hash": "abceb2aaa98a7c9670142ffcb3c3ca24",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Link to tender"
+        },
+        "10/declaration/body/6/argument/1/3/1-placeholder": {
+          "type": "attribute",
+          "hash": "49c66a225e48182785a6957de2c405bd",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "https://..."
+        },
+        "10/declaration/body/6/argument/1/3/11/1": {
+          "type": "element",
+          "hash": "6c214654589ea5d7f70078fe992c4ff0",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Upload tender"
+        },
+        "10/declaration/body/6/argument/1/3/11/3/3/3/expression/alternate/1": {
+          "type": "element",
+          "hash": "d29bbab20c7397829aca28057eafa7a8",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Drag and drop files here, or click to select them from your device"
+        },
+        "10/declaration/body/6/argument/1/3/11/3/3/3/expression/alternate/3": {
+          "type": "element",
+          "hash": "79b7cdceb048f0cd1008c450d14375d7",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Max 5 files, 10MB each (PDF, Images, Word documents)"
+        },
+        "10/declaration/body/6/argument/1/3/11/3/3/3/expression/consequent": {
+          "type": "element",
+          "hash": "7131d4319b2953945cd38a2bf516b7de",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Drop files here..."
+        },
+        "10/declaration/body/6/argument/1/3/11/7/expression/right/1/expression/0/body": {
+          "type": "element",
+          "hash": "ad67b08a36551d0d06b781344d221ce7",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "{file.name}: <function:errors.map/>"
+        },
+        "10/declaration/body/6/argument/1/3/13/1": {
+          "type": "element",
+          "hash": "6c214654589ea5d7f70078fe992c4ff0",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Upload tender"
+        },
+        "10/declaration/body/6/argument/1/3/3-label": {
+          "type": "attribute",
+          "hash": "f305056b5600ac1c19e9fca12ba3ae16",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Order object"
+        },
+        "10/declaration/body/6/argument/1/3/3-placeholder": {
+          "type": "attribute",
+          "hash": "321133c67da923757561eed6e7bb74c1",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Enter order object"
+        },
+        "10/declaration/body/6/argument/1/3/5-label": {
+          "type": "attribute",
+          "hash": "f305056b5600ac1c19e9fca12ba3ae16",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Order object"
+        },
+        "10/declaration/body/6/argument/1/3/5-placeholder": {
+          "type": "attribute",
+          "hash": "321133c67da923757561eed6e7bb74c1",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Enter order object"
+        },
+        "10/declaration/body/6/argument/1/3/5/openingElement/3/value/expression/body-label": {
+          "type": "attribute",
+          "hash": "596264d07defac417835309e31b8f5a5",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Publication date"
+        },
+        "10/declaration/body/6/argument/1/3/7/openingElement/3/value/expression/body-label": {
+          "type": "attribute",
+          "hash": "2658f18da2ca8f5df394917be28135d2",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Submitting offers date"
+        },
+        "10/declaration/body/6/argument/1/3/9/1": {
+          "type": "element",
+          "hash": "bcf66d69122ba1e0043d41ef4bee0725",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Tender files (optional)"
+        },
+        "10/declaration/body/6/argument/1/3/9/3/3/3/expression/alternate/1": {
+          "type": "element",
+          "hash": "d29bbab20c7397829aca28057eafa7a8",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Drag and drop files here, or click to select them from your device"
+        },
+        "10/declaration/body/6/argument/1/3/9/3/3/3/expression/alternate/3": {
+          "type": "element",
+          "hash": "79b7cdceb048f0cd1008c450d14375d7",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Max 5 files, 10MB each (PDF, Images, Word documents)"
+        },
+        "10/declaration/body/6/argument/1/3/9/3/3/3/expression/consequent": {
+          "type": "element",
+          "hash": "7131d4319b2953945cd38a2bf516b7de",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Drop files here..."
+        },
+        "10/declaration/body/6/argument/1/3/9/7/expression/right/1/expression/0/body": {
+          "type": "element",
+          "hash": "ad67b08a36551d0d06b781344d221ce7",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "{file.name}: <function:errors.map/>"
+        },
+        "10/declaration/body/6/argument/1/3/9/openingElement/3/value/expression/body-label": {
+          "type": "attribute",
+          "hash": "2658f18da2ca8f5df394917be28135d2",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Submitting offers date"
+        },
+        "11/declaration/body/4/0/init/body/0/block/3/expression/0": {
+          "type": "element",
+          "hash": "d922a59e617c558cd1becadcec3246e2",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Tender was upload successfully!, You will receive it processed in your inbox in 10 minutes"
+        },
+        "11/declaration/body/4/0/init/body/0/handler/body/0/expression/0": {
+          "type": "element",
+          "hash": "5ab37ef6bd99fff24961347b296ed8c6",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Upload failed, contact support if the problem persists"
+        },
+        "11/declaration/body/7/argument/1/1/1": {
+          "type": "element",
+          "hash": "32f5c37695ccfa1adcc059af47b61b89",
+          "context": "",
+          "skip": false,
+          "overrides": {
+            "pl": "Prześlij przetarg"
+          },
+          "content": "Upload tender"
+        },
+        "11/declaration/body/7/argument/1/1/3": {
+          "type": "element",
+          "hash": "ba44b555e00190dc738908019010c069",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Fill all the required fields to upload and process new tender."
+        },
+        "11/declaration/body/7/argument/1/3/1-label": {
+          "type": "attribute",
+          "hash": "abceb2aaa98a7c9670142ffcb3c3ca24",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Link to tender"
+        },
+        "11/declaration/body/7/argument/1/3/1-placeholder": {
+          "type": "attribute",
+          "hash": "49c66a225e48182785a6957de2c405bd",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "https://..."
+        },
+        "11/declaration/body/7/argument/1/3/11/1": {
+          "type": "element",
+          "hash": "6c214654589ea5d7f70078fe992c4ff0",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Upload tender"
+        },
+        "11/declaration/body/7/argument/1/3/3-label": {
+          "type": "attribute",
+          "hash": "f305056b5600ac1c19e9fca12ba3ae16",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Order object"
+        },
+        "11/declaration/body/7/argument/1/3/3-placeholder": {
+          "type": "attribute",
+          "hash": "321133c67da923757561eed6e7bb74c1",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Enter order object"
+        },
+        "11/declaration/body/7/argument/1/3/5/openingElement/3/value/expression/body-label": {
+          "type": "attribute",
+          "hash": "596264d07defac417835309e31b8f5a5",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Publication date"
+        },
+        "11/declaration/body/7/argument/1/3/7/openingElement/3/value/expression/body-label": {
+          "type": "attribute",
+          "hash": "2658f18da2ca8f5df394917be28135d2",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Submitting offers date"
+        },
+        "11/declaration/body/7/argument/1/3/9/1": {
+          "type": "element",
+          "hash": "bcf66d69122ba1e0043d41ef4bee0725",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Tender files (optional)"
+        },
+        "11/declaration/body/7/argument/1/3/9/3/3/3/expression/alternate/1": {
+          "type": "element",
+          "hash": "d29bbab20c7397829aca28057eafa7a8",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Drag and drop files here, or click to select them from your device"
+        },
+        "11/declaration/body/7/argument/1/3/9/3/3/3/expression/alternate/3": {
+          "type": "element",
+          "hash": "79b7cdceb048f0cd1008c450d14375d7",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Max 5 files, 10MB each (PDF, Images, Word documents)"
+        },
+        "11/declaration/body/7/argument/1/3/9/3/3/3/expression/consequent": {
+          "type": "element",
+          "hash": "7131d4319b2953945cd38a2bf516b7de",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Drop files here..."
+        },
+        "11/declaration/body/7/argument/1/3/9/7/expression/right/1/expression/0/body": {
+          "type": "element",
+          "hash": "e1580260ddab6d6a41d0764559609eb9",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "<element:span>{file.name}</element:span>: <function:errors.map/>"
+        },
+        "12/declaration/body/5/argument/1/1/1": {
+          "type": "element",
+          "hash": "7acbb516466de468403b292c0dfe8afb",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Upload tender"
+        },
+        "12/declaration/body/5/argument/1/3/1/1": {
+          "type": "element",
+          "hash": "abceb2aaa98a7c9670142ffcb3c3ca24",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Link to tender"
+        },
+        "12/declaration/body/5/argument/1/3/1/3-placeholder": {
+          "type": "attribute",
+          "hash": "49c66a225e48182785a6957de2c405bd",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "https://..."
+        },
+        "12/declaration/body/5/argument/1/3/11/1": {
+          "type": "element",
+          "hash": "c901e7c51d5eb1207fb21ff08e66db0c",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Tender files (optional)"
+        },
+        "12/declaration/body/5/argument/1/3/13/1/1/expression/alternate": {
+          "type": "element",
+          "hash": "7acbb516466de468403b292c0dfe8afb",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Upload tender"
+        },
+        "12/declaration/body/5/argument/1/3/13/1/1/expression/consequent": {
+          "type": "element",
+          "hash": "34bd6fede108bae67fb820601e6e8db3",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "<element:Loader2></element:Loader2> Uploading..."
+        },
+        "12/declaration/body/5/argument/1/3/3/1": {
+          "type": "element",
+          "hash": "75fdab82041c5d5d58a0a2c21d19017e",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Company name"
+        },
+        "12/declaration/body/5/argument/1/3/3/3-placeholder": {
+          "type": "attribute",
+          "hash": "68b8940c77f5bb58d79411da606235f1",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Enter company name"
+        },
+        "12/declaration/body/5/argument/1/3/5/1": {
+          "type": "element",
+          "hash": "f305056b5600ac1c19e9fca12ba3ae16",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Order object"
+        },
+        "12/declaration/body/5/argument/1/3/5/3-placeholder": {
+          "type": "attribute",
+          "hash": "321133c67da923757561eed6e7bb74c1",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Enter order object"
+        },
+        "12/declaration/body/5/argument/1/3/7/1": {
+          "type": "element",
+          "hash": "596264d07defac417835309e31b8f5a5",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Publication date"
+        },
+        "12/declaration/body/5/argument/1/3/9/1": {
+          "type": "element",
+          "hash": "27290a20b804b038d15d820d17d8e432",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Submitting offers date"
+        },
+        "2/declaration/body/0/argument/1/1/1": {
+          "type": "element",
+          "hash": "7acbb516466de468403b292c0dfe8afb",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Upload tender"
+        },
+        "3/declaration/body/0/argument/1/1/1": {
+          "type": "element",
+          "hash": "7acbb516466de468403b292c0dfe8afb",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Upload tender"
+        },
+        "3/declaration/body/0/argument/1/3/1/openingElement/0/value/expression": {
+          "type": "element",
+          "hash": "abceb2aaa98a7c9670142ffcb3c3ca24",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Link to tender"
+        },
+        "3/declaration/body/0/argument/1/3/1/openingElement/1/value/expression": {
+          "type": "element",
+          "hash": "abceb2aaa98a7c9670142ffcb3c3ca24",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Link to tender"
+        },
+        "3/declaration/body/0/argument/1/3/3/openingElement/0/value/expression": {
+          "type": "element",
+          "hash": "f305056b5600ac1c19e9fca12ba3ae16",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Order object"
+        },
+        "3/declaration/body/0/argument/1/3/5/openingElement/0/value/expression": {
+          "type": "element",
+          "hash": "596264d07defac417835309e31b8f5a5",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Publication date"
+        },
+        "3/declaration/body/0/argument/1/3/7/openingElement/0/value/expression": {
+          "type": "element",
+          "hash": "2658f18da2ca8f5df394917be28135d2",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Submitting offers date"
+        },
+        "3/declaration/body/0/argument/1/5/1": {
+          "type": "element",
+          "hash": "32f5c37695ccfa1adcc059af47b61b89",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Upload tender"
         }
       }
     }

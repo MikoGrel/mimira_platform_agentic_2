@@ -5111,10 +5111,10 @@ export default {
           },
         "6/declaration/body/5/argument/1/1/3/1": {
           content: {
-            en: "Filter",
-            pl: "Filtr",
+            en: "Add tender",
+            pl: "Dodaj przetarg",
           },
-          hash: "626325a05e4c8800f7ede7012b0cadaf",
+          hash: "0504560ee3df42256be1c54dab01940e",
         },
         "6/declaration/body/5/argument/1/1/3/1/1": {
           content: {
@@ -5130,6 +5130,22 @@ export default {
           },
           hash: "626325a05e4c8800f7ede7012b0cadaf",
         },
+        "6/declaration/body/5/argument/1/1/3/1/1/openingElement/2/value/expression":
+          {
+            content: {
+              en: "<element:Kanban></element:Kanban> Kanban",
+              pl: "<element:Kanban></element:Kanban> Kanban",
+            },
+            hash: "ce0397f71b96fd05f4eeb7ce66fd66a2",
+          },
+        "6/declaration/body/5/argument/1/1/3/1/3/openingElement/3/value/expression":
+          {
+            content: {
+              en: "<element:List></element:List> List",
+              pl: "<element:List></element:List> Lista",
+            },
+            hash: "266c1aaa95bf84b21b7b5f2c90e47fa7",
+          },
         "6/declaration/body/5/argument/1/1/3/1/openingElement/2/value/expression":
           {
             content: {
@@ -5152,6 +5168,22 @@ export default {
           },
           hash: "6ac4c87b40753be1ab689cb0ff301462",
         },
+        "6/declaration/body/5/argument/1/1/3/3/1/openingElement/2/value/expression":
+          {
+            content: {
+              en: "<element:Kanban></element:Kanban> Kanban",
+              pl: "<element:Kanban></element:Kanban> Kanban",
+            },
+            hash: "ce0397f71b96fd05f4eeb7ce66fd66a2",
+          },
+        "6/declaration/body/5/argument/1/1/3/3/3/openingElement/3/value/expression":
+          {
+            content: {
+              en: "<element:List></element:List> List",
+              pl: "<element:List></element:List> Lista",
+            },
+            hash: "266c1aaa95bf84b21b7b5f2c90e47fa7",
+          },
         "6/declaration/body/5/argument/1/1/3/3/openingElement/2/value/expression":
           {
             content: {
@@ -5203,6 +5235,13 @@ export default {
           },
           hash: "626325a05e4c8800f7ede7012b0cadaf",
         },
+        "7/declaration/body/5/argument/1/1/3/1": {
+          content: {
+            en: "Add tender",
+            pl: "Dodaj przetarg",
+          },
+          hash: "0504560ee3df42256be1c54dab01940e",
+        },
         "7/declaration/body/5/argument/1/1/3/1/openingElement/2/value/expression":
           {
             content: {
@@ -5210,6 +5249,22 @@ export default {
               pl: "<element:Kanban></element:Kanban> Kanban",
             },
             hash: "28610240c76b357448df68718834ac78",
+          },
+        "7/declaration/body/5/argument/1/1/3/3/1/openingElement/2/value/expression":
+          {
+            content: {
+              en: "<element:Kanban></element:Kanban> Kanban",
+              pl: "<element:Kanban></element:Kanban> Kanban",
+            },
+            hash: "ce0397f71b96fd05f4eeb7ce66fd66a2",
+          },
+        "7/declaration/body/5/argument/1/1/3/3/3/openingElement/3/value/expression":
+          {
+            content: {
+              en: "<element:List></element:List> List",
+              pl: "<element:List></element:List> Lista",
+            },
+            hash: "266c1aaa95bf84b21b7b5f2c90e47fa7",
           },
         "7/declaration/body/5/argument/1/1/3/3/openingElement/2/value/expression":
           {
@@ -5233,6 +5288,13 @@ export default {
           },
           hash: "626325a05e4c8800f7ede7012b0cadaf",
         },
+        "7/declaration/body/6/argument/1/1/3/1": {
+          content: {
+            en: "Upload new tender",
+            pl: "Prześlij nowy przetarg",
+          },
+          hash: "d6d14f8a4c59da453e4ff932d12bf9af",
+        },
         "7/declaration/body/6/argument/1/1/3/1/openingElement/2/value/expression":
           {
             content: {
@@ -5240,6 +5302,22 @@ export default {
               pl: "<element:Kanban></element:Kanban> Kanban",
             },
             hash: "28610240c76b357448df68718834ac78",
+          },
+        "7/declaration/body/6/argument/1/1/3/3/1/openingElement/2/value/expression":
+          {
+            content: {
+              en: "<element:Kanban></element:Kanban> Kanban",
+              pl: "<element:Kanban></element:Kanban> Kanban",
+            },
+            hash: "ce0397f71b96fd05f4eeb7ce66fd66a2",
+          },
+        "7/declaration/body/6/argument/1/1/3/3/3/openingElement/3/value/expression":
+          {
+            content: {
+              en: "<element:List></element:List> List",
+              pl: "<element:List></element:List> Lista",
+            },
+            hash: "266c1aaa95bf84b21b7b5f2c90e47fa7",
           },
         "7/declaration/body/6/argument/1/1/3/3/openingElement/2/value/expression":
           {
@@ -5389,6 +5467,85 @@ export default {
             pl: "Coś poszło nie tak",
           },
           hash: "a3cd2f01c073f1f5ff436d4b132d39cf",
+        },
+      },
+    },
+    "components/dropzone.tsx": {
+      entries: {
+        "11/0/init/body/3/consequent/0/argument/3": {
+          content: {
+            en: "Successfully uploaded {files.length} file<expression/>",
+            pl: "Pomyślnie przesłano {files.length} plik<expression/>",
+          },
+          hash: "bafaf122390d160875f6daaf473449b3",
+        },
+        "11/0/init/body/4/argument/1/expression/0/body/2/argument/3/3/expression/alternate/alternate/alternate/consequent":
+          {
+            content: {
+              en: "Successfully uploaded file",
+              pl: "Plik został pomyślnie przesłany",
+            },
+            hash: "376d9b743a60a996b8f9d889727ef00e",
+          },
+        "11/0/init/body/4/argument/1/expression/0/body/2/argument/3/3/expression/alternate/alternate/consequent":
+          {
+            content: {
+              en: "Failed to upload: {fileError.message}",
+              pl: "Nie udało się przesłać: {fileError.message}",
+            },
+            hash: "37e4a48bd7e227207b7132680ed5fe46",
+          },
+        "11/0/init/body/4/argument/1/expression/0/body/2/argument/3/3/expression/alternate/consequent":
+          {
+            content: {
+              en: "Uploading file...",
+              pl: "Trwa przesyłanie pliku...",
+            },
+            hash: "6f85dd13c7680cc0a162c14003047ddc",
+          },
+        "11/0/init/body/4/argument/3/expression/right": {
+          content: {
+            en: "You may upload only up to {maxFiles} files, please remove <expression/> file<expression/>.",
+            pl: "Możesz przesłać maksymalnie {maxFiles} plików, usuń <expression/> plik<expression/>.",
+          },
+          hash: "d9c4790ccca55bcaea16002949650047",
+        },
+        "11/0/init/body/4/argument/5/expression/right/1/1/expression/alternate":
+          {
+            content: {
+              en: "Upload files",
+              pl: "Prześlij pliki",
+            },
+            hash: "0c517ac5a21439c4a3b8d1f4070ed9fe",
+          },
+        "11/0/init/body/4/argument/5/expression/right/1/1/expression/consequent":
+          {
+            content: {
+              en: "<element:Loader2></element:Loader2> Uploading...",
+              pl: "<element:Loader2></element:Loader2> Przesyłanie...",
+            },
+            hash: "ad6971e1a2793a85e21c650c22e85ce9",
+          },
+        "12/0/init/body/2/argument/3": {
+          content: {
+            en: "Upload<expression/> file<expression/>",
+            pl: "Prześlij<expression/> plik<expression/>",
+          },
+          hash: "85de6a8fbd9fa31e845160ce5e231576",
+        },
+        "12/0/init/body/2/argument/5/1": {
+          content: {
+            en: "Drag and drop or <element:a>select <expression/></element:a> to upload",
+            pl: "Przeciągnij i upuść lub <element:a>wybierz <expression/></element:a>, aby przesłać",
+          },
+          hash: "f7401dcfc58bd8fb5f78e0d7c70a977a",
+        },
+        "12/0/init/body/2/argument/5/3/expression/right": {
+          content: {
+            en: "Maximum file size: <function:formatBytes/>",
+            pl: "Maksymalny rozmiar pliku: <function:formatBytes/>",
+          },
+          hash: "4234b4730252acef5a5c99b8179051b2",
         },
       },
     },
@@ -14441,12 +14598,61 @@ export default {
     },
     "features/navigation/components/dashboard-sidebar.tsx": {
       entries: {
+        "11/0/init/expression/0/1/value": {
+          content: {
+            en: "Home",
+            pl: "Strona główna",
+          },
+          hash: "104a3db3b671c04e167eafbe21e57881",
+        },
+        "11/0/init/expression/1/1/value": {
+          content: {
+            en: "Discover new tenders",
+            pl: "Odkryj nowe przetargi",
+          },
+          hash: "a94c4eb8b9f76eedf17a5b47e0f12908",
+        },
+        "11/0/init/expression/2/1/value": {
+          content: {
+            en: "Active tenders",
+            pl: "Aktywne przetargi",
+          },
+          hash: "bd9a5531afffb07a322a91ec689859ee",
+        },
+        "11/0/init/expression/3/1/value": {
+          content: {
+            en: "Documents",
+            pl: "Dokumenty",
+          },
+          hash: "c3882fc98216636873ab9091f3453f0c",
+        },
         "11/declaration/body/2/argument/3/1/1": {
           content: {
             en: "Main Navigation",
             pl: "Główna nawigacja",
           },
           hash: "9e8d5035217a4088af5d7de48c14283b",
+        },
+        "13/declaration/body/3/argument/3/1/1": {
+          content: {
+            en: "Main Navigation",
+            pl: "Główna nawigacja",
+          },
+          hash: "9e8d5035217a4088af5d7de48c14283b",
+        },
+        "13/declaration/body/3/argument/3/1/3/1/3/1/3": {
+          content: {
+            en: "Upload new tender",
+            pl: "Prześlij nowy przetarg",
+          },
+          hash: "737191d77c8c7f6ff61bd76ac4554cee",
+        },
+        "13/declaration/body/3/argument/3/1/3/1/5/1/1/3": {
+          content: {
+            en: "Documents",
+            pl: "Dokumenty",
+          },
+          hash: "c3882fc98216636873ab9091f3453f0c",
         },
         "7/0/init/0/0/value": {
           content: {
@@ -27939,6 +28145,422 @@ export default {
             },
             hash: "b4fe61c9f4bcfb125cc1d4477686e840",
           },
+      },
+    },
+    "features/tenders/components/tender-upload-dialog.tsx": {
+      entries: {
+        "10/declaration/body/6/argument/1/1/1": {
+          content: {
+            en: "Upload tender",
+            pl: "Prześlij ofertę",
+          },
+          hash: "32f5c37695ccfa1adcc059af47b61b89",
+        },
+        "10/declaration/body/6/argument/1/3/1-label": {
+          content: {
+            en: "Link to tender",
+            pl: "Link do przetargu",
+          },
+          hash: "abceb2aaa98a7c9670142ffcb3c3ca24",
+        },
+        "10/declaration/body/6/argument/1/3/1-placeholder": {
+          content: {
+            en: "https://...",
+            pl: "https://...",
+          },
+          hash: "49c66a225e48182785a6957de2c405bd",
+        },
+        "10/declaration/body/6/argument/1/3/11/1": {
+          content: {
+            en: "Upload tender",
+            pl: "Prześlij przetarg",
+          },
+          hash: "6c214654589ea5d7f70078fe992c4ff0",
+        },
+        "10/declaration/body/6/argument/1/3/11/3/3/3/expression/alternate/1": {
+          content: {
+            en: "Drag and drop files here, or click to select them from your device",
+            pl: "Przeciągnij i upuść pliki tutaj lub kliknij, aby wybrać je z urządzenia",
+          },
+          hash: "d29bbab20c7397829aca28057eafa7a8",
+        },
+        "10/declaration/body/6/argument/1/3/11/3/3/3/expression/alternate/3": {
+          content: {
+            en: "Max 5 files, 10MB each (PDF, Images, Word documents)",
+            pl: "Maksymalnie 5 plików, po 10 MB każdy (PDF, obrazy, dokumenty Word)",
+          },
+          hash: "79b7cdceb048f0cd1008c450d14375d7",
+        },
+        "10/declaration/body/6/argument/1/3/11/3/3/3/expression/consequent": {
+          content: {
+            en: "Drop files here...",
+            pl: "Upuść pliki tutaj...",
+          },
+          hash: "7131d4319b2953945cd38a2bf516b7de",
+        },
+        "10/declaration/body/6/argument/1/3/11/7/expression/right/1/expression/0/body":
+          {
+            content: {
+              en: "{file.name}: <function:errors.map/>",
+              pl: "{file.name}: <function:errors.map/>",
+            },
+            hash: "ad67b08a36551d0d06b781344d221ce7",
+          },
+        "10/declaration/body/6/argument/1/3/13/1": {
+          content: {
+            en: "Upload tender",
+            pl: "Prześlij przetarg",
+          },
+          hash: "6c214654589ea5d7f70078fe992c4ff0",
+        },
+        "10/declaration/body/6/argument/1/3/3-label": {
+          content: {
+            en: "Order object",
+            pl: "Obiekt zamówienia",
+          },
+          hash: "f305056b5600ac1c19e9fca12ba3ae16",
+        },
+        "10/declaration/body/6/argument/1/3/3-placeholder": {
+          content: {
+            en: "Enter order object",
+            pl: "Wprowadź przedmiot zamówienia",
+          },
+          hash: "321133c67da923757561eed6e7bb74c1",
+        },
+        "10/declaration/body/6/argument/1/3/5-label": {
+          content: {
+            en: "Order object",
+            pl: "Obiekt zamówienia",
+          },
+          hash: "f305056b5600ac1c19e9fca12ba3ae16",
+        },
+        "10/declaration/body/6/argument/1/3/5-placeholder": {
+          content: {
+            en: "Enter order object",
+            pl: "Wprowadź przedmiot zamówienia",
+          },
+          hash: "321133c67da923757561eed6e7bb74c1",
+        },
+        "10/declaration/body/6/argument/1/3/5/openingElement/3/value/expression/body-label":
+          {
+            content: {
+              en: "Publication date",
+              pl: "Data publikacji",
+            },
+            hash: "596264d07defac417835309e31b8f5a5",
+          },
+        "10/declaration/body/6/argument/1/3/7/openingElement/3/value/expression/body-label":
+          {
+            content: {
+              en: "Submitting offers date",
+              pl: "Data składania ofert",
+            },
+            hash: "2658f18da2ca8f5df394917be28135d2",
+          },
+        "10/declaration/body/6/argument/1/3/9/1": {
+          content: {
+            en: "Tender files (optional)",
+            pl: "Pliki przetargowe (opcjonalne)",
+          },
+          hash: "bcf66d69122ba1e0043d41ef4bee0725",
+        },
+        "10/declaration/body/6/argument/1/3/9/3/3/3/expression/alternate/1": {
+          content: {
+            en: "Drag and drop files here, or click to select them from your device",
+            pl: "Przeciągnij i upuść pliki tutaj lub kliknij, aby wybrać je z urządzenia",
+          },
+          hash: "d29bbab20c7397829aca28057eafa7a8",
+        },
+        "10/declaration/body/6/argument/1/3/9/3/3/3/expression/alternate/3": {
+          content: {
+            en: "Max 5 files, 10MB each (PDF, Images, Word documents)",
+            pl: "Maksymalnie 5 plików, po 10 MB każdy (PDF, obrazy, dokumenty Word)",
+          },
+          hash: "79b7cdceb048f0cd1008c450d14375d7",
+        },
+        "10/declaration/body/6/argument/1/3/9/3/3/3/expression/consequent": {
+          content: {
+            en: "Drop files here...",
+            pl: "Upuść pliki tutaj...",
+          },
+          hash: "7131d4319b2953945cd38a2bf516b7de",
+        },
+        "10/declaration/body/6/argument/1/3/9/7/expression/right/1/expression/0/body":
+          {
+            content: {
+              en: "{file.name}: <function:errors.map/>",
+              pl: "{file.name}: <function:errors.map/>",
+            },
+            hash: "ad67b08a36551d0d06b781344d221ce7",
+          },
+        "10/declaration/body/6/argument/1/3/9/openingElement/3/value/expression/body-label":
+          {
+            content: {
+              en: "Submitting offers date",
+              pl: "Data składania ofert",
+            },
+            hash: "2658f18da2ca8f5df394917be28135d2",
+          },
+        "11/declaration/body/4/0/init/body/0/block/3/expression/0": {
+          content: {
+            en: "Tender was upload successfully!, You will receive it processed in your inbox in 10 minutes",
+            pl: "Przetarg został pomyślnie przesłany! Otrzymasz go przetworzony w swojej skrzynce odbiorczej za 10 minut.",
+          },
+          hash: "d922a59e617c558cd1becadcec3246e2",
+        },
+        "11/declaration/body/4/0/init/body/0/handler/body/0/expression/0": {
+          content: {
+            en: "Upload failed, contact support if the problem persists",
+            pl: "Przesyłanie nie powiodło się, skontaktuj się z pomocą techniczną, jeśli problem będzie się powtarzał.",
+          },
+          hash: "5ab37ef6bd99fff24961347b296ed8c6",
+        },
+        "11/declaration/body/7/argument/1/1/1": {
+          content: {
+            en: "Upload tender",
+            pl: "Prześlij ofertę",
+          },
+          hash: "32f5c37695ccfa1adcc059af47b61b89",
+        },
+        "11/declaration/body/7/argument/1/1/3": {
+          content: {
+            en: "Fill all the required fields to upload and process new tender.",
+            pl: "Wypełnij wszystkie wymagane pola, aby przesłać i przetworzyć nowy przetarg.",
+          },
+          hash: "ba44b555e00190dc738908019010c069",
+        },
+        "11/declaration/body/7/argument/1/3/1-label": {
+          content: {
+            en: "Link to tender",
+            pl: "Link do przetargu",
+          },
+          hash: "abceb2aaa98a7c9670142ffcb3c3ca24",
+        },
+        "11/declaration/body/7/argument/1/3/1-placeholder": {
+          content: {
+            en: "https://...",
+            pl: "https://...",
+          },
+          hash: "49c66a225e48182785a6957de2c405bd",
+        },
+        "11/declaration/body/7/argument/1/3/11/1": {
+          content: {
+            en: "Upload tender",
+            pl: "Prześlij przetarg",
+          },
+          hash: "6c214654589ea5d7f70078fe992c4ff0",
+        },
+        "11/declaration/body/7/argument/1/3/3-label": {
+          content: {
+            en: "Order object",
+            pl: "Obiekt zamówienia",
+          },
+          hash: "f305056b5600ac1c19e9fca12ba3ae16",
+        },
+        "11/declaration/body/7/argument/1/3/3-placeholder": {
+          content: {
+            en: "Enter order object",
+            pl: "Wprowadź przedmiot zamówienia",
+          },
+          hash: "321133c67da923757561eed6e7bb74c1",
+        },
+        "11/declaration/body/7/argument/1/3/5/openingElement/3/value/expression/body-label":
+          {
+            content: {
+              en: "Publication date",
+              pl: "Data publikacji",
+            },
+            hash: "596264d07defac417835309e31b8f5a5",
+          },
+        "11/declaration/body/7/argument/1/3/7/openingElement/3/value/expression/body-label":
+          {
+            content: {
+              en: "Submitting offers date",
+              pl: "Data składania ofert",
+            },
+            hash: "2658f18da2ca8f5df394917be28135d2",
+          },
+        "11/declaration/body/7/argument/1/3/9/1": {
+          content: {
+            en: "Tender files (optional)",
+            pl: "Pliki przetargowe (opcjonalne)",
+          },
+          hash: "bcf66d69122ba1e0043d41ef4bee0725",
+        },
+        "11/declaration/body/7/argument/1/3/9/3/3/3/expression/alternate/1": {
+          content: {
+            en: "Drag and drop files here, or click to select them from your device",
+            pl: "Przeciągnij i upuść pliki tutaj lub kliknij, aby wybrać je z urządzenia",
+          },
+          hash: "d29bbab20c7397829aca28057eafa7a8",
+        },
+        "11/declaration/body/7/argument/1/3/9/3/3/3/expression/alternate/3": {
+          content: {
+            en: "Max 5 files, 10MB each (PDF, Images, Word documents)",
+            pl: "Maksymalnie 5 plików, po 10 MB każdy (PDF, obrazy, dokumenty Word)",
+          },
+          hash: "79b7cdceb048f0cd1008c450d14375d7",
+        },
+        "11/declaration/body/7/argument/1/3/9/3/3/3/expression/consequent": {
+          content: {
+            en: "Drop files here...",
+            pl: "Upuść pliki tutaj...",
+          },
+          hash: "7131d4319b2953945cd38a2bf516b7de",
+        },
+        "11/declaration/body/7/argument/1/3/9/7/expression/right/1/expression/0/body":
+          {
+            content: {
+              en: "<element:span>{file.name}</element:span>: <function:errors.map/>",
+              pl: "<element:span>{file.name}</element:span>: <function:errors.map/>",
+            },
+            hash: "e1580260ddab6d6a41d0764559609eb9",
+          },
+        "12/declaration/body/5/argument/1/1/1": {
+          content: {
+            en: "Upload tender",
+            pl: "Prześlij ofertę",
+          },
+          hash: "7acbb516466de468403b292c0dfe8afb",
+        },
+        "12/declaration/body/5/argument/1/3/1/1": {
+          content: {
+            en: "Link to tender",
+            pl: "Link do przetargu",
+          },
+          hash: "abceb2aaa98a7c9670142ffcb3c3ca24",
+        },
+        "12/declaration/body/5/argument/1/3/1/3-placeholder": {
+          content: {
+            en: "https://...",
+            pl: "https://...",
+          },
+          hash: "49c66a225e48182785a6957de2c405bd",
+        },
+        "12/declaration/body/5/argument/1/3/11/1": {
+          content: {
+            en: "Tender files (optional)",
+            pl: "Pliki przetargowe (opcjonalne)",
+          },
+          hash: "c901e7c51d5eb1207fb21ff08e66db0c",
+        },
+        "12/declaration/body/5/argument/1/3/13/1/1/expression/alternate": {
+          content: {
+            en: "Upload tender",
+            pl: "Prześlij ofertę",
+          },
+          hash: "7acbb516466de468403b292c0dfe8afb",
+        },
+        "12/declaration/body/5/argument/1/3/13/1/1/expression/consequent": {
+          content: {
+            en: "<element:Loader2></element:Loader2> Uploading...",
+            pl: "<element:Loader2></element:Loader2> Przesyłanie...",
+          },
+          hash: "34bd6fede108bae67fb820601e6e8db3",
+        },
+        "12/declaration/body/5/argument/1/3/3/1": {
+          content: {
+            en: "Company name",
+            pl: "Nazwa firmy",
+          },
+          hash: "75fdab82041c5d5d58a0a2c21d19017e",
+        },
+        "12/declaration/body/5/argument/1/3/3/3-placeholder": {
+          content: {
+            en: "Enter company name",
+            pl: "Wprowadź nazwę firmy",
+          },
+          hash: "68b8940c77f5bb58d79411da606235f1",
+        },
+        "12/declaration/body/5/argument/1/3/5/1": {
+          content: {
+            en: "Order object",
+            pl: "Obiekt zamówienia",
+          },
+          hash: "f305056b5600ac1c19e9fca12ba3ae16",
+        },
+        "12/declaration/body/5/argument/1/3/5/3-placeholder": {
+          content: {
+            en: "Enter order object",
+            pl: "Wprowadź przedmiot zamówienia",
+          },
+          hash: "321133c67da923757561eed6e7bb74c1",
+        },
+        "12/declaration/body/5/argument/1/3/7/1": {
+          content: {
+            en: "Publication date",
+            pl: "Data publikacji",
+          },
+          hash: "596264d07defac417835309e31b8f5a5",
+        },
+        "12/declaration/body/5/argument/1/3/9/1": {
+          content: {
+            en: "Submitting offers date",
+            pl: "Data składania ofert",
+          },
+          hash: "27290a20b804b038d15d820d17d8e432",
+        },
+        "2/declaration/body/0/argument/1/1/1": {
+          content: {
+            en: "Upload tender",
+            pl: "Prześlij ofertę",
+          },
+          hash: "7acbb516466de468403b292c0dfe8afb",
+        },
+        "3/declaration/body/0/argument/1/1/1": {
+          content: {
+            en: "Upload tender",
+            pl: "Prześlij ofertę",
+          },
+          hash: "7acbb516466de468403b292c0dfe8afb",
+        },
+        "3/declaration/body/0/argument/1/3/1/openingElement/0/value/expression":
+          {
+            content: {
+              en: "Link to tender",
+              pl: "Link do przetargu",
+            },
+            hash: "abceb2aaa98a7c9670142ffcb3c3ca24",
+          },
+        "3/declaration/body/0/argument/1/3/1/openingElement/1/value/expression":
+          {
+            content: {
+              en: "Link to tender",
+              pl: "Link do przetargu",
+            },
+            hash: "abceb2aaa98a7c9670142ffcb3c3ca24",
+          },
+        "3/declaration/body/0/argument/1/3/3/openingElement/0/value/expression":
+          {
+            content: {
+              en: "Order object",
+              pl: "Obiekt zamówienia",
+            },
+            hash: "f305056b5600ac1c19e9fca12ba3ae16",
+          },
+        "3/declaration/body/0/argument/1/3/5/openingElement/0/value/expression":
+          {
+            content: {
+              en: "Publication date",
+              pl: "Data publikacji",
+            },
+            hash: "596264d07defac417835309e31b8f5a5",
+          },
+        "3/declaration/body/0/argument/1/3/7/openingElement/0/value/expression":
+          {
+            content: {
+              en: "Submitting offers date",
+              pl: "Data składania ofert",
+            },
+            hash: "2658f18da2ca8f5df394917be28135d2",
+          },
+        "3/declaration/body/0/argument/1/5/1": {
+          content: {
+            en: "Upload tender",
+            pl: "Prześlij ofertę",
+          },
+          hash: "32f5c37695ccfa1adcc059af47b61b89",
+        },
       },
     },
   },
