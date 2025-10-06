@@ -12,13 +12,7 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
 } from "$/components/ui/sidebar";
-import {
-  Home,
-  FolderOpen,
-  SparklesIcon,
-  FileCheck,
-  Package,
-} from "lucide-react";
+import { Home, FolderOpen, SparklesIcon, FileCheck } from "lucide-react";
 import SidebarLogo from "./sidebar-logo";
 import Link from "$/components/ui/link";
 import { SidebarLogOutButton } from "./sidebar-logout-button";
