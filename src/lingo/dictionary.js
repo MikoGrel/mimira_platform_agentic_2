@@ -28396,10 +28396,10 @@ export default {
         },
         "11/declaration/body/7/argument/1/3/9/3/3/3/expression/alternate/3": {
           content: {
-            en: "Max 5 files, 10MB each (PDF, Images, Word documents)",
-            pl: "Maksymalnie 5 plików, po 10 MB każdy (PDF, obrazy, dokumenty Word)",
+            en: "Max 20 files, 20MB each (PDF, Images, Word documents)",
+            pl: "Maksymalnie 20 plików, po 20 MB każdy (PDF, obrazy, dokumenty Word)",
           },
-          hash: "79b7cdceb048f0cd1008c450d14375d7",
+          hash: "f00550488c28b141dff1f2eea393ba14",
         },
         "11/declaration/body/7/argument/1/3/9/3/3/3/expression/consequent": {
           content: {

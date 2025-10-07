@@ -34073,11 +34073,11 @@
         },
         "11/declaration/body/7/argument/1/3/9/3/3/3/expression/alternate/3": {
           "type": "element",
-          "hash": "79b7cdceb048f0cd1008c450d14375d7",
+          "hash": "f00550488c28b141dff1f2eea393ba14",
           "context": "",
           "skip": false,
           "overrides": {},
-          "content": "Max 5 files, 10MB each (PDF, Images, Word documents)"
+          "content": "Max 20 files, 20MB each (PDF, Images, Word documents)"
         },
         "11/declaration/body/7/argument/1/3/9/3/3/3/expression/consequent": {
           "type": "element",
