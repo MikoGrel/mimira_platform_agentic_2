@@ -40,8 +40,8 @@ export function TenderUploadDialog(props: ComponentProps<typeof Dialog>) {
   } = useForm<TenderUploadFormData>();
 
   const fileDropzone = useFileDropzone({
-    maxFiles: 5,
-    maxFileSize: 10 * 1024 * 1024, // 10MB
+    maxFiles: 20,
+    maxFileSize: 20 * 1024 * 1024, // 20MB
     accept: {
       "application/pdf": [".pdf"],
       "image/*": [".png", ".jpg", ".jpeg"],
@@ -195,7 +195,7 @@ export function TenderUploadDialog(props: ComponentProps<typeof Dialog>) {
                       your device
                     </p>
                     <p className="text-xs text-gray-400 text-balance">
-                      Max 5 files, 10MB each (PDF, Images, Word documents)
+                      Max 20 files, 20MB each (PDF, Images, Word documents)
                     </p>
                   </div>
                 )}
