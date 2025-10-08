@@ -28352,17 +28352,17 @@ export default {
         },
         "11/declaration/body/7/argument/1/3/3-label": {
           content: {
-            en: "Order object",
-            pl: "Obiekt zamówienia",
+            en: "Tender title",
+            pl: "Tytuł przetargu",
           },
-          hash: "f305056b5600ac1c19e9fca12ba3ae16",
+          hash: "622db9ca5bccb1bf5c1f3c0e6efd78a9",
         },
         "11/declaration/body/7/argument/1/3/3-placeholder": {
           content: {
-            en: "Enter order object",
-            pl: "Wprowadź przedmiot zamówienia",
+            en: "Purchase of railway equipment",
+            pl: "Zakup sprzętu kolejowego",
           },
-          hash: "321133c67da923757561eed6e7bb74c1",
+          hash: "70fb3d47ceee980c7a4d73c913b75532",
         },
         "11/declaration/body/7/argument/1/3/5/openingElement/3/value/expression/body-label":
           {

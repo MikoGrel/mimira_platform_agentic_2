@@ -34025,19 +34025,19 @@
         },
         "11/declaration/body/7/argument/1/3/3-label": {
           "type": "attribute",
-          "hash": "f305056b5600ac1c19e9fca12ba3ae16",
+          "hash": "622db9ca5bccb1bf5c1f3c0e6efd78a9",
           "context": "",
           "skip": false,
           "overrides": {},
-          "content": "Order object"
+          "content": "Tender title"
         },
         "11/declaration/body/7/argument/1/3/3-placeholder": {
           "type": "attribute",
-          "hash": "321133c67da923757561eed6e7bb74c1",
+          "hash": "70fb3d47ceee980c7a4d73c913b75532",
           "context": "",
           "skip": false,
           "overrides": {},
-          "content": "Enter order object"
+          "content": "Purchase of railway equipment"
         },
         "11/declaration/body/7/argument/1/3/5/openingElement/3/value/expression/body-label": {
           "type": "attribute",

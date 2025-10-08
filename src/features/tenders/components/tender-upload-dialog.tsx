@@ -127,8 +127,8 @@ export function TenderUploadDialog(props: ComponentProps<typeof Dialog>) {
           />
 
           <Input
-            label="Order object"
-            placeholder="Enter order object"
+            label="Tender title"
+            placeholder="Purchase of railway equipment"
             {...register("order_object")}
             variant="bordered"
           />
