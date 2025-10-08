@@ -60,7 +60,8 @@ export function useUpdateTenderStatus() {
       return data;
     },
     onSuccess: (_, { mappingId }) => {
-      queryClient.invalidateQueries({ queryKey: ["tenders"] });
+      queryClient.invalidateQueries({ queryKey: ["tenders-inbox"] });
+      queryClient.invalidateQueries({ queryKey: ["tenders-archive"] });
       queryClient.invalidateQueries({ queryKey: ["tenders-list"] });
       queryClient.invalidateQueries({ queryKey: ["tender", mappingId] });
     },

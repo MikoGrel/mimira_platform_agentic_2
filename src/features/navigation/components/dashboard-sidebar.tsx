@@ -17,7 +17,7 @@ import {
   FolderOpen,
   SparklesIcon,
   FileCheck,
-  Package,
+  FileUp,
 } from "lucide-react";
 import SidebarLogo from "./sidebar-logo";
 import Link from "$/components/ui/link";
@@ -30,6 +30,8 @@ import {
   TooltipContent,
   TooltipTrigger,
 } from "$/components/ui/tooltip";
+import { TenderUploadDialog } from "$/features/tenders/components/tender-upload-dialog";
+import { useState } from "react";
 
 const navigationItems = [
   {
@@ -56,22 +58,6 @@ const navigationItems = [
     url: "/dashboard/tenders",
     disabled: false,
   },
-  {
-    id: "documents",
-    title: <span>Documents</span>,
-    icon: FileCheck,
-    tooltip: "Documents",
-    url: "/dashboard/documents",
-    disabled: true,
-  },
-  {
-    id: "products",
-    title: <span>My product catalog</span>,
-    icon: Package,
-    tooltip: "Products",
-    url: "/dashboard/products",
-    disabled: true,
-  },
 ] as const;
 
 export type SidebarItemId = (typeof navigationItems)[number]["id"];
@@ -79,6 +65,7 @@ export type SidebarItemId = (typeof navigationItems)[number]["id"];
 export default function DashboardSidebar() {
   const { sidebarPopups } = useSidebarPopupStore();
   const pathname = usePathname();
+  const [isUploadDialogOpen, setIsUploadDialogOpen] = useState(false);
 
   return (
     <Sidebar collapsible="icon" className="group-data-[side=left]:border-r-0">
@@ -128,6 +115,24 @@ export default function DashboardSidebar() {
                   </SidebarMenuItem>
                 );
               })}
+              <SidebarMenuItem>
+                <SidebarMenuButton onClick={() => setIsUploadDialogOpen(true)}>
+                  <FileUp />
+                  <span>Upload new tender</span>
+                </SidebarMenuButton>
+              </SidebarMenuItem>
+              <SidebarMenuItem>
+                <SidebarMenuButton
+                  asChild
+                  tooltip="Documents"
+                  aria-disabled={true}
+                >
+                  <Link href="#">
+                    <FileCheck />
+                    <span>Documents</span>
+                  </Link>
+                </SidebarMenuButton>
+              </SidebarMenuItem>
             </SidebarMenu>
           </SidebarGroupContent>
         </SidebarGroup>
@@ -140,6 +145,11 @@ export default function DashboardSidebar() {
           </SidebarMenuItem>
         </SidebarMenu>
       </SidebarFooter>
+
+      <TenderUploadDialog
+        open={isUploadDialogOpen}
+        onOpenChange={setIsUploadDialogOpen}
+      />
     </Sidebar>
   );
 }

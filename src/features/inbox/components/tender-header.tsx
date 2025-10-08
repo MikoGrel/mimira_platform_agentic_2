@@ -47,6 +47,7 @@ interface TenderHeaderProps {
   hasMultipleParts: boolean;
   setChatOpened: (value: boolean) => void;
   onDownloadDocx: () => void;
+  isArchived?: boolean;
 }
 
 interface HeaderButtonsProps {
@@ -69,6 +70,7 @@ interface HeaderButtonsProps {
   onUnseen: (id: string) => void;
   hasMultipleParts: boolean;
   onDownloadDocx: () => void;
+  isArchived?: boolean;
 }
 
 function HeaderButtons({
@@ -88,12 +90,23 @@ function HeaderButtons({
   onUnseen,
   hasMultipleParts,
   onDownloadDocx,
+  isArchived = false,
 }: HeaderButtonsProps) {
   const isRejected = mapping.status === "rejected";
   const hasApprovedParts = approvedPartIds.size > 0;
   const hasCurrentPart = !!currentPart?.item;
   const isCurrentPartApproved = currentPart?.isApproved;
   const hasNoSelection = !approvedPartIds.size && !hasCurrentPart;
+
+  if (isArchived) {
+    return (
+      <div className="flex gap-2">
+        <Button size={size} isDisabled variant="flat">
+          This tender is archived
+        </Button>
+      </div>
+    );
+  }
 
   if (isRejected) {
     return (
@@ -362,6 +375,7 @@ export function TenderHeader(props: TenderHeaderProps) {
               onUnseen={onUnseen}
               hasMultipleParts={props.hasMultipleParts}
               onDownloadDocx={props.onDownloadDocx}
+              isArchived={props.isArchived}
             />
           </motion.div>
         )}
@@ -396,16 +410,17 @@ export function TenderHeader(props: TenderHeaderProps) {
             onApprovePart={props.onApprovePart}
             onRemoveCurrentPart={props.onRemoveCurrentPart}
             onApply={props.onApply}
-          onReject={props.onReject}
-          onUnselectAll={props.onUnselectAll}
-          setCommentsOpened={props.setCommentsOpened}
-          setChatOpened={props.setChatOpened}
-          commentCount={count}
-          restoreTender={restoreTender}
-          size="sm"
-          onUnseen={onUnseen}
-          hasMultipleParts={props.hasMultipleParts}
-          onDownloadDocx={props.onDownloadDocx}
+            onReject={props.onReject}
+            onUnselectAll={props.onUnselectAll}
+            setCommentsOpened={props.setCommentsOpened}
+            setChatOpened={props.setChatOpened}
+            commentCount={count}
+            restoreTender={restoreTender}
+            size="sm"
+            onUnseen={onUnseen}
+            hasMultipleParts={props.hasMultipleParts}
+            onDownloadDocx={props.onDownloadDocx}
+            isArchived={props.isArchived}
           />
         </motion.div>
       )}

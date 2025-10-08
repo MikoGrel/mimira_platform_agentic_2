@@ -33,7 +33,6 @@ export function useTendersList({
     publishedAtTo: null,
     voivodeship: null,
     sortBy: null,
-    showRejected: null,
   };
 
   const queryKey = [
@@ -44,7 +43,6 @@ export function useTendersList({
       filters.publishedAtTo?.toString(),
       filters.offersDeadlineFrom?.toString(),
       filters.offersDeadlineTo?.toString(),
-      filters.showRejected,
       JSON.stringify(Array.from(filters.sortBy || [])),
       JSON.stringify(Array.from(filters.voivodeship || [])),
     ],

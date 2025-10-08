@@ -10,14 +10,16 @@ import {
   Tabs,
   Tab,
 } from "@heroui/react";
-import { Kanban, List, Search, SlidersHorizontal } from "lucide-react";
+import { Kanban, List, FileUp, Search, SlidersHorizontal } from "lucide-react";
 import { TenderKanban } from "$/features/tenders/components";
 import { useFilterForm } from "$/features/inbox/hooks/use-filter-form";
 import { FilterForm, FilterChips } from "$/features/inbox/components";
+import { TenderUploadDialog } from "$/features/tenders/components/tender-upload-dialog";
 
 export default function TendersPage() {
   const [searchQuery, setSearchQuery] = useState("");
   const [isFiltersOpen, setIsFiltersOpen] = useState(false);
+  const [isUploadDialogOpen, setIsUploadDialogOpen] = useState(false);
 
   const { filterQuery, activeFilters } = useFilterForm();
 
@@ -71,32 +73,50 @@ export default function TendersPage() {
               </PopoverContent>
             </Popover>
           </div>
-          <Tabs size="sm">
-            <Tab
-              key="kanban"
-              name="Kanban"
-              title={
-                <span className="flex items-center gap-1">
-                  <Kanban className="w-4 h-4" />
-                  Kanban
-                </span>
-              }
-            />
-            <Tab
-              isDisabled
-              key="list"
-              name="List"
-              title={
-                <span className="flex items-center gap-1">
-                  <List className="w-4 h-4" />
-                  List
-                </span>
-              }
-            />
-          </Tabs>
+          <div className="flex gap-2 items-center">
+            <Button
+              color="primary"
+              variant="flat"
+              size="sm"
+              radius="md"
+              startContent={<FileUp className="stroke-2 w-4 h-4" />}
+              className="h-[2.125rem]"
+              onPress={() => setIsUploadDialogOpen(true)}
+            >
+              Upload new tender
+            </Button>
+            <Tabs size="sm">
+              <Tab
+                key="kanban"
+                name="Kanban"
+                title={
+                  <span className="flex items-center gap-1">
+                    <Kanban className="w-4 h-4" />
+                    Kanban
+                  </span>
+                }
+              />
+              <Tab
+                isDisabled
+                key="list"
+                name="List"
+                title={
+                  <span className="flex items-center gap-1">
+                    <List className="w-4 h-4" />
+                    List
+                  </span>
+                }
+              />
+            </Tabs>
+          </div>
         </div>
         <FilterChips />
       </div>
+
+      <TenderUploadDialog
+        open={isUploadDialogOpen}
+        onOpenChange={setIsUploadDialogOpen}
+      />
 
       <div className="flex-1 p-6">
         <TenderKanban searchQuery={searchQuery} filterQuery={filterQuery} />

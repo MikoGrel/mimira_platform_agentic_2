@@ -22,6 +22,7 @@ import { useMarkAsSeen } from "$/features/inbox/api/use-mark-as-seen";
 import useTenderInboxQuery, {
   InboxTenderMapping,
 } from "$/features/inbox/api/use-tender-inbox-query";
+import useTenderArchiveQuery from "$/features/inbox/api/use-tender-archive-query";
 import { useLastTender } from "$/features/tenders/hooks/use-last-tender";
 
 const TenderPreview = dynamic(
@@ -37,9 +38,10 @@ const TenderPreview = dynamic(
 const PAGE_SIZE = 10;
 
 export default function InboxPage() {
-  const { filterQuery, addFilter } = useFilterForm();
+  const { filterQuery } = useFilterForm();
 
   const [showFilterForm, setShowFilterForm] = useState(false);
+  const [showArchive, setShowArchive] = useState(false);
   const { relativeToNow } = useDateFormat();
 
   const [search, setSearch] = useQueryState(
@@ -50,15 +52,36 @@ export default function InboxPage() {
   const [selectedPart, setSelectedPart] = useQueryState("part", parseAsString);
   const { setLastMappingId } = useLastTender();
 
+  // Fetch inbox tenders (active, non-expired)
   const {
-    tenders,
-    isPending,
-    fetchNextPage,
-    hasNextPage,
-    isFetchingNextPage,
-    updateSeenAt,
+    tenders: inboxTenders,
+    isPending: inboxPending,
+    fetchNextPage: fetchNextInboxPage,
+    hasNextPage: hasNextInboxPage,
+    isFetchingNextPage: isFetchingNextInboxPage,
+    updateSeenAt: updateInboxSeenAt,
   } = useTenderInboxQuery({ search, filterQuery, pageSize: PAGE_SIZE });
+
+  // Fetch archive tenders (expired)
+  const {
+    tenders: archiveTenders,
+    isPending: archivePending,
+    fetchNextPage: fetchNextArchivePage,
+    hasNextPage: hasNextArchivePage,
+    isFetchingNextPage: isFetchingNextArchivePage,
+    updateSeenAt: updateArchiveSeenAt,
+  } = useTenderArchiveQuery({ search, filterQuery, pageSize: PAGE_SIZE });
+
   const { mutate: markAsSeen } = useMarkAsSeen();
+
+  const tenders = showArchive ? archiveTenders : inboxTenders;
+  const isPending = showArchive ? archivePending : inboxPending;
+  const fetchNextPage = showArchive ? fetchNextArchivePage : fetchNextInboxPage;
+  const hasNextPage = showArchive ? hasNextArchivePage : hasNextInboxPage;
+  const isFetchingNextPage = showArchive
+    ? isFetchingNextArchivePage
+    : isFetchingNextInboxPage;
+  const updateSeenAt = showArchive ? updateArchiveSeenAt : updateInboxSeenAt;
 
   const selectedMappingFromList = useMemo(
     () => tenders.find((t) => t.id === selectedId),
@@ -71,6 +94,10 @@ export default function InboxPage() {
   });
 
   const selectedMapping = selectedMappingFromList || individualMapping;
+  const selectedArchive = useMemo(() => {
+    return archiveTenders.some((t) => t.id === selectedId);
+  }, [archiveTenders, selectedId]);
+
   const [chatOpenSignal, setChatOpenSignal] = useState(0);
 
   const { getRef } = useInfiniteList({
@@ -86,7 +113,6 @@ export default function InboxPage() {
     updateSeenAt(tender.id);
     setSelectedId(tender.id);
 
-    // Always select the first part since there's always at least one part
     setSelectedPart(tender.tender_parts[0].id);
 
     markAsSeen(tender.id);
@@ -94,7 +120,7 @@ export default function InboxPage() {
   }
 
   function handleArchiveButtonPress() {
-    addFilter("showRejected", !filterQuery.showRejected);
+    setShowArchive(!showArchive);
   }
 
   function handleAskMimirClick() {
@@ -111,7 +137,8 @@ export default function InboxPage() {
         <div className="py-4 border-b border-sidebar-border flex-shrink-0">
           <div className="flex items-center justify-between gap-2 px-2 overflow-y-hidden">
             <Button
-              variant={filterQuery.showRejected ? "flat" : "light"}
+              variant={showArchive ? "flat" : "light"}
+              color={showArchive ? "primary" : "default"}
               isIconOnly
               onPress={handleArchiveButtonPress}
             >
@@ -187,7 +214,7 @@ export default function InboxPage() {
                   >
                     <div className="p-4 px-6 flex flex-col gap-2 hover:bg-muted">
                       <p className="text-sm relative">
-                        {!t.seen_at && (
+                        {!t.seen_at && !showArchive && (
                           <span className="text-primary text-xs font-medium block">
                             New
                           </span>
@@ -196,7 +223,7 @@ export default function InboxPage() {
                           length: 100,
                           omission: "...",
                         })}
-                        {!t.seen_at && (
+                        {!t.seen_at && !showArchive && (
                           <span className="block w-[5px] rounded-full h-[5px] bg-primary absolute -left-3 top-1" />
                         )}
                       </p>
@@ -268,6 +295,7 @@ export default function InboxPage() {
             }
           }}
           openChatSignal={chatOpenSignal}
+          isArchived={selectedArchive || false}
         />
       )}
     </main>
