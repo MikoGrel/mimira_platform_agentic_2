@@ -2,7 +2,7 @@
 
 import { useForm } from "react-hook-form";
 import { RangeValue } from "@heroui/react";
-import { useQueryStates, parseAsBoolean } from "nuqs";
+import { useQueryStates } from "nuqs";
 import {
   Voivodeship,
   PolishVoivodeships,
