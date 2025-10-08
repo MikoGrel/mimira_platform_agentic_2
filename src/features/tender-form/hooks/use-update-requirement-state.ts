@@ -33,7 +33,8 @@ export function useUpdateRequirementState() {
     },
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ["tender"] });
-      queryClient.invalidateQueries({ queryKey: ["tenders"] });
+      queryClient.invalidateQueries({ queryKey: ["tenders-inbox"] });
+      queryClient.invalidateQueries({ queryKey: ["tenders-archive"] });
     },
   });
 }

@@ -15,7 +15,7 @@ import { SortDirection } from "../hooks/use-filter-form";
 import { Tables } from "$/types/supabase";
 import { baseTenderQuery } from "./base-tender-query";
 
-interface UseTenderInboxQueryParams {
+interface UseTenderArchiveQueryParams {
   pageSize?: number;
   search?: string;
   filterQuery?: {
@@ -28,14 +28,14 @@ interface UseTenderInboxQueryParams {
   };
 }
 
-export default function useTenderInboxQuery({
+export default function useTenderArchiveQuery({
   pageSize,
   search,
   filterQuery,
-}: UseTenderInboxQueryParams) {
+}: UseTenderArchiveQueryParams) {
   const { user } = useCurrentUser();
   const queryClient = useQueryClient();
-  const filters: UseTenderInboxQueryParams["filterQuery"] = filterQuery || {
+  const filters: UseTenderArchiveQueryParams["filterQuery"] = filterQuery || {
     offersDeadlineFrom: null,
     offersDeadlineTo: null,
     publishedAtFrom: null,
@@ -45,7 +45,7 @@ export default function useTenderInboxQuery({
   };
 
   const queryKey = [
-    "tenders-inbox",
+    "tenders-archive",
     search,
     [
       filters.publishedAtFrom?.toString(),
@@ -68,21 +68,22 @@ export default function useTenderInboxQuery({
     queryKey,
     queryFn: async ({ pageParam = 0 }) => {
       const client = createClient();
-      let query = baseTenderQuery(client).eq(
-        "company_id",
-        user!.profile!.company_id!
-      );
+      const today = format(new Date(), "yyyy-MM-dd");
 
-      // Inbox shows only tenders with default status (new/unprocessed)
-      query = query.eq("status", "default");
+      // Archive shows only expired tenders (past submitting_offers_date)
+      // Rejected tenders are excluded from archive
 
-      // Keep only tenders we can participate in
-      query = query.eq("can_participate", true);
+      let query = baseTenderQuery(client)
+        .eq("company_id", user!.profile!.company_id!)
+        .eq("can_participate", true)
+        .neq("status", "rejected"); // Exclude rejected tenders from archive
 
+      // Apply search filter
       if (search) {
         query = query.ilike("tenders.order_object", `%${search}%`);
       }
 
+      // Apply publication date filters
       if (filters.publishedAtFrom) {
         query = query.gte(
           "tenders.publication_date",
@@ -99,17 +100,15 @@ export default function useTenderInboxQuery({
         );
       }
 
-      const today = format(new Date(), "yyyy-MM-dd");
-
+      // Apply offers deadline filters
       if (filters.offersDeadlineFrom) {
-        const fromDate = format(
-          filters.offersDeadlineFrom.toDate(getLocalTimeZone()),
-          "yyyy-MM-dd"
+        query = query.gte(
+          "tenders.submitting_offers_date",
+          format(
+            filters.offersDeadlineFrom.toDate(getLocalTimeZone()),
+            "yyyy-MM-dd"
+          )
         );
-        const effectiveFrom = fromDate > today ? fromDate : today;
-        query = query.gte("tenders.submitting_offers_date", effectiveFrom);
-      } else {
-        query = query.gte("tenders.submitting_offers_date", today);
       }
 
       if (filters.offersDeadlineTo) {
@@ -122,12 +121,15 @@ export default function useTenderInboxQuery({
         );
       }
 
+      // Apply voivodeship filter
       if (filters.voivodeship) {
         query = query.in("tenders.voivodship", Array.from(filters.voivodeship));
       }
 
-      query = query.order("tenders(submitting_offers_date)", {
-        ascending: true,
+      // Sort by most recently updated first for archive
+      // This makes more sense than sorting by deadline for expired tenders
+      query = query.order("updated_at", {
+        ascending: false,
         nullsFirst: false,
       });
 
@@ -136,8 +138,18 @@ export default function useTenderInboxQuery({
         pageParam * pageSize! + pageSize! - 1
       );
 
+      // Filter results to show only archived tenders:
+      // Only tenders with expired submitting_offers_date (past deadline)
+      const archivedTenders = (result.data || []).filter((tender) => {
+        const isExpired =
+          tender.tenders?.submitting_offers_date &&
+          tender.tenders.submitting_offers_date < today;
+
+        return isExpired;
+      });
+
       return {
-        data: result.data || [],
+        data: archivedTenders,
         count: result.count,
         nextPage:
           result.data && result.data.length === pageSize ? pageParam + 1 : null,
@@ -195,15 +207,15 @@ export default function useTenderInboxQuery({
   };
 }
 
-export type InboxTenderMapping = Awaited<
-  ReturnType<typeof useTenderInboxQuery>
+export type ArchiveTenderMapping = Awaited<
+  ReturnType<typeof useTenderArchiveQuery>
 >["tenders"][number];
 
-export type InboxTender = InboxTenderMapping["tenders"];
+export type ArchiveTender = ArchiveTenderMapping["tenders"];
 
-export type InboxTenderPart = InboxTenderMapping["tender_parts"][number];
+export type ArchiveTenderPart = ArchiveTenderMapping["tender_parts"][number];
 
-export type InboxTenderProduct = InboxTenderPart["tender_products"][number];
+export type ArchiveTenderProduct = ArchiveTenderPart["tender_products"][number];
 
-export type InboxTenderRequirement =
-  InboxTenderPart["tender_requirements"][number];
+export type ArchiveTenderRequirement =
+  ArchiveTenderPart["tender_requirements"][number];

@@ -24,7 +24,8 @@ export function useRejectTender() {
       return data;
     },
     onSuccess: (_, tenderId) => {
-      queryClient.invalidateQueries({ queryKey: ["tenders"] });
+      queryClient.invalidateQueries({ queryKey: ["tenders-inbox"] });
+      queryClient.invalidateQueries({ queryKey: ["tenders-archive"] });
       queryClient.invalidateQueries({ queryKey: ["tender", tenderId] });
     },
   });

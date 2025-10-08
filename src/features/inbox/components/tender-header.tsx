@@ -45,6 +45,7 @@ interface TenderHeaderProps {
   onReject?: () => void;
   hasMultipleParts: boolean;
   setChatOpened: (value: boolean) => void;
+  isArchived?: boolean;
 }
 
 interface HeaderButtonsProps {
@@ -66,6 +67,7 @@ interface HeaderButtonsProps {
   restoreTender: (id: string) => void;
   onUnseen: (id: string) => void;
   hasMultipleParts: boolean;
+  isArchived?: boolean;
 }
 
 function HeaderButtons({
@@ -84,12 +86,23 @@ function HeaderButtons({
   restoreTender,
   onUnseen,
   hasMultipleParts,
+  isArchived = false,
 }: HeaderButtonsProps) {
   const isRejected = mapping.status === "rejected";
   const hasApprovedParts = approvedPartIds.size > 0;
   const hasCurrentPart = !!currentPart?.item;
   const isCurrentPartApproved = currentPart?.isApproved;
   const hasNoSelection = !approvedPartIds.size && !hasCurrentPart;
+
+  if (isArchived) {
+    return (
+      <div className="flex gap-2">
+        <Button size={size} isDisabled variant="flat">
+          This tender is archived
+        </Button>
+      </div>
+    );
+  }
 
   if (isRejected) {
     return (
@@ -349,6 +362,7 @@ export function TenderHeader(props: TenderHeaderProps) {
               restoreTender={restoreTender}
               onUnseen={onUnseen}
               hasMultipleParts={props.hasMultipleParts}
+              isArchived={props.isArchived}
             />
           </motion.div>
         )}
@@ -392,6 +406,7 @@ export function TenderHeader(props: TenderHeaderProps) {
             size="sm"
             onUnseen={onUnseen}
             hasMultipleParts={props.hasMultipleParts}
+            isArchived={props.isArchived}
           />
         </motion.div>
       )}

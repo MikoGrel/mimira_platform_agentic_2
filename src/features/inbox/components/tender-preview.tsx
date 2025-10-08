@@ -80,6 +80,7 @@ interface TenderPreviewProps {
   selectedPart: InboxTenderPart;
   setSelectedPart: (part: string | null) => void;
   openChatSignal?: number;
+  isArchived?: boolean;
 }
 
 export function TenderPreview({
@@ -88,6 +89,7 @@ export function TenderPreview({
   setSelectedPart,
   showNextTender,
   openChatSignal,
+  isArchived = false,
 }: TenderPreviewProps) {
   const router = useRouter();
 
@@ -249,6 +251,7 @@ export function TenderPreview({
           onReject={handleReject}
           hasMultipleParts={hasMultipleParts}
           setChatOpened={setChatOpened}
+          isArchived={isArchived}
         />
 
         <div className="flex overflow-hidden h-full flex-[1_0_0]">

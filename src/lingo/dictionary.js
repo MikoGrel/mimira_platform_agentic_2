@@ -744,6 +744,42 @@ export default {
           },
           hash: "067789b01a081458db2f872f10a37c3f",
         },
+        "19/declaration/body/25/argument/1/1/1/3-placeholder": {
+          content: {
+            en: "Search",
+            pl: "Szukaj",
+          },
+          hash: "49dd6c21604b5e8d4153ff1aff2177e1",
+        },
+        "19/declaration/body/25/argument/1/3/1/1/3/3/expression/0/body/1/1/1/expression/right":
+          {
+            content: {
+              en: "New",
+              pl: "Nowe",
+            },
+            hash: "320af698c03eca3566cae395621ca490",
+          },
+        "19/declaration/body/25/argument/1/5/1/3": {
+          content: {
+            en: "Ask Mimira",
+            pl: "Zapytaj Mimira",
+          },
+          hash: "794ecd418d0b3530b94008aed80b30d7",
+        },
+        "19/declaration/body/25/argument/1/5/1/5": {
+          content: {
+            en: "Try now",
+            pl: "Wypróbuj teraz",
+          },
+          hash: "9b9feae9d2550e4d7d39f3634be37ce6",
+        },
+        "19/declaration/body/25/argument/3/expression/right/1/1": {
+          content: {
+            en: "Select a tender to view details",
+            pl: "Wybierz przetarg, aby zobaczyć szczegóły",
+          },
+          hash: "067789b01a081458db2f872f10a37c3f",
+        },
         "20/body/0/argument/1/expression/0/body/3/3": {
           content: {
             en: "·",
@@ -9797,10 +9833,10 @@ export default {
         },
         "15/body/5/consequent/0/argument/1": {
           content: {
-            en: "Restore",
-            pl: "Przywróć",
+            en: "This tender is archived",
+            pl: "Ten przetarg jest zarchiwizowany",
           },
-          hash: "a1c119b367dc32fe4e2f1c8c4e6334ec",
+          hash: "062831e8d482c23c8348ae1c357fa5ab",
         },
         "15/body/6/argument/1/expression/alternate/1": {
           content: {
@@ -9888,6 +9924,83 @@ export default {
           hash: "a6f772a6af99c8c1f32f897c91d8d06c",
         },
         "15/body/6/argument/7/3/1/1": {
+          content: {
+            en: "Mark as unseen",
+            pl: "Oznacz jako nieprzeczytane",
+          },
+          hash: "a6f772a6af99c8c1f32f897c91d8d06c",
+        },
+        "15/body/6/consequent/0/argument/1": {
+          content: {
+            en: "Restore",
+            pl: "Przywróć",
+          },
+          hash: "a1c119b367dc32fe4e2f1c8c4e6334ec",
+        },
+        "15/body/7/argument/1/expression/alternate/1": {
+          content: {
+            en: "Apply",
+          },
+          hash: "3aa50c8c45a0fae59af3d5eefb0aab07",
+        },
+        "15/body/7/argument/1/expression/alternate/3": {
+          content: {
+            en: "Reject",
+            pl: "Odrzuć",
+          },
+          hash: "da539d95f0b3d47a70a896ea3bc5b6af",
+        },
+        "15/body/7/argument/1/expression/consequent/1/expression/right/1": {
+          content: {
+            en: "Apply",
+          },
+          hash: "77fc03abc14d71c8c36f000fb65f93f8",
+        },
+        "15/body/7/argument/1/expression/consequent/1/expression/right/3": {
+          content: {
+            en: "Reject",
+            pl: "Odrzuć",
+          },
+          hash: "447bdd205a7407328c84f618e3bf1d40",
+        },
+        "15/body/7/argument/1/expression/consequent/3/expression/right/1/expression/alternate/1":
+          {
+            content: {
+              en: "Approve this part",
+              pl: "Zatwierdź tę część",
+            },
+            hash: "7053b3aeb986e11ee5d151478c19c14b",
+          },
+        "15/body/7/argument/1/expression/consequent/3/expression/right/1/expression/alternate/3":
+          {
+            content: {
+              en: "Reject this tender",
+              pl: "Odrzuć tę ofertę",
+            },
+            hash: "676de58ded59cc9dc7af128fd2b15ca8",
+          },
+        "15/body/7/argument/1/expression/consequent/3/expression/right/1/expression/consequent":
+          {
+            content: {
+              en: "Unselect",
+              pl: "Odznacz",
+            },
+            hash: "95abf29177d2693c76f5278cad6e3102",
+          },
+        "15/body/7/argument/1/expression/consequent/5/expression/right/1": {
+          content: {
+            en: "Apply to selected parts",
+          },
+          hash: "88a3090299f8972c1ccb85365843a51f",
+        },
+        "15/body/7/argument/1/expression/consequent/5/expression/right/3": {
+          content: {
+            en: "Unselect all",
+            pl: "Odznacz wszystko",
+          },
+          hash: "22e14fc7b433ffa07e6702e4ebf13cdc",
+        },
+        "15/body/7/argument/7/3/1/1": {
           content: {
             en: "Mark as unseen",
             pl: "Oznacz jako nieprzeczytane",

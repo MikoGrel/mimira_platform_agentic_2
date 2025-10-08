@@ -11,7 +11,8 @@
     "supabase": "supabase",
     "types": "bun --env-file=.env run supabase gen types typescript --project-id 'qpkuhlwubhlbsxdqsxka' > src/types/supabase.ts",
     "shadcn": "npx shadcn@latest add",
-    "postshadcn": "npx shadcn@latest migrate radix"
+    "postshadcn": "npx shadcn@latest migrate radix",
+    "typecheck": "bunx tsc --noEmit"
   },
   "dependencies": {
     "@ai-sdk/openai": "^2.0.0-beta.11",
