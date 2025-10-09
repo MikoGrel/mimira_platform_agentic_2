@@ -9925,6 +9925,13 @@ export default {
         },
         "15/body/6/argument/7/3/1/1": {
           content: {
+            en: "Download as DOCX",
+            pl: "Pobierz jako DOCX",
+          },
+          hash: "9d997c1eeff24977b4bec1d5c3265da8",
+        },
+        "15/body/6/argument/7/3/3/1": {
+          content: {
             en: "Mark as unseen",
             pl: "Oznacz jako nieprzeczytane",
           },
@@ -14101,6 +14108,122 @@ export default {
           hash: "2e2a849c2223911717de8caa2c71bade",
         },
         "24/declaration/body/25/argument/3/1/3/3/1": {
+          content: {
+            en: "Confirm Application",
+            pl: "Potwierdź aplikację",
+          },
+          hash: "4e339e027c055cd03887b14aefc51a99",
+        },
+        "25/declaration/body/19/body/1/expression/0": {
+          content: {
+            en: "Tender was moved to analysis successfully, go to active tenders to see it",
+            pl: "Przetarg został pomyślnie przeniesiony do analizy, przejdź do aktywnych przetargów, aby go zobaczyć",
+          },
+          hash: "78efde626dafcc52e22f7f6b702998a0",
+        },
+        "25/declaration/body/19/body/2/expression/0/1/value": {
+          content: {
+            en: "Tender was moved to analysis successfully, go to active tenders to see it",
+            pl: "Przetarg został pomyślnie przeniesiony do analizy, przejdź do aktywnych przetargów, aby go zobaczyć",
+          },
+          hash: "db19ec4f7ea5522f60443270198a75af",
+        },
+        "25/declaration/body/22/body/1/expression/0": {
+          content: {
+            en: "Tender was rejected successfully, go to archive tab to see it",
+            pl: "Przetarg został pomyślnie odrzucony, przejdź do zakładki archiwum, aby go zobaczyć",
+          },
+          hash: "60696b80d10dffc59336ef7184f915c1",
+        },
+        "25/declaration/body/23/body/0/block/0/expression/0": {
+          content: {
+            en: "Generowanie dokumentu...",
+            pl: "Generowanie dokumentu...",
+          },
+          hash: "db82f0e5d43542cb2df8ea9169bc33df",
+        },
+        "25/declaration/body/23/body/0/block/4/expression/0": {
+          content: {
+            en: "Document downloaded successfully!",
+            pl: "Dokument został pomyślnie pobrany!",
+          },
+          hash: "b39d47580de2e95e96a597b2625b4e46",
+        },
+        "25/declaration/body/23/body/0/block/6/expression/0": {
+          content: {
+            en: "Dokument pobrany pomyślnie!",
+            pl: "Dokument pobrany pomyślnie!",
+          },
+          hash: "014f205299600fcd9b17a25046e399c5",
+        },
+        "25/declaration/body/23/body/0/handler/body/1/expression/0": {
+          content: {
+            en: "Nie udało się wygenerować dokumentu. Spróbuj ponownie.",
+            pl: "Nie udało się wygenerować dokumentu. Spróbuj ponownie.",
+          },
+          hash: "bd8da56153e0b9925f53b63c617e6633",
+        },
+        "25/declaration/body/25/0/init/expression/callee/object/callee/object/0/1/value":
+          {
+            content: {
+              en: "Products",
+              pl: "Produkty",
+            },
+            hash: "a003449ecbde6b7a73044f46ea6bbe75",
+          },
+        "25/declaration/body/25/0/init/expression/callee/object/callee/object/1/1/value":
+          {
+            content: {
+              en: "Requirements",
+              pl: "Wymagania",
+            },
+            hash: "e108e149e0fd5b65f5850b6f032ccabe",
+          },
+        "25/declaration/body/25/0/init/expression/callee/object/callee/object/2/1/value":
+          {
+            content: {
+              en: "Review Criteria",
+              pl: "Kryteria oceny",
+            },
+            hash: "d524df30da3658fdbc1794408fcfdab4",
+          },
+        "25/declaration/body/25/0/init/expression/callee/object/callee/object/3/1/value":
+          {
+            content: {
+              en: "Description",
+              pl: "Opis",
+            },
+            hash: "e17686a22ffad04cc7bb70524ed4478b",
+          },
+        "25/declaration/body/25/0/init/expression/callee/object/callee/object/4/1/value":
+          {
+            content: {
+              en: "Additional Info",
+              pl: "Dodatkowe informacje",
+            },
+            hash: "d5bf1e70991802fd4a801f3a79cf9e5d",
+          },
+        "25/declaration/body/26/argument/3/1/1/1/1": {
+          content: {
+            en: "Apply to this Tender",
+          },
+          hash: "f9e1123fe9ea9487a82c63bc74875285",
+        },
+        "25/declaration/body/26/argument/3/1/1/3/1": {
+          content: {
+            en: "Do you confirm all requirements? The next step will start generating documents.",
+            pl: "Czy potwierdzasz wszystkie wymagania? Następnym krokiem będzie rozpoczęcie generowania dokumentów.",
+          },
+          hash: "ca90b2271fee4ab44a492ffc5e4c4564",
+        },
+        "25/declaration/body/26/argument/3/1/3/1/1": {
+          content: {
+            en: "Cancel",
+            pl: "Anuluj",
+          },
+          hash: "2e2a849c2223911717de8caa2c71bade",
+        },
+        "25/declaration/body/26/argument/3/1/3/3/1": {
           content: {
             en: "Confirm Application",
             pl: "Potwierdź aplikację",
