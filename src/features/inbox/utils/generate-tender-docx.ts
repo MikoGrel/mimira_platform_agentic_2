@@ -9,13 +9,22 @@ import {
   convertInchesToTwip,
   PageBreak,
 } from "docx";
-import { InboxTenderMapping, InboxTenderPart } from "../api/use-tender-inbox-query";
+import {
+  InboxTenderMapping,
+  InboxTenderPart,
+} from "../api/use-tender-inbox-query";
 import { getRequirements } from "./compat";
 
 interface GenerateTenderDocxOptions {
   mapping: InboxTenderMapping;
   selectedPart: InboxTenderPart;
   hasMultipleParts: boolean;
+}
+
+interface ReviewCriteria {
+  kryterium: string;
+  waga?: string | number;
+  opis?: string;
 }
 
 function generatePartContent(
@@ -193,7 +202,7 @@ function generatePartContent(
         })
       );
 
-      metRequirements.forEach((req: any) => {
+      metRequirements.forEach((req) => {
         sections.push(
           new Paragraph({
             text: `   • ${req}`,
@@ -217,7 +226,7 @@ function generatePartContent(
         })
       );
 
-      needsConfirmation.forEach((req: any) => {
+      needsConfirmation.forEach((req) => {
         sections.push(
           new Paragraph({
             text: `   • ${req}`,
@@ -241,7 +250,7 @@ function generatePartContent(
         })
       );
 
-      notMetRequirements.forEach((req: any) => {
+      notMetRequirements.forEach((req) => {
         sections.push(
           new Paragraph({
             text: `   • ${req}`,
@@ -265,9 +274,9 @@ function generatePartContent(
     try {
       const criteriaArray = JSON.parse(part.review_criteria_llm);
       if (Array.isArray(criteriaArray)) {
-        criteriaArray.forEach((criteria: any) => {
-          const { kryterium, Cena, waga, opis } = criteria;
-          
+        criteriaArray.forEach((criteria: ReviewCriteria) => {
+          const { kryterium, waga, opis } = criteria;
+
           if (kryterium) {
             sections.push(
               new Paragraph({
@@ -315,7 +324,7 @@ function generatePartContent(
 
   // Description Section (part-level)
   const partLevelDescription = part.description_part_long_llm?.trim() || "";
-  
+
   if (partLevelDescription.length > 0) {
     sections.push(
       new Paragraph({
@@ -326,7 +335,7 @@ function generatePartContent(
     );
 
     const descriptionSections = partLevelDescription.split(/##\s+/);
-    
+
     descriptionSections.forEach((section) => {
       if (!section.trim()) return;
 
@@ -443,16 +452,15 @@ export async function generateTenderDocx({
             size: 22,
           }),
           new TextRun({
-            text: new Date(mapping.tenders.submitting_offers_date).toLocaleDateString(
-              "pl-PL",
-              {
-                year: "numeric",
-                month: "long",
-                day: "numeric",
-                hour: "2-digit",
-                minute: "2-digit",
-              }
-            ),
+            text: new Date(
+              mapping.tenders.submitting_offers_date
+            ).toLocaleDateString("pl-PL", {
+              year: "numeric",
+              month: "long",
+              day: "numeric",
+              hour: "2-digit",
+              minute: "2-digit",
+            }),
             size: 22,
           }),
         ],
@@ -527,11 +535,14 @@ export async function generateTenderDocx({
 
   // Tender-level description (only if no parts have descriptions or single part)
   const tenderLevelDescription = mapping.tenders?.description_long_llm || "";
-  const anyPartHasDescription = mapping.tender_parts.some(
-    (p) => p.description_part_long_llm?.trim()
+  const anyPartHasDescription = mapping.tender_parts.some((p) =>
+    p.description_part_long_llm?.trim()
   );
 
-  if (tenderLevelDescription.trim().length > 0 && (!hasMultipleParts || !anyPartHasDescription)) {
+  if (
+    tenderLevelDescription.trim().length > 0 &&
+    (!hasMultipleParts || !anyPartHasDescription)
+  ) {
     allSections.push(
       new Paragraph({
         text: "Opis ogólny",
@@ -541,7 +552,7 @@ export async function generateTenderDocx({
     );
 
     const descriptionSections = tenderLevelDescription.split(/##\s+/);
-    
+
     descriptionSections.forEach((section) => {
       if (!section.trim()) return;
 
