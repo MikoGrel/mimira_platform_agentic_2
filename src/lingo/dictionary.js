@@ -19256,6 +19256,13 @@ export default {
           },
           hash: "8b199e4c03646258cacdb01bdc3ad72f",
         },
+        "11/declaration/body/4/consequent/argument/1/7": {
+          content: {
+            en: "Cancel preparation and reject this tender",
+            pl: "Anuluj przygotowanie i odrzuć tę ofertę",
+          },
+          hash: "49d1e0e6ab4ccf36e47cf6a776d82937",
+        },
         "11/declaration/body/4/consequent/argument/5": {
           content: {
             en: "Don’t forget to include the valuation. We can also help you with it — just let us know at mimira@mimiraoffers.eu or +48 732 070 469.",

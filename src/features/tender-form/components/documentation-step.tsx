@@ -6,9 +6,13 @@ import { groupBy } from "lodash-es";
 import { InboxTenderMapping } from "$/features/inbox/api/use-tender-inbox-query";
 import { CompanyFileType, useCompanyFiles } from "../hooks/use-company-files";
 
-import { Alert } from "@heroui/react";
+import { Alert, Button } from "@heroui/react";
 import { FileGroup } from "./file-group";
 import { DocumentPreparationAnimation } from "./document-preparation-animation";
+import { useUpdateTenderStatus } from "$/features/tenders";
+import { MappingStatus } from "$/features/tenders/constants/status";
+import { useRouter } from "next/navigation";
+import { toast } from "sonner";
 
 interface DocumentationStepProps {
   item: InboxTenderMapping | null | undefined;
@@ -33,6 +37,8 @@ export function DocumentationStep({
     }
   }, [setNextEnabled]);
 
+  const router = useRouter();
+
   const {
     data: files,
     isLoading,
@@ -40,6 +46,8 @@ export function DocumentationStep({
   } = useCompanyFiles({
     mappingId: item?.id,
   });
+
+  const { mutate: updateTenderStatus } = useUpdateTenderStatus();
 
   const [groupedFiles, setGroupedFiles] = useState<GroupedFiles>({
     refilled: [],
@@ -82,6 +90,27 @@ export function DocumentationStep({
             with it — just let us know at mimira@mimiraoffers.eu or +48 732 070
             469.
           </p>
+          <Button
+            size="sm"
+            variant="flat"
+            color="danger"
+            fullWidth
+            data-lingo-override-pl="Anuluj przygotowanie i odrzuć ten przetarg"
+            onPress={() => {
+              updateTenderStatus({
+                mappingId: item!.id,
+                status: MappingStatus.decision_made_rejected,
+              });
+              toast.success(
+                <>
+                  Tender {item?.tenders.order_object} was rejected successfully
+                </>
+              );
+              router.push("/dashboard/tenders");
+            }}
+          >
+            Cancel preparation and reject this tender
+          </Button>
         </div>
       </div>
     );

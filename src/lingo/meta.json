@@ -21533,6 +21533,16 @@
           "overrides": {},
           "content": "Don't forget to include the valuation. We can also help you with it — just let us know at mimira@mimiraoffers.eu or +48 732 070 469."
         },
+        "11/declaration/body/4/consequent/argument/1/7": {
+          "type": "element",
+          "hash": "49d1e0e6ab4ccf36e47cf6a776d82937",
+          "context": "",
+          "skip": false,
+          "overrides": {
+            "pl": "Anuluj przygotowanie i odrzuć ten przetarg"
+          },
+          "content": "Cancel preparation and reject this tender"
+        },
         "11/declaration/body/4/consequent/argument/5": {
           "type": "element",
           "hash": "568738cd87d32a7f2c77c3cfa973ace0",
@@ -21621,6 +21631,88 @@
           "overrides": {},
           "content": "Other attachments"
         },
+        "12/declaration/body/10/argument/1/openingElement/1/value/expression": {
+          "type": "element",
+          "hash": "3ba81e87ae8016eea5860e247c708dd9",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Ready documentation"
+        },
+        "12/declaration/body/10/argument/3/openingElement/1/value/expression": {
+          "type": "element",
+          "hash": "030e160bf50c084716488dc452429db2",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Requires manual fill"
+        },
+        "12/declaration/body/10/argument/5/openingElement/1/value/expression": {
+          "type": "element",
+          "hash": "f187e342b6ff30e7d4d96d9395dea305",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Other attachments"
+        },
+        "12/declaration/body/5/consequent/argument/1/1": {
+          "type": "element",
+          "hash": "28e5b302e5adec94d929969721a9d520",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "We will prepare your documents. They will be ready within 48 hours at the latest"
+        },
+        "12/declaration/body/5/consequent/argument/1/5": {
+          "type": "element",
+          "hash": "8b199e4c03646258cacdb01bdc3ad72f",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Don't forget to include the valuation. We can also help you with it — just let us know at mimira@mimiraoffers.eu or +48 732 070 469."
+        },
+        "12/declaration/body/5/consequent/argument/1/7": {
+          "type": "element",
+          "hash": "49d1e0e6ab4ccf36e47cf6a776d82937",
+          "context": "",
+          "skip": false,
+          "overrides": {
+            "pl": "Anuluj przygotowanie i odrzuć ten przetarg"
+          },
+          "content": "Cancel preparation and reject this tender"
+        },
+        "12/declaration/body/6/consequent/0/argument/1/1": {
+          "type": "element",
+          "hash": "b795b22e2d0abd430c2ff0b28fb26e5a",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Loading documents..."
+        },
+        "12/declaration/body/7/consequent/0/argument/1/1": {
+          "type": "element",
+          "hash": "1f3bb71b519b18f32ba0f1a5a360afb0",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Failed to load documents. Please try again."
+        },
+        "12/declaration/body/9/consequent/0/argument/1": {
+          "type": "element",
+          "hash": "2199cc5f0c63d0fd443f80ecc41d3550",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "No documents to display. You can proceed to the next step."
+        },
+        "12/declaration/body/9/consequent/0/argument/3/1": {
+          "type": "element",
+          "hash": "0aae5563123e8e15391ddd9126389668",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "No documents found for this tender."
+        },
         "13/0/init/0/value": {
           "type": "element",
           "hash": "9f4a2b3bc99052f6ce1587dfcae08fc6",
@@ -21652,6 +21744,30 @@
           "skip": false,
           "overrides": {},
           "content": "Przejrzyj dostępne dokumenty. Możesz pobrać pliki w każdej kategorii."
+        },
+        "13/declaration/body/10/argument/1/openingElement/1/value/expression": {
+          "type": "element",
+          "hash": "3ba81e87ae8016eea5860e247c708dd9",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Ready documentation"
+        },
+        "13/declaration/body/10/argument/3/openingElement/1/value/expression": {
+          "type": "element",
+          "hash": "030e160bf50c084716488dc452429db2",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Requires manual fill"
+        },
+        "13/declaration/body/10/argument/5/openingElement/1/value/expression": {
+          "type": "element",
+          "hash": "f187e342b6ff30e7d4d96d9395dea305",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Other attachments"
         },
         "13/declaration/body/10/consequent/0/argument/1": {
           "type": "element",
@@ -21781,6 +21897,32 @@
           "overrides": {},
           "content": "Pobierz"
         },
+        "13/declaration/body/5/consequent/argument/1/1": {
+          "type": "element",
+          "hash": "28e5b302e5adec94d929969721a9d520",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "We will prepare your documents. They will be ready within 48 hours at the latest"
+        },
+        "13/declaration/body/5/consequent/argument/1/5": {
+          "type": "element",
+          "hash": "8b199e4c03646258cacdb01bdc3ad72f",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Don't forget to include the valuation. We can also help you with it — just let us know at mimira@mimiraoffers.eu or +48 732 070 469."
+        },
+        "13/declaration/body/5/consequent/argument/1/7": {
+          "type": "element",
+          "hash": "49d1e0e6ab4ccf36e47cf6a776d82937",
+          "context": "",
+          "skip": false,
+          "overrides": {
+            "pl": "Anuluj przygotowanie i odrzuć ten przetarg"
+          },
+          "content": "Cancel preparation and reject this tender"
+        },
         "13/declaration/body/6/0/init/body/0/consequent/0/argument/3/1": {
           "type": "element",
           "hash": "21105bfd07013fa07e2fb64cc974ddc5",
@@ -21829,6 +21971,14 @@
           "overrides": {},
           "content": "Ładowanie dokumentów..."
         },
+        "13/declaration/body/6/consequent/0/argument/1/1": {
+          "type": "element",
+          "hash": "b795b22e2d0abd430c2ff0b28fb26e5a",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Loading documents..."
+        },
         "13/declaration/body/7/0/init/0/body/0/consequent/0/expression/0": {
           "type": "element",
           "hash": "c2eef71aec7de7aa3a3ca84750c752dc",
@@ -21863,11 +22013,11 @@
         },
         "13/declaration/body/7/consequent/0/argument/1/1": {
           "type": "element",
-          "hash": "b795b22e2d0abd430c2ff0b28fb26e5a",
+          "hash": "1f3bb71b519b18f32ba0f1a5a360afb0",
           "context": "",
           "skip": false,
           "overrides": {},
-          "content": "Loading documents..."
+          "content": "Failed to load documents. Please try again."
         },
         "13/declaration/body/8/0/init/0/body/1/consequent/0/expression/0": {
           "type": "element",
@@ -21951,19 +22101,19 @@
         },
         "13/declaration/body/9/consequent/0/argument/1": {
           "type": "element",
-          "hash": "68d3a7ccf14319317421bba3ebc5d86b",
+          "hash": "2199cc5f0c63d0fd443f80ecc41d3550",
           "context": "",
           "skip": false,
           "overrides": {},
-          "content": "Brak dokumentów do wyświetlenia. Możesz przejść do następnego kroku."
+          "content": "No documents to display. You can proceed to the next step."
         },
         "13/declaration/body/9/consequent/0/argument/3/1": {
           "type": "element",
-          "hash": "fbeb193faa8de9619c5c5d09988f511f",
+          "hash": "0aae5563123e8e15391ddd9126389668",
           "context": "",
           "skip": false,
           "overrides": {},
-          "content": "Nie znaleziono żadnych dokumentów dla tego przetargu."
+          "content": "No documents found for this tender."
         },
         "14/0/init/0/value": {
           "type": "element",
@@ -22020,6 +22170,30 @@
           "skip": false,
           "overrides": {},
           "content": "No documents found for this tender."
+        },
+        "14/declaration/body/11/argument/1/openingElement/1/value/expression": {
+          "type": "element",
+          "hash": "3ba81e87ae8016eea5860e247c708dd9",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Ready documentation"
+        },
+        "14/declaration/body/11/argument/3/openingElement/1/value/expression": {
+          "type": "element",
+          "hash": "030e160bf50c084716488dc452429db2",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Requires manual fill"
+        },
+        "14/declaration/body/11/argument/5/openingElement/1/value/expression": {
+          "type": "element",
+          "hash": "f187e342b6ff30e7d4d96d9395dea305",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Other attachments"
         },
         "14/declaration/body/11/consequent/0/argument/1": {
           "type": "element",
@@ -22252,6 +22426,32 @@
           "skip": false,
           "overrides": {},
           "content": "Ładowanie dokumentów..."
+        },
+        "14/declaration/body/6/consequent/argument/1/1": {
+          "type": "element",
+          "hash": "28e5b302e5adec94d929969721a9d520",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "We will prepare your documents. They will be ready within 48 hours at the latest"
+        },
+        "14/declaration/body/6/consequent/argument/1/5": {
+          "type": "element",
+          "hash": "8b199e4c03646258cacdb01bdc3ad72f",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Don't forget to include the valuation. We can also help you with it — just let us know at mimira@mimiraoffers.eu or +48 732 070 469."
+        },
+        "14/declaration/body/6/consequent/argument/1/7": {
+          "type": "element",
+          "hash": "49d1e0e6ab4ccf36e47cf6a776d82937",
+          "context": "",
+          "skip": false,
+          "overrides": {
+            "pl": "Anuluj przygotowanie i odrzuć ten przetarg"
+          },
+          "content": "Cancel preparation and reject this tender"
         },
         "14/declaration/body/7/0/init/0/body/0/consequent/0/expression/0": {
           "type": "element",
@@ -22565,6 +22765,30 @@
           "overrides": {},
           "content": "No documents found for this tender."
         },
+        "15/declaration/body/11/argument/1/openingElement/1/value/expression": {
+          "type": "element",
+          "hash": "3ba81e87ae8016eea5860e247c708dd9",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Ready documentation"
+        },
+        "15/declaration/body/11/argument/3/openingElement/1/value/expression": {
+          "type": "element",
+          "hash": "030e160bf50c084716488dc452429db2",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Requires manual fill"
+        },
+        "15/declaration/body/11/argument/5/openingElement/1/value/expression": {
+          "type": "element",
+          "hash": "f187e342b6ff30e7d4d96d9395dea305",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Other attachments"
+        },
         "15/declaration/body/11/consequent/0/argument/1": {
           "type": "element",
           "hash": "2199cc5f0c63d0fd443f80ecc41d3550",
@@ -22772,6 +22996,32 @@
           "skip": false,
           "overrides": {},
           "content": "Ładowanie dokumentów..."
+        },
+        "15/declaration/body/6/consequent/argument/1/1": {
+          "type": "element",
+          "hash": "28e5b302e5adec94d929969721a9d520",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "We will prepare your documents. They will be ready within 48 hours at the latest"
+        },
+        "15/declaration/body/6/consequent/argument/1/5": {
+          "type": "element",
+          "hash": "8b199e4c03646258cacdb01bdc3ad72f",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Don't forget to include the valuation. We can also help you with it — just let us know at mimira@mimiraoffers.eu or +48 732 070 469."
+        },
+        "15/declaration/body/6/consequent/argument/1/7": {
+          "type": "element",
+          "hash": "49d1e0e6ab4ccf36e47cf6a776d82937",
+          "context": "",
+          "skip": false,
+          "overrides": {
+            "pl": "Anuluj przygotowanie i odrzuć ten przetarg"
+          },
+          "content": "Tender was rejected successfully Cancel preparation and reject this tender"
         },
         "15/declaration/body/7/0/init/0/body/1/consequent/0/expression/0": {
           "type": "element",

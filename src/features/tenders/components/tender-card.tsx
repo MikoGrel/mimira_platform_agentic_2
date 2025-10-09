@@ -16,6 +16,7 @@ import { toast } from "sonner";
 import Link from "$/components/ui/link";
 import { IndividualTenderMapping } from "../api/use-individual-tender";
 import { getOverviewParts } from "../utils/parts";
+import { MappingStatus } from "../constants/status";
 
 interface TenderCardProps {
   mapping: IndividualTenderMapping;
@@ -24,6 +25,11 @@ interface TenderCardProps {
 function InternalTenderCard({ mapping }: TenderCardProps) {
   const { relativeToNow } = useDateFormat();
   const { mutate: updateTenderStatus } = useUpdateTenderStatus();
+  const isRejected = [
+    MappingStatus.rejected,
+    MappingStatus.decision_made_rejected,
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  ].includes(mapping.status as any);
 
   const parts = getOverviewParts(mapping);
 
@@ -49,7 +55,7 @@ function InternalTenderCard({ mapping }: TenderCardProps) {
     <ContextMenu>
       <Card
         as={Link}
-        href={`/dashboard/tenders/${mapping.id}`}
+        href={isRejected ? "#" : `/dashboard/tenders/${mapping.id}`}
         className="hover:cursor-pointer border border-border/70 w-full transition-colors hover:bg-muted/50"
         shadow="none"
         radius="sm"
