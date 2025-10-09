@@ -104,7 +104,9 @@ export default function MiniTenderCalendar({
                       >
                         <span
                           className={
-                            tender.hasOffersDateChanged ? "text-warning" : ""
+                            tender.hasOffersDateChanged
+                              ? "text-warning-600"
+                              : ""
                           }
                         >
                           {tender.hasOffersDateChanged && "New term: "}

@@ -161,15 +161,17 @@ function StepperContent({
           </span>
           {mapping?.tenders?.submitting_offers_date && (
             <span
-              className={`flex items-center gap-2 ${mapping?.tenders?.has_offersdate_changed ? "text-warning" : ""}`}
+              className={`flex items-center gap-2 ${mapping?.tenders?.has_offersdate_changed ? "text-warning-600" : ""}`}
             >
               <CalendarClock className="w-4 h-4" />
-              {mapping?.tenders?.has_offersdate_changed && (
-                <span>New term:&nbsp;</span>
-              )}
-              {relativeToNow(
-                new Date(mapping?.tenders?.submitting_offers_date)
-              )}
+              <span>
+                {mapping?.tenders?.has_offersdate_changed && (
+                  <span>New term:&nbsp;</span>
+                )}
+                {relativeToNow(
+                  new Date(mapping?.tenders?.submitting_offers_date)
+                )}
+              </span>
             </span>
           )}
           <div className="flex items-center gap-2 ml-auto">

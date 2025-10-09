@@ -100,7 +100,7 @@ function InternalTenderCard({ mapping }: TenderCardProps) {
 
               {mapping.tenders?.submitting_offers_date && (
                 <div
-                  className={`flex items-center gap-1 ${mapping.tenders.has_offersdate_changed ? "text-warning" : ""}`}
+                  className={`flex items-center gap-1 ${mapping.tenders.has_offersdate_changed ? "text-warning-600" : ""}`}
                 >
                   <CalendarClock className="w-3 h-3" />
                   <span className="text-left">

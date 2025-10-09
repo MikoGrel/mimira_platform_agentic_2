@@ -50,8 +50,8 @@ export function TenderMiniCard(props: TenderMiniCardProps) {
           <div className="text-sm flex items-center gap-2">
             <Chip
               variant="flat"
+              color={hasOffersDateChanged ? "warning" : "default"}
               startContent={<CalendarClock className="w-4 h-4 ml-1" />}
-              className={hasOffersDateChanged ? "text-warning" : ""}
             >
               {hasOffersDateChanged && <span>New term:&nbsp;</span>}
               {timeUntilExpiration}

@@ -232,13 +232,13 @@ export default function InboxPage() {
                           <Chip
                             size="sm"
                             variant="flat"
+                            color={
+                              t.tenders.has_offersdate_changed
+                                ? "warning"
+                                : "default"
+                            }
                             startContent={
                               <CalendarClock className="w-4 h-4 ml-1 mr-0.5" />
-                            }
-                            className={
-                              t.tenders.has_offersdate_changed
-                                ? "text-warning"
-                                : ""
                             }
                           >
                             {t.tenders.has_offersdate_changed && (
