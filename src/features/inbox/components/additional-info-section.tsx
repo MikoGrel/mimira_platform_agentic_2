@@ -8,14 +8,12 @@ import { SectionTitle } from "./section-title";
 interface AdditionalInfoSectionProps {
   payment_terms_llm: string;
   contract_penalties_llm: string;
-  deposit_llm: string;
   url: string;
 }
 
 export function AdditionalInfoSection({
   payment_terms_llm,
   contract_penalties_llm,
-  deposit_llm,
   url,
 }: AdditionalInfoSectionProps) {
   return (
@@ -32,10 +30,6 @@ export function AdditionalInfoSection({
               title="Contract Penalties"
               content={contract_penalties_llm}
             />
-          )}
-
-          {deposit_llm && (
-            <InfoCard title="Deposit Information" content={deposit_llm} />
           )}
 
           {url && (

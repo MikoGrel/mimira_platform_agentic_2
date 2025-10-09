@@ -202,25 +202,30 @@ export function TenderPreview({
   async function handleDownloadDocx() {
     try {
       toast.info(<span>Generowanie dokumentu...</span>);
-      
+
       const blob = await generateTenderDocx({
         mapping,
         selectedPart,
         hasMultipleParts,
       });
 
-      const tenderName = mapping.tenders?.order_object?.slice(0, 50) || "przetarg";
-      const suffix = hasMultipleParts ? "wszystkie-czesci" : (selectedPart.part_name || "dokument");
+      const tenderName =
+        mapping.tenders?.order_object?.slice(0, 50) || "przetarg";
+      const suffix = hasMultipleParts
+        ? "wszystkie-czesci"
+        : selectedPart.part_name || "dokument";
       const filename = `${tenderName}-${suffix}.docx`
         .replace(/[^a-z0-9]/gi, "-")
         .toLowerCase();
 
       downloadTenderDocx(blob, filename);
-      
+
       toast.success(<span>Dokument pobrany pomyślnie!</span>);
     } catch (error) {
       console.error("Error generating DOCX:", error);
-      toast.error(<span>Nie udało się wygenerować dokumentu. Spróbuj ponownie.</span>);
+      toast.error(
+        <span>Nie udało się wygenerować dokumentu. Spróbuj ponownie.</span>
+      );
     }
   }
 
@@ -339,8 +344,7 @@ export function TenderPreview({
                   contract_penalties_llm={
                     mapping.tenders?.contract_penalties_llm || ""
                   }
-                  deposit_llm={mapping.tenders?.deposit_llm || ""}
-                  url={mapping.tenders?.url || ""}
+                  url={mapping.tenders?.url_user || ""}
                 />
               </div>
             </div>
