@@ -131,6 +131,7 @@ export function TenderUploadDialog(props: ComponentProps<typeof Dialog>) {
             placeholder="Purchase of railway equipment"
             {...register("order_object")}
             variant="bordered"
+            isRequired
           />
 
           <Controller
