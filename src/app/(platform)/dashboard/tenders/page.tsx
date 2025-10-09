@@ -75,10 +75,8 @@ export default function TendersPage() {
           </div>
           <div className="flex gap-2 items-center">
             <Button
-              color="primary"
-              variant="flat"
+              variant="bordered"
               size="sm"
-              radius="md"
               startContent={<FileUp className="stroke-2 w-4 h-4" />}
               className="h-[2.125rem]"
               onPress={() => setIsUploadDialogOpen(true)}
