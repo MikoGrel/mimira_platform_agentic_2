@@ -42,6 +42,9 @@ export function NewTendersBento({ className }: NewTendersBentoProps) {
               expirationDate={
                 new Date(tender.tenders?.submitting_offers_date ?? "")
               }
+              hasOffersDateChanged={
+                tender.tenders?.has_offersdate_changed ?? false
+              }
             />
           ))}
           {user && !loading && !tenders?.length && (

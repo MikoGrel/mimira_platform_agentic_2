@@ -795,6 +795,14 @@ export default {
             },
             hash: "320af698c03eca3566cae395621ca490",
           },
+        "19/declaration/body/26/argument/1/3/1/1/3/3/expression/0/body/1/3/1/expression/right/1/expression/right":
+          {
+            content: {
+              en: "New term:",
+              pl: "Nowy termin:",
+            },
+            hash: "c2a8fe5de6bf0e0af11baabae2f48b4d",
+          },
         "19/declaration/body/26/argument/1/5/1/3": {
           content: {
             en: "Ask Mimira",
@@ -10092,6 +10100,22 @@ export default {
           },
           hash: "fce70517f1edc1f1054823ec6ea3d4f3",
         },
+        "16/declaration/body/10/argument/5/1/expression/right/1/3/expression/right/1/expression/right":
+          {
+            content: {
+              en: "New term: ",
+              pl: "Nowy termin: ",
+            },
+            hash: "2664239247be0ec83dcb0d3c87efe91e",
+          },
+        "16/declaration/body/10/argument/7/expression/right/1/3/expression/right/1/expression/right":
+          {
+            content: {
+              en: "New term: ",
+              pl: "Nowy termin: ",
+            },
+            hash: "2664239247be0ec83dcb0d3c87efe91e",
+          },
         "16/declaration/body/3/0/init/0/0/value/body/0/expression/0": {
           content: {
             en: "Tender restored",
@@ -28010,6 +28034,44 @@ export default {
             },
             hash: "3470690ace9f42b226e7317c545b9c5c",
           },
+        "6/declaration/body/5/argument/3/1/expression/alternate/1": {
+          content: {
+            en: "Select a date",
+            pl: "Wybierz datę",
+          },
+          hash: "521e4a705800da06d091fde3e801ce02",
+        },
+        "6/declaration/body/5/argument/3/1/expression/alternate/3": {
+          content: {
+            en: "Click on highlighted dates to see expiring tenders",
+            pl: "Kliknij na wyróżnione daty, aby zobaczyć wygasające przetargi",
+          },
+          hash: "8352840e0e68b2afae6082a391fed57a",
+        },
+        "6/declaration/body/5/argument/3/1/expression/consequent/3/expression/alternate":
+          {
+            content: {
+              en: "No tenders expiring on this date",
+              pl: "Brak przetargów wygasających w tym dniu",
+            },
+            hash: "cefc610408938006240eebc1df03abae",
+          },
+        "6/declaration/body/5/argument/3/1/expression/consequent/3/expression/consequent/1":
+          {
+            content: {
+              en: "Offers expiring on this date:",
+              pl: "Oferty wygasające w tym dniu:",
+            },
+            hash: "3470690ace9f42b226e7317c545b9c5c",
+          },
+        "6/declaration/body/5/argument/3/1/expression/consequent/3/expression/consequent/3/1/expression/0/body/1/3/expression/right":
+          {
+            content: {
+              en: "New term",
+              pl: "Nowy termin",
+            },
+            hash: "d1dec164cde465af81ea71949fe2bafa",
+          },
       },
     },
     "features/tenders/components/tender-card.tsx": {
@@ -28126,6 +28188,13 @@ export default {
             pl: "Przetarg przywrócony do skrzynki odbiorczej",
           },
           hash: "9fa090b63ef800c860a8c2beb55db264",
+        },
+        "13/body/5/argument/1/1/3/1/5/expression/right/1/expression/right": {
+          content: {
+            en: "New term: ",
+            pl: "Nowy termin: ",
+          },
+          hash: "2664239247be0ec83dcb0d3c87efe91e",
         },
         "13/body/5/argument/3/1/1": {
           content: {
@@ -28585,6 +28654,17 @@ export default {
             pl: "Ładowanie przetargów...",
           },
           hash: "1c85ffc40c61e633c8219b81a3b5c03c",
+        },
+      },
+    },
+    "features/tenders/components/tender-mini-card.tsx": {
+      entries: {
+        "7/declaration/body/3/argument/1/1/3/1/1/expression/right": {
+          content: {
+            en: "New term: ",
+            pl: "Nowy termin: ",
+          },
+          hash: "2664239247be0ec83dcb0d3c87efe91e",
         },
       },
     },

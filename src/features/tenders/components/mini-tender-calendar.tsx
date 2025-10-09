@@ -8,6 +8,7 @@ type ExpiringTender = {
   id: string;
   title: string;
   expiresAt: Date;
+  hasOffersDateChanged?: boolean;
 };
 
 interface MiniTenderCalendarProps {
@@ -101,7 +102,14 @@ export default function MiniTenderCalendar({
                         href={`/dashboard/inbox?id=${tender.id}`}
                         className="group-hover:text-primary"
                       >
-                        {tender.title}
+                        <span
+                          className={
+                            tender.hasOffersDateChanged ? "text-warning" : ""
+                          }
+                        >
+                          {tender.hasOffersDateChanged && "New term: "}
+                          {tender.title}
+                        </span>
                       </Link>
                     </li>
                   ))}

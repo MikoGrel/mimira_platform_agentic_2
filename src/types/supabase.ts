@@ -106,64 +106,19 @@ export type Database = {
       }
       companies: {
         Row: {
-          company_bank: string | null
-          company_city: string | null
           company_name: string | null
-          company_postcode: string | null
-          company_representative_name: string | null
-          company_representative_phone: string | null
-          company_size: string | null
-          company_street: string | null
-          company_type_law: string | null
-          company_voivodship: string | null
-          first_time_login: boolean
           id: string
-          krs: number | null
-          nip: number | null
-          offer_rejection_feedback: string | null
-          profile_feedback: string | null
-          regon: number | null
-          web: string | null
+          onboarding_email_sent: string | null
         }
         Insert: {
-          company_bank?: string | null
-          company_city?: string | null
           company_name?: string | null
-          company_postcode?: string | null
-          company_representative_name?: string | null
-          company_representative_phone?: string | null
-          company_size?: string | null
-          company_street?: string | null
-          company_type_law?: string | null
-          company_voivodship?: string | null
-          first_time_login?: boolean
           id?: string
-          krs?: number | null
-          nip?: number | null
-          offer_rejection_feedback?: string | null
-          profile_feedback?: string | null
-          regon?: number | null
-          web?: string | null
+          onboarding_email_sent?: string | null
         }
         Update: {
-          company_bank?: string | null
-          company_city?: string | null
           company_name?: string | null
-          company_postcode?: string | null
-          company_representative_name?: string | null
-          company_representative_phone?: string | null
-          company_size?: string | null
-          company_street?: string | null
-          company_type_law?: string | null
-          company_voivodship?: string | null
-          first_time_login?: boolean
           id?: string
-          krs?: number | null
-          nip?: number | null
-          offer_rejection_feedback?: string | null
-          profile_feedback?: string | null
-          regon?: number | null
-          web?: string | null
+          onboarding_email_sent?: string | null
         }
         Relationships: []
       }
@@ -215,40 +170,43 @@ export type Database = {
         Row: {
           can_participate: boolean | null
           chatbot_responses: Json | null
-          company_id: string | null
+          company_id: string
           created_at: string
           docs_ready: boolean
           id: string
-          vector_store_id: string | null
+          msg_slack_sent: string | null
+          other_req_docs: Json | null
           seen_at: string | null
           status: string | null
-          tender_id: string | null
+          tender_id: string
           updated_at: string | null
         }
         Insert: {
           can_participate?: boolean | null
           chatbot_responses?: Json | null
-          company_id?: string | null
+          company_id: string
           created_at?: string
           docs_ready?: boolean
           id?: string
-          vector_store_id?: string | null
+          msg_slack_sent?: string | null
+          other_req_docs?: Json | null
           seen_at?: string | null
           status?: string | null
-          tender_id?: string | null
+          tender_id: string
           updated_at?: string | null
         }
         Update: {
           can_participate?: boolean | null
           chatbot_responses?: Json | null
-          company_id?: string | null
+          company_id?: string
           created_at?: string
           docs_ready?: boolean
           id?: string
-          vector_store_id?: string | null
+          msg_slack_sent?: string | null
+          other_req_docs?: Json | null
           seen_at?: string | null
           status?: string | null
-          tender_id?: string | null
+          tender_id?: string
           updated_at?: string | null
         }
         Relationships: [
@@ -364,25 +322,31 @@ export type Database = {
       profiles: {
         Row: {
           company_id: string | null
+          customer: string | null
           email: string | null
           first_name: string | null
           id: string
+          internal_user: boolean | null
           last_name: string | null
           preferred_locale: string | null
         }
         Insert: {
           company_id?: string | null
+          customer?: string | null
           email?: string | null
           first_name?: string | null
           id: string
+          internal_user?: boolean | null
           last_name?: string | null
           preferred_locale?: string | null
         }
         Update: {
           company_id?: string | null
+          customer?: string | null
           email?: string | null
           first_name?: string | null
           id?: string
+          internal_user?: boolean | null
           last_name?: string | null
           preferred_locale?: string | null
         }
@@ -392,6 +356,86 @@ export type Database = {
             columns: ["company_id"]
             isOneToOne: false
             referencedRelation: "companies"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      tender_change_debug_log: {
+        Row: {
+          any_active: boolean | null
+          change_id: string | null
+          created_at: string | null
+          distinct_cnt: number | null
+          field_name: string | null
+          id: string
+          new_value: string | null
+          note: string | null
+          old_value: string | null
+          sent: boolean | null
+          status_list: string | null
+          tender_id: string | null
+        }
+        Insert: {
+          any_active?: boolean | null
+          change_id?: string | null
+          created_at?: string | null
+          distinct_cnt?: number | null
+          field_name?: string | null
+          id?: string
+          new_value?: string | null
+          note?: string | null
+          old_value?: string | null
+          sent?: boolean | null
+          status_list?: string | null
+          tender_id?: string | null
+        }
+        Update: {
+          any_active?: boolean | null
+          change_id?: string | null
+          created_at?: string | null
+          distinct_cnt?: number | null
+          field_name?: string | null
+          id?: string
+          new_value?: string | null
+          note?: string | null
+          old_value?: string | null
+          sent?: boolean | null
+          status_list?: string | null
+          tender_id?: string | null
+        }
+        Relationships: []
+      }
+      tender_changes: {
+        Row: {
+          created_at: string
+          field_name: string
+          id: string
+          new_value: string
+          old_value: string | null
+          tender_id: string
+        }
+        Insert: {
+          created_at?: string
+          field_name: string
+          id?: string
+          new_value: string
+          old_value?: string | null
+          tender_id: string
+        }
+        Update: {
+          created_at?: string
+          field_name?: string
+          id?: string
+          new_value?: string
+          old_value?: string | null
+          tender_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "tender_changes_tender_id_fkey"
+            columns: ["tender_id"]
+            isOneToOne: false
+            referencedRelation: "tenders"
             referencedColumns: ["id"]
           },
         ]
@@ -437,10 +481,45 @@ export type Database = {
           },
         ]
       }
+      tender_document_changes: {
+        Row: {
+          created_at: string
+          file_names: string | null
+          files_added_count: number | null
+          id: string
+          tender_id: string | null
+          total_size_bytes: number | null
+        }
+        Insert: {
+          created_at?: string
+          file_names?: string | null
+          files_added_count?: number | null
+          id?: string
+          tender_id?: string | null
+          total_size_bytes?: number | null
+        }
+        Update: {
+          created_at?: string
+          file_names?: string | null
+          files_added_count?: number | null
+          id?: string
+          tender_id?: string | null
+          total_size_bytes?: number | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "tender_document_changes_tender_id_fkey"
+            columns: ["tender_id"]
+            isOneToOne: false
+            referencedRelation: "tenders"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
       tender_parts: {
         Row: {
           can_participate: boolean | null
-          company_mapping_id: string | null
+          company_mapping_id: string
           created_at: string
           description_part_long_llm: string | null
           id: string
@@ -455,7 +534,7 @@ export type Database = {
         }
         Insert: {
           can_participate?: boolean | null
-          company_mapping_id?: string | null
+          company_mapping_id: string
           created_at?: string
           description_part_long_llm?: string | null
           id?: string
@@ -470,7 +549,7 @@ export type Database = {
         }
         Update: {
           can_participate?: boolean | null
-          company_mapping_id?: string | null
+          company_mapping_id?: string
           created_at?: string
           description_part_long_llm?: string | null
           id?: string
@@ -594,11 +673,13 @@ export type Database = {
       }
       tenders: {
         Row: {
+          additional_attachments_llm: string | null
           application_form_llm: string | null
           contract_penalties_llm: string | null
           created_at: string | null
           deposit_llm: string | null
           description_long_llm: string | null
+          has_offersdate_changed: boolean | null
           id: string
           order_completion_date_llm: string | null
           order_object: string | null
@@ -608,20 +689,21 @@ export type Database = {
           publication_date: string | null
           review_criteria_llm: string | null
           submitting_offers_date: string | null
-          vector_db: Json | null
-          vector_store_id: string | null
           updated_at: string | null
           url: string | null
           url_user: string | null
+          vector_store_id: string | null
           voivodship: string | null
           wadium_llm: string | null
         }
         Insert: {
+          additional_attachments_llm?: string | null
           application_form_llm?: string | null
           contract_penalties_llm?: string | null
           created_at?: string | null
           deposit_llm?: string | null
           description_long_llm?: string | null
+          has_offersdate_changed?: boolean | null
           id?: string
           order_completion_date_llm?: string | null
           order_object?: string | null
@@ -631,20 +713,21 @@ export type Database = {
           publication_date?: string | null
           review_criteria_llm?: string | null
           submitting_offers_date?: string | null
-          vector_db?: Json | null
-          vector_store_id?: string | null
           updated_at?: string | null
           url?: string | null
           url_user?: string | null
+          vector_store_id?: string | null
           voivodship?: string | null
           wadium_llm?: string | null
         }
         Update: {
+          additional_attachments_llm?: string | null
           application_form_llm?: string | null
           contract_penalties_llm?: string | null
           created_at?: string | null
           deposit_llm?: string | null
           description_long_llm?: string | null
+          has_offersdate_changed?: boolean | null
           id?: string
           order_completion_date_llm?: string | null
           order_object?: string | null
@@ -654,11 +737,10 @@ export type Database = {
           publication_date?: string | null
           review_criteria_llm?: string | null
           submitting_offers_date?: string | null
-          vector_db?: Json | null
-          vector_store_id?: string | null
           updated_at?: string | null
           url?: string | null
           url_user?: string | null
+          vector_store_id?: string | null
           voivodship?: string | null
           wadium_llm?: string | null
         }

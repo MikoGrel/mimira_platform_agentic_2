@@ -235,7 +235,15 @@ export default function InboxPage() {
                             startContent={
                               <CalendarClock className="w-4 h-4 ml-1 mr-0.5" />
                             }
+                            className={
+                              t.tenders.has_offersdate_changed
+                                ? "text-warning"
+                                : ""
+                            }
                           >
+                            {t.tenders.has_offersdate_changed && (
+                              <span>New term:&nbsp;</span>
+                            )}
                             {relativeToNow(
                               new Date(t.tenders?.submitting_offers_date)
                             )}

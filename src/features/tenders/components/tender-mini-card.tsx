@@ -13,11 +13,19 @@ interface TenderMiniCardProps {
   expirationDate: Date;
   id: string;
   index?: number;
+  hasOffersDateChanged?: boolean;
 }
 
 export function TenderMiniCard(props: TenderMiniCardProps) {
   const { relativeToNow } = useDateFormat();
-  const { title, organization, expirationDate, id, index = 0 } = props;
+  const {
+    title,
+    organization,
+    expirationDate,
+    id,
+    index = 0,
+    hasOffersDateChanged = false,
+  } = props;
 
   const timeUntilExpiration = relativeToNow(expirationDate);
 
@@ -43,7 +51,9 @@ export function TenderMiniCard(props: TenderMiniCardProps) {
             <Chip
               variant="flat"
               startContent={<CalendarClock className="w-4 h-4 ml-1" />}
+              className={hasOffersDateChanged ? "text-warning" : ""}
             >
+              {hasOffersDateChanged && <span>New term:&nbsp;</span>}
               {timeUntilExpiration}
             </Chip>
             <span className="block text-muted-foreground">

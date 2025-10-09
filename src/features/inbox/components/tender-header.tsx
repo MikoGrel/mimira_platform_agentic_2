@@ -351,8 +351,13 @@ export function TenderHeader(props: TenderHeaderProps) {
                 })}
               </span>
               {mapping.tenders.submitting_offers_date && (
-                <span className="flex items-center gap-2">
+                <span
+                  className={`flex items-center gap-2 ${mapping.tenders.has_offersdate_changed ? "text-warning" : ""}`}
+                >
                   <CalendarClock className="w-4 h-4" />
+                  {mapping.tenders.has_offersdate_changed && (
+                    <span>New term:&nbsp;</span>
+                  )}
                   {relativeToNow(
                     new Date(mapping.tenders.submitting_offers_date)
                   )}
@@ -394,8 +399,13 @@ export function TenderHeader(props: TenderHeaderProps) {
               {mapping.tenders?.organization_name}
             </span>
             {mapping.tenders.submitting_offers_date && (
-              <span className="flex items-center gap-1">
+              <span
+                className={`flex items-center gap-1 ${mapping.tenders.has_offersdate_changed ? "text-warning" : ""}`}
+              >
                 <CalendarClock className="w-3 h-3" />
+                {mapping.tenders.has_offersdate_changed && (
+                  <span>New term:&nbsp;</span>
+                )}
                 {relativeToNow(
                   new Date(mapping.tenders.submitting_offers_date)
                 )}

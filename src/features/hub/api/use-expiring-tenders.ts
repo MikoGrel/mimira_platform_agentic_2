@@ -14,7 +14,9 @@ export function useExpiringTenders({ from, to }: { from: Date; to: Date }) {
     queryFn: async () => {
       const { data, error } = await client
         .from("companies_tenders_mappings")
-        .select("id, tenders!inner (order_object, submitting_offers_date)")
+        .select(
+          "id, tenders!inner (order_object, submitting_offers_date, has_offersdate_changed)"
+        )
         .gte("tenders.submitting_offers_date", from.toISOString())
         .lte("tenders.submitting_offers_date", to.toISOString())
         .neq("status", MappingStatus.rejected)

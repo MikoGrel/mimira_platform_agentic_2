@@ -159,11 +159,19 @@ function StepperContent({
             <House className="w-4 h-4" />
             {mapping?.tenders?.organization_name}
           </span>
-          <span className="flex items-center gap-2">
-            <CalendarClock className="w-4 h-4" />
-            {mapping?.tenders?.submitting_offers_date &&
-              relativeToNow(new Date(mapping?.tenders?.submitting_offers_date))}
-          </span>
+          {mapping?.tenders?.submitting_offers_date && (
+            <span
+              className={`flex items-center gap-2 ${mapping?.tenders?.has_offersdate_changed ? "text-warning" : ""}`}
+            >
+              <CalendarClock className="w-4 h-4" />
+              {mapping?.tenders?.has_offersdate_changed && (
+                <span>New term:&nbsp;</span>
+              )}
+              {relativeToNow(
+                new Date(mapping?.tenders?.submitting_offers_date)
+              )}
+            </span>
+          )}
           <div className="flex items-center gap-2 ml-auto">
             <Button
               size="sm"

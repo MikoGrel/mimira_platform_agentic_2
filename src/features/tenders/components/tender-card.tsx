@@ -99,9 +99,14 @@ function InternalTenderCard({ mapping }: TenderCardProps) {
               )}
 
               {mapping.tenders?.submitting_offers_date && (
-                <div className="flex items-center gap-1">
+                <div
+                  className={`flex items-center gap-1 ${mapping.tenders.has_offersdate_changed ? "text-warning" : ""}`}
+                >
                   <CalendarClock className="w-3 h-3" />
                   <span className="text-left">
+                    {mapping.tenders.has_offersdate_changed && (
+                      <span>New term:&nbsp;</span>
+                    )}
                     {relativeToNow(
                       new Date(mapping.tenders?.submitting_offers_date)
                     )}

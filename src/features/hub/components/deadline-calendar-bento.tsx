@@ -68,6 +68,7 @@ export function DeadlineCalendarBento({
           id: tender.id,
           expiresAt: new Date(tender.tenders.submitting_offers_date!),
           title: truncate(tender.tenders.order_object!, { length: 40 }),
+          hasOffersDateChanged: tender.tenders.has_offersdate_changed ?? false,
         }))}
       />
     </BentoCard>
