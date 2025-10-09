@@ -94,8 +94,7 @@ export function OverviewStep({
             contract_penalties_llm={
               mapping.tenders?.contract_penalties_llm || ""
             }
-            deposit_llm={mapping.tenders?.deposit_llm || ""}
-            url={mapping.tenders?.url || ""}
+            url={mapping.tenders?.url_user || ""}
           />
         </div>
       </div>
