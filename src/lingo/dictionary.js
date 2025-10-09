@@ -780,6 +780,42 @@ export default {
           },
           hash: "067789b01a081458db2f872f10a37c3f",
         },
+        "19/declaration/body/26/argument/1/1/1/3-placeholder": {
+          content: {
+            en: "Search",
+            pl: "Szukaj",
+          },
+          hash: "49dd6c21604b5e8d4153ff1aff2177e1",
+        },
+        "19/declaration/body/26/argument/1/3/1/1/3/3/expression/0/body/1/1/1/expression/right":
+          {
+            content: {
+              en: "New",
+              pl: "Nowe",
+            },
+            hash: "320af698c03eca3566cae395621ca490",
+          },
+        "19/declaration/body/26/argument/1/5/1/3": {
+          content: {
+            en: "Ask Mimira",
+            pl: "Zapytaj Mimira",
+          },
+          hash: "794ecd418d0b3530b94008aed80b30d7",
+        },
+        "19/declaration/body/26/argument/1/5/1/5": {
+          content: {
+            en: "Try now",
+            pl: "Wypróbuj teraz",
+          },
+          hash: "9b9feae9d2550e4d7d39f3634be37ce6",
+        },
+        "19/declaration/body/26/argument/3/expression/right/1/1": {
+          content: {
+            en: "Select a tender to view details",
+            pl: "Wybierz przetarg, aby zobaczyć szczegóły",
+          },
+          hash: "067789b01a081458db2f872f10a37c3f",
+        },
         "20/body/0/argument/1/expression/0/body/3/3": {
           content: {
             en: "·",
@@ -7690,10 +7726,10 @@ export default {
         },
         "5/declaration/body/0/argument/3/1/5/expression/right-title": {
           content: {
-            en: "Deposit Information",
-            pl: "Informacje o zaliczce",
+            en: "Source URL",
+            pl: "Źródłowy URL",
           },
-          hash: "34d811d0d02e76753d176ae6b99fb933",
+          hash: "dbf9149e47977b6caeccdf2cc8b57a44",
         },
         "5/declaration/body/0/argument/3/1/7/expression/right-title": {
           content: {
@@ -10008,6 +10044,13 @@ export default {
           hash: "22e14fc7b433ffa07e6702e4ebf13cdc",
         },
         "15/body/7/argument/7/3/1/1": {
+          content: {
+            en: "Download as DOCX",
+            pl: "Pobierz jako DOCX",
+          },
+          hash: "9d997c1eeff24977b4bec1d5c3265da8",
+        },
+        "15/body/7/argument/7/3/3/1": {
           content: {
             en: "Mark as unseen",
             pl: "Oznacz jako nieprzeczytane",
@@ -19463,6 +19506,76 @@ export default {
           },
           hash: "f187e342b6ff30e7d4d96d9395dea305",
         },
+        "12/declaration/body/10/argument/1/openingElement/1/value/expression": {
+          content: {
+            en: "Ready documentation",
+            pl: "Gotowa dokumentacja",
+          },
+          hash: "3ba81e87ae8016eea5860e247c708dd9",
+        },
+        "12/declaration/body/10/argument/3/openingElement/1/value/expression": {
+          content: {
+            en: "Requires manual fill",
+            pl: "Wymaga ręcznego wypełnienia",
+          },
+          hash: "030e160bf50c084716488dc452429db2",
+        },
+        "12/declaration/body/10/argument/5/openingElement/1/value/expression": {
+          content: {
+            en: "Other attachments",
+            pl: "Inne załączniki",
+          },
+          hash: "f187e342b6ff30e7d4d96d9395dea305",
+        },
+        "12/declaration/body/5/consequent/argument/1/1": {
+          content: {
+            en: "We will prepare your documents. They will be ready within 48 hours at the latest",
+            pl: "Przygotujemy Twoje dokumenty. Będą gotowe najpóźniej w ciągu 48 godzin.",
+          },
+          hash: "28e5b302e5adec94d929969721a9d520",
+        },
+        "12/declaration/body/5/consequent/argument/1/5": {
+          content: {
+            en: "Don't forget to include the valuation. We can also help you with it — just let us know at mimira@mimiraoffers.eu or +48 732 070 469.",
+            pl: "Nie zapomnij dołączyć wyceny. Możemy Ci w tym pomóc — po prostu daj nam znać na mimira@mimiraoffers.eu lub +48 732 070 469.",
+          },
+          hash: "8b199e4c03646258cacdb01bdc3ad72f",
+        },
+        "12/declaration/body/5/consequent/argument/1/7": {
+          content: {
+            en: "Cancel preparation and reject this tender",
+            pl: "Anuluj przygotowanie i odrzuć tę ofertę",
+          },
+          hash: "49d1e0e6ab4ccf36e47cf6a776d82937",
+        },
+        "12/declaration/body/6/consequent/0/argument/1/1": {
+          content: {
+            en: "Loading documents...",
+            pl: "Ładowanie dokumentów...",
+          },
+          hash: "b795b22e2d0abd430c2ff0b28fb26e5a",
+        },
+        "12/declaration/body/7/consequent/0/argument/1/1": {
+          content: {
+            en: "Failed to load documents. Please try again.",
+            pl: "Nie udało się załadować dokumentów. Proszę spróbować ponownie.",
+          },
+          hash: "1f3bb71b519b18f32ba0f1a5a360afb0",
+        },
+        "12/declaration/body/9/consequent/0/argument/1": {
+          content: {
+            en: "No documents to display. You can proceed to the next step.",
+            pl: "Brak dokumentów do wyświetlenia. Możesz przejść do następnego kroku.",
+          },
+          hash: "2199cc5f0c63d0fd443f80ecc41d3550",
+        },
+        "12/declaration/body/9/consequent/0/argument/3/1": {
+          content: {
+            en: "No documents found for this tender.",
+            pl: "Nie znaleziono dokumentów dla tego przetargu.",
+          },
+          hash: "0aae5563123e8e15391ddd9126389668",
+        },
         "13/0/init/0/value": {
           content: {
             en: "Completed by us",
@@ -19490,6 +19603,27 @@ export default {
             pl: "Przejrzyj dostępne dokumenty. Możesz pobrać pliki w każdej kategorii.",
           },
           hash: "7292eefb011ff64f7ec95b422d3a8801",
+        },
+        "13/declaration/body/10/argument/1/openingElement/1/value/expression": {
+          content: {
+            en: "Ready documentation",
+            pl: "Gotowa dokumentacja",
+          },
+          hash: "3ba81e87ae8016eea5860e247c708dd9",
+        },
+        "13/declaration/body/10/argument/3/openingElement/1/value/expression": {
+          content: {
+            en: "Requires manual fill",
+            pl: "Wymaga ręcznego wypełnienia",
+          },
+          hash: "030e160bf50c084716488dc452429db2",
+        },
+        "13/declaration/body/10/argument/5/openingElement/1/value/expression": {
+          content: {
+            en: "Other attachments",
+            pl: "Inne załączniki",
+          },
+          hash: "f187e342b6ff30e7d4d96d9395dea305",
         },
         "13/declaration/body/10/consequent/0/argument/1": {
           content: {
@@ -19605,6 +19739,27 @@ export default {
             },
             hash: "ed58dbee176ae6a0914ff2ff0ee3c5ce",
           },
+        "13/declaration/body/5/consequent/argument/1/1": {
+          content: {
+            en: "We will prepare your documents. They will be ready within 48 hours at the latest",
+            pl: "Przygotujemy Twoje dokumenty. Będą gotowe najpóźniej w ciągu 48 godzin.",
+          },
+          hash: "28e5b302e5adec94d929969721a9d520",
+        },
+        "13/declaration/body/5/consequent/argument/1/5": {
+          content: {
+            en: "Don't forget to include the valuation. We can also help you with it — just let us know at mimira@mimiraoffers.eu or +48 732 070 469.",
+            pl: "Nie zapomnij dołączyć wyceny. Możemy Ci w tym pomóc — po prostu daj nam znać na mimira@mimiraoffers.eu lub +48 732 070 469.",
+          },
+          hash: "8b199e4c03646258cacdb01bdc3ad72f",
+        },
+        "13/declaration/body/5/consequent/argument/1/7": {
+          content: {
+            en: "Cancel preparation and reject this tender",
+            pl: "Anuluj przygotowanie i odrzuć tę ofertę",
+          },
+          hash: "49d1e0e6ab4ccf36e47cf6a776d82937",
+        },
         "13/declaration/body/6/0/init/body/0/consequent/0/argument/3/1": {
           content: {
             en: "No files in this category",
@@ -19649,6 +19804,13 @@ export default {
           },
           hash: "b5a514a710ec9dc87d2a891b86bea281",
         },
+        "13/declaration/body/6/consequent/0/argument/1/1": {
+          content: {
+            en: "Loading documents...",
+            pl: "Ładowanie dokumentów...",
+          },
+          hash: "b795b22e2d0abd430c2ff0b28fb26e5a",
+        },
         "13/declaration/body/7/0/init/0/body/0/consequent/0/expression/0": {
           content: {
             en: "File path not available",
@@ -19679,10 +19841,10 @@ export default {
         },
         "13/declaration/body/7/consequent/0/argument/1/1": {
           content: {
-            en: "Loading documents...",
-            pl: "Ładowanie dokumentów...",
+            en: "Failed to load documents. Please try again.",
+            pl: "Nie udało się załadować dokumentów. Proszę spróbować ponownie.",
           },
-          hash: "b795b22e2d0abd430c2ff0b28fb26e5a",
+          hash: "1f3bb71b519b18f32ba0f1a5a360afb0",
         },
         "13/declaration/body/8/0/init/0/body/1/consequent/0/expression/0": {
           content: {
@@ -19758,17 +19920,17 @@ export default {
           },
         "13/declaration/body/9/consequent/0/argument/1": {
           content: {
-            en: "Brak dokumentów do wyświetlenia. Możesz przejść do następnego kroku.",
+            en: "No documents to display. You can proceed to the next step.",
             pl: "Brak dokumentów do wyświetlenia. Możesz przejść do następnego kroku.",
           },
-          hash: "68d3a7ccf14319317421bba3ebc5d86b",
+          hash: "2199cc5f0c63d0fd443f80ecc41d3550",
         },
         "13/declaration/body/9/consequent/0/argument/3/1": {
           content: {
-            en: "Nie znaleziono żadnych dokumentów dla tego przetargu.",
-            pl: "Nie znaleziono żadnych dokumentów dla tego przetargu.",
+            en: "No documents found for this tender.",
+            pl: "Nie znaleziono dokumentów dla tego przetargu.",
           },
-          hash: "fbeb193faa8de9619c5c5d09988f511f",
+          hash: "0aae5563123e8e15391ddd9126389668",
         },
         "14/0/init/0/value": {
           content: {
@@ -19818,6 +19980,27 @@ export default {
             pl: "Nie znaleziono dokumentów dla tego przetargu.",
           },
           hash: "0aae5563123e8e15391ddd9126389668",
+        },
+        "14/declaration/body/11/argument/1/openingElement/1/value/expression": {
+          content: {
+            en: "Ready documentation",
+            pl: "Gotowa dokumentacja",
+          },
+          hash: "3ba81e87ae8016eea5860e247c708dd9",
+        },
+        "14/declaration/body/11/argument/3/openingElement/1/value/expression": {
+          content: {
+            en: "Requires manual fill",
+            pl: "Wymaga ręcznego wypełnienia",
+          },
+          hash: "030e160bf50c084716488dc452429db2",
+        },
+        "14/declaration/body/11/argument/5/openingElement/1/value/expression": {
+          content: {
+            en: "Other attachments",
+            pl: "Inne załączniki",
+          },
+          hash: "f187e342b6ff30e7d4d96d9395dea305",
         },
         "14/declaration/body/11/consequent/0/argument/1": {
           content: {
@@ -20027,6 +20210,27 @@ export default {
             pl: "Ładowanie dokumentów...",
           },
           hash: "b5a514a710ec9dc87d2a891b86bea281",
+        },
+        "14/declaration/body/6/consequent/argument/1/1": {
+          content: {
+            en: "We will prepare your documents. They will be ready within 48 hours at the latest",
+            pl: "Przygotujemy Twoje dokumenty. Będą gotowe najpóźniej w ciągu 48 godzin.",
+          },
+          hash: "28e5b302e5adec94d929969721a9d520",
+        },
+        "14/declaration/body/6/consequent/argument/1/5": {
+          content: {
+            en: "Don't forget to include the valuation. We can also help you with it — just let us know at mimira@mimiraoffers.eu or +48 732 070 469.",
+            pl: "Nie zapomnij dołączyć wyceny. Możemy Ci w tym pomóc — po prostu daj nam znać na mimira@mimiraoffers.eu lub +48 732 070 469.",
+          },
+          hash: "8b199e4c03646258cacdb01bdc3ad72f",
+        },
+        "14/declaration/body/6/consequent/argument/1/7": {
+          content: {
+            en: "Cancel preparation and reject this tender",
+            pl: "Anuluj przygotowanie i odrzuć tę ofertę",
+          },
+          hash: "49d1e0e6ab4ccf36e47cf6a776d82937",
         },
         "14/declaration/body/7/0/init/0/body/0/consequent/0/expression/0": {
           content: {
@@ -20309,6 +20513,27 @@ export default {
           },
           hash: "0aae5563123e8e15391ddd9126389668",
         },
+        "15/declaration/body/11/argument/1/openingElement/1/value/expression": {
+          content: {
+            en: "Ready documentation",
+            pl: "Gotowa dokumentacja",
+          },
+          hash: "3ba81e87ae8016eea5860e247c708dd9",
+        },
+        "15/declaration/body/11/argument/3/openingElement/1/value/expression": {
+          content: {
+            en: "Requires manual fill",
+            pl: "Wymaga ręcznego wypełnienia",
+          },
+          hash: "030e160bf50c084716488dc452429db2",
+        },
+        "15/declaration/body/11/argument/5/openingElement/1/value/expression": {
+          content: {
+            en: "Other attachments",
+            pl: "Inne załączniki",
+          },
+          hash: "f187e342b6ff30e7d4d96d9395dea305",
+        },
         "15/declaration/body/11/consequent/0/argument/1": {
           content: {
             en: "No documents to display. You can proceed to the next step.",
@@ -20494,6 +20719,27 @@ export default {
             pl: "Ładowanie dokumentów...",
           },
           hash: "b5a514a710ec9dc87d2a891b86bea281",
+        },
+        "15/declaration/body/6/consequent/argument/1/1": {
+          content: {
+            en: "We will prepare your documents. They will be ready within 48 hours at the latest",
+            pl: "Przygotujemy Twoje dokumenty. Będą gotowe najpóźniej w ciągu 48 godzin.",
+          },
+          hash: "28e5b302e5adec94d929969721a9d520",
+        },
+        "15/declaration/body/6/consequent/argument/1/5": {
+          content: {
+            en: "Don't forget to include the valuation. We can also help you with it — just let us know at mimira@mimiraoffers.eu or +48 732 070 469.",
+            pl: "Nie zapomnij dołączyć wyceny. Możemy Ci w tym pomóc — po prostu daj nam znać na mimira@mimiraoffers.eu lub +48 732 070 469.",
+          },
+          hash: "8b199e4c03646258cacdb01bdc3ad72f",
+        },
+        "15/declaration/body/6/consequent/argument/1/7": {
+          content: {
+            en: "Tender was rejected successfully Cancel preparation and reject this tender",
+            pl: "Anuluj przygotowanie i odrzuć tę ofertę",
+          },
+          hash: "49d1e0e6ab4ccf36e47cf6a776d82937",
         },
         "15/declaration/body/7/0/init/0/body/1/consequent/0/expression/0": {
           content: {
@@ -28544,7 +28790,22 @@ export default {
             },
             hash: "2658f18da2ca8f5df394917be28135d2",
           },
+        "11/declaration/body/4/0/init/body/0/block/1/consequent/0/expression/0":
+          {
+            content: {
+              en: "Please upload at least one file",
+              pl: "Proszę przesłać co najmniej jeden plik",
+            },
+            hash: "6a97869a655db9af7d698f1e380c6dff",
+          },
         "11/declaration/body/4/0/init/body/0/block/3/expression/0": {
+          content: {
+            en: "Tender was upload successfully!, You will receive it processed in your inbox in 10 minutes",
+            pl: "Przetarg został pomyślnie przesłany! Otrzymasz go przetworzony w swojej skrzynce odbiorczej za 10 minut.",
+          },
+          hash: "d922a59e617c558cd1becadcec3246e2",
+        },
+        "11/declaration/body/4/0/init/body/0/block/4/expression/0": {
           content: {
             en: "Tender was upload successfully!, You will receive it processed in your inbox in 10 minutes",
             pl: "Przetarg został pomyślnie przesłany! Otrzymasz go przetworzony w swojej skrzynce odbiorczej za 10 minut.",
@@ -28625,10 +28886,10 @@ export default {
           },
         "11/declaration/body/7/argument/1/3/9/1": {
           content: {
-            en: "Tender files (optional)",
-            pl: "Pliki przetargowe (opcjonalne)",
+            en: "Tender files <element:span>*</element:span>",
+            pl: "Pliki przetargowe <element:span>*</element:span>",
           },
-          hash: "bcf66d69122ba1e0043d41ef4bee0725",
+          hash: "22477df4a94ed1706375b4f6a1464ef2",
         },
         "11/declaration/body/7/argument/1/3/9/3/3/3/expression/alternate/1": {
           content: {

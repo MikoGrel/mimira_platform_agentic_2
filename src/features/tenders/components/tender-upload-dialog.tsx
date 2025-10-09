@@ -61,13 +61,18 @@ export function TenderUploadDialog(props: ComponentProps<typeof Dialog>) {
     try {
       const files = await fileDropzone.convertFilesToBase64();
 
+      if (files.length === 0) {
+        toast.error(<>Please upload at least one file</>);
+        return;
+      }
+
       const request: TenderRequest = {
         tender_url: data.tender_url,
         company_name: user!.profile!.companies!.company_name!,
         orderobject: data.order_object,
         publicationdate: data.publication_date.toString(),
         submittingoffersdate: data.submitting_offers_date.toString(),
-        files: files.length > 0 ? files : undefined,
+        files: files,
       };
 
       await uploadTenderAsync(request);
@@ -170,7 +175,7 @@ export function TenderUploadDialog(props: ComponentProps<typeof Dialog>) {
 
           <div className="space-y-2">
             <label className="text-sm font-medium block">
-              Tender files (optional)
+              Tender files <span className="text-danger">*</span>
             </label>
             <div
               {...fileDropzone.getRootProps()}
