@@ -35,7 +35,7 @@ export default async function RootLayout({
 }>) {
   const cookieStore = await cookies();
   const locale =
-    (cookieStore.get("lingo-locale")?.value as "pl" | "en") || "en";
+    (cookieStore.get("lingo-locale")?.value as "pl" | "en") || "pl";
 
   return (
     <LingoProvider loadDictionary={(locale) => loadDictionary(locale)}>
