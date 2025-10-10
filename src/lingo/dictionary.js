@@ -798,10 +798,10 @@ export default {
         "19/declaration/body/26/argument/1/3/1/1/3/3/expression/0/body/1/3/1/expression/right/1/expression/right":
           {
             content: {
-              en: "New term:",
-              pl: "Nowy termin:",
+              en: "New term: ",
+              pl: "Nowy termin: ",
             },
-            hash: "c2a8fe5de6bf0e0af11baabae2f48b4d",
+            hash: "2664239247be0ec83dcb0d3c87efe91e",
           },
         "19/declaration/body/26/argument/1/5/1/3": {
           content: {
@@ -4634,6 +4634,34 @@ export default {
           },
           hash: "3ecd92ef253604c8cfc84c7b86fad7ca",
         },
+        "20/0/init/0/1/value": {
+          content: {
+            en: "Overview",
+            pl: "Przegląd",
+          },
+          hash: "30c54e4dc4ce599b87d94be34a8617f5",
+        },
+        "20/0/init/1/1/value": {
+          content: {
+            en: "Confirmations",
+            pl: "Potwierdzenia",
+          },
+          hash: "d6bd835d0f69b13150c90fe117eea0a9",
+        },
+        "20/0/init/2/1/value": {
+          content: {
+            en: "Documentation",
+            pl: "Dokumentacja",
+          },
+          hash: "1563fcb5ddb5037b0709ccd3dd384a92",
+        },
+        "20/0/init/3/1/value": {
+          content: {
+            en: "Decision",
+            pl: "Decyzja",
+          },
+          hash: "4757e269fee1aa76864469e762def497",
+        },
         "20/body/10/argument/5/1/1": {
           content: {
             en: "Previous step",
@@ -4668,6 +4696,20 @@ export default {
             pl: "Następny krok",
           },
           hash: "43fb9d3da12cdf80c1d49037ec8b8eba",
+        },
+        "20/body/12/argument/1/3/3/expression/right/1/expression/right": {
+          content: {
+            en: "New term: ",
+            pl: "Nowy termin: ",
+          },
+          hash: "2664239247be0ec83dcb0d3c87efe91e",
+        },
+        "20/body/12/argument/1/3/3/expression/right/3/expression/right": {
+          content: {
+            en: "New term: ",
+            pl: "Nowy termin: ",
+          },
+          hash: "2664239247be0ec83dcb0d3c87efe91e",
         },
         "20/body/12/argument/1/3/5/3": {
           content: {
@@ -4960,7 +5002,42 @@ export default {
           },
           hash: "712c63650b5180cbc14d6246b5d558c2",
         },
+        "21/body/12/argument/1/3/3/expression/right/1/expression/right": {
+          content: {
+            en: "New term: ",
+            pl: "Nowy termin: ",
+          },
+          hash: "2664239247be0ec83dcb0d3c87efe91e",
+        },
+        "21/body/12/argument/1/3/5/3": {
+          content: {
+            en: "<element:MessageSquareText></element:MessageSquareText> Comments",
+            pl: "<element:MessageSquareText></element:MessageSquareText> Komentarze",
+          },
+          hash: "4363b06a6d14db2f2eb20b67c19ec777",
+        },
+        "21/body/12/argument/5/1/1": {
+          content: {
+            en: "Previous step",
+            pl: "Poprzedni krok",
+          },
+          hash: "09264f201cbbdc79247a8c17a93d7e3c",
+        },
+        "21/body/12/argument/5/1/3/1/expression/right": {
+          content: {
+            en: "Next step",
+            pl: "Następny krok",
+          },
+          hash: "43fb9d3da12cdf80c1d49037ec8b8eba",
+        },
         "21/declaration/body/11/argument/1/1/expression/body/0/argument/1/1": {
+          content: {
+            en: "<element:MoveLeft></element:MoveLeft> Return",
+            pl: "<element:MoveLeft></element:MoveLeft> Powrót",
+          },
+          hash: "1e2ea95a1cc35caf5407cb56609d471b",
+        },
+        "22/declaration/body/11/argument/1/1/expression/body/0/argument/1/1": {
           content: {
             en: "<element:MoveLeft></element:MoveLeft> Return",
             pl: "<element:MoveLeft></element:MoveLeft> Powrót",
@@ -10108,7 +10185,39 @@ export default {
             },
             hash: "2664239247be0ec83dcb0d3c87efe91e",
           },
+        "16/declaration/body/10/argument/5/1/expression/right/1/3/expression/right/3/1/expression/right":
+          {
+            content: {
+              en: "New term: ",
+              pl: "Nowy termin: ",
+            },
+            hash: "2664239247be0ec83dcb0d3c87efe91e",
+          },
+        "16/declaration/body/10/argument/5/1/expression/right/1/3/expression/right/3/expression/right":
+          {
+            content: {
+              en: "New term: ",
+              pl: "Nowy termin: ",
+            },
+            hash: "2664239247be0ec83dcb0d3c87efe91e",
+          },
         "16/declaration/body/10/argument/7/expression/right/1/3/expression/right/1/expression/right":
+          {
+            content: {
+              en: "New term: ",
+              pl: "Nowy termin: ",
+            },
+            hash: "2664239247be0ec83dcb0d3c87efe91e",
+          },
+        "16/declaration/body/10/argument/7/expression/right/1/3/expression/right/3/1/expression/right":
+          {
+            content: {
+              en: "New term ",
+              pl: "Nowy termin ",
+            },
+            hash: "0828f062c4e0803c1669acd4643c3d98",
+          },
+        "16/declaration/body/10/argument/7/expression/right/1/3/expression/right/3/expression/right":
           {
             content: {
               en: "New term: ",
@@ -28034,6 +28143,14 @@ export default {
             },
             hash: "3470690ace9f42b226e7317c545b9c5c",
           },
+        "5/declaration/body/5/argument/3/1/expression/consequent/3/expression/consequent/3/1/expression/0/body/1/3/expression/right":
+          {
+            content: {
+              en: "New term",
+              pl: "Nowy termin",
+            },
+            hash: "d1dec164cde465af81ea71949fe2bafa",
+          },
         "6/declaration/body/5/argument/3/1/expression/alternate/1": {
           content: {
             en: "Select a date",
@@ -28190,6 +28307,13 @@ export default {
           hash: "9fa090b63ef800c860a8c2beb55db264",
         },
         "13/body/5/argument/1/1/3/1/5/expression/right/1/expression/right": {
+          content: {
+            en: "New term: ",
+            pl: "Nowy termin: ",
+          },
+          hash: "2664239247be0ec83dcb0d3c87efe91e",
+        },
+        "13/body/5/argument/1/1/3/1/5/expression/right/3/1/expression/right": {
           content: {
             en: "New term: ",
             pl: "Nowy termin: ",
