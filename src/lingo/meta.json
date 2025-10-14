@@ -42,6 +42,142 @@
           "skip": false,
           "overrides": {},
           "content": "Account settings"
+        },
+        "3/declaration/body/0/argument/1/1": {
+          "type": "element",
+          "hash": "288c51e39a05a5e2a539d1c225a63133",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Account settings"
+        },
+        "3/declaration/body/0/argument/1/7/1": {
+          "type": "element",
+          "hash": "694a45bc5c96f6f3a27873c1cf5a7707",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Contact us"
+        },
+        "3/declaration/body/0/argument/1/7/3/1/1": {
+          "type": "element",
+          "hash": "7c5bb0a96a8440dde7c3b09071ad32f3",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Contact us:"
+        },
+        "3/declaration/body/0/argument/1/7/3/1/1/1/1": {
+          "type": "element",
+          "hash": "571596ac7dc88d4b30eed81db648c87b",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Email: "
+        },
+        "3/declaration/body/0/argument/1/7/3/1/1/1/3": {
+          "type": "element",
+          "hash": "e9751860b4fe97b2ad1f8464017a0efe",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "mimira@mimiraoffers.eu"
+        },
+        "3/declaration/body/0/argument/1/7/3/1/1/3/1": {
+          "type": "element",
+          "hash": "72154c99832885ead336e3f496958e28",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Tel: "
+        },
+        "3/declaration/body/0/argument/1/7/3/1/1/3/3": {
+          "type": "element",
+          "hash": "442642375d316529b507c0aff0e41695",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "+48 732 070 469"
+        },
+        "3/declaration/body/0/argument/1/7/3/1/3/1/1": {
+          "type": "element",
+          "hash": "571596ac7dc88d4b30eed81db648c87b",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Email: "
+        },
+        "3/declaration/body/0/argument/1/7/3/1/3/1/3": {
+          "type": "element",
+          "hash": "e9751860b4fe97b2ad1f8464017a0efe",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "mimira@mimiraoffers.eu"
+        },
+        "3/declaration/body/0/argument/1/7/3/1/3/3/1": {
+          "type": "element",
+          "hash": "72154c99832885ead336e3f496958e28",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Tel: "
+        },
+        "3/declaration/body/0/argument/1/7/3/1/3/3/3": {
+          "type": "element",
+          "hash": "442642375d316529b507c0aff0e41695",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "+48 732 070 469"
+        },
+        "3/declaration/body/0/argument/1/7/3/3": {
+          "type": "element",
+          "hash": "94514ecaf45c2a80b3ffb22106f89b20",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "If you have questions about a specific tender, remember that you can ask the chatbot."
+        },
+        "3/declaration/body/0/argument/1/7/5/1/1/1/1": {
+          "type": "element",
+          "hash": "571596ac7dc88d4b30eed81db648c87b",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Email: "
+        },
+        "3/declaration/body/0/argument/1/7/5/1/1/1/3": {
+          "type": "element",
+          "hash": "e9751860b4fe97b2ad1f8464017a0efe",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "mimira@mimiraoffers.eu"
+        },
+        "3/declaration/body/0/argument/1/7/5/1/1/3/1": {
+          "type": "element",
+          "hash": "72154c99832885ead336e3f496958e28",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Tel: "
+        },
+        "3/declaration/body/0/argument/1/7/5/1/1/3/3": {
+          "type": "element",
+          "hash": "442642375d316529b507c0aff0e41695",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "+48 732 070 469"
+        },
+        "3/declaration/body/0/argument/1/7/5/3": {
+          "type": "element",
+          "hash": "94514ecaf45c2a80b3ffb22106f89b20",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "If you have questions about a specific tender, remember that you can ask the chatbot."
         }
       }
     },
@@ -16962,6 +17098,66 @@
           "skip": false,
           "overrides": {},
           "content": "Main Navigation"
+        }
+      }
+    },
+    "features/navigation/components/help-icon.tsx": {
+      "scopes": {
+        "2/declaration/body/0/argument/3/1/1": {
+          "type": "element",
+          "hash": "62712a1f2fcef75e399e9a9a9ddbd495",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Help"
+        },
+        "2/declaration/body/0/argument/3/1/3/1": {
+          "type": "element",
+          "hash": "7c5bb0a96a8440dde7c3b09071ad32f3",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Contact us:"
+        },
+        "2/declaration/body/0/argument/3/1/3/3/1/1": {
+          "type": "element",
+          "hash": "571596ac7dc88d4b30eed81db648c87b",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Email: "
+        },
+        "2/declaration/body/0/argument/3/1/3/3/1/3": {
+          "type": "element",
+          "hash": "abbc51407c6c51c0a60f604b3097af57",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "mimira@mimiraoffers.eu"
+        },
+        "2/declaration/body/0/argument/3/1/3/3/3/1": {
+          "type": "element",
+          "hash": "72154c99832885ead336e3f496958e28",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Tel: "
+        },
+        "2/declaration/body/0/argument/3/1/3/3/3/3": {
+          "type": "element",
+          "hash": "c6806c388be794b2cb8cc94fc8670a74",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "+48 732 070 469"
+        },
+        "2/declaration/body/0/argument/3/1/5": {
+          "type": "element",
+          "hash": "16fb9ef1973d67f54d0ba20a78da7003",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "If you have questions about a specific tender, remember that you can ask the chatbot."
         }
       }
     },

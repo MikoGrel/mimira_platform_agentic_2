@@ -38,6 +38,62 @@ export default {
           },
           hash: "288c51e39a05a5e2a539d1c225a63133",
         },
+        "3/declaration/body/0/argument/1/1": {
+          content: {
+            en: "Account settings",
+            pl: "Ustawienia konta",
+          },
+          hash: "288c51e39a05a5e2a539d1c225a63133",
+        },
+        "3/declaration/body/0/argument/1/7/1": {
+          content: {
+            en: "Contact us",
+            pl: "Skontaktuj się z nami",
+          },
+          hash: "694a45bc5c96f6f3a27873c1cf5a7707",
+        },
+        "3/declaration/body/0/argument/1/7/3/1/1": {
+          content: {
+            en: "Contact us:",
+            pl: "Skontaktuj się z nami:",
+          },
+          hash: "7c5bb0a96a8440dde7c3b09071ad32f3",
+        },
+        "3/declaration/body/0/argument/1/7/3/1/3/1/1": {
+          content: {
+            en: "Email: ",
+            pl: "E-mail: ",
+          },
+          hash: "571596ac7dc88d4b30eed81db648c87b",
+        },
+        "3/declaration/body/0/argument/1/7/3/1/3/1/3": {
+          content: {
+            en: "mimira@mimiraoffers.eu",
+            pl: "mimira@mimiraoffers.eu",
+          },
+          hash: "e9751860b4fe97b2ad1f8464017a0efe",
+        },
+        "3/declaration/body/0/argument/1/7/3/1/3/3/1": {
+          content: {
+            en: "Tel: ",
+            pl: "Tel: ",
+          },
+          hash: "72154c99832885ead336e3f496958e28",
+        },
+        "3/declaration/body/0/argument/1/7/3/1/3/3/3": {
+          content: {
+            en: "+48 732 070 469",
+            pl: "+48 732 070 469",
+          },
+          hash: "442642375d316529b507c0aff0e41695",
+        },
+        "3/declaration/body/0/argument/1/7/3/3": {
+          content: {
+            en: "If you have questions about a specific tender, remember that you can ask the chatbot.",
+            pl: "Jeśli masz pytania dotyczące konkretnego przetargu, pamiętaj, że możesz zapytać chatbota.",
+          },
+          hash: "94514ecaf45c2a80b3ffb22106f89b20",
+        },
       },
     },
     "app/(platform)/dashboard/inbox/page.tsx": {
@@ -15205,6 +15261,59 @@ export default {
             pl: "Główna nawigacja",
           },
           hash: "9e8d5035217a4088af5d7de48c14283b",
+        },
+      },
+    },
+    "features/navigation/components/help-icon.tsx": {
+      entries: {
+        "2/declaration/body/0/argument/3/1/1": {
+          content: {
+            en: "Help",
+            pl: "Pomoc",
+          },
+          hash: "62712a1f2fcef75e399e9a9a9ddbd495",
+        },
+        "2/declaration/body/0/argument/3/1/3/1": {
+          content: {
+            en: "Contact us:",
+            pl: "Skontaktuj się z nami:",
+          },
+          hash: "7c5bb0a96a8440dde7c3b09071ad32f3",
+        },
+        "2/declaration/body/0/argument/3/1/3/3/1/1": {
+          content: {
+            en: "Email: ",
+            pl: "E-mail: ",
+          },
+          hash: "571596ac7dc88d4b30eed81db648c87b",
+        },
+        "2/declaration/body/0/argument/3/1/3/3/1/3": {
+          content: {
+            en: "mimira@mimiraoffers.eu",
+            pl: "mimira@mimiraoffers.eu",
+          },
+          hash: "abbc51407c6c51c0a60f604b3097af57",
+        },
+        "2/declaration/body/0/argument/3/1/3/3/3/1": {
+          content: {
+            en: "Tel: ",
+            pl: "Tel: ",
+          },
+          hash: "72154c99832885ead336e3f496958e28",
+        },
+        "2/declaration/body/0/argument/3/1/3/3/3/3": {
+          content: {
+            en: "+48 732 070 469",
+            pl: "+48 732 070 469",
+          },
+          hash: "c6806c388be794b2cb8cc94fc8670a74",
+        },
+        "2/declaration/body/0/argument/3/1/5": {
+          content: {
+            en: "If you have questions about a specific tender, remember that you can ask the chatbot.",
+            pl: "Jeśli masz pytania dotyczące konkretnego przetargu, pamiętaj, że możesz zapytać chatbota.",
+          },
+          hash: "16fb9ef1973d67f54d0ba20a78da7003",
         },
       },
     },

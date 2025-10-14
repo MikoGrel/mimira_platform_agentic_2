@@ -10,6 +10,7 @@ import UserMenu from "$/features/auth/components/user-menu";
 import { cookies } from "next/headers";
 import { CommandInput } from "$/features/navigation/components/command-input";
 import AuthGuard from "$/features/auth/components/auth-guard";
+import { HelpIcon } from "$/features/navigation/components/help-icon";
 
 export default async function DashboardLayout({
   children,
@@ -37,6 +38,7 @@ export default async function DashboardLayout({
           <div className="flex items-center gap-4 justify-end">
             <LocaleSwitcher locales={["pl", "en"]} />
             <UserMenu />
+            <HelpIcon />
           </div>
         </header>
         <div className="flex-1 rounded-tl-2xl border-l border-t border-sidebar-border overflow-y-auto overflow-x-hidden">
