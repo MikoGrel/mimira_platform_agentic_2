@@ -4319,10 +4319,10 @@ export default {
         },
         "19/0/init/2/1/value": {
           content: {
-            en: "Documentation",
-            pl: "Dokumentacja",
+            en: "Documents and Decision",
+            pl: "Dokumenty i decyzja",
           },
-          hash: "1563fcb5ddb5037b0709ccd3dd384a92",
+          hash: "74f985167dd24fa5506bbba73c7d640d",
         },
         "19/0/init/3/1/value": {
           content: {
@@ -4698,6 +4698,13 @@ export default {
           hash: "43fb9d3da12cdf80c1d49037ec8b8eba",
         },
         "20/body/12/argument/1/3/3/expression/right/1/expression/right": {
+          content: {
+            en: "New term: ",
+            pl: "Nowy termin: ",
+          },
+          hash: "2664239247be0ec83dcb0d3c87efe91e",
+        },
+        "20/body/12/argument/1/3/3/expression/right/3/1/expression/right": {
           content: {
             en: "New term: ",
             pl: "Nowy termin: ",
@@ -7904,6 +7911,20 @@ export default {
           },
           hash: "e17686a22ffad04cc7bb70524ed4478b",
         },
+        "6/declaration/body/3/argument/1": {
+          content: {
+            en: "Full description",
+            pl: "Pełny opis",
+          },
+          hash: "dc9b75484a44e37103ccad21dae20ee9",
+        },
+        "7/declaration/body/2/argument/1": {
+          content: {
+            en: "Full description",
+            pl: "Pełny opis",
+          },
+          hash: "dc9b75484a44e37103ccad21dae20ee9",
+        },
         "7/declaration/body/3/argument/1": {
           content: {
             en: "Full description",
@@ -10212,10 +10233,10 @@ export default {
         "16/declaration/body/10/argument/7/expression/right/1/3/expression/right/3/1/expression/right":
           {
             content: {
-              en: "New term ",
-              pl: "Nowy termin ",
+              en: "New term: ",
+              pl: "Nowy termin: ",
             },
-            hash: "0828f062c4e0803c1669acd4643c3d98",
+            hash: "2664239247be0ec83dcb0d3c87efe91e",
           },
         "16/declaration/body/10/argument/7/expression/right/1/3/expression/right/3/expression/right":
           {
@@ -21370,8 +21391,3372 @@ export default {
         },
       },
     },
+    "features/tender-form/components/documents-decision-step.tsx": {
+      entries: {
+        "17/declaration/body/10/0/init/body/0/expression/1/0/value/body/0/expression/0":
+          {
+            content: {
+              en: "Tender <expression/> was rejected",
+              pl: "Przetarg <expression/> został odrzucony",
+            },
+            hash: "da75484b6e8463ca4fea585845e3e086",
+          },
+        "17/declaration/body/12/consequent/argument/1/1": {
+          content: {
+            en: "We will prepare your documents. They will be ready within 48 hours at the latest",
+            pl: "Przygotujemy Twoje dokumenty. Będą gotowe najpóźniej w ciągu 48 godzin.",
+          },
+          hash: "28e5b302e5adec94d929969721a9d520",
+        },
+        "17/declaration/body/12/consequent/argument/1/5": {
+          content: {
+            en: "Don't forget to include the valuation. We can also help you with it — just let us know at mimira@mimiraoffers.eu or +48 732 070 469.",
+            pl: "Nie zapomnij dołączyć wyceny. Możemy Ci w tym pomóc — po prostu daj nam znać na mimira@mimiraoffers.eu lub +48 732 070 469.",
+          },
+          hash: "8b199e4c03646258cacdb01bdc3ad72f",
+        },
+        "17/declaration/body/12/consequent/argument/1/7": {
+          content: {
+            en: "Cancel preparation and reject this tender",
+            pl: "Anuluj przygotowanie i odrzuć tę ofertę",
+          },
+          hash: "49d1e0e6ab4ccf36e47cf6a776d82937",
+        },
+        "17/declaration/body/13/consequent/0/argument/1/1": {
+          content: {
+            en: "Loading documents...",
+            pl: "Ładowanie dokumentów...",
+          },
+          hash: "b795b22e2d0abd430c2ff0b28fb26e5a",
+        },
+        "17/declaration/body/13/consequent/argument/1/1": {
+          content: {
+            en: "We will prepare your documents. They will be ready within 48 hours at the latest",
+            pl: "Przygotujemy Twoje dokumenty. Będą gotowe najpóźniej w ciągu 48 godzin.",
+          },
+          hash: "28e5b302e5adec94d929969721a9d520",
+        },
+        "17/declaration/body/13/consequent/argument/1/5": {
+          content: {
+            en: "Don't forget to include the valuation. We can also help you with it — just let us know at mimira@mimiraoffers.eu or +48 732 070 469.",
+            pl: "Nie zapomnij dołączyć wyceny. Możemy Ci w tym pomóc — po prostu daj nam znać na mimira@mimiraoffers.eu lub +48 732 070 469.",
+          },
+          hash: "8b199e4c03646258cacdb01bdc3ad72f",
+        },
+        "17/declaration/body/13/consequent/argument/1/7": {
+          content: {
+            en: "Cancel preparation and reject this tender",
+            pl: "Anuluj przygotowanie i odrzuć tę ofertę",
+          },
+          hash: "49d1e0e6ab4ccf36e47cf6a776d82937",
+        },
+        "17/declaration/body/14/consequent/0/argument/1/1": {
+          content: {
+            en: "Failed to load documents. Please try again.",
+            pl: "Nie udało się załadować dokumentów. Proszę spróbować ponownie.",
+          },
+          hash: "1f3bb71b519b18f32ba0f1a5a360afb0",
+        },
+        "17/declaration/body/15/consequent/0/argument/1/1": {
+          content: {
+            en: "Failed to load documents. Please try again.",
+            pl: "Nie udało się załadować dokumentów. Proszę spróbować ponownie.",
+          },
+          hash: "1f3bb71b519b18f32ba0f1a5a360afb0",
+        },
+        "17/declaration/body/16/argument/11/expression/right/1/1": {
+          content: {
+            en: "Additional Documents to Attach",
+            pl: "Dodatkowe dokumenty do załączenia",
+          },
+          hash: "3bee1ee3d405eefa3fd49756d3442d30",
+        },
+        "17/declaration/body/16/argument/11/expression/right/5/1": {
+          content: {
+            en: "Please ensure you also include these documents when submitting your offer:",
+            pl: "Upewnij się, że dołączasz również te dokumenty podczas składania oferty:",
+          },
+          hash: "b12d2abb6aacc3745cd12ff69db2c315",
+        },
+        "17/declaration/body/16/argument/11/expression/right/5/3/1/expression/0/body/1":
+          {
+            content: {
+              en: "•",
+              pl: "•",
+            },
+            hash: "5f1c90d0fd46023ba1bfaaa2537f59fb",
+          },
+        "17/declaration/body/16/argument/15/1/1/3": {
+          content: {
+            en: "Confirm Submission",
+            pl: "Potwierdź złożenie",
+          },
+          hash: "d38f381ce245130a1b5fce4e1896441f",
+        },
+        "17/declaration/body/16/argument/15/5/1": {
+          content: {
+            en: "<element:strong>Important:</element:strong> You are responsible for submitting the offer through the platform. After submitting, please confirm below.",
+            pl: "<element:strong>Ważne:</element:strong> Jesteś odpowiedzialny za złożenie oferty za pośrednictwem platformy. Po złożeniu oferty, proszę potwierdzić poniżej.",
+          },
+          hash: "5efa18df04936d87dce6f7887e14960f",
+        },
+        "17/declaration/body/16/argument/15/5/3": {
+          content: {
+            en: "I confirm that I have submitted the offer through the platform",
+            pl: "Potwierdzam, że złożyłem ofertę za pośrednictwem platformy",
+          },
+          hash: "a0fa58a1841ed835ecaefff17d5389b3",
+        },
+        "17/declaration/body/16/argument/15/5/5/1": {
+          content: {
+            en: "Reject this tender",
+            pl: "Odrzuć ten przetarg",
+          },
+          hash: "eeff2e12eef96d0acb2be4f64ed71a3a",
+        },
+        "17/declaration/body/16/argument/15/5/5/3": {
+          content: {
+            en: "Confirm Submission",
+            pl: "Potwierdź złożenie",
+          },
+          hash: "2d9b2c057d81cbc43f482e3d50efd4e7",
+        },
+        "17/declaration/body/16/argument/3/1/1/3": {
+          content: {
+            en: "Submission Information",
+            pl: "Informacje o złożeniu",
+          },
+          hash: "e75260ca849db85c75ecb36d672d6642",
+        },
+        "17/declaration/body/16/argument/3/1/3": {
+          content: {
+            en: "Please submit your offer through the platform using the link below",
+            pl: "Proszę złożyć ofertę za pośrednictwem platformy, korzystając z poniższego linku",
+          },
+          hash: "0eb40d1ec5acb005ae08317531695561",
+        },
+        "17/declaration/body/16/argument/3/5/11/expression/right/3/1": {
+          content: {
+            en: "Deposit (Wadium):",
+            pl: "Depozyt (Wadium):",
+          },
+          hash: "86145c543d835617a0e7086aa4048822",
+        },
+        "17/declaration/body/16/argument/3/5/3/expression/right/3/1": {
+          content: {
+            en: "Platform submission link:",
+            pl: "Link do złożenia oferty na platformie:",
+          },
+          hash: "3ce202a79df68ff2ef38403148699d63",
+        },
+        "17/declaration/body/16/argument/3/5/7/expression/right/3/1": {
+          content: {
+            en: "Submission deadline:",
+            pl: "Termin składania ofert:",
+          },
+          hash: "a5d4622c702b85718005150dc2b9b942",
+        },
+        "17/declaration/body/16/argument/7/1/3": {
+          content: {
+            en: "Documents to Download",
+            pl: "Dokumenty do pobrania",
+          },
+          hash: "9e43531d5f81a3cc6564d73d5a8a7216",
+        },
+        "17/declaration/body/16/argument/7/3/expression/alternate/1/openingElement/1/value/expression":
+          {
+            content: {
+              en: "Ready documentation",
+              pl: "Gotowa dokumentacja",
+            },
+            hash: "3ba81e87ae8016eea5860e247c708dd9",
+          },
+        "17/declaration/body/16/argument/7/3/expression/alternate/3/openingElement/1/value/expression":
+          {
+            content: {
+              en: "Requires manual fill",
+              pl: "Wymaga ręcznego wypełnienia",
+            },
+            hash: "030e160bf50c084716488dc452429db2",
+          },
+        "17/declaration/body/16/argument/7/3/expression/alternate/5/openingElement/1/value/expression":
+          {
+            content: {
+              en: "Other attachments",
+              pl: "Inne załączniki",
+            },
+            hash: "f187e342b6ff30e7d4d96d9395dea305",
+          },
+        "17/declaration/body/16/argument/7/3/expression/consequent": {
+          content: {
+            en: "No documents to display. You can proceed to submit your offer.",
+            pl: "Brak dokumentów do wyświetlenia. Możesz przejść do złożenia oferty.",
+          },
+          hash: "e39b65518178a65d2098e713fc70a567",
+        },
+        "17/declaration/body/17/argument/11/expression/right/1/1": {
+          content: {
+            en: "Additional Documents to Attach",
+            pl: "Dodatkowe dokumenty do załączenia",
+          },
+          hash: "3bee1ee3d405eefa3fd49756d3442d30",
+        },
+        "17/declaration/body/17/argument/11/expression/right/5/1": {
+          content: {
+            en: "Please ensure you also include these documents when submitting your offer:",
+            pl: "Upewnij się, że dołączasz również te dokumenty podczas składania oferty:",
+          },
+          hash: "b12d2abb6aacc3745cd12ff69db2c315",
+        },
+        "17/declaration/body/17/argument/11/expression/right/5/3/1/expression/0/body/1":
+          {
+            content: {
+              en: "•",
+              pl: "•",
+            },
+            hash: "5f1c90d0fd46023ba1bfaaa2537f59fb",
+          },
+        "17/declaration/body/17/argument/15/1/1/3": {
+          content: {
+            en: "Confirm Submission",
+            pl: "Potwierdź złożenie",
+          },
+          hash: "d38f381ce245130a1b5fce4e1896441f",
+        },
+        "17/declaration/body/17/argument/15/5/1": {
+          content: {
+            en: "<element:strong>Important:</element:strong> You are responsible for submitting the offer through the platform. After submitting, please confirm below.",
+            pl: "<element:strong>Ważne:</element:strong> Jesteś odpowiedzialny za złożenie oferty za pośrednictwem platformy. Po złożeniu oferty, proszę potwierdzić poniżej.",
+          },
+          hash: "5efa18df04936d87dce6f7887e14960f",
+        },
+        "17/declaration/body/17/argument/15/5/3": {
+          content: {
+            en: "I confirm that I have submitted the offer through the platform",
+            pl: "Potwierdzam, że złożyłem ofertę za pośrednictwem platformy",
+          },
+          hash: "a0fa58a1841ed835ecaefff17d5389b3",
+        },
+        "17/declaration/body/17/argument/15/5/5/1": {
+          content: {
+            en: "Reject this tender",
+            pl: "Odrzuć ten przetarg",
+          },
+          hash: "eeff2e12eef96d0acb2be4f64ed71a3a",
+        },
+        "17/declaration/body/17/argument/15/5/5/3": {
+          content: {
+            en: "Confirm Submission",
+            pl: "Potwierdź złożenie",
+          },
+          hash: "2d9b2c057d81cbc43f482e3d50efd4e7",
+        },
+        "17/declaration/body/17/argument/3/1/1/3": {
+          content: {
+            en: "Submission Information",
+            pl: "Informacje o złożeniu",
+          },
+          hash: "e75260ca849db85c75ecb36d672d6642",
+        },
+        "17/declaration/body/17/argument/3/1/3": {
+          content: {
+            en: "Please submit your offer through the platform using the link below",
+            pl: "Proszę złożyć ofertę za pośrednictwem platformy, korzystając z poniższego linku",
+          },
+          hash: "0eb40d1ec5acb005ae08317531695561",
+        },
+        "17/declaration/body/17/argument/3/5/11/expression/right/3/1": {
+          content: {
+            en: "Deposit (Wadium):",
+            pl: "Depozyt (Wadium):",
+          },
+          hash: "86145c543d835617a0e7086aa4048822",
+        },
+        "17/declaration/body/17/argument/3/5/3/expression/right/3/1": {
+          content: {
+            en: "Platform submission link:",
+            pl: "Link do złożenia oferty na platformie:",
+          },
+          hash: "3ce202a79df68ff2ef38403148699d63",
+        },
+        "17/declaration/body/17/argument/3/5/7/expression/right/3/1": {
+          content: {
+            en: "Submission deadline:",
+            pl: "Termin składania ofert:",
+          },
+          hash: "a5d4622c702b85718005150dc2b9b942",
+        },
+        "17/declaration/body/17/argument/7/1/3": {
+          content: {
+            en: "Documents to Download",
+            pl: "Dokumenty do pobrania",
+          },
+          hash: "9e43531d5f81a3cc6564d73d5a8a7216",
+        },
+        "17/declaration/body/17/argument/7/3/expression/alternate/1/openingElement/1/value/expression":
+          {
+            content: {
+              en: "Ready documentation",
+              pl: "Gotowa dokumentacja",
+            },
+            hash: "3ba81e87ae8016eea5860e247c708dd9",
+          },
+        "17/declaration/body/17/argument/7/3/expression/alternate/3/openingElement/1/value/expression":
+          {
+            content: {
+              en: "Requires manual fill",
+              pl: "Wymaga ręcznego wypełnienia",
+            },
+            hash: "030e160bf50c084716488dc452429db2",
+          },
+        "17/declaration/body/17/argument/7/3/expression/alternate/5/openingElement/1/value/expression":
+          {
+            content: {
+              en: "Other attachments",
+              pl: "Inne załączniki",
+            },
+            hash: "f187e342b6ff30e7d4d96d9395dea305",
+          },
+        "17/declaration/body/17/argument/7/3/expression/consequent": {
+          content: {
+            en: "No documents to display. You can proceed to submit your offer.",
+            pl: "Brak dokumentów do wyświetlenia. Możesz przejść do złożenia oferty.",
+          },
+          hash: "e39b65518178a65d2098e713fc70a567",
+        },
+        "17/declaration/body/8/0/init/body/2/expression/1/0/value/body/0/expression/0":
+          {
+            content: {
+              en: "Offer submitted successfully for <expression/>",
+              pl: "Oferta została pomyślnie złożona dla <expression/>",
+            },
+            hash: "95cad397804e3a7d042c08d4a15b91dc",
+          },
+        "17/declaration/body/9/0/init/body/0/expression/1/0/value/body/0/expression/0":
+          {
+            content: {
+              en: "Tender <expression/> was rejected",
+              pl: "Przetarg <expression/> został odrzucony",
+            },
+            hash: "da75484b6e8463ca4fea585845e3e086",
+          },
+        "17/declaration/body/9/0/init/body/2/expression/1/0/value/body/0/expression/0":
+          {
+            content: {
+              en: "Offer submitted successfully for <expression/>",
+              pl: "Oferta została pomyślnie złożona dla <expression/>",
+            },
+            hash: "95cad397804e3a7d042c08d4a15b91dc",
+          },
+        "18/declaration/body/12/consequent/argument/1/1": {
+          content: {
+            en: "We will prepare your documents. They will be ready within 48 hours at the latest",
+            pl: "Przygotujemy Twoje dokumenty. Będą gotowe najpóźniej w ciągu 48 godzin.",
+          },
+          hash: "28e5b302e5adec94d929969721a9d520",
+        },
+        "18/declaration/body/12/consequent/argument/1/5": {
+          content: {
+            en: "Don't forget to include the valuation. We can also help you with it — just let us know at mimira@mimiraoffers.eu or +48 732 070 469.",
+            pl: "Nie zapomnij dołączyć wyceny. Możemy Ci w tym pomóc — po prostu daj nam znać na mimira@mimiraoffers.eu lub +48 732 070 469.",
+          },
+          hash: "8b199e4c03646258cacdb01bdc3ad72f",
+        },
+        "18/declaration/body/12/consequent/argument/1/7": {
+          content: {
+            en: "Cancel preparation and reject this tender",
+            pl: "Anuluj przygotowanie i odrzuć tę ofertę",
+          },
+          hash: "49d1e0e6ab4ccf36e47cf6a776d82937",
+        },
+        "18/declaration/body/13/consequent/0/argument/1/1": {
+          content: {
+            en: "Loading documents...",
+            pl: "Ładowanie dokumentów...",
+          },
+          hash: "b795b22e2d0abd430c2ff0b28fb26e5a",
+        },
+        "18/declaration/body/14/consequent/0/argument/1/1": {
+          content: {
+            en: "Failed to load documents. Please try again.",
+            pl: "Nie udało się załadować dokumentów. Proszę spróbować ponownie.",
+          },
+          hash: "1f3bb71b519b18f32ba0f1a5a360afb0",
+        },
+        "18/declaration/body/16/argument/11/expression/right/1/1": {
+          content: {
+            en: "Additional Documents to Attach",
+            pl: "Dodatkowe dokumenty do załączenia",
+          },
+          hash: "3bee1ee3d405eefa3fd49756d3442d30",
+        },
+        "18/declaration/body/16/argument/11/expression/right/5/1": {
+          content: {
+            en: "Please ensure you also include these documents when submitting your offer:",
+            pl: "Upewnij się, że dołączasz również te dokumenty podczas składania oferty:",
+          },
+          hash: "b12d2abb6aacc3745cd12ff69db2c315",
+        },
+        "18/declaration/body/16/argument/11/expression/right/5/3/1/expression/0/body/1":
+          {
+            content: {
+              en: "•",
+              pl: "•",
+            },
+            hash: "5f1c90d0fd46023ba1bfaaa2537f59fb",
+          },
+        "18/declaration/body/16/argument/15/1/1/3": {
+          content: {
+            en: "Confirm Submission",
+            pl: "Potwierdź złożenie",
+          },
+          hash: "d38f381ce245130a1b5fce4e1896441f",
+        },
+        "18/declaration/body/16/argument/15/5/1": {
+          content: {
+            en: "<element:strong>Important:</element:strong> You are responsible for submitting the offer through the platform. After submitting, please confirm below.",
+            pl: "<element:strong>Ważne:</element:strong> Jesteś odpowiedzialny za złożenie oferty za pośrednictwem platformy. Po złożeniu oferty, proszę potwierdzić poniżej.",
+          },
+          hash: "5efa18df04936d87dce6f7887e14960f",
+        },
+        "18/declaration/body/16/argument/15/5/3": {
+          content: {
+            en: "I confirm that I have submitted the offer through the platform",
+            pl: "Potwierdzam, że złożyłem ofertę za pośrednictwem platformy",
+          },
+          hash: "a0fa58a1841ed835ecaefff17d5389b3",
+        },
+        "18/declaration/body/16/argument/15/5/5/1": {
+          content: {
+            en: "Reject this tender",
+            pl: "Odrzuć ten przetarg",
+          },
+          hash: "eeff2e12eef96d0acb2be4f64ed71a3a",
+        },
+        "18/declaration/body/16/argument/15/5/5/3": {
+          content: {
+            en: "Confirm Submission",
+            pl: "Potwierdź złożenie",
+          },
+          hash: "2d9b2c057d81cbc43f482e3d50efd4e7",
+        },
+        "18/declaration/body/16/argument/3/1/1/3": {
+          content: {
+            en: "Submission Information",
+            pl: "Informacje o złożeniu",
+          },
+          hash: "e75260ca849db85c75ecb36d672d6642",
+        },
+        "18/declaration/body/16/argument/3/1/3": {
+          content: {
+            en: "Please submit your offer through the platform using the link below",
+            pl: "Proszę złożyć ofertę za pośrednictwem platformy, korzystając z poniższego linku",
+          },
+          hash: "0eb40d1ec5acb005ae08317531695561",
+        },
+        "18/declaration/body/16/argument/3/5/11/expression/right/3/1": {
+          content: {
+            en: "Deposit (Wadium):",
+            pl: "Depozyt (Wadium):",
+          },
+          hash: "86145c543d835617a0e7086aa4048822",
+        },
+        "18/declaration/body/16/argument/3/5/3/expression/right/3/1": {
+          content: {
+            en: "Platform submission link:",
+            pl: "Link do złożenia oferty na platformie:",
+          },
+          hash: "3ce202a79df68ff2ef38403148699d63",
+        },
+        "18/declaration/body/16/argument/3/5/7/expression/right/3/1": {
+          content: {
+            en: "Submission deadline:",
+            pl: "Termin składania ofert:",
+          },
+          hash: "a5d4622c702b85718005150dc2b9b942",
+        },
+        "18/declaration/body/16/argument/7/1/3": {
+          content: {
+            en: "Documents to Download",
+            pl: "Dokumenty do pobrania",
+          },
+          hash: "9e43531d5f81a3cc6564d73d5a8a7216",
+        },
+        "18/declaration/body/16/argument/7/3/expression/alternate/1/openingElement/1/value/expression":
+          {
+            content: {
+              en: "Ready documentation",
+              pl: "Gotowa dokumentacja",
+            },
+            hash: "3ba81e87ae8016eea5860e247c708dd9",
+          },
+        "18/declaration/body/16/argument/7/3/expression/alternate/3/openingElement/1/value/expression":
+          {
+            content: {
+              en: "Requires manual fill",
+              pl: "Wymaga ręcznego wypełnienia",
+            },
+            hash: "030e160bf50c084716488dc452429db2",
+          },
+        "18/declaration/body/16/argument/7/3/expression/alternate/5/openingElement/1/value/expression":
+          {
+            content: {
+              en: "Other attachments",
+              pl: "Inne załączniki",
+            },
+            hash: "f187e342b6ff30e7d4d96d9395dea305",
+          },
+        "18/declaration/body/16/argument/7/3/expression/consequent": {
+          content: {
+            en: "No documents to display. You can proceed to submit your offer.",
+            pl: "Brak dokumentów do wyświetlenia. Możesz przejść do złożenia oferty.",
+          },
+          hash: "e39b65518178a65d2098e713fc70a567",
+        },
+        "18/declaration/body/8/0/init/body/2/expression/1/0/value/body/0/expression/0":
+          {
+            content: {
+              en: "Offer submitted successfully for <expression/>",
+              pl: "Oferta została pomyślnie złożona dla <expression/>",
+            },
+            hash: "95cad397804e3a7d042c08d4a15b91dc",
+          },
+        "18/declaration/body/9/0/init/body/0/expression/1/0/value/body/0/expression/0":
+          {
+            content: {
+              en: "Tender <expression/> was rejected",
+              pl: "Przetarg <expression/> został odrzucony",
+            },
+            hash: "da75484b6e8463ca4fea585845e3e086",
+          },
+        "19/declaration/body/12/consequent/argument/1/1": {
+          content: {
+            en: "We will prepare your documents. They will be ready within 48 hours at the latest",
+            pl: "Przygotujemy Twoje dokumenty. Będą gotowe najpóźniej w ciągu 48 godzin.",
+          },
+          hash: "28e5b302e5adec94d929969721a9d520",
+        },
+        "19/declaration/body/12/consequent/argument/1/5": {
+          content: {
+            en: "Don't forget to include the valuation. We can also help you with it — just let us know at mimira@mimiraoffers.eu or +48 732 070 469.",
+            pl: "Nie zapomnij dołączyć wyceny. Możemy Ci w tym pomóc — po prostu daj nam znać na mimira@mimiraoffers.eu lub +48 732 070 469.",
+          },
+          hash: "8b199e4c03646258cacdb01bdc3ad72f",
+        },
+        "19/declaration/body/12/consequent/argument/1/7": {
+          content: {
+            en: "Cancel preparation and reject this tender",
+            pl: "Anuluj przygotowanie i odrzuć tę ofertę",
+          },
+          hash: "49d1e0e6ab4ccf36e47cf6a776d82937",
+        },
+        "19/declaration/body/13/consequent/0/argument/1/1": {
+          content: {
+            en: "Loading documents...",
+            pl: "Ładowanie dokumentów...",
+          },
+          hash: "b795b22e2d0abd430c2ff0b28fb26e5a",
+        },
+        "19/declaration/body/14/consequent/0/argument/1/1": {
+          content: {
+            en: "Failed to load documents. Please try again.",
+            pl: "Nie udało się załadować dokumentów. Proszę spróbować ponownie.",
+          },
+          hash: "1f3bb71b519b18f32ba0f1a5a360afb0",
+        },
+        "19/declaration/body/16/argument/13/expression/right/1/1": {
+          content: {
+            en: "Additional Documents to Attach",
+            pl: "Dodatkowe dokumenty do załączenia",
+          },
+          hash: "3bee1ee3d405eefa3fd49756d3442d30",
+        },
+        "19/declaration/body/16/argument/13/expression/right/5/1": {
+          content: {
+            en: "Please ensure you also include these documents when submitting your offer:",
+            pl: "Upewnij się, że dołączasz również te dokumenty podczas składania oferty:",
+          },
+          hash: "b12d2abb6aacc3745cd12ff69db2c315",
+        },
+        "19/declaration/body/16/argument/13/expression/right/5/3/1/expression/0/body/1":
+          {
+            content: {
+              en: "•",
+              pl: "•",
+            },
+            hash: "5f1c90d0fd46023ba1bfaaa2537f59fb",
+          },
+        "19/declaration/body/16/argument/17/1/1/3": {
+          content: {
+            en: "Confirm Submission",
+            pl: "Potwierdź złożenie",
+          },
+          hash: "d38f381ce245130a1b5fce4e1896441f",
+        },
+        "19/declaration/body/16/argument/17/5/1": {
+          content: {
+            en: "<element:strong>Important:</element:strong> You are responsible for submitting the offer through the platform. After submitting, please confirm below.",
+            pl: "<element:strong>Ważne:</element:strong> Jesteś odpowiedzialny za złożenie oferty za pośrednictwem platformy. Po złożeniu oferty, proszę potwierdzić poniżej.",
+          },
+          hash: "5efa18df04936d87dce6f7887e14960f",
+        },
+        "19/declaration/body/16/argument/17/5/3": {
+          content: {
+            en: "I confirm that I have submitted the offer through the platform",
+            pl: "Potwierdzam, że złożyłem ofertę za pośrednictwem platformy",
+          },
+          hash: "a0fa58a1841ed835ecaefff17d5389b3",
+        },
+        "19/declaration/body/16/argument/17/5/5/1": {
+          content: {
+            en: "Reject this tender",
+            pl: "Odrzuć ten przetarg",
+          },
+          hash: "eeff2e12eef96d0acb2be4f64ed71a3a",
+        },
+        "19/declaration/body/16/argument/17/5/5/3": {
+          content: {
+            en: "Confirm Submission",
+            pl: "Potwierdź złożenie",
+          },
+          hash: "2d9b2c057d81cbc43f482e3d50efd4e7",
+        },
+        "19/declaration/body/16/argument/3/1/1/3": {
+          content: {
+            en: "Submission Information",
+            pl: "Informacje o złożeniu",
+          },
+          hash: "e75260ca849db85c75ecb36d672d6642",
+        },
+        "19/declaration/body/16/argument/3/1/3": {
+          content: {
+            en: "Please submit your offer through the platform using the link below",
+            pl: "Proszę złożyć ofertę za pośrednictwem platformy, korzystając z poniższego linku",
+          },
+          hash: "0eb40d1ec5acb005ae08317531695561",
+        },
+        "19/declaration/body/16/argument/3/5/11/expression/right/3/1": {
+          content: {
+            en: "Deposit (Wadium):",
+            pl: "Depozyt (Wadium):",
+          },
+          hash: "86145c543d835617a0e7086aa4048822",
+        },
+        "19/declaration/body/16/argument/3/5/3/expression/right/3/1": {
+          content: {
+            en: "Platform submission link:",
+            pl: "Link do złożenia oferty na platformie:",
+          },
+          hash: "3ce202a79df68ff2ef38403148699d63",
+        },
+        "19/declaration/body/16/argument/3/5/7/expression/right/3/1": {
+          content: {
+            en: "Submission deadline:",
+            pl: "Termin składania ofert:",
+          },
+          hash: "a5d4622c702b85718005150dc2b9b942",
+        },
+        "19/declaration/body/16/argument/5/1": {
+          content: {
+            en: "Documents to Download",
+            pl: "Dokumenty do pobrania",
+          },
+          hash: "9e43531d5f81a3cc6564d73d5a8a7216",
+        },
+        "19/declaration/body/16/argument/5/3/1/openingElement/1/value/expression":
+          {
+            content: {
+              en: "Ready documentation",
+              pl: "Gotowa dokumentacja",
+            },
+            hash: "3ba81e87ae8016eea5860e247c708dd9",
+          },
+        "19/declaration/body/16/argument/5/3/3/openingElement/1/value/expression":
+          {
+            content: {
+              en: "Requires manual fill",
+              pl: "Wymaga ręcznego wypełnienia",
+            },
+            hash: "030e160bf50c084716488dc452429db2",
+          },
+        "19/declaration/body/16/argument/5/3/5/openingElement/1/value/expression":
+          {
+            content: {
+              en: "Other attachments",
+              pl: "Inne załączniki",
+            },
+            hash: "f187e342b6ff30e7d4d96d9395dea305",
+          },
+        "19/declaration/body/8/0/init/body/2/expression/1/0/value/body/0/expression/0":
+          {
+            content: {
+              en: "Offer submitted successfully for <expression/>",
+              pl: "Oferta została pomyślnie złożona dla <expression/>",
+            },
+            hash: "95cad397804e3a7d042c08d4a15b91dc",
+          },
+        "19/declaration/body/9/0/init/body/0/expression/1/0/value/body/0/expression/0":
+          {
+            content: {
+              en: "Tender <expression/> was rejected",
+              pl: "Przetarg <expression/> został odrzucony",
+            },
+            hash: "da75484b6e8463ca4fea585845e3e086",
+          },
+        "20/declaration/body/12/consequent/argument/1/1": {
+          content: {
+            en: "We will prepare your documents. They will be ready within 48 hours at the latest",
+            pl: "Przygotujemy Twoje dokumenty. Będą gotowe najpóźniej w ciągu 48 godzin.",
+          },
+          hash: "28e5b302e5adec94d929969721a9d520",
+        },
+        "20/declaration/body/12/consequent/argument/1/5": {
+          content: {
+            en: "Don't forget to include the valuation. We can also help you with it — just let us know at mimira@mimiraoffers.eu or +48 732 070 469.",
+            pl: "Nie zapomnij dołączyć wyceny. Możemy Ci w tym pomóc — po prostu daj nam znać na mimira@mimiraoffers.eu lub +48 732 070 469.",
+          },
+          hash: "8b199e4c03646258cacdb01bdc3ad72f",
+        },
+        "20/declaration/body/12/consequent/argument/1/7": {
+          content: {
+            en: "Cancel preparation and reject this tender",
+            pl: "Anuluj przygotowanie i odrzuć tę ofertę",
+          },
+          hash: "49d1e0e6ab4ccf36e47cf6a776d82937",
+        },
+        "20/declaration/body/13/consequent/0/argument/1/1": {
+          content: {
+            en: "Loading documents...",
+            pl: "Ładowanie dokumentów...",
+          },
+          hash: "b795b22e2d0abd430c2ff0b28fb26e5a",
+        },
+        "20/declaration/body/14/consequent/0/argument/1/1": {
+          content: {
+            en: "Failed to load documents. Please try again.",
+            pl: "Nie udało się załadować dokumentów. Proszę spróbować ponownie.",
+          },
+          hash: "1f3bb71b519b18f32ba0f1a5a360afb0",
+        },
+        "20/declaration/body/16/argument/1/1/11/expression/right/1": {
+          content: {
+            en: "Additional Documents to Attach",
+            pl: "Dodatkowe dokumenty do załączenia",
+          },
+          hash: "c287d28bf36b66bb994d6b9f83474781",
+        },
+        "20/declaration/body/16/argument/1/1/11/expression/right/3/1/1": {
+          content: {
+            en: "Please ensure you also include these documents when submitting your offer:",
+            pl: "Upewnij się, że dołączasz również te dokumenty podczas składania oferty:",
+          },
+          hash: "d73d157c01311ce5a88cfae1fa19d441",
+        },
+        "20/declaration/body/16/argument/1/1/11/expression/right/3/1/3/1/expression/0/body/1":
+          {
+            content: {
+              en: "•",
+              pl: "•",
+            },
+            hash: "5f1c90d0fd46023ba1bfaaa2537f59fb",
+          },
+        "20/declaration/body/16/argument/1/1/15/1": {
+          content: {
+            en: "Confirm Submission",
+            pl: "Potwierdź złożenie",
+          },
+          hash: "d38f381ce245130a1b5fce4e1896441f",
+        },
+        "20/declaration/body/16/argument/1/1/15/3/1/1": {
+          content: {
+            en: "<element:strong>Important:</element:strong> You are responsible for submitting the offer through the platform. After submitting, please confirm below.",
+            pl: "<element:strong>Ważne:</element:strong> Jesteś odpowiedzialny za złożenie oferty za pośrednictwem platformy. Po złożeniu oferty, potwierdź to poniżej.",
+          },
+          hash: "6ddd7512d490554cd5c06658a21ee49c",
+        },
+        "20/declaration/body/16/argument/1/1/15/3/1/3": {
+          content: {
+            en: "I confirm that I have submitted the offer through the platform",
+            pl: "Potwierdzam, że złożyłem ofertę za pośrednictwem platformy",
+          },
+          hash: "616f35f7823e01803992b2cfeb1b616c",
+        },
+        "20/declaration/body/16/argument/1/1/15/3/1/5/1": {
+          content: {
+            en: "Reject this tender",
+            pl: "Odrzuć tę ofertę",
+          },
+          hash: "676de58ded59cc9dc7af128fd2b15ca8",
+        },
+        "20/declaration/body/16/argument/1/1/15/3/1/5/3": {
+          content: {
+            en: "Confirm Submission",
+            pl: "Potwierdź złożenie",
+          },
+          hash: "d4ebd618bac1563cd8abdacb3abd0ee1",
+        },
+        "20/declaration/body/16/argument/1/1/3/1": {
+          content: {
+            en: "Submission Information",
+            pl: "Informacje o złożeniu",
+          },
+          hash: "e75260ca849db85c75ecb36d672d6642",
+        },
+        "20/declaration/body/16/argument/1/1/3/3/1/1/expression/right-title": {
+          content: {
+            en: "Platform Submission Link",
+            pl: "Link do złożenia oferty na platformie",
+          },
+          hash: "59a70694de263690120bdc8eee6dfddb",
+        },
+        "20/declaration/body/16/argument/1/1/3/3/1/3/expression/right-title": {
+          content: {
+            en: "Submission Deadline",
+            pl: "Termin składania ofert",
+          },
+          hash: "fc1a76e3b4ec03fec9133f685de04eff",
+        },
+        "20/declaration/body/16/argument/1/1/3/3/1/5/expression/right-title": {
+          content: {
+            en: "Deposit (Wadium)",
+            pl: "Depozyt (Wadium)",
+          },
+          hash: "b1fff394ee8965b12f190e54c16a3af3",
+        },
+        "20/declaration/body/16/argument/1/1/7/1": {
+          content: {
+            en: "Documents to Download",
+            pl: "Dokumenty do pobrania",
+          },
+          hash: "9e43531d5f81a3cc6564d73d5a8a7216",
+        },
+        "20/declaration/body/16/argument/1/1/7/3/1/expression/alternate/1/openingElement/1/value/expression":
+          {
+            content: {
+              en: "Ready documentation",
+              pl: "Gotowa dokumentacja",
+            },
+            hash: "3ba81e87ae8016eea5860e247c708dd9",
+          },
+        "20/declaration/body/16/argument/1/1/7/3/1/expression/alternate/3/openingElement/1/value/expression":
+          {
+            content: {
+              en: "Requires manual fill",
+              pl: "Wymaga ręcznego wypełnienia",
+            },
+            hash: "030e160bf50c084716488dc452429db2",
+          },
+        "20/declaration/body/16/argument/1/1/7/3/1/expression/alternate/5/openingElement/1/value/expression":
+          {
+            content: {
+              en: "Other attachments",
+              pl: "Inne załączniki",
+            },
+            hash: "f187e342b6ff30e7d4d96d9395dea305",
+          },
+        "20/declaration/body/16/argument/1/1/7/3/1/expression/consequent": {
+          content: {
+            en: "No documents to display. You can proceed to submit your offer.",
+            pl: "Brak dokumentów do wyświetlenia. Możesz przejść do złożenia oferty.",
+          },
+          hash: "8143c2dd65b40e22e5da7aa3f30b0f9b",
+        },
+        "20/declaration/body/16/argument/11/expression/right/1/1": {
+          content: {
+            en: "Additional Documents to Attach",
+            pl: "Dodatkowe dokumenty do załączenia",
+          },
+          hash: "3bee1ee3d405eefa3fd49756d3442d30",
+        },
+        "20/declaration/body/16/argument/11/expression/right/5/1": {
+          content: {
+            en: "Please ensure you also include these documents when submitting your offer:",
+            pl: "Upewnij się, że dołączasz również te dokumenty podczas składania oferty:",
+          },
+          hash: "b12d2abb6aacc3745cd12ff69db2c315",
+        },
+        "20/declaration/body/16/argument/11/expression/right/5/3/1/expression/0/body/1":
+          {
+            content: {
+              en: "•",
+              pl: "•",
+            },
+            hash: "5f1c90d0fd46023ba1bfaaa2537f59fb",
+          },
+        "20/declaration/body/16/argument/13/expression/right/1/1": {
+          content: {
+            en: "Additional Documents to Attach",
+            pl: "Dodatkowe dokumenty do załączenia",
+          },
+          hash: "3bee1ee3d405eefa3fd49756d3442d30",
+        },
+        "20/declaration/body/16/argument/13/expression/right/5/1": {
+          content: {
+            en: "Please ensure you also include these documents when submitting your offer:",
+            pl: "Upewnij się, że dołączasz również te dokumenty podczas składania oferty:",
+          },
+          hash: "b12d2abb6aacc3745cd12ff69db2c315",
+        },
+        "20/declaration/body/16/argument/13/expression/right/5/3/1/expression/0/body/1":
+          {
+            content: {
+              en: "•",
+              pl: "•",
+            },
+            hash: "5f1c90d0fd46023ba1bfaaa2537f59fb",
+          },
+        "20/declaration/body/16/argument/15/1/1/3": {
+          content: {
+            en: "Confirm Submission",
+            pl: "Potwierdź złożenie",
+          },
+          hash: "d38f381ce245130a1b5fce4e1896441f",
+        },
+        "20/declaration/body/16/argument/15/5/1": {
+          content: {
+            en: "<element:strong>Important:</element:strong> You are responsible for submitting the offer through the platform. After submitting, please confirm below.",
+            pl: "<element:strong>Ważne:</element:strong> Jesteś odpowiedzialny za złożenie oferty za pośrednictwem platformy. Po złożeniu oferty, proszę potwierdzić poniżej.",
+          },
+          hash: "5efa18df04936d87dce6f7887e14960f",
+        },
+        "20/declaration/body/16/argument/15/5/3": {
+          content: {
+            en: "I confirm that I have submitted the offer through the platform",
+            pl: "Potwierdzam, że złożyłem ofertę za pośrednictwem platformy",
+          },
+          hash: "a0fa58a1841ed835ecaefff17d5389b3",
+        },
+        "20/declaration/body/16/argument/15/5/5/1": {
+          content: {
+            en: "Reject this tender",
+            pl: "Odrzuć ten przetarg",
+          },
+          hash: "eeff2e12eef96d0acb2be4f64ed71a3a",
+        },
+        "20/declaration/body/16/argument/15/5/5/3": {
+          content: {
+            en: "Confirm Submission",
+            pl: "Potwierdź złożenie",
+          },
+          hash: "2d9b2c057d81cbc43f482e3d50efd4e7",
+        },
+        "20/declaration/body/16/argument/17/1/1/3": {
+          content: {
+            en: "Confirm Submission",
+            pl: "Potwierdź złożenie",
+          },
+          hash: "d38f381ce245130a1b5fce4e1896441f",
+        },
+        "20/declaration/body/16/argument/17/5/1": {
+          content: {
+            en: "<element:strong>Important:</element:strong> You are responsible for submitting the offer through the platform. After submitting, please confirm below.",
+            pl: "<element:strong>Ważne:</element:strong> Jesteś odpowiedzialny za złożenie oferty za pośrednictwem platformy. Po złożeniu oferty, proszę potwierdzić poniżej.",
+          },
+          hash: "5efa18df04936d87dce6f7887e14960f",
+        },
+        "20/declaration/body/16/argument/17/5/3": {
+          content: {
+            en: "I confirm that I have submitted the offer through the platform",
+            pl: "Potwierdzam, że złożyłem ofertę za pośrednictwem platformy",
+          },
+          hash: "a0fa58a1841ed835ecaefff17d5389b3",
+        },
+        "20/declaration/body/16/argument/17/5/5/1": {
+          content: {
+            en: "Reject this tender",
+            pl: "Odrzuć ten przetarg",
+          },
+          hash: "eeff2e12eef96d0acb2be4f64ed71a3a",
+        },
+        "20/declaration/body/16/argument/17/5/5/3": {
+          content: {
+            en: "Confirm Submission",
+            pl: "Potwierdź złożenie",
+          },
+          hash: "2d9b2c057d81cbc43f482e3d50efd4e7",
+        },
+        "20/declaration/body/16/argument/3/1/1/3": {
+          content: {
+            en: "Submission Information",
+            pl: "Informacje o złożeniu",
+          },
+          hash: "e75260ca849db85c75ecb36d672d6642",
+        },
+        "20/declaration/body/16/argument/3/1/3": {
+          content: {
+            en: "Please submit your offer through the platform using the link below",
+            pl: "Proszę złożyć ofertę za pośrednictwem platformy, korzystając z poniższego linku",
+          },
+          hash: "0eb40d1ec5acb005ae08317531695561",
+        },
+        "20/declaration/body/16/argument/3/5/11/expression/right/3/1": {
+          content: {
+            en: "Deposit (Wadium):",
+            pl: "Depozyt (Wadium):",
+          },
+          hash: "86145c543d835617a0e7086aa4048822",
+        },
+        "20/declaration/body/16/argument/3/5/3/expression/right/3/1": {
+          content: {
+            en: "Platform submission link:",
+            pl: "Link do złożenia oferty na platformie:",
+          },
+          hash: "3ce202a79df68ff2ef38403148699d63",
+        },
+        "20/declaration/body/16/argument/3/5/7/expression/right/3/1": {
+          content: {
+            en: "Submission deadline:",
+            pl: "Termin składania ofert:",
+          },
+          hash: "a5d4622c702b85718005150dc2b9b942",
+        },
+        "20/declaration/body/16/argument/5/1": {
+          content: {
+            en: "Documents to Download",
+            pl: "Dokumenty do pobrania",
+          },
+          hash: "9e43531d5f81a3cc6564d73d5a8a7216",
+        },
+        "20/declaration/body/16/argument/5/3/1/openingElement/1/value/expression":
+          {
+            content: {
+              en: "Ready documentation",
+              pl: "Gotowa dokumentacja",
+            },
+            hash: "3ba81e87ae8016eea5860e247c708dd9",
+          },
+        "20/declaration/body/16/argument/5/3/3/openingElement/1/value/expression":
+          {
+            content: {
+              en: "Requires manual fill",
+              pl: "Wymaga ręcznego wypełnienia",
+            },
+            hash: "030e160bf50c084716488dc452429db2",
+          },
+        "20/declaration/body/16/argument/5/3/5/openingElement/1/value/expression":
+          {
+            content: {
+              en: "Other attachments",
+              pl: "Inne załączniki",
+            },
+            hash: "f187e342b6ff30e7d4d96d9395dea305",
+          },
+        "20/declaration/body/16/argument/7/1/3": {
+          content: {
+            en: "Documents to Download",
+            pl: "Dokumenty do pobrania",
+          },
+          hash: "9e43531d5f81a3cc6564d73d5a8a7216",
+        },
+        "20/declaration/body/16/argument/7/3/expression/alternate/1/openingElement/1/value/expression":
+          {
+            content: {
+              en: "Ready documentation",
+              pl: "Gotowa dokumentacja",
+            },
+            hash: "3ba81e87ae8016eea5860e247c708dd9",
+          },
+        "20/declaration/body/16/argument/7/3/expression/alternate/3/openingElement/1/value/expression":
+          {
+            content: {
+              en: "Requires manual fill",
+              pl: "Wymaga ręcznego wypełnienia",
+            },
+            hash: "030e160bf50c084716488dc452429db2",
+          },
+        "20/declaration/body/16/argument/7/3/expression/alternate/5/openingElement/1/value/expression":
+          {
+            content: {
+              en: "Other attachments",
+              pl: "Inne załączniki",
+            },
+            hash: "f187e342b6ff30e7d4d96d9395dea305",
+          },
+        "20/declaration/body/16/argument/7/3/expression/consequent": {
+          content: {
+            en: "No documents to display. You can proceed to submit your offer.",
+            pl: "Brak dokumentów do wyświetlenia. Możesz przejść do złożenia oferty.",
+          },
+          hash: "e39b65518178a65d2098e713fc70a567",
+        },
+        "20/declaration/body/8/0/init/body/2/expression/1/0/value/body/0/expression/0":
+          {
+            content: {
+              en: "Offer submitted successfully for <expression/>",
+              pl: "Oferta została pomyślnie złożona dla <expression/>",
+            },
+            hash: "95cad397804e3a7d042c08d4a15b91dc",
+          },
+        "20/declaration/body/9/0/init/body/0/expression/1/0/value/body/0/expression/0":
+          {
+            content: {
+              en: "Tender <expression/> was rejected",
+              pl: "Przetarg <expression/> został odrzucony",
+            },
+            hash: "da75484b6e8463ca4fea585845e3e086",
+          },
+        "21/declaration/body/10/0/init/body/0/expression/1/0/value/body/0/expression/0":
+          {
+            content: {
+              en: "Tender <expression/> was rejected",
+              pl: "Przetarg <expression/> został odrzucony",
+            },
+            hash: "da75484b6e8463ca4fea585845e3e086",
+          },
+        "21/declaration/body/11/consequent/argument/1/1": {
+          content: {
+            en: "We will prepare your documents. They will be ready within 48 hours at the latest",
+            pl: "Przygotujemy Twoje dokumenty. Będą gotowe najpóźniej w ciągu 48 godzin.",
+          },
+          hash: "28e5b302e5adec94d929969721a9d520",
+        },
+        "21/declaration/body/11/consequent/argument/1/5": {
+          content: {
+            en: "Don't forget to include the valuation. We can also help you with it — just let us know at mimira@mimiraoffers.eu or +48 732 070 469.",
+            pl: "Nie zapomnij dołączyć wyceny. Możemy Ci w tym pomóc — po prostu daj nam znać na mimira@mimiraoffers.eu lub +48 732 070 469.",
+          },
+          hash: "8b199e4c03646258cacdb01bdc3ad72f",
+        },
+        "21/declaration/body/11/consequent/argument/1/7": {
+          content: {
+            en: "Cancel preparation and reject this tender",
+            pl: "Anuluj przygotowanie i odrzuć tę ofertę",
+          },
+          hash: "49d1e0e6ab4ccf36e47cf6a776d82937",
+        },
+        "21/declaration/body/12/consequent/0/argument/1/1": {
+          content: {
+            en: "Loading documents...",
+            pl: "Ładowanie dokumentów...",
+          },
+          hash: "b795b22e2d0abd430c2ff0b28fb26e5a",
+        },
+        "21/declaration/body/12/consequent/argument/1/1": {
+          content: {
+            en: "We will prepare your documents. They will be ready within 48 hours at the latest",
+            pl: "Przygotujemy Twoje dokumenty. Będą gotowe najpóźniej w ciągu 48 godzin.",
+          },
+          hash: "28e5b302e5adec94d929969721a9d520",
+        },
+        "21/declaration/body/12/consequent/argument/1/5": {
+          content: {
+            en: "Don't forget to include the valuation. We can also help you with it — just let us know at mimira@mimiraoffers.eu or +48 732 070 469.",
+            pl: "Nie zapomnij dołączyć wyceny. Możemy Ci w tym pomóc — po prostu daj nam znać na mimira@mimiraoffers.eu lub +48 732 070 469.",
+          },
+          hash: "8b199e4c03646258cacdb01bdc3ad72f",
+        },
+        "21/declaration/body/12/consequent/argument/1/7": {
+          content: {
+            en: "Cancel preparation and reject this tender",
+            pl: "Anuluj przygotowanie i odrzuć tę ofertę",
+          },
+          hash: "49d1e0e6ab4ccf36e47cf6a776d82937",
+        },
+        "21/declaration/body/13/consequent/0/argument/1/1": {
+          content: {
+            en: "Failed to load documents. Please try again.",
+            pl: "Nie udało się załadować dokumentów. Proszę spróbować ponownie.",
+          },
+          hash: "1f3bb71b519b18f32ba0f1a5a360afb0",
+        },
+        "21/declaration/body/13/consequent/argument/1/1": {
+          content: {
+            en: "We will prepare your documents. They will be ready within 48 hours at the latest",
+            pl: "Przygotujemy Twoje dokumenty. Będą gotowe najpóźniej w ciągu 48 godzin.",
+          },
+          hash: "28e5b302e5adec94d929969721a9d520",
+        },
+        "21/declaration/body/13/consequent/argument/1/5": {
+          content: {
+            en: "Don't forget to include the valuation. We can also help you with it — just let us know at mimira@mimiraoffers.eu or +48 732 070 469.",
+            pl: "Nie zapomnij dołączyć wyceny. Możemy Ci w tym pomóc — po prostu daj nam znać na mimira@mimiraoffers.eu lub +48 732 070 469.",
+          },
+          hash: "8b199e4c03646258cacdb01bdc3ad72f",
+        },
+        "21/declaration/body/13/consequent/argument/1/7": {
+          content: {
+            en: "Cancel preparation and reject this tender",
+            pl: "Anuluj przygotowanie i odrzuć tę ofertę",
+          },
+          hash: "49d1e0e6ab4ccf36e47cf6a776d82937",
+        },
+        "21/declaration/body/14/argument/1/1/1": {
+          content: {
+            en: "Congratulations! You can now submit your offer",
+            pl: "Gratulacje! Możesz teraz złożyć swoją ofertę",
+          },
+          hash: "e6bb590da2a9a3ea506bbc5d068ff6d5",
+        },
+        "21/declaration/body/14/argument/3/1": {
+          content: {
+            en: "Basic submission Information",
+            pl: "Podstawowe informacje o zgłoszeniu",
+          },
+          hash: "55f543c162ced830c982289d91d56ef3",
+        },
+        "21/declaration/body/14/argument/3/3/1/1/expression/right-title": {
+          content: {
+            en: "Platform submission link",
+            pl: "Link do przesyłania na platformie",
+          },
+          hash: "52362dc2e1de061d4a954d598e23218a",
+        },
+        "21/declaration/body/14/argument/3/3/1/3/expression/right-title": {
+          content: {
+            en: "Submission deadline",
+            pl: "Termin składania",
+          },
+          hash: "1a2926f958ae3083838b468a869db131",
+        },
+        "21/declaration/body/14/argument/3/3/1/5/expression/right-title": {
+          content: {
+            en: "Deposit (Wadium)",
+            pl: "Depozyt (Wadium)",
+          },
+          hash: "b1fff394ee8965b12f190e54c16a3af3",
+        },
+        "21/declaration/body/14/argument/5/1": {
+          content: {
+            en: "Ready documents to Download",
+            pl: "Gotowe dokumenty do pobrania",
+          },
+          hash: "19eb6cdac7c520db3b465629d6d4cdcf",
+        },
+        "21/declaration/body/14/argument/5/3/1/openingElement/1/value/expression":
+          {
+            content: {
+              en: "Ready documentation",
+              pl: "Gotowa dokumentacja",
+            },
+            hash: "3ba81e87ae8016eea5860e247c708dd9",
+          },
+        "21/declaration/body/14/argument/5/3/3/openingElement/1/value/expression":
+          {
+            content: {
+              en: "Requires manual fill",
+              pl: "Wymaga ręcznego wypełnienia",
+            },
+            hash: "030e160bf50c084716488dc452429db2",
+          },
+        "21/declaration/body/14/argument/5/3/5/openingElement/1/value/expression":
+          {
+            content: {
+              en: "Other attachments",
+              pl: "Inne załączniki",
+            },
+            hash: "f187e342b6ff30e7d4d96d9395dea305",
+          },
+        "21/declaration/body/14/argument/7/expression/right/1": {
+          content: {
+            en: "Additional Documents to Attach",
+            pl: "Dodatkowe dokumenty do załączenia",
+          },
+          hash: "c287d28bf36b66bb994d6b9f83474781",
+        },
+        "21/declaration/body/14/argument/7/expression/right/3/1/1/1": {
+          content: {
+            en: "Please ensure you also include these documents when submitting your offer:",
+            pl: "Proszę upewnić się, że dołączono również te dokumenty podczas składania oferty:",
+          },
+          hash: "1804dda50682b0ea18153f9b0d39abcb",
+        },
+        "21/declaration/body/14/argument/7/expression/right/3/1/1/3/1/expression/0/body/1":
+          {
+            content: {
+              en: "•",
+              pl: "•",
+            },
+            hash: "5f1c90d0fd46023ba1bfaaa2537f59fb",
+          },
+        "21/declaration/body/14/argument/9/1": {
+          content: {
+            en: "Company's decision",
+            pl: "Decyzja firmy",
+          },
+          hash: "b69de22cb9cdee8cc374194c75e3ce1b",
+        },
+        "21/declaration/body/14/argument/9/3/1/1/1": {
+          content: {
+            en: "<element:strong>Important:</element:strong> You are responsible for submitting the offer through the platform. After submitting, please confirm below.",
+            pl: "<element:strong>Ważne:</element:strong> Jesteś odpowiedzialny za złożenie oferty za pośrednictwem platformy. Po złożeniu oferty, proszę potwierdzić poniżej.",
+          },
+          hash: "cc503113b2429d058b7002e663108c62",
+        },
+        "21/declaration/body/14/argument/9/3/1/1/3": {
+          content: {
+            en: "I confirm that I have submitted the offer through the platform",
+            pl: "Potwierdzam, że złożyłem ofertę za pośrednictwem platformy",
+          },
+          hash: "ce82130a67e888ddd4d0a3acec8177b0",
+        },
+        "21/declaration/body/14/argument/9/3/1/1/5/1": {
+          content: {
+            en: "Reject this tender",
+            pl: "Odrzuć to zapytanie ofertowe",
+          },
+          hash: "9726f7d0a4aeb6b350795a7278f688e4",
+        },
+        "21/declaration/body/14/argument/9/3/1/1/5/3": {
+          content: {
+            en: "Confirm Submission",
+            pl: "Potwierdź złożenie",
+          },
+          hash: "48734347e85b82047f7e1fdd7b97b3e8",
+        },
+        "21/declaration/body/14/consequent/0/argument/1/1": {
+          content: {
+            en: "Failed to load documents. Please try again.",
+            pl: "Nie udało się załadować dokumentów. Proszę spróbować ponownie.",
+          },
+          hash: "1f3bb71b519b18f32ba0f1a5a360afb0",
+        },
+        "21/declaration/body/15/argument/1/1": {
+          content: {
+            en: "Submission Information",
+            pl: "Informacje o złożeniu",
+          },
+          hash: "e75260ca849db85c75ecb36d672d6642",
+        },
+        "21/declaration/body/15/argument/1/1/1": {
+          content: {
+            en: "Congratulations! You can now submit your offer",
+            pl: "Gratulacje! Możesz teraz złożyć swoją ofertę",
+          },
+          hash: "e6bb590da2a9a3ea506bbc5d068ff6d5",
+        },
+        "21/declaration/body/15/argument/1/1/expression/right-title": {
+          content: {
+            en: "Platform submission link",
+            pl: "Link do przesyłania na platformie",
+          },
+          hash: "52362dc2e1de061d4a954d598e23218a",
+        },
+        "21/declaration/body/15/argument/1/3/1/1/expression/right-title": {
+          content: {
+            en: "Platform submission link",
+            pl: "Link do przesyłania na platformie",
+          },
+          hash: "52362dc2e1de061d4a954d598e23218a",
+        },
+        "21/declaration/body/15/argument/1/3/1/3/expression/right-title": {
+          content: {
+            en: "Submission deadline",
+            pl: "Termin składania",
+          },
+          hash: "1a2926f958ae3083838b468a869db131",
+        },
+        "21/declaration/body/15/argument/1/3/1/5/expression/right-title": {
+          content: {
+            en: "Deposit (Wadium)",
+            pl: "Depozyt (Wadium)",
+          },
+          hash: "b1fff394ee8965b12f190e54c16a3af3",
+        },
+        "21/declaration/body/15/argument/1/3/1/9/expression/right-title": {
+          content: {
+            en: "Deposit (Wadium)",
+            pl: "Depozyt (Wadium)",
+          },
+          hash: "b1fff394ee8965b12f190e54c16a3af3",
+        },
+        "21/declaration/body/15/argument/1/5/expression/right-title": {
+          content: {
+            en: "Submission deadline",
+            pl: "Termin składania",
+          },
+          hash: "1a2926f958ae3083838b468a869db131",
+        },
+        "21/declaration/body/15/argument/1/9/expression/right-title": {
+          content: {
+            en: "Deposit (Wadium)",
+            pl: "Depozyt (Wadium)",
+          },
+          hash: "b1fff394ee8965b12f190e54c16a3af3",
+        },
+        "21/declaration/body/15/argument/11/1/1/3": {
+          content: {
+            en: "Confirm Submission",
+            pl: "Potwierdź złożenie",
+          },
+          hash: "d38f381ce245130a1b5fce4e1896441f",
+        },
+        "21/declaration/body/15/argument/11/5/1": {
+          content: {
+            en: "<element:strong>Important:</element:strong> You are responsible for submitting the offer through the platform. After submitting, please confirm below.",
+            pl: "<element:strong>Ważne:</element:strong> Jesteś odpowiedzialny za złożenie oferty za pośrednictwem platformy. Po złożeniu oferty, proszę potwierdzić poniżej.",
+          },
+          hash: "5efa18df04936d87dce6f7887e14960f",
+        },
+        "21/declaration/body/15/argument/11/5/3": {
+          content: {
+            en: "I confirm that I have submitted the offer through the platform",
+            pl: "Potwierdzam, że złożyłem ofertę za pośrednictwem platformy",
+          },
+          hash: "a0fa58a1841ed835ecaefff17d5389b3",
+        },
+        "21/declaration/body/15/argument/11/5/5/1": {
+          content: {
+            en: "Reject this tender",
+            pl: "Odrzuć ten przetarg",
+          },
+          hash: "eeff2e12eef96d0acb2be4f64ed71a3a",
+        },
+        "21/declaration/body/15/argument/11/5/5/3": {
+          content: {
+            en: "Confirm Submission",
+            pl: "Potwierdź złożenie",
+          },
+          hash: "2d9b2c057d81cbc43f482e3d50efd4e7",
+        },
+        "21/declaration/body/15/argument/13/expression/right/1/1": {
+          content: {
+            en: "Additional Documents to Attach",
+            pl: "Dodatkowe dokumenty do załączenia",
+          },
+          hash: "3bee1ee3d405eefa3fd49756d3442d30",
+        },
+        "21/declaration/body/15/argument/13/expression/right/5/1": {
+          content: {
+            en: "Please ensure you also include these documents when submitting your offer:",
+            pl: "Upewnij się, że dołączasz również te dokumenty podczas składania oferty:",
+          },
+          hash: "b12d2abb6aacc3745cd12ff69db2c315",
+        },
+        "21/declaration/body/15/argument/13/expression/right/5/3/1/expression/0/body/1":
+          {
+            content: {
+              en: "•",
+              pl: "•",
+            },
+            hash: "5f1c90d0fd46023ba1bfaaa2537f59fb",
+          },
+        "21/declaration/body/15/argument/17/1/1/3": {
+          content: {
+            en: "Confirm Submission",
+            pl: "Potwierdź złożenie",
+          },
+          hash: "d38f381ce245130a1b5fce4e1896441f",
+        },
+        "21/declaration/body/15/argument/17/5/1": {
+          content: {
+            en: "<element:strong>Important:</element:strong> You are responsible for submitting the offer through the platform. After submitting, please confirm below.",
+            pl: "<element:strong>Ważne:</element:strong> Jesteś odpowiedzialny za złożenie oferty za pośrednictwem platformy. Po złożeniu oferty, proszę potwierdzić poniżej.",
+          },
+          hash: "5efa18df04936d87dce6f7887e14960f",
+        },
+        "21/declaration/body/15/argument/17/5/3": {
+          content: {
+            en: "I confirm that I have submitted the offer through the platform",
+            pl: "Potwierdzam, że złożyłem ofertę za pośrednictwem platformy",
+          },
+          hash: "a0fa58a1841ed835ecaefff17d5389b3",
+        },
+        "21/declaration/body/15/argument/17/5/5/1": {
+          content: {
+            en: "Reject this tender",
+            pl: "Odrzuć ten przetarg",
+          },
+          hash: "eeff2e12eef96d0acb2be4f64ed71a3a",
+        },
+        "21/declaration/body/15/argument/17/5/5/3": {
+          content: {
+            en: "Confirm Submission",
+            pl: "Potwierdź złożenie",
+          },
+          hash: "2d9b2c057d81cbc43f482e3d50efd4e7",
+        },
+        "21/declaration/body/15/argument/3/1": {
+          content: {
+            en: "Basic submission Information",
+            pl: "Podstawowe informacje o zgłoszeniu",
+          },
+          hash: "55f543c162ced830c982289d91d56ef3",
+        },
+        "21/declaration/body/15/argument/3/11/expression/right-title": {
+          content: {
+            en: "Deposit (Wadium)",
+            pl: "Depozyt (Wadium)",
+          },
+          hash: "b1fff394ee8965b12f190e54c16a3af3",
+        },
+        "21/declaration/body/15/argument/3/3/1/1/expression/right-title": {
+          content: {
+            en: "Platform submission link",
+            pl: "Link do przesyłania na platformie",
+          },
+          hash: "52362dc2e1de061d4a954d598e23218a",
+        },
+        "21/declaration/body/15/argument/3/3/1/3/expression/right-title": {
+          content: {
+            en: "Submission deadline",
+            pl: "Termin składania",
+          },
+          hash: "1a2926f958ae3083838b468a869db131",
+        },
+        "21/declaration/body/15/argument/3/3/1/5/expression/right-title": {
+          content: {
+            en: "Deposit (Wadium)",
+            pl: "Depozyt (Wadium)",
+          },
+          hash: "b1fff394ee8965b12f190e54c16a3af3",
+        },
+        "21/declaration/body/15/argument/3/3/1/openingElement/1/value/expression":
+          {
+            content: {
+              en: "Ready documentation",
+              pl: "Gotowa dokumentacja",
+            },
+            hash: "3ba81e87ae8016eea5860e247c708dd9",
+          },
+        "21/declaration/body/15/argument/3/3/3/openingElement/1/value/expression":
+          {
+            content: {
+              en: "Requires manual fill",
+              pl: "Wymaga ręcznego wypełnienia",
+            },
+            hash: "030e160bf50c084716488dc452429db2",
+          },
+        "21/declaration/body/15/argument/3/3/5/openingElement/1/value/expression":
+          {
+            content: {
+              en: "Other attachments",
+              pl: "Inne załączniki",
+            },
+            hash: "f187e342b6ff30e7d4d96d9395dea305",
+          },
+        "21/declaration/body/15/argument/3/3/expression/right-title": {
+          content: {
+            en: "Platform submission link",
+            pl: "Link do przesyłania na platformie",
+          },
+          hash: "52362dc2e1de061d4a954d598e23218a",
+        },
+        "21/declaration/body/15/argument/3/7/expression/right-title": {
+          content: {
+            en: "Submission deadline",
+            pl: "Termin składania",
+          },
+          hash: "1a2926f958ae3083838b468a869db131",
+        },
+        "21/declaration/body/15/argument/5/1": {
+          content: {
+            en: "Ready documents to Download",
+            pl: "Gotowe dokumenty do pobrania",
+          },
+          hash: "19eb6cdac7c520db3b465629d6d4cdcf",
+        },
+        "21/declaration/body/15/argument/5/3/1/openingElement/1/value/expression":
+          {
+            content: {
+              en: "Ready documentation",
+              pl: "Gotowa dokumentacja",
+            },
+            hash: "3ba81e87ae8016eea5860e247c708dd9",
+          },
+        "21/declaration/body/15/argument/5/3/3/openingElement/1/value/expression":
+          {
+            content: {
+              en: "Requires manual fill",
+              pl: "Wymaga ręcznego wypełnienia",
+            },
+            hash: "030e160bf50c084716488dc452429db2",
+          },
+        "21/declaration/body/15/argument/5/3/5/openingElement/1/value/expression":
+          {
+            content: {
+              en: "Other attachments",
+              pl: "Inne załączniki",
+            },
+            hash: "f187e342b6ff30e7d4d96d9395dea305",
+          },
+        "21/declaration/body/15/argument/5/expression/right/1": {
+          content: {
+            en: "Additional Documents to Attach",
+            pl: "Dodatkowe dokumenty do załączenia",
+          },
+          hash: "c287d28bf36b66bb994d6b9f83474781",
+        },
+        "21/declaration/body/15/argument/5/expression/right/1/1": {
+          content: {
+            en: "Additional Documents to Attach",
+            pl: "Dodatkowe dokumenty do załączenia",
+          },
+          hash: "3bee1ee3d405eefa3fd49756d3442d30",
+        },
+        "21/declaration/body/15/argument/5/expression/right/3/1/1/1": {
+          content: {
+            en: "Additional Documents to Attach",
+            pl: "Dodatkowe dokumenty do załączenia",
+          },
+          hash: "9047039139eb1cfab0c0666de099f902",
+        },
+        "21/declaration/body/15/argument/5/expression/right/3/1/5/1": {
+          content: {
+            en: "Please ensure you also include these documents when submitting your offer:",
+            pl: "Proszę upewnić się, że dołączono również te dokumenty podczas składania oferty:",
+          },
+          hash: "1804dda50682b0ea18153f9b0d39abcb",
+        },
+        "21/declaration/body/15/argument/5/expression/right/3/1/5/3/1/expression/0/body/1":
+          {
+            content: {
+              en: "•",
+              pl: "•",
+            },
+            hash: "5f1c90d0fd46023ba1bfaaa2537f59fb",
+          },
+        "21/declaration/body/15/argument/5/expression/right/5/1": {
+          content: {
+            en: "Please ensure you also include these documents when submitting your offer:",
+            pl: "Upewnij się, że dołączasz również te dokumenty podczas składania oferty:",
+          },
+          hash: "b12d2abb6aacc3745cd12ff69db2c315",
+        },
+        "21/declaration/body/15/argument/5/expression/right/5/3/1/expression/0/body/1":
+          {
+            content: {
+              en: "•",
+              pl: "•",
+            },
+            hash: "5f1c90d0fd46023ba1bfaaa2537f59fb",
+          },
+        "21/declaration/body/15/argument/7/1": {
+          content: {
+            en: "Confirm Submission",
+            pl: "Potwierdź złożenie",
+          },
+          hash: "d38f381ce245130a1b5fce4e1896441f",
+        },
+        "21/declaration/body/15/argument/7/1/1/3": {
+          content: {
+            en: "Confirm Submission",
+            pl: "Potwierdź złożenie",
+          },
+          hash: "d38f381ce245130a1b5fce4e1896441f",
+        },
+        "21/declaration/body/15/argument/7/3/1/1/1": {
+          content: {
+            en: "<element:strong>Important:</element:strong> You are responsible for submitting the offer through the platform. After submitting, please confirm below.",
+            pl: "<element:strong>Ważne:</element:strong> Jesteś odpowiedzialny za złożenie oferty za pośrednictwem platformy. Po złożeniu oferty, proszę potwierdzić poniżej.",
+          },
+          hash: "cc503113b2429d058b7002e663108c62",
+        },
+        "21/declaration/body/15/argument/7/3/1/1/3": {
+          content: {
+            en: "I confirm that I have submitted the offer through the platform",
+            pl: "Potwierdzam, że złożyłem ofertę za pośrednictwem platformy",
+          },
+          hash: "ce82130a67e888ddd4d0a3acec8177b0",
+        },
+        "21/declaration/body/15/argument/7/3/1/1/5/1": {
+          content: {
+            en: "Reject this tender",
+            pl: "Odrzuć to zapytanie ofertowe",
+          },
+          hash: "9726f7d0a4aeb6b350795a7278f688e4",
+        },
+        "21/declaration/body/15/argument/7/3/1/1/5/3": {
+          content: {
+            en: "Confirm Submission",
+            pl: "Potwierdź złożenie",
+          },
+          hash: "48734347e85b82047f7e1fdd7b97b3e8",
+        },
+        "21/declaration/body/15/argument/7/5/1": {
+          content: {
+            en: "<element:strong>Important:</element:strong> You are responsible for submitting the offer through the platform. After submitting, please confirm below.",
+            pl: "<element:strong>Ważne:</element:strong> Jesteś odpowiedzialny za złożenie oferty za pośrednictwem platformy. Po złożeniu oferty, proszę potwierdzić poniżej.",
+          },
+          hash: "5efa18df04936d87dce6f7887e14960f",
+        },
+        "21/declaration/body/15/argument/7/5/3": {
+          content: {
+            en: "I confirm that I have submitted the offer through the platform",
+            pl: "Potwierdzam, że złożyłem ofertę za pośrednictwem platformy",
+          },
+          hash: "a0fa58a1841ed835ecaefff17d5389b3",
+        },
+        "21/declaration/body/15/argument/7/5/5/1": {
+          content: {
+            en: "Reject this tender",
+            pl: "Odrzuć ten przetarg",
+          },
+          hash: "eeff2e12eef96d0acb2be4f64ed71a3a",
+        },
+        "21/declaration/body/15/argument/7/5/5/3": {
+          content: {
+            en: "Confirm Submission",
+            pl: "Potwierdź złożenie",
+          },
+          hash: "2d9b2c057d81cbc43f482e3d50efd4e7",
+        },
+        "21/declaration/body/15/argument/7/expression/right/1": {
+          content: {
+            en: "Additional Documents to Attach",
+            pl: "Dodatkowe dokumenty do załączenia",
+          },
+          hash: "c287d28bf36b66bb994d6b9f83474781",
+        },
+        "21/declaration/body/15/argument/7/expression/right/1/1": {
+          content: {
+            en: "Additional Documents to Attach",
+            pl: "Dodatkowe dokumenty do załączenia",
+          },
+          hash: "3bee1ee3d405eefa3fd49756d3442d30",
+        },
+        "21/declaration/body/15/argument/7/expression/right/3/1/1/1": {
+          content: {
+            en: "Please ensure you also include these documents when submitting your offer:",
+            pl: "Proszę upewnić się, że dołączono również te dokumenty podczas składania oferty:",
+          },
+          hash: "1804dda50682b0ea18153f9b0d39abcb",
+        },
+        "21/declaration/body/15/argument/7/expression/right/3/1/1/3/1/expression/0/body/1":
+          {
+            content: {
+              en: "•",
+              pl: "•",
+            },
+            hash: "5f1c90d0fd46023ba1bfaaa2537f59fb",
+          },
+        "21/declaration/body/15/argument/7/expression/right/3/1/5/1": {
+          content: {
+            en: "Please ensure you also include these documents when submitting your offer:",
+            pl: "Proszę upewnić się, że dołączono również te dokumenty podczas składania oferty:",
+          },
+          hash: "1804dda50682b0ea18153f9b0d39abcb",
+        },
+        "21/declaration/body/15/argument/7/expression/right/3/1/5/3/1/expression/0/body/1":
+          {
+            content: {
+              en: "•",
+              pl: "•",
+            },
+            hash: "5f1c90d0fd46023ba1bfaaa2537f59fb",
+          },
+        "21/declaration/body/15/argument/7/expression/right/5/1": {
+          content: {
+            en: "Please ensure you also include these documents when submitting your offer:",
+            pl: "Upewnij się, że dołączasz również te dokumenty podczas składania oferty:",
+          },
+          hash: "b12d2abb6aacc3745cd12ff69db2c315",
+        },
+        "21/declaration/body/15/argument/7/expression/right/5/3/1/expression/0/body/1":
+          {
+            content: {
+              en: "•",
+              pl: "•",
+            },
+            hash: "5f1c90d0fd46023ba1bfaaa2537f59fb",
+          },
+        "21/declaration/body/15/argument/9/1": {
+          content: {
+            en: "Company's decision",
+            pl: "Decyzja firmy",
+          },
+          hash: "b69de22cb9cdee8cc374194c75e3ce1b",
+        },
+        "21/declaration/body/15/argument/9/3/1/1/1": {
+          content: {
+            en: "<element:strong>Important:</element:strong> You are responsible for submitting the offer through the platform. After submitting, please confirm below.",
+            pl: "<element:strong>Ważne:</element:strong> Jesteś odpowiedzialny za złożenie oferty za pośrednictwem platformy. Po złożeniu oferty, proszę potwierdzić poniżej.",
+          },
+          hash: "cc503113b2429d058b7002e663108c62",
+        },
+        "21/declaration/body/15/argument/9/3/1/1/3": {
+          content: {
+            en: "I confirm that I have submitted the offer through the platform",
+            pl: "Potwierdzam, że złożyłem ofertę za pośrednictwem platformy",
+          },
+          hash: "ce82130a67e888ddd4d0a3acec8177b0",
+        },
+        "21/declaration/body/15/argument/9/3/1/1/5/1": {
+          content: {
+            en: "Reject this tender",
+            pl: "Odrzuć to zapytanie ofertowe",
+          },
+          hash: "9726f7d0a4aeb6b350795a7278f688e4",
+        },
+        "21/declaration/body/15/argument/9/3/1/1/5/3": {
+          content: {
+            en: "Confirm Submission",
+            pl: "Potwierdź złożenie",
+          },
+          hash: "48734347e85b82047f7e1fdd7b97b3e8",
+        },
+        "21/declaration/body/15/consequent/0/argument/1/1": {
+          content: {
+            en: "Failed to load documents. Please try again.",
+            pl: "Nie udało się załadować dokumentów. Proszę spróbować ponownie.",
+          },
+          hash: "1f3bb71b519b18f32ba0f1a5a360afb0",
+        },
+        "21/declaration/body/16/argument/1/1/1": {
+          content: {
+            en: "Congratulations! You can now submit your offer",
+            pl: "Gratulacje! Możesz teraz złożyć swoją ofertę",
+          },
+          hash: "e6bb590da2a9a3ea506bbc5d068ff6d5",
+        },
+        "21/declaration/body/16/argument/13/expression/right/1/1": {
+          content: {
+            en: "Additional Documents to Attach",
+            pl: "Dodatkowe dokumenty do załączenia",
+          },
+          hash: "3bee1ee3d405eefa3fd49756d3442d30",
+        },
+        "21/declaration/body/16/argument/13/expression/right/5/1": {
+          content: {
+            en: "Please ensure you also include these documents when submitting your offer:",
+            pl: "Upewnij się, że dołączasz również te dokumenty podczas składania oferty:",
+          },
+          hash: "b12d2abb6aacc3745cd12ff69db2c315",
+        },
+        "21/declaration/body/16/argument/13/expression/right/5/3/1/expression/0/body/1":
+          {
+            content: {
+              en: "•",
+              pl: "•",
+            },
+            hash: "5f1c90d0fd46023ba1bfaaa2537f59fb",
+          },
+        "21/declaration/body/16/argument/17/1/1/3": {
+          content: {
+            en: "Confirm Submission",
+            pl: "Potwierdź złożenie",
+          },
+          hash: "d38f381ce245130a1b5fce4e1896441f",
+        },
+        "21/declaration/body/16/argument/17/5/1": {
+          content: {
+            en: "<element:strong>Important:</element:strong> You are responsible for submitting the offer through the platform. After submitting, please confirm below.",
+            pl: "<element:strong>Ważne:</element:strong> Jesteś odpowiedzialny za złożenie oferty za pośrednictwem platformy. Po złożeniu oferty, proszę potwierdzić poniżej.",
+          },
+          hash: "5efa18df04936d87dce6f7887e14960f",
+        },
+        "21/declaration/body/16/argument/17/5/3": {
+          content: {
+            en: "I confirm that I have submitted the offer through the platform",
+            pl: "Potwierdzam, że złożyłem ofertę za pośrednictwem platformy",
+          },
+          hash: "a0fa58a1841ed835ecaefff17d5389b3",
+        },
+        "21/declaration/body/16/argument/17/5/5/1": {
+          content: {
+            en: "Reject this tender",
+            pl: "Odrzuć ten przetarg",
+          },
+          hash: "eeff2e12eef96d0acb2be4f64ed71a3a",
+        },
+        "21/declaration/body/16/argument/17/5/5/3": {
+          content: {
+            en: "Confirm Submission",
+            pl: "Potwierdź złożenie",
+          },
+          hash: "2d9b2c057d81cbc43f482e3d50efd4e7",
+        },
+        "21/declaration/body/16/argument/3/1": {
+          content: {
+            en: "Basic submission Information",
+            pl: "Podstawowe informacje o zgłoszeniu",
+          },
+          hash: "55f543c162ced830c982289d91d56ef3",
+        },
+        "21/declaration/body/16/argument/3/1/1/3": {
+          content: {
+            en: "Submission Information",
+            pl: "Informacje o złożeniu",
+          },
+          hash: "e75260ca849db85c75ecb36d672d6642",
+        },
+        "21/declaration/body/16/argument/3/1/3": {
+          content: {
+            en: "Please submit your offer through the platform using the link below",
+            pl: "Proszę złożyć ofertę za pośrednictwem platformy, korzystając z poniższego linku",
+          },
+          hash: "0eb40d1ec5acb005ae08317531695561",
+        },
+        "21/declaration/body/16/argument/3/11/expression/right-title": {
+          content: {
+            en: "Deposit (Wadium)",
+            pl: "Depozyt (Wadium)",
+          },
+          hash: "b1fff394ee8965b12f190e54c16a3af3",
+        },
+        "21/declaration/body/16/argument/3/3/1/1/expression/right-title": {
+          content: {
+            en: "Platform submission link",
+            pl: "Link do przesyłania na platformie",
+          },
+          hash: "52362dc2e1de061d4a954d598e23218a",
+        },
+        "21/declaration/body/16/argument/3/3/1/3/expression/right-title": {
+          content: {
+            en: "Submission deadline",
+            pl: "Termin składania",
+          },
+          hash: "1a2926f958ae3083838b468a869db131",
+        },
+        "21/declaration/body/16/argument/3/3/1/5/expression/right-title": {
+          content: {
+            en: "Deposit (Wadium)",
+            pl: "Depozyt (Wadium)",
+          },
+          hash: "b1fff394ee8965b12f190e54c16a3af3",
+        },
+        "21/declaration/body/16/argument/3/3/expression/right-title": {
+          content: {
+            en: "Platform submission link",
+            pl: "Link do przesyłania na platformie",
+          },
+          hash: "52362dc2e1de061d4a954d598e23218a",
+        },
+        "21/declaration/body/16/argument/3/5/11/expression/right/3/1": {
+          content: {
+            en: "Deposit (Wadium):",
+            pl: "Depozyt (Wadium):",
+          },
+          hash: "86145c543d835617a0e7086aa4048822",
+        },
+        "21/declaration/body/16/argument/3/5/3/expression/right/3/1": {
+          content: {
+            en: "Platform submission link:",
+            pl: "Link do złożenia oferty na platformie:",
+          },
+          hash: "3ce202a79df68ff2ef38403148699d63",
+        },
+        "21/declaration/body/16/argument/3/5/7/expression/right/3/1": {
+          content: {
+            en: "Submission deadline:",
+            pl: "Termin składania ofert:",
+          },
+          hash: "a5d4622c702b85718005150dc2b9b942",
+        },
+        "21/declaration/body/16/argument/3/7/expression/right-title": {
+          content: {
+            en: "Submission deadline",
+            pl: "Termin składania",
+          },
+          hash: "1a2926f958ae3083838b468a869db131",
+        },
+        "21/declaration/body/16/argument/5/1": {
+          content: {
+            en: "Ready documents to Download",
+            pl: "Gotowe dokumenty do pobrania",
+          },
+          hash: "19eb6cdac7c520db3b465629d6d4cdcf",
+        },
+        "21/declaration/body/16/argument/5/3/1/openingElement/1/value/expression":
+          {
+            content: {
+              en: "Ready documentation",
+              pl: "Gotowa dokumentacja",
+            },
+            hash: "3ba81e87ae8016eea5860e247c708dd9",
+          },
+        "21/declaration/body/16/argument/5/3/3/openingElement/1/value/expression":
+          {
+            content: {
+              en: "Requires manual fill",
+              pl: "Wymaga ręcznego wypełnienia",
+            },
+            hash: "030e160bf50c084716488dc452429db2",
+          },
+        "21/declaration/body/16/argument/5/3/5/openingElement/1/value/expression":
+          {
+            content: {
+              en: "Other attachments",
+              pl: "Inne załączniki",
+            },
+            hash: "f187e342b6ff30e7d4d96d9395dea305",
+          },
+        "21/declaration/body/16/argument/7/expression/right/1": {
+          content: {
+            en: "Additional Documents to Attach",
+            pl: "Dodatkowe dokumenty do załączenia",
+          },
+          hash: "c287d28bf36b66bb994d6b9f83474781",
+        },
+        "21/declaration/body/16/argument/7/expression/right/3/1/1/1": {
+          content: {
+            en: "Additional Documents to Attach",
+            pl: "Dodatkowe dokumenty do załączenia",
+          },
+          hash: "9047039139eb1cfab0c0666de099f902",
+        },
+        "21/declaration/body/16/argument/7/expression/right/3/1/5/1": {
+          content: {
+            en: "Please ensure you also include these documents when submitting your offer:",
+            pl: "Proszę upewnić się, że dołączono również te dokumenty podczas składania oferty:",
+          },
+          hash: "1804dda50682b0ea18153f9b0d39abcb",
+        },
+        "21/declaration/body/16/argument/7/expression/right/3/1/5/3/1/expression/0/body/1":
+          {
+            content: {
+              en: "•",
+              pl: "•",
+            },
+            hash: "5f1c90d0fd46023ba1bfaaa2537f59fb",
+          },
+        "21/declaration/body/16/argument/9/1": {
+          content: {
+            en: "Company's decision",
+            pl: "Decyzja firmy",
+          },
+          hash: "b69de22cb9cdee8cc374194c75e3ce1b",
+        },
+        "21/declaration/body/16/argument/9/3/1/1/1": {
+          content: {
+            en: "<element:strong>Important:</element:strong> You are responsible for submitting the offer through the platform. After submitting, please confirm below.",
+            pl: "<element:strong>Ważne:</element:strong> Jesteś odpowiedzialny za złożenie oferty za pośrednictwem platformy. Po złożeniu oferty, proszę potwierdzić poniżej.",
+          },
+          hash: "cc503113b2429d058b7002e663108c62",
+        },
+        "21/declaration/body/16/argument/9/3/1/1/3": {
+          content: {
+            en: "I confirm that I have submitted the offer through the platform",
+            pl: "Potwierdzam, że złożyłem ofertę za pośrednictwem platformy",
+          },
+          hash: "ce82130a67e888ddd4d0a3acec8177b0",
+        },
+        "21/declaration/body/16/argument/9/3/1/1/5/1": {
+          content: {
+            en: "Reject this tender",
+            pl: "Odrzuć to zapytanie ofertowe",
+          },
+          hash: "9726f7d0a4aeb6b350795a7278f688e4",
+        },
+        "21/declaration/body/16/argument/9/3/1/1/5/3": {
+          content: {
+            en: "Confirm Submission",
+            pl: "Potwierdź złożenie",
+          },
+          hash: "48734347e85b82047f7e1fdd7b97b3e8",
+        },
+        "21/declaration/body/8/0/init/body/2/expression/1/0/value/body/0/expression/0":
+          {
+            content: {
+              en: "Offer submitted successfully for <expression/>",
+              pl: "Oferta została pomyślnie złożona dla <expression/>",
+            },
+            hash: "95cad397804e3a7d042c08d4a15b91dc",
+          },
+        "21/declaration/body/9/0/init/body/0/expression/1/0/value/body/0/expression/0":
+          {
+            content: {
+              en: "Tender <expression/> was rejected",
+              pl: "Przetarg <expression/> został odrzucony",
+            },
+            hash: "da75484b6e8463ca4fea585845e3e086",
+          },
+        "21/declaration/body/9/0/init/body/2/expression/1/0/value/body/0/expression/0":
+          {
+            content: {
+              en: "Offer submitted successfully for <expression/>",
+              pl: "Oferta została pomyślnie złożona dla <expression/>",
+            },
+            hash: "95cad397804e3a7d042c08d4a15b91dc",
+          },
+        "22/declaration/body/10/0/init/body/0/expression/1/0/value/body/0/expression/0":
+          {
+            content: {
+              en: "Tender <expression/> was rejected",
+              pl: "Przetarg <expression/> został odrzucony",
+            },
+            hash: "da75484b6e8463ca4fea585845e3e086",
+          },
+        "22/declaration/body/11/consequent/0/argument/1/1/3": {
+          content: {
+            en: "You've applied to this tender",
+            pl: "Złożyłeś wniosek o udział w tym przetargu",
+          },
+          hash: "9a4fe6d9b566d5a4b1b37ee9009e4c3e",
+        },
+        "22/declaration/body/11/consequent/0/argument/1/1/5": {
+          content: {
+            en: "Your offer has been successfully submitted. You can track the progress in your dashboard.",
+            pl: "Twoja oferta została pomyślnie złożona. Możesz śledzić postępy na swoim pulpicie nawigacyjnym.",
+          },
+          hash: "cf699e1c95aa2e19ca56f489d9a13ccc",
+        },
+        "22/declaration/body/11/consequent/argument/1/1": {
+          content: {
+            en: "We will prepare your documents. They will be ready within 48 hours at the latest",
+            pl: "Przygotujemy Twoje dokumenty. Będą gotowe najpóźniej w ciągu 48 godzin.",
+          },
+          hash: "28e5b302e5adec94d929969721a9d520",
+        },
+        "22/declaration/body/11/consequent/argument/1/5": {
+          content: {
+            en: "Don't forget to include the valuation. We can also help you with it — just let us know at mimira@mimiraoffers.eu or +48 732 070 469.",
+            pl: "Nie zapomnij dołączyć wyceny. Możemy Ci w tym pomóc — po prostu daj nam znać na mimira@mimiraoffers.eu lub +48 732 070 469.",
+          },
+          hash: "8b199e4c03646258cacdb01bdc3ad72f",
+        },
+        "22/declaration/body/11/consequent/argument/1/7": {
+          content: {
+            en: "Cancel preparation and reject this tender",
+            pl: "Anuluj przygotowanie i odrzuć tę ofertę",
+          },
+          hash: "49d1e0e6ab4ccf36e47cf6a776d82937",
+        },
+        "22/declaration/body/12/consequent/0/argument/1/1": {
+          content: {
+            en: "Loading documents...",
+            pl: "Ładowanie dokumentów...",
+          },
+          hash: "b795b22e2d0abd430c2ff0b28fb26e5a",
+        },
+        "22/declaration/body/12/consequent/argument/1/1": {
+          content: {
+            en: "We will prepare your documents. They will be ready within 48 hours at the latest",
+            pl: "Przygotujemy Twoje dokumenty. Będą gotowe najpóźniej w ciągu 48 godzin.",
+          },
+          hash: "28e5b302e5adec94d929969721a9d520",
+        },
+        "22/declaration/body/12/consequent/argument/1/5": {
+          content: {
+            en: "Don't forget to include the valuation. We can also help you with it — just let us know at mimira@mimiraoffers.eu or +48 732 070 469.",
+            pl: "Nie zapomnij dołączyć wyceny. Możemy Ci w tym pomóc — po prostu daj nam znać na mimira@mimiraoffers.eu lub +48 732 070 469.",
+          },
+          hash: "8b199e4c03646258cacdb01bdc3ad72f",
+        },
+        "22/declaration/body/12/consequent/argument/1/7": {
+          content: {
+            en: "Cancel preparation and reject this tender",
+            pl: "Anuluj przygotowanie i odrzuć tę ofertę",
+          },
+          hash: "49d1e0e6ab4ccf36e47cf6a776d82937",
+        },
+        "22/declaration/body/13/consequent/0/argument/1/1": {
+          content: {
+            en: "Loading documents...",
+            pl: "Ładowanie dokumentów...",
+          },
+          hash: "b795b22e2d0abd430c2ff0b28fb26e5a",
+        },
+        "22/declaration/body/13/consequent/argument/1/1": {
+          content: {
+            en: "We will prepare your documents. They will be ready within 48 hours at the latest",
+            pl: "Przygotujemy Twoje dokumenty. Będą gotowe najpóźniej w ciągu 48 godzin.",
+          },
+          hash: "28e5b302e5adec94d929969721a9d520",
+        },
+        "22/declaration/body/13/consequent/argument/1/5": {
+          content: {
+            en: "Don't forget to include the valuation. We can also help you with it — just let us know at mimira@mimiraoffers.eu or +48 732 070 469.",
+            pl: "Nie zapomnij dołączyć wyceny. Możemy Ci w tym pomóc — po prostu daj nam znać na mimira@mimiraoffers.eu lub +48 732 070 469.",
+          },
+          hash: "8b199e4c03646258cacdb01bdc3ad72f",
+        },
+        "22/declaration/body/13/consequent/argument/1/7": {
+          content: {
+            en: "Cancel preparation and reject this tender",
+            pl: "Anuluj przygotowanie i odrzuć tę ofertę",
+          },
+          hash: "49d1e0e6ab4ccf36e47cf6a776d82937",
+        },
+        "22/declaration/body/14/argument/1/1/1": {
+          content: {
+            en: "Congratulations! You can now submit your offer",
+            pl: "Gratulacje! Możesz teraz złożyć swoją ofertę",
+          },
+          hash: "e6bb590da2a9a3ea506bbc5d068ff6d5",
+        },
+        "22/declaration/body/14/argument/3/1": {
+          content: {
+            en: "Basic submission Information",
+            pl: "Podstawowe informacje o zgłoszeniu",
+          },
+          hash: "55f543c162ced830c982289d91d56ef3",
+        },
+        "22/declaration/body/14/argument/3/3/1/1/expression/right-title": {
+          content: {
+            en: "Platform submission link",
+            pl: "Link do przesyłania na platformie",
+          },
+          hash: "52362dc2e1de061d4a954d598e23218a",
+        },
+        "22/declaration/body/14/argument/3/3/1/3/expression/right-title": {
+          content: {
+            en: "Submission deadline",
+            pl: "Termin składania",
+          },
+          hash: "1a2926f958ae3083838b468a869db131",
+        },
+        "22/declaration/body/14/argument/3/3/1/5/expression/right-title": {
+          content: {
+            en: "Deposit (Wadium)",
+            pl: "Depozyt (Wadium)",
+          },
+          hash: "b1fff394ee8965b12f190e54c16a3af3",
+        },
+        "22/declaration/body/14/argument/5/1": {
+          content: {
+            en: "Ready documents to Download",
+            pl: "Gotowe dokumenty do pobrania",
+          },
+          hash: "19eb6cdac7c520db3b465629d6d4cdcf",
+        },
+        "22/declaration/body/14/argument/5/3/1/openingElement/1/value/expression":
+          {
+            content: {
+              en: "Ready documentation",
+              pl: "Gotowa dokumentacja",
+            },
+            hash: "3ba81e87ae8016eea5860e247c708dd9",
+          },
+        "22/declaration/body/14/argument/5/3/3/openingElement/1/value/expression":
+          {
+            content: {
+              en: "Requires manual fill",
+              pl: "Wymaga ręcznego wypełnienia",
+            },
+            hash: "030e160bf50c084716488dc452429db2",
+          },
+        "22/declaration/body/14/argument/5/3/5/openingElement/1/value/expression":
+          {
+            content: {
+              en: "Other attachments",
+              pl: "Inne załączniki",
+            },
+            hash: "f187e342b6ff30e7d4d96d9395dea305",
+          },
+        "22/declaration/body/14/argument/7/expression/right/1": {
+          content: {
+            en: "Additional Documents to Attach",
+            pl: "Dodatkowe dokumenty do załączenia",
+          },
+          hash: "c287d28bf36b66bb994d6b9f83474781",
+        },
+        "22/declaration/body/14/argument/7/expression/right/3/1/1/1": {
+          content: {
+            en: "Please ensure you also include these documents when submitting your offer:",
+            pl: "Proszę upewnić się, że dołączono również te dokumenty podczas składania oferty:",
+          },
+          hash: "1804dda50682b0ea18153f9b0d39abcb",
+        },
+        "22/declaration/body/14/argument/7/expression/right/3/1/1/3/1/expression/0/body/1":
+          {
+            content: {
+              en: "•",
+              pl: "•",
+            },
+            hash: "5f1c90d0fd46023ba1bfaaa2537f59fb",
+          },
+        "22/declaration/body/14/argument/9/1": {
+          content: {
+            en: "Company's decision",
+            pl: "Decyzja firmy",
+          },
+          hash: "b69de22cb9cdee8cc374194c75e3ce1b",
+        },
+        "22/declaration/body/14/argument/9/3/1/1/1": {
+          content: {
+            en: "<element:strong>Important:</element:strong> You are responsible for submitting the offer through the platform. After submitting, please confirm below.",
+            pl: "<element:strong>Ważne:</element:strong> Jesteś odpowiedzialny za złożenie oferty za pośrednictwem platformy. Po złożeniu oferty, proszę potwierdzić poniżej.",
+          },
+          hash: "cc503113b2429d058b7002e663108c62",
+        },
+        "22/declaration/body/14/argument/9/3/1/1/3": {
+          content: {
+            en: "I confirm that I have submitted the offer through the platform",
+            pl: "Potwierdzam, że złożyłem ofertę za pośrednictwem platformy",
+          },
+          hash: "ce82130a67e888ddd4d0a3acec8177b0",
+        },
+        "22/declaration/body/14/argument/9/3/1/1/5/1": {
+          content: {
+            en: "Reject this tender",
+            pl: "Odrzuć to zapytanie ofertowe",
+          },
+          hash: "9726f7d0a4aeb6b350795a7278f688e4",
+        },
+        "22/declaration/body/14/argument/9/3/1/1/5/3": {
+          content: {
+            en: "Confirm Submission",
+            pl: "Potwierdź złożenie",
+          },
+          hash: "48734347e85b82047f7e1fdd7b97b3e8",
+        },
+        "22/declaration/body/14/consequent/0/argument/1/1": {
+          content: {
+            en: "Failed to load documents. Please try again.",
+            pl: "Nie udało się załadować dokumentów. Proszę spróbować ponownie.",
+          },
+          hash: "1f3bb71b519b18f32ba0f1a5a360afb0",
+        },
+        "22/declaration/body/15/argument/1/1/1": {
+          content: {
+            en: "Congratulations! You can now submit your offer",
+            pl: "Gratulacje! Możesz teraz złożyć swoją ofertę",
+          },
+          hash: "e6bb590da2a9a3ea506bbc5d068ff6d5",
+        },
+        "22/declaration/body/15/argument/13/expression/right/1/1": {
+          content: {
+            en: "Additional Documents to Attach",
+            pl: "Dodatkowe dokumenty do załączenia",
+          },
+          hash: "3bee1ee3d405eefa3fd49756d3442d30",
+        },
+        "22/declaration/body/15/argument/13/expression/right/5/1": {
+          content: {
+            en: "Please ensure you also include these documents when submitting your offer:",
+            pl: "Upewnij się, że dołączasz również te dokumenty podczas składania oferty:",
+          },
+          hash: "b12d2abb6aacc3745cd12ff69db2c315",
+        },
+        "22/declaration/body/15/argument/13/expression/right/5/3/1/expression/0/body/1":
+          {
+            content: {
+              en: "•",
+              pl: "•",
+            },
+            hash: "5f1c90d0fd46023ba1bfaaa2537f59fb",
+          },
+        "22/declaration/body/15/argument/17/1/1/3": {
+          content: {
+            en: "Confirm Submission",
+            pl: "Potwierdź złożenie",
+          },
+          hash: "d38f381ce245130a1b5fce4e1896441f",
+        },
+        "22/declaration/body/15/argument/17/5/1": {
+          content: {
+            en: "<element:strong>Important:</element:strong> You are responsible for submitting the offer through the platform. After submitting, please confirm below.",
+            pl: "<element:strong>Ważne:</element:strong> Jesteś odpowiedzialny za złożenie oferty za pośrednictwem platformy. Po złożeniu oferty, proszę potwierdzić poniżej.",
+          },
+          hash: "5efa18df04936d87dce6f7887e14960f",
+        },
+        "22/declaration/body/15/argument/17/5/3": {
+          content: {
+            en: "I confirm that I have submitted the offer through the platform",
+            pl: "Potwierdzam, że złożyłem ofertę za pośrednictwem platformy",
+          },
+          hash: "a0fa58a1841ed835ecaefff17d5389b3",
+        },
+        "22/declaration/body/15/argument/17/5/5/1": {
+          content: {
+            en: "Reject this tender",
+            pl: "Odrzuć ten przetarg",
+          },
+          hash: "eeff2e12eef96d0acb2be4f64ed71a3a",
+        },
+        "22/declaration/body/15/argument/17/5/5/3": {
+          content: {
+            en: "Confirm Submission",
+            pl: "Potwierdź złożenie",
+          },
+          hash: "2d9b2c057d81cbc43f482e3d50efd4e7",
+        },
+        "22/declaration/body/15/argument/3/1": {
+          content: {
+            en: "Basic submission Information",
+            pl: "Podstawowe informacje o zgłoszeniu",
+          },
+          hash: "55f543c162ced830c982289d91d56ef3",
+        },
+        "22/declaration/body/15/argument/3/11/expression/right-title": {
+          content: {
+            en: "Deposit (Wadium)",
+            pl: "Depozyt (Wadium)",
+          },
+          hash: "b1fff394ee8965b12f190e54c16a3af3",
+        },
+        "22/declaration/body/15/argument/3/3/1/1/expression/right-title": {
+          content: {
+            en: "Platform submission link",
+            pl: "Link do przesyłania na platformie",
+          },
+          hash: "52362dc2e1de061d4a954d598e23218a",
+        },
+        "22/declaration/body/15/argument/3/3/1/3/expression/right-title": {
+          content: {
+            en: "Submission deadline",
+            pl: "Termin składania",
+          },
+          hash: "1a2926f958ae3083838b468a869db131",
+        },
+        "22/declaration/body/15/argument/3/3/1/5/expression/right-title": {
+          content: {
+            en: "Deposit (Wadium)",
+            pl: "Depozyt (Wadium)",
+          },
+          hash: "b1fff394ee8965b12f190e54c16a3af3",
+        },
+        "22/declaration/body/15/argument/3/3/expression/right-title": {
+          content: {
+            en: "Platform submission link",
+            pl: "Link do przesyłania na platformie",
+          },
+          hash: "52362dc2e1de061d4a954d598e23218a",
+        },
+        "22/declaration/body/15/argument/3/7/expression/right-title": {
+          content: {
+            en: "Submission deadline",
+            pl: "Termin składania",
+          },
+          hash: "1a2926f958ae3083838b468a869db131",
+        },
+        "22/declaration/body/15/argument/5/1": {
+          content: {
+            en: "Ready documents to Download",
+            pl: "Gotowe dokumenty do pobrania",
+          },
+          hash: "19eb6cdac7c520db3b465629d6d4cdcf",
+        },
+        "22/declaration/body/15/argument/5/3/1/openingElement/1/value/expression":
+          {
+            content: {
+              en: "Ready documentation",
+              pl: "Gotowa dokumentacja",
+            },
+            hash: "3ba81e87ae8016eea5860e247c708dd9",
+          },
+        "22/declaration/body/15/argument/5/3/3/openingElement/1/value/expression":
+          {
+            content: {
+              en: "Requires manual fill",
+              pl: "Wymaga ręcznego wypełnienia",
+            },
+            hash: "030e160bf50c084716488dc452429db2",
+          },
+        "22/declaration/body/15/argument/5/3/5/openingElement/1/value/expression":
+          {
+            content: {
+              en: "Other attachments",
+              pl: "Inne załączniki",
+            },
+            hash: "f187e342b6ff30e7d4d96d9395dea305",
+          },
+        "22/declaration/body/15/argument/7/expression/right/1": {
+          content: {
+            en: "Additional Documents to Attach",
+            pl: "Dodatkowe dokumenty do załączenia",
+          },
+          hash: "c287d28bf36b66bb994d6b9f83474781",
+        },
+        "22/declaration/body/15/argument/7/expression/right/3/1/1/1": {
+          content: {
+            en: "Please ensure you also include these documents when submitting your offer:",
+            pl: "Proszę upewnić się, że dołączono również te dokumenty podczas składania oferty:",
+          },
+          hash: "1804dda50682b0ea18153f9b0d39abcb",
+        },
+        "22/declaration/body/15/argument/7/expression/right/3/1/1/3/1/expression/0/body/1":
+          {
+            content: {
+              en: "•",
+              pl: "•",
+            },
+            hash: "5f1c90d0fd46023ba1bfaaa2537f59fb",
+          },
+        "22/declaration/body/15/argument/9/1": {
+          content: {
+            en: "Company's decision",
+            pl: "Decyzja firmy",
+          },
+          hash: "b69de22cb9cdee8cc374194c75e3ce1b",
+        },
+        "22/declaration/body/15/argument/9/3/1/1/1": {
+          content: {
+            en: "<element:strong>Important:</element:strong> You are responsible for submitting the offer through the platform. After submitting, please confirm below.",
+            pl: "<element:strong>Ważne:</element:strong> Jesteś odpowiedzialny za złożenie oferty za pośrednictwem platformy. Po złożeniu oferty, proszę potwierdzić poniżej.",
+          },
+          hash: "cc503113b2429d058b7002e663108c62",
+        },
+        "22/declaration/body/15/argument/9/3/1/1/3": {
+          content: {
+            en: "I confirm that I have submitted the offer through the platform",
+            pl: "Potwierdzam, że złożyłem ofertę za pośrednictwem platformy",
+          },
+          hash: "ce82130a67e888ddd4d0a3acec8177b0",
+        },
+        "22/declaration/body/15/argument/9/3/1/1/5/1": {
+          content: {
+            en: "Reject this tender",
+            pl: "Odrzuć to zapytanie ofertowe",
+          },
+          hash: "9726f7d0a4aeb6b350795a7278f688e4",
+        },
+        "22/declaration/body/15/argument/9/3/1/1/5/3": {
+          content: {
+            en: "Confirm Submission",
+            pl: "Potwierdź złożenie",
+          },
+          hash: "48734347e85b82047f7e1fdd7b97b3e8",
+        },
+        "22/declaration/body/15/consequent/0/argument/1/1": {
+          content: {
+            en: "Failed to load documents. Please try again.",
+            pl: "Nie udało się załadować dokumentów. Proszę spróbować ponownie.",
+          },
+          hash: "1f3bb71b519b18f32ba0f1a5a360afb0",
+        },
+        "22/declaration/body/16/argument/1/1": {
+          content: {
+            en: "Submission Information",
+            pl: "Informacje o złożeniu",
+          },
+          hash: "e75260ca849db85c75ecb36d672d6642",
+        },
+        "22/declaration/body/16/argument/1/1/1": {
+          content: {
+            en: "Congratulations! You can now submit your offer",
+            pl: "Gratulacje! Możesz teraz złożyć swoją ofertę",
+          },
+          hash: "e6bb590da2a9a3ea506bbc5d068ff6d5",
+        },
+        "22/declaration/body/16/argument/1/1/1/1": {
+          content: {
+            en: "Congratulations! You can now submit your offer",
+            pl: "Gratulacje! Możesz teraz złożyć swoją ofertę",
+          },
+          hash: "20ade9d45f75bc7fc726bd35d3536cd1",
+        },
+        "22/declaration/body/16/argument/1/3/1": {
+          content: {
+            en: "Submission Information",
+            pl: "Informacje o złożeniu",
+          },
+          hash: "e75260ca849db85c75ecb36d672d6642",
+        },
+        "22/declaration/body/16/argument/1/3/1/1/expression/right-title": {
+          content: {
+            en: "Platform submission link",
+            pl: "Link do przesyłania na platformie",
+          },
+          hash: "52362dc2e1de061d4a954d598e23218a",
+        },
+        "22/declaration/body/16/argument/1/3/1/3/expression/right-title": {
+          content: {
+            en: "Submission deadline",
+            pl: "Termin składania",
+          },
+          hash: "1a2926f958ae3083838b468a869db131",
+        },
+        "22/declaration/body/16/argument/1/3/1/5/expression/right-title": {
+          content: {
+            en: "Deposit (Wadium)",
+            pl: "Depozyt (Wadium)",
+          },
+          hash: "b1fff394ee8965b12f190e54c16a3af3",
+        },
+        "22/declaration/body/16/argument/1/3/3/1/1/expression/right-title": {
+          content: {
+            en: "Platform submission link",
+            pl: "Link do przesyłania na platformie",
+          },
+          hash: "52362dc2e1de061d4a954d598e23218a",
+        },
+        "22/declaration/body/16/argument/1/3/3/1/3/expression/right-title": {
+          content: {
+            en: "Submission deadline",
+            pl: "Termin składania",
+          },
+          hash: "1a2926f958ae3083838b468a869db131",
+        },
+        "22/declaration/body/16/argument/1/3/3/1/5/expression/right-title": {
+          content: {
+            en: "Deposit (Wadium)",
+            pl: "Depozyt (Wadium)",
+          },
+          hash: "b1fff394ee8965b12f190e54c16a3af3",
+        },
+        "22/declaration/body/16/argument/1/5/1": {
+          content: {
+            en: "Documents to Download",
+            pl: "Dokumenty do pobrania",
+          },
+          hash: "9e43531d5f81a3cc6564d73d5a8a7216",
+        },
+        "22/declaration/body/16/argument/1/5/3/1/openingElement/1/value/expression":
+          {
+            content: {
+              en: "Ready documentation",
+              pl: "Gotowa dokumentacja",
+            },
+            hash: "3ba81e87ae8016eea5860e247c708dd9",
+          },
+        "22/declaration/body/16/argument/1/5/3/3/openingElement/1/value/expression":
+          {
+            content: {
+              en: "Requires manual fill",
+              pl: "Wymaga ręcznego wypełnienia",
+            },
+            hash: "030e160bf50c084716488dc452429db2",
+          },
+        "22/declaration/body/16/argument/1/5/3/5/openingElement/1/value/expression":
+          {
+            content: {
+              en: "Other attachments",
+              pl: "Inne załączniki",
+            },
+            hash: "f187e342b6ff30e7d4d96d9395dea305",
+          },
+        "22/declaration/body/16/argument/1/7/expression/right/1": {
+          content: {
+            en: "Additional Documents to Attach",
+            pl: "Dodatkowe dokumenty do załączenia",
+          },
+          hash: "c287d28bf36b66bb994d6b9f83474781",
+        },
+        "22/declaration/body/16/argument/1/7/expression/right/3/1/1/1": {
+          content: {
+            en: "Additional Documents to Attach",
+            pl: "Dodatkowe dokumenty do załączenia",
+          },
+          hash: "5462a83f268fbb111f65a1f70ec916d1",
+        },
+        "22/declaration/body/16/argument/1/7/expression/right/3/1/5/1": {
+          content: {
+            en: "Please ensure you also include these documents when submitting your offer:",
+            pl: "Upewnij się, że dołączasz również te dokumenty podczas składania oferty:",
+          },
+          hash: "d73d157c01311ce5a88cfae1fa19d441",
+        },
+        "22/declaration/body/16/argument/1/7/expression/right/3/1/5/3/1/expression/0/body/1":
+          {
+            content: {
+              en: "•",
+              pl: "•",
+            },
+            hash: "5f1c90d0fd46023ba1bfaaa2537f59fb",
+          },
+        "22/declaration/body/16/argument/1/9/1": {
+          content: {
+            en: "Confirm Submission",
+            pl: "Potwierdź złożenie",
+          },
+          hash: "d38f381ce245130a1b5fce4e1896441f",
+        },
+        "22/declaration/body/16/argument/1/9/3/1/1/1": {
+          content: {
+            en: "<element:strong>Important:</element:strong> You are responsible for submitting the offer through the platform. After submitting, please confirm below.",
+            pl: "<element:strong>Ważne:</element:strong> Jesteś odpowiedzialny za złożenie oferty za pośrednictwem platformy. Po złożeniu oferty, proszę potwierdzić poniżej.",
+          },
+          hash: "70f8b2ab855c1df07a42e6299f603e71",
+        },
+        "22/declaration/body/16/argument/1/9/3/1/1/3": {
+          content: {
+            en: "I confirm that I have submitted the offer through the platform",
+            pl: "Potwierdzam, że złożyłem ofertę za pośrednictwem platformy",
+          },
+          hash: "616f35f7823e01803992b2cfeb1b616c",
+        },
+        "22/declaration/body/16/argument/1/9/3/1/1/5/1": {
+          content: {
+            en: "Reject this tender",
+            pl: "Odrzuć tę ofertę",
+          },
+          hash: "676de58ded59cc9dc7af128fd2b15ca8",
+        },
+        "22/declaration/body/16/argument/1/9/3/1/1/5/3": {
+          content: {
+            en: "Confirm Submission",
+            pl: "Potwierdź złożenie",
+          },
+          hash: "d4ebd618bac1563cd8abdacb3abd0ee1",
+        },
+        "22/declaration/body/16/argument/3/1": {
+          content: {
+            en: "Submission Information",
+            pl: "Informacje o złożeniu",
+          },
+          hash: "e75260ca849db85c75ecb36d672d6642",
+        },
+        "22/declaration/body/16/argument/3/3/1/1/expression/right-title": {
+          content: {
+            en: "Platform submission link",
+            pl: "Link do przesyłania na platformie",
+          },
+          hash: "52362dc2e1de061d4a954d598e23218a",
+        },
+        "22/declaration/body/16/argument/3/3/1/3/expression/right-title": {
+          content: {
+            en: "Submission deadline",
+            pl: "Termin składania",
+          },
+          hash: "1a2926f958ae3083838b468a869db131",
+        },
+        "22/declaration/body/16/argument/3/3/1/5/expression/right-title": {
+          content: {
+            en: "Deposit (Wadium)",
+            pl: "Depozyt (Wadium)",
+          },
+          hash: "b1fff394ee8965b12f190e54c16a3af3",
+        },
+        "22/declaration/body/16/argument/3/3/1/openingElement/1/value/expression":
+          {
+            content: {
+              en: "Ready documentation",
+              pl: "Gotowa dokumentacja",
+            },
+            hash: "3ba81e87ae8016eea5860e247c708dd9",
+          },
+        "22/declaration/body/16/argument/3/3/3/openingElement/1/value/expression":
+          {
+            content: {
+              en: "Requires manual fill",
+              pl: "Wymaga ręcznego wypełnienia",
+            },
+            hash: "030e160bf50c084716488dc452429db2",
+          },
+        "22/declaration/body/16/argument/3/3/5/openingElement/1/value/expression":
+          {
+            content: {
+              en: "Other attachments",
+              pl: "Inne załączniki",
+            },
+            hash: "f187e342b6ff30e7d4d96d9395dea305",
+          },
+        "22/declaration/body/16/argument/5/1": {
+          content: {
+            en: "Documents to Download",
+            pl: "Dokumenty do pobrania",
+          },
+          hash: "9e43531d5f81a3cc6564d73d5a8a7216",
+        },
+        "22/declaration/body/16/argument/5/3/1/openingElement/1/value/expression":
+          {
+            content: {
+              en: "Ready documentation",
+              pl: "Gotowa dokumentacja",
+            },
+            hash: "3ba81e87ae8016eea5860e247c708dd9",
+          },
+        "22/declaration/body/16/argument/5/3/3/openingElement/1/value/expression":
+          {
+            content: {
+              en: "Requires manual fill",
+              pl: "Wymaga ręcznego wypełnienia",
+            },
+            hash: "030e160bf50c084716488dc452429db2",
+          },
+        "22/declaration/body/16/argument/5/3/5/openingElement/1/value/expression":
+          {
+            content: {
+              en: "Other attachments",
+              pl: "Inne załączniki",
+            },
+            hash: "f187e342b6ff30e7d4d96d9395dea305",
+          },
+        "22/declaration/body/16/argument/5/expression/right/1": {
+          content: {
+            en: "Additional Documents to Attach",
+            pl: "Dodatkowe dokumenty do załączenia",
+          },
+          hash: "c287d28bf36b66bb994d6b9f83474781",
+        },
+        "22/declaration/body/16/argument/5/expression/right/3/1/1/1": {
+          content: {
+            en: "Additional Documents to Attach",
+            pl: "Dodatkowe dokumenty do załączenia",
+          },
+          hash: "9047039139eb1cfab0c0666de099f902",
+        },
+        "22/declaration/body/16/argument/5/expression/right/3/1/5/1": {
+          content: {
+            en: "Please ensure you also include these documents when submitting your offer:",
+            pl: "Proszę upewnić się, że dołączono również te dokumenty podczas składania oferty:",
+          },
+          hash: "1804dda50682b0ea18153f9b0d39abcb",
+        },
+        "22/declaration/body/16/argument/5/expression/right/3/1/5/3/1/expression/0/body/1":
+          {
+            content: {
+              en: "•",
+              pl: "•",
+            },
+            hash: "5f1c90d0fd46023ba1bfaaa2537f59fb",
+          },
+        "22/declaration/body/16/argument/7/1": {
+          content: {
+            en: "Confirm Submission",
+            pl: "Potwierdź złożenie",
+          },
+          hash: "d38f381ce245130a1b5fce4e1896441f",
+        },
+        "22/declaration/body/16/argument/7/3/1/1/1": {
+          content: {
+            en: "<element:strong>Important:</element:strong> You are responsible for submitting the offer through the platform. After submitting, please confirm below.",
+            pl: "<element:strong>Ważne:</element:strong> Jesteś odpowiedzialny za złożenie oferty za pośrednictwem platformy. Po złożeniu oferty, proszę potwierdzić poniżej.",
+          },
+          hash: "cc503113b2429d058b7002e663108c62",
+        },
+        "22/declaration/body/16/argument/7/3/1/1/3": {
+          content: {
+            en: "I confirm that I have submitted the offer through the platform",
+            pl: "Potwierdzam, że złożyłem ofertę za pośrednictwem platformy",
+          },
+          hash: "ce82130a67e888ddd4d0a3acec8177b0",
+        },
+        "22/declaration/body/16/argument/7/3/1/1/5/1": {
+          content: {
+            en: "Reject this tender",
+            pl: "Odrzuć to zapytanie ofertowe",
+          },
+          hash: "9726f7d0a4aeb6b350795a7278f688e4",
+        },
+        "22/declaration/body/16/argument/7/3/1/1/5/3": {
+          content: {
+            en: "Confirm Submission",
+            pl: "Potwierdź złożenie",
+          },
+          hash: "48734347e85b82047f7e1fdd7b97b3e8",
+        },
+        "22/declaration/body/16/argument/7/expression/right/1": {
+          content: {
+            en: "Additional Documents to Attach",
+            pl: "Dodatkowe dokumenty do załączenia",
+          },
+          hash: "c287d28bf36b66bb994d6b9f83474781",
+        },
+        "22/declaration/body/16/argument/7/expression/right/3/1/1/1": {
+          content: {
+            en: "Additional Documents to Attach",
+            pl: "Dodatkowe dokumenty do załączenia",
+          },
+          hash: "9047039139eb1cfab0c0666de099f902",
+        },
+        "22/declaration/body/16/argument/7/expression/right/3/1/5/1": {
+          content: {
+            en: "Please ensure you also include these documents when submitting your offer:",
+            pl: "Proszę upewnić się, że dołączono również te dokumenty podczas składania oferty:",
+          },
+          hash: "1804dda50682b0ea18153f9b0d39abcb",
+        },
+        "22/declaration/body/16/argument/7/expression/right/3/1/5/3/1/expression/0/body/1":
+          {
+            content: {
+              en: "•",
+              pl: "•",
+            },
+            hash: "5f1c90d0fd46023ba1bfaaa2537f59fb",
+          },
+        "22/declaration/body/16/argument/9/1": {
+          content: {
+            en: "Confirm Submission",
+            pl: "Potwierdź złożenie",
+          },
+          hash: "d38f381ce245130a1b5fce4e1896441f",
+        },
+        "22/declaration/body/16/argument/9/3/1/1/1": {
+          content: {
+            en: "<element:strong>Important:</element:strong> You are responsible for submitting the offer through the platform. After submitting, please confirm below.",
+            pl: "<element:strong>Ważne:</element:strong> Jesteś odpowiedzialny za złożenie oferty za pośrednictwem platformy. Po złożeniu oferty, proszę potwierdzić poniżej.",
+          },
+          hash: "cc503113b2429d058b7002e663108c62",
+        },
+        "22/declaration/body/16/argument/9/3/1/1/3": {
+          content: {
+            en: "I confirm that I have submitted the offer through the platform",
+            pl: "Potwierdzam, że złożyłem ofertę za pośrednictwem platformy",
+          },
+          hash: "ce82130a67e888ddd4d0a3acec8177b0",
+        },
+        "22/declaration/body/16/argument/9/3/1/1/5/1": {
+          content: {
+            en: "Reject this tender",
+            pl: "Odrzuć to zapytanie ofertowe",
+          },
+          hash: "9726f7d0a4aeb6b350795a7278f688e4",
+        },
+        "22/declaration/body/16/argument/9/3/1/1/5/3": {
+          content: {
+            en: "Confirm Submission",
+            pl: "Potwierdź złożenie",
+          },
+          hash: "48734347e85b82047f7e1fdd7b97b3e8",
+        },
+        "22/declaration/body/8/0/init/body/2/expression/1/0/value/body/0/expression/0":
+          {
+            content: {
+              en: "Offer submitted successfully for <expression/>",
+              pl: "Oferta została pomyślnie złożona dla <expression/>",
+            },
+            hash: "95cad397804e3a7d042c08d4a15b91dc",
+          },
+        "22/declaration/body/9/0/init/body/0/expression/1/0/value/body/0/expression/0":
+          {
+            content: {
+              en: "Tender <expression/> was rejected",
+              pl: "Przetarg <expression/> został odrzucony",
+            },
+            hash: "da75484b6e8463ca4fea585845e3e086",
+          },
+        "22/declaration/body/9/0/init/body/2/expression/1/0/value/body/0/expression/0":
+          {
+            content: {
+              en: "Offer submitted successfully for <expression/>",
+              pl: "Oferta została pomyślnie złożona dla <expression/>",
+            },
+            hash: "95cad397804e3a7d042c08d4a15b91dc",
+          },
+        "23/declaration/body/12/consequent/argument/1/1": {
+          content: {
+            en: "We will prepare your documents. They will be ready within 48 hours at the latest",
+            pl: "Przygotujemy Twoje dokumenty. Będą gotowe najpóźniej w ciągu 48 godzin.",
+          },
+          hash: "28e5b302e5adec94d929969721a9d520",
+        },
+        "23/declaration/body/12/consequent/argument/1/5": {
+          content: {
+            en: "Don't forget to include the valuation. We can also help you with it — just let us know at mimira@mimiraoffers.eu or +48 732 070 469.",
+            pl: "Nie zapomnij dołączyć wyceny. Możemy Ci w tym pomóc — po prostu daj nam znać na mimira@mimiraoffers.eu lub +48 732 070 469.",
+          },
+          hash: "8b199e4c03646258cacdb01bdc3ad72f",
+        },
+        "23/declaration/body/12/consequent/argument/1/7": {
+          content: {
+            en: "Cancel preparation and reject this tender",
+            pl: "Anuluj przygotowanie i odrzuć tę ofertę",
+          },
+          hash: "49d1e0e6ab4ccf36e47cf6a776d82937",
+        },
+        "23/declaration/body/13/consequent/0/argument/1/1": {
+          content: {
+            en: "Loading documents...",
+            pl: "Ładowanie dokumentów...",
+          },
+          hash: "b795b22e2d0abd430c2ff0b28fb26e5a",
+        },
+        "23/declaration/body/14/consequent/0/argument/1/1": {
+          content: {
+            en: "Failed to load documents. Please try again.",
+            pl: "Nie udało się załadować dokumentów. Proszę spróbować ponownie.",
+          },
+          hash: "1f3bb71b519b18f32ba0f1a5a360afb0",
+        },
+        "23/declaration/body/15/argument/13/expression/right/1/1": {
+          content: {
+            en: "Additional Documents to Attach",
+            pl: "Dodatkowe dokumenty do załączenia",
+          },
+          hash: "3bee1ee3d405eefa3fd49756d3442d30",
+        },
+        "23/declaration/body/15/argument/13/expression/right/5/1": {
+          content: {
+            en: "Please ensure you also include these documents when submitting your offer:",
+            pl: "Upewnij się, że dołączasz również te dokumenty podczas składania oferty:",
+          },
+          hash: "b12d2abb6aacc3745cd12ff69db2c315",
+        },
+        "23/declaration/body/15/argument/13/expression/right/5/3/1/expression/0/body/1":
+          {
+            content: {
+              en: "•",
+              pl: "•",
+            },
+            hash: "5f1c90d0fd46023ba1bfaaa2537f59fb",
+          },
+        "23/declaration/body/15/argument/17/1/1/3": {
+          content: {
+            en: "Confirm Submission",
+            pl: "Potwierdź złożenie",
+          },
+          hash: "d38f381ce245130a1b5fce4e1896441f",
+        },
+        "23/declaration/body/15/argument/17/5/1": {
+          content: {
+            en: "<element:strong>Important:</element:strong> You are responsible for submitting the offer through the platform. After submitting, please confirm below.",
+            pl: "<element:strong>Ważne:</element:strong> Jesteś odpowiedzialny za złożenie oferty za pośrednictwem platformy. Po złożeniu oferty, proszę potwierdzić poniżej.",
+          },
+          hash: "5efa18df04936d87dce6f7887e14960f",
+        },
+        "23/declaration/body/15/argument/17/5/3": {
+          content: {
+            en: "I confirm that I have submitted the offer through the platform",
+            pl: "Potwierdzam, że złożyłem ofertę za pośrednictwem platformy",
+          },
+          hash: "a0fa58a1841ed835ecaefff17d5389b3",
+        },
+        "23/declaration/body/15/argument/17/5/5/1": {
+          content: {
+            en: "Reject this tender",
+            pl: "Odrzuć ten przetarg",
+          },
+          hash: "eeff2e12eef96d0acb2be4f64ed71a3a",
+        },
+        "23/declaration/body/15/argument/17/5/5/3": {
+          content: {
+            en: "Confirm Submission",
+            pl: "Potwierdź złożenie",
+          },
+          hash: "2d9b2c057d81cbc43f482e3d50efd4e7",
+        },
+        "23/declaration/body/15/argument/17/expression/right/1/1": {
+          content: {
+            en: "Additional Documents to Attach",
+            pl: "Dodatkowe dokumenty do załączenia",
+          },
+          hash: "3bee1ee3d405eefa3fd49756d3442d30",
+        },
+        "23/declaration/body/15/argument/17/expression/right/5/1": {
+          content: {
+            en: "Please ensure you also include these documents when submitting your offer:",
+            pl: "Upewnij się, że dołączasz również te dokumenty podczas składania oferty:",
+          },
+          hash: "b12d2abb6aacc3745cd12ff69db2c315",
+        },
+        "23/declaration/body/15/argument/17/expression/right/5/3/1/expression/0/body/1":
+          {
+            content: {
+              en: "•",
+              pl: "•",
+            },
+            hash: "5f1c90d0fd46023ba1bfaaa2537f59fb",
+          },
+        "23/declaration/body/15/argument/21/1/1/3": {
+          content: {
+            en: "Confirm Submission",
+            pl: "Potwierdź złożenie",
+          },
+          hash: "d38f381ce245130a1b5fce4e1896441f",
+        },
+        "23/declaration/body/15/argument/21/5/1": {
+          content: {
+            en: "<element:strong>Important:</element:strong> You are responsible for submitting the offer through the platform. After submitting, please confirm below.",
+            pl: "<element:strong>Ważne:</element:strong> Jesteś odpowiedzialny za złożenie oferty za pośrednictwem platformy. Po złożeniu oferty, proszę potwierdzić poniżej.",
+          },
+          hash: "5efa18df04936d87dce6f7887e14960f",
+        },
+        "23/declaration/body/15/argument/21/5/3": {
+          content: {
+            en: "I confirm that I have submitted the offer through the platform",
+            pl: "Potwierdzam, że złożyłem ofertę za pośrednictwem platformy",
+          },
+          hash: "a0fa58a1841ed835ecaefff17d5389b3",
+        },
+        "23/declaration/body/15/argument/21/5/5/1": {
+          content: {
+            en: "Reject this tender",
+            pl: "Odrzuć ten przetarg",
+          },
+          hash: "eeff2e12eef96d0acb2be4f64ed71a3a",
+        },
+        "23/declaration/body/15/argument/21/5/5/3": {
+          content: {
+            en: "Confirm Submission",
+            pl: "Potwierdź złożenie",
+          },
+          hash: "2d9b2c057d81cbc43f482e3d50efd4e7",
+        },
+        "23/declaration/body/15/argument/3/1/1/3/1": {
+          content: {
+            en: "Congratulations! You're ready to participate in this tender",
+            pl: "Gratulacje! Jesteś gotowy, aby wziąć udział w tym przetargu",
+          },
+          hash: "41ba17d9cd8b1ba6cfc3ffe5186920e4",
+        },
+        "23/declaration/body/15/argument/3/1/1/3/3": {
+          content: {
+            en: "Follow these steps to submit your offer successfully",
+            pl: "Postępuj zgodnie z tymi krokami, aby pomyślnie złożyć swoją ofertę",
+          },
+          hash: "c70d9671a72f02fe99d104ba224390e5",
+        },
+        "23/declaration/body/15/argument/3/11/expression/right-title": {
+          content: {
+            en: "Deposit (Wadium)",
+            pl: "Depozyt (Wadium)",
+          },
+          hash: "b1fff394ee8965b12f190e54c16a3af3",
+        },
+        "23/declaration/body/15/argument/3/3/expression/right-title": {
+          content: {
+            en: "Platform submission link",
+            pl: "Link do przesyłania na platformie",
+          },
+          hash: "52362dc2e1de061d4a954d598e23218a",
+        },
+        "23/declaration/body/15/argument/3/7/expression/right-title": {
+          content: {
+            en: "Submission deadline",
+            pl: "Termin składania",
+          },
+          hash: "1a2926f958ae3083838b468a869db131",
+        },
+        "23/declaration/body/15/argument/5/1": {
+          content: {
+            en: "Documents to Download",
+            pl: "Dokumenty do pobrania",
+          },
+          hash: "9e43531d5f81a3cc6564d73d5a8a7216",
+        },
+        "23/declaration/body/15/argument/5/3/1/openingElement/1/value/expression":
+          {
+            content: {
+              en: "Ready documentation",
+              pl: "Gotowa dokumentacja",
+            },
+            hash: "3ba81e87ae8016eea5860e247c708dd9",
+          },
+        "23/declaration/body/15/argument/5/3/3/openingElement/1/value/expression":
+          {
+            content: {
+              en: "Requires manual fill",
+              pl: "Wymaga ręcznego wypełnienia",
+            },
+            hash: "030e160bf50c084716488dc452429db2",
+          },
+        "23/declaration/body/15/argument/5/3/5/openingElement/1/value/expression":
+          {
+            content: {
+              en: "Other attachments",
+              pl: "Inne załączniki",
+            },
+            hash: "f187e342b6ff30e7d4d96d9395dea305",
+          },
+        "23/declaration/body/15/argument/7/3/1/1": {
+          content: {
+            en: "Platform Link",
+            pl: "Link do platformy",
+          },
+          hash: "fd051b4a2378d25f7bba620b6f9a60a7",
+        },
+        "23/declaration/body/15/argument/7/3/1/3": {
+          content: {
+            en: "Where to submit your offer",
+            pl: "Gdzie złożyć swoją ofertę",
+          },
+          hash: "2b0818bd1a178425ea7bf93d41bfe73f",
+        },
+        "23/declaration/body/15/argument/7/3/1/5/expression/right-title": {
+          content: {
+            en: "Platform submission link",
+            pl: "Link do przesyłania na platformie",
+          },
+          hash: "52362dc2e1de061d4a954d598e23218a",
+        },
+        "23/declaration/body/15/argument/7/3/3/1": {
+          content: {
+            en: "Submission Deadline",
+            pl: "Termin składania ofert",
+          },
+          hash: "fc1a76e3b4ec03fec9133f685de04eff",
+        },
+        "23/declaration/body/15/argument/7/3/3/3": {
+          content: {
+            en: "When to submit by",
+            pl: "Do kiedy złożyć ofertę",
+          },
+          hash: "513dc1fc3258c242650f74b83929ebc8",
+        },
+        "23/declaration/body/15/argument/7/3/3/5/expression/right-title": {
+          content: {
+            en: "Submission deadline",
+            pl: "Termin składania",
+          },
+          hash: "1a2926f958ae3083838b468a869db131",
+        },
+        "23/declaration/body/15/argument/7/3/5/1": {
+          content: {
+            en: "Deposit Information",
+            pl: "Informacje o zaliczce",
+          },
+          hash: "34d811d0d02e76753d176ae6b99fb933",
+        },
+        "23/declaration/body/15/argument/7/3/5/3": {
+          content: {
+            en: "Required deposit (Wadium)",
+            pl: "Wymagana kaucja (Wadium)",
+          },
+          hash: "f9cd154a561ac80fd1d2d45b199b113d",
+        },
+        "23/declaration/body/15/argument/7/3/5/5/expression/right-title": {
+          content: {
+            en: "Deposit (Wadium)",
+            pl: "Depozyt (Wadium)",
+          },
+          hash: "b1fff394ee8965b12f190e54c16a3af3",
+        },
+        "23/declaration/body/15/argument/9/1": {
+          content: {
+            en: "Documents to Download",
+            pl: "Dokumenty do pobrania",
+          },
+          hash: "9e43531d5f81a3cc6564d73d5a8a7216",
+        },
+        "23/declaration/body/15/argument/9/3/1/openingElement/1/value/expression":
+          {
+            content: {
+              en: "Ready documentation",
+              pl: "Gotowa dokumentacja",
+            },
+            hash: "3ba81e87ae8016eea5860e247c708dd9",
+          },
+        "23/declaration/body/15/argument/9/3/3/openingElement/1/value/expression":
+          {
+            content: {
+              en: "Requires manual fill",
+              pl: "Wymaga ręcznego wypełnienia",
+            },
+            hash: "030e160bf50c084716488dc452429db2",
+          },
+        "23/declaration/body/15/argument/9/3/5/openingElement/1/value/expression":
+          {
+            content: {
+              en: "Other attachments",
+              pl: "Inne załączniki",
+            },
+            hash: "f187e342b6ff30e7d4d96d9395dea305",
+          },
+        "23/declaration/body/8/0/init/body/2/expression/1/0/value/body/0/expression/0":
+          {
+            content: {
+              en: "Offer submitted successfully for <expression/>",
+              pl: "Oferta została pomyślnie złożona dla <expression/>",
+            },
+            hash: "95cad397804e3a7d042c08d4a15b91dc",
+          },
+        "23/declaration/body/9/0/init/body/0/expression/1/0/value/body/0/expression/0":
+          {
+            content: {
+              en: "Tender <expression/> was rejected",
+              pl: "Przetarg <expression/> został odrzucony",
+            },
+            hash: "da75484b6e8463ca4fea585845e3e086",
+          },
+      },
+    },
     "features/tender-form/components/file-group.tsx": {
       entries: {
+        "10/declaration/body/3/argument/1/3/1/1/expression/right/3": {
+          content: {
+            en: "Download all",
+            pl: "Pobierz wszystko",
+          },
+          hash: "385e77c5c419ee4328a4b98098a5fd49",
+        },
+        "10/declaration/body/3/argument/1/3/1/1/expression/right/5": {
+          content: {
+            en: "All",
+            pl: "Wszystko",
+          },
+          hash: "5e2e93f8e2a5f315b6fecdd0a0e6f55f",
+        },
+        "10/declaration/body/3/argument/1/3/1/1/expression/right/openingElement/3/value/expression/body/0/body/0":
+          {
+            content: {
+              en: "Downloading all files...",
+              pl: "Pobieranie wszystkich plików...",
+            },
+            hash: "d016ffaffbb15d928d07e716e4bfb5dc",
+          },
+        "10/declaration/body/3/argument/1/3/1/3/expression/0/body/1/1/1/5/3/expression/right/3":
+          {
+            content: {
+              en: "Requires signature (<expression/>)",
+              pl: "Wymaga podpisu (<expression/>)",
+            },
+            hash: "7165e7561176bca854eb1fee9c1641d6",
+          },
+        "10/declaration/body/3/argument/1/3/1/3/expression/0/body/1/1/3/3": {
+          content: {
+            en: "Download",
+            pl: "Pobierz",
+          },
+          hash: "56b7d0834952b39ee394b44bd8179178",
+        },
+        "10/declaration/body/3/argument/1/3/1/3/expression/0/body/1/1/3/openingElement/2/value/expression/body/0/body/0":
+          {
+            content: {
+              en: "Downloading {file.comment}...",
+              pl: "Pobieranie {file.comment}...",
+            },
+            hash: "8358440b9ceec5d75689e0c43dfce034",
+          },
+        "11/body/6/argument/1/1/1/5/3/expression/right/3": {
+          content: {
+            en: "Requires signature (<expression/>)",
+            pl: "Wymaga podpisu (<expression/>)",
+          },
+          hash: "a0297dac86ffacec33d06f4a2b899a81",
+        },
+        "11/body/6/argument/1/1/3/3": {
+          content: {
+            en: "Download",
+            pl: "Pobierz",
+          },
+          hash: "56b7d0834952b39ee394b44bd8179178",
+        },
+        "11/body/6/argument/1/1/3/openingElement/2/value/expression/body/0/body/0":
+          {
+            content: {
+              en: "Downloading <expression/>...",
+              pl: "Pobieranie {file.comment}...",
+            },
+            hash: "8358440b9ceec5d75689e0c43dfce034",
+          },
+        "11/body/7/argument/1/1/1/5/3/expression/right/3": {
+          content: {
+            en: "Requires signature (<expression/>)",
+            pl: "Wymaga podpisu (<expression/>)",
+          },
+          hash: "a0297dac86ffacec33d06f4a2b899a81",
+        },
+        "11/body/7/argument/1/1/3/3": {
+          content: {
+            en: "Download",
+            pl: "Pobierz",
+          },
+          hash: "56b7d0834952b39ee394b44bd8179178",
+        },
+        "11/body/7/argument/1/1/3/openingElement/2/value/expression/body/0/body/0":
+          {
+            content: {
+              en: "Downloading <expression/>...",
+              pl: "Pobieranie {file.comment}...",
+            },
+            hash: "8358440b9ceec5d75689e0c43dfce034",
+          },
+        "12/declaration/body/2/argument/1/3/1/1/expression/right/3": {
+          content: {
+            en: "Download all",
+            pl: "Pobierz wszystko",
+          },
+          hash: "385e77c5c419ee4328a4b98098a5fd49",
+        },
+        "12/declaration/body/2/argument/1/3/1/1/expression/right/5": {
+          content: {
+            en: "All",
+            pl: "Wszystko",
+          },
+          hash: "5e2e93f8e2a5f315b6fecdd0a0e6f55f",
+        },
+        "12/declaration/body/2/argument/1/3/1/1/expression/right/openingElement/3/value/expression/body/0/body/0":
+          {
+            content: {
+              en: "Downloading all files...",
+              pl: "Pobieranie wszystkich plików...",
+            },
+            hash: "d016ffaffbb15d928d07e716e4bfb5dc",
+          },
+        "12/declaration/body/3/argument/1/3/1/1/expression/right/3": {
+          content: {
+            en: "Download all",
+            pl: "Pobierz wszystko",
+          },
+          hash: "385e77c5c419ee4328a4b98098a5fd49",
+        },
+        "12/declaration/body/3/argument/1/3/1/1/expression/right/5": {
+          content: {
+            en: "All",
+            pl: "Wszystko",
+          },
+          hash: "5e2e93f8e2a5f315b6fecdd0a0e6f55f",
+        },
+        "12/declaration/body/3/argument/1/3/1/1/expression/right/openingElement/3/value/expression/body/0/body/0":
+          {
+            content: {
+              en: "Downloading all files...",
+              pl: "Pobieranie wszystkich plików...",
+            },
+            hash: "d016ffaffbb15d928d07e716e4bfb5dc",
+          },
         "8/declaration/body/2/consequent/0/argument/3/1": {
           content: {
             en: "No files in this category",

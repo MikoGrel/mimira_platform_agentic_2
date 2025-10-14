@@ -1,7 +1,6 @@
 "use client";
 
 import React from "react";
-import Markdown, { type Components } from "react-markdown";
 import {
   Accordion,
   AccordionContent,
@@ -11,6 +10,7 @@ import {
 import { Section } from "./section";
 import { SectionTitle } from "./section-title";
 import { SectionContent } from "./section-content";
+import { Markdown } from "$/features/tenders/components/markdown";
 
 interface DescriptionSectionProps {
   description_long_llm: string;
@@ -72,48 +72,13 @@ export function DescriptionSection({
   const { beforeFirstHeading, sections } =
     parseIntoSections(description_long_llm);
 
-  const markdownComponents: Components = {
-    h1: ({ children }) => (
-      <h1 className="text-base font-semibold">{children}</h1>
-    ),
-    h2: ({ children }) => (
-      <h2 className="text-base font-semibold">{children}</h2>
-    ),
-    h3: ({ children }) => (
-      <h3 className="text-base font-semibold">{children}</h3>
-    ),
-
-    h4: ({ children }) => <h4 className="text-base font-medium">{children}</h4>,
-    p: ({ children }) => (
-      <p className="text-sm text-foreground my-2">{children}</p>
-    ),
-    ul: ({ children }) => (
-      <ul className="list-disc text-sm text-foreground/80 space-y-1 pl-5">
-        {children}
-      </ul>
-    ),
-    ol: ({ children }) => (
-      <ol className="list-decimal text-sm text-foreground/80 space-y-1 pl-5">
-        {children}
-      </ol>
-    ),
-    strong: ({ children }) => (
-      <strong className="font-medium text-gray-900">{children}</strong>
-    ),
-    b: ({ children }) => (
-      <b className="font-medium text-gray-900">{children}</b>
-    ),
-  };
-
   return (
     <Section id="description" data-section>
       <SectionTitle>Full description</SectionTitle>
       <SectionContent>
         {beforeFirstHeading && (
           <div className="prose prose-sm max-w-none text-foreground leading-relaxed mb-6">
-            <Markdown components={markdownComponents}>
-              {beforeFirstHeading}
-            </Markdown>
+            <Markdown>{beforeFirstHeading}</Markdown>
           </div>
         )}
 
@@ -125,9 +90,7 @@ export function DescriptionSection({
               </AccordionTrigger>
               <AccordionContent>
                 <div className="prose prose-sm max-w-none text-foreground leading-relaxed pt-2">
-                  <Markdown components={markdownComponents}>
-                    {section.content.join("\n").trim()}
-                  </Markdown>
+                  <Markdown>{section.content.join("\n").trim()}</Markdown>
                 </div>
               </AccordionContent>
             </AccordionItem>

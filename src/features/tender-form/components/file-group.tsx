@@ -13,6 +13,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "$/components/ui/accordion";
+import { Markdown } from "$/features/tenders/components/markdown";
 
 interface FileGroupProps {
   zipName: string;
@@ -79,8 +80,8 @@ export function FileGroup({
                         </h4>
                       </div>
                       {file.comment && (
-                        <div className="text-sm text-muted-foreground">
-                          {file.comment}
+                        <div className="text-muted-foreground">
+                          <Markdown>{file.comment}</Markdown>
                         </div>
                       )}
 

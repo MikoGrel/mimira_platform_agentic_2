@@ -18,8 +18,7 @@ import { useState, useEffect, useMemo, useRef, useCallback } from "react";
 import { defineStepper } from "$/components/stepper";
 import {
   ConfirmationsStep,
-  DocumentationStep,
-  DecisionStep,
+  DocumentsDecisionStep,
   PartsSidebar,
   OverviewStep,
 } from "$/features/tender-form/components";
@@ -53,12 +52,8 @@ const { Stepper, useStepper } = defineStepper(
     title: <span>Confirmations</span>,
   },
   {
-    id: "documentation",
-    title: <span>Documentation</span>,
-  },
-  {
-    id: "decision",
-    title: <span>Decision</span>,
+    id: "documents-decision",
+    title: <span>Documents and Decision</span>,
   }
 );
 
@@ -95,10 +90,8 @@ function StepperContent({
           return MappingStatus.analysis;
         case "confirmations":
           return MappingStatus.questions;
-        case "documentation":
+        case "documents-decision":
           return MappingStatus.documents_preparing;
-        case "decision":
-          return MappingStatus.decision_made_applied;
         default:
           return null;
       }
@@ -112,7 +105,7 @@ function StepperContent({
     if (current.id === "confirmations") {
       // nextEnabled will be set by ConfirmationsStep via setNextEnabled
       // No need to override it here - let ConfirmationsStep manage it
-    } else if (current.id === "documentation") {
+    } else if (current.id === "documents-decision") {
       setNextEnabled(mapping?.docs_ready ?? false);
     } else {
       setNextEnabled(true);
@@ -139,10 +132,8 @@ function StepperContent({
             }
           />
         );
-      case "documentation":
-        return <DocumentationStep item={mapping} />;
-      case "decision":
-        return <DecisionStep item={mapping} />;
+      case "documents-decision":
+        return <DocumentsDecisionStep item={mapping} />;
       default:
         throw new Error(`Unknown step: ${current}`);
     }
@@ -352,7 +343,7 @@ export default function TenderPage() {
 
   const mapStatusToStep = (
     status: string | null | undefined
-  ): "overview" | "confirmations" | "documentation" | "decision" => {
+  ): "overview" | "confirmations" | "documents-decision" => {
     switch (status) {
       case MappingStatus.analysis:
         return "overview";
@@ -363,11 +354,10 @@ export default function TenderPage() {
       case MappingStatus.documents_preparing:
       case MappingStatus.documents_ready:
       case MappingStatus.documents_reviewed:
-        return "documentation";
       case MappingStatus.decision_made_applied:
       case MappingStatus.decision_made_rejected:
       case MappingStatus.rejected:
-        return "decision";
+        return "documents-decision";
       default:
         return "overview";
     }

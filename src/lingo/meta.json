@@ -4733,11 +4733,11 @@
         },
         "19/0/init/2/1/value": {
           "type": "element",
-          "hash": "1563fcb5ddb5037b0709ccd3dd384a92",
+          "hash": "74f985167dd24fa5506bbba73c7d640d",
           "context": "",
           "skip": false,
           "overrides": {},
-          "content": "Documentation"
+          "content": "Documents and Decision"
         },
         "19/0/init/3/1/value": {
           "type": "element",
@@ -5148,6 +5148,14 @@
           "content": "Next step"
         },
         "20/body/12/argument/1/3/3/expression/right/1/expression/right": {
+          "type": "element",
+          "hash": "2664239247be0ec83dcb0d3c87efe91e",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "New term: "
+        },
+        "20/body/12/argument/1/3/3/expression/right/3/1/expression/right": {
           "type": "element",
           "hash": "2664239247be0ec83dcb0d3c87efe91e",
           "context": "",
@@ -8798,6 +8806,22 @@
           "skip": false,
           "overrides": {},
           "content": "Description"
+        },
+        "6/declaration/body/3/argument/1": {
+          "type": "element",
+          "hash": "dc9b75484a44e37103ccad21dae20ee9",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Full description"
+        },
+        "7/declaration/body/2/argument/1": {
+          "type": "element",
+          "hash": "dc9b75484a44e37103ccad21dae20ee9",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Full description"
         },
         "7/declaration/body/3/argument/1": {
           "type": "element",
@@ -23867,8 +23891,3756 @@
         }
       }
     },
+    "features/tender-form/components/documents-decision-step.tsx": {
+      "scopes": {
+        "17/declaration/body/10/0/init/body/0/expression/1/0/value/body/0/expression/0": {
+          "type": "element",
+          "hash": "da75484b6e8463ca4fea585845e3e086",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Tender <expression/> was rejected"
+        },
+        "17/declaration/body/12/consequent/argument/1/1": {
+          "type": "element",
+          "hash": "28e5b302e5adec94d929969721a9d520",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "We will prepare your documents. They will be ready within 48 hours at the latest"
+        },
+        "17/declaration/body/12/consequent/argument/1/5": {
+          "type": "element",
+          "hash": "8b199e4c03646258cacdb01bdc3ad72f",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Don't forget to include the valuation. We can also help you with it — just let us know at mimira@mimiraoffers.eu or +48 732 070 469."
+        },
+        "17/declaration/body/12/consequent/argument/1/7": {
+          "type": "element",
+          "hash": "49d1e0e6ab4ccf36e47cf6a776d82937",
+          "context": "",
+          "skip": false,
+          "overrides": {
+            "pl": "Anuluj przygotowanie i odrzuć ten przetarg"
+          },
+          "content": "Cancel preparation and reject this tender"
+        },
+        "17/declaration/body/13/consequent/0/argument/1/1": {
+          "type": "element",
+          "hash": "b795b22e2d0abd430c2ff0b28fb26e5a",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Loading documents..."
+        },
+        "17/declaration/body/13/consequent/argument/1/1": {
+          "type": "element",
+          "hash": "28e5b302e5adec94d929969721a9d520",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "We will prepare your documents. They will be ready within 48 hours at the latest"
+        },
+        "17/declaration/body/13/consequent/argument/1/5": {
+          "type": "element",
+          "hash": "8b199e4c03646258cacdb01bdc3ad72f",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Don't forget to include the valuation. We can also help you with it — just let us know at mimira@mimiraoffers.eu or +48 732 070 469."
+        },
+        "17/declaration/body/13/consequent/argument/1/7": {
+          "type": "element",
+          "hash": "49d1e0e6ab4ccf36e47cf6a776d82937",
+          "context": "",
+          "skip": false,
+          "overrides": {
+            "pl": "Anuluj przygotowanie i odrzuć ten przetarg"
+          },
+          "content": "Cancel preparation and reject this tender"
+        },
+        "17/declaration/body/14/consequent/0/argument/1/1": {
+          "type": "element",
+          "hash": "1f3bb71b519b18f32ba0f1a5a360afb0",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Failed to load documents. Please try again."
+        },
+        "17/declaration/body/15/consequent/0/argument/1/1": {
+          "type": "element",
+          "hash": "1f3bb71b519b18f32ba0f1a5a360afb0",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Failed to load documents. Please try again."
+        },
+        "17/declaration/body/16/argument/11/expression/right/1/1": {
+          "type": "element",
+          "hash": "3bee1ee3d405eefa3fd49756d3442d30",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Additional Documents to Attach"
+        },
+        "17/declaration/body/16/argument/11/expression/right/5/1": {
+          "type": "element",
+          "hash": "b12d2abb6aacc3745cd12ff69db2c315",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Please ensure you also include these documents when submitting your offer:"
+        },
+        "17/declaration/body/16/argument/11/expression/right/5/3/1/expression/0/body/1": {
+          "type": "element",
+          "hash": "5f1c90d0fd46023ba1bfaaa2537f59fb",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "•"
+        },
+        "17/declaration/body/16/argument/15/1/1/3": {
+          "type": "element",
+          "hash": "d38f381ce245130a1b5fce4e1896441f",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Confirm Submission"
+        },
+        "17/declaration/body/16/argument/15/5/1": {
+          "type": "element",
+          "hash": "5efa18df04936d87dce6f7887e14960f",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "<element:strong>Important:</element:strong> You are responsible for submitting the offer through the platform. After submitting, please confirm below."
+        },
+        "17/declaration/body/16/argument/15/5/3": {
+          "type": "element",
+          "hash": "a0fa58a1841ed835ecaefff17d5389b3",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "I confirm that I have submitted the offer through the platform"
+        },
+        "17/declaration/body/16/argument/15/5/5/1": {
+          "type": "element",
+          "hash": "eeff2e12eef96d0acb2be4f64ed71a3a",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Reject this tender"
+        },
+        "17/declaration/body/16/argument/15/5/5/3": {
+          "type": "element",
+          "hash": "2d9b2c057d81cbc43f482e3d50efd4e7",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Confirm Submission"
+        },
+        "17/declaration/body/16/argument/3/1/1/3": {
+          "type": "element",
+          "hash": "e75260ca849db85c75ecb36d672d6642",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Submission Information"
+        },
+        "17/declaration/body/16/argument/3/1/3": {
+          "type": "element",
+          "hash": "0eb40d1ec5acb005ae08317531695561",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Please submit your offer through the platform using the link below"
+        },
+        "17/declaration/body/16/argument/3/5/11/expression/right/3/1": {
+          "type": "element",
+          "hash": "86145c543d835617a0e7086aa4048822",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Deposit (Wadium):"
+        },
+        "17/declaration/body/16/argument/3/5/3/expression/right/3/1": {
+          "type": "element",
+          "hash": "3ce202a79df68ff2ef38403148699d63",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Platform submission link:"
+        },
+        "17/declaration/body/16/argument/3/5/7/expression/right/3/1": {
+          "type": "element",
+          "hash": "a5d4622c702b85718005150dc2b9b942",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Submission deadline:"
+        },
+        "17/declaration/body/16/argument/7/1/3": {
+          "type": "element",
+          "hash": "9e43531d5f81a3cc6564d73d5a8a7216",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Documents to Download"
+        },
+        "17/declaration/body/16/argument/7/3/expression/alternate/1/openingElement/1/value/expression": {
+          "type": "element",
+          "hash": "3ba81e87ae8016eea5860e247c708dd9",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Ready documentation"
+        },
+        "17/declaration/body/16/argument/7/3/expression/alternate/3/openingElement/1/value/expression": {
+          "type": "element",
+          "hash": "030e160bf50c084716488dc452429db2",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Requires manual fill"
+        },
+        "17/declaration/body/16/argument/7/3/expression/alternate/5/openingElement/1/value/expression": {
+          "type": "element",
+          "hash": "f187e342b6ff30e7d4d96d9395dea305",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Other attachments"
+        },
+        "17/declaration/body/16/argument/7/3/expression/consequent": {
+          "type": "element",
+          "hash": "e39b65518178a65d2098e713fc70a567",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "No documents to display. You can proceed to submit your offer."
+        },
+        "17/declaration/body/17/argument/11/expression/right/1/1": {
+          "type": "element",
+          "hash": "3bee1ee3d405eefa3fd49756d3442d30",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Additional Documents to Attach"
+        },
+        "17/declaration/body/17/argument/11/expression/right/5/1": {
+          "type": "element",
+          "hash": "b12d2abb6aacc3745cd12ff69db2c315",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Please ensure you also include these documents when submitting your offer:"
+        },
+        "17/declaration/body/17/argument/11/expression/right/5/3/1/expression/0/body/1": {
+          "type": "element",
+          "hash": "5f1c90d0fd46023ba1bfaaa2537f59fb",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "•"
+        },
+        "17/declaration/body/17/argument/15/1/1/3": {
+          "type": "element",
+          "hash": "d38f381ce245130a1b5fce4e1896441f",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Confirm Submission"
+        },
+        "17/declaration/body/17/argument/15/5/1": {
+          "type": "element",
+          "hash": "5efa18df04936d87dce6f7887e14960f",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "<element:strong>Important:</element:strong> You are responsible for submitting the offer through the platform. After submitting, please confirm below."
+        },
+        "17/declaration/body/17/argument/15/5/3": {
+          "type": "element",
+          "hash": "a0fa58a1841ed835ecaefff17d5389b3",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "I confirm that I have submitted the offer through the platform"
+        },
+        "17/declaration/body/17/argument/15/5/5/1": {
+          "type": "element",
+          "hash": "eeff2e12eef96d0acb2be4f64ed71a3a",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Reject this tender"
+        },
+        "17/declaration/body/17/argument/15/5/5/3": {
+          "type": "element",
+          "hash": "2d9b2c057d81cbc43f482e3d50efd4e7",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Confirm Submission"
+        },
+        "17/declaration/body/17/argument/3/1/1/3": {
+          "type": "element",
+          "hash": "e75260ca849db85c75ecb36d672d6642",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Submission Information"
+        },
+        "17/declaration/body/17/argument/3/1/3": {
+          "type": "element",
+          "hash": "0eb40d1ec5acb005ae08317531695561",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Please submit your offer through the platform using the link below"
+        },
+        "17/declaration/body/17/argument/3/5/11/expression/right/3/1": {
+          "type": "element",
+          "hash": "86145c543d835617a0e7086aa4048822",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Deposit (Wadium):"
+        },
+        "17/declaration/body/17/argument/3/5/3/expression/right/3/1": {
+          "type": "element",
+          "hash": "3ce202a79df68ff2ef38403148699d63",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Platform submission link:"
+        },
+        "17/declaration/body/17/argument/3/5/7/expression/right/3/1": {
+          "type": "element",
+          "hash": "a5d4622c702b85718005150dc2b9b942",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Submission deadline:"
+        },
+        "17/declaration/body/17/argument/7/1/3": {
+          "type": "element",
+          "hash": "9e43531d5f81a3cc6564d73d5a8a7216",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Documents to Download"
+        },
+        "17/declaration/body/17/argument/7/3/expression/alternate/1/openingElement/1/value/expression": {
+          "type": "element",
+          "hash": "3ba81e87ae8016eea5860e247c708dd9",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Ready documentation"
+        },
+        "17/declaration/body/17/argument/7/3/expression/alternate/3/openingElement/1/value/expression": {
+          "type": "element",
+          "hash": "030e160bf50c084716488dc452429db2",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Requires manual fill"
+        },
+        "17/declaration/body/17/argument/7/3/expression/alternate/5/openingElement/1/value/expression": {
+          "type": "element",
+          "hash": "f187e342b6ff30e7d4d96d9395dea305",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Other attachments"
+        },
+        "17/declaration/body/17/argument/7/3/expression/consequent": {
+          "type": "element",
+          "hash": "e39b65518178a65d2098e713fc70a567",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "No documents to display. You can proceed to submit your offer."
+        },
+        "17/declaration/body/8/0/init/body/2/expression/1/0/value/body/0/expression/0": {
+          "type": "element",
+          "hash": "95cad397804e3a7d042c08d4a15b91dc",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Offer submitted successfully for <expression/>"
+        },
+        "17/declaration/body/9/0/init/body/0/expression/1/0/value/body/0/expression/0": {
+          "type": "element",
+          "hash": "da75484b6e8463ca4fea585845e3e086",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Tender <expression/> was rejected"
+        },
+        "17/declaration/body/9/0/init/body/2/expression/1/0/value/body/0/expression/0": {
+          "type": "element",
+          "hash": "95cad397804e3a7d042c08d4a15b91dc",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Offer submitted successfully for <expression/>"
+        },
+        "18/declaration/body/12/consequent/argument/1/1": {
+          "type": "element",
+          "hash": "28e5b302e5adec94d929969721a9d520",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "We will prepare your documents. They will be ready within 48 hours at the latest"
+        },
+        "18/declaration/body/12/consequent/argument/1/5": {
+          "type": "element",
+          "hash": "8b199e4c03646258cacdb01bdc3ad72f",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Don't forget to include the valuation. We can also help you with it — just let us know at mimira@mimiraoffers.eu or +48 732 070 469."
+        },
+        "18/declaration/body/12/consequent/argument/1/7": {
+          "type": "element",
+          "hash": "49d1e0e6ab4ccf36e47cf6a776d82937",
+          "context": "",
+          "skip": false,
+          "overrides": {
+            "pl": "Anuluj przygotowanie i odrzuć ten przetarg"
+          },
+          "content": "Cancel preparation and reject this tender"
+        },
+        "18/declaration/body/13/consequent/0/argument/1/1": {
+          "type": "element",
+          "hash": "b795b22e2d0abd430c2ff0b28fb26e5a",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Loading documents..."
+        },
+        "18/declaration/body/14/consequent/0/argument/1/1": {
+          "type": "element",
+          "hash": "1f3bb71b519b18f32ba0f1a5a360afb0",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Failed to load documents. Please try again."
+        },
+        "18/declaration/body/16/argument/11/expression/right/1/1": {
+          "type": "element",
+          "hash": "3bee1ee3d405eefa3fd49756d3442d30",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Additional Documents to Attach"
+        },
+        "18/declaration/body/16/argument/11/expression/right/5/1": {
+          "type": "element",
+          "hash": "b12d2abb6aacc3745cd12ff69db2c315",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Please ensure you also include these documents when submitting your offer:"
+        },
+        "18/declaration/body/16/argument/11/expression/right/5/3/1/expression/0/body/1": {
+          "type": "element",
+          "hash": "5f1c90d0fd46023ba1bfaaa2537f59fb",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "•"
+        },
+        "18/declaration/body/16/argument/15/1/1/3": {
+          "type": "element",
+          "hash": "d38f381ce245130a1b5fce4e1896441f",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Confirm Submission"
+        },
+        "18/declaration/body/16/argument/15/5/1": {
+          "type": "element",
+          "hash": "5efa18df04936d87dce6f7887e14960f",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "<element:strong>Important:</element:strong> You are responsible for submitting the offer through the platform. After submitting, please confirm below."
+        },
+        "18/declaration/body/16/argument/15/5/3": {
+          "type": "element",
+          "hash": "a0fa58a1841ed835ecaefff17d5389b3",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "I confirm that I have submitted the offer through the platform"
+        },
+        "18/declaration/body/16/argument/15/5/5/1": {
+          "type": "element",
+          "hash": "eeff2e12eef96d0acb2be4f64ed71a3a",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Reject this tender"
+        },
+        "18/declaration/body/16/argument/15/5/5/3": {
+          "type": "element",
+          "hash": "2d9b2c057d81cbc43f482e3d50efd4e7",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Confirm Submission"
+        },
+        "18/declaration/body/16/argument/3/1/1/3": {
+          "type": "element",
+          "hash": "e75260ca849db85c75ecb36d672d6642",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Submission Information"
+        },
+        "18/declaration/body/16/argument/3/1/3": {
+          "type": "element",
+          "hash": "0eb40d1ec5acb005ae08317531695561",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Please submit your offer through the platform using the link below"
+        },
+        "18/declaration/body/16/argument/3/5/11/expression/right/3/1": {
+          "type": "element",
+          "hash": "86145c543d835617a0e7086aa4048822",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Deposit (Wadium):"
+        },
+        "18/declaration/body/16/argument/3/5/3/expression/right/3/1": {
+          "type": "element",
+          "hash": "3ce202a79df68ff2ef38403148699d63",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Platform submission link:"
+        },
+        "18/declaration/body/16/argument/3/5/7/expression/right/3/1": {
+          "type": "element",
+          "hash": "a5d4622c702b85718005150dc2b9b942",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Submission deadline:"
+        },
+        "18/declaration/body/16/argument/7/1/3": {
+          "type": "element",
+          "hash": "9e43531d5f81a3cc6564d73d5a8a7216",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Documents to Download"
+        },
+        "18/declaration/body/16/argument/7/3/expression/alternate/1/openingElement/1/value/expression": {
+          "type": "element",
+          "hash": "3ba81e87ae8016eea5860e247c708dd9",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Ready documentation"
+        },
+        "18/declaration/body/16/argument/7/3/expression/alternate/3/openingElement/1/value/expression": {
+          "type": "element",
+          "hash": "030e160bf50c084716488dc452429db2",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Requires manual fill"
+        },
+        "18/declaration/body/16/argument/7/3/expression/alternate/5/openingElement/1/value/expression": {
+          "type": "element",
+          "hash": "f187e342b6ff30e7d4d96d9395dea305",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Other attachments"
+        },
+        "18/declaration/body/16/argument/7/3/expression/consequent": {
+          "type": "element",
+          "hash": "e39b65518178a65d2098e713fc70a567",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "No documents to display. You can proceed to submit your offer."
+        },
+        "18/declaration/body/8/0/init/body/2/expression/1/0/value/body/0/expression/0": {
+          "type": "element",
+          "hash": "95cad397804e3a7d042c08d4a15b91dc",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Offer submitted successfully for <expression/>"
+        },
+        "18/declaration/body/9/0/init/body/0/expression/1/0/value/body/0/expression/0": {
+          "type": "element",
+          "hash": "da75484b6e8463ca4fea585845e3e086",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Tender <expression/> was rejected"
+        },
+        "19/declaration/body/12/consequent/argument/1/1": {
+          "type": "element",
+          "hash": "28e5b302e5adec94d929969721a9d520",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "We will prepare your documents. They will be ready within 48 hours at the latest"
+        },
+        "19/declaration/body/12/consequent/argument/1/5": {
+          "type": "element",
+          "hash": "8b199e4c03646258cacdb01bdc3ad72f",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Don't forget to include the valuation. We can also help you with it — just let us know at mimira@mimiraoffers.eu or +48 732 070 469."
+        },
+        "19/declaration/body/12/consequent/argument/1/7": {
+          "type": "element",
+          "hash": "49d1e0e6ab4ccf36e47cf6a776d82937",
+          "context": "",
+          "skip": false,
+          "overrides": {
+            "pl": "Anuluj przygotowanie i odrzuć ten przetarg"
+          },
+          "content": "Cancel preparation and reject this tender"
+        },
+        "19/declaration/body/13/consequent/0/argument/1/1": {
+          "type": "element",
+          "hash": "b795b22e2d0abd430c2ff0b28fb26e5a",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Loading documents..."
+        },
+        "19/declaration/body/14/consequent/0/argument/1/1": {
+          "type": "element",
+          "hash": "1f3bb71b519b18f32ba0f1a5a360afb0",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Failed to load documents. Please try again."
+        },
+        "19/declaration/body/16/argument/13/expression/right/1/1": {
+          "type": "element",
+          "hash": "3bee1ee3d405eefa3fd49756d3442d30",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Additional Documents to Attach"
+        },
+        "19/declaration/body/16/argument/13/expression/right/5/1": {
+          "type": "element",
+          "hash": "b12d2abb6aacc3745cd12ff69db2c315",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Please ensure you also include these documents when submitting your offer:"
+        },
+        "19/declaration/body/16/argument/13/expression/right/5/3/1/expression/0/body/1": {
+          "type": "element",
+          "hash": "5f1c90d0fd46023ba1bfaaa2537f59fb",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "•"
+        },
+        "19/declaration/body/16/argument/17/1/1/3": {
+          "type": "element",
+          "hash": "d38f381ce245130a1b5fce4e1896441f",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Confirm Submission"
+        },
+        "19/declaration/body/16/argument/17/5/1": {
+          "type": "element",
+          "hash": "5efa18df04936d87dce6f7887e14960f",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "<element:strong>Important:</element:strong> You are responsible for submitting the offer through the platform. After submitting, please confirm below."
+        },
+        "19/declaration/body/16/argument/17/5/3": {
+          "type": "element",
+          "hash": "a0fa58a1841ed835ecaefff17d5389b3",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "I confirm that I have submitted the offer through the platform"
+        },
+        "19/declaration/body/16/argument/17/5/5/1": {
+          "type": "element",
+          "hash": "eeff2e12eef96d0acb2be4f64ed71a3a",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Reject this tender"
+        },
+        "19/declaration/body/16/argument/17/5/5/3": {
+          "type": "element",
+          "hash": "2d9b2c057d81cbc43f482e3d50efd4e7",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Confirm Submission"
+        },
+        "19/declaration/body/16/argument/3/1/1/3": {
+          "type": "element",
+          "hash": "e75260ca849db85c75ecb36d672d6642",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Submission Information"
+        },
+        "19/declaration/body/16/argument/3/1/3": {
+          "type": "element",
+          "hash": "0eb40d1ec5acb005ae08317531695561",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Please submit your offer through the platform using the link below"
+        },
+        "19/declaration/body/16/argument/3/5/11/expression/right/3/1": {
+          "type": "element",
+          "hash": "86145c543d835617a0e7086aa4048822",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Deposit (Wadium):"
+        },
+        "19/declaration/body/16/argument/3/5/3/expression/right/3/1": {
+          "type": "element",
+          "hash": "3ce202a79df68ff2ef38403148699d63",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Platform submission link:"
+        },
+        "19/declaration/body/16/argument/3/5/7/expression/right/3/1": {
+          "type": "element",
+          "hash": "a5d4622c702b85718005150dc2b9b942",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Submission deadline:"
+        },
+        "19/declaration/body/16/argument/5/1": {
+          "type": "element",
+          "hash": "9e43531d5f81a3cc6564d73d5a8a7216",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Documents to Download"
+        },
+        "19/declaration/body/16/argument/5/3/1/openingElement/1/value/expression": {
+          "type": "element",
+          "hash": "3ba81e87ae8016eea5860e247c708dd9",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Ready documentation"
+        },
+        "19/declaration/body/16/argument/5/3/3/openingElement/1/value/expression": {
+          "type": "element",
+          "hash": "030e160bf50c084716488dc452429db2",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Requires manual fill"
+        },
+        "19/declaration/body/16/argument/5/3/5/openingElement/1/value/expression": {
+          "type": "element",
+          "hash": "f187e342b6ff30e7d4d96d9395dea305",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Other attachments"
+        },
+        "19/declaration/body/8/0/init/body/2/expression/1/0/value/body/0/expression/0": {
+          "type": "element",
+          "hash": "95cad397804e3a7d042c08d4a15b91dc",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Offer submitted successfully for <expression/>"
+        },
+        "19/declaration/body/9/0/init/body/0/expression/1/0/value/body/0/expression/0": {
+          "type": "element",
+          "hash": "da75484b6e8463ca4fea585845e3e086",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Tender <expression/> was rejected"
+        },
+        "20/declaration/body/12/consequent/argument/1/1": {
+          "type": "element",
+          "hash": "28e5b302e5adec94d929969721a9d520",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "We will prepare your documents. They will be ready within 48 hours at the latest"
+        },
+        "20/declaration/body/12/consequent/argument/1/5": {
+          "type": "element",
+          "hash": "8b199e4c03646258cacdb01bdc3ad72f",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Don't forget to include the valuation. We can also help you with it — just let us know at mimira@mimiraoffers.eu or +48 732 070 469."
+        },
+        "20/declaration/body/12/consequent/argument/1/7": {
+          "type": "element",
+          "hash": "49d1e0e6ab4ccf36e47cf6a776d82937",
+          "context": "",
+          "skip": false,
+          "overrides": {
+            "pl": "Anuluj przygotowanie i odrzuć ten przetarg"
+          },
+          "content": "Cancel preparation and reject this tender"
+        },
+        "20/declaration/body/13/consequent/0/argument/1/1": {
+          "type": "element",
+          "hash": "b795b22e2d0abd430c2ff0b28fb26e5a",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Loading documents..."
+        },
+        "20/declaration/body/14/consequent/0/argument/1/1": {
+          "type": "element",
+          "hash": "1f3bb71b519b18f32ba0f1a5a360afb0",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Failed to load documents. Please try again."
+        },
+        "20/declaration/body/16/argument/1/1/11/expression/right/1": {
+          "type": "element",
+          "hash": "c287d28bf36b66bb994d6b9f83474781",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Additional Documents to Attach"
+        },
+        "20/declaration/body/16/argument/1/1/11/expression/right/3/1/1": {
+          "type": "element",
+          "hash": "d73d157c01311ce5a88cfae1fa19d441",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Please ensure you also include these documents when submitting your offer:"
+        },
+        "20/declaration/body/16/argument/1/1/11/expression/right/3/1/3/1/expression/0/body/1": {
+          "type": "element",
+          "hash": "5f1c90d0fd46023ba1bfaaa2537f59fb",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "•"
+        },
+        "20/declaration/body/16/argument/1/1/15/1": {
+          "type": "element",
+          "hash": "d38f381ce245130a1b5fce4e1896441f",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Confirm Submission"
+        },
+        "20/declaration/body/16/argument/1/1/15/3/1/1": {
+          "type": "element",
+          "hash": "6ddd7512d490554cd5c06658a21ee49c",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "<element:strong>Important:</element:strong> You are responsible for submitting the offer through the platform. After submitting, please confirm below."
+        },
+        "20/declaration/body/16/argument/1/1/15/3/1/3": {
+          "type": "element",
+          "hash": "616f35f7823e01803992b2cfeb1b616c",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "I confirm that I have submitted the offer through the platform"
+        },
+        "20/declaration/body/16/argument/1/1/15/3/1/5/1": {
+          "type": "element",
+          "hash": "676de58ded59cc9dc7af128fd2b15ca8",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Reject this tender"
+        },
+        "20/declaration/body/16/argument/1/1/15/3/1/5/3": {
+          "type": "element",
+          "hash": "d4ebd618bac1563cd8abdacb3abd0ee1",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Confirm Submission"
+        },
+        "20/declaration/body/16/argument/1/1/3/1": {
+          "type": "element",
+          "hash": "e75260ca849db85c75ecb36d672d6642",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Submission Information"
+        },
+        "20/declaration/body/16/argument/1/1/3/3/1/1/expression/right-title": {
+          "type": "attribute",
+          "hash": "59a70694de263690120bdc8eee6dfddb",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Platform Submission Link"
+        },
+        "20/declaration/body/16/argument/1/1/3/3/1/3/expression/right-title": {
+          "type": "attribute",
+          "hash": "fc1a76e3b4ec03fec9133f685de04eff",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Submission Deadline"
+        },
+        "20/declaration/body/16/argument/1/1/3/3/1/5/expression/right-title": {
+          "type": "attribute",
+          "hash": "b1fff394ee8965b12f190e54c16a3af3",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Deposit (Wadium)"
+        },
+        "20/declaration/body/16/argument/1/1/7/1": {
+          "type": "element",
+          "hash": "9e43531d5f81a3cc6564d73d5a8a7216",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Documents to Download"
+        },
+        "20/declaration/body/16/argument/1/1/7/3/1/expression/alternate/1/openingElement/1/value/expression": {
+          "type": "element",
+          "hash": "3ba81e87ae8016eea5860e247c708dd9",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Ready documentation"
+        },
+        "20/declaration/body/16/argument/1/1/7/3/1/expression/alternate/3/openingElement/1/value/expression": {
+          "type": "element",
+          "hash": "030e160bf50c084716488dc452429db2",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Requires manual fill"
+        },
+        "20/declaration/body/16/argument/1/1/7/3/1/expression/alternate/5/openingElement/1/value/expression": {
+          "type": "element",
+          "hash": "f187e342b6ff30e7d4d96d9395dea305",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Other attachments"
+        },
+        "20/declaration/body/16/argument/1/1/7/3/1/expression/consequent": {
+          "type": "element",
+          "hash": "8143c2dd65b40e22e5da7aa3f30b0f9b",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "No documents to display. You can proceed to submit your offer."
+        },
+        "20/declaration/body/16/argument/11/expression/right/1/1": {
+          "type": "element",
+          "hash": "3bee1ee3d405eefa3fd49756d3442d30",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Additional Documents to Attach"
+        },
+        "20/declaration/body/16/argument/11/expression/right/5/1": {
+          "type": "element",
+          "hash": "b12d2abb6aacc3745cd12ff69db2c315",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Please ensure you also include these documents when submitting your offer:"
+        },
+        "20/declaration/body/16/argument/11/expression/right/5/3/1/expression/0/body/1": {
+          "type": "element",
+          "hash": "5f1c90d0fd46023ba1bfaaa2537f59fb",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "•"
+        },
+        "20/declaration/body/16/argument/13/expression/right/1/1": {
+          "type": "element",
+          "hash": "3bee1ee3d405eefa3fd49756d3442d30",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Additional Documents to Attach"
+        },
+        "20/declaration/body/16/argument/13/expression/right/5/1": {
+          "type": "element",
+          "hash": "b12d2abb6aacc3745cd12ff69db2c315",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Please ensure you also include these documents when submitting your offer:"
+        },
+        "20/declaration/body/16/argument/13/expression/right/5/3/1/expression/0/body/1": {
+          "type": "element",
+          "hash": "5f1c90d0fd46023ba1bfaaa2537f59fb",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "•"
+        },
+        "20/declaration/body/16/argument/15/1/1/3": {
+          "type": "element",
+          "hash": "d38f381ce245130a1b5fce4e1896441f",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Confirm Submission"
+        },
+        "20/declaration/body/16/argument/15/5/1": {
+          "type": "element",
+          "hash": "5efa18df04936d87dce6f7887e14960f",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "<element:strong>Important:</element:strong> You are responsible for submitting the offer through the platform. After submitting, please confirm below."
+        },
+        "20/declaration/body/16/argument/15/5/3": {
+          "type": "element",
+          "hash": "a0fa58a1841ed835ecaefff17d5389b3",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "I confirm that I have submitted the offer through the platform"
+        },
+        "20/declaration/body/16/argument/15/5/5/1": {
+          "type": "element",
+          "hash": "eeff2e12eef96d0acb2be4f64ed71a3a",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Reject this tender"
+        },
+        "20/declaration/body/16/argument/15/5/5/3": {
+          "type": "element",
+          "hash": "2d9b2c057d81cbc43f482e3d50efd4e7",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Confirm Submission"
+        },
+        "20/declaration/body/16/argument/17/1/1/3": {
+          "type": "element",
+          "hash": "d38f381ce245130a1b5fce4e1896441f",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Confirm Submission"
+        },
+        "20/declaration/body/16/argument/17/5/1": {
+          "type": "element",
+          "hash": "5efa18df04936d87dce6f7887e14960f",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "<element:strong>Important:</element:strong> You are responsible for submitting the offer through the platform. After submitting, please confirm below."
+        },
+        "20/declaration/body/16/argument/17/5/3": {
+          "type": "element",
+          "hash": "a0fa58a1841ed835ecaefff17d5389b3",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "I confirm that I have submitted the offer through the platform"
+        },
+        "20/declaration/body/16/argument/17/5/5/1": {
+          "type": "element",
+          "hash": "eeff2e12eef96d0acb2be4f64ed71a3a",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Reject this tender"
+        },
+        "20/declaration/body/16/argument/17/5/5/3": {
+          "type": "element",
+          "hash": "2d9b2c057d81cbc43f482e3d50efd4e7",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Confirm Submission"
+        },
+        "20/declaration/body/16/argument/3/1/1/3": {
+          "type": "element",
+          "hash": "e75260ca849db85c75ecb36d672d6642",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Submission Information"
+        },
+        "20/declaration/body/16/argument/3/1/3": {
+          "type": "element",
+          "hash": "0eb40d1ec5acb005ae08317531695561",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Please submit your offer through the platform using the link below"
+        },
+        "20/declaration/body/16/argument/3/5/11/expression/right/3/1": {
+          "type": "element",
+          "hash": "86145c543d835617a0e7086aa4048822",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Deposit (Wadium):"
+        },
+        "20/declaration/body/16/argument/3/5/3/expression/right/3/1": {
+          "type": "element",
+          "hash": "3ce202a79df68ff2ef38403148699d63",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Platform submission link:"
+        },
+        "20/declaration/body/16/argument/3/5/7/expression/right/3/1": {
+          "type": "element",
+          "hash": "a5d4622c702b85718005150dc2b9b942",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Submission deadline:"
+        },
+        "20/declaration/body/16/argument/5/1": {
+          "type": "element",
+          "hash": "9e43531d5f81a3cc6564d73d5a8a7216",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Documents to Download"
+        },
+        "20/declaration/body/16/argument/5/3/1/openingElement/1/value/expression": {
+          "type": "element",
+          "hash": "3ba81e87ae8016eea5860e247c708dd9",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Ready documentation"
+        },
+        "20/declaration/body/16/argument/5/3/3/openingElement/1/value/expression": {
+          "type": "element",
+          "hash": "030e160bf50c084716488dc452429db2",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Requires manual fill"
+        },
+        "20/declaration/body/16/argument/5/3/5/openingElement/1/value/expression": {
+          "type": "element",
+          "hash": "f187e342b6ff30e7d4d96d9395dea305",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Other attachments"
+        },
+        "20/declaration/body/16/argument/7/1/3": {
+          "type": "element",
+          "hash": "9e43531d5f81a3cc6564d73d5a8a7216",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Documents to Download"
+        },
+        "20/declaration/body/16/argument/7/3/expression/alternate/1/openingElement/1/value/expression": {
+          "type": "element",
+          "hash": "3ba81e87ae8016eea5860e247c708dd9",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Ready documentation"
+        },
+        "20/declaration/body/16/argument/7/3/expression/alternate/3/openingElement/1/value/expression": {
+          "type": "element",
+          "hash": "030e160bf50c084716488dc452429db2",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Requires manual fill"
+        },
+        "20/declaration/body/16/argument/7/3/expression/alternate/5/openingElement/1/value/expression": {
+          "type": "element",
+          "hash": "f187e342b6ff30e7d4d96d9395dea305",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Other attachments"
+        },
+        "20/declaration/body/16/argument/7/3/expression/consequent": {
+          "type": "element",
+          "hash": "e39b65518178a65d2098e713fc70a567",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "No documents to display. You can proceed to submit your offer."
+        },
+        "20/declaration/body/8/0/init/body/2/expression/1/0/value/body/0/expression/0": {
+          "type": "element",
+          "hash": "95cad397804e3a7d042c08d4a15b91dc",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Offer submitted successfully for <expression/>"
+        },
+        "20/declaration/body/9/0/init/body/0/expression/1/0/value/body/0/expression/0": {
+          "type": "element",
+          "hash": "da75484b6e8463ca4fea585845e3e086",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Tender <expression/> was rejected"
+        },
+        "21/declaration/body/10/0/init/body/0/expression/1/0/value/body/0/expression/0": {
+          "type": "element",
+          "hash": "da75484b6e8463ca4fea585845e3e086",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Tender <expression/> was rejected"
+        },
+        "21/declaration/body/11/consequent/argument/1/1": {
+          "type": "element",
+          "hash": "28e5b302e5adec94d929969721a9d520",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "We will prepare your documents. They will be ready within 48 hours at the latest"
+        },
+        "21/declaration/body/11/consequent/argument/1/5": {
+          "type": "element",
+          "hash": "8b199e4c03646258cacdb01bdc3ad72f",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Don't forget to include the valuation. We can also help you with it — just let us know at mimira@mimiraoffers.eu or +48 732 070 469."
+        },
+        "21/declaration/body/11/consequent/argument/1/7": {
+          "type": "element",
+          "hash": "49d1e0e6ab4ccf36e47cf6a776d82937",
+          "context": "",
+          "skip": false,
+          "overrides": {
+            "pl": "Anuluj przygotowanie i odrzuć ten przetarg"
+          },
+          "content": "Cancel preparation and reject this tender"
+        },
+        "21/declaration/body/12/consequent/0/argument/1/1": {
+          "type": "element",
+          "hash": "b795b22e2d0abd430c2ff0b28fb26e5a",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Loading documents..."
+        },
+        "21/declaration/body/12/consequent/argument/1/1": {
+          "type": "element",
+          "hash": "28e5b302e5adec94d929969721a9d520",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "We will prepare your documents. They will be ready within 48 hours at the latest"
+        },
+        "21/declaration/body/12/consequent/argument/1/5": {
+          "type": "element",
+          "hash": "8b199e4c03646258cacdb01bdc3ad72f",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Don't forget to include the valuation. We can also help you with it — just let us know at mimira@mimiraoffers.eu or +48 732 070 469."
+        },
+        "21/declaration/body/12/consequent/argument/1/7": {
+          "type": "element",
+          "hash": "49d1e0e6ab4ccf36e47cf6a776d82937",
+          "context": "",
+          "skip": false,
+          "overrides": {
+            "pl": "Anuluj przygotowanie i odrzuć ten przetarg"
+          },
+          "content": "Cancel preparation and reject this tender"
+        },
+        "21/declaration/body/13/consequent/0/argument/1/1": {
+          "type": "element",
+          "hash": "1f3bb71b519b18f32ba0f1a5a360afb0",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Failed to load documents. Please try again."
+        },
+        "21/declaration/body/13/consequent/argument/1/1": {
+          "type": "element",
+          "hash": "28e5b302e5adec94d929969721a9d520",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "We will prepare your documents. They will be ready within 48 hours at the latest"
+        },
+        "21/declaration/body/13/consequent/argument/1/5": {
+          "type": "element",
+          "hash": "8b199e4c03646258cacdb01bdc3ad72f",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Don't forget to include the valuation. We can also help you with it — just let us know at mimira@mimiraoffers.eu or +48 732 070 469."
+        },
+        "21/declaration/body/13/consequent/argument/1/7": {
+          "type": "element",
+          "hash": "49d1e0e6ab4ccf36e47cf6a776d82937",
+          "context": "",
+          "skip": false,
+          "overrides": {
+            "pl": "Anuluj przygotowanie i odrzuć ten przetarg"
+          },
+          "content": "Cancel preparation and reject this tender"
+        },
+        "21/declaration/body/14/argument/1/1/1": {
+          "type": "element",
+          "hash": "e6bb590da2a9a3ea506bbc5d068ff6d5",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Congratulations! You can now submit your offer"
+        },
+        "21/declaration/body/14/argument/3/1": {
+          "type": "element",
+          "hash": "55f543c162ced830c982289d91d56ef3",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Basic submission Information"
+        },
+        "21/declaration/body/14/argument/3/3/1/1/expression/right-title": {
+          "type": "attribute",
+          "hash": "52362dc2e1de061d4a954d598e23218a",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Platform submission link"
+        },
+        "21/declaration/body/14/argument/3/3/1/3/expression/right-title": {
+          "type": "attribute",
+          "hash": "1a2926f958ae3083838b468a869db131",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Submission deadline"
+        },
+        "21/declaration/body/14/argument/3/3/1/5/expression/right-title": {
+          "type": "attribute",
+          "hash": "b1fff394ee8965b12f190e54c16a3af3",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Deposit (Wadium)"
+        },
+        "21/declaration/body/14/argument/5/1": {
+          "type": "element",
+          "hash": "19eb6cdac7c520db3b465629d6d4cdcf",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Ready documents to Download"
+        },
+        "21/declaration/body/14/argument/5/3/1/openingElement/1/value/expression": {
+          "type": "element",
+          "hash": "3ba81e87ae8016eea5860e247c708dd9",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Ready documentation"
+        },
+        "21/declaration/body/14/argument/5/3/3/openingElement/1/value/expression": {
+          "type": "element",
+          "hash": "030e160bf50c084716488dc452429db2",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Requires manual fill"
+        },
+        "21/declaration/body/14/argument/5/3/5/openingElement/1/value/expression": {
+          "type": "element",
+          "hash": "f187e342b6ff30e7d4d96d9395dea305",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Other attachments"
+        },
+        "21/declaration/body/14/argument/7/expression/right/1": {
+          "type": "element",
+          "hash": "c287d28bf36b66bb994d6b9f83474781",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Additional Documents to Attach"
+        },
+        "21/declaration/body/14/argument/7/expression/right/3/1/1/1": {
+          "type": "element",
+          "hash": "1804dda50682b0ea18153f9b0d39abcb",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Please ensure you also include these documents when submitting your offer:"
+        },
+        "21/declaration/body/14/argument/7/expression/right/3/1/1/3/1/expression/0/body/1": {
+          "type": "element",
+          "hash": "5f1c90d0fd46023ba1bfaaa2537f59fb",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "•"
+        },
+        "21/declaration/body/14/argument/9/1": {
+          "type": "element",
+          "hash": "b69de22cb9cdee8cc374194c75e3ce1b",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Company's decision"
+        },
+        "21/declaration/body/14/argument/9/3/1/1/1": {
+          "type": "element",
+          "hash": "cc503113b2429d058b7002e663108c62",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "<element:strong>Important:</element:strong> You are responsible for submitting the offer through the platform. After submitting, please confirm below."
+        },
+        "21/declaration/body/14/argument/9/3/1/1/3": {
+          "type": "element",
+          "hash": "ce82130a67e888ddd4d0a3acec8177b0",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "I confirm that I have submitted the offer through the platform"
+        },
+        "21/declaration/body/14/argument/9/3/1/1/5/1": {
+          "type": "element",
+          "hash": "9726f7d0a4aeb6b350795a7278f688e4",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Reject this tender"
+        },
+        "21/declaration/body/14/argument/9/3/1/1/5/3": {
+          "type": "element",
+          "hash": "48734347e85b82047f7e1fdd7b97b3e8",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Confirm Submission"
+        },
+        "21/declaration/body/14/consequent/0/argument/1/1": {
+          "type": "element",
+          "hash": "1f3bb71b519b18f32ba0f1a5a360afb0",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Failed to load documents. Please try again."
+        },
+        "21/declaration/body/15/argument/1/1": {
+          "type": "element",
+          "hash": "e75260ca849db85c75ecb36d672d6642",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Submission Information"
+        },
+        "21/declaration/body/15/argument/1/1/1": {
+          "type": "element",
+          "hash": "e6bb590da2a9a3ea506bbc5d068ff6d5",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Congratulations! You can now submit your offer"
+        },
+        "21/declaration/body/15/argument/1/1/expression/right-title": {
+          "type": "attribute",
+          "hash": "52362dc2e1de061d4a954d598e23218a",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Platform submission link"
+        },
+        "21/declaration/body/15/argument/1/3/1/1/expression/right-title": {
+          "type": "attribute",
+          "hash": "52362dc2e1de061d4a954d598e23218a",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Platform submission link"
+        },
+        "21/declaration/body/15/argument/1/3/1/3/expression/right-title": {
+          "type": "attribute",
+          "hash": "1a2926f958ae3083838b468a869db131",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Submission deadline"
+        },
+        "21/declaration/body/15/argument/1/3/1/5/expression/right-title": {
+          "type": "attribute",
+          "hash": "b1fff394ee8965b12f190e54c16a3af3",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Deposit (Wadium)"
+        },
+        "21/declaration/body/15/argument/1/3/1/9/expression/right-title": {
+          "type": "attribute",
+          "hash": "b1fff394ee8965b12f190e54c16a3af3",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Deposit (Wadium)"
+        },
+        "21/declaration/body/15/argument/1/5/expression/right-title": {
+          "type": "attribute",
+          "hash": "1a2926f958ae3083838b468a869db131",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Submission deadline"
+        },
+        "21/declaration/body/15/argument/1/9/expression/right-title": {
+          "type": "attribute",
+          "hash": "b1fff394ee8965b12f190e54c16a3af3",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Deposit (Wadium)"
+        },
+        "21/declaration/body/15/argument/11/1/1/3": {
+          "type": "element",
+          "hash": "d38f381ce245130a1b5fce4e1896441f",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Confirm Submission"
+        },
+        "21/declaration/body/15/argument/11/5/1": {
+          "type": "element",
+          "hash": "5efa18df04936d87dce6f7887e14960f",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "<element:strong>Important:</element:strong> You are responsible for submitting the offer through the platform. After submitting, please confirm below."
+        },
+        "21/declaration/body/15/argument/11/5/3": {
+          "type": "element",
+          "hash": "a0fa58a1841ed835ecaefff17d5389b3",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "I confirm that I have submitted the offer through the platform"
+        },
+        "21/declaration/body/15/argument/11/5/5/1": {
+          "type": "element",
+          "hash": "eeff2e12eef96d0acb2be4f64ed71a3a",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Reject this tender"
+        },
+        "21/declaration/body/15/argument/11/5/5/3": {
+          "type": "element",
+          "hash": "2d9b2c057d81cbc43f482e3d50efd4e7",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Confirm Submission"
+        },
+        "21/declaration/body/15/argument/13/expression/right/1/1": {
+          "type": "element",
+          "hash": "3bee1ee3d405eefa3fd49756d3442d30",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Additional Documents to Attach"
+        },
+        "21/declaration/body/15/argument/13/expression/right/5/1": {
+          "type": "element",
+          "hash": "b12d2abb6aacc3745cd12ff69db2c315",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Please ensure you also include these documents when submitting your offer:"
+        },
+        "21/declaration/body/15/argument/13/expression/right/5/3/1/expression/0/body/1": {
+          "type": "element",
+          "hash": "5f1c90d0fd46023ba1bfaaa2537f59fb",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "•"
+        },
+        "21/declaration/body/15/argument/17/1/1/3": {
+          "type": "element",
+          "hash": "d38f381ce245130a1b5fce4e1896441f",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Confirm Submission"
+        },
+        "21/declaration/body/15/argument/17/5/1": {
+          "type": "element",
+          "hash": "5efa18df04936d87dce6f7887e14960f",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "<element:strong>Important:</element:strong> You are responsible for submitting the offer through the platform. After submitting, please confirm below."
+        },
+        "21/declaration/body/15/argument/17/5/3": {
+          "type": "element",
+          "hash": "a0fa58a1841ed835ecaefff17d5389b3",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "I confirm that I have submitted the offer through the platform"
+        },
+        "21/declaration/body/15/argument/17/5/5/1": {
+          "type": "element",
+          "hash": "eeff2e12eef96d0acb2be4f64ed71a3a",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Reject this tender"
+        },
+        "21/declaration/body/15/argument/17/5/5/3": {
+          "type": "element",
+          "hash": "2d9b2c057d81cbc43f482e3d50efd4e7",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Confirm Submission"
+        },
+        "21/declaration/body/15/argument/3/1": {
+          "type": "element",
+          "hash": "55f543c162ced830c982289d91d56ef3",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Basic submission Information"
+        },
+        "21/declaration/body/15/argument/3/11/expression/right-title": {
+          "type": "attribute",
+          "hash": "b1fff394ee8965b12f190e54c16a3af3",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Deposit (Wadium)"
+        },
+        "21/declaration/body/15/argument/3/3/1/1/expression/right-title": {
+          "type": "attribute",
+          "hash": "52362dc2e1de061d4a954d598e23218a",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Platform submission link"
+        },
+        "21/declaration/body/15/argument/3/3/1/3/expression/right-title": {
+          "type": "attribute",
+          "hash": "1a2926f958ae3083838b468a869db131",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Submission deadline"
+        },
+        "21/declaration/body/15/argument/3/3/1/5/expression/right-title": {
+          "type": "attribute",
+          "hash": "b1fff394ee8965b12f190e54c16a3af3",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Deposit (Wadium)"
+        },
+        "21/declaration/body/15/argument/3/3/1/openingElement/1/value/expression": {
+          "type": "element",
+          "hash": "3ba81e87ae8016eea5860e247c708dd9",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Ready documentation"
+        },
+        "21/declaration/body/15/argument/3/3/3/openingElement/1/value/expression": {
+          "type": "element",
+          "hash": "030e160bf50c084716488dc452429db2",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Requires manual fill"
+        },
+        "21/declaration/body/15/argument/3/3/5/openingElement/1/value/expression": {
+          "type": "element",
+          "hash": "f187e342b6ff30e7d4d96d9395dea305",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Other attachments"
+        },
+        "21/declaration/body/15/argument/3/3/expression/right-title": {
+          "type": "attribute",
+          "hash": "52362dc2e1de061d4a954d598e23218a",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Platform submission link"
+        },
+        "21/declaration/body/15/argument/3/7/expression/right-title": {
+          "type": "attribute",
+          "hash": "1a2926f958ae3083838b468a869db131",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Submission deadline"
+        },
+        "21/declaration/body/15/argument/5/1": {
+          "type": "element",
+          "hash": "19eb6cdac7c520db3b465629d6d4cdcf",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Ready documents to Download"
+        },
+        "21/declaration/body/15/argument/5/3/1/openingElement/1/value/expression": {
+          "type": "element",
+          "hash": "3ba81e87ae8016eea5860e247c708dd9",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Ready documentation"
+        },
+        "21/declaration/body/15/argument/5/3/3/openingElement/1/value/expression": {
+          "type": "element",
+          "hash": "030e160bf50c084716488dc452429db2",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Requires manual fill"
+        },
+        "21/declaration/body/15/argument/5/3/5/openingElement/1/value/expression": {
+          "type": "element",
+          "hash": "f187e342b6ff30e7d4d96d9395dea305",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Other attachments"
+        },
+        "21/declaration/body/15/argument/5/expression/right/1": {
+          "type": "element",
+          "hash": "c287d28bf36b66bb994d6b9f83474781",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Additional Documents to Attach"
+        },
+        "21/declaration/body/15/argument/5/expression/right/1/1": {
+          "type": "element",
+          "hash": "3bee1ee3d405eefa3fd49756d3442d30",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Additional Documents to Attach"
+        },
+        "21/declaration/body/15/argument/5/expression/right/3/1/1/1": {
+          "type": "element",
+          "hash": "9047039139eb1cfab0c0666de099f902",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Additional Documents to Attach"
+        },
+        "21/declaration/body/15/argument/5/expression/right/3/1/5/1": {
+          "type": "element",
+          "hash": "1804dda50682b0ea18153f9b0d39abcb",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Please ensure you also include these documents when submitting your offer:"
+        },
+        "21/declaration/body/15/argument/5/expression/right/3/1/5/3/1/expression/0/body/1": {
+          "type": "element",
+          "hash": "5f1c90d0fd46023ba1bfaaa2537f59fb",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "•"
+        },
+        "21/declaration/body/15/argument/5/expression/right/5/1": {
+          "type": "element",
+          "hash": "b12d2abb6aacc3745cd12ff69db2c315",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Please ensure you also include these documents when submitting your offer:"
+        },
+        "21/declaration/body/15/argument/5/expression/right/5/3/1/expression/0/body/1": {
+          "type": "element",
+          "hash": "5f1c90d0fd46023ba1bfaaa2537f59fb",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "•"
+        },
+        "21/declaration/body/15/argument/7/1": {
+          "type": "element",
+          "hash": "d38f381ce245130a1b5fce4e1896441f",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Confirm Submission"
+        },
+        "21/declaration/body/15/argument/7/1/1/3": {
+          "type": "element",
+          "hash": "d38f381ce245130a1b5fce4e1896441f",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Confirm Submission"
+        },
+        "21/declaration/body/15/argument/7/3/1/1/1": {
+          "type": "element",
+          "hash": "cc503113b2429d058b7002e663108c62",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "<element:strong>Important:</element:strong> You are responsible for submitting the offer through the platform. After submitting, please confirm below."
+        },
+        "21/declaration/body/15/argument/7/3/1/1/3": {
+          "type": "element",
+          "hash": "ce82130a67e888ddd4d0a3acec8177b0",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "I confirm that I have submitted the offer through the platform"
+        },
+        "21/declaration/body/15/argument/7/3/1/1/5/1": {
+          "type": "element",
+          "hash": "9726f7d0a4aeb6b350795a7278f688e4",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Reject this tender"
+        },
+        "21/declaration/body/15/argument/7/3/1/1/5/3": {
+          "type": "element",
+          "hash": "48734347e85b82047f7e1fdd7b97b3e8",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Confirm Submission"
+        },
+        "21/declaration/body/15/argument/7/5/1": {
+          "type": "element",
+          "hash": "5efa18df04936d87dce6f7887e14960f",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "<element:strong>Important:</element:strong> You are responsible for submitting the offer through the platform. After submitting, please confirm below."
+        },
+        "21/declaration/body/15/argument/7/5/3": {
+          "type": "element",
+          "hash": "a0fa58a1841ed835ecaefff17d5389b3",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "I confirm that I have submitted the offer through the platform"
+        },
+        "21/declaration/body/15/argument/7/5/5/1": {
+          "type": "element",
+          "hash": "eeff2e12eef96d0acb2be4f64ed71a3a",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Reject this tender"
+        },
+        "21/declaration/body/15/argument/7/5/5/3": {
+          "type": "element",
+          "hash": "2d9b2c057d81cbc43f482e3d50efd4e7",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Confirm Submission"
+        },
+        "21/declaration/body/15/argument/7/expression/right/1": {
+          "type": "element",
+          "hash": "c287d28bf36b66bb994d6b9f83474781",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Additional Documents to Attach"
+        },
+        "21/declaration/body/15/argument/7/expression/right/1/1": {
+          "type": "element",
+          "hash": "3bee1ee3d405eefa3fd49756d3442d30",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Additional Documents to Attach"
+        },
+        "21/declaration/body/15/argument/7/expression/right/3/1/1/1": {
+          "type": "element",
+          "hash": "1804dda50682b0ea18153f9b0d39abcb",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Please ensure you also include these documents when submitting your offer:"
+        },
+        "21/declaration/body/15/argument/7/expression/right/3/1/1/3/1/expression/0/body/1": {
+          "type": "element",
+          "hash": "5f1c90d0fd46023ba1bfaaa2537f59fb",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "•"
+        },
+        "21/declaration/body/15/argument/7/expression/right/3/1/5/1": {
+          "type": "element",
+          "hash": "1804dda50682b0ea18153f9b0d39abcb",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Please ensure you also include these documents when submitting your offer:"
+        },
+        "21/declaration/body/15/argument/7/expression/right/3/1/5/3/1/expression/0/body/1": {
+          "type": "element",
+          "hash": "5f1c90d0fd46023ba1bfaaa2537f59fb",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "•"
+        },
+        "21/declaration/body/15/argument/7/expression/right/5/1": {
+          "type": "element",
+          "hash": "b12d2abb6aacc3745cd12ff69db2c315",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Please ensure you also include these documents when submitting your offer:"
+        },
+        "21/declaration/body/15/argument/7/expression/right/5/3/1/expression/0/body/1": {
+          "type": "element",
+          "hash": "5f1c90d0fd46023ba1bfaaa2537f59fb",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "•"
+        },
+        "21/declaration/body/15/argument/9/1": {
+          "type": "element",
+          "hash": "b69de22cb9cdee8cc374194c75e3ce1b",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Company's decision"
+        },
+        "21/declaration/body/15/argument/9/3/1/1/1": {
+          "type": "element",
+          "hash": "cc503113b2429d058b7002e663108c62",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "<element:strong>Important:</element:strong> You are responsible for submitting the offer through the platform. After submitting, please confirm below."
+        },
+        "21/declaration/body/15/argument/9/3/1/1/3": {
+          "type": "element",
+          "hash": "ce82130a67e888ddd4d0a3acec8177b0",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "I confirm that I have submitted the offer through the platform"
+        },
+        "21/declaration/body/15/argument/9/3/1/1/5/1": {
+          "type": "element",
+          "hash": "9726f7d0a4aeb6b350795a7278f688e4",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Reject this tender"
+        },
+        "21/declaration/body/15/argument/9/3/1/1/5/3": {
+          "type": "element",
+          "hash": "48734347e85b82047f7e1fdd7b97b3e8",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Confirm Submission"
+        },
+        "21/declaration/body/15/consequent/0/argument/1/1": {
+          "type": "element",
+          "hash": "1f3bb71b519b18f32ba0f1a5a360afb0",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Failed to load documents. Please try again."
+        },
+        "21/declaration/body/16/argument/1/1/1": {
+          "type": "element",
+          "hash": "e6bb590da2a9a3ea506bbc5d068ff6d5",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Congratulations! You can now submit your offer"
+        },
+        "21/declaration/body/16/argument/13/expression/right/1/1": {
+          "type": "element",
+          "hash": "3bee1ee3d405eefa3fd49756d3442d30",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Additional Documents to Attach"
+        },
+        "21/declaration/body/16/argument/13/expression/right/5/1": {
+          "type": "element",
+          "hash": "b12d2abb6aacc3745cd12ff69db2c315",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Please ensure you also include these documents when submitting your offer:"
+        },
+        "21/declaration/body/16/argument/13/expression/right/5/3/1/expression/0/body/1": {
+          "type": "element",
+          "hash": "5f1c90d0fd46023ba1bfaaa2537f59fb",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "•"
+        },
+        "21/declaration/body/16/argument/17/1/1/3": {
+          "type": "element",
+          "hash": "d38f381ce245130a1b5fce4e1896441f",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Confirm Submission"
+        },
+        "21/declaration/body/16/argument/17/5/1": {
+          "type": "element",
+          "hash": "5efa18df04936d87dce6f7887e14960f",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "<element:strong>Important:</element:strong> You are responsible for submitting the offer through the platform. After submitting, please confirm below."
+        },
+        "21/declaration/body/16/argument/17/5/3": {
+          "type": "element",
+          "hash": "a0fa58a1841ed835ecaefff17d5389b3",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "I confirm that I have submitted the offer through the platform"
+        },
+        "21/declaration/body/16/argument/17/5/5/1": {
+          "type": "element",
+          "hash": "eeff2e12eef96d0acb2be4f64ed71a3a",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Reject this tender"
+        },
+        "21/declaration/body/16/argument/17/5/5/3": {
+          "type": "element",
+          "hash": "2d9b2c057d81cbc43f482e3d50efd4e7",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Confirm Submission"
+        },
+        "21/declaration/body/16/argument/3/1": {
+          "type": "element",
+          "hash": "55f543c162ced830c982289d91d56ef3",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Basic submission Information"
+        },
+        "21/declaration/body/16/argument/3/1/1/3": {
+          "type": "element",
+          "hash": "e75260ca849db85c75ecb36d672d6642",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Submission Information"
+        },
+        "21/declaration/body/16/argument/3/1/3": {
+          "type": "element",
+          "hash": "0eb40d1ec5acb005ae08317531695561",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Please submit your offer through the platform using the link below"
+        },
+        "21/declaration/body/16/argument/3/11/expression/right-title": {
+          "type": "attribute",
+          "hash": "b1fff394ee8965b12f190e54c16a3af3",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Deposit (Wadium)"
+        },
+        "21/declaration/body/16/argument/3/3/1/1/expression/right-title": {
+          "type": "attribute",
+          "hash": "52362dc2e1de061d4a954d598e23218a",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Platform submission link"
+        },
+        "21/declaration/body/16/argument/3/3/1/3/expression/right-title": {
+          "type": "attribute",
+          "hash": "1a2926f958ae3083838b468a869db131",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Submission deadline"
+        },
+        "21/declaration/body/16/argument/3/3/1/5/expression/right-title": {
+          "type": "attribute",
+          "hash": "b1fff394ee8965b12f190e54c16a3af3",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Deposit (Wadium)"
+        },
+        "21/declaration/body/16/argument/3/3/expression/right-title": {
+          "type": "attribute",
+          "hash": "52362dc2e1de061d4a954d598e23218a",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Platform submission link"
+        },
+        "21/declaration/body/16/argument/3/5/11/expression/right/3/1": {
+          "type": "element",
+          "hash": "86145c543d835617a0e7086aa4048822",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Deposit (Wadium):"
+        },
+        "21/declaration/body/16/argument/3/5/3/expression/right/3/1": {
+          "type": "element",
+          "hash": "3ce202a79df68ff2ef38403148699d63",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Platform submission link:"
+        },
+        "21/declaration/body/16/argument/3/5/7/expression/right/3/1": {
+          "type": "element",
+          "hash": "a5d4622c702b85718005150dc2b9b942",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Submission deadline:"
+        },
+        "21/declaration/body/16/argument/3/7/expression/right-title": {
+          "type": "attribute",
+          "hash": "1a2926f958ae3083838b468a869db131",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Submission deadline"
+        },
+        "21/declaration/body/16/argument/5/1": {
+          "type": "element",
+          "hash": "19eb6cdac7c520db3b465629d6d4cdcf",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Ready documents to Download"
+        },
+        "21/declaration/body/16/argument/5/3/1/openingElement/1/value/expression": {
+          "type": "element",
+          "hash": "3ba81e87ae8016eea5860e247c708dd9",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Ready documentation"
+        },
+        "21/declaration/body/16/argument/5/3/3/openingElement/1/value/expression": {
+          "type": "element",
+          "hash": "030e160bf50c084716488dc452429db2",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Requires manual fill"
+        },
+        "21/declaration/body/16/argument/5/3/5/openingElement/1/value/expression": {
+          "type": "element",
+          "hash": "f187e342b6ff30e7d4d96d9395dea305",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Other attachments"
+        },
+        "21/declaration/body/16/argument/7/expression/right/1": {
+          "type": "element",
+          "hash": "c287d28bf36b66bb994d6b9f83474781",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Additional Documents to Attach"
+        },
+        "21/declaration/body/16/argument/7/expression/right/3/1/1/1": {
+          "type": "element",
+          "hash": "9047039139eb1cfab0c0666de099f902",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Additional Documents to Attach"
+        },
+        "21/declaration/body/16/argument/7/expression/right/3/1/5/1": {
+          "type": "element",
+          "hash": "1804dda50682b0ea18153f9b0d39abcb",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Please ensure you also include these documents when submitting your offer:"
+        },
+        "21/declaration/body/16/argument/7/expression/right/3/1/5/3/1/expression/0/body/1": {
+          "type": "element",
+          "hash": "5f1c90d0fd46023ba1bfaaa2537f59fb",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "•"
+        },
+        "21/declaration/body/16/argument/9/1": {
+          "type": "element",
+          "hash": "b69de22cb9cdee8cc374194c75e3ce1b",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Company's decision"
+        },
+        "21/declaration/body/16/argument/9/3/1/1/1": {
+          "type": "element",
+          "hash": "cc503113b2429d058b7002e663108c62",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "<element:strong>Important:</element:strong> You are responsible for submitting the offer through the platform. After submitting, please confirm below."
+        },
+        "21/declaration/body/16/argument/9/3/1/1/3": {
+          "type": "element",
+          "hash": "ce82130a67e888ddd4d0a3acec8177b0",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "I confirm that I have submitted the offer through the platform"
+        },
+        "21/declaration/body/16/argument/9/3/1/1/5/1": {
+          "type": "element",
+          "hash": "9726f7d0a4aeb6b350795a7278f688e4",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Reject this tender"
+        },
+        "21/declaration/body/16/argument/9/3/1/1/5/3": {
+          "type": "element",
+          "hash": "48734347e85b82047f7e1fdd7b97b3e8",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Confirm Submission"
+        },
+        "21/declaration/body/8/0/init/body/2/expression/1/0/value/body/0/expression/0": {
+          "type": "element",
+          "hash": "95cad397804e3a7d042c08d4a15b91dc",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Offer submitted successfully for <expression/>"
+        },
+        "21/declaration/body/9/0/init/body/0/expression/1/0/value/body/0/expression/0": {
+          "type": "element",
+          "hash": "da75484b6e8463ca4fea585845e3e086",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Tender <expression/> was rejected"
+        },
+        "21/declaration/body/9/0/init/body/2/expression/1/0/value/body/0/expression/0": {
+          "type": "element",
+          "hash": "95cad397804e3a7d042c08d4a15b91dc",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Offer submitted successfully for <expression/>"
+        },
+        "22/declaration/body/10/0/init/body/0/expression/1/0/value/body/0/expression/0": {
+          "type": "element",
+          "hash": "da75484b6e8463ca4fea585845e3e086",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Tender <expression/> was rejected"
+        },
+        "22/declaration/body/11/consequent/0/argument/1/1/3": {
+          "type": "element",
+          "hash": "9a4fe6d9b566d5a4b1b37ee9009e4c3e",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "You've applied to this tender"
+        },
+        "22/declaration/body/11/consequent/0/argument/1/1/5": {
+          "type": "element",
+          "hash": "cf699e1c95aa2e19ca56f489d9a13ccc",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Your offer has been successfully submitted. You can track the progress in your dashboard."
+        },
+        "22/declaration/body/11/consequent/argument/1/1": {
+          "type": "element",
+          "hash": "28e5b302e5adec94d929969721a9d520",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "We will prepare your documents. They will be ready within 48 hours at the latest"
+        },
+        "22/declaration/body/11/consequent/argument/1/5": {
+          "type": "element",
+          "hash": "8b199e4c03646258cacdb01bdc3ad72f",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Don't forget to include the valuation. We can also help you with it — just let us know at mimira@mimiraoffers.eu or +48 732 070 469."
+        },
+        "22/declaration/body/11/consequent/argument/1/7": {
+          "type": "element",
+          "hash": "49d1e0e6ab4ccf36e47cf6a776d82937",
+          "context": "",
+          "skip": false,
+          "overrides": {
+            "pl": "Anuluj przygotowanie i odrzuć ten przetarg"
+          },
+          "content": "Cancel preparation and reject this tender"
+        },
+        "22/declaration/body/12/consequent/0/argument/1/1": {
+          "type": "element",
+          "hash": "b795b22e2d0abd430c2ff0b28fb26e5a",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Loading documents..."
+        },
+        "22/declaration/body/12/consequent/argument/1/1": {
+          "type": "element",
+          "hash": "28e5b302e5adec94d929969721a9d520",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "We will prepare your documents. They will be ready within 48 hours at the latest"
+        },
+        "22/declaration/body/12/consequent/argument/1/5": {
+          "type": "element",
+          "hash": "8b199e4c03646258cacdb01bdc3ad72f",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Don't forget to include the valuation. We can also help you with it — just let us know at mimira@mimiraoffers.eu or +48 732 070 469."
+        },
+        "22/declaration/body/12/consequent/argument/1/7": {
+          "type": "element",
+          "hash": "49d1e0e6ab4ccf36e47cf6a776d82937",
+          "context": "",
+          "skip": false,
+          "overrides": {
+            "pl": "Anuluj przygotowanie i odrzuć ten przetarg"
+          },
+          "content": "Cancel preparation and reject this tender"
+        },
+        "22/declaration/body/13/consequent/0/argument/1/1": {
+          "type": "element",
+          "hash": "b795b22e2d0abd430c2ff0b28fb26e5a",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Loading documents..."
+        },
+        "22/declaration/body/13/consequent/argument/1/1": {
+          "type": "element",
+          "hash": "28e5b302e5adec94d929969721a9d520",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "We will prepare your documents. They will be ready within 48 hours at the latest"
+        },
+        "22/declaration/body/13/consequent/argument/1/5": {
+          "type": "element",
+          "hash": "8b199e4c03646258cacdb01bdc3ad72f",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Don't forget to include the valuation. We can also help you with it — just let us know at mimira@mimiraoffers.eu or +48 732 070 469."
+        },
+        "22/declaration/body/13/consequent/argument/1/7": {
+          "type": "element",
+          "hash": "49d1e0e6ab4ccf36e47cf6a776d82937",
+          "context": "",
+          "skip": false,
+          "overrides": {
+            "pl": "Anuluj przygotowanie i odrzuć ten przetarg"
+          },
+          "content": "Cancel preparation and reject this tender"
+        },
+        "22/declaration/body/14/argument/1/1/1": {
+          "type": "element",
+          "hash": "e6bb590da2a9a3ea506bbc5d068ff6d5",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Congratulations! You can now submit your offer"
+        },
+        "22/declaration/body/14/argument/3/1": {
+          "type": "element",
+          "hash": "55f543c162ced830c982289d91d56ef3",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Basic submission Information"
+        },
+        "22/declaration/body/14/argument/3/3/1/1/expression/right-title": {
+          "type": "attribute",
+          "hash": "52362dc2e1de061d4a954d598e23218a",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Platform submission link"
+        },
+        "22/declaration/body/14/argument/3/3/1/3/expression/right-title": {
+          "type": "attribute",
+          "hash": "1a2926f958ae3083838b468a869db131",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Submission deadline"
+        },
+        "22/declaration/body/14/argument/3/3/1/5/expression/right-title": {
+          "type": "attribute",
+          "hash": "b1fff394ee8965b12f190e54c16a3af3",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Deposit (Wadium)"
+        },
+        "22/declaration/body/14/argument/5/1": {
+          "type": "element",
+          "hash": "19eb6cdac7c520db3b465629d6d4cdcf",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Ready documents to Download"
+        },
+        "22/declaration/body/14/argument/5/3/1/openingElement/1/value/expression": {
+          "type": "element",
+          "hash": "3ba81e87ae8016eea5860e247c708dd9",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Ready documentation"
+        },
+        "22/declaration/body/14/argument/5/3/3/openingElement/1/value/expression": {
+          "type": "element",
+          "hash": "030e160bf50c084716488dc452429db2",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Requires manual fill"
+        },
+        "22/declaration/body/14/argument/5/3/5/openingElement/1/value/expression": {
+          "type": "element",
+          "hash": "f187e342b6ff30e7d4d96d9395dea305",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Other attachments"
+        },
+        "22/declaration/body/14/argument/7/expression/right/1": {
+          "type": "element",
+          "hash": "c287d28bf36b66bb994d6b9f83474781",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Additional Documents to Attach"
+        },
+        "22/declaration/body/14/argument/7/expression/right/3/1/1/1": {
+          "type": "element",
+          "hash": "1804dda50682b0ea18153f9b0d39abcb",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Please ensure you also include these documents when submitting your offer:"
+        },
+        "22/declaration/body/14/argument/7/expression/right/3/1/1/3/1/expression/0/body/1": {
+          "type": "element",
+          "hash": "5f1c90d0fd46023ba1bfaaa2537f59fb",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "•"
+        },
+        "22/declaration/body/14/argument/9/1": {
+          "type": "element",
+          "hash": "b69de22cb9cdee8cc374194c75e3ce1b",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Company's decision"
+        },
+        "22/declaration/body/14/argument/9/3/1/1/1": {
+          "type": "element",
+          "hash": "cc503113b2429d058b7002e663108c62",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "<element:strong>Important:</element:strong> You are responsible for submitting the offer through the platform. After submitting, please confirm below."
+        },
+        "22/declaration/body/14/argument/9/3/1/1/3": {
+          "type": "element",
+          "hash": "ce82130a67e888ddd4d0a3acec8177b0",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "I confirm that I have submitted the offer through the platform"
+        },
+        "22/declaration/body/14/argument/9/3/1/1/5/1": {
+          "type": "element",
+          "hash": "9726f7d0a4aeb6b350795a7278f688e4",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Reject this tender"
+        },
+        "22/declaration/body/14/argument/9/3/1/1/5/3": {
+          "type": "element",
+          "hash": "48734347e85b82047f7e1fdd7b97b3e8",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Confirm Submission"
+        },
+        "22/declaration/body/14/consequent/0/argument/1/1": {
+          "type": "element",
+          "hash": "1f3bb71b519b18f32ba0f1a5a360afb0",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Failed to load documents. Please try again."
+        },
+        "22/declaration/body/15/argument/1/1/1": {
+          "type": "element",
+          "hash": "e6bb590da2a9a3ea506bbc5d068ff6d5",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Congratulations! You can now submit your offer"
+        },
+        "22/declaration/body/15/argument/13/expression/right/1/1": {
+          "type": "element",
+          "hash": "3bee1ee3d405eefa3fd49756d3442d30",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Additional Documents to Attach"
+        },
+        "22/declaration/body/15/argument/13/expression/right/5/1": {
+          "type": "element",
+          "hash": "b12d2abb6aacc3745cd12ff69db2c315",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Please ensure you also include these documents when submitting your offer:"
+        },
+        "22/declaration/body/15/argument/13/expression/right/5/3/1/expression/0/body/1": {
+          "type": "element",
+          "hash": "5f1c90d0fd46023ba1bfaaa2537f59fb",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "•"
+        },
+        "22/declaration/body/15/argument/17/1/1/3": {
+          "type": "element",
+          "hash": "d38f381ce245130a1b5fce4e1896441f",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Confirm Submission"
+        },
+        "22/declaration/body/15/argument/17/5/1": {
+          "type": "element",
+          "hash": "5efa18df04936d87dce6f7887e14960f",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "<element:strong>Important:</element:strong> You are responsible for submitting the offer through the platform. After submitting, please confirm below."
+        },
+        "22/declaration/body/15/argument/17/5/3": {
+          "type": "element",
+          "hash": "a0fa58a1841ed835ecaefff17d5389b3",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "I confirm that I have submitted the offer through the platform"
+        },
+        "22/declaration/body/15/argument/17/5/5/1": {
+          "type": "element",
+          "hash": "eeff2e12eef96d0acb2be4f64ed71a3a",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Reject this tender"
+        },
+        "22/declaration/body/15/argument/17/5/5/3": {
+          "type": "element",
+          "hash": "2d9b2c057d81cbc43f482e3d50efd4e7",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Confirm Submission"
+        },
+        "22/declaration/body/15/argument/3/1": {
+          "type": "element",
+          "hash": "55f543c162ced830c982289d91d56ef3",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Basic submission Information"
+        },
+        "22/declaration/body/15/argument/3/11/expression/right-title": {
+          "type": "attribute",
+          "hash": "b1fff394ee8965b12f190e54c16a3af3",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Deposit (Wadium)"
+        },
+        "22/declaration/body/15/argument/3/3/1/1/expression/right-title": {
+          "type": "attribute",
+          "hash": "52362dc2e1de061d4a954d598e23218a",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Platform submission link"
+        },
+        "22/declaration/body/15/argument/3/3/1/3/expression/right-title": {
+          "type": "attribute",
+          "hash": "1a2926f958ae3083838b468a869db131",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Submission deadline"
+        },
+        "22/declaration/body/15/argument/3/3/1/5/expression/right-title": {
+          "type": "attribute",
+          "hash": "b1fff394ee8965b12f190e54c16a3af3",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Deposit (Wadium)"
+        },
+        "22/declaration/body/15/argument/3/3/expression/right-title": {
+          "type": "attribute",
+          "hash": "52362dc2e1de061d4a954d598e23218a",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Platform submission link"
+        },
+        "22/declaration/body/15/argument/3/7/expression/right-title": {
+          "type": "attribute",
+          "hash": "1a2926f958ae3083838b468a869db131",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Submission deadline"
+        },
+        "22/declaration/body/15/argument/5/1": {
+          "type": "element",
+          "hash": "19eb6cdac7c520db3b465629d6d4cdcf",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Ready documents to Download"
+        },
+        "22/declaration/body/15/argument/5/3/1/openingElement/1/value/expression": {
+          "type": "element",
+          "hash": "3ba81e87ae8016eea5860e247c708dd9",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Ready documentation"
+        },
+        "22/declaration/body/15/argument/5/3/3/openingElement/1/value/expression": {
+          "type": "element",
+          "hash": "030e160bf50c084716488dc452429db2",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Requires manual fill"
+        },
+        "22/declaration/body/15/argument/5/3/5/openingElement/1/value/expression": {
+          "type": "element",
+          "hash": "f187e342b6ff30e7d4d96d9395dea305",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Other attachments"
+        },
+        "22/declaration/body/15/argument/7/expression/right/1": {
+          "type": "element",
+          "hash": "c287d28bf36b66bb994d6b9f83474781",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Additional Documents to Attach"
+        },
+        "22/declaration/body/15/argument/7/expression/right/3/1/1/1": {
+          "type": "element",
+          "hash": "1804dda50682b0ea18153f9b0d39abcb",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Please ensure you also include these documents when submitting your offer:"
+        },
+        "22/declaration/body/15/argument/7/expression/right/3/1/1/3/1/expression/0/body/1": {
+          "type": "element",
+          "hash": "5f1c90d0fd46023ba1bfaaa2537f59fb",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "•"
+        },
+        "22/declaration/body/15/argument/9/1": {
+          "type": "element",
+          "hash": "b69de22cb9cdee8cc374194c75e3ce1b",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Company's decision"
+        },
+        "22/declaration/body/15/argument/9/3/1/1/1": {
+          "type": "element",
+          "hash": "cc503113b2429d058b7002e663108c62",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "<element:strong>Important:</element:strong> You are responsible for submitting the offer through the platform. After submitting, please confirm below."
+        },
+        "22/declaration/body/15/argument/9/3/1/1/3": {
+          "type": "element",
+          "hash": "ce82130a67e888ddd4d0a3acec8177b0",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "I confirm that I have submitted the offer through the platform"
+        },
+        "22/declaration/body/15/argument/9/3/1/1/5/1": {
+          "type": "element",
+          "hash": "9726f7d0a4aeb6b350795a7278f688e4",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Reject this tender"
+        },
+        "22/declaration/body/15/argument/9/3/1/1/5/3": {
+          "type": "element",
+          "hash": "48734347e85b82047f7e1fdd7b97b3e8",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Confirm Submission"
+        },
+        "22/declaration/body/15/consequent/0/argument/1/1": {
+          "type": "element",
+          "hash": "1f3bb71b519b18f32ba0f1a5a360afb0",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Failed to load documents. Please try again."
+        },
+        "22/declaration/body/16/argument/1/1": {
+          "type": "element",
+          "hash": "e75260ca849db85c75ecb36d672d6642",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Submission Information"
+        },
+        "22/declaration/body/16/argument/1/1/1": {
+          "type": "element",
+          "hash": "e6bb590da2a9a3ea506bbc5d068ff6d5",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Congratulations! You can now submit your offer"
+        },
+        "22/declaration/body/16/argument/1/1/1/1": {
+          "type": "element",
+          "hash": "20ade9d45f75bc7fc726bd35d3536cd1",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Congratulations! You can now submit your offer"
+        },
+        "22/declaration/body/16/argument/1/3/1": {
+          "type": "element",
+          "hash": "e75260ca849db85c75ecb36d672d6642",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Submission Information"
+        },
+        "22/declaration/body/16/argument/1/3/1/1/expression/right-title": {
+          "type": "attribute",
+          "hash": "52362dc2e1de061d4a954d598e23218a",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Platform submission link"
+        },
+        "22/declaration/body/16/argument/1/3/1/3/expression/right-title": {
+          "type": "attribute",
+          "hash": "1a2926f958ae3083838b468a869db131",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Submission deadline"
+        },
+        "22/declaration/body/16/argument/1/3/1/5/expression/right-title": {
+          "type": "attribute",
+          "hash": "b1fff394ee8965b12f190e54c16a3af3",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Deposit (Wadium)"
+        },
+        "22/declaration/body/16/argument/1/3/3/1/1/expression/right-title": {
+          "type": "attribute",
+          "hash": "52362dc2e1de061d4a954d598e23218a",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Platform submission link"
+        },
+        "22/declaration/body/16/argument/1/3/3/1/3/expression/right-title": {
+          "type": "attribute",
+          "hash": "1a2926f958ae3083838b468a869db131",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Submission deadline"
+        },
+        "22/declaration/body/16/argument/1/3/3/1/5/expression/right-title": {
+          "type": "attribute",
+          "hash": "b1fff394ee8965b12f190e54c16a3af3",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Deposit (Wadium)"
+        },
+        "22/declaration/body/16/argument/1/5/1": {
+          "type": "element",
+          "hash": "9e43531d5f81a3cc6564d73d5a8a7216",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Documents to Download"
+        },
+        "22/declaration/body/16/argument/1/5/3/1/openingElement/1/value/expression": {
+          "type": "element",
+          "hash": "3ba81e87ae8016eea5860e247c708dd9",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Ready documentation"
+        },
+        "22/declaration/body/16/argument/1/5/3/3/openingElement/1/value/expression": {
+          "type": "element",
+          "hash": "030e160bf50c084716488dc452429db2",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Requires manual fill"
+        },
+        "22/declaration/body/16/argument/1/5/3/5/openingElement/1/value/expression": {
+          "type": "element",
+          "hash": "f187e342b6ff30e7d4d96d9395dea305",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Other attachments"
+        },
+        "22/declaration/body/16/argument/1/7/expression/right/1": {
+          "type": "element",
+          "hash": "c287d28bf36b66bb994d6b9f83474781",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Additional Documents to Attach"
+        },
+        "22/declaration/body/16/argument/1/7/expression/right/3/1/1/1": {
+          "type": "element",
+          "hash": "5462a83f268fbb111f65a1f70ec916d1",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Additional Documents to Attach"
+        },
+        "22/declaration/body/16/argument/1/7/expression/right/3/1/5/1": {
+          "type": "element",
+          "hash": "d73d157c01311ce5a88cfae1fa19d441",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Please ensure you also include these documents when submitting your offer:"
+        },
+        "22/declaration/body/16/argument/1/7/expression/right/3/1/5/3/1/expression/0/body/1": {
+          "type": "element",
+          "hash": "5f1c90d0fd46023ba1bfaaa2537f59fb",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "•"
+        },
+        "22/declaration/body/16/argument/1/9/1": {
+          "type": "element",
+          "hash": "d38f381ce245130a1b5fce4e1896441f",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Confirm Submission"
+        },
+        "22/declaration/body/16/argument/1/9/3/1/1/1": {
+          "type": "element",
+          "hash": "70f8b2ab855c1df07a42e6299f603e71",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "<element:strong>Important:</element:strong> You are responsible for submitting the offer through the platform. After submitting, please confirm below."
+        },
+        "22/declaration/body/16/argument/1/9/3/1/1/3": {
+          "type": "element",
+          "hash": "616f35f7823e01803992b2cfeb1b616c",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "I confirm that I have submitted the offer through the platform"
+        },
+        "22/declaration/body/16/argument/1/9/3/1/1/5/1": {
+          "type": "element",
+          "hash": "676de58ded59cc9dc7af128fd2b15ca8",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Reject this tender"
+        },
+        "22/declaration/body/16/argument/1/9/3/1/1/5/3": {
+          "type": "element",
+          "hash": "d4ebd618bac1563cd8abdacb3abd0ee1",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Confirm Submission"
+        },
+        "22/declaration/body/16/argument/3/1": {
+          "type": "element",
+          "hash": "e75260ca849db85c75ecb36d672d6642",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Submission Information"
+        },
+        "22/declaration/body/16/argument/3/3/1/1/expression/right-title": {
+          "type": "attribute",
+          "hash": "52362dc2e1de061d4a954d598e23218a",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Platform submission link"
+        },
+        "22/declaration/body/16/argument/3/3/1/3/expression/right-title": {
+          "type": "attribute",
+          "hash": "1a2926f958ae3083838b468a869db131",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Submission deadline"
+        },
+        "22/declaration/body/16/argument/3/3/1/5/expression/right-title": {
+          "type": "attribute",
+          "hash": "b1fff394ee8965b12f190e54c16a3af3",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Deposit (Wadium)"
+        },
+        "22/declaration/body/16/argument/3/3/1/openingElement/1/value/expression": {
+          "type": "element",
+          "hash": "3ba81e87ae8016eea5860e247c708dd9",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Ready documentation"
+        },
+        "22/declaration/body/16/argument/3/3/3/openingElement/1/value/expression": {
+          "type": "element",
+          "hash": "030e160bf50c084716488dc452429db2",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Requires manual fill"
+        },
+        "22/declaration/body/16/argument/3/3/5/openingElement/1/value/expression": {
+          "type": "element",
+          "hash": "f187e342b6ff30e7d4d96d9395dea305",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Other attachments"
+        },
+        "22/declaration/body/16/argument/5/1": {
+          "type": "element",
+          "hash": "9e43531d5f81a3cc6564d73d5a8a7216",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Documents to Download"
+        },
+        "22/declaration/body/16/argument/5/3/1/openingElement/1/value/expression": {
+          "type": "element",
+          "hash": "3ba81e87ae8016eea5860e247c708dd9",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Ready documentation"
+        },
+        "22/declaration/body/16/argument/5/3/3/openingElement/1/value/expression": {
+          "type": "element",
+          "hash": "030e160bf50c084716488dc452429db2",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Requires manual fill"
+        },
+        "22/declaration/body/16/argument/5/3/5/openingElement/1/value/expression": {
+          "type": "element",
+          "hash": "f187e342b6ff30e7d4d96d9395dea305",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Other attachments"
+        },
+        "22/declaration/body/16/argument/5/expression/right/1": {
+          "type": "element",
+          "hash": "c287d28bf36b66bb994d6b9f83474781",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Additional Documents to Attach"
+        },
+        "22/declaration/body/16/argument/5/expression/right/3/1/1/1": {
+          "type": "element",
+          "hash": "9047039139eb1cfab0c0666de099f902",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Additional Documents to Attach"
+        },
+        "22/declaration/body/16/argument/5/expression/right/3/1/5/1": {
+          "type": "element",
+          "hash": "1804dda50682b0ea18153f9b0d39abcb",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Please ensure you also include these documents when submitting your offer:"
+        },
+        "22/declaration/body/16/argument/5/expression/right/3/1/5/3/1/expression/0/body/1": {
+          "type": "element",
+          "hash": "5f1c90d0fd46023ba1bfaaa2537f59fb",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "•"
+        },
+        "22/declaration/body/16/argument/7/1": {
+          "type": "element",
+          "hash": "d38f381ce245130a1b5fce4e1896441f",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Confirm Submission"
+        },
+        "22/declaration/body/16/argument/7/3/1/1/1": {
+          "type": "element",
+          "hash": "cc503113b2429d058b7002e663108c62",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "<element:strong>Important:</element:strong> You are responsible for submitting the offer through the platform. After submitting, please confirm below."
+        },
+        "22/declaration/body/16/argument/7/3/1/1/3": {
+          "type": "element",
+          "hash": "ce82130a67e888ddd4d0a3acec8177b0",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "I confirm that I have submitted the offer through the platform"
+        },
+        "22/declaration/body/16/argument/7/3/1/1/5/1": {
+          "type": "element",
+          "hash": "9726f7d0a4aeb6b350795a7278f688e4",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Reject this tender"
+        },
+        "22/declaration/body/16/argument/7/3/1/1/5/3": {
+          "type": "element",
+          "hash": "48734347e85b82047f7e1fdd7b97b3e8",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Confirm Submission"
+        },
+        "22/declaration/body/16/argument/7/expression/right/1": {
+          "type": "element",
+          "hash": "c287d28bf36b66bb994d6b9f83474781",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Additional Documents to Attach"
+        },
+        "22/declaration/body/16/argument/7/expression/right/3/1/1/1": {
+          "type": "element",
+          "hash": "9047039139eb1cfab0c0666de099f902",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Additional Documents to Attach"
+        },
+        "22/declaration/body/16/argument/7/expression/right/3/1/5/1": {
+          "type": "element",
+          "hash": "1804dda50682b0ea18153f9b0d39abcb",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Please ensure you also include these documents when submitting your offer:"
+        },
+        "22/declaration/body/16/argument/7/expression/right/3/1/5/3/1/expression/0/body/1": {
+          "type": "element",
+          "hash": "5f1c90d0fd46023ba1bfaaa2537f59fb",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "•"
+        },
+        "22/declaration/body/16/argument/9/1": {
+          "type": "element",
+          "hash": "d38f381ce245130a1b5fce4e1896441f",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Confirm Submission"
+        },
+        "22/declaration/body/16/argument/9/3/1/1/1": {
+          "type": "element",
+          "hash": "cc503113b2429d058b7002e663108c62",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "<element:strong>Important:</element:strong> You are responsible for submitting the offer through the platform. After submitting, please confirm below."
+        },
+        "22/declaration/body/16/argument/9/3/1/1/3": {
+          "type": "element",
+          "hash": "ce82130a67e888ddd4d0a3acec8177b0",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "I confirm that I have submitted the offer through the platform"
+        },
+        "22/declaration/body/16/argument/9/3/1/1/5/1": {
+          "type": "element",
+          "hash": "9726f7d0a4aeb6b350795a7278f688e4",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Reject this tender"
+        },
+        "22/declaration/body/16/argument/9/3/1/1/5/3": {
+          "type": "element",
+          "hash": "48734347e85b82047f7e1fdd7b97b3e8",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Confirm Submission"
+        },
+        "22/declaration/body/8/0/init/body/2/expression/1/0/value/body/0/expression/0": {
+          "type": "element",
+          "hash": "95cad397804e3a7d042c08d4a15b91dc",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Offer submitted successfully for <expression/>"
+        },
+        "22/declaration/body/9/0/init/body/0/expression/1/0/value/body/0/expression/0": {
+          "type": "element",
+          "hash": "da75484b6e8463ca4fea585845e3e086",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Tender <expression/> was rejected"
+        },
+        "22/declaration/body/9/0/init/body/2/expression/1/0/value/body/0/expression/0": {
+          "type": "element",
+          "hash": "95cad397804e3a7d042c08d4a15b91dc",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Offer submitted successfully for <expression/>"
+        },
+        "23/declaration/body/12/consequent/argument/1/1": {
+          "type": "element",
+          "hash": "28e5b302e5adec94d929969721a9d520",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "We will prepare your documents. They will be ready within 48 hours at the latest"
+        },
+        "23/declaration/body/12/consequent/argument/1/5": {
+          "type": "element",
+          "hash": "8b199e4c03646258cacdb01bdc3ad72f",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Don't forget to include the valuation. We can also help you with it — just let us know at mimira@mimiraoffers.eu or +48 732 070 469."
+        },
+        "23/declaration/body/12/consequent/argument/1/7": {
+          "type": "element",
+          "hash": "49d1e0e6ab4ccf36e47cf6a776d82937",
+          "context": "",
+          "skip": false,
+          "overrides": {
+            "pl": "Anuluj przygotowanie i odrzuć ten przetarg"
+          },
+          "content": "Cancel preparation and reject this tender"
+        },
+        "23/declaration/body/13/consequent/0/argument/1/1": {
+          "type": "element",
+          "hash": "b795b22e2d0abd430c2ff0b28fb26e5a",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Loading documents..."
+        },
+        "23/declaration/body/14/consequent/0/argument/1/1": {
+          "type": "element",
+          "hash": "1f3bb71b519b18f32ba0f1a5a360afb0",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Failed to load documents. Please try again."
+        },
+        "23/declaration/body/15/argument/13/expression/right/1/1": {
+          "type": "element",
+          "hash": "3bee1ee3d405eefa3fd49756d3442d30",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Additional Documents to Attach"
+        },
+        "23/declaration/body/15/argument/13/expression/right/5/1": {
+          "type": "element",
+          "hash": "b12d2abb6aacc3745cd12ff69db2c315",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Please ensure you also include these documents when submitting your offer:"
+        },
+        "23/declaration/body/15/argument/13/expression/right/5/3/1/expression/0/body/1": {
+          "type": "element",
+          "hash": "5f1c90d0fd46023ba1bfaaa2537f59fb",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "•"
+        },
+        "23/declaration/body/15/argument/17/1/1/3": {
+          "type": "element",
+          "hash": "d38f381ce245130a1b5fce4e1896441f",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Confirm Submission"
+        },
+        "23/declaration/body/15/argument/17/5/1": {
+          "type": "element",
+          "hash": "5efa18df04936d87dce6f7887e14960f",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "<element:strong>Important:</element:strong> You are responsible for submitting the offer through the platform. After submitting, please confirm below."
+        },
+        "23/declaration/body/15/argument/17/5/3": {
+          "type": "element",
+          "hash": "a0fa58a1841ed835ecaefff17d5389b3",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "I confirm that I have submitted the offer through the platform"
+        },
+        "23/declaration/body/15/argument/17/5/5/1": {
+          "type": "element",
+          "hash": "eeff2e12eef96d0acb2be4f64ed71a3a",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Reject this tender"
+        },
+        "23/declaration/body/15/argument/17/5/5/3": {
+          "type": "element",
+          "hash": "2d9b2c057d81cbc43f482e3d50efd4e7",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Confirm Submission"
+        },
+        "23/declaration/body/15/argument/17/expression/right/1/1": {
+          "type": "element",
+          "hash": "3bee1ee3d405eefa3fd49756d3442d30",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Additional Documents to Attach"
+        },
+        "23/declaration/body/15/argument/17/expression/right/5/1": {
+          "type": "element",
+          "hash": "b12d2abb6aacc3745cd12ff69db2c315",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Please ensure you also include these documents when submitting your offer:"
+        },
+        "23/declaration/body/15/argument/17/expression/right/5/3/1/expression/0/body/1": {
+          "type": "element",
+          "hash": "5f1c90d0fd46023ba1bfaaa2537f59fb",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "•"
+        },
+        "23/declaration/body/15/argument/21/1/1/3": {
+          "type": "element",
+          "hash": "d38f381ce245130a1b5fce4e1896441f",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Confirm Submission"
+        },
+        "23/declaration/body/15/argument/21/5/1": {
+          "type": "element",
+          "hash": "5efa18df04936d87dce6f7887e14960f",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "<element:strong>Important:</element:strong> You are responsible for submitting the offer through the platform. After submitting, please confirm below."
+        },
+        "23/declaration/body/15/argument/21/5/3": {
+          "type": "element",
+          "hash": "a0fa58a1841ed835ecaefff17d5389b3",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "I confirm that I have submitted the offer through the platform"
+        },
+        "23/declaration/body/15/argument/21/5/5/1": {
+          "type": "element",
+          "hash": "eeff2e12eef96d0acb2be4f64ed71a3a",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Reject this tender"
+        },
+        "23/declaration/body/15/argument/21/5/5/3": {
+          "type": "element",
+          "hash": "2d9b2c057d81cbc43f482e3d50efd4e7",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Confirm Submission"
+        },
+        "23/declaration/body/15/argument/3/1/1/3/1": {
+          "type": "element",
+          "hash": "41ba17d9cd8b1ba6cfc3ffe5186920e4",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Congratulations! You're ready to participate in this tender"
+        },
+        "23/declaration/body/15/argument/3/1/1/3/3": {
+          "type": "element",
+          "hash": "c70d9671a72f02fe99d104ba224390e5",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Follow these steps to submit your offer successfully"
+        },
+        "23/declaration/body/15/argument/3/11/expression/right-title": {
+          "type": "attribute",
+          "hash": "b1fff394ee8965b12f190e54c16a3af3",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Deposit (Wadium)"
+        },
+        "23/declaration/body/15/argument/3/3/expression/right-title": {
+          "type": "attribute",
+          "hash": "52362dc2e1de061d4a954d598e23218a",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Platform submission link"
+        },
+        "23/declaration/body/15/argument/3/7/expression/right-title": {
+          "type": "attribute",
+          "hash": "1a2926f958ae3083838b468a869db131",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Submission deadline"
+        },
+        "23/declaration/body/15/argument/5/1": {
+          "type": "element",
+          "hash": "9e43531d5f81a3cc6564d73d5a8a7216",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Documents to Download"
+        },
+        "23/declaration/body/15/argument/5/3/1/openingElement/1/value/expression": {
+          "type": "element",
+          "hash": "3ba81e87ae8016eea5860e247c708dd9",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Ready documentation"
+        },
+        "23/declaration/body/15/argument/5/3/3/openingElement/1/value/expression": {
+          "type": "element",
+          "hash": "030e160bf50c084716488dc452429db2",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Requires manual fill"
+        },
+        "23/declaration/body/15/argument/5/3/5/openingElement/1/value/expression": {
+          "type": "element",
+          "hash": "f187e342b6ff30e7d4d96d9395dea305",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Other attachments"
+        },
+        "23/declaration/body/15/argument/7/3/1/1": {
+          "type": "element",
+          "hash": "fd051b4a2378d25f7bba620b6f9a60a7",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Platform Link"
+        },
+        "23/declaration/body/15/argument/7/3/1/3": {
+          "type": "element",
+          "hash": "2b0818bd1a178425ea7bf93d41bfe73f",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Where to submit your offer"
+        },
+        "23/declaration/body/15/argument/7/3/1/5/expression/right-title": {
+          "type": "attribute",
+          "hash": "52362dc2e1de061d4a954d598e23218a",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Platform submission link"
+        },
+        "23/declaration/body/15/argument/7/3/3/1": {
+          "type": "element",
+          "hash": "fc1a76e3b4ec03fec9133f685de04eff",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Submission Deadline"
+        },
+        "23/declaration/body/15/argument/7/3/3/3": {
+          "type": "element",
+          "hash": "513dc1fc3258c242650f74b83929ebc8",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "When to submit by"
+        },
+        "23/declaration/body/15/argument/7/3/3/5/expression/right-title": {
+          "type": "attribute",
+          "hash": "1a2926f958ae3083838b468a869db131",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Submission deadline"
+        },
+        "23/declaration/body/15/argument/7/3/5/1": {
+          "type": "element",
+          "hash": "34d811d0d02e76753d176ae6b99fb933",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Deposit Information"
+        },
+        "23/declaration/body/15/argument/7/3/5/3": {
+          "type": "element",
+          "hash": "f9cd154a561ac80fd1d2d45b199b113d",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Required deposit (Wadium)"
+        },
+        "23/declaration/body/15/argument/7/3/5/5/expression/right-title": {
+          "type": "attribute",
+          "hash": "b1fff394ee8965b12f190e54c16a3af3",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Deposit (Wadium)"
+        },
+        "23/declaration/body/15/argument/9/1": {
+          "type": "element",
+          "hash": "9e43531d5f81a3cc6564d73d5a8a7216",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Documents to Download"
+        },
+        "23/declaration/body/15/argument/9/3/1/openingElement/1/value/expression": {
+          "type": "element",
+          "hash": "3ba81e87ae8016eea5860e247c708dd9",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Ready documentation"
+        },
+        "23/declaration/body/15/argument/9/3/3/openingElement/1/value/expression": {
+          "type": "element",
+          "hash": "030e160bf50c084716488dc452429db2",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Requires manual fill"
+        },
+        "23/declaration/body/15/argument/9/3/5/openingElement/1/value/expression": {
+          "type": "element",
+          "hash": "f187e342b6ff30e7d4d96d9395dea305",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Other attachments"
+        },
+        "23/declaration/body/8/0/init/body/2/expression/1/0/value/body/0/expression/0": {
+          "type": "element",
+          "hash": "95cad397804e3a7d042c08d4a15b91dc",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Offer submitted successfully for <expression/>"
+        },
+        "23/declaration/body/9/0/init/body/0/expression/1/0/value/body/0/expression/0": {
+          "type": "element",
+          "hash": "da75484b6e8463ca4fea585845e3e086",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Tender <expression/> was rejected"
+        }
+      }
+    },
     "features/tender-form/components/file-group.tsx": {
       "scopes": {
+        "10/declaration/body/3/argument/1/3/1/1/expression/right/3": {
+          "type": "element",
+          "hash": "385e77c5c419ee4328a4b98098a5fd49",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Download all"
+        },
+        "10/declaration/body/3/argument/1/3/1/1/expression/right/5": {
+          "type": "element",
+          "hash": "5e2e93f8e2a5f315b6fecdd0a0e6f55f",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "All"
+        },
+        "10/declaration/body/3/argument/1/3/1/1/expression/right/openingElement/3/value/expression/body/0/body/0": {
+          "type": "element",
+          "hash": "d016ffaffbb15d928d07e716e4bfb5dc",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Downloading all files..."
+        },
+        "10/declaration/body/3/argument/1/3/1/3/expression/0/body/1/1/1/5/3/expression/right/3": {
+          "type": "element",
+          "hash": "7165e7561176bca854eb1fee9c1641d6",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Requires signature (<expression/>)"
+        },
+        "10/declaration/body/3/argument/1/3/1/3/expression/0/body/1/1/3/3": {
+          "type": "element",
+          "hash": "56b7d0834952b39ee394b44bd8179178",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Download"
+        },
+        "10/declaration/body/3/argument/1/3/1/3/expression/0/body/1/1/3/openingElement/2/value/expression/body/0/body/0": {
+          "type": "element",
+          "hash": "8358440b9ceec5d75689e0c43dfce034",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Downloading {file.comment}..."
+        },
+        "11/body/6/argument/1/1/1/5/3/expression/right/3": {
+          "type": "element",
+          "hash": "a0297dac86ffacec33d06f4a2b899a81",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Requires signature (<expression/>)"
+        },
+        "11/body/6/argument/1/1/3/3": {
+          "type": "element",
+          "hash": "56b7d0834952b39ee394b44bd8179178",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Download"
+        },
+        "11/body/6/argument/1/1/3/openingElement/2/value/expression/body/0/body/0": {
+          "type": "element",
+          "hash": "8358440b9ceec5d75689e0c43dfce034",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Downloading <expression/>..."
+        },
+        "11/body/7/argument/1/1/1/5/3/expression/right/3": {
+          "type": "element",
+          "hash": "a0297dac86ffacec33d06f4a2b899a81",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Requires signature (<expression/>)"
+        },
+        "11/body/7/argument/1/1/3/3": {
+          "type": "element",
+          "hash": "56b7d0834952b39ee394b44bd8179178",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Download"
+        },
+        "11/body/7/argument/1/1/3/openingElement/2/value/expression/body/0/body/0": {
+          "type": "element",
+          "hash": "8358440b9ceec5d75689e0c43dfce034",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Downloading <expression/>..."
+        },
+        "12/declaration/body/2/argument/1/3/1/1/expression/right/3": {
+          "type": "element",
+          "hash": "385e77c5c419ee4328a4b98098a5fd49",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Download all"
+        },
+        "12/declaration/body/2/argument/1/3/1/1/expression/right/5": {
+          "type": "element",
+          "hash": "5e2e93f8e2a5f315b6fecdd0a0e6f55f",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "All"
+        },
+        "12/declaration/body/2/argument/1/3/1/1/expression/right/openingElement/3/value/expression/body/0/body/0": {
+          "type": "element",
+          "hash": "d016ffaffbb15d928d07e716e4bfb5dc",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Downloading all files..."
+        },
+        "12/declaration/body/3/argument/1/3/1/1/expression/right/3": {
+          "type": "element",
+          "hash": "385e77c5c419ee4328a4b98098a5fd49",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Download all"
+        },
+        "12/declaration/body/3/argument/1/3/1/1/expression/right/5": {
+          "type": "element",
+          "hash": "5e2e93f8e2a5f315b6fecdd0a0e6f55f",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "All"
+        },
+        "12/declaration/body/3/argument/1/3/1/1/expression/right/openingElement/3/value/expression/body/0/body/0": {
+          "type": "element",
+          "hash": "d016ffaffbb15d928d07e716e4bfb5dc",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Downloading all files..."
+        },
         "8/declaration/body/2/consequent/0/argument/3/1": {
           "type": "element",
           "hash": "21105bfd07013fa07e2fb64cc974ddc5",
