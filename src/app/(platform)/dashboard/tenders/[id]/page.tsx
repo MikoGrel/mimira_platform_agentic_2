@@ -17,7 +17,6 @@ import { useParams } from "next/navigation";
 import { useState, useEffect, useMemo, useRef, useCallback } from "react";
 import { defineStepper } from "$/components/stepper";
 import {
-  ConfirmationsStep,
   DocumentsDecisionStep,
   PartsSidebar,
   OverviewStep,
@@ -28,7 +27,6 @@ import React from "react";
 import { useDateFormat } from "$/features/i18n/hooks/use-date-format";
 import { InboxTenderMapping } from "$/features/inbox/api/use-tender-inbox-query";
 import { InboxTenderPart } from "$/features/inbox/api/use-tender-inbox-query";
-import { useConfirmationsManagement } from "$/features/tender-form/hooks/use-confirmations-management";
 import { useUpdateTenderStatus } from "$/features/tenders/api/use-update-tender-status";
 import {
   ResizablePanelGroup,
@@ -48,23 +46,21 @@ const { Stepper, useStepper } = defineStepper(
     title: <span>Overview</span>,
   },
   {
-    id: "confirmations",
-    title: <span>Confirmations</span>,
+    id: "documents-preparing",
+    title: <span>Preparing documents</span>,
   },
   {
-    id: "documents-decision",
-    title: <span>Documents and Decision</span>,
+    id: "documents-ready",
+    title: <span>Documents ready</span>,
   }
 );
 
 function StepperContent({
   mapping,
   selectedPart,
-  setSelectedPart,
 }: {
   mapping?: InboxTenderMapping | null;
   selectedPart?: InboxTenderPart | null;
-  setSelectedPart: (part: InboxTenderPart | null) => void;
 }) {
   const { current } = useStepper();
   const { relativeToNow } = useDateFormat();
@@ -74,13 +70,6 @@ function StepperContent({
   const [chatOpened, setChatOpened] = useState(false);
   const updateTenderStatus = useUpdateTenderStatus();
 
-  const { confirmedParts, isProcessingConfirmation, handleContinue } =
-    useConfirmationsManagement(
-      mapping ?? null,
-      selectedPart ?? null,
-      setSelectedPart
-    );
-
   const methods = useStepper();
 
   const mapStepToStatus = useCallback(
@@ -88,10 +77,10 @@ function StepperContent({
       switch (stepId) {
         case "overview":
           return MappingStatus.analysis;
-        case "confirmations":
-          return MappingStatus.questions;
-        case "documents-decision":
+        case "documents-preparing":
           return MappingStatus.documents_preparing;
+        case "documents-ready":
+          return MappingStatus.documents_ready;
         default:
           return null;
       }
@@ -102,11 +91,12 @@ function StepperContent({
   useEffect(() => {
     if (!mapping?.id || !current) return;
 
-    if (current.id === "confirmations") {
-      // nextEnabled will be set by ConfirmationsStep via setNextEnabled
-      // No need to override it here - let ConfirmationsStep manage it
-    } else if (current.id === "documents-decision") {
+    if (current.id === "documents-preparing") {
+      // On preparing step, can proceed when docs_ready becomes true
       setNextEnabled(mapping?.docs_ready ?? false);
+    } else if (current.id === "documents-ready") {
+      // On ready step, always enabled
+      setNextEnabled(true);
     } else {
       setNextEnabled(true);
     }
@@ -122,17 +112,8 @@ function StepperContent({
             setNextEnabled={setNextEnabled}
           />
         );
-      case "confirmations":
-        return (
-          <ConfirmationsStep
-            item={selectedPart}
-            setNextEnabled={setNextEnabled}
-            isConfirmed={
-              selectedPart ? confirmedParts.has(selectedPart.id) : false
-            }
-          />
-        );
-      case "documents-decision":
+      case "documents-preparing":
+      case "documents-ready":
         return <DocumentsDecisionStep item={mapping} />;
       default:
         throw new Error(`Unknown step: ${current}`);
@@ -234,21 +215,12 @@ function StepperContent({
                 key={nextEnabled.toString()}
                 color="primary"
                 onPress={() => {
-                  if (!nextEnabled || isProcessingConfirmation) {
+                  if (!nextEnabled) {
                     return;
                   }
 
                   const runNextTransition = async () => {
                     try {
-                      // Handle confirmations step logic first
-                      if (methods.current.id === "confirmations") {
-                        const shouldProceedToNextStep = await handleContinue();
-
-                        if (!shouldProceedToNextStep) {
-                          return; // Don't proceed to next step
-                        }
-                      }
-
                       // Execute any pending next handler
                       if (nextHandlerRef.current) {
                         await nextHandlerRef.current();
@@ -279,7 +251,7 @@ function StepperContent({
 
                   void runNextTransition();
                 }}
-                isDisabled={!nextEnabled || isProcessingConfirmation}
+                isDisabled={!nextEnabled}
               >
                 Next step
               </Button>
@@ -342,33 +314,56 @@ export default function TenderPage() {
   );
 
   const mapStatusToStep = (
-    status: string | null | undefined
-  ): "overview" | "confirmations" | "documents-decision" => {
-    switch (status) {
-      case MappingStatus.analysis:
-        return "overview";
-      case MappingStatus.questions:
-        return "confirmations";
-      case MappingStatus.questions_in_review_mimira:
-        return "confirmations";
-      case MappingStatus.documents_preparing:
-      case MappingStatus.documents_ready:
-      case MappingStatus.documents_reviewed:
-      case MappingStatus.decision_made_applied:
-      case MappingStatus.decision_made_rejected:
-      case MappingStatus.rejected:
-        return "documents-decision";
-      default:
-        return "overview";
+    status: string | null | undefined,
+    docsReady: boolean = false
+  ): "overview" | "documents-preparing" | "documents-ready" => {
+    // Analysis column: analysis, questions_in_review_mimira, questions
+    if (
+      status === MappingStatus.analysis ||
+      status === MappingStatus.questions_in_review_mimira ||
+      status === MappingStatus.questions
+    ) {
+      return "overview";
     }
+
+    // Documents preparing: (documents_preparing OR documents_reviewed) AND !docs_ready
+    if (
+      (status === MappingStatus.documents_preparing ||
+        status === MappingStatus.documents_reviewed) &&
+      !docsReady
+    ) {
+      return "documents-preparing";
+    }
+
+    // Documents ready: documents_ready OR ((documents_preparing OR documents_reviewed) AND docs_ready)
+    if (
+      status === MappingStatus.documents_ready ||
+      ((status === MappingStatus.documents_preparing ||
+        status === MappingStatus.documents_reviewed) &&
+        docsReady)
+    ) {
+      return "documents-ready";
+    }
+
+    // Decision/Rejected states
+    if (
+      status === MappingStatus.decision_made_applied ||
+      status === MappingStatus.decision_made_rejected ||
+      status === MappingStatus.rejected
+    ) {
+      return "documents-ready";
+    }
+
+    return "overview";
   };
 
   const initialStep = useMemo(() => {
     if (isLoading || !mapping) return null;
 
     const status = mapping.status ?? MappingStatus.analysis;
+    const docsReady = mapping.docs_ready ?? false;
 
-    return mapStatusToStep(status);
+    return mapStatusToStep(status, docsReady);
   }, [isLoading, mapping]);
 
   useEffect(() => {
@@ -377,7 +372,7 @@ export default function TenderPage() {
     }
   }, [mapping, setLastMappingId]);
 
-  const partSteps = ["overview", "confirmations"];
+  const partSteps = ["overview"];
 
   if (!initialStep) return null;
 
@@ -435,7 +430,6 @@ export default function TenderPage() {
                     <StepperContent
                       mapping={mapping}
                       selectedPart={selectedPart}
-                      setSelectedPart={setSelectedPart}
                     />
                   </ResizablePanel>
                 </ResizablePanelGroup>

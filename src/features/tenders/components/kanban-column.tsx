@@ -27,7 +27,9 @@ function InternalKanbanColumn({
         <CardHeader className="pb-2">
           <div className="flex items-center gap-2 w-full text-sm text-muted-foreground font-medium">
             <Icon className={`w-4 h-4 ${iconColor}`} />
-            <h3 className="text-foreground font-medium">{title}</h3>
+            <h3 className="text-foreground font-medium text-xs xl:text-sm">
+              {title}
+            </h3>
             <div className="ml-auto flex items-center gap-2">
               {isLoading && <Spinner color="default" size="sm" />}
               <span className="text-xs text-muted-foreground">

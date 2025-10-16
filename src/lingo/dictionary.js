@@ -32163,17 +32163,17 @@ export default {
         },
         "7/0/init/expression/1/1/value": {
           content: {
-            en: "Questions & Review",
-            pl: "Pytania i przegląd",
+            en: "Preparing documents",
+            pl: "Przygotowywanie dokumentów",
           },
-          hash: "bd17707e3e924f958ec68060726f1068",
+          hash: "d7b2ea85e5bc472520e1000e62ebe013",
         },
         "7/0/init/expression/2/1/value": {
           content: {
-            en: "Documents",
-            pl: "Dokumenty",
+            en: "Documents ready",
+            pl: "Dokumenty gotowe",
           },
-          hash: "c3882fc98216636873ab9091f3453f0c",
+          hash: "4aba9b174f31916a12c9562bb265244c",
         },
         "7/0/init/expression/3/1/value": {
           content: {

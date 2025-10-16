@@ -3,13 +3,7 @@
 import { useMemo } from "react";
 
 import { KanbanColumn } from "./kanban-column";
-import {
-  Search,
-  MessageCircleQuestion,
-  FileText,
-  CheckCircle,
-  X,
-} from "lucide-react";
+import { Search, FileText, CheckCircle, X, FileCheck2 } from "lucide-react";
 import { useTendersList } from "../api";
 import { FilterQuery } from "$/features/inbox/hooks/use-filter-form";
 import { IndividualTenderMapping } from "../api/use-individual-tender";
@@ -19,38 +13,42 @@ const COLUMNS = [
   {
     id: "analysis",
     title: <>Analysis</>,
-    statuses: [MappingStatus.analysis] as const,
+    filter: (mapping: IndividualTenderMapping) =>
+      mapping.status === MappingStatus.analysis ||
+      mapping.status === MappingStatus.questions_in_review_mimira ||
+      mapping.status === MappingStatus.questions,
     updateStatus: MappingStatus.analysis,
     icon: Search,
     color: "text-amber-500",
   },
   {
-    id: "questions",
-    title: <>Questions & Review</>,
-    statuses: [
-      MappingStatus.questions_in_review_mimira,
-      MappingStatus.questions,
-    ] as const,
-    updateStatus: MappingStatus.questions,
-    icon: MessageCircleQuestion,
-    color: "text-purple-500",
-  },
-  {
     id: "documents",
-    title: <>Documents</>,
-    statuses: [
-      MappingStatus.documents_preparing,
-      MappingStatus.documents_ready,
-      MappingStatus.documents_reviewed,
-    ] as const,
+    title: <>Preparing documents</>,
+    filter: (mapping: IndividualTenderMapping) =>
+      (mapping.status === MappingStatus.documents_preparing ||
+        mapping.status === MappingStatus.documents_reviewed) &&
+      !mapping.docs_ready,
     updateStatus: MappingStatus.documents_ready,
     icon: FileText,
     color: "text-cyan-500",
   },
   {
+    id: "documents_ready",
+    title: <>Documents ready</>,
+    filter: (mapping: IndividualTenderMapping) =>
+      mapping.status === MappingStatus.documents_ready ||
+      ((mapping.status === MappingStatus.documents_preparing ||
+        mapping.status === MappingStatus.documents_reviewed) &&
+        mapping.docs_ready),
+    updateStatus: MappingStatus.documents_ready,
+    icon: FileCheck2,
+    color: "text-emerald-500",
+  },
+  {
     id: "decision",
     title: <>Decision</>,
-    statuses: [MappingStatus.decision_made_applied] as const,
+    filter: (mapping: IndividualTenderMapping) =>
+      mapping.status === MappingStatus.decision_made_applied,
     updateStatus: MappingStatus.decision_made_applied,
     icon: CheckCircle,
     color: "text-green-500",
@@ -58,10 +56,9 @@ const COLUMNS = [
   {
     id: "rejected",
     title: <>Rejected</>,
-    statuses: [
-      MappingStatus.rejected,
-      MappingStatus.decision_made_rejected,
-    ] as const,
+    filter: (mapping: IndividualTenderMapping) =>
+      mapping.status === MappingStatus.rejected ||
+      mapping.status === MappingStatus.decision_made_rejected,
     updateStatus: MappingStatus.rejected,
     icon: X,
     color: "text-red-500",
@@ -87,16 +84,14 @@ export function TenderKanban({ searchQuery, filterQuery }: TenderKanbanProps) {
   const mappingsByColumn = useMemo(() => {
     const grouped: Record<ColumnId, IndividualTenderMapping[]> = {
       analysis: [],
-      questions: [],
       documents: [],
+      documents_ready: [],
       decision: [],
       rejected: [],
     };
 
     allTenders.forEach((mapping) => {
-      const column = COLUMNS.find((col) =>
-        col.statuses.some((status) => status === mapping.status)
-      );
+      const column = COLUMNS.find((col) => col.filter(mapping));
       if (column) {
         grouped[column.id].push(mapping);
       }
