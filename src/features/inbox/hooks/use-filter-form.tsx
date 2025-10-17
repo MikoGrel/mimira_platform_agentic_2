@@ -73,7 +73,7 @@ export function useFilterForm({ onFiltered }: FilterFormOptions = {}) {
     sortBy: parseAsSet<SortDirection>(),
   });
 
-  const { control, handleSubmit, register } = useForm<FilterForm>({
+  const { control, handleSubmit, register, watch } = useForm<FilterForm>({
     defaultValues: {
       publishedAt:
         filterQuery.publishedAtFrom && filterQuery.publishedAtTo
@@ -93,6 +93,8 @@ export function useFilterForm({ onFiltered }: FilterFormOptions = {}) {
       sortBy: filterQuery.sortBy,
     },
   });
+
+  console.log(watch());
 
   const onFilter = handleSubmit((data) => {
     setFilterQuery({

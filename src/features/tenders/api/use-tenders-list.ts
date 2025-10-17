@@ -1,10 +1,6 @@
 "use client";
 
-import {
-  useInfiniteQuery,
-  useQueryClient,
-  InfiniteData,
-} from "@tanstack/react-query";
+import { useQuery, useQueryClient } from "@tanstack/react-query";
 import { createClient } from "$/lib/supabase/client";
 import useCurrentUser from "$/features/auth/api/use-current-user";
 import { getLocalTimeZone } from "@internationalized/date";
@@ -14,13 +10,11 @@ import { Tables } from "$/types/supabase";
 import { baseTenderQuery } from "$/features/inbox/api/base-tender-query";
 
 interface UseTendersListParams {
-  pageSize?: number;
   search?: string;
   filterQuery?: FilterQuery;
 }
 
 export function useTendersList({
-  pageSize = 20,
   search,
   filterQuery,
 }: UseTendersListParams = {}) {
@@ -51,13 +45,10 @@ export function useTendersList({
   const {
     data: tendersData,
     isLoading: loading,
-    fetchNextPage,
-    hasNextPage,
-    isFetchingNextPage,
     isPending,
-  } = useInfiniteQuery({
+  } = useQuery({
     queryKey,
-    queryFn: async ({ pageParam = 0 }) => {
+    queryFn: async () => {
       const client = createClient();
       let query = baseTenderQuery(client).eq(
         "company_id",
@@ -120,17 +111,10 @@ export function useTendersList({
       const result = await query
         .order("updated_at", { ascending: false, nullsFirst: false })
         .order("id", { ascending: false, nullsFirst: false })
-        .range(pageParam * pageSize!, pageParam * pageSize! + pageSize! - 1);
+        .limit(999);
 
-      return {
-        data: result.data || [],
-        count: result.count,
-        nextPage:
-          result.data && result.data.length === pageSize ? pageParam + 1 : null,
-      };
+      return result.data || [];
     },
-    getNextPageParam: (lastPage) => lastPage.nextPage,
-    initialPageParam: 0,
     enabled: !!user,
   });
 
@@ -139,51 +123,31 @@ export function useTendersList({
       queryKey,
       (
         oldData:
-          | InfiniteData<{
-              data: Array<{
-                id: string;
-                status: string | null;
-                can_participate: boolean | null;
-                seen_at: string | null;
-                created_at: string;
-                company_id: string | null;
-                tender_id: string | null;
-                tenders: Tables<"tenders">;
-              }>;
-              count: number | null;
-              nextPage: number | null;
+          | Array<{
+              id: string;
+              status: string | null;
+              can_participate: boolean | null;
+              seen_at: string | null;
+              created_at: string;
+              company_id: string | null;
+              tender_id: string | null;
+              tenders: Tables<"tenders">;
             }>
           | undefined
       ) => {
         if (!oldData) return oldData;
 
-        return {
-          ...oldData,
-          pages: oldData.pages.map((page) => ({
-            ...page,
-            data: page.data.map((mapping) =>
-              mapping.id === id ? { ...mapping, status } : mapping
-            ),
-          })),
-        };
+        return oldData.map((mapping) =>
+          mapping.id === id ? { ...mapping, status } : mapping
+        );
       }
     );
   }
 
-  // Flatten the pages data and remove duplicates based on id
-  const mappings = tendersData?.pages.flatMap((page) => page.data) || [];
-  const uniqueMappings = mappings.filter(
-    (mapping, index, self) =>
-      index === self.findIndex((m) => m.id === mapping.id)
-  );
-
   return {
-    tenders: uniqueMappings,
+    tenders: tendersData || [],
     loading,
     isPending,
-    fetchNextPage,
-    hasNextPage,
-    isFetchingNextPage,
     updateTenderStatus,
   };
 }
