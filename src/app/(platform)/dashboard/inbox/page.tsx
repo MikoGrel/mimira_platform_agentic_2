@@ -116,7 +116,10 @@ export default function InboxPage() {
     setSelectedPart(tender.tender_parts[0].id);
 
     markAsSeen(tender.id);
-    setLastMappingId(tender.id);
+
+    if (!showArchive) {
+      setLastMappingId(tender.id);
+    }
   }
 
   function handleArchiveButtonPress() {
