@@ -255,6 +255,17 @@ export function DocumentsDecisionStep({
               </StatusCard>
             )}
           </div>
+
+          {item?.tenders?.application_form_llm && (
+            <StatusCard
+              icon={FileText}
+              title="Application Instructions"
+              type="info"
+              bodyClassName="text-black text-sm leading-snug"
+            >
+              {item.tenders.application_form_llm.replaceAll("\\n", "\n\n")}
+            </StatusCard>
+          )}
         </SectionContent>
       </Section>
 

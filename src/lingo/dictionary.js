@@ -975,6 +975,50 @@ export default {
           },
           hash: "067789b01a081458db2f872f10a37c3f",
         },
+        "19/declaration/body/27/argument/1/1/1/3-placeholder": {
+          content: {
+            en: "Search",
+            pl: "Szukaj",
+          },
+          hash: "49dd6c21604b5e8d4153ff1aff2177e1",
+        },
+        "19/declaration/body/27/argument/1/3/1/1/3/3/expression/0/body/1/1/1/1/expression/right":
+          {
+            content: {
+              en: "New",
+              pl: "Nowe",
+            },
+            hash: "c752c0465f1577573a87ab4b81d7b098",
+          },
+        "19/declaration/body/27/argument/1/3/1/1/3/3/expression/0/body/1/1/3/1/expression/right/1/expression/right":
+          {
+            content: {
+              en: "New term: ",
+              pl: "Nowy termin: ",
+            },
+            hash: "2664239247be0ec83dcb0d3c87efe91e",
+          },
+        "19/declaration/body/27/argument/1/5/1/3": {
+          content: {
+            en: "Ask Mimira",
+            pl: "Zapytaj Mimira",
+          },
+          hash: "794ecd418d0b3530b94008aed80b30d7",
+        },
+        "19/declaration/body/27/argument/1/5/1/5": {
+          content: {
+            en: "Try now",
+            pl: "Wypróbuj teraz",
+          },
+          hash: "9b9feae9d2550e4d7d39f3634be37ce6",
+        },
+        "19/declaration/body/27/argument/3/expression/right/1/1": {
+          content: {
+            en: "Select a tender to view details",
+            pl: "Wybierz przetarg, aby zobaczyć szczegóły",
+          },
+          hash: "067789b01a081458db2f872f10a37c3f",
+        },
         "20/body/0/argument/1/expression/0/body/3/3": {
           content: {
             en: "·",
@@ -1020,6 +1064,50 @@ export default {
           hash: "05a8fc9f6d826fd88a809d98684edcad",
         },
         "20/declaration/body/17/argument/3/expression/right/1/1": {
+          content: {
+            en: "Select a tender to view details",
+            pl: "Wybierz przetarg, aby zobaczyć szczegóły",
+          },
+          hash: "067789b01a081458db2f872f10a37c3f",
+        },
+        "20/declaration/body/26/argument/1/1/1/3-placeholder": {
+          content: {
+            en: "Search",
+            pl: "Szukaj",
+          },
+          hash: "49dd6c21604b5e8d4153ff1aff2177e1",
+        },
+        "20/declaration/body/26/argument/1/3/1/1/3/3/expression/0/body/1/1/1/1/expression/right":
+          {
+            content: {
+              en: "New",
+              pl: "Nowe",
+            },
+            hash: "c752c0465f1577573a87ab4b81d7b098",
+          },
+        "20/declaration/body/26/argument/1/3/1/1/3/3/expression/0/body/1/1/3/1/expression/right/1/expression/right":
+          {
+            content: {
+              en: "New term: ",
+              pl: "Nowy termin: ",
+            },
+            hash: "2664239247be0ec83dcb0d3c87efe91e",
+          },
+        "20/declaration/body/26/argument/1/5/1/3": {
+          content: {
+            en: "Ask Mimira",
+            pl: "Zapytaj Mimira",
+          },
+          hash: "794ecd418d0b3530b94008aed80b30d7",
+        },
+        "20/declaration/body/26/argument/1/5/1/5": {
+          content: {
+            en: "Try now",
+            pl: "Wypróbuj teraz",
+          },
+          hash: "9b9feae9d2550e4d7d39f3634be37ce6",
+        },
+        "20/declaration/body/26/argument/3/expression/right/1/1": {
           content: {
             en: "Select a tender to view details",
             pl: "Wybierz przetarg, aby zobaczyć szczegóły",
@@ -1072,6 +1160,50 @@ export default {
           hash: "9b9feae9d2550e4d7d39f3634be37ce6",
         },
         "20/declaration/body/27/argument/3/expression/right/1/1": {
+          content: {
+            en: "Select a tender to view details",
+            pl: "Wybierz przetarg, aby zobaczyć szczegóły",
+          },
+          hash: "067789b01a081458db2f872f10a37c3f",
+        },
+        "20/declaration/body/28/argument/1/1/1/3-placeholder": {
+          content: {
+            en: "Search",
+            pl: "Szukaj",
+          },
+          hash: "49dd6c21604b5e8d4153ff1aff2177e1",
+        },
+        "20/declaration/body/28/argument/1/3/1/1/3/3/expression/0/body/1/1/1/1/expression/right":
+          {
+            content: {
+              en: "New",
+              pl: "Nowe",
+            },
+            hash: "c752c0465f1577573a87ab4b81d7b098",
+          },
+        "20/declaration/body/28/argument/1/3/1/1/3/3/expression/0/body/1/1/3/1/expression/right/1/expression/right":
+          {
+            content: {
+              en: "New term: ",
+              pl: "Nowy termin: ",
+            },
+            hash: "2664239247be0ec83dcb0d3c87efe91e",
+          },
+        "20/declaration/body/28/argument/1/5/1/3": {
+          content: {
+            en: "Ask Mimira",
+            pl: "Zapytaj Mimira",
+          },
+          hash: "794ecd418d0b3530b94008aed80b30d7",
+        },
+        "20/declaration/body/28/argument/1/5/1/5": {
+          content: {
+            en: "Try now",
+            pl: "Wypróbuj teraz",
+          },
+          hash: "9b9feae9d2550e4d7d39f3634be37ce6",
+        },
+        "20/declaration/body/28/argument/3/expression/right/1/1": {
           content: {
             en: "Select a tender to view details",
             pl: "Wybierz przetarg, aby zobaczyć szczegóły",
@@ -24140,6 +24272,20 @@ export default {
           },
           hash: "b1fff394ee8965b12f190e54c16a3af3",
         },
+        "22/declaration/body/15/argument/3/3/1/7/expression/right-title": {
+          content: {
+            en: "Application form",
+            pl: "Formularz zgłoszeniowy",
+          },
+          hash: "3478b7b59d70694bf9182e9c079d16fb",
+        },
+        "22/declaration/body/15/argument/3/3/3/expression/right-title": {
+          content: {
+            en: "Application Instructions",
+            pl: "Instrukcje dotyczące aplikacji",
+          },
+          hash: "9de2f30b86af7037d5422ad0d72590bc",
+        },
         "22/declaration/body/15/argument/3/3/expression/right-title": {
           content: {
             en: "Platform submission link",
@@ -32101,6 +32247,21 @@ export default {
           },
           hash: "9fa090b63ef800c860a8c2beb55db264",
         },
+        "14/body/5/argument/1/1/1/3/1/5/expression/right/3/1/expression/right":
+          {
+            content: {
+              en: "New term: ",
+              pl: "Nowy termin: ",
+            },
+            hash: "2664239247be0ec83dcb0d3c87efe91e",
+          },
+        "14/body/5/argument/1/1/3/1/5/expression/right/3/1/expression/right": {
+          content: {
+            en: "New term: ",
+            pl: "Nowy termin: ",
+          },
+          hash: "2664239247be0ec83dcb0d3c87efe91e",
+        },
         "14/body/5/argument/3/1/1": {
           content: {
             en: "Restore to inbox",
@@ -32523,6 +32684,20 @@ export default {
     "features/tenders/components/tender-mini-card.tsx": {
       entries: {
         "7/declaration/body/3/argument/1/1/3/1/1/expression/right": {
+          content: {
+            en: "New term: ",
+            pl: "Nowy termin: ",
+          },
+          hash: "2664239247be0ec83dcb0d3c87efe91e",
+        },
+        "8/declaration/body/3/argument/1/1/1/3/1/1/expression/right": {
+          content: {
+            en: "New term: ",
+            pl: "Nowy termin: ",
+          },
+          hash: "2664239247be0ec83dcb0d3c87efe91e",
+        },
+        "8/declaration/body/3/argument/1/1/3/1/1/expression/right": {
           content: {
             en: "New term: ",
             pl: "Nowy termin: ",

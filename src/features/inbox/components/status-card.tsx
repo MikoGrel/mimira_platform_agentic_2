@@ -9,11 +9,13 @@ export function StatusCard({
   title,
   children,
   type = "neutral",
+  bodyClassName,
 }: {
   icon: React.ComponentType<{ className?: string }>;
   title: string;
   children?: ReactNode;
   type?: "success" | "warning" | "error" | "neutral" | "info";
+  bodyClassName?: string;
 }) {
   const badgeColors = {
     success: "bg-green-50 text-green-700 border-green-200",
@@ -43,7 +45,12 @@ export function StatusCard({
           </p>
         </div>
         {children && (
-          <div className="text-xs text-foreground/70 whitespace-pre-wrap leading-relaxed">
+          <div
+            className={cn(
+              "text-xs text-foreground/70 whitespace-pre-wrap leading-relaxed",
+              bodyClassName
+            )}
+          >
             {children}
           </div>
         )}
