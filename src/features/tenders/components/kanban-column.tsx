@@ -12,6 +12,7 @@ interface KanbanColumnProps {
   icon: LucideIcon;
   iconColor: string;
   isLoading?: boolean;
+  markAsFavorite: (id: string, value: boolean) => Promise<void>;
 }
 
 function InternalKanbanColumn({
@@ -20,6 +21,7 @@ function InternalKanbanColumn({
   icon: Icon,
   iconColor,
   isLoading = false,
+  markAsFavorite,
 }: KanbanColumnProps) {
   return (
     <div className="h-full min-w-[200px]">
@@ -43,7 +45,11 @@ function InternalKanbanColumn({
             {!isLoading && (
               <>
                 {mappings.map((mapping) => (
-                  <TenderCard key={mapping.id} mapping={mapping} />
+                  <TenderCard
+                    key={mapping.id}
+                    mapping={mapping}
+                    markAsFavorite={markAsFavorite}
+                  />
                 ))}
                 {mappings.length === 0 && (
                   <div className="flex items-center justify-center h-32 text-muted-foreground text-sm">
@@ -60,8 +66,12 @@ function InternalKanbanColumn({
 }
 
 export const KanbanColumn = React.memo(InternalKanbanColumn, (prev, next) => {
-  const prevMappings = prev.mappings.map((mapping) => mapping.id).join(".");
-  const nextMappings = next.mappings.map((mapping) => mapping.id).join(".");
+  const prevMappings = prev.mappings
+    .map((mapping) => mapping.id + mapping.marked_as_favorite)
+    .join(".");
+  const nextMappings = next.mappings
+    .map((mapping) => mapping.id + mapping.marked_as_favorite)
+    .join(".");
 
   return (
     prev.title === next.title &&

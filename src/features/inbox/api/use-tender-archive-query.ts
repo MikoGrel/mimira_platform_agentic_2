@@ -128,10 +128,12 @@ export default function useTenderArchiveQuery({
 
       // Sort by most recently updated first for archive
       // This makes more sense than sorting by deadline for expired tenders
-      query = query.order("updated_at", {
-        ascending: false,
-        nullsFirst: false,
-      });
+      query = query
+        .order("marked_as_favorite", { ascending: false, nullsFirst: false })
+        .order("updated_at", {
+          ascending: false,
+          nullsFirst: false,
+        });
 
       const result = await query.range(
         pageParam * pageSize!,
@@ -190,6 +192,41 @@ export default function useTenderArchiveQuery({
     );
   }
 
+  async function markAsFavorite(id: string, value: boolean) {
+    queryClient.setQueryData(
+      queryKey,
+      (
+        oldData:
+          | InfiniteData<{
+              data: Tables<"companies_tenders_mappings">[];
+              count: number | null;
+              nextPage: number | null;
+            }>
+          | undefined
+      ) => {
+        if (!oldData) return oldData;
+
+        return {
+          ...oldData,
+          pages: oldData.pages.map((page) => ({
+            ...page,
+            data: page.data.map((mapping) =>
+              mapping.id === id
+                ? { ...mapping, marked_as_favorite: value }
+                : mapping
+            ),
+          })),
+        };
+      }
+    );
+
+    const client = createClient();
+    await client
+      .from("companies_tenders_mappings")
+      .update({ marked_as_favorite: value })
+      .eq("id", id);
+  }
+
   // Flatten the pages data and remove duplicates based on id
   const tenders = tendersData?.pages.flatMap((page) => page.data) || [];
   const uniqueTenders = tenders.filter(
@@ -204,6 +241,7 @@ export default function useTenderArchiveQuery({
     hasNextPage,
     isFetchingNextPage,
     updateSeenAt,
+    markAsFavorite,
   };
 }
 

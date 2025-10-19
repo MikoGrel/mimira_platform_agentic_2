@@ -8,6 +8,7 @@ import { format } from "date-fns";
 import { FilterQuery } from "$/features/inbox/hooks/use-filter-form";
 import { Tables } from "$/types/supabase";
 import { baseTenderQuery } from "$/features/inbox/api/base-tender-query";
+import { useMemo, useCallback } from "react";
 
 interface UseTendersListParams {
   search?: string;
@@ -29,18 +30,29 @@ export function useTendersList({
     sortBy: null,
   };
 
-  const queryKey = [
-    "tenders-list",
-    search,
-    [
-      filters.publishedAtFrom?.toString(),
-      filters.publishedAtTo?.toString(),
-      filters.offersDeadlineFrom?.toString(),
-      filters.offersDeadlineTo?.toString(),
-      JSON.stringify(Array.from(filters.sortBy || [])),
-      JSON.stringify(Array.from(filters.voivodeship || [])),
+  const queryKey = useMemo(
+    () => [
+      "tenders-list",
+      search,
+      [
+        filters.publishedAtFrom?.toString(),
+        filters.publishedAtTo?.toString(),
+        filters.offersDeadlineFrom?.toString(),
+        filters.offersDeadlineTo?.toString(),
+        JSON.stringify(Array.from(filters.sortBy || [])),
+        JSON.stringify(Array.from(filters.voivodeship || [])),
+      ],
     ],
-  ];
+    [
+      search,
+      filters.publishedAtFrom,
+      filters.publishedAtTo,
+      filters.offersDeadlineFrom,
+      filters.offersDeadlineTo,
+      filters.sortBy,
+      filters.voivodeship,
+    ]
+  );
 
   const {
     data: tendersData,
@@ -109,6 +121,7 @@ export function useTendersList({
       }
 
       const result = await query
+        .order("marked_as_favorite", { ascending: false, nullsFirst: false })
         .order("updated_at", { ascending: false, nullsFirst: false })
         .order("id", { ascending: false, nullsFirst: false })
         .limit(999);
@@ -118,37 +131,87 @@ export function useTendersList({
     enabled: !!user,
   });
 
-  function updateTenderStatus(id: string, status: string) {
-    queryClient.setQueryData(
-      queryKey,
-      (
-        oldData:
-          | Array<{
-              id: string;
-              status: string | null;
-              can_participate: boolean | null;
-              seen_at: string | null;
-              created_at: string;
-              company_id: string | null;
-              tender_id: string | null;
-              tenders: Tables<"tenders">;
-            }>
-          | undefined
-      ) => {
-        if (!oldData) return oldData;
+  const updateTenderStatus = useCallback(
+    (id: string, status: string) => {
+      queryClient.setQueryData(
+        queryKey,
+        (
+          oldData:
+            | Array<{
+                id: string;
+                status: string | null;
+                can_participate: boolean | null;
+                seen_at: string | null;
+                created_at: string;
+                company_id: string | null;
+                tender_id: string | null;
+                tenders: Tables<"tenders">;
+                marked_as_favorite?: boolean | null;
+              }>
+            | undefined
+        ) => {
+          if (!oldData) return oldData;
 
-        return oldData.map((mapping) =>
-          mapping.id === id ? { ...mapping, status } : mapping
-        );
+          return oldData.map((mapping) =>
+            mapping.id === id ? { ...mapping, status } : mapping
+          );
+        }
+      );
+    },
+    [queryClient, queryKey]
+  );
+
+  const markAsFavorite = useCallback(
+    async (id: string, value: boolean) => {
+      const previousData = queryClient.getQueryData(queryKey);
+
+      queryClient.setQueryData(
+        queryKey,
+        (
+          oldData:
+            | Array<{
+                id: string;
+                status: string | null;
+                can_participate: boolean | null;
+                seen_at: string | null;
+                created_at: string;
+                company_id: string | null;
+                tender_id: string | null;
+                tenders: Tables<"tenders">;
+                marked_as_favorite?: boolean | null;
+              }>
+            | undefined
+        ) => {
+          if (!oldData) return oldData;
+
+          return oldData.map((mapping) =>
+            mapping.id === id
+              ? { ...mapping, marked_as_favorite: value }
+              : mapping
+          );
+        }
+      );
+
+      try {
+        const client = createClient();
+        await client
+          .from("companies_tenders_mappings")
+          .update({ marked_as_favorite: value })
+          .eq("id", id);
+      } catch (error) {
+        queryClient.setQueryData(queryKey, previousData);
+        throw error;
       }
-    );
-  }
+    },
+    [queryClient, queryKey]
+  );
 
   return {
     tenders: tendersData || [],
     loading,
     isPending,
     updateTenderStatus,
+    markAsFavorite,
   };
 }
 

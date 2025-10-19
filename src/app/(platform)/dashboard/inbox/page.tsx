@@ -1,7 +1,7 @@
 "use client";
 
 import { Button, Card, Chip, Input, Skeleton } from "@heroui/react";
-import { Archive, CalendarClock, SlidersHorizontal } from "lucide-react";
+import { Archive, CalendarClock, SlidersHorizontal, Star } from "lucide-react";
 import { parseAsString, useQueryState } from "nuqs";
 import { useMemo, useState } from "react";
 import Symbol from "$/features/branding/components/Symbol";
@@ -60,6 +60,7 @@ export default function InboxPage() {
     hasNextPage: hasNextInboxPage,
     isFetchingNextPage: isFetchingNextInboxPage,
     updateSeenAt: updateInboxSeenAt,
+    markAsFavorite: markInboxAsFavorite,
   } = useTenderInboxQuery({ search, filterQuery, pageSize: PAGE_SIZE });
 
   // Fetch archive tenders (expired)
@@ -70,6 +71,7 @@ export default function InboxPage() {
     hasNextPage: hasNextArchivePage,
     isFetchingNextPage: isFetchingNextArchivePage,
     updateSeenAt: updateArchiveSeenAt,
+    markAsFavorite: markArchiveAsFavorite,
   } = useTenderArchiveQuery({ search, filterQuery, pageSize: PAGE_SIZE });
 
   const { mutate: markAsSeen } = useMarkAsSeen();
@@ -82,6 +84,9 @@ export default function InboxPage() {
     ? isFetchingNextArchivePage
     : isFetchingNextInboxPage;
   const updateSeenAt = showArchive ? updateArchiveSeenAt : updateInboxSeenAt;
+  const markAsFavorite = showArchive
+    ? markArchiveAsFavorite
+    : markInboxAsFavorite;
 
   const selectedMappingFromList = useMemo(
     () => tenders.find((t) => t.id === selectedId),
@@ -191,9 +196,9 @@ export default function InboxPage() {
               <AnimatePresence>
                 {isPending && <ListSkeleton />}
                 {tenders?.map((t, index) => (
-                  <Card
+                  <motion.div
+                    key={t.id}
                     ref={getRef(index)}
-                    as={motion.li}
                     initial={{ opacity: 0 }}
                     animate={{
                       opacity: t.seen_at ? (t.id === selectedId ? 1 : 0.9) : 1,
@@ -207,59 +212,82 @@ export default function InboxPage() {
                       opacity: 0,
                       transition: { duration: 0 },
                     }}
-                    isPressable
-                    onPress={() => handleTenderSelect(t)}
-                    key={t.id}
-                    className={cn("border-b rounded-none text-left", {
-                      "border-l border-l-primary": t.id === selectedId,
-                    })}
-                    shadow="none"
+                    className="relative group"
                   >
-                    <div className="p-4 px-6 flex flex-col gap-2 hover:bg-muted">
-                      <p className="text-sm relative">
-                        {!t.seen_at && !showArchive && (
-                          <span className="text-primary text-xs font-medium block">
-                            New
-                          </span>
-                        )}
-                        {truncate(t.tenders?.order_object || "", {
-                          length: 100,
-                          omission: "...",
-                        })}
-                        {!t.seen_at && !showArchive && (
-                          <span className="block w-[5px] rounded-full h-[5px] bg-primary absolute -left-3 top-1" />
-                        )}
-                      </p>
-                      <div className="flex items-center gap-2 flex-wrap text-slate-500">
-                        {t.tenders?.submitting_offers_date && (
-                          <Chip
-                            size="sm"
-                            variant="flat"
-                            color={
-                              t.tenders.has_offersdate_changed
-                                ? "warning"
-                                : "default"
-                            }
-                            startContent={
-                              <CalendarClock className="w-4 h-4 ml-1 mr-0.5" />
-                            }
-                          >
-                            {t.tenders.has_offersdate_changed && (
-                              <span>New term:&nbsp;</span>
-                            )}
-                            {relativeToNow(
-                              new Date(t.tenders?.submitting_offers_date)
-                            )}
-                          </Chip>
-                        )}
-                        <span className="text-sm">
-                          {truncate(t.tenders?.organization_name || "", {
-                            length: 30,
+                    <Card
+                      as="li"
+                      isPressable
+                      onPress={() => handleTenderSelect(t)}
+                      className={cn("border-b rounded-none text-left", {
+                        "border-l border-l-primary": t.id === selectedId,
+                      })}
+                      shadow="none"
+                    >
+                      <div className="p-4 px-6 flex flex-col gap-2 hover:bg-muted">
+                        <p className="text-sm relative">
+                          {!t.seen_at && !showArchive && (
+                            <span className="text-primary text-xs font-medium block">
+                              New
+                            </span>
+                          )}
+                          {t.marked_as_favorite && (
+                            <Star className="w-4 h-4 stroke-0 fill-yellow-500 inline mb-1 mr-1" />
+                          )}
+                          {truncate(t.tenders?.order_object || "", {
+                            length: 100,
+                            omission: "...",
                           })}
-                        </span>
+                          {!t.seen_at && !showArchive && (
+                            <span className="block w-[5px] rounded-full h-[5px] bg-primary absolute -left-3 top-1" />
+                          )}
+                        </p>
+                        <div className="flex items-center gap-2 flex-wrap text-slate-500">
+                          {t.tenders?.submitting_offers_date && (
+                            <Chip
+                              size="sm"
+                              variant="flat"
+                              color={
+                                t.tenders.has_offersdate_changed
+                                  ? "warning"
+                                  : "default"
+                              }
+                              startContent={
+                                <CalendarClock className="w-4 h-4 ml-1 mr-0.5" />
+                              }
+                            >
+                              {t.tenders.has_offersdate_changed && (
+                                <span>New term:&nbsp;</span>
+                              )}
+                              {relativeToNow(
+                                new Date(t.tenders?.submitting_offers_date)
+                              )}
+                            </Chip>
+                          )}
+                          <span className="text-sm">
+                            {truncate(t.tenders?.organization_name || "", {
+                              length: 30,
+                            })}
+                          </span>
+                        </div>
                       </div>
-                    </div>
-                  </Card>
+                    </Card>
+                    <Button
+                      onPress={() =>
+                        markAsFavorite(t.id, !t.marked_as_favorite)
+                      }
+                      isIconOnly
+                      variant="flat"
+                      color="default"
+                      size="sm"
+                      className="absolute right-2 top-2 opacity-0 group-hover:opacity-100 transition-opacity bg-white shadow-sm z-10"
+                    >
+                      <Star
+                        className={cn("w-4 h-4 stroke-[1.5]", {
+                          "fill-yellow-500 stroke-0": t.marked_as_favorite,
+                        })}
+                      />
+                    </Button>
+                  </motion.div>
                 ))}
               </AnimatePresence>
             </ul>

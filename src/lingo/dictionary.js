@@ -59,6 +59,34 @@ export default {
           },
           hash: "7c5bb0a96a8440dde7c3b09071ad32f3",
         },
+        "3/declaration/body/0/argument/1/7/3/1/1/1/1": {
+          content: {
+            en: "Email: ",
+            pl: "E-mail: ",
+          },
+          hash: "571596ac7dc88d4b30eed81db648c87b",
+        },
+        "3/declaration/body/0/argument/1/7/3/1/1/1/3": {
+          content: {
+            en: "mimira@mimiraoffers.eu",
+            pl: "mimira@mimiraoffers.eu",
+          },
+          hash: "e9751860b4fe97b2ad1f8464017a0efe",
+        },
+        "3/declaration/body/0/argument/1/7/3/1/1/3/1": {
+          content: {
+            en: "Tel: ",
+            pl: "Tel: ",
+          },
+          hash: "72154c99832885ead336e3f496958e28",
+        },
+        "3/declaration/body/0/argument/1/7/3/1/1/3/3": {
+          content: {
+            en: "+48 732 070 469",
+            pl: "+48 732 070 469",
+          },
+          hash: "442642375d316529b507c0aff0e41695",
+        },
         "3/declaration/body/0/argument/1/7/3/1/3/1/1": {
           content: {
             en: "Email: ",
@@ -88,6 +116,41 @@ export default {
           hash: "442642375d316529b507c0aff0e41695",
         },
         "3/declaration/body/0/argument/1/7/3/3": {
+          content: {
+            en: "If you have questions about a specific tender, remember that you can ask the chatbot.",
+            pl: "Jeśli masz pytania dotyczące konkretnego przetargu, pamiętaj, że możesz zapytać chatbota.",
+          },
+          hash: "94514ecaf45c2a80b3ffb22106f89b20",
+        },
+        "3/declaration/body/0/argument/1/7/5/1/1/1/1": {
+          content: {
+            en: "Email: ",
+            pl: "E-mail: ",
+          },
+          hash: "571596ac7dc88d4b30eed81db648c87b",
+        },
+        "3/declaration/body/0/argument/1/7/5/1/1/1/3": {
+          content: {
+            en: "mimira@mimiraoffers.eu",
+            pl: "mimira@mimiraoffers.eu",
+          },
+          hash: "e9751860b4fe97b2ad1f8464017a0efe",
+        },
+        "3/declaration/body/0/argument/1/7/5/1/1/3/1": {
+          content: {
+            en: "Tel: ",
+            pl: "Tel: ",
+          },
+          hash: "72154c99832885ead336e3f496958e28",
+        },
+        "3/declaration/body/0/argument/1/7/5/1/1/3/3": {
+          content: {
+            en: "+48 732 070 469",
+            pl: "+48 732 070 469",
+          },
+          hash: "442642375d316529b507c0aff0e41695",
+        },
+        "3/declaration/body/0/argument/1/7/5/3": {
           content: {
             en: "If you have questions about a specific tender, remember that you can ask the chatbot.",
             pl: "Jeśli masz pytania dotyczące konkretnego przetargu, pamiętaj, że możesz zapytać chatbota.",
@@ -843,6 +906,14 @@ export default {
           },
           hash: "49dd6c21604b5e8d4153ff1aff2177e1",
         },
+        "19/declaration/body/26/argument/1/3/1/1/3/3/expression/0/body/1/1/1/1/expression/right":
+          {
+            content: {
+              en: "New",
+              pl: "Nowe",
+            },
+            hash: "c752c0465f1577573a87ab4b81d7b098",
+          },
         "19/declaration/body/26/argument/1/3/1/1/3/3/expression/0/body/1/1/1/expression/right":
           {
             content: {
@@ -851,7 +922,31 @@ export default {
             },
             hash: "320af698c03eca3566cae395621ca490",
           },
+        "19/declaration/body/26/argument/1/3/1/1/3/3/expression/0/body/1/1/3/1/expression/right/1/expression/right":
+          {
+            content: {
+              en: "New term: ",
+              pl: "Nowy termin: ",
+            },
+            hash: "2664239247be0ec83dcb0d3c87efe91e",
+          },
+        "19/declaration/body/26/argument/1/3/1/1/3/3/expression/0/body/1/3/1/expression/right":
+          {
+            content: {
+              en: "New",
+              pl: "Nowe",
+            },
+            hash: "320af698c03eca3566cae395621ca490",
+          },
         "19/declaration/body/26/argument/1/3/1/1/3/3/expression/0/body/1/3/1/expression/right/1/expression/right":
+          {
+            content: {
+              en: "New term: ",
+              pl: "Nowy termin: ",
+            },
+            hash: "2664239247be0ec83dcb0d3c87efe91e",
+          },
+        "19/declaration/body/26/argument/1/3/1/1/3/3/expression/0/body/1/5/1/expression/right/1/expression/right":
           {
             content: {
               en: "New term: ",
@@ -925,6 +1020,58 @@ export default {
           hash: "05a8fc9f6d826fd88a809d98684edcad",
         },
         "20/declaration/body/17/argument/3/expression/right/1/1": {
+          content: {
+            en: "Select a tender to view details",
+            pl: "Wybierz przetarg, aby zobaczyć szczegóły",
+          },
+          hash: "067789b01a081458db2f872f10a37c3f",
+        },
+        "20/declaration/body/27/argument/1/1/1/3-placeholder": {
+          content: {
+            en: "Search",
+            pl: "Szukaj",
+          },
+          hash: "49dd6c21604b5e8d4153ff1aff2177e1",
+        },
+        "20/declaration/body/27/argument/1/3/1/1/3/3/expression/0/body/1/1/1/1/expression/right":
+          {
+            content: {
+              en: "New",
+              pl: "Nowe",
+            },
+            hash: "c752c0465f1577573a87ab4b81d7b098",
+          },
+        "20/declaration/body/27/argument/1/3/1/1/3/3/expression/0/body/1/1/1/3/expression/right":
+          {
+            content: {
+              en: "Favorite",
+              pl: "Ulubione",
+            },
+            hash: "a43e975c709459197a5303e82c34674c",
+          },
+        "20/declaration/body/27/argument/1/3/1/1/3/3/expression/0/body/1/1/3/1/expression/right/1/expression/right":
+          {
+            content: {
+              en: "New term: ",
+              pl: "Nowy termin: ",
+            },
+            hash: "2664239247be0ec83dcb0d3c87efe91e",
+          },
+        "20/declaration/body/27/argument/1/5/1/3": {
+          content: {
+            en: "Ask Mimira",
+            pl: "Zapytaj Mimira",
+          },
+          hash: "794ecd418d0b3530b94008aed80b30d7",
+        },
+        "20/declaration/body/27/argument/1/5/1/5": {
+          content: {
+            en: "Try now",
+            pl: "Wypróbuj teraz",
+          },
+          hash: "9b9feae9d2550e4d7d39f3634be37ce6",
+        },
+        "20/declaration/body/27/argument/3/expression/right/1/1": {
           content: {
             en: "Select a tender to view details",
             pl: "Wybierz przetarg, aby zobaczyć szczegóły",
@@ -3781,17 +3928,17 @@ export default {
         },
         "18/0/init/1/1/value": {
           content: {
-            en: "Confirmations",
-            pl: "Potwierdzenia",
+            en: "Preparing documents",
+            pl: "Przygotowywanie dokumentów",
           },
-          hash: "d6bd835d0f69b13150c90fe117eea0a9",
+          hash: "d7b2ea85e5bc472520e1000e62ebe013",
         },
         "18/0/init/2/1/value": {
           content: {
-            en: "Documentation",
-            pl: "Dokumentacja",
+            en: "Documents ready",
+            pl: "Dokumenty gotowe",
           },
-          hash: "1563fcb5ddb5037b0709ccd3dd384a92",
+          hash: "4aba9b174f31916a12c9562bb265244c",
         },
         "18/0/init/3/1/value": {
           content: {
@@ -4368,10 +4515,10 @@ export default {
         },
         "19/0/init/1/1/value": {
           content: {
-            en: "Confirmations",
-            pl: "Potwierdzenia",
+            en: "Documents and Decision",
+            pl: "Dokumenty i decyzja",
           },
-          hash: "d6bd835d0f69b13150c90fe117eea0a9",
+          hash: "74f985167dd24fa5506bbba73c7d640d",
         },
         "19/0/init/2/1/value": {
           content: {
@@ -4395,6 +4542,34 @@ export default {
           hash: "09264f201cbbdc79247a8c17a93d7e3c",
         },
         "19/body/10/argument/5/1/3/1/expression/right": {
+          content: {
+            en: "Next step",
+            pl: "Następny krok",
+          },
+          hash: "43fb9d3da12cdf80c1d49037ec8b8eba",
+        },
+        "19/body/11/argument/1/3/3/expression/right/3/1/expression/right": {
+          content: {
+            en: "New term: ",
+            pl: "Nowy termin: ",
+          },
+          hash: "2664239247be0ec83dcb0d3c87efe91e",
+        },
+        "19/body/11/argument/1/3/5/3": {
+          content: {
+            en: "<element:MessageSquareText></element:MessageSquareText> Comments",
+            pl: "<element:MessageSquareText></element:MessageSquareText> Komentarze",
+          },
+          hash: "4363b06a6d14db2f2eb20b67c19ec777",
+        },
+        "19/body/11/argument/5/1/1": {
+          content: {
+            en: "Previous step",
+            pl: "Poprzedni krok",
+          },
+          hash: "09264f201cbbdc79247a8c17a93d7e3c",
+        },
+        "19/body/11/argument/5/1/3/1/expression/right": {
           content: {
             en: "Next step",
             pl: "Następny krok",
@@ -4732,12 +4907,26 @@ export default {
           },
           hash: "43fb9d3da12cdf80c1d49037ec8b8eba",
         },
+        "20/body/11/argument/1/3/3/expression/right/3/1/expression/right": {
+          content: {
+            en: "New term: ",
+            pl: "Nowy termin: ",
+          },
+          hash: "2664239247be0ec83dcb0d3c87efe91e",
+        },
         "20/body/11/argument/1/3/5": {
           content: {
             en: "<element:MessageSquareText></element:MessageSquareText> Comments",
             pl: "<element:MessageSquareText></element:MessageSquareText> Komentarze",
           },
           hash: "e4fcefd6fb1750380fbff292f73c26c6",
+        },
+        "20/body/11/argument/1/3/5/3": {
+          content: {
+            en: "<element:MessageSquareText></element:MessageSquareText> Comments",
+            pl: "<element:MessageSquareText></element:MessageSquareText> Komentarze",
+          },
+          hash: "4363b06a6d14db2f2eb20b67c19ec777",
         },
         "20/body/11/argument/5/1/1": {
           content: {
@@ -14662,6 +14851,62 @@ export default {
             hash: "d8d7ee5f9fba1e29a313e7f7d012830a",
           },
         "14/declaration/body/3/0/init/0/body/6/consequent/1/expression/0/2/value/3/expression/right":
+          {
+            content: {
+              en: "Descending",
+              pl: "Malejąco",
+            },
+            hash: "04dc77f3df63ba7700a697a9cac8f8cc",
+          },
+        "14/declaration/body/4/0/init/0/body/1/consequent/0/expression/0/1/value":
+          {
+            content: {
+              en: "Deadline From",
+              pl: "Termin od",
+            },
+            hash: "7be26b49e50e1024e4f87ef8fdd26b69",
+          },
+        "14/declaration/body/4/0/init/0/body/2/consequent/0/expression/0/1/value":
+          {
+            content: {
+              en: "Deadline To",
+              pl: "Termin do",
+            },
+            hash: "649366f5c0be691c1c9c680fd4dfc39f",
+          },
+        "14/declaration/body/4/0/init/0/body/3/consequent/0/expression/0/1/value":
+          {
+            content: {
+              en: "Published from",
+              pl: "Opublikowano od",
+            },
+            hash: "d2d522ccc07c7b89150dbd523a487648",
+          },
+        "14/declaration/body/4/0/init/0/body/4/consequent/0/expression/0/1/value":
+          {
+            content: {
+              en: "Published to",
+              pl: "Opublikowano do",
+            },
+            hash: "910b98f4908369f90381b014984f67a3",
+          },
+        "14/declaration/body/4/0/init/0/body/6/consequent/1/expression/0/1/value":
+          {
+            content: {
+              en: "Sort by Offers Date",
+              pl: "Sortuj według daty ofert",
+            },
+            hash: "e0789487e9da7425c6ac6f0fedafb03c",
+          },
+        "14/declaration/body/4/0/init/0/body/6/consequent/1/expression/0/2/value/1/expression/right":
+          {
+            content: {
+              en: "Ascending",
+              pl: "Rosnąco",
+            },
+            hash: "d8d7ee5f9fba1e29a313e7f7d012830a",
+          },
+        "14/declaration/body/4/0/init/0/body/6/consequent/1/expression/0/2/value/3/expression/right":
           {
             content: {
               en: "Descending",

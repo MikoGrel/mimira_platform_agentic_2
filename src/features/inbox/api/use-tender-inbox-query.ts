@@ -126,10 +126,12 @@ export default function useTenderInboxQuery({
         query = query.in("tenders.voivodship", Array.from(filters.voivodeship));
       }
 
-      query = query.order("tenders(submitting_offers_date)", {
-        ascending: true,
-        nullsFirst: false,
-      });
+      query = query
+        .order("marked_as_favorite", { ascending: false, nullsFirst: false })
+        .order("tenders(submitting_offers_date)", {
+          ascending: true,
+          nullsFirst: false,
+        });
 
       const result = await query.range(
         pageParam * pageSize!,
@@ -178,6 +180,41 @@ export default function useTenderInboxQuery({
     );
   }
 
+  async function markAsFavorite(id: string, value: boolean) {
+    queryClient.setQueryData(
+      queryKey,
+      (
+        oldData:
+          | InfiniteData<{
+              data: Tables<"companies_tenders_mappings">[];
+              count: number | null;
+              nextPage: number | null;
+            }>
+          | undefined
+      ) => {
+        if (!oldData) return oldData;
+
+        return {
+          ...oldData,
+          pages: oldData.pages.map((page) => ({
+            ...page,
+            data: page.data.map((mapping) =>
+              mapping.id === id
+                ? { ...mapping, marked_as_favorite: value }
+                : mapping
+            ),
+          })),
+        };
+      }
+    );
+
+    const client = createClient();
+    await client
+      .from("companies_tenders_mappings")
+      .update({ marked_as_favorite: value })
+      .eq("id", id);
+  }
+
   // Flatten the pages data and remove duplicates based on id
   const tenders = tendersData?.pages.flatMap((page) => page.data) || [];
   const uniqueTenders = tenders.filter(
@@ -192,6 +229,7 @@ export default function useTenderInboxQuery({
     hasNextPage,
     isFetchingNextPage,
     updateSeenAt,
+    markAsFavorite,
   };
 }
 

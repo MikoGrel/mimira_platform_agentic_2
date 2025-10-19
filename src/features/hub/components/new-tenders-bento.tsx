@@ -16,7 +16,9 @@ interface NewTendersBentoProps {
 
 export function NewTendersBento({ className }: NewTendersBentoProps) {
   const { user } = useCurrentUser();
-  const { tenders, loading } = useTenderInboxQuery({ pageSize: 3 });
+  const { tenders, loading, markAsFavorite } = useTenderInboxQuery({
+    pageSize: 3,
+  });
 
   return (
     <BentoCard
@@ -45,6 +47,8 @@ export function NewTendersBento({ className }: NewTendersBentoProps) {
               hasOffersDateChanged={
                 tender.tenders?.has_offersdate_changed ?? false
               }
+              markedAsFavorite={tender.marked_as_favorite ?? false}
+              onMarkAsFavorite={markAsFavorite}
             />
           ))}
           {user && !loading && !tenders?.length && (

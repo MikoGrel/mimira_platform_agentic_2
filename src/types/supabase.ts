@@ -174,6 +174,7 @@ export type Database = {
           created_at: string
           docs_ready: boolean
           id: string
+          marked_as_favorite: boolean | null
           msg_slack_sent: string | null
           other_req_docs: Json | null
           seen_at: string | null
@@ -188,6 +189,7 @@ export type Database = {
           created_at?: string
           docs_ready?: boolean
           id?: string
+          marked_as_favorite?: boolean | null
           msg_slack_sent?: string | null
           other_req_docs?: Json | null
           seen_at?: string | null
@@ -202,6 +204,7 @@ export type Database = {
           created_at?: string
           docs_ready?: boolean
           id?: string
+          marked_as_favorite?: boolean | null
           msg_slack_sent?: string | null
           other_req_docs?: Json | null
           seen_at?: string | null
@@ -485,6 +488,7 @@ export type Database = {
         Row: {
           created_at: string
           file_names: string | null
+          file_summaries: string | null
           files_added_count: number | null
           id: string
           tender_id: string | null
@@ -493,6 +497,7 @@ export type Database = {
         Insert: {
           created_at?: string
           file_names?: string | null
+          file_summaries?: string | null
           files_added_count?: number | null
           id?: string
           tender_id?: string | null
@@ -501,6 +506,7 @@ export type Database = {
         Update: {
           created_at?: string
           file_names?: string | null
+          file_summaries?: string | null
           files_added_count?: number | null
           id?: string
           tender_id?: string | null
@@ -688,6 +694,7 @@ export type Database = {
           payment_terms_llm: string | null
           publication_date: string | null
           review_criteria_llm: string | null
+          signature_type_llm: string | null
           submitting_offers_date: string | null
           updated_at: string | null
           url: string | null
@@ -712,6 +719,7 @@ export type Database = {
           payment_terms_llm?: string | null
           publication_date?: string | null
           review_criteria_llm?: string | null
+          signature_type_llm?: string | null
           submitting_offers_date?: string | null
           updated_at?: string | null
           url?: string | null
@@ -736,6 +744,7 @@ export type Database = {
           payment_terms_llm?: string | null
           publication_date?: string | null
           review_criteria_llm?: string | null
+          signature_type_llm?: string | null
           submitting_offers_date?: string | null
           updated_at?: string | null
           url?: string | null
@@ -751,6 +760,14 @@ export type Database = {
       [_ in never]: never
     }
     Functions: {
+      ctm_build_and_send_slack: {
+        Args: { mapping_id: string; p_status: string }
+        Returns: boolean
+      }
+      ctm_documents_preparing_slack_try: {
+        Args: { p_mapping_id: string }
+        Returns: undefined
+      }
       fill_tender_id_for_products: {
         Args: Record<PropertyKey, never>
         Returns: undefined

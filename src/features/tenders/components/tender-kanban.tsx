@@ -73,7 +73,11 @@ interface TenderKanbanProps {
 }
 
 export function TenderKanban({ searchQuery, filterQuery }: TenderKanbanProps) {
-  const { tenders: fetchedTenders, isPending } = useTendersList({
+  const {
+    tenders: fetchedTenders,
+    isPending,
+    markAsFavorite,
+  } = useTendersList({
     search: searchQuery,
     filterQuery,
   });
@@ -112,6 +116,7 @@ export function TenderKanban({ searchQuery, filterQuery }: TenderKanbanProps) {
           icon={column.icon}
           iconColor={column.color}
           isLoading={isLoading}
+          markAsFavorite={markAsFavorite}
         />
       ))}
     </div>
