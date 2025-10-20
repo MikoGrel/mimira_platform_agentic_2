@@ -1,0 +1,10 @@
+[build]
+  command = "bun run build"
+  publish = "."
+
+[build.environment]
+  NODE_VERSION = "20"
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
+
